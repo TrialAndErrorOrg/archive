@@ -1,0 +1,295 @@
+% Document class options:
+% =======================
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+%
+% Using other bibliography styles:
+% =======================
+% Not supported at the moment
+\documentclass[twocolumn, serif]{jote-article}
+
+
+%%% Add the bibliography, make sure it's in the same directory
+\addbibresource{example.bib}
+
+%%% Add additional packages here if required. Usually not needed, except when doing things with figures and tables, god help you then
+
+% This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum. OR use [1-5] to generate the first five, etc.
+\usepackage{lipsum}
+
+
+% Fill in the type of article here. Doesn't matter if capitalized. 
+%%% Options
+% Empirical
+% Reflection
+% Meta-Research
+% Rejected Grant Application
+% Editorial
+
+%%% TODO: Make this a 1-5 option scale to reduce the chance of mistyping
+\papertype{Empirical}
+
+% Enter the title, in Title Case Please
+% Try to keep it under 3 lines
+\title{Oh No! My Experiment Went Kaput!}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Author One}
+%Fill it in again for the PDF metadata. Lame workaround but it works
+\authorone{Author One}
+
+\author[1, 2]{Author Two}
+\authortwo{Author Two}
+
+%List the contribution effort here, they will be listed at the end of the page
+\contributions{Author One did all the work, while Author Two was just slacking.}
+%List the acknowledgments. If there is no companion piece, this is listed below the author info
+\acknowledgments{Author Two would like to thank Author One for doing all the work while they could slack off.}
+%List possible conflict of interest. Will default to saying no conflict exists.
+\interests{Author One was paid for by Big Failed Experiment}
+
+% Include full affiliation details for all authors
+\affil[1]{Department of Error, University of Trial, USA USA USA}
+\affil[2]{The streets}
+
+% List the correspondence email of the main correspondent
+\corraddress{Author One, Paradise City}
+\corremail{\href{mailto:author@one.com}{author@one.com}}
+
+% Optionally list the present address of one of the authors
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+% Fill in the DOI of the paper
+
+% Always starts with "10.36850/" and is suffixed with one of the following plus a number
+% e  : empirical
+% r  : reflection
+% mr : meta-research
+% rga: rejected grant application
+% ed : editorial
+\paperdoi{10.36850/eX}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Name et al.}
+
+% The name of the Journal
+\jname{Journal of Trial and Error}
+
+% The year that the article is published
+\jyear{2020}
+
+%The Volume Number
+%\jvolume{Fall}
+
+%The website that's listed in the bottom right
+\jwebsite{https://www.jtrialerror.com}
+
+%%% Only \paperpublished is necessary, any combination of the other two is possible
+
+%When the paper was received
+\paperreceived{1 January, 2020}
+% When the paper was accepted
+\paperaccepted{2 January, 2020}
+% When the paper will be published
+\paperpublished{3 January, 2020}
+% When the paper is published but in YYYY-MM-DD format, for the crossmark button
+\paperpublisheddate{2020-01-03}
+
+% The pages of the article, comment out if rolling article
+%\jpages{1-12}
+% Link to the logo, might be redundant
+\jlogo{media/jote_logo_full.png}
+
+% Fill something here if this is a rolling/online first article, will make ROLLING ARTICLE show up on the first page
+\rolling{YES}
+
+% Sets the paragraph skip to be zero, this should be in the CLS
+\setlength{\parskip}{0pt}
+
+%%% Companion Piece
+
+% Reflection and Empirical articles have each other as companion pieces. Add the DOI, Title, and Abstract of the respective Companion piece here
+\companionurl{https://doi.org/10.36850/rX}
+\companiontitle{Author Three (2020)\newline Very Serious Reflection}
+\companionabstract{\noindent \lipsum[6]}
+
+%%% Abstract
+
+% These two set the height and width of the abstract. There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
+% Higher number means skinnier abstract
+\heightabstract{80mm}
+\widthaffil{75mm}
+%Enter something here in order for the abstract to disappear. Be sure to also delete the abstract 
+\noabstract{}
+% Fill in the keywords that will appear in the abstract, max 7
+\keywordsabstract{a, b, c, d, e, f, g}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Document Starts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
+\begin{frontmatter}
+\maketitle
+%Type your abstract between these things. Max 250 words. Be sure to include the \noindent, looks bad otherwise
+\begin{abstract}
+    \section*{Abstract}
+    \lipsum[1]
+\end{abstract}
+\end{frontmatter}
+
+%% Purpose
+
+%Be sure to add the phantomsection and the addcontentsline. If you want no numbering of the sections but do want bookmarks, then you need them.
+\phantomsection
+\addcontentsline{toc}{section}{Purpose}
+\section*{Purpose}
+\lipsum[2]
+
+%% Take Home Message
+
+\phantomsection
+\addcontentsline{toc}{section}{Take-home Message}
+\lipsum[3]
+
+%% Normal Paper Stuff
+
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+\lipsum[4]
+
+%% Subsection
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Subsection}
+\subsection*{Subsection}
+\lipsum[4]
+
+%%% Citations
+
+\phantomsection
+\addcontentsline{toc}{section}{Citations}
+\section*{Citations}
+
+% Citations are handled by .bib files, which can easily be generated by Zotero, EndRote, Refwords, Mendeley etc. 
+
+
+
+% They look like this
+%@article{Leboeuf2020b,
+%  title = {Alcohol {{Cues}} and Their {{Effects}} on {{Sexually Aggressive Thoughts}}},
+%  author = {Leboeuf, Julie and Linden-Andersen, Stine and Carriere, Jonathan},
+%  date = {2020-07-17},
+%  volume = {1],
+%  issue = {1},
+%  journaltitle = {Journal of Trial and Error},
+%  shortjournal = {JOTE},
+%  doi = {10.36850/e1},
+%  abstract = {Alcohol and its effects on aggression have been the subject of many discussions and research papers. Despite this fact, there is still a debate surrounding what it is exactly about alcohol that causes aggression. The current study sought to replicate the past finding by Bartholow and Heinz (2006), that alcohol cues without consumption increase the accessibility of aggressive thoughts, which can then influence aggressive behaviors. In the present study, participants had to complete a lexical decision task that was set up to assess whether aggressive words were detected faster in the presence of alcohol-related pictures compared to neutral pictures. The results of this study did not replicate the expected finding as only a main effect of word type was found in which participants detected neutral words faster than aggressive words. Furthermore, the study aimed to assess the role of gender stereotype acceptance levels in this association, but due to faulty design considerations, such analyses were not possible. The results are discussed in terms of the limitations of the study, and propositions for future directions are addressed.},
+%  langid = {english}
+%}
+
+
+Since we use APA 7 with biblatex, there are two ways to do citations. 
+
+%This is how you make lists by the way
+\begin{enumerate}
+    \item By typing parencite\{authorYear\} you get a citaton that looks like \parencite{Leboeuf2020b}
+    \item By typing textcite\{authorYear\} you get a citation that looks like \textcite{DeGroot2020a}
+\end{enumerate}
+
+You can also add more papers by simply writing parencite\{one2019, two2020\}, which will output \parencite{Leboeuf2020b, DeGroot2020a}.
+
+Additionally, you can add page numbers or other suffixes in by typing parencite[pp. XX-YY]\{authorYear\}, which yields \parencite[pp. XX-YY]{Leboeuf2020b}
+
+\subsection*{Why}
+Doing citations in LaTeX with .bib files rather than just keeping them plain text is useful for two reasons. 
+
+\begin{enumerate}
+    \item You can easily make them interactive and click on the thing which will bring you immediately to the entry in the reference list.
+    \item All possible errors get worked out by BibLaTeX, at least, if they are correct in the .bib
+    \item It's easy for Mendeley or Zotero to look up missing info, primarily DOIs as authors don't tend to include those (even though they should)
+\end{enumerate}
+
+\subsection*{How}
+
+Converting the citations is really annoying though, because the authors (hopefully) just write the citation in text, but we want something with a parencite and a key. Luckily this can be made much easier with find and replace functions (RegEx), which I won't detail just now.
+
+But then still the citations need to be converted to a bib file, which can take a loooong time, especially if the author isn't particularly good at citing consistently. For this, use \url{https://ref.scholarcy.com/api/}. It's the best I've found so far, and it still isn't infallible.
+
+\phantomsection
+\addcontentsline{toc}{section}{Footnotes}
+\section*{Footnotes}
+
+You can make footnotes really easily by simply typing footnote\{the content.\}\footnote{Like this!}
+
+You can also pick the mark yourself by typing footnotemark[X] and then typing the footnote with footnote[X], like so.\footnote[99]{Wow!}.
+
+\phantomsection
+\addcontentsline{toc}{section}{Tables}
+\section*{Tables}
+
+The bane of my existence. Work terribly with twocolumn layout, best you can do is put them at the top or something. For making the tables, I recommend using \url{https://www.tablesgenerator.com/}, works pretty alright.
+
+Table \ref{tab:table2} is generated with this code. [ht] stands for "here" and "top"
+\begin{verbatim}
+\begin{table}[b]
+\begin{tabularx}{\colwidth}{|X|X|X|}
+%you need to specify how many friggin entries you have
+\hline
+Heading 1 & Heading 2 & Heading 3   \\
+\hline
+AAAA      & BBBB      & CCCC      \\
+\hline
+3         & 4         & 5               \\
+\hline
+\end{tabularx}
+\label{tab:table1}
+\caption{Look I'm a table trying to ruin your life hihi}
+\end{table}
+\end{verbatim}
+
+
+\begin{table}[b]
+\begin{tabularx}{\linewidth}{|X|X|X|}
+%you need to specify how many friggin entries you have
+\hline
+Heading 1 & Heading 2 & Heading 3   \\
+\hline
+AAAA      & BBBB      & CCCC      \\
+\hline
+3         & 4         & 5               \\
+\hline
+\end{tabularx}
+\label{tab:table2}
+\caption{Look I'm a table trying to ruin your life hihi}
+\end{table}
+
+\lipsum[1-4]
+
+%%% Bibliography
+
+% This just outputs all the references regardless of whether they're actually added in the text or not
+\nocite{*}
+
+% This sets the indent of the references to be nice, should be in the .cls
+\setlength{\bibhang}{\parindent}
+
+\phantomsection \addcontentsline{toc}{section}{References} 
+% Prints the bibliography, duh. But also appends the License, Contributions, Acknowledgments, and Conflicts of Interests
+\printbibliography
+
+
+
+\end{document}

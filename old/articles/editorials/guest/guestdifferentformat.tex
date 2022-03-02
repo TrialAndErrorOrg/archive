@@ -1,0 +1,262 @@
+
+% Document class options:
+% =======================
+% blind: Anonymise all author, affiliation, correspondence
+%        and funding information.
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+% num-refs: Uses numerical citation and references style 
+%           (Vancouver-authoryear).
+%
+% alpha-refs: Uses author-year citation and references style
+%             (rss).
+%
+% Using other bibliography styles:
+% =======================
+%
+% To specify a different bibiography style
+%
+% 1) Do not use either num-refs or alpha-refs in documentclass.
+% 2) Load natbib package with the options set as needed.
+% 3) Use the \bibliographystyle command to specify the style
+% 
+% Included NJD styles are: 
+%   WileyNJD-ACS
+%   WileyNJD-AMA
+%   WileyNJD-AMS
+%   WileyNJD-APA
+%   WileyNJD-Harvard
+%   WileyNJD-VANCOUVER
+%
+% or you may upload an alternative .bst file 
+% (if requested by the journal).
+%
+% Examples:
+% =======================
+%% Example: Using numerical, sort-by-authors citations.
+\documentclass[twocolumn, serif]{jote-article}
+
+
+
+\usepackage[backend = biber, style=apa]{biblatex}
+\addbibresource{correctguest.bib}
+
+
+
+%% Example: Using author-year citations and anonymising submission
+% \documentclass[blind,alpha-refs]{wiley-article}
+
+%% Example: Using unsrtnat for numerical, in-sequence citations
+% \documentclass{wiley-article}
+% \usepackage[numbers]{natbib}
+% \bibliographystyle{unsrtnat}
+
+%% Example: Using WileyNJD-AMA reference style and superscript
+%%          citations, two-column and serif fonts for AIChE
+% \documentclass[serif,twocolumn,lineno]{wiley-article}
+% \usepackage[super]{natbib}
+% \bibliographystyle{WileyNJD-AMA}
+% \makeatletter
+% \renewcommand{\@biblabel}[1]{#1.}
+% \makeatother
+
+% Add additional packages here if required
+\usepackage{siunitx}
+
+
+\usepackage{float}
+\usepackage{bookmark}
+\usepackage{lipsum}
+% Update article type if known
+% Include section in journal if known, otherwise delete
+\papertype{Editorial}
+
+\title{Fail Fast, Fail Forward, Fail Openly: The Need to Share Failures in Development}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{R. C. Sindall}
+\authorone{R. C. Sindall}
+
+\author[2]{D. J. Barrington}
+\authortwo{D. J. Barrington}
+
+
+%\contrib[\authfn{1}]{Equally contributing authors.}
+
+% Include full affiliation details for all authors
+\affil[1]{Pollution Research Group, University of KwaZulu-Natal, Durban, South Africa}
+\affil[2]{School of Population and Global Health, The University of Western Australia, Perth, Australia}
+
+\corraddress{MISSING, MISSING}
+\corremail{\href{mailto:MISSING}{MISSING}}
+
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\paperdoi{10.36850/ed2}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Sindall \& Barrington}
+
+\jname{Journal of Trial and Error}
+\jyear{2020}
+%\jvolume{Fall}
+\jwebsite{https://www.jtrialerror.com}
+\paperreceived{MISSING}
+%\paperrevised{7 September, 2020}
+\paperaccepted{MISSING}
+\paperpublished{MISSING}
+\paperpublisheddate{2020-11-26}
+
+
+
+%\jpages{1-12}
+\jlogo{media/jote_logo_full.png}
+
+
+\rolling{YES}
+
+
+\heightabstract{65mm}
+\widthaffil{60mm}
+
+\setlength{\parskip}{0pt}
+
+%Enter something here in order for the abstract to dissapear
+\noabstract{Yes}
+
+%\keywordsabstract{epistemic by-products, publication bias, replication geneticization, scientific pluralism}
+
+\begin{document}
+\begin{frontmatter}
+\maketitle
+
+\end{frontmatter}
+\textsuperscript{1} Department of Psychology, McGill University, Montreal, Canada 
+\textsuperscript{2} Descartes Centre for the History and Philosophy of the Sciences and the Humanities, Utrecht University, Utrecht, Netherlands 
+\textsuperscript{3} Department of History, Ghent University, Ghent, Belgium 
+\textsuperscript{4} Department of Philosophy and Cultural Heritage at Ca' Foscari, Venice, Italy 
+\textsuperscript{5} Open Science Community Utrecht, Utrecht University, Utrecht, Netherlands 
+\textsuperscript{6} Tilburg School of Humanities and Digital Sciences, Tilburg University, Netherlands.
+
+\textsuperscript{7} School of English, Drama and Creative Studies, University of Birmingham, Birmingham, United Kingdom 
+\textsuperscript{8} Faculty of Medicine and Health Sciences, McGill University, Montreal, Canada 
+\textsuperscript{9} Department of Philosophy \& Religious Studies, Utrecht University, Utrecht, Netherlands 
+\textbf{Corresponding authors}: JOTE Team {[}jtrialerror@uu.nl{]}
+
+\textbf{Contribution statement}: Sean Devine is the lead author. All other authors contributed equally.
+
+With the publication of our first issue, we are pleased to formally introduce the Journal of Trial and Error (JOTE). Our goal in this editorial article is to (i) outline the problem JOTE aims to solve, (ii) detail our solution, and (iii) state our goals as a journal. As readers will see, we communicate knowledge rather differently from other platforms. The members of JOTE are unambiguously and unabashedly aware of this departure from the status quo, which we regard as a necessary one in the current academic context. In other respects, however, our mission keeps with an ethos of openness and transparency that has fueled scientific collaboration for centuries. In this regard, our aims are not so different from those formulated in the first issue of \emph{Nature,}
+still regarded one of the most prestigious scientific outlets: 
+\begin{quote}
+to aid Scientific Men themselves by giving early information of \emph{all} advances made in any branch of natural knowledge throughout the world and by affording them an opportunity of discussing the various scientific questions which arise from time to time. {[}italics added{]}
+(Nature, 1969, p. 440) \end{quote}
+
+Therefore, for those readers who are skeptical of our project from the outset, we ask that you think of us not (only) as scientific rabble-rousers, but as devotees of science: science as it is practiced; that is to say, \emph{all} science.
+
+\hypertarget{what-is-our-problem}{% \section{\texorpdfstring{\textbf{What is our problem?}}{What is our problem?}}\label{what-is-our-problem}}
+
+Academia, which we take to refer to all disciplines of inquiry practiced in universities and research centers ---not only to science--- is radically fragmented nowadays. Our analysis applies primarily to the natural sciences, but we believe some of the challenges we identify apply to the social sciences and the humanities as well. That said, we shall be wary of attempting to find a one-size-fits-all approach to a reform in academia and be attentive to the particularities of each discipline. From here onwards, we will use the term 'science' as it is understood in the Anglo-Saxon world: as a term that includes natural sciences, but not humanities. With this in mind, we argue that the way science is interpreted, perceived, and consumed differs substantially from the way it is practiced, theorized, and produced. To characterize this fragmentation, we identify three gaps in science: 
+\begin{enumerate}
+\item   There is a gap between the image of science and science as practiced,   that is between the science that we see and the science that is done.
+  Publicly, science is thought of as an unambiguous set of operations   that gleans truth from chaos. By applying a set of specialized   methodologies in a well-delineated process, the ``blooming, buzzing   confusion'' of experience can be quantified, categorized, and   systematized. But in practice, science is quite messy. Experiments   rarely work on the first try or as expected, results rarely falsify   hypotheses directly, and knowledge is gained in small, incremental   steps instead of great leaps. This process of fine-tuning is at odds   with the public image of science as an enterprise designed for   consistent large-scale discovery.
+\item   There is a gap between what is researched and what is published. A   mindset of impact-or-perish dominates academia and contributes to the   persistence of positive publication bias. Here, we use the term   impact-or-perish instead of the more common publish-or-perish because   we believe it better captures the expectations put on academics today:   to not only publish, but also to impact, to discover, to amaze, and to   flabbergast readers. These institutional pressures widen the space   between the research scientists conduct and what is available in the   published literature. In the face of failed research ---outcomes that   do not meet the initial aim of the individual researchers---   scientists have two options: not publishing at all or framing the   results as productive by engaging in questionable research practices.
+  In line with the self-image of science as suppressing errors and   overemphasizing productive big discoveries, this impact-or-perish   mindset reinforces the idea that the role of the scientist is to   succeed, not to inquire.
+\item   There is a gap between research that is popular and research that is   replicable. The pressures of big-discovery science and   impact-or-perish attitudes push scientists to engage in questionable   research practices that result in the publication of big stories that   do not replicate. Since the true nature of an effect can only be   ascertained in the aggregate, through replicability, the present-day   situation of unreplicable experiments is a serious problem. Any   individual study, no matter how rigorous, could fail to generalize due   to the error inherent in testing a single sample from a broader   population. While this ambiguity can never be resolved (we can never   be absolutely sure of the magnitude of an effect), we can improve our   confidence in a result by aggregating many single studies. For this to   work, however, the data available to the meta-scientists doing this   must accurately reflect the state of research in a given area. In this   respect, recent debate on the replication crisis has (rightfully)   focused on the misuse of statistics by scientists, on methodological   carelessness, or on theoretical inappropriateness. However, there has   been less discussion about what to do when initial hypotheses are not   substantiated.
+\end{enumerate}
+
+Together these gaps represent a problem that we hope to address with JOTE. Specifically, we want to provide an outlet for research as it is practiced to be shared and discussed. In doing so, we aim to sketch a new scientific image: one that better matches what is actually happening in laboratories and in research institutes around the world. If we can do this, we believe it will improve modern science in many ways. First, it will improve academic integrity and promote honesty in scientific reporting by enabling scientists to publish their otherwise `unpublishable' results in a journal format, still academia's most important platform for its economy of reputation. Second, by the same means, it will reduce the incalculable number of man-hours lost to ``failed'' research by reframing what is meant by failure in science.
+Third, it will greatly improve our meta-analytic estimates of the true effects of phenomena of interest by making non-significant data available for meta-scientists to incorporate in their analyses. Fourth, it will hold scientists up to the high standards that the Scientific Method and their reputation as `experts' demand from them: to be inquisitive, to take risks, and to engage in \emph{trial and error}.
+
+\hypertarget{what-is-trial-and-error}{% \section{\texorpdfstring{\textbf{What is trial and error?}}{What is trial and error?}}\label{what-is-trial-and-error}}
+
+We interpret `trial and error' as the elementary process in knowledge production. In other words, we argue that every instance of scientific inquiry relies on a commitment to the process of trial and error. Put simply, `trial' refers to trying something new, exploring and/or testing a new hypothesis or methodology, or in some other form pushing against the boundaries of what is known. `Error' refers to obtaining some kind of unexpected result from those trials, be that negative, ambiguous, or going against some long-held belief. `Trial and error' is an inherent and fundamentally collaborative mechanism of the scientific process, whereby scientists share knowledge of \emph{both} successes and failures to inform future endeavors. To know what is, we must know what is not.
+
+\hypertarget{when-is-trial-and-error-productive}{% \subsection{\texorpdfstring{\emph{2.1. When is trial and error productive?}}{2.1. When is trial and error productive?}}\label{when-is-trial-and-error-productive}}
+
+We differentiate between two equally useful types of errors: methodological errors and conceptual flaws. Methodological errors refer to procedural, observational, statistical, and other broadly practical errors. Reflecting on and correcting for these errors helps drive improvement in the understanding and application of scientific techniques. Therefore, sharing these results help increase technical rigor in a given scientific field.
+
+Conceptual flaws refer to patterns or pieces of our understanding of particular phenomena which seem to conflict with experimental observation. Reflecting on and exposing these flaws, especially in our own research, allows other researchers to update their belief in certain theories. In other cases, it could lead to a reworking of entire frameworks. Thus, not only hits (positive results), but also misses (negative results) are key to scientific progress.
+
+\hypertarget{how-does-trial-and-error-relate-to-various-disciplines}{% \subsection{\texorpdfstring{\emph{2.2. How does trial and error relate to various disciplines?}}{2.2. How does trial and error relate to various disciplines?}}\label{how-does-trial-and-error-relate-to-various-disciplines}}
+
+In any empirical inquiry, trial and error are integral and fairly intuitive concepts to understand. However, at JOTE, we believe that all academic disciplines are indispensable in constructively reflecting on trial and error. To this end, we highlight two ways in which interdisciplinarity plays a central role at JOTE. First, scholars from other fields can offer different perspectives on negative results. Due to their inherently ambiguous status, negative results naturally lend themselves to discussion, philosophizing, and problematizing. They are anchors in contextualizing science. As such, one of our key objectives is to encourage the discussion of negative results between all branches of academia to reap the full benefits of reflection on failure (see \textbf{3. How do we publish?}). Second, we recognize the unique nature of error within the humanities. A culture of success has likewise incentivized humanities scholars to evaluate their work mainly in terms of originality and novelty. Much like in the sciences then, this type of academic economy promotes the spread of grand conclusions that are usually only supported by partial accounts. However, the way the humanities relate to these practices is different, such that humanities scholars are strongly trained to self-reflect about their own limitations and failures. For us, the challenge so far has been to provide a space for the reflections to be formalized and shared not only with other humanities scholars, but also with researchers across disciplinary borders. Therefore, while being aware of (and fascinated by) methodological differences between the humanities and the sciences, we certainly want to provide a platform to highlight, learn from, and reflect on errors in the humanities. Lastly, JOTE aims to highlight a ubiquitous but underrepresented form of academic failure: rejected grant applications. Indeed, as an institutional consequence of the highly competitive grant system in academia, many extraordinary proposals are left unfunded. Across all disciplines, a significant amount of research potential is wasted as funding rejections, despite re-applications, too often end in abandoning the project or having to leave academia altogether.
+
+\hypertarget{why-do-we-want-to-publish-trial-and-error}{% \subsection{\texorpdfstring{\textbf{\emph{2.3 Why do we want to publish trial and error?}}}{2.3 Why do we want to publish trial and error?}}\label{why-do-we-want-to-publish-trial-and-error}}
+
+In addition to the arguments we have given above in favor of trial and error, we want to \emph{publish} trial and error for (at least) the following four reasons. First, we want to provide an openly accessible platform that reconstructs the self-image and public image of scientists. Second, we aim to close the gap between what is researched and what is published so that the academic literature accurately reflects the current state of scientific research. Third, we wish to improve replicability and meta-analytic precision across the sciences, counterbalancing positive publication bias with an explicit open door for negative results. Fourth, we seek to promote principles of Open Science \& Scholarship and transparency, particularly for researchers who are most affected by the impact-or-perish mentality (graduate students, postdocs, early-career researchers, etc.). For these reasons, by simply publishing trial and error, a process we regard as integral to the scientific process, we hope to improve scientific and academic culture on multiple fronts.
+
+\hypertarget{how-do-we-publish}{% \section{\texorpdfstring{\textbf{How do we publish?}}{How do we publish?}}\label{how-do-we-publish}}
+
+To accomplish the goals listed above, we have developed a unique publication style for JOTE. In this section, we will describe the types of articles we publish, how these articles fit within JOTE's overall mission, and how our editorial process works. In addition, we will point readers to an article of each kind that appears in this first issue.
+
+\hypertarget{empirical-articles}{% \subsection{\texorpdfstring{\emph{3.1. Empirical articles}}{3.1. Empirical articles}}\label{empirical-articles}}
+
+Empirical articles describe conceptual developments based on empirical and experimental studies which have produced null, unexpected, negative, or mixed results. These articles may contain incomplete findings or lack a closed, cohesive narrative. We are aware that authorship still is academic coinage in a severe and competitive economy of reputation.
+Therefore, by providing an indexable publication for null or inconclusive results, we hope to reduce institutional pressures to communicate positive results. Furthermore, we hope that having such an outlet will discourage the wide array of questionable research practices that researchers may engage in to make their results statistically significant and suitable for publication elsewhere, such as p-hacking, selective reporting, or even falsifying data. Finally, publications in this category will help improve meta-analyses by showcasing null results that would otherwise not be accessible to scholars. We further encourage these efforts by highly encouraging the open sharing of data for all submitted empirical articles. See Leboeuf, Linden-Andersen, \& Carriere (2020) in this issue for an example of such an empirical article.
+
+\hypertarget{reflection-articles}{% \subsection{\texorpdfstring{\emph{3.2. Reflection articles}}{3.2. Reflection articles}}\label{reflection-articles}}
+
+By their very nature, negative results are difficult to interpret. In light of this, JOTE invites other researchers to reflect on and contextualize the issues raised in the original empirical study in a reflection article that accompanies each empirical article. JOTE welcomes reflections that frame the original results in the context of existing literature, comments on the techniques used, and/or discussions about the epistemological and ontological implications of the original study's findings. Critically, we invite authors from the humanities and other disciplines to contribute to the journal in the form of reflection articles. By doing so, we aim to foster crosstalk between disciplines and create a dialogue about the broad issues surrounding failure in science. See Abma (2020) in this issue for an example of a reflection article on Leboeuf et al. (2020).
+
+\hypertarget{meta-research-articles}{% \subsection{\texorpdfstring{\emph{3.3. Meta-research articles}}{3.3. Meta-research articles}}\label{meta-research-articles}}
+
+Thirdly, JOTE publishes meta-research articles. These articles pertain to ``research on research'' studies. Here, we welcome reports of methodological challenges, suggestions, or technical flaws that carry relevant information (i.e., advice on the dos and don'ts) for the field to which they belong, as well as studies that deal with the processes of trial and error at a systemic level, such as on publications biases or replication. We hope to connect discussions on the institutional, social, cultural, and political context of knowledge production with reflections on methodological and conceptual challenges. This category of articles is the broadest and aims to highlight the important work done in the meta-science community and to promote meta-analytic thought across the sciences. See De Groot (2020) and Nelson (2020) for two examples of the heterogeneous category of meta-research articles.
+
+\hypertarget{rejected-grant-applications}{% \subsection{\texorpdfstring{\emph{3.4 Rejected Grant Applications}}{3.4 Rejected Grant Applications}}\label{rejected-grant-applications}}
+
+Lastly, JOTE publishes rejected grant applications together with their anonymous reviewers' comments. We believe there are at least three reasons why doing this is valuable. Firstly, grant applications are valuable in and of themselves. Proposals are overviews of the state of the field in which the author(s) has/have identified a gap in knowledge.
+Secondly, publishing rejected proposals is valuable to shape the future of science. These proposals contain metadata that catalogue the ideas, hypotheses, and theoretical perspectives that circulate within an academic field. As such, by providing these proposals with a platform, we formalize a body of knowledge that would otherwise be completely inaccessible to other researchers. Thirdly, failed grant applications are historically valuable. Scientific ideas rarely develop linearly.
+Instead, they are molded by a complex network of competing hypotheses and theoretical viewpoints. Thus, as a source for the initial, pre-experimental formulations of these hypotheses, research proposals provide historians of science with a valuable means of tracking the history and development of a scientific idea. Similarly, they provide metadata on the trends and biases in the process of awarding grants itself, which in turn could be used to understand what ideas are `in the air' at a given point in history. For two examples of rejected grant applications in this issue, see Bekkers (2020) and Cheplygina (2020).
+
+\hypertarget{jotes-editorial-pipeline}{% \subsection{\texorpdfstring{\emph{3.5. JOTE's editorial pipeline}}{3.5. JOTE's editorial pipeline}}\label{jotes-editorial-pipeline}}
+
+To emphasize our commitment to transparency on all fronts, we believe it important to describe our publishing process. JOTE focuses on failed research, but this does not mean we publish sloppy science. All submitted articles are peer-reviewed by experts from the article's field and according to its disciplinary conventions. Throughout this process, we are committed to principles of transparency, fairness, and Open Science. As such, all peer-reviews are double-blind and available post-publication.
+
+Following submission of an article, our editors contact potential reviewers to ensure that the article adheres to the standards of its field. Once a minimum of two reviewers agree that it is, the first of up to three review rounds begins. During this process, editors contact potential authors for a reflection piece. After reflection pieces undergo editorial review and are finalized, authors of the original empirical paper have the opportunity to respond to the reflection piece.
+This process can be repeated until all parties involved are satisfied with the quality of the pieces. Once both the author(s) of the empirical article and those of the reflection piece are satisfied, the pieces are ready for publication. The articles as well as the peer-reviews and back-and-forth discussion between the authors are prepared for publication and receive a Digital Object Identifier (DOI) for database indexing. In the case of meta-research articles, the process is the same as for empirical articles, but there is no reflection piece associated with the article.
+
+Science is not static, but publications, especially PDFs, unfortunately are. Although peer-reviewers are traditionally perceived as gatekeepers of scientific quality and trustworthiness of the publication, we believe it is naive to assume that two other experts in addition to the original author(s) can speak on behalf of the whole academic community. In line with our emphasis on trial and error, we do not see peer-reviewed publications as final objects, and we believe that an article is never truly finished, not even after it has been reviewed, proofread, type-set, and copy-edited. We therefore use the interactive online platform `PubPub' to enable readers to become active participants in the publication process by allowing and encouraging comments on the online version of every article. We advocate for discussion rather than retraction where possible.
+
+\hypertarget{fees-and-funding}{% \subsection{\texorpdfstring{\textbf{\emph{3.6 Fees and Funding}}}{3.6 Fees and Funding}}\label{fees-and-funding}}
+
+We firmly believe that academic knowledge should be accessible to the community in its broadest sense. For this reason, all our articles are published in Open Access. That said, it should be noted that just like knowledge production, which costs time, effort, materials, and money, publishing this knowledge also comes at substantial costs. JOTE is published by JOTE Publishers, and therefore we can control our own processing costs. Thanks to the relatively low costs of the open-source licenses and platforms we use, we are able to opt for the diamond route of Open Access: we publish and release all content for free, for everyone. This does not mean that there are no costs or that they are negligible. Rather, we can support these costs with generous funding from the Descartes Centre for the History and Philosophy of the Sciences and the Humanities at Utrecht University. We are grateful for their support and their commitment to developing innovative, social, and ethical venues for academic publishing. We would also like to emphasize that our decision to remove all article-processing and publication fees is only made possible by the fact that a dozen (under)graduate students have, over two years, consistently dedicated several hours a week to making JOTE a reality. Publishing, even in an online format, has material costs that should not be forgotten.
+
+\hypertarget{who-is-our-audience}{% \section{\texorpdfstring{\textbf{Who is our audience?}}{Who is our audience?}}\label{who-is-our-audience}}
+
+Considering our unorthodox approach to scientific publishing, our readers might very well ask themselves: "Who is this journal for, really?" To pre-empt this question, we distinguish between two types of audiences we hope to accommodate with our publications.
+
+On the one hand, we hope that JOTE may serve as a repository for null and mixed statistical results. In this sense, we believe our content appeals specifically to other researchers, meta-analysts, and scientific reviewers. To them, we offer content that enriches their estimates of effects and that deepens their understanding of contextual variability as well as the real rate of replicability of scientific phenomena. On the other hand, we also challenge philosophers of science, sociologists, anthropologists, and humanities scholars to join the discussion about science in practice with actual scientists. In this regard, we appeal to humanities scholars who wish to gain a better understanding of what scientists are \emph{actually} doing. As we have argued, a survey of mainstream science alone paints a biased picture of the true state of current research. We are confident that there is far more failure in research than is currently reported. In this sense, we hope that our empirical results and the associated reflection articles both help paint a clearer picture of the scientific process as it is practiced for scholars and scientists alike.
+
+It is unfortunately common for the two groups mentioned above to be thought of as starkly divided. Though we recognize the different interests of these groups, we hope that we can also contribute to the dissolution of this divide by creating a space for critical dialogue between scholars from all backgrounds.
+
+\hypertarget{what-is-our-ultimate-goal}{% \section{\texorpdfstring{\textbf{What is our ultimate goal?}}{What is our ultimate goal?}}\label{what-is-our-ultimate-goal}}
+
+Throughout this introductory piece, we have outlined JOTE's proximal goals. We seek to provide an outlet for academic failure, foster interdisciplinary discussion about failure in science, inform meta-analyses, and close the gap between what is researched and what is published. Above and beyond these short-term goals, JOTE also has loftier aspirations. We discuss these long-term goals in this section.
+
+Broadly speaking, our objective is to rethink success and failure in research. We wish to formalize a body of knowledge that has only been shared at water coolers in academic hallways so far. We want to ask, answer, and problematize the question of ``what went wrong?'' In doing so, we hope to normalize failure in the sciences such that all too common discussions of positive publication bias, file drawer problems, questionable research practices and/or p-hacking are rendered moot.
+
+That said, our ultimate goal is to make JOTE obsolete. JOTE can only exist in a scientific climate in which trial and error is systematically ignored - it would not make sense to have a journal of trial and success. Therefore, our goal is to change the scientific landscape, highlight the importance of failure in science, uproot the way science is published, and to ultimately become unnecessary.
+
+\hypertarget{conclusion}{% \section{\texorpdfstring{\textbf{Conclusion}}{Conclusion}}\label{conclusion}}
+
+With the publication of this first issue, we introduce the Journal of Trial and Error; a journal dedicated to highlighting the importance of trial and error in scientific practice and scholarship. To address what we view as key problems in science today, we implement a unique publication process that promotes scientific integrity, honesty, openness, and interdisciplinarity. Our goal in doing so is to change the scientific landscape, foster good-quality meta-analytic thought, reduce impact-or-perish pressures in academia, and revise the way science is published. If we succeed, all the better. If we fail, we hope that our failure can at least be instructive to others.
+
+We thank the readers for taking an interest in this first issue of the Journal of Trial and Error.
+
+%\nocite{*}
+\setlength{\bibhang}{\parindent}
+\phantomsection \addcontentsline{toc}{section}{References} 
+\printbibliography
+
+
+
+\end{document}

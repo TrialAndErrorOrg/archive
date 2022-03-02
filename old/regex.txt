@@ -1,0 +1,95 @@
+### Cleaning up pubpubs terrible conversion
+
+## Get rid of the hypertarget label stuff
+\\hypertarget[^\\]*(\\\w*section)([^\}]*)\}[^\n]*
+replace
+\1*\2}
+
+## Replace \(sub(sub))section*{something} with
+## \phantomsection \addcontentsline{toc}{(sub(sub))section}{something}
+
+#Find:
+\\(\w+)+\*\{([\w\- ]*)\}
+
+#Replace:
+\phantomsection \addcontentsline{toc}{$1}{$2}\$1*{$2} 
+
+## Get rid of stupid line endings from pubpub
+##(do this in a different text editor)
+
+#Find: 
+([^\%\{\}\n])\n(?!\n)
+#Replace:
+\1 
+#note the space in replace
+
+
+
+#### Citations
+
+### Author Year citations (APA)
+##Find things like (Blah et al., 2019)
+#Find :
+\(([A-Z]\w*)[^,]*\, (\d\d\d\d)\)
+#Replace: 
+\parencite{$1$2}
+
+## Find things like: (Blah et al., 2009; Pieter, 2010 ....)
+## Need to find a way to generalize this
+#Find 
+\(([A-Z]\w*)[^,]*\, (\d\d\d\d)\; (\w+)[^,]*\, (\d\d\d\d)\;\ (\w+)[^,]*\, (\d\d\d\d)\;\ (\w+)[^,]*\, (\d\d\d\d)\)
+#Replace
+\parencite{$1$2, $3$4, $5$6, $7$8}
+
+##Inline: Lebeouf et al. (2020) -> Lebeouf2020
+#Find: 
+([A-Z]\w+)\ [\w\.]+\ \((\d\d\d\d)\)
+#Replace: 
+\textcite{$1$2}
+
+## Todo: citations with page numbers
+
+## Fix no initials in .bib
+([A-Z][^,]*), ([A-Z\.]+)
+
+$2 $1
+
+### Numeric citations
+# This is just awful to do. I wrote a script that does this in Python, but this requires a couple of things. 
+# 1. A list of the citations in the correct cite order 
+# 2. That list of citations turned into bibtex keys i.e. AuthorYYYY in that same order. Do some regex to speed this up.
+# 3. A bib file which contains those references as a bibliography WITH THOSE SAME KEYNAMES. This is one of the horrible parts.
+# 4. Then run this script, adjust the path parameters as necessary. #TODO: Make the path parameters inputs. It's a really ugly script but it works, although not fully. It can't replace [2-9] with \cite{Auth2222, Auth3333, Auth4444, Auth5555 etc} yet, which would be really handy but I'll do that later.
+## START SCRIPT
+import regex as re
+
+path ='veronikagood.tex'
+keys ='citekeys.txt'
+newpath = 'veronikacorrectcitations.tex'
+
+with open(path, "r") as f:
+    oldlines = f.readlines()
+    newlines = []
+
+with open(keys, "r") as k:
+	newkeys = k.read().splitlines()
+	
+for line in oldlines:
+	keysi= re.findall(r"(?<=\[\}|\d\,\s|\d-)(\d+)", line)
+	keyz=[]
+	for i, key in enumerate(keysi):
+		if (len(key)<3):
+			keyz.append(newkeys[int(key)-1])
+			line = re.sub(keysi[i],keyz[i],line)
+	line = re.sub(r"\{\[\}",r"\\cite{", line)
+	line = re.sub(r"\{\]\}",r"}", line)
+	line = re.sub(r"([^\.\}\{])\n(?!\\)",r"\1 ", line) 		
+	if (keysi):
+		print(keyz)
+		print(line)
+	newlines.append(line)
+
+with open(newpath, "w") as f:
+    f.writelines(newlines)
+
+## END script

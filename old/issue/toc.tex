@@ -1,0 +1,180 @@
+\documentclass{book}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+\usepackage[default]{sourcesanspro}
+
+% definition of some personal colors
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{HTML}{ffba08}
+\definecolor{jotedark}{HTML}{12799d}
+\definecolor{nature}{HTML}{29303C}
+\usepackage{suffix}
+
+\newcommand\chapterauthor[1]{\authortoc{#1}\printchapterauthor{#1}}
+\WithSuffix\newcommand\chapterauthor*[1]{\printchapterauthor{#1}}
+
+\titlecontents{chapter}
+  [0pt]% Left margin, optional
+  {}% Code insertet above
+  {\bfseries}% Numbered-entryformat
+  {\bfseries}% Numberless-format
+  {\contentspage\vskip1.5ex} %Below code, here: add dotfill and pagenumber for entry, and some vertical space between entries
+
+% Custom command to keep the author on the same page of chaptertitle, and above it.  
+\newcommand{\chapterAndAuthor}[2]{%
+ % Takes the following input
+ % #1: Author
+ % #2: Chaptertitle
+\clearpage%
+    % Minipage to keep the author and chaptertitle on same page
+    \noindent\begin{minipage}{\textwidth}
+        % Set the author style
+        {\bfseries#1}
+        % Bring the chaptertitle a bit closer to the authrotitle
+        \vspace{-3\baselineskip}
+        % Add an entry to the Table of Contents, with the name of the author in italics and the chapter title
+        \addcontentsline{toc}{chapter}{{#1\newline%
+        %To make long chapter titles spanning multiple lines indent on each line, a \parbox is created. This is siimply a box holding a wrapped paragraph at a certain length. Also, we need to move the dotfill here.
+        #2}}
+        % Print the chapter
+        \chapter*{#2}
+    \end{minipage}
+    }
+
+% command for the circle for the number of part entries
+\newcommand\Circle[1]{\tikz[overlay,remember picture] 
+  \node[draw,circle, text width=18pt,line width=1pt] {#1};}
+
+% patching of \tableofcontents to use sans serif font for the tile
+\patchcmd{\tableofcontents}{\contentsname}{\sffamily\contentsname}{}{}
+% patching of \@part to typeset the part number inside a framed box in its own line
+% and to add color
+\makeatletter
+\patchcmd{\@part}
+  {\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}}
+  {\addtocontents{toc}{\protect\addvspace{20pt}}
+    \addcontentsline{toc}{part}{\huge\color{myyellow}\sffamily#1}}{}{}
+
+\patchcmd{\@chapter}
+  {\addcontentsline{toc}{chapter}{\thechapter\hspace{1em}#1}}
+  {\addtocontents{toc}{\protect\addvspace{20pt}}
+    \addcontentsline{toc}{chapter}{\huge{\protect\color{myyellow}%
+      \setlength\fboxrule{2pt}\protect\Circle{%
+        \hfil\thepart\hfil%
+      }%
+    }\\[2ex]\color{myyellow}\sffamily#1}}{}{}
+
+%\patchcmd{\@part}
+%  {\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}}
+%  {\addtocontents{toc}{\protect\addvspace{20pt}}
+%    \addcontentsline{toc}{part}{\huge{\protect\color{myyellow}%
+%      \setlength\fboxrule{2pt}\protect\fbox{\protect\parbox[c][1em][c]{1.5em}{%
+%        \hfil\thepart\hfil%
+%      }}%
+%    }\\[2ex]\color{myred}\sffamily#1}}{}{}
+\makeatother
+
+% this is the environment used to typeset the chapter entries in the ToC
+% it is a modification of the leftbar environment of the framed package
+\renewenvironment{leftbar}
+  {\def\FrameCommand{\hspace{6em}%
+    {\color{jotedark}\vrule width 2pt depth 6pt}\hspace{1em}}%
+    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
+  }
+ {\endMakeFramed}
+
+% using titletoc we redefine the ToC entries for parts, chapters, sections, and subsections
+\titlecontents{part}
+  [0em]{\centering\bfseries}
+  {\contentslabel}
+  {}{}
+\titlecontents{chapter}
+  [0em]{\vspace*{2\baselineskip}\hspace{-4em}}
+  {\parbox{4.5em}{%
+    \hfill\Huge\sffamily\bfseries\color{nature}\thecontentspage}%
+   \vspace*{-2.3\baselineskip}\leftbar\sffamily}
+  {}{\endleftbar}
+\titlecontents{section}
+  [8.4em]
+  {\sffamily\contentslabel{3em}}{}{}
+  {\hspace{0.5em}\nobreak\itshape\color{myred}}
+\titlecontents{subsection}
+  [8.4em]
+  {\sffamily\contentslabel{3em}}{}{}  
+  {\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+\usepackage[bookmarks=true, bookmarksopen=true, hidelinks]{hyperref}
+\newcount\pagebak
+
+\renewcommand*\contentsname{\vspace{-2\baselineskip}\color{nature}Table of Contents}
+
+\begin{document}
+\frontmatter
+\setcounter{page}{1}
+\tableofcontents
+\mainmatter
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\newpage
+\newpage
+
+\part{Editorial}
+
+\renewcommand{\chaptername}{Devine}
+\chapter{\textit{JOTE}\\Science Fails. Let's Publish}
+\setcounter{page}{1}
+
+\chapter{\textit{Rebecca C. Sindall \& Dani J. Barrington}\\ Fail Fast, Fail Forward, Fail Openly: The Need to Share Failures in Development}
+\setcounter{page}{6}
+
+% just for the example
+
+\part{Articles}
+\newpage\setcounter{page}{9}
+\chapter{\textit{Julie Leboeuf,  Stine Linden-Andersen,  Jonathan Carriere}\\ Alcohol Cues and their Effects on Sexually Aggressive Thoughts}
+
+
+\newpage\setcounter{page}{20}
+\chapter{\textit{Ruud Abma}\\ Experiment and Fail: a Comment on “Alcohol Cues and their Effects on Sexually Aggressive Thoughts”}
+
+
+\newpage\setcounter{page}{27}
+\chapter{\textit{Juliane Traxler,  Roxane V. Philips,  Andreas von Leupoldt, Johan W. S. Vlaeyen}\\ Trial and Error (-Related Negativity): An Odyssey of Integrating Different Experimental Paradigms}
+
+%\phantomsection \addcontentsline{toc}{section}{\text{                             } }
+
+%\phantomsection \addcontentsline{toc}{section}{\text{                             } }
+\newpage\setcounter{page}{39}
+\chapter{\textit{Maarten Derksen}\\ Reflection on “Trial and Error (-Related Negativity)”}
+\phantomsection \addcontentsline{toc}{section}{\text{                             } }
+
+\phantomsection \addcontentsline{toc}{section}{\text{                             } }
+
+
+\newpage\setcounter{page}{42}
+\chapter{\textit{Kristel De Groot}\\ Burst Beliefs – Methodological Problems in the Balloon Analogue Risk Task and Implications for Its Use}
+
+
+
+\newpage\setcounter{page}{52}
+\chapter{\textit{Nicole Nelson}\\ Towards an Expanded Understanding of Publication Bias}
+
+
+
+
+
+\part{Rejected Grant Applications}
+
+\newpage\setcounter{page}{59}
+\chapter{\textit{Veronika Chelpygina}\\ CrowdDetective: Wisdom of the Crowds for Detecting Abnormalities in Medical Scans}
+
+\newpage\setcounter{page}{72}
+
+\chapter{\textit{Ren{\'e} H. F. P. Bekkers}\\ Global Giving}
+
+\end{document}

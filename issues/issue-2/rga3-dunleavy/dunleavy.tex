@@ -1,0 +1,775 @@
+% Document class options:
+% =======================
+%
+% serif: Sets the body font to be serif.
+%
+% twocolumn: Sets the body text in two - column layout.
+%
+% Fill in the type of article here.
+% empirical
+  % reflection
+  % meta
+  % rga
+  % editorial
+  %
+% Using other bibliography styles:
+% =======================
+% authordate = APA
+  % number =[1]
+  %
+    \documentclass[twocolumn, issue, rga, authordate]{jote-new-article}
+
+
+  %%% Add the bibliography, make sure it's in the same directory
+\addbibresource{dunleavy.bib}
+
+%%% Add additional packages here if required.Usually not needed, except when doing things with figures and tables, god help you then
+
+  % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph o
+
+%%% TODO: Make this a 1 - 5 option scale to reduce the chance of mistyping
+
+  % Enter the title, in Title Case Please
+    % Try to keep it under 3 lines
+\jotetitle{Are We Meeting Best Practice Standards?: A Longitudinal Analysis of Mental Health Practices Within the Florida Child Welfare System with Implications for Child Well-being}
+
+% List abbreviations here, if any.Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{
+%  ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+    % Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any.Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+% Format: \author[1, 2]{FirstName LastName} \author[2]{...}
+  \author[1]{Daniel Dunleavy}
+
+    % Fill it in again for the PDF metadata.Lame workaround but it works
+      % Format: \authorone{...} \authortwo{...}
+  \authorone{Daniel Dunleavy}
+
+  \rgainfo{Doris Duke Fellowships for the Promotion of Child Well-Being 2017}
+    % List the contribution effort here, they will be listed at the end of the page
+      % List the acknowledgments.If there is no companion piece, this is listed below the author info
+        %\acknowledgments{Author Two would like to thank Author One for doing all the work while they could slack off.}
+% List possible conflict of interest.Will default to saying no conflict exists.
+%\interests{Author One was paid for by Big Failed Experiment}
+% List funding
+    %\funding{}
+% Include full affiliation details for all authors
+\affil[1]{Center for Translational Behavorial Science, 2010 Levy Ave Building B, Suite B0266, Tallahassee, FL 32310}
+
+    % List the correspondence email of the main correspondent
+  \corremail{\href{ daniel.dunleavy@med.fsu.edu } {daniel.dunleavy@med.fsu.edu}}
+
+% Optionally list the present address of one of the authors
+    %\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+% Fill in the DOI of the paper
+
+    % Always starts with '10.36850/' and is suffixed with one of the following plus a number
+      % e  : empirical
+        % r  : reflection
+          % mr : meta - research
+            % rga: rejected grant application
+              % ed : editorial
+  \paperdoi{10.36850/rga3}
+
+% Include the name of the author that should appear in the running header
+  \runningauthor{Dunleavy}
+
+% The name of the Journal
+  \jname{Journal of Trial and Error}
+
+% The year that the article is published
+  \jyear{2021}
+% The Volume Number
+    \jvolume{2}
+    \jissue{1}
+\setcounter{page}{77}
+\jpages{77-84}
+% The website that's listed in the bottom right
+  \jwebsite{
+    https://www.jtrialerror.com}
+
+%%% Only \paperpublished is necessary, any combination of the other two is possible
+
+      % When the paper was received
+        % Format: 1 January, 1900
+    \paperreceived{16 February, 2021}
+
+% When the paper was accepted
+      % Format: 1 January, 1900
+    \paperaccepted{17 February, 2021}
+
+% When the paper will be published
+      % Format: 1 January, 1900
+    \paperpublished{3 March, 2022}
+    \paperissued{3 March, 2022}
+% When the paper is published but in YYYY - MM - DD format, for the crossmark button
+    \paperpublisheddate{2022-03-02}
+
+% The pages of the article, comment out if rolling article
+      %\jpages{1 - 12}
+% Link to the logo, might be redundant
+    
+
+% Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page
+  
+\usepackage{balance}
+%%% Companion Piece
+
+      % Reflection and Empirical articles have each other as companion pieces.Add the DOI, Title, and Abstract of the respective Companion piece here
+
+        %%% Abstract
+
+        % These two set the height and width of the abstract.There's no solution to do this  appear in the abstract, max 7
+    \keywordsabstract{
+health, best practice guidelines, social work}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Starts
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+%%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
+    \begin{frontmatter}
+    \maketitle
+      % Type your abstract between these things.Max 250 words.Be sure to include the \noindent, looks bad otherwise
+    \begin{abstract}
+Best practice standards are one method by which medical providers ensure
+effective care, thus promoting well-being. Though formal guidelines have
+been recently implemented to direct and standardize children's mental
+healthcare in Florida, little research has evaluated the extent to which
+they are executed in practice. This study aims to fill this gap by
+analyzing Florida Medicaid data. Individual-level data will be collected
+from a 12-month period from a random sample of children, on Medicaid,
+with a mental health diagnosis; to: 1) Describe the type and frequency
+of mental health services provided to this sample, including to those in
+the child welfare system; 2) Evaluate the extent to which Florida's
+Psychotherapeutic Medication Treatment Guidelines are adhered to; and 3)
+Analyze sociodemographic characteristics, to determine if there are
+predictive factors which account for undertreatment/overtreatment. Data
+will be coded for congruence with these standards and analyzed using
+multinomial logistic regression.
+    \end{abstract}
+    \end{frontmatter}
+
+
+
+
+
+
+\section{Research proposal}
+
+
+
+\subsection{General information}
+
+
+
+\subsubsection{Institution of employment at time of application}
+
+
+Florida State University
+
+
+\subsubsection{Prospective host institution}
+
+
+Florida State University
+
+\noindent Chapin Hall, University of Chicago
+
+
+\subsubsection{Main field}
+
+
+Social Work
+
+
+\subsubsection{Other fields}
+
+
+Child Welfare
+
+
+\subsubsection{Required length}
+
+
+8/7 pages
+
+
+
+
+
+
+\subsection{Description of the proposed research}
+
+
+
+\subsubsection{Primary research questions}
+
+
+\paragraph{Question \#1} \emph{What are the sociodemographic
+characteristics of children on Medicaid, diagnosed with a mental health
+condition?} Sociodemographic characteristics will further our
+understanding of how frequently different groups of children are
+diagnosed with a mental health condition. Diagnoses will be
+cross-tabulated with age-group, gender, race, placement setting, etc. to
+answer related secondary questions regarding diagnostic prevalence by
+group.
+
+\paragraph{Question \#2} \emph{What types of treatments are being provided
+to children diagnosed with a mental health condition?} Descriptive
+statistics about type of mental health treatment (i.e. drug and/or
+psychosocial interventions) will further our understanding about how
+frequently each type of treatment is provided and how often specific
+interventions (e.g. cognitive behavioral therapy {[}CBT{]}, fluoxetine
+{[}Prozac{]}) are utilized. This includes identifying trends in
+concerning pharmacological practices (e.g. polypharmacy, use of multiple
+antipsychotics, off-label antipsychotic use; as outlined in \pdftooltip{{\color{tip}Government
+Accountability Office}}{Government Accountability Office. (2012). Concerns Remain about Appropriate Services for Children in Medicaid and Foster Care. http://www.gao.gov/assets/660/650716.pdf},~\citeyear{GovernmentAccountabilityOffice2012}, p. 11). This information can be mapped
+across sociodemographic variables to describe what treatments each
+subgroup of children (e.g. Medicaid-only vs. child welfare involved
+children) is receiving. Knowledge gained from this research question can
+identify if particular groups of children are being differentially
+treated with respect to their peers in the population; and to determine
+how these rates compare with national prescription trends (\pdftooltip{{\color{tip}Olfson,
+Marcus, Weissman, \& Jensen}}{Olfson, M., Marcus, S. C., Weissman, M. M., \& Jensen, P. S. (2002). National Trends in the Use of Psychotropic Medications by Children. Journal of the American Academy of Child \& Adolescent Psychiatry, 41(5), 514–521. https://doi.org/10.1097/00004583-200205000-00008},~\citeyear{Olfson2002}) and those within the wider child
+welfare system (\pdftooltip{{\color{tip}Raghaven~et al.,}}{Raghavan, R., Zima, B. T., Andersen, R. M., Leibowitz, A. A., Schuster, M. A., \& Landsverk, J. (2005). Psychotropic Medication Use in a National Probability Sample of Children in the Child Welfare System. Journal of Child and Adolescent Psychopharmacology, 15(1), 97–106. https://doi.org/10.1089/cap.2005.15.97} \citeyear{Raghavan2005}).
+
+\vskip10pt
+
+
+\paragraph{Question \#3} \emph{To what extent are the Florida
+Psychotherapeutic Medication Treatment Guidelines being met?} The
+``Florida Guidelines'' (\pdftooltip{{\color{tip}Florida~Medicaid Drug Therapy Management Program
+for Behavioral Health}}{Florida Medicaid Drug Therapy Management Program for Behavioral Health [FMDRMP]. (2017). Florida Psychotherapeutic Medication Guidelines for Children and Adolescents. http://www.medicaidmentalhealth.org/_assets/file/Guidelines/2016\%20Florida\%20Best\%20Practice\%20Medication\%20Child\%20-\%20Adolescent\%20Guidelines.pdf},~\citeyear{FloridaMedicaidDrugTherapyManagementProgramforBehavioralHealth[FMDRMP]2017}) represent best practice standards. The
+guidelines are congruent with the most recent research (\pdftooltip{{\color{tip}American~Academy
+of Child and Adolescent Psychiatry}}{American Academy of Child and Adolescent Psychiatry. (2015). Recommendations about the Use of Psychotropic Medications for Children and Adolescents in Child-Serving Systems. https://www.aacap.org/App_Themes/AACAP/docs/clinical_practice_center/systems_of_care/AACAP_Psychotropic_Medication_Recommendations_2015_FINAL.pdf},~\citeyear{AmericanAcademyofChildandAdolescentPsychiatry2015}, p, 29; \pdftooltip{{\color{tip}The~TADS Team}}{Treatment for Adolescents With Depression Study (TADS) Team. (2004). Fluoxetine, Cognitive-Behavioral Therapy, and Their Combination for Adolescents With Depression: Treatment for Adolescents With Depression Study (TADS) Randomized Controlled Trial. JAMA, 292(7), 807. https://doi.org/10.1001/jama.292.7.807},~\citeyear{TADS2004}),
+which specifies that all children with complex mental health needs
+should be provided psychosocial therapy concurrently with medication,
+where possible. Understanding the frequency of guideline adherence will
+elucidate how often quality, evidence-based mental health treatments are
+provided. While deviation from guidelines may be occasionally justified
+(\pdftooltip{{\color{tip}Colbrook,}}{Crimson, M. L., \& Argo, T. (2009). The use of psychotropic medication for children in foster.} \citeyear{Colbrook2005}), their consistent implementation is essential to ensure
+that effective treatments are provided, which help protect and promote
+child well-being.
+
+\paragraph{Question \#4} \emph{What sociodemographic factors are
+predictive of treatment discrepancies?} A multinomial logistic
+regression will be conducted to determine if particular sociodemographic
+characteristics are predictive of treatment quality. This analysis will
+determine whether a child's age-group, gender, race, placement setting,
+abuse history, etc. increases the odds that they will receive: 1)
+Recommended care (Guideline adherence); 2) Undertreatment (i.e. no
+treatment, or treatment lacking medication/psychosocial treatment); or
+3) Overtreatment (i.e. polypharmacy, atypical/contraindicated drug use).
+This information will allow for greater scrutiny within the field and
+ensure that particular groups of children aren't harmed by extreme
+deviations in care.
+
+
+\subsubsection{Research approach}
+
+
+\paragraph{Data Source} This dissertation will utilize Florida Medicaid
+data, which contains records of all children enrolled in Florida's
+Medicaid program. This dissertation will also utilize a statewide
+administrative database from the Florida Department of Children and
+Families (DCF). The \emph{Florida Safe Families Network} {[}FSFN{]}
+database contains records of each individual child in Florida's child
+welfare system; and will be used to identify a subgroup of children on
+Medicaid, in child welfare placement settings, for comparison.
+
+\paragraph{Population} My population of interest is children, on Medicaid,
+in Florida, with a mental health diagnosis. A random sample will be
+taken from the Florida Medicaid database, from a 12-month period. The
+sample drawn will be random, in order to facilitate sound statistical
+inferences to the larger population of children (see undefined\pdftooltip{{\color{tip}Berk,}}{Berk, R. A., Western, B., \& Weiss, R. E. (1995). Statistical inference for apparent populations.} \citeyear{Berk2004}, pp.
+39-52). A subgroup of this population (i.e. children in the child
+welfare system) will be identified within the sample, using their unique
+Medicaid ID numbers. Merging the information from these two datasets
+will provide a novel data source, thereby increasing the depth of
+analyses and the importance of the study's findings.
+
+\paragraph{Data access} Access to the Medicaid and FSFN databases will be
+requested in the Spring of 2018, with estimated approval by August of
+2018. Permission to use the FSFN database is not an obstacle, as Florida
+State University's Institute of Child Welfare (FICW) is housed within
+the College of Social Work. FICW is a key partner with the Florida
+Department of Children and Families. I've spoken with Dr. Jessica Pryce,
+director of FICW and a data analyst at the Florida DCF. Both view access
+to FSFN as feasible and straightforward process. In an effort to
+investigate the feasibility of using Florida Medicaid data, I am
+currently working with an AHCA, Florida-Medicaid data analyst to
+coordinate the data request process. Data received from Medicaid and
+FSFN will be anonymized, individual-level data. It will be coded into an
+SPSS dataset and include, among other variables, information about
+age-group, race, gender, placement setting, and treatment types. Other
+variables may be collected, pending review of data.
+
+\paragraph{Study design} This longitudinal study aims to assess the extent
+to which the Florida Guidelines are adhered to in practice. Data will be
+collected from a 12-month time period. All cases meeting
+inclusion/exclusion criteria will be assigned a unique ID number. The
+sample will be drawn, at random, from this group. Data will be entered
+into SPSS. Sociodemographic variables (independent variables) will be
+collected and analyzed for each case. Multinomial logistic regression
+analyses will be conducted at the end of data collection, to determine
+what characteristics are predictive of treatment variables/guideline
+adherence (dependent variables).
+
+\paragraph{Limitations} Given the size of Florida Medicaid enrollment,
+sample size is not perceived as a limitation. Missing data will be
+analyzed, in order to determine if it is Missing Completely at Random
+(MCAR). Missing data will be replaced using Multiple Imputation (MI), if
+methodologically appropriate. A second, more philosophical limitation
+regards psychiatric diagnosis. Given the current state of psychiatric
+knowledge, the act of making a diagnosis is a fallible process, relying
+on descriptive-level, behavioral criteria (\pdftooltip{{\color{tip}Regier~et al.,}}{Regier, D. A., Narrow, W. E., Clarke, D. E., Kraemer, H. C., Kuramoto, S. J., Kuhl, E. A., \& Kupfer, D. J. (2013). DSM-5 Field Trials in the United States and Canada, Part II: Test-Retest Reliability of Selected Categorical Diagnoses. American Journal of Psychiatry, 170(1), 59–70. https://doi.org/10.1176/appi.ajp.2012.12070999} \citeyear{Regier2013}).
+Consequently, some children may be incorrectly diagnosed (false positive
+diagnosis), while others not in the population under study are
+incorrectly left undiagnosed (false negative diagnosis). As in all
+studies of this type, diagnoses are presumed to be correct.
+
+
+\subsubsection{Analytic methods}
+
+
+\paragraph{Descriptive statistics} Descriptive statistics (e.g.
+frequencies, measures of central tendency, and dispersion) will be
+reported for all variables in order to describe the characteristics of
+the sample. A cross-tabulation will be conducted to examine the
+frequency of different types of treatment services and adherence across
+key sociodemographic variables.
+
+\paragraph{Inferential statistics} A multinomial logistic regression was
+chosen as the method for calculating the odds that a child will receive
+treatment that adheres to the guidelines, or that can be considered a
+case of overtreatment or undertreatment. While differences can be noted
+at the descriptive level, this analysis will help uncover which groups
+are at greatest risk for deviations in care, by use of frequentist
+inference methods. The reported odds ratio (OR) serves as the effect
+size (\pdftooltip{{\color{tip}Tabachnick~\& Fidell,}}{(N.d.-e). Review of Psychiatry, 17(3), 163–172.} \citeyear{Tabachnick2012}, pp. 464-465) of the relationship
+between the predictor (i.e. IVs) and outcome variables (i.e. DVs); and
+is reported with the associated confidence interval (CI, 95\%; \pdftooltip{{\color{tip}Cumming
+\& Finch}}{Cumming, G., \& Finch, S. (2005). Inference by Eye: Confidence Intervals and How to Read Pictures of Data. American Psychologist, 60(2), 170–180. https://doi.org/10.1037/0003-066x.60.2.170},~\citeyear{Cumming2005}). Confidence intervals provide an estimation of the
+precision of the OR (\pdftooltip{{\color{tip}Szumilas,}}{(N.d.-c). Sociological Methodology, 25, 421–458.} \citeyear{Szumilas2010},~p.~227). P-values will be reported,
+as a tool for controlling error rates (i.e. the false positive discovery
+rate) and will be judged, at a minimum, according to the standard .05
+threshold; though recent debates (\pdftooltip{{\color{tip}Benjamin~et al.,}}{Benjamin, D. J., Berger, J. O., Johannesson, M., Nosek, B. A., Wagenmakers, E.-J., Berk, R., Bollen, K. A., Brembs, B., Brown, L., Camerer, C., Cesarini, D., Chambers, C. D., Clyde, M., Cook, T. D., De Boeck, P., Dienes, Z., Dreber, A., Easwaran, K., Efferson, C., … Johnson, V. E. (2018). Redefine Statistical Significance. Nature Human Behaviour, 2(1), 6–10. https://doi.org/10.1038/s41562-017-0189-z} \citeyear{Benjamin2018}; \pdftooltip{{\color{tip}Colquhoun}}{Colquhoun, D. (2014). An Investigation of the False Discovery Rate and the Misinterpretation of p -Values. Royal Society Open Science, 1(3), 140216. https://doi.org/10.1098/rsos.140216},~\citeyear{Colquhoun2014}; \pdftooltip{{\color{tip}Lakens}}{Lakens, D., Adolfi, F. G., Albers, C. J., Anvari, F., Apps, M. A. J., Argamon, S. E., van Assen, M. A. L. M., Baguley, T., Becker, R. B., Benning, S. D., Bradford, D. E., Buchanan, E. M., Caldwell, A., van Calster, B., Carlsson, R., Chen, S.-C., Chung, B., Colling, L. J., Collins, G., … Zwaan, R. A. (2017). Justify Your Alpha [Preprint]. PsyArXiv. https://doi.org/10.31234/osf.io/9s3y6},~\citeyear{Lakens2017}) call for a more nuanced approach. Bayesian
+methods, which include the use of credible intervals (\pdftooltip{{\color{tip}Hoekstra,~Morey,
+Rouder, \& Wagenmakers}}{Hoekstra, R., Morey, R. D., Rouder, J. N., \& Wagenmakers, E.-J. (2014). Robust Misinterpretation of Confidence Intervals. Psychonomic Bulletin \& Review, 21(5), 1157–1164. https://doi.org/10.3758/s13423-013-0572-3},~\citeyear{Hoekstra2014}), will be considered given the nature of
+the dataset (see generally \pdftooltip{{\color{tip}Berk,~Western,~\& Wiess,}}{Berk, R.A. (2004). Regression Analysis: A Constructive Critique. Sage Publications, Inc.} \citeyear{Berk1995}).
+
+
+\subsubsection{Work plan}
+
+
+
+\paragraph{Timeline}
+
+
+I have completed all coursework required for my degree and have
+successfully passed my preliminary examinations. I will begin my
+prospectus writing in the beginning of January 2018. I plan on defending
+my prospectus in April of 2018 (04/18) Upon completion I can begin
+formally securing the data needed for my dissertation. I expect to have
+approval and access to the Florida Medicaid database by August of 2018
+(08/18). I expect to have approval and access to the Florida Department
+of Children and Families' (DCF) Florida Safe Families Network (FSFN)
+database by August of 2018. Access to the FSFN database is not viewed as
+an obstacle. FSU is home to the Florida Institute for Child Welfare
+(FICW), a key partner to Florida's DCF. Data from across a 12-month
+period, from these two databases, will be synthesized by September of
+2019 (10/19). I expect to have analyzed the data and written my full
+dissertation by March of 2020 and defend my dissertation by the end of
+April (04/20). I plan on graduating at the end of the Spring semester of
+2020 (05/20).
+
+
+\paragraph{Relationship with your policy practice mentors}
+
+
+My policy mentor is Mr. Robert ``Bob'' Whitaker. I chose Bob as my
+policy mentor because he has strongly influenced my professional career.
+My desire to get my PhD and subsequent research has been greatly
+informed by his published work and advocacy through the Mad in America
+Foundation. I value his depth and breadth of knowledge on psychiatric
+medications, his enthusiasm for the issues surrounding mental healthcare
+(i.e. diagnosis/etiology, treatment efficacy, long-term treatment
+outcomes), and passionate efforts to reform the systems of care.
+
+The deepest areas of my knowledge of mental healthcare are related to
+the issues of diagnostic accuracy, treatment effects, and practice
+ethics. Bob's work and knowledge complements my own knowledge and work,
+in that he has extensively covered issues surrounding long-term
+treatment outcomes and effects on well-being, as well as issues
+surrounding polypharmacy, off-label prescribing, and best-practice
+standards. These latter areas of focus will greatly inform my
+dissertation work. Bob's ability to interpret discrepancies in treatment
+delivery, will help me to identify and operationalize instances of
+undertreatment and overtreatment. Similarly, Bob's knowledge of best
+practice standards will help me advocate for practice- and
+legislative-level changes in children's mental healthcare.
+
+During the fellowship, I will be regularly in touch with Bob via phone,
+video chat, and email. It is also likely that we will meet during the
+fellowship timeframe at academic conferences to discuss issues in the
+field and progress of my research. I hope to utilize the mentor
+relationship to help disseminate my research findings, to reach a
+diverse array of mental health stakeholders (e.g. researchers,
+clinicians, advocates/policy-makers, consumers/families), and to become
+better versed in the nuances of policy-change and policy-advocacy. I am
+ecstatic to have the opportunity to learn and grow as a professional and
+scholar from Bob.
+
+
+\subsection{Knowledge utilisation}
+
+
+
+\subsubsection{Policy practice implications}
+
+
+Whatever their inherent limitations, when properly implemented, practice
+guidelines help curb extreme deviations in care (i.e. undertreatment,
+overtreatment). The implications of this study are twofold. It will: 1)
+Improve social and emotional well-being by ensuring that evidence-based
+treatments are provided; and to 2) Identify and reduce the harm caused
+to children by extreme deviation in care. Identification of groups that
+might be at higher risk of receiving undertreatment or overtreatment
+will lead to greater institutional oversight and attention by staff in
+practice settings. These goals are congruent with the national efforts
+to standardize healthcare practice (\pdftooltip{{\color{tip}Institute~of Medicine,}}{of psychotropic medication to foster children. U.C. (n.d.). Davis Journal of Juvenile Law and Policy, 15(2), 247–257.} \citeyear{InstituteofMedicine1990};\pdftooltip{  }{of psychotropic prescriptions. (n.d.). http://www.gao.gov/assets/590/586906.pdf}\citeyear{InstituteofMedicine2011}),
+with federal and institutional calls for greater oversight over
+childhood medication prescription (\pdftooltip{{\color{tip}Government~Accountability Office}}{Government Accountability Office. (2011). HHS Guidance Could Help Sates Improve Oversight of Psychotropic Prescriptions. http://www.gao.gov/assets/590/586906.pdf; Government Accountability Office. (2012). Concerns Remain about Appropriate Services for Children in Medicaid and Foster Care. http://www.gao.gov/assets/660/650716.pdf; Government Accountability Office. (2017). Foster Care – HHS Has Taken Steps to Support States’ Oversight of Psychotropic Medications, Bust Additional Assistance Could Further Collaboration. http://www.gao.gov/assets/690/681916.pdf},
+\citeyear{GovernmentAccountabilityOffice2011, GovernmentAccountabilityOffice2012, GovernmentAccountabilityOffice2017}; \pdftooltip{{\color{tip}Leslie}}{Leslie, L. K., Mackie, T., Dawdon, E. H., Bellonci, C., Schoonover, D. R., Rodday, A. M., \& Hyde, J. (2010). Multi-State Study on Psychotropic Medication Oversight in Foster Care. Tufts Clinical and Translational Science Institute.},~\citeyear{Leslie2010}), and with the concerns of child
+welfare researchers (\pdftooltip{{\color{tip}Mackie~et al.,}}{Psychotropic medication use in a national probability sample of children in the child welfare system. (2005). Journal of Child and Adolescent Psychopharmacology, 15(1), 97–106.} \citeyear{Mackie2016}) and legal scholars~(\pdftooltip{{\color{tip}Strawbridge,}}{Whitaker, R. (2010). Anatomy of an epidemic: Magic bullets, psychiatric drugs, and the.} \citeyear{Strawbridge2011}).
+
+\paragraph{Ensuring the provision of evidence-based treatment} Childhood
+physical and sexual abuse and neglect are strongly associated with the
+development of childhood mental health problems (\pdftooltip{{\color{tip}Administration~for
+Children \& Families}}{Administration for children and families. (2012). Information Memorandum: Promoting Social and Emotional Well-Being for Children and Youth Receiving Child Welfare Services. U.S. Department of Health and Human Services. U.S. Department of Health and Human Services. https://www.acf.hhs.gov/sites/default/files/cb/im1204.pdf},~\citeyear{Administrationforchildrenandfamilies2012}) and the development of later adult
+psychopathology (\pdftooltip{{\color{tip}Guadiano~\& Zimmerman,}}{Mackie, T. I., Hyde, J., Palinkas, L. A., Niemi, E., \& Leslie, L. K. (2016).} \citeyear{Guadiano2010}; \pdftooltip{{\color{tip}Matheson}}{Regier, D. A., Narrow, W. E., Clarke, D. E., Kraemer, H. C., Kuramoto, S. J., \& Kuhl, E. A. (n.d.).},~\citeyear{Matheson2013};
+ \pdftooltip{{\color{tip}Read~\& Bentall}}{Read, J., Os, J., Morrison, A. P., \& Ross, C. A. (2005). Childhood Trauma, Psychosis and Schizophrenia: A Literature Review with Theoretical and Clinical Implications. Acta Psychiatrica Scandinavica, 112, 330–350. https://doi.org/10.1111/j.1600-0447.2005.00634.x},~\citeyear{Read2012}; \pdftooltip{{\color{tip}Read,~van Os, Morrison, \& Pam}}{Read, J., \& Bentall, R. P. (2012). Negative Childhood Experiences and Mental Health: Theoretical, Clinical, and Primary Prevention Implications. The British Journal of Psychiatry, 200, 89–91. https://doi.org/10.1192/bjp.bp.111.096727},~\citeyear{Read2005}). Therefore,
+addressing mental health problems of children on Medicaid and in the
+child welfare system is essential for promoting current and future
+well-being. An analysis of Florida Guideline implementation, will ensure
+that children diagnosed with mental health conditions are and will
+receive appropriate care.
+
+\paragraph{Preventing the neglect and abuse of children's mental
+healthcare.} In Florida, failure to provide proper mental healthcare can
+legally be considered a form of child neglect (\pdftooltip{{\color{tip}Child~Welfare Information
+Gateway}}{Child Welfare Information Gateway. (2015). Definitions of Child Abuse and Neglect. U.S. Department of Health and Human Services, Children’s Bureau. https://www.childwelfare.gov/pubPDFs/define.pdf},~\citeyear{ChildWelfareInformationGateway2015}). As the Florida Guidelines represent best practice
+standards, failure to consistently implement these guidelines in child
+welfare systems can be regarded as a form of \emph{institutional} child
+neglect. The consequences of neglecting mental health problems are
+severe. Untreated depression can lead to a worsening of symptoms,
+resulting in suicide, self-harm, decreased academic performance (\pdftooltip{{\color{tip}Kovacs
+\& Goldston}}{Kovacs, M., \& Goldston, D. (1991). Cognitive and Social Cognitive Development of Depressed Children and Adolescents. Journal of the American Academy of Child \& Adolescent Psychiatry, 30(3), 388–392. https://doi.org/10.1097/00004583-199105000-00006},~\citeyear{Kovacs1991}), and social deficits ( \pdftooltip{{\color{tip}Geller,~Zimerman,~Williams,
+Bolhofner, \& Craney}}{Geller, B., Zimerman, B., Williams, M., Bolhofner, K., \& Craney, J. L. (2001). Bipolar Disorder at Prospective Follow-Up of Adults Who Had Prepubertal Major Depressive Disorder. American Journal of Psychiatry, 158(1), 125–127. https://doi.org/10.1176/appi.ajp.158.1.125},~\citeyear{Geller2001}). In other words, untreated mental health
+problems can be detrimental, if not seriously harmful, to a child's
+well-being. Likewise, overtreatment (overmedication, polypharmacy, and
+off-label prescription) can lead to serious physical and mental health
+problems; a trend some call ``pharmacological abuse'' (\pdftooltip{{\color{tip}Healy,}}{Matheson, S. L., Shepherd, A. M., Pinchbeck, R. M., Laurens, K. R., \& Carr, V. J. (2013).} \citeyear{Healy2009}, pp.
+272-273). Overtreatment is not uncommon in child welfare systems, where
+children are 2-3 times more likely to be medicated than their peers in
+the community (\pdftooltip{{\color{tip}Crimson~\& Argo,}}{Florida Medicaid Drug Therapy Management Program for Behavioral Health [FMDRMP]} \citeyear{Crimson2009}; \pdftooltip{{\color{tip}Raghavan}}{Raghavan, R., Zima, B. T., Andersen, R. M., Leibowitz, A. A., Schuster, M. A., \& Landsverk, J. (2005). Psychotropic Medication Use in a National Probability Sample of Children in the Child Welfare System. Journal of Child and Adolescent Psychopharmacology, 15(1), 97–106. https://doi.org/10.1089/cap.2005.15.97},~\citeyear{Raghavan2005}). Foster
+care children are estimated to be medicated at a rate 3-13 times that of
+their peers (\pdftooltip{{\color{tip}Leslie~et al.,}}{Leslie, L. K., Mackie, T., Dawdon, E. H., Bellonci, C., Schoonover, D. R., Rodday, A. M., \& Hyde, J. (2010). Multi-State Study on Psychotropic Medication Oversight in Foster Care. Tufts Clinical and Translational Science Institute.} \citeyear{Leslie2010}). Children on Medicaid are prescribed
+antipsychotics at twice the rate of those privately insured (\pdftooltip{{\color{tip}Government
+Accountability Office}}{Government Accountability Office. (2012). Concerns Remain about Appropriate Services for Children in Medicaid and Foster Care. http://www.gao.gov/assets/660/650716.pdf},~\citeyear{GovernmentAccountabilityOffice2012}). This is concerning since overtreatment can
+increase the rate of adverse effects (\pdftooltip{{\color{tip}Whitaker,}}{(N.d.-g). National Academy Press.} \citeyear{Whitaker2010}), which include:
+akathisia (\pdftooltip{{\color{tip}Loonen~\& Stahl,}}{pictures of data. (n.d.). American Psychologist, 60(2), 170–180.} \citeyear{Loonen2011}), suicidality (\pdftooltip{{\color{tip}Bielefeldt,~Danborg,~\&
+Gøtzsche}}{Bielefeldt, A. Ø., Danborg, P. B., \& Gøtzsche, P. C. (2016). Precursors to Suicidality and Violence on Antidepressants: Systematic Review of Trials in Adult Healthy Volunteers. Journal of the Royal Society of Medicine, 109(10), 381–392. https://doi.org/10.1177/0141076816666805},~\citeyear{Bielefeldt2016}; \pdftooltip{{\color{tip}Healy}}{medication oversight for children in foster care: A national examination of states’ monitoring mechanisms. (n.d.). Administration and Policy in Mental Health and Mental Health Services Research, 44(2), 243–257.},~\citeyear{Healy2005}), and physical dependence
+syndromes (\pdftooltip{{\color{tip}Fava~et al.}}{Fava, G. A., Gatti, A., Belaise, C., Guidi, J., \& Offidani, E. (2015). Withdrawal Symptoms after Selective Serotonin Reuptake Inhibitor Discontinuation: A Systematic Review. Psychotherapy and Psychosomatics, 84(2), 72–81. https://doi.org/10.1159/000370338},~\citeyear{Fava2015}). Long-term antipsychotic use, is
+associated with progressive reduction in brain volume (\pdftooltip{{\color{tip}Fusar-Poli et
+al.}}{Fusar-Poli, P., Smieskova, R., Kempton, M. J., Ho, B. C., Andreasen, N. C., \& Borgwardt, S. (2013). Progressive Brain Changes in Schizophrenia Related to Antipsychotic Treatment? A Meta-Analysis of Longitudinal MRI Studies. Neuroscience \& Biobehavioral Reviews, 37(8), 1680–1691. https://doi.org/10.1016/j.neubiorev.2013.06.001},~\citeyear{Fusar-Poli2013}) and Parkinson's-like movement disorders (\pdftooltip{{\color{tip}American~Psychiatric
+Association}}{American Psychiatric Association. (1992). Tardive Dyskinesia: A Task Force Report of the American Psychiatric Association. American Psychiatric Association.},~\citeyear{AmericanPsychiatricAssociation1992}). Thus, identifying cases of overtreatment (and
+undertreatment) will promote children's physical and mental well-being,
+prevent harmful trends in treatment practice, and lead to policy change.
+
+
+\subsection{Cost estimates}
+
+
+
+\subsubsection{Total budget requested}
+
+
+30.000 \$ US
+
+
+\subsubsection{Intended starting date}
+
+
+August 2018
+
+
+\subsubsection{Application for additional grants}
+
+
+None
+
+
+\subsection{Data management plan}
+
+
+N.A.
+
+
+\subsection{Ethics}
+
+
+N.A.
+
+
+\subsection{Society}
+
+
+
+\subsubsection{Public summary}
+
+
+N.A.
+
+
+\section{Reviews}
+
+
+N.A.
+
+
+\section{Rebuttal}
+
+
+N.A.
+
+
+\section{Decision}
+
+
+
+\textbf{Doris duke fellowships application}
+
+
+\noindent Doris Duke Fellowships
+\textless DDFellowships@chapinhall.org\textgreater{}
+
+\noindent Tue 3/13/2018 9:18 PM
+
+
+\noindent To: Daniel Dunleavy \textless djd09e@fsu.edu\textgreater{}
+\vskip\baselineskip
+\noindent Dear Dan,
+
+Thank you for applying to the \emph{Doris Duke Fellowships for the
+Promotion of Child Well-Bein}g and participating in atelephone interview
+for finalists. Unfortunately, after careful consideration, the selection
+committee did not selectyour application for the fellowship. It was a
+very difficult decision that does not necessarily reflect on the quality
+orrelevance of your proposed research. In selecting the cohort, every
+attempt is made to achieve a \emph{group} of scholarsthat will
+complement each other's skills and represent a diversity of disciplinary
+perspectives, research interests,and professional experiences. Our final
+selection is difficult, particularly when the finalists are as highly
+qualifiedas they were this year.
+
+We greatly appreciate your interest in the fellowship and regret that we
+are not able to offer you an award. We wishyou the best of luck in
+completing your dissertation research and in your future endeavors, and
+hope that you willcontinue to focus on the prevention of child abuse and
+neglect.
+\vskip\baselineskip
+
+\noindent Sincerely,
+
+\noindent Deborah Daro, PhD.
+
+\noindent  Chair of the Selection Committee
+\vskip\baselineskip
+
+\noindent \emph{Doris Duke Fellowships for the Promotion of Child Well-Being}
+
+\noindent Senior Research Fellow
+
+\noindent Chapin Hall at the University of Chicago
+\vskip\baselineskip
+
+\includegraphics[width=2.23333in,height=0.55833in]{media/image1.jpeg}
+
+
+\nocite{*}
+
+\printbibliography
+\license
+\newpage
+\section{Appendix}
+
+
+
+
+
+\subsection{Personal statement}
+
+
+
+\subsubsection{Your expected benefits from the fellowship}
+
+
+
+\paragraph{Interdisciplinary perspective}
+
+
+Interdisciplinary work has been an extremely valuable part of my
+professional and academic development. In my professional experience, I
+have worked as a social worker among physicians, nurses, psychologists,
+support-staff, and other social workers. Each has enriched my experience
+by offering a unique lens from which to understand my clients and the
+challenges faced as part of a professional team. At the academic level,
+my education has been unquestionably enriched by taking courses across
+fields. It has provided me the opportunity to learn from researchers in
+the fields of Sociology, Psychology, Philosophy, Medicine, and Public
+Health, and has taught me how to analyze social problems from a variety
+of perspectives.
+
+One of the things which I am looking forward to most, as a fellow, is
+collaborating with and becoming enriched by the Doris Duke Fellowship
+and its multidisciplinary peer learning network. Undoubtedly, the
+fellowship's interdisciplinary perspective and emphasis will help shape
+my approach and research regarding child well-being, as well as the
+scope of the issues surrounding providing mental healthcare to children,
+both within and outside the child welfare system. Considering that
+previous cohorts have been comprised of fellows from the fields of
+Sociology, Psychology, Education, Public Policy, Criminal Justice,
+Social Work, and Public Health (among others), I believe that my work
+and how I understand these social problems, will only become further
+enriched and refined.
+
+
+\paragraph{Peer learning network}
+
+
+The feedback that I receive most frequently from my academic peers is
+that I have an insatiable appetite for knowledge. I continuously strive
+to learn, to understand the world around me, and to solve important
+social problems. As a classmate and colleague, I am attentive, offer
+constructive feedback, and engage thoughtfully with new ideas, even
+where they diverge from my own particular research interests. These are
+personal strengths which I can contribute to the work of other fellows.
+While I do not pretend to know everything about every topic, I always
+try to sincerely and thoughtfully engage with an issue. I try to use my
+critical thinking skills to help others refine their ideas and to
+provide constructive feedback. I attribute these assets to my
+supplementary coursework and interest in philosophy, a field which has
+helped me to greatly clarify and explicate my own ideas and arguments.
+\balance
+As described in the previous section*, one of the things I benefit from
+most as a social worker and academic is different perspectives. I
+believe the Peer Learning Network will allow me to engage with fellows
+from disciplines both similar to and quite different from my own,
+exposing me to new ideas, perspectives, arguments, and resources. It is
+clear to me that the peer network has great potential to improve and
+refine my research and ideas; as well as for me to contribute to the
+intellectual development and growth of other fellows. This aspect of the
+fellowship is among the most exciting opportunities available to me in
+my academic and professional development.
+
+
+
+
+
+\subsubsection{Looking forward}
+
+
+
+\paragraph{Immediate plans following graduation}
+
+
+\subparagraph{Immediate professional goals} My immediate plans following
+graduation are to secure a tenure-track position in a school of Social
+Work at a research university in the United States or related policy
+center. This will be a place where I can continue researching on child
+welfare, mental health, and help foster ``good research practices'' both
+within my profession and within child welfare research. Additionally, I
+aim to teach classes related to child welfare, psychopathology, and
+social policy. While research is my primary motivation for coming into
+academia, this latter role of teacher is no less important to me. I
+believe that helping develop the next generation of social workers, many
+of whom will work with children in some respect, is of the utmost
+importance in ensuring that our policies and practices are successfully
+implemented.
+
+\subparagraph{Immediate research plans} I hope to extend my dissertation
+work, by seeking funding from federal, state, and non-governmental
+organizations (NGOs). I aim to analyze mental health practice guidelines
+in child welfare systems across the nation, to analyze how children's
+mental health services are provided nationally, and to engage with
+policy reform to improve child well-being and mental functioning. This
+research agenda would allow for the attempted replication of the
+findings from my dissertation, a hallmark of rigorous scientific
+research.
+
+
+\paragraph{Long term career aspirations}
+
+
+My long-term aspirations can be divided into three non-exclusive parts.
+My goals are to: 1) Refine our understanding about mental health
+treatment effects, particularly with children; to 2) Contribute to the
+improvement of children's mental health policy and practice locally and
+nationally; and to 3) Improve the quality of child welfare research.
+
+\subparagraph{Goal \#1} My most important long-term goal is to use
+information gathered about state guidelines (described in
+\emph{Immediate Plans} above), along with knowledge of \emph{long-term}
+treatment efficacy/safety (see point 2 below), to ensure that the mental
+health guidelines utilized in each state are truly evidence-based and
+reflect `best-practice' standards for children. I plan on using
+information gathered about discrepancies in guideline adherence to
+ensure that these improved standards are effectively implemented with
+all vulnerable children, once they are in place.
+
+\subparagraph{Goal \#2} Despite enormous research funding, few studies have
+been undertaken describing the \emph{long-term} benefits, harms, and
+efficacy of many mental health treatments frequently used with children.
+Long-term evaluation will help us to develop more effective policies and
+practices for vulnerable children with mental health needs. While
+effective guideline implementation will minimize extreme deviations in
+care, this goal will evaluate the long-term effects of services.
+
+\subparagraph{Goal \#3} ``Good research'' is founded on rigorous research
+methodology, sound statistical inferences, attempted replication and
+transparent/open research practices. This is true of child welfare
+research and the long-term areas of research outlined above. I aim to
+advocate for, research, teach, and practice ``good research practices'',
+as exemplified by the \emph{Center for Open Science}, \emph{Society for
+Improving Psychological Science}, and others.
+
+
+
+
+
+
+\subparagraph{Is there anything else you want to share with the selection committee}
+
+
+I am thrilled to have the opportunity to be considered as a Doris Duke
+Fellow. The Foundation's mission, to develop and disseminate knowledge;
+and the Fellowship's goal of creating long-lasting improvement in child
+well-being, strongly coheres with my own research goals and ethos. This
+is my second time applying for the fellowship. The past year has
+provided me the opportunity to clarify and refine my research topics and
+goals. I am reapplying because I strongly value the opportunity to
+engage with, collaborate, and learn from the Fellowship's members and
+multidisciplinary peer learning network. It would greatly improve my
+scholarly work and professional development to be a Fellow. I believe my
+intellectual drive, critical thinking skills, and strong research
+background will make me a valued colleague and collaborator within both
+the Doris Duke Foundation and Fellowship program. Thank you to the
+Selection Committee for taking the time to consider this application.
+
+
+\end{document}

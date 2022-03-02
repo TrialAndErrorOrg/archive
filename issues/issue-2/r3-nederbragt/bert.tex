@@ -1,0 +1,229 @@
+% Document class options:
+% =======================
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+%
+% Using other bibliography styles:
+% =======================
+% Not supported at the moment
+\documentclass[twocolumn, reflection, authordate,  issue]{jote-new-article}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\vspace*{-.5\baselineskip}}
+\AtEndEnvironment{quote}{\vspace*{-.5\baselineskip}}
+\usepackage[english]{babel}
+%%% Add the bibliography, make sure it's in the same directory
+\addbibresource{bert.bib}
+
+%%% Add additional packages here if required. Usually not needed, except when doing things with figures and tables, god help you then
+
+% This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum. OR use [1-5] to generate the first five, etc.
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\setlist[itemize]{noitemsep, topsep=0pt, labelindent=\parindent, leftmargin=2\parindent, label=$\triangleright$}
+\setlist[description]{noitemsep, topsep=0pt}
+\usepackage{pifont}
+% Fill in the type of article here. Doesn't matter if capitalized. 
+%%% Options
+% Empirical
+% Reflection
+% Meta-Research
+% Rejected Grant Application
+% Editorial
+
+%%% TODO: Make this a 1-5 option scale to reduce the chance of mistyping
+
+% Enter the title, in Title Case Please
+% Try to keep it under 3 lines
+\jotetitle{Ponies, joints, complexity, and the method of difference}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Hubertus Nederbragt}
+%Fill it in again for the PDF metadata. Lame workaround but it works
+\authorone{Hubertus Nederbragt}
+
+
+%List the contribution effort here, they will be listed at the end of the page
+
+%List the acknowledgments. If there is no companion piece, this is listed below the author info
+%List possible conflict of interest. Will default to saying no conflict exists.
+
+%List funding
+
+% Include full affiliation details for all authors
+\affil[1]{Descartes Centre for the History and Philosophy of the Sciences and the Humanities, Utrecht University, Utrecht, the Netherlands}
+
+% List the correspondence email of the main correspondent
+\corraddress{Bert Nederbragt, Homeruslaan 44, 3581 MJ, Utrecht, the Netherlands}
+\corremail{\href{mailto:author@one.com}{H.Nederbragt@planet.nl}}
+
+% Optionally list the present address of one of the authors
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+% Fill in the DOI of the paper
+
+% Always starts with "10.36850/" and is suffixed with one of the following plus a number
+% e  : empirical
+% r  : reflection
+% mr : meta-research
+% rga: rejected grant application
+% ed : editorial
+\paperdoi{10.36850/r3}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Nederbragt}
+
+% The name of the Journal
+\jname{Journal of Trial \& Error}
+
+% The year that the article is published
+\jyear{2021}
+
+%The Volume Number
+\jvolume{2}
+\jissue{1}
+
+%The website that's listed in the bottom right
+\jwebsite{https://jtrialerror.com}
+
+%%% Only \paperpublished is necessary, any combination of the other two is possible
+\setcounter{page}{26}
+\jpages{26-29}
+%When the paper was received
+\paperreceived{22 December, 2020}
+% When the paper was accepted
+\paperaccepted{24 February, 2021}
+% When the paper will be published
+\paperpublished{23 March, 2021}
+
+\paperissued{2 March, 2022}
+% When the paper is published but in YYYY-MM-DD format, for the crossmark button
+\paperpublisheddate{2021-03-23}
+
+% The pages of the article, comment out if rolling article
+%\jpages{1-12}
+% Link to the logo, might be redundant
+
+%%% Companion Piece
+
+% Fill in the keywords that will appear in the abstract, max 7
+\keywordsabstract{regeneration of joints, pilot experiment, method of difference, complexity, reductionism}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Document Starts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
+\begin{frontmatter}
+\maketitle
+%Type your abstract between these things. Max 250 words. Be sure to include the \noindent, looks bad otherwise
+\begin{abstract}
+  
+An important topic in biomedical science is the repair of damaged organs by \emph{in vitro} cultured differentiated stem cells. This article evaluates an article in this field, entitled "The complexity of joint regeneration", by \textcite{Diloksumpan2021}, who described a regeneration experiment of artificial damage of the joint of ponies. The experiment failed and I describe the possible cause of this failure by discussing the design of the experiment in the light of J.S. Mill's Method of Difference, published in 1843. I continue with a discussion of the concept of complexity that was introduced by the authors of the paper, by pointing out that three types of complexity may be distinguished; one of these is complicatedness, which characterizes the assumed complexity of the joint experiment. I propose that this complicatedness can be solved by the use of the method of difference.
+ 
+\end{abstract}
+\end{frontmatter}
+
+
+
+
+
+\lettrine{T}issue repair and regeneration is one of the hot topics in biomedical research. The most recent branch of this field is the repair of tissues and organs through the use of stem cells differentiated \emph{in vitro.}
+These cells go on to become the source of new tissues after they have been implanted in the living body at the site of the defect. In the implant the cells may be combined with non-biological materials that can serve as a matrix on or in which the new tissue may take the necessary form.
+
+The paper by \textcite{Diloksumpan2021} in this issue of JOTE is a good example of this novel approach. The authors are involved in a study of the repair of damage of cartilage in bones and joints, using 3D-printed constructs; these serve as a scaffold on top of which new cartilage that has been grown in a cell culture system may be implanted inside the damaged site, leading to newly-formed cartilage growing from the implant.
+
+\section{Experiment} 
+
+In their experiment \textcite{Diloksumpan2021} artificially damaged cartilage by drilling a hole in the joints of ponies, filled the gap with the construct that bears the cultured cartilage, and watched the outcome. To evaluate the results an admirable battery of well-chosen methods was applied to monitor the changes in biomechanical properties, biochemical composition (analysis of collagen and glycosaminoglycans), and morphology of the joints (radiography, microcomputed tomography, histology, and immunohistochemistry), and their function was established by following the walking behavior (gait analysis) of the ponies.
+
+However, in the end, the experiment failed. The main reason, according to the authors, was the failure of the surgical procedure: the construct collapsed because the materials could not be correctly implanted in the joint, whereas they, according to the authors, had been implanted successfully before in another test. The conclusion of the authors was that they should have performed a pilot experiment because, as they state in the "Take Home Message" paragraph, the expected success of the experiment was based on a previous success with experiments with the same materials but in another anatomical location. The cited literature of the authors suggests that they earlier implanted the construct in the tuber coxae of horses, whereas the experiment that failed was performed with implantation in the joint of ponies. I heartily agree with their conclusion of the missing pilot experiment. But what pilot experiment?
+\begin{companion}
+Diloksumpam et al. (2021) \vskip.5\smallwidth
+\empth{The Complexity of Joint Regeneration: How an Advanced Implant could Fail by Its \emph{In Vivo} Proven Bone Component}\vskip.5\smallwidth
+\href{https://doi.org/10.36850/e3}{DOI: 10.36850/e3}
+\vskip-2\baselineskip
+\end{companion}
+A pilot experiment is an experiment that may be done to test an idea, to see if it is worthwhile to give that idea further attention. When the result of the pilot is negative, the idea is discarded and will not be tested again; when the result is positive, this may lead to a more definite experiment. The advantage of a pilot experiment is that it can be done on a small scale and takes less time, energy, material (and experimental animals), and money. The results of a pilot experiment are not meant to be published. But even though a pilot experiment may be just a preliminary and small trial it should, in its design, fulfill the criteria of the 'method of difference', otherwise it is not a pilot experiment but a useless experiment. To this method of difference I will now turn my attention.
+
+\section{Method of Difference} 
+
+In 1843 John Stuart Mill (1806-1873) published a book, \emph{A system of logic. Ratiocinative and inductive}, having as a subtitle \emph{Being a connected view of the principles of evidence and the methods of scientific investigation.}
+
+One of these principles is the Method of Difference that can be found in the Second Canon of the Four Methods of Experimental Inquiry of Mills, described in Chapter VIII, Book III: "Of Induction" \parencite{Mill1884}:
+\begin{quote}
+\emph{If an instance in which the phenomenon under investigation occurs, and an instance in which it does not occur, have every circumstance in common save one, that one occurring only in the former; the circumstance in which alone the two instances differ is the effect, or the cause, or an indispensable part of the cause, of the phenomenon. (p. 256) 
+}\end{quote}
+The text may be a little bit obscure for the modern reader, but it may help to consider the name Mill gave to this canon: The Method of Difference. When you study the effect or the possible cause of a factor in an experiment (be it in a laboratory, or in the field, or in epidemiology), one must make sure that the factor under investigation is the \emph{only} variable, that there is only one factor that is different and that all the others are similar. After almost two centuries of scientific practice at universities and research institutes we may expect that these principles are part of the thinking and doing of the members of the scientific enterprise, that they belong to a set of reflexes of those working in the clinics, laboratories, and workplaces. But sometimes they are not.
+
+Let us look at the experiment that was set up to test the efficacy of a construct for cartilage repair. The construct contained three parts: (1) a microfiber mesh with (2) a calcium paste that together mimicked the two layers of bone, (3) combined with \emph{in vitro} cultured cartilage on top of the calcium layer. Since the cultured cartilage in the construct was supposed to do the job -- the two other parts should fix the cartilage into the bone of the joint -- a similar construct without cartilage was implanted in the joint at the opposite side of the animal. But it did not work according to the expectations.
+
+An analysis of the earlier findings by the authors, presented in their introduction paragraph, may help us to find what kind of pilot experiment they should have performed given the method of difference discussed above. The following variables (or, in other words, the possible differences) taken from that introduction, should be considered:
+
+\begin{itemize}
+\item   the construct, with two parts, each of them being a separate variable, \item   the location of the implant, the variables being tuber coxae (hip   bone) or joint, \item   the animal: horse or pony, \item   the surgical procedure (a variable as mentioned by the authors). \end{itemize}
+
+When one wants to test the effect of a certain factor, call it a variable or a difference maker, one should repeat the experiment that has been performed before, of which one knows the outcome, change only one variable of interest and look at the effect. Only then is knowledge obtained of what the variable or the factor of concern does. A second variable cannot be introduced simultaneously because then it becomes impossible to determine which variable is responsible for the resulting effect. This is the sort of experimental error the method of difference wants to prevent. Does this error occur in the joint repair experiment? I think it does.
+
+In a paper from the Veterinary Faculty of Utrecht University, published almost a generation ago, it was shown that, with regard to wound healing of the skin, there is a difference in the extent and speed of healing between ponies and horses and between anatomical locations of the wound \parencite{Wilmink1999}. It is therefore important to realize that the behavior of the construct at the implantation site cannot be determined when the implantation in the hip bone of a horse is compared to the effect of implantation in the stifle joint of a pony. Second, it may be asked whether the surgical skills and procedure for implantation of the scaffold construct in bone are adequate for implantation in a joint (here a possible pilot experiment suggests itself). Third, it cannot be deduced from the introductory paragraph which of the elements of the construct, separate and in combination, have been tested to find out whether they work in the bones and joints of horses and in the bone and joints of ponies. One has to consult the cited literature to find that out. The tests of all these differences may have been important in designing such an experiment as ambitious as described in the paper.
+
+The routine of applying the method of difference, of being intuitively aware of its importance, should be imprinted on students as part of their academic education. I do not try to blame anyone, and I am speculating here, but my feeling is that the implantation experiment might have benefited from the involvement of an experienced senior scientist in the design of the project, especially because the design may have been driven too much by the expectation of success.
+
+\section{Complexity} 
+
+Next, I want to discuss the assumed complexity of the experimental system. The word complexity has a place in the title of the paper, suggesting its importance for the authors, but in the paper itself it seems to be of minor relevance only. Nevertheless, it is considered a phenomenon that has a central place in everyday life.
+
+First, there is the use of the word complexity that occurs in everyday parlance (and possibly also in the paper we are talking about) and is an expression of the embarrassment of the speaker when confronted with a situation she cannot control or a problem that she cannot solve. In the words of \textcite[p. 748]{Chambers2015}: `{[}A{]} thing which is complex is just one that defies understanding and/or simple description at first inspection.'
+
+Then there is the reductionist view of complexity. Phenomena, things, and organisms are considered complex whenever they are composed of a multitude of different components. In principle it should be possible to take the components apart and study them one by one. The system is essentially knowable, and its "behavior" is theoretically predictable. It may be referred to as \emph{complicated} rather than \emph{complex}
+\parencite{Bawden2007}. I shall refer to this type of complexity as "complicatedness" (rather than \emph{complication}).
+
+Finally, there is the third and more holistic notion of complexity; this has to do with the contingent nature of the interrelationships of the components. These interrelationships enable the system to adapt and they often produce phenomena that are more than the parts. These phenomena are then called \emph{emergent} \parencite{Page2011}.
+
+The difference between the two latter notions has been described by \textcite{Radder2011} in his introduction to a review of a book dedicated to complexity:
+
+\begin{quote}\emph{
+Reductionist explanations of higher-level systems in terms of their fundamental components, interpretations of the laws of nature as universal and necessary regularities, and philosophical theories of causation that see a linear and one-way relation between cause and effect fail to account for the complexity of nature. These approaches may be applicable to simple cases---for instance, in physics---but they are definitely unsuitable in the case of the unsimple truths of the sciences of complexity. (p. 385-386).} \end{quote}
+\balance
+In my view the complicatedness of systems may be analyzed or explained by the use of these reductionist approaches as given here.
+
+We now turn to the ponies and their joints. What type of complexity do we have to deal with?
+
+We follow the title of the paper. Regeneration, in general, is a complex process that proceeds through the mutual interactions of a host of cellular and non-cellular components. It fulfills the criteria of a complex in the holistic sense: emergent and in the possession of the possibility of adaptation. However, regeneration was not the object of the study we discuss here. Instead, the object of study was the finding of a method to enable regeneration of the joint.
+
+The pony, as a biological organism, certainly is a complex system. The interactions of the components of the animal (organs, blood, brain, limbs, etc.) make a pony more than the sum of its parts; as a system it is unpredictable and able to adapt. However, it is not the object of investigation.
+
+The joint is a complex system too, with regard to both morphology and function, as meant by \textcite{McShea1996}. The complexity of the joint in the implantation experiment may be analyzed in a reductionist way; in theory the components can be taken apart to study them and new components may be added, such as an implantation construct. Following the distinction between complex and complicated systems, the joint in this study may be considered a complicated organ.
+
+The effect of an implantation of a construct in the joint may thus be analyzed in a reductionistic approach: through biochemistry, biomechanics, microscopy and, on a higher functional level, gait analysis. This analysis should be based on the temporary isolation of each of the components, how they interact and how they contribute to the morphology or the function of the system. The analysis is a step-by-step process with one step at a time only. It has therefore to fulfill the criterion of the method of difference, too. This makes the complicatedness of the joint implantation in principle a solvable problem.
+
+
+
+
+
+% Citations are handled by .bib files, which can easily be generated by Zotero, EndRote, Refwords, Mendeley etc. 
+
+
+%%% Bibliography
+
+% This just outputs all the references regardless of whether they're actually added in the text or not
+\nocite{*}
+
+% This sets the indent of the references to be nice, should be in the .cls
+
+% Prints the bibliography, duh. But also appends the License, Contributions, Acknowledgments, and Conflicts of Interests
+
+\printbibliography
+
+
+\end{document}

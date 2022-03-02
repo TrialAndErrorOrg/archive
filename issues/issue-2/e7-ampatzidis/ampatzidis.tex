@@ -1,0 +1,153 @@
+% Document class options:
+% =======================
+%
+% serif: Sets the body font to be serif.
+%
+% twocolumn: Sets the body text in two - column layout.
+%
+% Fill in the type of article here.
+% empirical
+  % reflection
+  % meta
+  % rga
+  % editorial
+  %
+% Using other bibliography styles:
+% =======================
+% authordate = APA
+  % number =[1]
+  %
+    \documentclass[twocolumn, issue, empirical, authordate]{jote-new-article}
+
+
+  %%% Add the bibliography, make sure it's in the same directory
+\addbibresource{ampatzidis.bib}
+
+%%% Add additional packages here if required.Usually not needed, except when doing things with figures and tables, god help you then
+
+  % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum.OR use[1 - 5] to generate the first five, etc.
+
+
+
+%%% TODO: Make this a 1 - 5 option scale to reduce the chance of mistyping
+
+  % Enter the title, in Title Case Please
+    % Try to keep it under 3 lines
+\jotetitle{The Unsuccessful Self-treatment of a Case of `Writer’s Block': A Replication in Science Education}
+
+% List abbreviations here, if any.Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{
+%  ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+    % Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any.Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+% Format: \author[1, 2]{FirstName LastName} \author[2]{...}
+  \author[1]{Georgios Ampatzidis}
+
+    % Fill it in again for the PDF metadata.Lame workaround but it works
+      % Format: \authorone{...} \authortwo{...}
+  \authorone{Georgios Ampatzidis}
+  \setcounter{page}{56}
+  \jpages{56-57}
+
+    % List the contribution effort here, they will be listed at the end of the page
+      % List the acknowledgments.If there is no companion piece, this is listed below the author info
+        %\acknowledgments{Author Two would like to thank Author One for doing all the work while they could slack off.}
+% List possible conflict of interest.Will default to saying no conflict exists.
+%\interests{Author One was paid for by Big Failed Experiment}
+% List funding
+    %\funding{}
+% Include full affiliation details for all authors
+\affil[1]{Hellenic Open University, Parodos Aristotelous 18, 26335, Patras, Greece}
+
+    % List the correspondence email of the main correspondent
+  %\corraddress{corraddressmarker}
+  \corremail{\href{ampatzidis.georgios@ac.eap.gr} {ampatzidis.georgios@ac.eap.gr}}
+
+% Optionally list the present address of one of the authors
+    %\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+% Fill in the DOI of the paper
+
+    % Always starts with '10.36850/' and is suffixed with one of the following plus a number
+      % e  : empirical
+        % r  : reflection
+          % mr : meta - research
+            % rga: rejected grant application
+              % ed : editorial
+  \paperdoi{10.36850/e7}
+
+% Include the name of the author that should appear in the running header
+  \runningauthor{Ampatzidis}
+
+% The name of the Journal
+  \jname{Journal of Trial \& Error}
+
+% The year that the article is published
+  \jyear{2021}
+
+% The Volume Number
+    \jvolume{2}
+    \jissue{1}
+
+% The website that's listed in the bottom right
+  \jwebsite{
+    https://www.jtrialerror.com}
+
+%%% Only \paperpublished is necessary, any combination of the other two is possible
+
+      % When the paper was received
+        % Format: 1 January, 1900
+    \paperreceived{28 August, 2021}
+% When the paper was accepted
+      % Format: 1 January, 1900
+    \paperaccepted{8 October, 2021}
+% When the paper will be published
+      % Format: 1 January, 1900
+    \paperpublished{24 November, 2021}
+% When the paper is published but in YYYY - MM - DD format, for the crossmark button
+    \paperpublisheddate{2021-11-24}
+    \paperissued{3 March, 2022}
+
+% The pages of the article, comment out if rolling article
+      %\jpages{1 - 12}
+% Link to the logo, might be redundant
+ %   \jlogo{media/jote_logo_full.png}
+
+% Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page
+%    \rolling{}
+
+% Sets the paragraph skip to be zero, this should be in the CLS
+%    \setlength{\parskip} {0pt}
+
+%%% Companion Piece
+
+      % Reflection and Empirical articles have each other as companion pieces.Add the DOI, Title, and Abstract of the respective Companion piece here
+
+        %%% Abstract
+
+        % These two set the height and width of the abstract.There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
+          % Higher number means skinnier abstract
+%    \widthaffil{40mm}
+% Enter something here in order for the abstract to disappear.Be sure to also delete the abstract
+% Fill in the keywords that will appear in the abstract, max 7
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Starts
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+%%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
+    \begin{frontmatter}
+    \maketitle
+
+      % Type your abstract between these things.Max 250 words.Be 
+    \end{frontmatter}
+
+
+
+\onecolumn
+\nocite{*}
+\printbibliography
+
+\end{document}

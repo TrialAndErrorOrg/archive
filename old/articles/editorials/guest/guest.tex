@@ -1,0 +1,178 @@
+
+% Document class options:
+% =======================
+% blind: Anonymise all author, affiliation, correspondence
+%        and funding information.
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+% num-refs: Uses numerical citation and references style 
+%           (Vancouver-authoryear).
+%
+% alpha-refs: Uses author-year citation and references style
+%             (rss).
+%
+% Using other bibliography styles:
+% =======================
+%
+% To specify a different bibiography style
+%
+% 1) Do not use either num-refs or alpha-refs in documentclass.
+% 2) Load natbib package with the options set as needed.
+% 3) Use the \bibliographystyle command to specify the style
+% 
+% Included NJD styles are: 
+%   WileyNJD-ACS
+%   WileyNJD-AMA
+%   WileyNJD-AMS
+%   WileyNJD-APA
+%   WileyNJD-Harvard
+%   WileyNJD-VANCOUVER
+%
+% or you may upload an alternative .bst file 
+% (if requested by the journal).
+%
+% Examples:
+% =======================
+%% Example: Using numerical, sort-by-authors citations.
+\documentclass[twocolumn, serif, authordate, editorial]{jote-article}
+
+
+
+\addbibresource{correctguest.bib}
+
+
+
+%% Example: Using author-year citations and anonymising submission
+% \documentclass[blind,alpha-refs]{wiley-article}
+
+%% Example: Using unsrtnat for numerical, in-sequence citations
+% \documentclass{wiley-article}
+% \usepackage[numbers]{natbib}
+% \bibliographystyle{unsrtnat}
+
+%% Example: Using WileyNJD-AMA reference style and superscript
+%%          citations, two-column and serif fonts for AIChE
+% \documentclass[serif,twocolumn,lineno]{wiley-article}
+% \usepackage[super]{natbib}
+% \bibliographystyle{WileyNJD-AMA}
+% \makeatletter
+% \renewcommand{\@biblabel}[1]{#1.}
+% \makeatother
+
+% Add additional packages here if required
+\usepackage{siunitx}
+
+
+\usepackage{float}
+\usepackage{bookmark}
+\usepackage{lipsum}
+% Update article type if known
+% Include section in journal if known, otherwise delete
+\papertype{Editorial}
+
+\title{Fail Fast, Fail Forward, Fail Openly: The Need to Share Failures in Development}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Rebecca C. Sindall}
+\authorone{Rebecca C. Sindall}
+
+\author[2]{Dani J. Barrington}
+\authortwo{Dani J. Barrington}
+
+
+%\contrib[\authfn{1}]{Equally contributing authors.}
+
+% Include full affiliation details for all authors
+\affil[1]{Pollution Research Group, University of KwaZulu-Natal, Durban, South Africa}
+\affil[2]{School of Population and Global Health, The University of Western Australia, Perth, Australia}
+
+\corraddress{Dr Rebecca Sindall, Operations Manager, Pollution Research Group, University of KwaZulu-Natal, Durban, South Africa}
+\corremail{\href{mailto:sindallr@ukzn.ac.za}{sindallr@ukzn.ac.za}}
+
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\paperdoi{10.36850/ed2}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Sindall \& Barrington}
+
+\jname{Journal of Trial and Error}
+\jyear{2020}
+\jvolume{1}
+\jissue{1}
+\jwebsite{https://www.jtrialerror.com}
+\paperreceived{17 September, 2020}
+%\paperrevised{7 September, 2020}
+\paperaccepted{9 November, 2020}
+\paperpublished{2 December, 2020}
+\paperpublisheddate{2020-12-2}
+
+\jpages{6-8}
+\jlogo{media/jote_logo_full.png}
+
+
+
+
+\heightabstract{65mm}
+\widthaffil{60mm}
+
+\setlength{\parskip}{0pt}
+
+%Enter something here in order for the abstract to dissapear
+\noabstract{Yes}
+
+%\keywordsabstract{epistemic by-products, publication bias, replication geneticization, scientific pluralism}
+
+\begin{document}
+\pdfbookmark[0]{Sindall, R. C. \& Barrington, D. J.  - Fail Fast, Fail Forward, Fail Openly: The Need to Share Failures in Development}{sindallpdf}
+\begin{frontmatter}
+\maketitle
+\setcounter{page}{6}
+
+\end{frontmatter}
+\noindent Failure is an integral part of learning: The adage “If at first you don’t succeed, try, try, try again” was originally coined to encourage children to persevere with their school work \parencite{Palmer1840}. In the same way that we expect people to fail during the learning process as they gain new skills, theoretically we accept that failure is part of the scientific process — the quickest way to disprove a hypothesis is for an experiment, which tests that hypothesis, to fail to give the expected result.
+
+In principle then, academia should embrace failure: It is a community built on the twin pillars of education and research using the scientific method, with failure playing a vital role in both. In reality, though, those who pursue research careers are often people who are used to being the “smart” ones, those who did not experience much failure at school. In a competitive environment where most people are trying to prove their credentials to progress in (or keep!) their job, admitting to less than perfect outcomes is hard. And the less we talk about failure, the more stigmatized it becomes.
+
+In international development, refusal to talk about failure hides a multitude of sins. We regularly see news stories, flashy videos, and research papers about the early development of technologies that promise to solve a problem in developing countries. Far too many of these quietly disappear when tests start to show that results are not as positive as first thought. This biased dissemination of evidence relating to a technology results in a one-sided view of its performance, which can result in organizations wasting time and money by trying to scale up technologies that are not fit for purpose. Take the PeePoo bag as an example. This "self-sanitising single use biodegradable toilet'' looked technically promising on a small scale \parencite{Vinnerås2009, Patel2011} and early results were well-publicized \parencite{Bhanoo2011, Ali2013}. However, this success did not translate into large-scale trials or bring significant change to sanitation in urban slums. Clearly, something went wrong, though it is not obvious what. After all, the official website (www.peepoople.com) is still functional (though it has not been updated since 2016), suggesting the PeePoo bag may still be a viable development strategy for sanitation in urban slums.
+
+In the field of water, sanitation, and hygiene (WASH) research and practice, the most common mode of failure is when an intervention, designed to improve lives in some way, does not provide the intended benefits. According to the scientific method, this is simply a null result. As long as the research has been performed rigorously, this is actually a successful research trial, because we learned something, even though we produced a result other than the one we were expecting. However, the researcher who wants to report that result faces pressures from multiple angles. First, interventions that do not achieve their aim are not necessarily zero-harm and the researcher may be unwilling to publicly acknowledge the detrimental impacts of their work on the lives of purported "beneficiaries" \parencite{Barrington2017}. For those who are willing to make that step, there may be additional pressures from funders and project partners. Those who funded, developed, or implemented the intervention may have a vested interest in it succeeding, and disincentives for admitting it did not work. This could be a technology developer who stands to lose funding for the roll-out of a product, local political leaders who had staked their re-election on the success of a trial, or a funder who does not want to admit that funds were spent on the "wrong solutions". Even if the researcher manages to convince all parties of the benefits of sharing their findings, they may still face barriers to publish. Despite having done everything "right", journals (particularly those with the highest impact) often prefer not to publish null results because those are not generally considered sufficiently novel. With all of this in mind, it is no surprise that for many, the effort put into writing up failures and dealing with the fallout is not worth the limited rewards.
+
+This reluctance to discuss "failed" research causes problems for research and problems for researchers. If we do not openly discuss research failures, we increase the likelihood that other research will repeat the same study and discover the same null results. Repeating studies costs time, money, and in some disciplines, runs the risk of costing lives. For researchers, particularly those early in their research careers, not discussing failures perpetuates a false view of how science works, namely that every piece of research will be accompanied by a "eureka!" moment. This in turn heightens the feeling of "imposter syndrome" among researchers — the fear that they are not good enough to be an academic or a researcher, and that it is only a matter of time before others discover that they are a fraud because their hypotheses are often proven wrong.
+
+With that in mind, it takes a degree of bravery to talk about failures in WASH. There are countless examples of interventions that turned out to be inappropriate, such as the PlayPump, a roundabout that was connected to a water pump so that children’s play could be harnessed to deliver clean water to communities across Africa (\href{http://www.playpumps.co.za/}{http://www.playpumps.co.za/}). The shortcomings of this solution are well-documented \parencite{Borland2011}. The joy of roundabouts is that they spin freely, so the PlayPump was not as much fun to use as you might think, requiring constant effort to keep it moving. This meant that in many places, children did not play on the roundabout for as long as was needed to ensure an adequate water supply for the community. Instead, the task of pushing the roundabout fell to women collecting water, when to them a hand pump would have been much preferred and required considerably less physical effort. Often (and in a surprisingly common theme for the sector) communities were not consulted on the water problems they faced before the PlayPump was selected as a solution, so even when sufficient children played on the roundabout to pump water, the PlayPump did not address issues of water scarcity or water quality. The PlayPumps also raised ethical questions about the blurring of the line between work and play. Many of the installed PlayPumps have since been abandoned or retrofitted with hand pumps, and the original backers of the technology have admitted that their extensive plans for roll-out were overly ambitious. Although exact numbers are hard to find, it is generally accepted that "millions of dollars" were spent on PlayPumps, each of which cost as much as four conventional wells with hand pumps \parencite{Chambers2009}.
+
+In some respects, wasting money is the least of concerns in the international development sector. In WASH, there are documented cases of sanitation behavior change interventions causing harm, with those who defecate in the open being punished by others throwing stones at them \parencite{Devine2009} or dumping feces in their kitchens \parencite{Chatterjee2011}. It is of little surprise that some of these interventions result in negative impacts on physical health and social cohesion \parencite{Barrington2017}. In these scenarios, the people that we are trying to help end up in a significantly worse situation than before we stepped in.
+
+One of the challenges with WASH interventions is that water and sanitation form part of complex systems that include people, technology, and the environment. Too frequently, interventions focus on only one aspect of that system, leading to unintended consequences elsewhere. There are recorded cases where individuals have died or been injured from falling into pit latrines, because the vital role of maintenance has been neglected or overlooked. In 2014, a five-year-old boy drowned in a school pit latrine in South Africa that collapsed under him during his first week of school. In 2018, the incident was repeated with a five-year-old girl drowning in another school pit latrine. This led to the government insisting on the eradication of pit latrine toilets from South African schools, but with little detail of what would replace them in water scarce areas where waterborne sanitation was not an option \parencite{Fihlani2018}. Though the government understood that this was a catastrophic failure of the system, they were uncertain how to quickly reshape the system to ensure a safer service in the future.
+
+Clearly, talking about failure has its advantages. In WASH research and practice, repeating failed interventions can not only lead to money spent on inappropriate implementation, but can also harm the intended beneficiaries, in the very worst cases resulting in death. How can we morally justify not discussing our failed ideas if sharing them can save money and lives?
+
+Sharing negative outcomes of research helps ensure that mistakes are not repeated. Anyone who has undertaken health and safety training knows that for every death that happens, there are numerous injuries and many more "near miss" events. The reason that health and safety officers are so insistent on "near miss" reporting is that this provides valuable data to prevent more serious incidents from occurring. Research, particularly in fields where our work impacts on people’s everyday lives, needs to take more heed of that approach. Talking about failure should be a vital aspect of research transparency.
+
+There are global campaigns pushing for all medical trials to be registered in advance so that negative results are captured \parencite{Goldacre2016}. Proponents point out that this allows researchers to look at all the evidence relating to a drug, rather than only the pieces of information that support the pharmaceutical industry’s desired results. Perhaps international development needs to take a similar approach.
+
+Convincing researchers to share failures is only the first hurdle, however. Funders are powerful players in any research partnership, and whilst some funders do share projects that do not turn out as planned, this is not common. One of the advocates for funders to share negative outcomes as well as positive outcomes, so that lessons can be learned and carried forward, is Elhra. In 2017, they funded Action Against Hunger Spain and the London School for Hygiene and Tropical Medicine to test if Moringa leaves could be used as an alternative to soap in Ghana, following successful laboratory trials. These new tests showed that, rather than acting as a disinfectant, when mixed with water the leaves provided the perfect breeding ground for \textit{E. coli}. These results are easily accessible on the Elhra website \parencite{ActionAgainstHungerSpain2018}. Whilst Elhra offers one positive example of how funders can share negative outcomes, there are many more organizations with much larger research budgets that informally prefer negative results to be quietly left out of reporting. As such, there is still more to be done in identifying convincing arguments for funders to openly share failures to promote learning.
+
+Yet, as stated above, the bias associated with which results are published and which are not does not lie solely with the researchers and project partners. Journals want to publish novel research and failure is too often not seen as novel. This culture of success-ism is damaging to research and is highly unscientific given that the scientific method explicitly makes room for failure. The drive towards discussing failures needs to come from journals as well, not just from researchers. Open Science pushes for all publicly funded research to be made publicly available, and that should hold true even when research gives null results or leads to failure. If this were the case, researchers would not be pushed to dredge data for “significant results”; publishing null results would be accepted practice. Data dredging is seen as one of the main causes of non-reproducible results and so opening up academic publishing to failures and null results would support the move towards more reproducible and more transparent science.
+
+If we know what fails, we have a better chance of working out why so that we can succeed in future. Failure, particularly in complex systems such as those encountered in international development, is a vital part of the puzzle for achieving strong research; the consequences of attempting to solve the puzzle without all the pieces can be extraordinarily high. With this understanding of the importance of publishing failures, we hope that this will one day be the norm. In the meantime, we encourage all researchers to find ways to talk more openly about failure, within projects and to a wider audience. As the founders of "WASH Failures", we have used game show-style events at conferences to give people space to talk about failures in their work. We are also carrying out research to understand how organizational culture can impact how failure is communicated in water and sanitation organizations working in sub-Saharan Africa. We need more structured ways to report on failures — at conferences, in academic writing, in reports to funders, and with the general public. We were pleased to see that the Journal of Trial and Error is one of those nascent outlets for failure. We certainly hope that it will not be the last.
+
+
+%\nocite{*}
+\setlength{\bibhang}{\parindent}
+\phantomsection \addcontentsline{toc}{section}{References} 
+\printbibliography
+
+
+
+\end{document}

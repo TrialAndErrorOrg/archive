@@ -1,0 +1,300 @@
+
+% Document class options:
+% =======================
+% blind: Anonymise all author, affiliation, correspondence
+%        and funding information.
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+% num-refs: Uses numerical citation and references style 
+%           (Vancouver-authoryear).
+%
+% alpha-refs: Uses author-year citation and references style
+%             (rss).
+%
+% Using other bibliography styles:
+% =======================
+%
+% To specify a different bibiography style
+%
+% 1) Do not use either num-refs or alpha-refs in documentclass.
+% 2) Load natbib package with the options set as needed.
+% 3) Use the \bibliographystyle command to specify the style
+% 
+% Included NJD styles are: 
+%   WileyNJD-ACS
+%   WileyNJD-AMA
+%   WileyNJD-AMS
+%   WileyNJD-APA
+%   WileyNJD-Harvard
+%   WileyNJD-VANCOUVER
+%
+% or you may upload an alternative .bst file 
+% (if requested by the journal).
+%
+% Examples:
+% =======================
+%% Example: Using numerical, sort-by-authors citations.
+\documentclass[twocolumn, serif, authordate, reflection]{jote-article}
+
+\addbibresource{abma.bib}
+
+\usepackage{csquotes}
+
+%% Example: Using author-year citations and anonymising submission
+% \documentclass[blind,alpha-refs]{wiley-article}
+
+%% Example: Using unsrtnat for numerical, in-sequence citations
+% \documentclass{wiley-article}
+% \usepackage[numbers]{natbib}
+% \bibliographystyle{unsrtnat}
+
+%% Example: Using WileyNJD-AMA reference style and superscript
+%%          citations, two-column and serif fonts for AIChE
+% \documentclass[serif,twocolumn,lineno]{wiley-article}
+% \usepackage[super]{natbib}
+% \bibliographystyle{WileyNJD-AMA}
+% \makeatletter
+% \renewcommand{\@biblabel}[1]{#1.}
+% \makeatother
+
+% Add additional packages here if required
+\usepackage{siunitx}
+
+
+\usepackage{float}
+\usepackage{bookmark}
+\usepackage{lipsum}
+% Update article type if known
+% Include section in journal if known, otherwise delete
+\papertype{Reflection}
+
+\title{Experiment and Fail: a Comment on ``Alcohol Cues and their Effects on Sexually Aggressive Thoughts”}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Ruud Abma}
+\authorone{Ruud Abma}
+
+
+%\contrib[\authfn{1}]{Equally contributing authors.}
+
+% Include full affiliation details for all authors
+\affil[1]{Descartes Centre for the History and Philosophy of the Sciences and the Humanities, Utrecht University, Utrecht, 3584 CH, Netherlands}
+%\affil[2]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\corraddress{Ruud Abma, Descartes Centre for the History and Philosophy of the Sciences and the Humanities, Utrecht University, Utrecht, 3584 CH, Netherlands}
+\corremail{r.abma@uu.nl}
+
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\paperdoi{10.36850/r1}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Abma}
+
+\jname{Journal of Trial and Error}
+\jyear{2020}
+\jvolume{1}
+\jissue{1}
+
+\jwebsite{https://jtrialerror.com}
+\paperreceived{11 May, 2020}
+\paperrevised{22 June, 2020}
+\paperaccepted{1 July, 2020}
+\paperpublished{22 July, 2020}
+\paperpublisheddate{2020-7-22}
+
+
+\jpages{20-26}
+\jlogo{media/jote_logo_full}
+
+\companionurl{https://doi.org/10.36850/e1}
+\companiontitle{Leboeuf et al., (2020)}
+\companionabstract{Alcohol and its effects on aggression have been the subject of many discussions and research papers. Despite this fact, there is still a debate surrounding what it is exactly about alcohol that causes aggression. The current study sought to replicate the past finding by Bartholow \& Heinz (2006), that alcohol cues without consumption increase the accessibility of aggressive thoughts, which can then influence aggressive behaviors. In the present study, participants had to complete a lexical decision task that was set up to assess whether aggressive words were detected faster in the presence of alcohol-related pictures compared to neutral pictures. The results of this study did not replicate the expected finding as only a main effect of word type was found in which participants detected neutral words faster than aggressive words. Furthermore, the study aimed to assess the role of gender stereotype acceptance levels in this association, but due to faulty design considerations, such analyses were not possible. The results are discussed in terms of the limitations of the study, and propositions for future directions are addressed.}
+\companionkey{Leboeuf2020}
+
+\abstracttext{\section*{Abstract}
+
+\noindent Priming studies, mostly found in the subdiscipline of social psychology, have been the subject of vigorous debates among methodologists, philosophers of science, and priming researchers themselves. This article contributes to the debate about priming studies by carefully examining and dissecting one priming study in particular, namely the 2020 article ``Alcohol Cues and their Effects on Sexually Aggressive Thoughts” by Julie Leboeuf, Stine Linden-Andersen, and Jonathan Carriere. By pointing out the flaws of this supposed reproduction study, I reflect on the various levels of complexity that are involved in conducting priming experiments with human subjects. I conclude that the call for more reproductions or replications is worthwhile, but only if the original experiments are solid and theoretically interesting.}
+
+
+\heightabstract{65mm}
+\widthaffil{60mm}
+
+\setlength{\parskip}{0pt}
+
+
+
+\keywordsabstract{human subjects, philosophical reflection, priming studies, replication, reproduction}
+\begin{document}
+\cleartoleftpage
+\setcounter{page}{20}
+\begin{frontmatter}
+\maketitle
+\begin{abstract}
+%\phantomsection
+%\addcontentsline{toc}{section}{Abstract}
+Priming studies, mostly found in the subdiscipline of social psychology, have been the subject of vigorous debates among methodologists, philosophers of science, and priming researchers themselves. This article contributes to the debate about priming studies by carefully examining and dissecting one priming study in particular, namely the 2020 article "Alcohol Cues and their Effects on Sexually Aggressive Thoughts" by Julie Leboeuf, Stine Linden-Andersen, and Jonathan Carriere. By pointing out the flaws of this supposed reproduction study, I reflect on the various levels of complexity that are involved in conducting priming experiments with human subjects. I conclude that the call for more reproductions or replications is worthwhile, but only if the original experiments are solid and theoretically interesting.
+% Please include a maximum of seven keywords
+\end{abstract}
+\end{frontmatter}
+
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+The paper "Alcohol Cues and their Effects on Sexually Aggressive Thoughts" \parencite{Leboeuf2020} report a failed attempt at reproducing two experiments. The massive shortcomings of the reported reproduction are obvious. For a moment I was tempted to think that the authors, in the form of a standard psychological paper, were presenting a philosophical critique of this type of experiment. But they were not. In my comment I will try to formulate such a critique in a more straightforward manner.
+ 
+I will first give a brief and plain description of what happened in the experiment and why it was done, according to the authors. Then I will say a few things about the complexity of producing and reproducing experiments in general, followed by a section on the problems of the specific type of experiments of which this one is a specimen: \textit{priming} studies, mostly found in the subdiscipline of social psychology. For almost a decade, priming studies have been the subject of vigorous debate among methodologists, philosophers of science and priming researchers, in scientific journals, but also in newspapers, magazines, blogs and on Twitter. I will end with an assessment of the possibilities and the limits of doing experiments in the human sciences: What can we learn from experiments on alcohol cues if we want to tackle physical, mental and social harm, attributed to the consumption of alcohol?
+
+%\pagebreak
+%\vspace*{1.4\baselineskip}
+\phantomsection
+\addcontentsline{toc}{section}{The experiment}
+%\noindent{\fontsize{12pt}{15pt}\fontfamily{lato-TLF}\fontseries{eb}\selectfont\raggedright\textls*{The Experiment}}
+\section*{The experiment}
+
+
+
+This is how the experiment conducted by \textcite{Leboeuf2020} went. Sixty people, all students, volunteered to come to the Psychological Health and Well-Being lab on Bishop’s University campus (Sherbrooke, Quebec). Upon arrival, they are instructed to take part in a word recognition task: How quickly and accurately can they decide whether a string of letters presented to them on a computer screen is a legitimate English word? In total, they are presented with 45 letter strings, of which 15 are neutral, 15 are "nonwords" and 15 are "aggression-related words of a sexual nature" \parencite[p. 10]{Leboeuf2020}. Prior to the presentation of a target word, a photo is shown of a weapon, an alcoholic drink, or a non-alcoholic drink.\footnote{Interestingly, one of the photos shows bottles of the beer brand Corona, which would nowadays have a totally different association and might possibly ruin the experimental setup. Also, for the association to occur, subjects would have to know that Corona is a beer; this is not clear from the photo.} Participants have to indicate by pressing on a key whether the letters in their judgment represent a legitimate English word or not. 
+
+Now, why was this done? The main goal of the experiment was to find out if the performance of the participants would be similar to the results of earlier experiments, carried out by other researchers in 2006 and 2010, respectively \parencite{Bartholow2006,Begue2012}. If successful, the new experiment would generate support for the idea that people who see the image of a weapon or an alcohol drink – even for a split second – are influenced (unconsciously and automatically) to choose aggression-related words faster than neutral words in the case of neutral (non-alcohol) images. This idea is in line with the "semantic network model of memory", which suggests that human beings can learn to associate a gun with violence, and alcohol with (sexual) aggression, simply by the frequent, simultaneous occurrence of these phenomena \parencite{Leboeuf2020}.
+
+In the 2006 and 2010 experiments cited by the authors, this type of association indeed was shown. In the present experiment, it was not: alcohol cues were detected slower than non-alcohol cues. So, was the alcohol-aggression hypothesis falsified? Not necessarily, according to the authors, who come up with no less than seven possible explanations as to why their experiment generated different results than the previous ones. In the end they concluded \parencite[p. 16]{Leboeuf2020}: "This replication attempt suffered from many methodological and design-related issues." 
+ 
+From their account it becomes clear how complicated reproducing a seemingly straightforward experiment actually is. While an experienced experimenter might shake their head at such an imperfect specimen of experimental research, in my view, it is a very instructive case, precisely because of its faults. It is a specimen of "sloppy science". Normally when authors want to publish a paper that is based on weak research, they cover up shortcomings using methodological decisions and statistical manipulations, but these authors refrained from such a procedure.
+
+
+\phantomsection
+\addcontentsline{toc}{section}{The Intricacies of Producing and Reproducing Experiments}
+\section*{The intricacies of producing and reproducing experiments}
+
+
+
+Performing an experiment is quite a complicated task. Apart from a theoretical description of the required manipulations, the object and the apparatus, there is the material realization of the actual experiment, which necessitates careful preparation. The complexity of experimenting in general can be illustrated by the following example, which is taken from the book \textit{In and about the world} (1996) by the Dutch philosopher of science and technology, Hans Radder:
+
+
+\blockquote{Consider [...] an experiment for determining the boiling point of a particular liquid. This liquid is our object under study. Our apparatus consists of a heat source, a vessel, a thermometer, and possibly some supplementary equipment. On the basis of our knowledge of the interaction process between thermometer and liquid, we assume that our readings of the thermometer inform us about the temperature of the liquid. Part of the preparation procedure involves making sure that the liquid in question is pure. This is why it may be necessary first to clean the vessel that will contain the liquid. \parencite[p. 11]{Radder1996}}
+
+
+Besides guiding the preparation of the object and the necessary equipment, the theoretical description informs us about the staging of the processes of interaction between object and equipment and the processes of detection (i.e., measuring). Finally, the experimental system should be "closed", which means that potential disturbances from the outside\footnote{ This can also mean: disturbances by internal processes, for instance affective and emotional processes in human beings. } should be identified and controlled; this is also part of the theoretical description \parencite{Radder1996}. 
+
+This all sounds rather straightforward and self-evident, but experimental procedures are full of hidden presuppositions, as becomes clear when a researcher is given the task to instruct a layperson how to perform a certain experiment. An elaborate and very detailed and precise list of actions worded in common (non-theoretical) language is needed for this layperson to successfully execute the tasks involved. It moreover requires that the researcher already knows how to perform the experiment \parencite{Collins1985}.\footnote{The intricacies of learning how to do a proper experiment (and to perform reproductions) are described and analyzed in \textcite{Collins1985}.}
+
+The notions of theoretical description and material realization are both relevant and helpful to analyze the issues at stake with the reproduction of experiments. \textcite{Radder1996} distinguishes between three \textit{types} of reproducibility. Type 1 is the reproducibility of the material realization of an experiment, which means: (a) it is not dependent on any particular theoretical description, (b) it can be done by laypersons. In type 2, an experiment may be reproduced under an identical theoretical interpretation, which allows for slight variations in the material procedures. Type 3 concerns the reproducibility of the \textit{result} of an experiment, which implies that it is possible to obtain the same experimental result while performing – theoretically and materially – different procedures; this is, in Radder’s terminology, a \textit{replication }of the original experiment. In contrast to type 3, type 1 and 2 require a reproduction of the whole of the experimental process. 
+
+In addition to these three varieties of reproduction type, \textcite{Radder1996} distinguishes four possible types of actors in the reproduction process, or four \textit{ranges }of reproduction: (1) reproducibility by any scientist or even any human being in the past, present or future, (2) reproducibility by contemporary scientists; (3) reproducibility by the original experimenter, and (4) reproducibility by the lay performers of the experiment. Types and ranges combined, there are thus twelve possible categories in the field of reproduction, which allows a far more sophisticated assessment and categorization than the usual differentiation between "direct" (or exact) and "conceptual" reproductions (see below), or the categorization by the Dutch research funder NWO (Dutch Research Council): (1) replication with existing data, (2) replication with new data (and the same research protocol), (3) replication with the same research question, but with a different research protocol and new data \parencite{NWO2019}.
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Is ``Alcohol Cues and their Effects on Sexually Aggressive Thoughts” a reproduction?}
+\section*{Is ``Alcohol Cues and their Effects on Sexually Aggressive Thoughts” a reproduction?}
+
+
+
+In what category can we now place the word decision experiment we are discussing here? Firstly, considering Radder’s aspect of \textit{range }\parencite{Radder1996}, it is a reproduction performed by (more or less) contemporary scientists; the timespan between the original and the reproduction amounts to 14 years. Secondly, considering \textit{type}, we learn from the description of the experiment that the researchers initially aimed at reproducing the original experiment, using the same protocol: "Dr. Bartholow generously shared the original target word stimuli and a description of the images he employed, allowing highly similar material to be used in this study"\parencite[p. 15]{Leboeuf2020}. In that case, we would have a reproduction under a fixed theoretical interpretation, i.e., type 2.
+ 
+However, the reproducers also wanted to study the accessibility of \textit{sexually }aggressive thoughts and therefore decided to change the sets of target words and images, in order to accommodate the addition of a new variable. Nevertheless, they themselves considered their experiment to be a true reproduction: "the initial research protocol was followed closely and the research question remained unchanged [...] even if the nature of the aggressive words [and the photos! RA] was altered"\parencite[p. 16]{Leboeuf2020}. This claim is not irrelevant since, in order to be recognized (and funded) as a proper replication, submitted proposals in this category usually have to conform to strict definitions issued by funding agencies. 
+ 
+In my opinion, the claim made by the authors in this respect is debatable or even false: changing target words and images means bringing about a change in the "apparatus" used, which also implies changes in the "interaction" with the object and probably also in measurement procedures. One way to establish whether the research protocol is really "the same", as the reproducers claim, would be to explicate in common language the detailed instructions for the material realization of both the original experiment and the reproduction. This is hardly ever done. Usually, and also in this case, the method section in journal articles does not give the reader (and the reproducer-to-be) sufficient information about the actual proceedings to create a "lay persons instruction". It would require getting the protocol from the original experimenters, and even then more detailed information might be necessary \parencite{Collins1985}. 
+
+For now, I hold that the reproduction experiment discussed here is at best a \textit{replication }(cf. \cite{Radder1996}), i.e., an attempt at attaining the same experimental result while performing – theoretically and materially – different procedures. In itself, this could be valuable: the significance of a result is stronger when it can be obtained under different experimental processes or, as \textcite[p. 84]{Radder1996} puts it: "Abstraction through replication enables us to systematically conceptualize experimental results arising in essentially different situations. As such it constitutes an important step towards theory formation."  Because the reproducers introduced a new variable in their study ("sexually aggressive" instead of "aggressive"), one could argue that this is not even a replication, but a new experiment. 
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Priming studies}
+\section*{Priming studies}
+
+
+
+The reproduction experiment under discussion is a so-called priming experiment, which means that a stimulus is presented that is supposed to subconsciously influence the subjects in the experiment in a systematic way, as measured by their results on a specific task (for an overview of the field of priming studies, see \cite{Derksen2017}). In this case, the prime consists of photos of a different nature (weapon, alcohol, non-alcohol) and the specific task is word recognition. According to the "semantic network model of memory", an individual primed by, for instance, the image of a beer bottle would be prone to choose a sexually aggressive word faster than a neutral one as a "legitimate English word"  \parencite[p. 10]{Leboeuf2020}. 
+ 
+Since a quarter of a century, this type of experiment has become very popular in social psychology. For the subdiscipline as a whole, it is an attractive type of study because it puts a counterintuitive and (for some) controversial idea center-stage: in human decision making, volition or free will is far less important than is usually thought; instead, people take many – if not most – decisions automatically, influenced subconsciously by environmental factors. For individual researchers, engaging in the priming tradition opens up a variety of topics to study experimentally, and a possibility to share in an almost unlimited market of publication opportunities. Presenting results that are at odds with common-sense thinking is considered an asset \parencite{Strack2012}. 
+ 
+From 2011 onwards, however, a fundamental debate has started about the quality of the ever expanding field of priming research, leading to a "crisis of confidence" in experimental social psychology, or at least in the area of priming research.\footnote{See \cite[Ch. 9]{Derksen2017}} The main allegation was that within social psychology there was an abundance of "sloppy science". Researchers were accused of having "photoshopped" their raw data by methodological and statistical manipulations or, as a group of methodologists put it: the field of (social) psychology "currently uses methodological and statistical strategies that are too weak, too malleable, and offer far too many opportunities for researchers to befuddle themselves and their peers"  \parencite[p. 178]{Derksen2017}. There is in (social) psychology an overly enthusiastic use of "researcher degrees of freedom", which enables researchers to obtain almost every result they want \parencite{Pashler2012}.
+
+Adding fuel to the upheaval were attempts to reproduce "classic experiments" in social psychology, such as Bargh’s study on the effect of subjects being primed by word references to old age, who would afterwards walk slower toward the exit of the building where the experiment was conducted (as elderly people are supposed to do) (\cite{Bargh1996};  \cite[p. 183-188]{Derksen2017}). The reproducers followed Bargh’s protocol as precisely as possible, but nonetheless were not able to produce the same results. Fearing that this outcome would damage "his life’s work", Bargh attributed the reproduction failure to the incompetence of the reproducers \parencite{Yong2012,Yong2012a}. Several years later, in a more general attempt to do something about the "replicability crisis" and validate psychological research, a massive Reproducibility Project was conducted, leading to a shocking result: no more than one-third of experimental results could be replicated \parencite{OpenScienceCollaboration2015}. 
+
+This ignited a debate on the value of doing what was called "exact (or direct) replications" (following the same protocol) versus so-called "conceptual replications", in which researchers with the same theoretical background as the original experimenters, use more or less different operationalizations to produce similar effects, in order to strengthen and extend the theory at stake. Whereas methodologists seemed to favor "direct" reproductions, social psychologists considered them of little value: "In psychological research, there are always a multitude of potential causes for the failure to replicate a particular research finding"  (\cite{Stroebe2012}, as cited in \cite[p. 183]{Derksen2017}). 
+
+Not surprisingly, these causes mostly had to do with the complexity of experimental work; either the protocol was not precise enough or the reproducer lacked the necessary skills; or there were mediating variables at work, that were thus far unknown. According to \textcite{Bargh1996}, priming studies in particular are very sensitive to this, which is why priming experiments require precise control and great skill from the experimenters \parencite{Derksen2017}. This line of reasoning is at least half a century old. Already in 1968, two respected experimentalists in social psychology, Elliott Aronson and Merrill Carlsmith, wrote: 
+
+\blockquote{$[\dots]$ when an attempted replication fails, one must interpret this failure with caution because it is difficult to draw firm inferences. The most we can say is that there was something about the original experiment which was not accurately specified and which seemed to have had an important effect on the results. One obvious but frequently overlooked problem about failures to replicate is that negative results are easily produced by incompetence. \parencite[p. 21]{Aronson1968}}
+
+In the word decision experiment discussed in this commentary, similar issues are at stake. In fact, they all pointed to one and the same methodological problem: the endeavor to ward off disturbing influences from the experimental situation or, in other words, to "keep the system closed". Although this "closedness" must be qualified – you only need to control those influences that are relevant in view of the problem and the aim of the experiment - it implies careful and systematic action: you "have to produce and maintain them through active intervention"  \parencite[p. 122]{Radder1996}. 
+ 
+ The fact that we're dealing with interventions by the experimenter might also imply that we are creating an unnatural situation that might diminish the external validity of the results. \textcite{Collier2005} recounts a study in which a group of young men are isolated and manipulated to establish how power relations between the participants develop. His question is: what conclusions can you draw about what people tend to do outside the lab? This is his answer: 
+
+\begin{quote}
+The men were removed from their families and friends, their jobs and normal leisure activities, even the common light of day. Now of course, all experiments are artificial, but in a good experiment the artifice \textit{removes }the effects of irrelevant variables on the matter being tested. In this case, it does not remove but introduces such variables, just as putting animals in cages makes it impossible to study their natural behavior. [...] The proper way of studying the effects of power changes and power vacuums on humans would be by studying human behavior in the wild [...] in the open system of history, for instance the history of the French Revolution. \parencite[p. 332]{Collier2005}
+
+\end{quote}
+
+In the human sciences, the experiment constitutes a miniature social system in which the subjects are not passive, but respond actively and intelligently to all that goes on in the experimental situation. Using the information that they can get, participants will try to guess what the aim of the experiment is and attune their behavior accordingly \textit{(demand characteristics). }Probably the most important source of information are the experimenters themselves, who might unwillingly influence the responses of the subjects \textit{(experimenter bias). }For a good reproduction of an experiment, it is important to know how the experimenter operated, whether they were a man or a woman, what the precise wording was of the instruction to the participants, what knowledge the subjects might have or obtain about the goal and hypotheses of the study, and to what degree deception of the subjects was involved in the experimental setup. As noted, however, this type of detailed information is hardly ever reported in journal articles, which hampers the attempts of reproducers to establish what precautions are taken to minimize experimenter bias or gauge the influence of demand characteristics \parencite{Klein2012}.
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Experimenting with humans}
+\section*{Experimenting with humans}
+
+
+
+Given the complexity of procedures and the insecurity of results, why would human scientists perform experiments? Experimenting with human subjects seems to be far more difficult than with physical objects. This is ironic, because originally it was precisely the association with the rigor of the natural sciences that inspired psychologists in the late nineteenth century to adopt the experimental method as their favorite modus operandi \parencite{Danziger1990}. Nowadays the usual argument is: "by doing experiments you are able to establish causal connections". This takes the form of "if p, then q", which means there is a "constant conjunction" between p and q, where q is "caused" by p \parencite{Manicas2006}.\footnote{Manicas argues convincingly that causality requires more than a "constant conjunction". } In terms of our experiment: if we present the image of a beer bottle to the subject, they will choose an sexual-aggressive word faster than an alternative. 
+
+But what if this does not happen? Should we reject this specific regularity and try to come up with a better one? Not necessarily. There might be one or more methodological flaws in the reproduction attempt, for instance, as in the experiment discussed here. "A sample size [...] was probably not large enough to optimize statistical power"; or "the results of this study might have been negatively impacted by the flawed choices for the aggressive target words"; and "the validity of the neutral category of pictures employed remains unclear" \parencite[p. 13, p. 14, and p. 16, respectively]{Leboeuf2020}. This points to a recurrent problem in experimental social psychology. Already in 1954, Leon Festinger wrote that "negative results perhaps reveal only the fact that the experiment was not set up carefully and that the experimenter’s attempted manipulation of the variables was ineffective"  \parencite[p. 143]{Festinger1954}.
+
+In addition, there could be a misguided preconception in the research question, for instance in the idea that alcohol cues are automatically linked to aggressive thoughts, and not to "feeling good" or "having fun with friends". An indication for this is given in the discussion section, where multiple participants said that "sexual violence was not necessarily associated with alcohol for them"  \parencite[p. 15]{Leboeuf2020}. The authors suggest that cultural differences might be at stake here: multiple participants coming from Europe stated that they were "raised with an open-minded attitude towards alcohol"  \parencite[p. 15]{Leboeuf2020}. 
+
+Another shortcoming might be caused by a central feature of priming experiments: they depend on deception. Deceiving subjects about what is the goal of the investigation has been an important instrument for experimental social psychologists since the 1950s to keep the experimental system closed. But do we really know whether we succeed in deceiving our participants? In the case discussed here, one subject was removed from the sample "because it was clear from the debriefing session that this participant had not understood the computer task properly"  \parencite[p. 11]{Leboeuf2020}. This indicates that the task may be interpreted in various ways; how can we be sure that the other participants did not have their own, though maybe less interfering, interpretation of the task? They might even have guessed what the experiment was actually about. This is not far-fetched because the authors themselves admit that, on seeing images of alcoholic and non-alcoholic beverages, some participants suspected that the study was "researching the effects of alcohol as it is contrasted with non-alcoholic beverages"  \parencite[p. 14]{Leboeuf2020}. That guess is close enough to open the experimental system to a confounding variable.
+
+These examples of possibly confounding interpretations by experimental subjects point to a fundamental issue: participants will have their own interpretation of the nature and goal of the experiment, and this interpretation may influence their responses in a way that is not intended by the experimenter. This is usually referred to as the problem of the "double hermeneutic": researchers have to be aware of both their own interpretation of what’s going on in their research \textit{and }the interpretation that the subjects have of the experiment they are participating in. If researchers fail to assess properly what their subjects think, their interpretation of the results might be seriously flawed. Here we have a fundamental difference between the natural and the human sciences: the objects of study in natural science disciplines do not interpret the experimental interventions they are subjected to \parencite{Radder2019}. In conclusion, experiments may not be the best way to study people.
+
+Does this mean we have to do away with the idea of causality? Yes, if that means sticking to the principle of constant conjunction of isolated variables. No, if causality implies taking into account the characteristics of the object of study, the generative powers that are typical of human beings, for instance their judgmental sophistication, their use of written language, etc. Yes, people do have automatic responses to situations, but they also have the ability to consciously assess what’s going on and choose their course of action. The range of options is not unlimited, but on the other hand, it is not possible to predict the outcome with certainty. 
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Relevance}
+\section*{Relevance}
+
+
+
+The importance of this insight can be illustrated if we return to the experiment at hand. Why would we do research into the effects of alcohol use in human beings? Because "alcohol abuse results in three million deaths worldwide every year"  \parencite[p. 9]{Leboeuf2020}. How do these deaths come about? The authors suggest that "intimate partner violence" is among the primary causes, but this is not explicitly stated. Even if partner violence would not be responsible for all of these three million deaths, an investigation into its causes would be most important. The main issue would obviously be: how can we prevent partner violence? And yes, alcohol abuse can be an important causal or facilitating factor, so we would also like to know: how can we prevent alcohol abuse?
+
+Instead, the researchers deflect from these core issues and enter into a different debate: what is it, regarding alcohol, that leads to or increases aggression? That it does is "generally accepted", but "there is still a debate as to what precisely causes or explains this increase". Not surprisingly, "it is usually best explained through a combination of multiple theories and viewpoints" \parencite[p. 10{Leboeuf2020}. That makes sense, but instead of informing the reader about this combined theory, the authors give a brief overview of rivalling theories (or hypotheses). For instance, drinking alcohol increases aggression, "by anesthetizing the part of our brain that usually keeps our aggressive impulses under control" \parencite[p. 10]{Leboeuf2020}. The outcome is of course that people are "more likely to express aggressive behaviors" \parencite[p. 10]{Leboeuf2020}. For some researchers, this is too straightforward, and they propose that alcohol consumption increases aggression "by affecting intellectual functioning and reducing self-awareness" \parencite[p. 10]{Leboeuf2020}. Finally, it might be "that people tend to associate aggression and alcohol, even if only unconsciously" \parencite[p. 10]{Leboeuf2020}, which would increase the likelihood of people behaving in an aggressive manner when they have been drinking.
+
+Here we have arrived at the problem that the researchers set out to tackle: is this unconscious association between alcohol and aggression activated by the "belief that alcohol consumption has occurred" or, alternatively, are "alcohol cues alone"  sufficient for increasing "the accessibility of aggressive thoughts"  \parencite[p. 10]{Leboeuf2020}? Within two pages, the authors have steered their readers from the  urgent issue of preventing three million deaths by alcohol each year to a sophisticated psychological issue, which can be solved by conducting an experiment involving alcohol cues and a "lexical decision task". The results of the studies \textcite[p. 10]{Leboeuf2020} aim to replicate "suggest that exposure to alcohol cues without [alcohol] consumption is linked with an increase in aggression-related thoughts".
+
+According to the reproducers in their closing paragraph, "[t]his line of research should be further pursued as it bears significant importance on [sic] today’s society" \parencite[p. 26]{Leboeuf2020}. But is there any practical value in this type of research? Even if the results were as expected, they would not help to tackle the alcohol-and-violation-problem. If we would decide to ban all "alcohol cues" from the public domain, alcohol use and abuse would continue. So suspicion arises that the references to the timeliness of a grave social problem are used as a legitimization for conducting an experiment that has to decide on a specific effect of alcohol primes, namely aggression.
+
+The subject of the paper raises many obvious questions, like why wasn’t the research aimed at another, very obvious association: alcohol and pleasure? How and in what circumstances do people learn to associate alcohol with violence and aggression? And when we say people, do we mean both sexes or mainly "the male of the species"? And can we extinguish, for instance by operant conditioning, the automatic association between alcohol and aggression? 
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Conclusion}
+\section*{Conclusion}
+
+
+
+The call for more reproductions or replications is worthwhile, but only if the original experiments are solid and theoretically interesting, I would say. Readers may also have doubts about the practical value of this type of study, especially since there is hardly any knowledge of the relation between aggressive thoughts and subsequent behavior. So, despite of the laudable intentions of the reproducers to help solve the reproducibility crisis, it would seem that their efforts could only have been of interest within the milieu of priming specialists.
+
+These specialists, however, would probably not be very pleased with this experiment because of its obvious shortcomings, that are reported with unusual candor by the authors. Why attempt to publish a report like this in the first place? Publication might be instructive to psychology students on how not to perform replications, but is that a sufficient legitimation? Whatever the reason, the paper gave me the opportunity to reflect on the various levels of complexity that are involved in conducting priming experiments with human subjects and maybe help some social psychologists to reconsider their research practice.
+
+\phantomsection 
+\addcontentsline{toc}{section}{Peer review}
+\section*{Peer review} 
+
+JOTE aims to make the peer review process accessible to its readers. Therefore, the initial submission with integrated peer review comments is available \href{https://doi.org/10.36850/r1.pr1}{here}.
+
+%\nocite{*}
+\printbibliography
+
+
+
+\end{document} 

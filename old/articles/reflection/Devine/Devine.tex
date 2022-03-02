@@ -1,0 +1,389 @@
+% Document class options:
+% =======================
+%
+% serif: Sets the body font to be serif.
+%
+% twocolumn: Sets the body text in two - column layout.
+%
+% Fill in the type of article here.
+% empirical
+  % reflection
+  % meta
+  % rga
+  % editorial
+  %
+% Using other bibliography styles:
+% =======================
+% authordate = APA
+  % number =[1]
+  %
+    \documentclass[twocolumn, serif, reflection, authordate]{jote-article}
+
+
+  %%% Add the bibliography, make sure it's in the same directory
+\addbibresource{Devine.bib}
+
+%%% Add additional packages here if required.Usually not needed, except when doing things with figures and tables, god help you then
+
+  % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem psum.OR use[1 - 5] to generate the first five, etc.
+
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
+
+
+%%% TODO: Make this a 1 - 5 option scale to reduce the chance of mistyping
+
+  % Enter the title, in Title Case Please
+    % Try to keep it under 3 lines
+\title{Cognition stays wild: A commentary on Ross~and~Vallée-Tourangeau’s \textit{Rewilding~Cognition}}
+
+% List abbreviations here, if any.Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{
+%  ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+    % Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any.Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+% Format: \author[1, 2]{FirstName LastName} \author[2]{...}
+  \author[1,2]{Vlad P. Glăveanu}
+  \author[3,4]{Alex Gillespie}
+
+    % Fill it in again for the PDF metadata.Lame workaround but it works
+      % Format: \authorone{...} \authortwo{...}
+  \authorone{Vlad P. Glăveanu}
+  \authortwo{Alex Gillespie}
+
+    % List the contribution effort here, they will be listed at the end of the page
+      % List the acknowledgments.If there is no companion piece, this is listed below the author info
+        %\acknowledgments{Author Two would like to thank Author One for doing all the work while they could slack off.}
+% List possible conflict of interest.Will default to saying no conflict exists.
+%\interests{Author One was paid for by Big Failed Experiment}
+% List funding
+    %\funding{}
+% Include full affiliation details for all authors
+\affil[1]{Webster University Geneva}
+\affil[2]{University of Bergen}
+\affil[3]{London School of Economics \& Political Science}
+\affil[4]{Oslo New University College}
+
+
+    % List the correspondence email of the main correspondent
+  \corremail{\href{glaveanu@webster.ch} {glaveanu@webster.ch}}
+
+% Optionally list the present address of one of the authors
+    %\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+% Fill in the DOI of the paper
+
+    % Always starts with '10.36850/' and is suffixed with one of the following plus a number
+      % e  : empirical
+        % r  : reflection
+          % mr : meta - research
+            % rga: rejected grant application
+              % ed : editorial
+  \paperdoi{10.36850/r4}
+
+% Include the name of the author that should appear in the running header
+  \runningauthor{Glăveanu \& Gillespie}
+
+% The name of the Journal
+  \jname{Journal of Trial and Error}
+
+% The year that the article is published
+  \jyear{2021}
+
+% The Volume Number
+    %\jvolume{Fall}
+
+% The website that's listed in the bottom right
+  \jwebsite{
+    https://www.jtrialerror.com}
+
+%%% Only \paperpublished is necessary, any combination of the other two is possible
+
+      % When the paper was received
+        % Format: 1 January, 1900
+    \paperreceived{11 October, 2021}
+% When the paper was accepted
+      % Format: 1 January, 1900
+    \paperaccepted{17 November, 2021}
+% When the paper will be published
+      % Format: 1 January, 1900
+    \paperpublished{30 November, 2021}
+% When the paper is published but in YYYY - MM - DD format, for the crossmark button
+    \paperpublisheddate{2021-11-30}
+
+% The pages of the article, comment out if rolling article
+      %\jpages{1 - 12}
+% Link to the logo, might be redundant
+    \jlogo{media/jote_logo_full.png}
+
+% Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page
+    \rolling{}
+
+% Sets the paragraph skip to be zero, this should be in the CLS
+    \setlength{\parskip} {0pt}
+
+%%% Companion Piece
+
+      % Reflection and Empirical articles have each other as companion pieces.Add the DOI, Title, and Abstract of the respective Companion piece here
+
+        %%% Abstract
+
+        % These two set the height and width of the abstract.There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
+          % Higher number means skinnier abstract
+    \heightabstract{55mm}
+    \widthaffil{50mm}
+% Enter something here in order for the abstract to disappear.Be sure to also delete the abstract
+    \noabstract{}
+% Fill in the keywords that will appear in the abstract, max 7
+    \keywordsabstract{cognition, problem-solving, interactivity, materiality,
+sociality, experiments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Starts
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+%%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
+    \begin{frontmatter}
+    \maketitle
+      % Type your abstract between these things.Max 250 words.Be sure to include the \noindent, looks bad otherwise
+    \begin{abstract}
+    A ``failed'' experiment (\pdftooltip{{\color{tip}Ross \& Vallée-Tourangeau,}}{Ross, W.,\& Vallée-Tourangeau, F. (2021). Rewilding Cognition: Complex Dynamics in Open Experimental Systems. https://doi.org/10.36850/e4}~\citeyear{Ross2021})
+tried to reveal the role played by materiality in solving an insight
+problem that made reference to embodied action, leading to valuable
+insights about the nature of cognition and the experimental method. In
+this commentary, we argue that this study reveals various forms of
+interactivity and brings new evidence against the idea that ``pure''
+cognition can be isolated from either materiality or sociality. The
+question becomes, then, not whether the use of objects helps or hinders
+problem solving, but how objects, bodies, and other people participate
+in it, even in controlled lab settings, and to what effect. Reflections
+are offered on why and how cognition stays wild (i.e., embodied,
+dialogical, and surprising) and what this means for experimental work.
+    \end{abstract}
+    \end{frontmatter}
+
+
+\section*{Introduction}
+
+\pdftooltip{{\color{tip}Ross and Vallée-Tourangeau,}}{Ross, W.,\& Vallée-Tourangeau, F. (2021). Rewilding Cognition: Complex Dynamics in Open Experimental Systems. https://doi.org/10.36850/e4} (\citeyear{Ross2021}) distinguish first-order (hands-on and
+interactive) and second-order (cognitive and abstract) problem solving
+and set out to experimentally demonstrate the neglected superiority of
+first-order problem solving for certain creative tasks. To this end,
+they use the socks problem: ``If you have a drawer with brown socks and
+black socks mixed in a ratio of 4:5, how many would you have to pull out
+in order to guarantee a pair?'' They expected, with good reasons, that
+participants who interacted with socks would be better at resolving the
+problem compared to participants who only imagined interacting with
+socks. However, their results revealed an inconclusively small
+difference between the conditions in terms of the number of participants
+who solved the problem and the time taken to do so.
+
+The finding of this ostensibly failed experiment is insightful and
+richly developed by Ross and Vallée-Tourangeau. They note, with the
+power of hindsight, that they had been overly focused on the
+interactivity with the socks while failing to consider the multiple
+other dimensions of interactivity within the research design:
+interactivity with the instructions, internal dialogical interactivity,
+interactivity with the researcher, and interactivity with any available
+resources. Indeed, even the interactivity of participants who had socks
+was uncontrollable, with some upending the sock bag and getting
+distracted by counting the socks. They conclude that interactivity
+permeated both conditions, and this realization has broad implications
+for experimental research that tries to control interactivity.
+Interactivity, it seems, is so fundamental to humans that it cannot be
+experimentally isolated.
+
+\section*{Pervasive Interactivity}
+
+To further illustrate the point, there is yet another layer of
+interactivity that was not considered by Ross and Vallée-Tourangeau, but
+which is evident in their data, namely the larger dialogical context of
+what it means for participants to be in a ``psychology experiment.'' Few
+contemporary participants are engaging in their first experiment, and
+few have not heard about experiments with confederates, deceptions, and
+creative twists. Thus, another dimension of interactivity is that
+participants know that the experiment is a game and that the
+experimenter may have hidden motives. They expect a trick, and this
+makes the seemingly simple instructions seem puzzling. We see this in
+their data. Participants 41, five minutes into the task asks: ``so I
+have to pull out a pair?'' (5:21). Participant 26, nearly two minutes
+into the task states: ``I'm so confused by the question'' (1:45). Yet,
+the instructions given to participants were ostensibly straightforward.
+We suggest that what these participants are confused about is what they
+are ``meant'' to do (i.e., what is the experimental context around the
+text of the instruction). Participants are thus in a mental dialogue
+with the genre of the experiment. They are unsure what the experimenters
+were looking for and whether even the question itself was a trick. In
+short, the experimental situation has layers of interactivity that go
+far beyond the situation of waking up in the morning and trying to find
+a pair of matching socks in a sock drawer.
+
+This pervasive interactivity within the experiment brings us to the
+``rewilding'' metaphor used in the article. Their choice to introduce
+materiality (intentionally) and sociability (unintentionally) into the
+experimental design is the equivalent of opening the door to the
+``wilder'', harder to measure and control, elements of cognition.
+Reminiscent of older notions of ``cognition in the wild'' (\pdftooltip{{\color{tip}Hutchins}}{Hutchins, E. (1995). Cognition in the wild. MIT press.},~\citeyear{Hutchins1995}), where sanitized laboratories are replaced by messy, interactive
+settings of action and interaction, the use of ``wild'' here and
+elsewhere raises a legitimate question: did we ever manage to
+domesticate cognition in the first place? Did we achieve experimental
+designs that can, at will, cut off the mind from body, others,
+institutions, and culture (to name but a few ``unruly'' elements), in
+order to study ``pure'' thought (or what Vallée-Tourangeau and March in
+2020 called second-order problem solving)? Decisively, no. We can
+certainly create methodologies that foreground abstract thought and
+place bodily movement, object manipulation, and dialogues with others
+into the background. Still, the influence of the latter can never be
+discounted. The fact that participants don't visibly use their hands to
+tinker with objects doesn't mean that they are any less embodied or that
+material forms of engagement have no part to play in their ongoing
+mental operations. Similarly, being left alone to solve a task doesn't
+make that particular moment or context asocial. Inner forms of
+dialogicality are ever-present---the other is always there, just like
+bodies are. The question is, then, not to try and compare ``wild'' and
+``tame'' forms of cognition, ``muddied'' and ``pure'', distributed and
+internal, in terms of the participants' performance in an experiment. A
+more interesting question is the one Ross and Vallée-Tourangeau raise:
+how exactly do materiality and sociability participate in cognition
+(here, problem-solving) in ways that either accelerate or hinder
+performance?
+
+Sociality, we suggest, contributes to creativity by expanding
+possibility through introducing alternative perspectives (\pdftooltip{{\color{tip} Glăveanu}}{Glăveanu, V. (2020).The possible: A sociocultural theory. Oxford University Press},~\citeyear{Glaveanu2020}; \pdftooltip{{\color{tip}Zittoun \& Gillespie}}{Zittoun, T.,\& Gillespie, A. (2015). Imagination in human and cultural development. Routledge.},~\citeyear{Zittoun2015}). While creativity tasks are often based on
+divergent thinking, insight problems call for a better balance between
+divergent and convergent thinking. They also depend on
+social-psychological processes like perspective-taking (\pdftooltip{{\color{tip}Glăveanu}}{Glăveanu, V., Gillespie, A.,\& Karwowski, M. (2019). Are people workingtogether inclined towards practicality? a process analysis of cre-ative ideation in individuals and dyads.Psychology of Aesthetics,Creativity, and the Arts,13(4), 388–401. https://doi.org/10.1037/aca0000171},~\citeyear{Glaveanu2015})
+that connect ``creators'' to their audiences. In the context of the
+study, the most direct audience was the experimenter and as such, it is
+not surprising that participants tried to propose, clarify, or specify
+their perspectives directly to her. This reaching out to the other not
+only serves the purpose of reaching the most suitable outcome, but it is
+also an engine for creative ideation. Creative insight is not the
+personal or internal moment most imagine it to be. It is, in fact, the
+result of past and present dialogical experiences in which the
+perspectives of the self are placed in dialogue with those of others
+(and the more diverse these others are, the more likely it is for
+participants to reach more creative solutions; \pdftooltip{{\color{tip}Gassmann}}{Gassmann, O. (2001). Multicultural teams: Increasing creativity and innovation by diversity. Creativity and Innovation Management, 10(2), 88–95.},~\citeyear{Gassmann2001}). The
+experiment reported by Ross and Vallée-Tourangeau was not designed to
+allow for creative outcomes but to end with a numeric answer, the number
+of pulls needed to reach a pair. It is interesting to imagine if allowing the participants to have a more playful and social approach to the problem (e.g., being in dialogue with other participants or the experimenter) might itself lead to more creatively productive aims.
+
+The pervasive interactivity across both experimental conditions does not
+mean that Ross and Vallée-Tourangeau's initial guiding research question
+was mistaken. There is a lot of evidence for humans having two types of
+cognition, as evident in the many ``dual-process'' models of cognition.
+It is evident in \pdftooltip{{\color{tip}Vygotsky \& Luria's}}{Vygotsky, L. S.,\& Luria, A. (1994). Tool and Symbol in Child Development. In R. Veer\& J. Valsiner (Eds.), The Vygotsky Reader (pp. 99–174).} (\citeyear{Vygotsky1994}) distinction between the
+mental functions humans share with other primates and the symbolically
+mediated mental functions that seem more peculiar to humans. And, more
+recently, it is evident in the distinction between thinking fast and
+slow (\pdftooltip{{\color{tip}Kahneman,}}{Kahneman, D. (2011). Thinking, Fast and Slow. Macmillan.}~\citeyear{Kahneman2011}). These two modes of thought seem pervasive in
+human cognition, not just creative problem solving. However, this does
+not mean they can be experimentally separated with ease. A mind capable
+of both first- and second-order problem solving is likely to leverage
+both within any real problem solving episode (why limit oneself to only
+one cognitive process?) The creative mind is characterized by movement
+within thought and between styles of thought (\pdftooltip{{\color{tip}Gillespie \& Zittoun}}{Gillespie, A.,\& Zittoun, T. (2013). Meaning making in motion: Bodies and minds moving through institutional and semiotic structures. Culture\& Psychology, 19(4), 518–532.},~\citeyear{Gillespie2013}). In the first-order condition, participants may close their eyes
+to conceptualize the problem abstractly. In the second-order condition,
+participants may simulate the socks using pen and paper or their mind's
+eye. In short, in cognition, as it naturally occurs in the wild, humans
+likely oscillate between these two modes and perhaps even participate in
+both simultaneously---and it is this overlap of cognitive modes that
+holds the key to creative cognition.
+
+Interestingly, this idea, that creative cognition stems from moving
+between concrete and abstract modes of thought, is evidenced by Ross and
+Vallée-Tourangeau's own methodology. They begin with a quantitative
+analysis that is abstracted, with conditions differentiated by numbers.
+However, in the qualitative analysis, they engage with the concrete
+particulars---just like participants who had access to the bag of socks,
+they opened up the experiment to have a look inside and see what was
+actually going on. This leads them to observe interactivity in the
+so-called non-interactive condition. Participants talked to the
+experimenter, asked questions about the question, and pitched answers to
+see the response. These concrete observations were then integrated back
+into a more abstract understanding of rewilding cognition not just in
+their own experiment, but in experiments more generally. Thus, Ross and
+Vallée-Tourangeau arguably, engaged in both first- and second-order
+problem solving in their own creative analysis.
+
+One of the innovative aspects of the article, which Ross and
+Vallée-Tourangeau only make passing reference to, is the combination of
+qualitative analysis within an experimental design. It enables them to
+be both concrete about what went on in the experiment (analyzing videos)
+and also to be more abstract (assessing statistical differences). In the
+nomenclature of mixed methods research, they used a peculiar variant of
+an explanatory sequential design (\pdftooltip{{\color{tip}Creswell \& Creswell,}}{Creswell, J. W.,\& Creswell, J. D. (2018). Research Design: Qualitative, Quantitative, and Mixed Methods Approaches. Sage.}~\citeyear{Creswell2018}). These
+designs start with a surprising quantitative finding and then use
+qualitative research to generate plausible explanations. Ross and
+Vallée-Tourangeau's variant of this design is peculiar because the
+quantitative and qualitative parts of the analysis pertain to the same
+events (participant behavior in the experiment). Normally, mixed methods
+sequential designs use separate data sources (e.g., a survey followed by
+an interview). Combining qualitative methods within the quantitative
+experiment provides two different lenses on the same behaviors—thus
+enabling each to elucidate the other. This qualitative-quantitative
+analysis of the behaviors within the experiment enabled them to zoom out
+to identify a surprising lack of difference between conditions and then
+zoom in to describe what participants were actually doing.
+
+\section*{Conclusion}
+
+What the present studies and several others (e.g., \pdftooltip{{\color{tip} Glăveanu et al.}}{Glăveanu, V., Gillespie, A.,\& Karwowski, M. (2019). Are people workingtogether inclined towards practicality? a process analysis of cre-ative ideation in individuals and dyads.Psychology of Aesthetics,Creativity, and the Arts,13(4), 388–401. https://doi.org/10.1037/aca0000171},~\citeyear{Glaveanu2019}; \pdftooltip{{\color{tip}Hawlina}}{Hawlina, H., Gillespie, A.,\& Zittoun, T. (2019). Difficult Differences: A Socio-Cultural Analysis of How Diversity Can Enable and Inhibit Creativity. 53(2), 133–144. https://doi.org/10.1002/jocb.182},~\citeyear{Hawlina2019}) show us is that rethinking experiments in
+psychology, and other disciplines, remains an urgent task. The video
+recording of participants in experimental studies or conducting
+post-experiment interviews or focus groups should be the rule in this
+kind of research, not the exception. The possibility of collecting
+qualitative data within research designs that are meant to be
+quantitative and focused on measurement should be seen as a valuable
+opportunity by experimentalists. Detailed data about the actions,
+interactions, and beliefs of one's participants are not meant to be
+analyzed mainly when the statistical analysis failed to offer the
+desired finding---it should become a source of deeper reflection about
+the phenomenon under study and about the participants being studied in
+most cases. Of course, there are pragmatic reasons for not overloading
+researchers with collecting and especially analyzing datasets that, on
+the surface, seem highly distinct. But, as Ross and Vallée-Tourangeau's
+research shows, these are not even necessarily different datasets---they
+can be part of a single account of the course of action prompted by the
+experiment, the origin of both quantification and of qualitative forms
+of interpretation. Adding cameras or making room for interviews within a
+traditional experiment is not meant to disturb standardization or reduce
+control. On the contrary, these additions can offer precious insights
+into how things happened and what actually happened, above and beyond
+the narrow measurement of changes in a few pre-selected dependent
+variables (see also \pdftooltip{{\color{tip} Glăveanu~et~al.}}{Glăveanu, V., Gillespie, A.,\& Karwowski, M. (2019). Are people workingtogether inclined towards practicality? a process analysis of cre-ative ideation in individuals and dyads.Psychology of Aesthetics,Creativity, and the Arts,13(4), 388–401. https://doi.org/10.1037/aca0000171},~\citeyear{Glaveanu2019}).
+
+\pdftooltip{{\color{tip}Moscovici}}{Moscovici, S. (1991). Experiment and Experience: An Intermediate Step from Sherif to Asch. 21(3), 253–268. https://doi.org/10.1111/j.1468-5914.1991.tb00197.x} (\citeyear{Moscovici1991}) lamented the separation between experiments and
+experience when experiments in psychology necessarily entail
+manipulations of participants' experience. Too rarely have experimenters
+``opened the black box'' of the experiment to examine what is actually
+going on (\pdftooltip{{\color{tip}Corti et al.,}}{Corti, K., Reddy, G., Choi, E.,\& Gillespie, A. (2015). The Researcher as Experimental Subject: Using Self-Experimentation to Access Experiences, Understand Social Phenomena, and Stimulate Reflexivity. 49(2), 288–308. https://doi.org/10.1007/s12124-015-9294-6}~\citeyear{Corti2015}; \pdftooltip{{\color{tip}Psaltis}}{Psaltis, C.,\& Duveen, G. (2007). Conservation and Conversation Types: Forms of Recognition and Cognitive Development. 25(1), 79–102. https://doi.org/10.1348/026151005x91415},~\citeyear{Psaltis2007}). Ross and
+Vallée-Tourangeau's use of qualitative methods within the experiment is
+an exciting illustration of the insights that can be obtained by
+studying what goes on in experiments, by moving between the abstract
+statistical type of analysis and the more concrete, grounded qualitative
+type of analysis. Ironically, their delving into the concrete
+particulars of their own experiment to examine what happened
+demonstrates the point that they failed to establish experimentally,
+namely, that first-order concrete thinking can pump insight and problem
+solving. It is also a vivid reminder that lab-based cognition doesn't
+become ``wild'' whenever the door is opened for the physical
+manipulation of objects or the possibility to be in dialogue with the
+experimenter. It stays as wildly embodied, dialogical, and surprising as
+it ever was.
+
+
+\nocite{*}
+\printbibliography
+ \section*{License}
+        \begin{wrapfigure}[2]{L}{0.08\textwidth}%
+        \vspace{-12pt}
+        \includegraphics[width=0.1\textwidth]{media/by}%
+        \end{wrapfigure}
+        \textbf{\textsf{Open Access.}} This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article‚Äôs Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article‚Äôs Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}.
+        \newline\newline
+        \textcopyright \text{ }The Author(s) 2021%
+\end{document}

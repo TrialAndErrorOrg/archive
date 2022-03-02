@@ -1,0 +1,581 @@
+
+% Document class options:
+% =======================
+% blind: Anonymise all author, affiliation, correspondence
+%        and funding information.
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+% num-refs: Uses numerical citation and references style 
+%           (Vancouver-authoryear).
+%
+% alpha-refs: Uses author-year citation and references style
+%             (rss).
+%
+% Using other bibliography styles:
+% =======================
+%
+% To specify a different bibiography style
+%
+% 1) Do not use either num-refs or alpha-refs in documentclass.
+% 2) Load natbib package with the options set as needed.
+% 3) Use the \bibliographystyle command to specify the style
+% 
+% Included NJD styles are: 
+%   WileyNJD-ACS
+%   WileyNJD-AMA
+%   WileyNJD-AMS
+%   WileyNJD-APA
+%   WileyNJD-Harvard
+%   WileyNJD-VANCOUVER
+%
+% or you may upload an alternative .bst file 
+% (if requested by the journal).
+%
+% Examples:
+% =======================
+%% Example: Using numerical, sort-by-authors citations.
+\documentclass[serif, authordate, twocolumn, empirical]{jote-article}
+
+\addbibresource{julie.bib}
+
+\usepackage{latexsym}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{extarrows}
+\usepackage{graphicx}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{tabto}
+\usepackage{multirow}
+%\usepackage[toc,page]{appendix}
+
+%\usepackage[paperheight=11.0in,paperwidth=8.5in,left=0.5in,right=0.5in,top=1.0in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage{csquotes}
+
+%% Example: Using author-year citations and anonymising submission
+% \documentclass[blind,alpha-refs]{wiley-article}
+
+%% Example: Using unsrtnat for numerical, in-sequence citations
+% \documentclass{wiley-article}
+% \usepackage[numbers]{natbib}
+% \bibliographystyle{unsrtnat}
+
+%% Example: Using WileyNJD-AMA reference style and superscript
+%%          citations, two-column and serif fonts for AIChE
+% \documentclass[serif,twocolumn,lineno]{wiley-article}
+% \usepackage[super]{natbib}
+% \bibliographystyle{WileyNJD-AMA}
+% \makeatletter
+% \renewcommand{\@biblabel}[1]{#1.}
+% \makeatother
+
+% Add additional packages here if required
+\usepackage{siunitx}
+
+
+\usepackage{float}
+\usepackage{bookmark}
+\usepackage{lipsum}
+% Update article type if known
+% Include section in journal if known, otherwise delete
+\papertype{Empirical}
+
+\title{Alcohol Cues and their Effects on Sexually Aggressive Thoughts}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Julie Leboeuf}
+\author[1]{Stine Linden-Andersen}
+\author[1]{Jonathan Carriere}
+
+%Please also enter the authors in the same order here, for metadata purposes. This is a workaround.
+
+\authorone{Julie Leboeuf}
+\authortwo{Stine Linden-Andersen}
+\authorthree{Jonathan Carriere}
+%\authorfour{}
+%\authorfive{}
+
+%\contrib[\authfn{1}]{Equally contributing authors.}
+
+% Include full affiliation details for all authors
+\affil[1]{Department of Psychology, Bishop’s University, Sherbrooke, Quebec, J1M 1Z7, Canada}
+%\affil[2]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\corraddress{Julie Leboeuf, Department of Psychology, Bishop’s University, Sherbrooke, Quebec, J1M 1Z7, Canada}
+\corremail{jleboeuf16@ubishops.ca}
+
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\paperdoi{10.36850/e1}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Leboeuf et al.}
+
+\jname{Journal of Trial and Error}
+\jyear{2020}
+\jvolume{1}
+\jissue{1}
+\jwebsite{https://jtrialerror.com}
+\paperreceived{1 November 2019}
+%\paperrevised{May 18th 2020}
+\paperaccepted{2 June 2020}
+\paperpublished{17 July 2020}
+\paperpublisheddate{2020-07-17}
+\jpages{9-19}
+\jlogo{media/jote_logo_full}
+
+\pubpub{https://jtrialerror.pubpub.org/pub/alcoholcues}
+\companionurl{https://doi.org/10.36850/r1}
+\companiontitle{Abma (2020)}
+\companionabstract{\noindent Priming studies, mostly found in the subdiscipline of social psychology, have been the subject of vigorous debates among methodologists, philosophers of science, and priming researchers themselves. This article contributes to the debate about priming studies by carefully examining and dissecting one priming study in particular, namely the 2020 article "Alcohol Cues and their Effects on Sexually Aggressive Thoughts" by Julie Leboeuf, Stine Linden-Andersen, and Jonathan Carriere. By pointing out the flaws of this supposed reproduction study, I reflect on the various levels of complexity that are involved in conducting priming experiments with human subjects. I conclude that the call for more reproductions or replications is worthwhile, but only if the original experiments are solid and theoretically interesting.}
+\companionkey{Abma2020}
+%\keywords{alcohol, automatic cognition, gender stereotypes, lexical decision task, sexual aggression}
+
+%\abstracttext{Alcohol and its effects on aggression have been the subject of many discussions and research papers. Despite this fact, there is still a debate surrounding what it is exactly about alcohol that causes aggression. The current study sought to replicate the past finding by Bartholow \& Heinz (2006), that alcohol cues without consumption increase the accessibility of aggressive thoughts, which can then influence aggressive behaviors. In the present study, participants had to complete a lexical decision task that was set up to assess whether aggressive words were detected faster in the presence of alcohol-related pictures compared to neutral pictures. The results of this study did not replicate the expected finding as only a main effect of word type was found in which participants detected neutral words faster than aggressive words. Furthermore, the study aimed to assess the role of gender stereotype acceptance levels in this association, but due to faulty design considerations, such analyses were not possible. The results are discussed in terms of the limitations of the study, and propositions for future directions are addressed.}
+
+
+\heightabstract{70mm}
+\widthaffil{65mm}
+
+\setlength{\parskip}{0pt}
+
+%\contributions{\lipsum[1]}
+
+\keywordsabstract{alcohol, automatic cognition, gender stereotypes, lexical decision task, sexual aggression}
+
+
+\begin{document}
+\begin{frontmatter}
+\maketitle
+\setcounter{page}{9}
+\pdfbookmark[0]{Leboeuf, J. et al. - Alcohol Cues and Their Effects on Sexually Aggressive Thoughts}{juliepdf}
+\begin{abstract}
+%\phantomsection
+%\addcontentsline{toc}{section}{Abstract}
+\noindent Alcohol and its effects on aggression have been the subject of many discussions and research papers. Despite this fact, there is still a debate surrounding what it is exactly about alcohol that causes aggression. The current study sought to replicate the past finding by Bartholow \& Heinz (2006), that alcohol cues without consumption increase the accessibility of aggressive thoughts, which can then influence aggressive behaviors. In the present study, participants had to complete a lexical decision task that was set up to assess whether aggressive words were detected faster in the presence of alcohol-related pictures compared to neutral pictures. The results of this study did not replicate the expected finding as only a main effect of word type was found in which participants detected neutral words faster than aggressive words. Furthermore, the study aimed to assess the role of gender stereotype acceptance levels in this association, but due to faulty design considerations, such analyses were not possible. The results are discussed in terms of the limitations of the study, and propositions for future directions are addressed. 
+
+% Please include a maximum of seven keywords
+\end{abstract}
+\end{frontmatter}
+
+\phantomsection
+\addcontentsline{toc}{section}{Take Home Message}
+\section*{Take home message} % \gotoreview
+\label{sec:take-home}
+
+The present study failed to replicate the finding by \textcite{BartholowHeinz2006} that alcohol cues without consumption increase the accessibility of aggressive thoughts. Although the authors of the 2006 study mostly focused on aggressive thoughts of a physical nature, this study aimed to expand the results to sexually aggressive thoughts. Furthermore, the potential role of gender stereotype endorsement in the association between alcohol cues and aggressive thoughts was explored. The failure to replicate can be partly explained by a flawed sample: the small sample size reduced statistical power, and the different composition of the sample compared to the original study impacted the ability to recreate the results. Furthermore, some important methodological limitations concerning the choices of stimuli, particularly with regards to sexually aggressive words and neutral pictures, seriously reduced the quality of the material. Overall, poor design considerations most likely account for the failure to replicate. Alternatively, it is possible that sexually aggressive thoughts are processed differently than physically aggressive thoughts, although more research needs to be done to determine whether this distinction truly exists.
+
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction} % \gotoreview
+\label{sec:introduction}
+
+According to the \textcite{Organization}, alcohol abuse results in three million deaths worldwide every year. \textcite{WellsGrahamWest2000} found that of all the physical aggression incidents reported by the participants, 67.9$\%$  happened while someone involved in the confrontation had been drinking. Similarly, severe alcohol intoxication is believed to play a role in almost half of the sexual aggression cases worldwide (\cite{Testa2002}). Furthermore, \textcite{FieldCaetanoNelson2004} found that among all the factors under investigation, what appeared to be the strongest predictor of intimate partner violence was the expectation of aggressive behavior following alcohol consumption. Although the pharmacological effects of alcohol have been well researched ( \nptextcite[]{ChermackTaylor1995}; \cite{Giancola2000}; \cite{HeinzBeckMeyerLindenbergSterzerHeinz2011}), there is less information available with regards to other factors, such as cognition and expectancies, that can lead to aggression in alcohol-related contexts. \textcite{BartholowHeinz2006} as well as \textcite{SubraMullerBegueLBushmanDelmas2010} researched whether simple exposure to alcohol-related cues unconsciously increases the availability of aggressive thoughts, thus increasing the possibility of subsequent aggressive behaviors. In both studies, the researchers found that participants made faster lexical decisions when aggression-related words were paired with alcohol-related pictures compared with neutral primes. The first goal of the present study was to replicate the finding that alcohol cues increase the accessibility of aggressive thoughts and expand them to consider specific types of aggressive thoughts, such as those of a sexual nature. The second aim was to assess the potential role of gender stereotypes in the association between alcohol-cues and aggressive thoughts.
+
+Before exploring more thoroughly the body of research pertaining to automatic aggressive cognition associated with a sheer exposure to alcohol cues, it is worthwhile to mention that similar studies have examined how other stimuli can generate aggressive thoughts. In 1998, Anderson, Benjamin Jr., and Bartholow reported that simple identification of weapon primes was linked to an increase in aggressive thoughts. In this study, participants named aggressive words faster compared with nonaggressive words when presented with a weapon prime. The authors argued that this increase resulted from the weapon stimuli automatically priming aggression-related thoughts (\nptextcite[] {AndersonJrJBartholow1998}). More specifically, Anderson and colleagues referred to the semantic network model of memory to support their claim. This theory posits that words or concepts that are similar in meaning or that repeatedly co-occur are activated simultaneously in the semantic memory and therefore develop strong associations. This model goes as far as to propose that this increase in aggressive thoughts subsequently increases the likelihood that these thoughts will affect behavior (\nptextcite[]{BartholowHeinz2006}). From this model, it would be hypothesized that two concepts associated together, such as weapons and aggression, could develop such a strong association that this association would then increase the probability of someone behaving aggressively. 
+
+While weapons have been reported to be linked to an increase in aggression-related thoughts, other elements from the environment that could similarly influence levels of aggressive thoughts, such as alcohol, should also be considered. Although it is generally accepted that alcohol increases aggression, there is still a debate as to what precisely causes or explains this increase (\nptextcite[]{BartholowHeinz2006}), and it is usually best explained through a combination of multiple theories and viewpoints (see  \nptextcite[]{HeinzBeckMeyerLindenbergSterzerHeinz2011} for a comprehensive review). Some leading theories include the \textit{physiological disinhibition} hypothesis, the \textit{indirect cause} hypothesis, and the \textit{expectancy }hypothesis (\cite{Bushman2002}). Briefly stated, the \textit{physiological disinhibition} hypothesis states that alcohol intake increases the levels of aggression by anesthetizing the part of our brain that usually keeps our aggressive impulses under control, making people more likely to express aggressive behaviors (\cite{Bushman2002}). Following a similar line of reasoning, the \textit{indirect cause} explanation proposes that alcohol consumption might increase aggression tendencies by producing changes at the cognitive and emotional levels, such as by affecting intellectual functioning and reducing self-awareness, which then increases the likelihood of aggressive acts being committed (\cite{Bushman2002}). As for the \textit{expectancy }hypothesis, it holds that alcohol is linked with aggression because people expect it to be that way (\cite{Bushman2002}). This presumed effect/expectancy hypothesis suggests that people tend to associate aggression and alcohol, even if only unconsciously, which potentially accounts for one of the ways in which alcohol intake is linked with aggression (\nptextcite[]{BartholowHeinz2006}). The problem with this hypothesis is that evidence supporting it mostly comes from placebo designs in which participants were led to believe they had consumed alcohol. Thus, it is unclear whether a belief that alcohol consumption has occurred is necessary for this unconscious association to be activated, or whether the presence of alcohol cues alone can increase the accessibility of aggressive thoughts (\nptextcite[]{BartholowHeinz2006}). 
+
+To address this methodological limitation, \textcite{BartholowHeinz2006} conducted a study in which they examined the extent to which alcohol cues without consumption or belief that alcohol had been consumed (i.e., placebo effect) could increase the accessibility of aggressive thoughts. They tested 121 undergraduate students and had them participate in a lexical decision task. The participants were first primed with a stimulus, were then shown a string of letters, and had to decide whether the letter string presented to them was a legitimate English word. The priming stimuli could either be alcohol-related pictures, weapon-related pictures, or neutral images, and the letter strings could either represent aggression-related words, neutral words, or nonwords. In this experiment, the neutral images consisted of plants. The weapon pictures were included to create a reference point by allowing comparison with the results showing a link between weapon exposure and aggressive thoughts obtained by \textcite{AndersonJrJBartholow1998}. Results showed that participants identified aggression-related words faster when exposed to aggression-related pictures compared with neutral images, suggesting that alcohol and aggression are linked together in semantic memory. 
+
+In 2010, Subra and colleagues replicated the study by \textcite{BartholowHeinz2006} with a different population as well as a slight methodological alteration. First, their study was conducted with a French-speaking population as opposed to an English-speaking one, and the sample was not restricted to undergraduate students. Subra and colleagues used the same stimuli as those used by the authors of the 2006 study, with the exception that they selected different images for the neutral condition. They criticized the ones used previously by \textcite{BartholowHeinz2006} on the basis that their nature (i.e., plants) was not neutral since nature scenes have been shown to decrease aggressive thoughts (\nptextcite[]{KuoSullivan2001a}, \nptextcite[]{KuoSullivan2001b}). Instead, they used photos displaying non-alcoholic beverages for their neutral condition. Similarly to the study under replication, participants made faster lexical decisions about aggression-related words when exposed to alcohol or weapon primes compared with neutral primes, again supporting the idea that alcohol and aggression might hold strong associations in semantic memory.
+
+The two studies by \textcite{BartholowHeinz2006} and \textcite{SubraMullerBegueLBushmanDelmas2010} suggest that exposure to alcohol cues without consumption is linked to an increase in aggression-related thoughts. Interestingly, the target words that were used for the aggression category were mainly of a physical nature (e.g., punch, assault, murder) and did not specifically assess sexual violence. It would be worth investigating whether this increase in thoughts of an aggressive nature also extends to sexual violence, especially considering that the \textcite{WHOSex} listed the use of alcohol or drugs as a factor that increases the risk of men committing rape. Additionally, past research has shown that alcohol priming without consumption can increase sexual expectancies. \textcite{FriedmanMcCarthyForsterJDenzler2005} reported that men who were exposed to subliminal alcohol-related words rated women as being more sexually attractive, and that this effect was more precisely caused by the sexual expectancies associated with alcohol intake. Importantly, the belief that alcohol has been consumed has been linked with an increase in sexual arousal. More precisely, \textcite{AbbeyMcAuslanZawackiClintonBuck2001} reported that men who were led to believe they had consumed alcohol, regardless of whether this was actually the case, experienced more sexual arousal than men in the control group. This becomes problematic when considering the finding by another group of researchers, that induced sexual arousal increased participants’ expectations of their own sexual aggressiveness (\cite{LoewensteinNaginPaternoster1997}). Overall, alcohol cues seem to be linked to increases in both sexual expectancies and sexual arousal, the latter being further associated with elevated expectations of sexual aggressiveness. Therefore, it is of paramount importance to better understand the relationship between alcohol cues and sexually aggressive thoughts.
+
+Another element that was not assessed in the 2006 and 2010 studies is acceptance of gender stereotypes. In one study, \textcite{Abbey2002} reported that traditional gender role beliefs about dating and sexuality could be at play in explaining the occurrence of sexual assaults, irrespective of whether alcohol was involved or not. More precisely, endorsing beliefs such as interpreting a woman’s refusal as an invitation to be convinced, or that forced sex is sometimes acceptable, was a proposed factor that could increase the likelihood of sexual assaults being committed. While recognizing that this is a good first step into assessing the role of gender stereotypes acceptance with regards to sexual violence, more general gender role beliefs should be investigated to truly understand the role that gender stereotypes play in sexual violence occurrences. To this effect, \textcite{LockeMahalik2005} reported that men who showed a problematic use of alcohol and who conformed to such masculine norms as having power over women and being violent were more inclined to score higher on the Rape Myth Acceptance Scale and to report more sexually aggressive behaviors. The first study mentioned here only looked at gender stereotypes with regards to sexuality and dating (\cite{Abbey2002}), and although the second study by \textcite{LockeMahalik2005} might seem to assess gender stereotypes more globally, it appears biased towards specific stereotypes with regards to power dynamics between men and women. In other words, the scales used in the above-mentioned studies seem to be assessing sexual harassment beliefs and attitudes more than gender stereotypes. Another problem with the literature on gender stereotype beliefs and its relationship to violence is that the vast majority of the articles available only report on the likelihood of men committing sexually violent behaviors, or on the relationship between men’s level of gender stereotypes and the perpetration of violent acts, thus leaving women out of the picture (\cite{AbbeyClintonSherrodMcAuslanZawackiBuck2003}; 
+\cite{GidyczWarkentinOrchowski2007}; 
+\cite{JakupcakLisakRoemer2002}). There is a clear need to investigate the relationship between gender stereotype beliefs and sexual violence as it relates not only to men, but to women as well. 
+
+\phantomsection
+\addcontentsline{toc}{section}{Objective and Hypotheses}
+\section*{Objective and hypotheses}
+The objective of this project is to further the line of research on the effects of alcohol cues on aggressive behaviors by testing this relationship specifically with sexually aggressive words and by taking into account gender stereotype beliefs. More precisely, the aggressive words used by \textcite{BartholowHeinz2006} will be replaced by aggressive words of a sexual nature. The comparison point will be against the two studies that have investigated this before and for which significant results have been reported, namely those by \textcite{BartholowHeinz2006} and \textcite{SubraMullerBegueLBushmanDelmas2010}. Gender stereotypes acceptance will be evaluated through the German Extended Personal Attributes Questionnaire (\cite{RungeFreyGollwitzerHelmreichSpence1981}).
+
+Following the findings suggesting that alcohol cues increase both sexual expectancies (\cite{FriedmanMcCarthyForsterJDenzler2005}) and aggressive thoughts (\nptextcite[]{BartholowHeinz2006}), it is hypothesized that participants will make faster lexical decisions to aggressive words of a sexual nature when paired with alcohol-related primes compared with neutral primes. A similar effect should also be found for the weapon-related primes. Furthermore, it is suggested that for both men and women, this association will likely differ depending on one’s level of gender stereotypes acceptance. Indeed, results are expected to show a non-significant association at low levels of gender stereotypes beliefs, a moderate interaction at medium levels of gender stereotype beliefs, and a dramatically significant interaction at high levels of gender stereotype beliefs. Finally, for replication purposes, it is expected that participants will be slightly more accurate at identifying neutral words compared with aggressive words. 
+
+\phantomsection
+\addcontentsline{toc}{section}{Methods}
+\section*{Methods} % \gotoreview
+\label{sec:methods}
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Participants}
+\subsection*{Participants}
+Sixty participants took part in this study, but two of them were excluded from the analyses, giving a final sample size of 58. One participant was excluded because the experiment failed before the data could be recorded, and the other was excluded because it was clear from the debriefing session that this participant had not understood the computer task properly. Furthermore, this participant’s accuracy rate was only 68.54$\%$  compared with a mean accuracy rate of 95.08$\%$  (\textit{SD }= 4.62) for the sample. On this distribution, a score of 68.54$\%$  represents a z-score of -5.74, providing sufficient grounds for excluding the data from the analyses. 
+
+From the remaining participants, 49 self-identified as women (84.5$\%$) and nine as men (15.5$\%$). No one expressed a mismatch between sex at birth and gender self-identification, and no one selected the "other" option for their self-identified gender. The age of the participants ranged between 18 years old and 46 years old (\textit{M }= 21.64, \textit{SD }= 7.71) and they were all enrolled at Bishop’s University. Please refer to \hyperlink{A}{Appendix A} for a complete list of the different programs represented in this sample.
+
+\subsection*{Stimuli and task}
+\addcontentsline{toc}{subsection}{Stimuli and Task}
+\subsubsection*{Questionnaires} In this experiment, two different questionnaires were used: a short demographic questionnaire (see \hyperlink{B}{Appendix B}) and the German Extended Personal Attributes Questionnaire, a scale evaluating gender stereotype acceptance and beliefs (\cite{RungeFreyGollwitzerHelmreichSpence1981}). This questionnaire includes two subscales both comprising eight items, namely "expressivity" and "instrumentality" , which are intended to measure the degree to which someone can be classified according to stereotypically masculine (i.e., instrumentality subscale) or stereotypically feminine (i.e., expressivity subscale) adjectives. In its original form, this questionnaire was designed to assess self-ascribed masculinity or femininity, but for the purpose of this study, it was modified to assess one’s view and degree of endorsement of gender stereotypes in general (see \hyperlink{C}{Appendix C}). 
+
+\subsubsection*{Task} Participants completed a lexical decision task in which they had to decide whether a string of letters presented to them was a legitimate English word. Prime stimuli consisted of 15 photos: five containing alcohol bottles, five portraying weapons, and five showing non-alcoholic beverages (see Figure \ref{fig:fig1} for sample pictures). Target words were also divided into three categories, each containing 15 words (see \hyperlink{D}{Appendix D}  for the complete list): aggression-related words of a sexual nature (e.g., grope, rape), neutral words (e.g., observe, vanish), and nonword letter strings (e.g., wenct, jork). Each photo was paired with three aggressive words, three non-aggressive words, and three nonword letter strings for a total of 135 trials. For each trial, an image was presented for 300ms, followed by a 200ms interval prior to the showing of the target word, which stayed on the screen until the participants responded or up to three seconds. Participants had to indicate by pressing on a key whether the letters formed a legitimate English word or not. An interval of three seconds separated each trial.
+\begin{figure}[]
+	\centering
+	\includegraphics[width=\columnwidth, trim={15px 0 0 0}]{media/image1.png}
+	\caption{Alcohol-related picture examples (a, b), weapon-related picture examples (c, d), and neutral picture examples (e, f).}
+	\label{fig:fig1}
+\end{figure}
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Procedures}
+\subsubsection*{Procedures}
+Participants were asked to come to the Psychological Health and Well-Being lab on Bishop’s University campus for one session lasting between 30 minutes and 45 minutes. Following the procedure by \textcite{BartholowHeinz2006}, partial disclosure was used in that participants were told that the goal of the experiment was to measure the speed of language comprehension in the presence of distractive information (i.e., pictures). Once they had agreed to participate in the study, participants were asked to complete two different paper questionnaires, including a short demographic questionnaire and a questionnaire pertaining to gender stereotype acceptance levels, as mentioned earlier. Next, participants were asked to complete the main task of the study, namely the computer-based lexical decision task described above. After completion of the lexical decision task, debriefing took place: participants were informed of the reasons justifying the use of partial disclosure, and a new consent form was presented to them. 
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Results}
+\section*{Results} % \gotoreview
+\label{sec:results}
+
+Following the procedure used by \textcite{BartholowHeinz2006}, trials on which the participants’ response times (RTs) after the onset of the target word were smaller than 150ms or greater than 1,500ms were deleted and excluded from analyses (2.68$\%$  of all trials). Furthermore, response times to nonwords were not included in the analyses because they were only used in the study for methodological reasons and do not have any bearing on the present hypotheses being tested (\nptextcite[]{BartholowHeinz2006}). The data from the demographic questionnaire was not used in the analyses for different reasons. First, since there was no discrepancy between gender self-identification and sex at birth, no comparison was possible in this case. Next, given that there were only nine men in the study, the sample size was not large enough to run analyses based on gender differences. Finally, because every participant was enrolled at Bishop’s University, no comparison could have been done, and field of study was not used either considering that most participants were enrolled in psychology. 
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Gender Stereotypes Acceptance Levels}
+\subsection*{Gender stereotypes acceptance levels}
+It is likely that the original questionnaire and the way in which it should be coded were manipulated to the extent that the results were uninterpretable. For this reason, the results of the German Extended Personal Attributes Questionnaire are not reported. The associated design-related issues are further explored in the Limitations section.\footnote{ To obtain the complete set of results, go to \url{https://osf.io/hw9px/}.} 
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Response Times}
+\subsection*{Response times}
+Only the correct-response trials were kept for the response times analyses. That is, the trials where participants misidentified a nonword for a word, and vice-versa, were excluded from the present analyses (5.18$\%$  of the remaining trials). The mean response time values did not show any skewness and did not need to be corrected through a log transformation, contrary to what the two groups of authors had previously found (\nptextcite[]{BartholowHeinz2006}; \cite{SubraMullerBegueLBushmanDelmas2010}). The RTs were analyzed using a 3 (prime type: weapon-related pictures, alcohol-related pictures, neutral pictures) x 2 (target word type: aggression-related words, neutral words) repeated measures analysis of variance (ANOVA), and the sphericity assumption was not violated in any of the analyses; therefore, the original statistics are reported. Main effects of prime type and target word type are presented in Table \ref{tab:tab1}. The main effect of target word type was significant, \textit{F }(1, 55) = 148.589, \textit{p }< .001. More precisely, neutral words were detected faster (\textit{M }= 600ms, \textit{SE }= 13ms) than aggressive words (\textit{M }= 657ms, \textit{SE }= 13ms). This main effect goes against the expected results. Indeed, \textcite{BartholowHeinz2006} and \textcite{SubraMullerBegueLBushmanDelmas2010} had both found a main effect of word type as well, except that it went into the other direction, meaning that aggressive words were detected faster than neutral words. All the other main effects were not statistically significant and neither were the interactions. The expected main effect of prime type was not significant (\textit{F} (2, 110) = 1.186, \textit{p }= .309), and the interaction between prime type and target word type was also nonsignificant (\textit{F }(2, 110) = 0.025, \textit{p }= .975). Those results are contrary to the previous studies where the authors had found both stated analyses to be significant (\nptextcite[]{BartholowHeinz2006}, \cite{SubraMullerBegueLBushmanDelmas2010}).
+
+
+
+\begin{table}[h]\sffamily
+\begin{tabular}{@{}p{0.4\columnwidth}>{\centering\arraybackslash}p{0.2\columnwidth}>{\centering\arraybackslash}p{0.2\columnwidth}@{}}
+\toprule
+\textbf{Variable} & \textit{\textbf{M} (ms)} & \textit{\textbf{SE} (ms)} \\ \midrule
+\textit{Prime type}                &     &    \\
+\hspace{10pt}Weapon-related pictures   & 625 & 13 \\
+\hspace{10pt}Alcohol-related pictures  & 628 & 13 \\
+\hspace{10pt}Neutral pictures          & 633 & 13 \\
+\textit{Target word type}          &     &    \\
+\hspace{10pt}Sexually aggressive words & 657 & 13 \\
+\hspace{10pt}Neutral words             & 600 & 13 \\ \bottomrule
+\end{tabular}
+\caption{Main Effects of Prime Type and Target Type}
+\label{tab:tab1}
+\vspace{-1.7\baselineskip}
+\end{table}
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Accuracy}
+\subsection*{Accuracy}
+The analyses performed for the accuracy levels are identical to those performed for reaction times, except that the trials on which the participants made a wrong decision were not excluded. Mean accuracy values did not show any kurtosis and did not need to be corrected through an arcsine transformation, contrary to the main study being replicated (\nptextcite[]{BartholowHeinz2006}). The overall accuracy level was 95.08$\%$  (\textit{SD }= 4.62), but this variable was further analyzed and broken down through a 3 (prime type: weapon-related pictures, alcohol-related pictures, neutral pictures) x 2 (target word type: aggression-related words, neutral words) repeated measures ANOVA. Here again, the sphericity assumption was not violated. Replicating the results by \textcite{BartholowHeinz2006} and \textcite{SubraMullerBegueLBushmanDelmas2010}, the main effect of target word type was significant, \textit{F }(1, 55) = 45.591, \textit{p }< .001. More precisely, neutral words were detected with more accuracy (\textit{M }= .98, \textit{SE }= .003) than aggressive words (\textit{M }= .919, \textit{SE }= .010). All the other main effects were not statistically significant and neither were the interactions, which supports the hypothesis. The main effect of prime type was not significant (\textit{F} (2, 110) = 0.101, \textit{p }= .904), and the interaction between prime type and target word type also did not reach the significance level (\textit{F }(2, 110) = 0.088, \textit{p }= .916). Therefore, the results obtained in this study are not biased by a speed-accuracy trade-off.  
+
+\phantomsection
+\addcontentsline{toc}{section}{Discussion}
+\section*{Discussion} % \gotoreview
+\label{sec:discussion}
+
+Contrary to what \textcite{BartholowHeinz2006} and \textcite{SubraMullerBegueLBushmanDelmas2010} had previously reported, the results obtained in this study do not support the hypothesis that alcohol cues increase the accessibility of aggressive thoughts. Whereas the previous research had found that aggressive words were detected faster when preceded by alcohol or weapon pictures compared with neutral pictures, and that aggressive words were detected faster than neutral words, none of those results were replicated in the present study. Indeed, there was no significant difference in the speed of detection of aggressive words across the different types of pictures, and neutral words, as opposed to aggressive ones, were recognized faster by the participants. However, the minor finding by both groups of authors that neutral words were detected with more accuracy was replicated in this study. Finally, the unique hypothesis that was added to this study with regards to gender stereotype acceptance levels and their expected influence on response times could not be properly tested due to conceptual flaws. It is possible that major methodological and design-related limitations played a central role in this failure to replicate. Alternatively, on a conceptual level, there is perhaps a fundamental difference between "physically aggressive thoughts"  and "sexually aggressive thoughts", which could be reflected in the types of stimuli that elicit them. The methodological limitations and conceptual alternative will be addressed in turn. 
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Limitations}
+\subsection*{Limitations}
+The sample of participants in this study was problematic on many levels. First, when dealing with response times and differences in terms of milliseconds, it usually takes a large sample size to maximize statistical power. A sample size of 58 participants was probably not large enough to optimize statistical power, especially when compared to the 121 participants that were recruited by \textcite{BartholowHeinz2006}. The main author of this study initially aimed at recruiting 120 participants to mirror the number of participants tested in the project under replication, but did not achieve this goal due to time constraints. A stronger conceptual limitation, however, is that no power analysis was done prior to testing to determine the ideal sample size. Therefore, it is difficult to know how many participants would have been needed to optimize the likelihood of detecting an effect. In the future, it would be important to conduct power analyses to determine the optimal sample size, and to ensure that enough participants are recruited in time to meet that standard. 
+
+The participants in this study also greatly differed compared with those recruited by \textcite{BartholowHeinz2006}. Indeed, whereas they had recruited 60 men and 61 women, the present study included 49 women and 9 men. This difference in men-women proportion is problematic considering that past studies reporting a link between drinking and aggression have focused on the perpetration of aggressive acts by men, and not women (\cite{AbbeyClintonSherrodMcAuslanZawackiBuck2003}; 
+\cite{GidyczWarkentinOrchowski2007};
+\cite{JakupcakLisakRoemer2002};   
+ \nptextcite[]{LockeMahalik2005}). It is therefore plausible that a greater proportion of men in the current study would have led to different results. Thus, further replication attempts should ensure an equal representation of men and women in the sample.
+
+A further limitation of this study pertains to the word choice for the aggressive target word category. Finding salient aggressive words of a sexual nature proved to be challenging for many reasons. One of them is that most of the words that could be found through internet searches were expressions made up of more than one word and could not be used as word length has an impact on reaction times (\nptextcite[]{BartholowHeinz2006}). Additionally, the line between sexually aggressive words and sexual preferences is somewhat blurry (e.g., sodomy, choke). Therefore, some of the words used might not have been associated with violence for certain participants but instead with pleasure. Finally, the face value of some of the words in the aggressive category was doubtful, the best example being the use of the word "prey". Thus, it is likely that the results of this study might have been negatively impacted by the flawed choices for the aggressive target words. Future studies attempting to understand the relationship between sexual violence and alcohol should revisit the current list of sexually aggressive words. For example, a manipulation check could be done to test the face value of the words before including them in the study.
+
+The images used for the neutral primes and the alcohol-related primes bring another important limitation to the present study. Some of the images that were used contained words in them, such as "Corona" being written on the beer bottles, or again "Nesquik" as could be seen on a chocolate milk bottle. During the debriefing session, some participants reported finding it difficult and confusing to assess the letter strings when they were preceded by a photo on which there was some writing. Ensuring that the priming stimuli do not contain any confusing information such as writing is therefore an important consideration for future replications.
+
+Another point that was brought forward by some participants is that the neutral pictures may have been more effective if they had not been beverages. The argument is that it becomes too obvious that the study is researching the effects of alcohol as it is contrasted with non-alcoholic beverages, despite the fact that weapon pictures are also included. As mentioned earlier, the reason why \textcite{SubraMullerBegueLBushmanDelmas2010} chose non-alcoholic beverages pictures was to address the limitation in \textcite{BartholowHeinz2006}'s study. The conclusion from this is that neither plants nor non-alcoholic beverages are an optimal neutral category for this study and the ideal neutral prime has yet to be found. It would be recommended to conduct a norming study prior to the experiment to create a list of possible neutral visual stimuli. It is also possible that the issue does not reside in the nature of the neutral stimuli per se, but instead that not enough neutral stimuli were included, making the goal of the study obvious. Adding filler trials with random sets of pictures and words could help blind the participants to the purpose of the study. 
+
+Importantly, all these limitations do not offer a justification as to why neutral words were detected faster than aggressive words, contradicting the results obtained in both previous studies. A plausible explanation has to do with the timing of testing, which occurred close to the end of the academic semester at Bishop’s University. Indeed, "conventional wisdom" among researchers is that the quality of participants most likely declines towards the end of the semester (\cite{EbersoleAthertonBelangerSkulborstadAllenBanks2016}). The timing of testing could likely account not only for the low number of participants, but also for a poor quality of answers that further leads to poor results. However, \textcite{EbersoleAthertonBelangerSkulborstadAllenBanks2016} tested this hypothesis and found little evidence in its support. Although participants reported declining effort and attentional levels as well as an increase in stress as the semester unfolded, the researchers only found a weak and negligible effect of time of semester on task performance. Therefore, although it is plausible that testing participants towards the end of the semester had a negative impact on the quality of the results, it cannot fully explain the failure to replicate the main findings obtained by \textcite{BartholowHeinz2006}. Nonetheless, a solution to this problem would be to test participants throughout the semester, and to include a broader sample outside of the university population so that time of semester cannot be a problematic variable. 
+
+As was made clear in the introduction, there is a great need to investigate the relationship between the endorsement of gender stereotypes and acts of sexual violence as it relates to both men and women. However, the execution of the hypothesis in the current study was done inadequately, rendering the results uninterpretable. The German Extended Personal Attributes Questionnaire was used because it was the one most closely related to the hypothesis under investigation that was available to the author at that time. However, this questionnaire was originally designed to measure self-ascribed masculinity or femininity, and was thus modified to instead assess a general endorsement of gender stereotypes. What is problematic, is that the way in which this was done was completely arbitrary. In the original form of the questionnaire, participants are presented with 16 items representing masculinity and femininity and have to indicate where they think they fall on the scale with regards to each item (\cite{RungeFreyGollwitzerHelmreichSpence1981}). In this study, participants were asked to indicate to what extent they believe that the 16 characteristics are representative of men in general, and were then asked to fill out the questionnaire a second time, but this time by indicating to what extent they believe that the said characteristics are generally representative of women. The validity of those changes was not tested prior to the main experiment and was not based on any empirical evidence. This manipulation was so great that a new method of coding was necessary, which was also based on arbitrary grounds. A score of 3 (middle of a 5-point semantic differential scale) was given a value of 0, scores of 2 or 4 were given a value of 1, and scores of 4 or 5 (extremes of the scale) were given a value of 2. There is no reason to believe that this coding method was valid. Furthermore, participants were divided into 3 equal groups using the visual binning option in SPSS, reflecting their level of gender stereotypes acceptance: low, medium, high. Again, the decision to divide participants into three equal groups instead of using pre-established cut-offs did not have empirical support. A further problem with this questionnaire was a lack of variability in the answers as most participants tended to "sit on the fence", i.e., selecting a score of 3. Some items on the questionnaire are obvious at face value which may have made the participants answer in a socially desirable way, but there is no way of knowing whether social desirability was at play or if the results truly reflect the participants’ beliefs. Including a social desirability scale or other unrelated questions might have solved this problem, as well as using a 6-point Likert-type scale. Alternatively, the questionnaire could have been done online so as to measure reaction time to stereotype-congruent and stereotype-incongruent adjectives. Nonetheless, the bigger question remains as to whether the questionnaire was a valid and reliable measure to begin with. Two major lessons can be learned from this. First, when designing a study, methodological decisions should be empirically-based as opposed to arbitrary. Second, it is critical to ensure the validity of the measures to be used before conducting the main experiment. Future studies looking at the relationship between gender stereotypes and sexual violence would greatly benefit from first\ designing a sound psychometric questionnaire assessing general levels of gender stereotype endorsement.  
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Future Directions }
+\subsection*{Future directions }
+Replication attempts should target a larger and more representative sample, much like \textcite{SubraMullerBegueLBushmanDelmas2010} did, to ensure that the results not only represent the student body accurately, but that they can also be generalized to the population as a whole. Although the goal of this experiment was to study aggressive behaviors in university students, it is still important to look at the bigger picture and remember that undergraduate samples do not represent the general population. What seems to be most problematic here is the lack of male representation and the overrepresentation of psychology students. The composition of this sample is not representative of the general university population, even less so of the overall population, and although it might not entirely explain the failure to replicate past findings, it is important to keep this issue in mind when designing subsequent research protocols. Understandably, a sample of 22-year-olds who mostly major in psychology might not be optimal when studying abusive relationships with alcohol. 
+
+Other than methodological considerations, attention should also be paid to conceptual alternatives. As mentioned earlier, "physically aggressive thoughts" and "sexually aggressive thoughts" might be fundamentally different. To this point, \textcite{WhiteMcMullinSwartoutSechristGollehon2008} found that among over ten correlates of physical and sexual aggression, the only two that distinguished perpetrators of physical aggression from perpetrators of sexual aggression were motives for sex. More precisely, the participants in the sexual aggression only group scored significantly higher than those in the physical aggression only group on the hedonism and dominance motives for sex (\cite{WhiteMcMullinSwartoutSechristGollehon2008}). However, it is not clear from this study whether the participants had committed their aggressive acts under the influence of alcohol or not. Motive for sex is only one possible factor differentiating sexual aggression from physical aggression: Multiple studies have also investigated the predictors of sexual and physical aggression and victimization (\nptextcite[]{FelsonBurchfield2004};  \cite{GidyczWarkentinOrchowski2007};  \nptextcite[]{JamesYoung2013}; \cite{ZawackiAbbeyBuckMcAuslanClintonSherrodA2003}). However, there is no clear pattern emerging from the literature asserting whether there is a fundamental difference between physically and sexually aggressive thoughts, and if so, how it is characterized. An interesting avenue to resolve this question would be to measure whether there are brain activity differences when participants are processing scenarios involving sexual compared with physical aggression. 
+
+Furthermore, future studies would benefit from inquiring about participants’ nationalities to explore whether the patterns of responses differ across countries. This idea emerged during the debriefing sessions as multiple participants reported coming from Europe and being raised with an open-minded attitude towards alcohol, further saying that sexual violence was not necessarily associated with alcohol for them. The study by \textcite{SubraMullerBegueLBushmanDelmas2010} took place in France, but it was investigating the link between alcohol and physical violence as opposed to sexual violence. Therefore, it would be important to study participants representing a range of different nationalities and look at whether differences emerge in the pattern of responses when it comes to alcohol and sexual violence. Taking it a step further, it would be even more informative to include both sexually aggressive words and physically aggressive words in the same study to explore more directly the possible differences in the relationships between alcohol priming and various types of aggressive thoughts across nationalities.
+
+Another avenue that would be worth investigating is the relationship between aggressive thoughts and subsequent behavior. The studies by \textcite{BartholowHeinz2006} and \textcite{SubraMullerBegueLBushmanDelmas2010} point to the idea that alcohol-related cues can increase the accessibility of aggressive thoughts. How does this translate into behavior, if it does so at all? As discussed earlier, the semantic network model of memory posits that concepts that are similar in meaning or that co-occur are activated concurrently in the semantic memory and develop strong associations (\cite{AndersonJrJBartholow1998}). Therefore, when one concept is activated, it produces a spreading activation process through which other related concepts become more accessible, ultimately increasing the likelihood that those concepts will have an impact of subsequent behavior (\nptextcite[]{BartholowHeinz2006}). \textcite{BartholowHeinz2006} did follow up on their first experiment with a second one, not under replication here, which aimed at investigating the effects of this increase in aggressive thoughts. However, the results only showed that the increase was related to more aggressive interpretations of the behavior of others, and did not assess whether the participants would also be more likely to commit aggressive acts themselves (\cite{SubraMullerBegueLBushmanDelmas2010}). Other studies have reported a link between the activation of a specific attitude and subsequent behavior. For example, \textcite{BarghChenBurrows1996} found that participants who were primed with an elderly stereotype took more time to walk out of the experiment center than did control participants. The idea was that their attitude towards older individuals (i.e., that they are slow walkers) influenced their behavior. Similarly, other researchers found that priming participants with the stereotype of "professor" enhanced their performance on a general knowledge test, whereas priming the trait "stupid" reduced their performance on said test (\nptextcite[]{DijksterhuisVanKnippenberg1998}). Although these studies have their own limitations, the results suggest that when an attitude toward an object is activated, it can influence behavior. The ultimate goal would be to establish a direct link between the activation of an attitude towards alcohol and aggressive thoughts, and a subsequent increase in aggressive behaviors. How to conduct this kind of experiment in an ethical manner, however, remains to be answered.
+
+
+\phantomsection
+\addcontentsline{toc}{section}{Conclusion}
+\section*{Conclusion} % \gotoreview
+\label{sec:conclusion}
+
+This current research project was undertaken to extend the literature by replicating the evidence that simple exposure to alcohol stimuli without actual consumption or belief that consumption has occurred can increase aggressive thoughts. The initial intention of this project was always to complete a replication of the first of two experiments by \textcite{BartholowHeinz2006} with new data, which implies keeping the same protocol as the original study while collecting new data (\cite{NWO}). Dr. Bartholow generously shared the original target word stimuli and a description of the images he employed, allowing highly similar material to be used in this study. However, since different aggressive words were used and a variable (gender stereotypes acceptance levels) was added, it can be argued that the current research project would instead fall under the category of replication with the same research question, which is defined by new data collection and a new research protocol with the same research question (\cite{NWO}). I disagree; the initial research protocol was followed closely and the research question remained unchanged. The added questionnaires can be regarded as an additional investigation that could be part of a second experiment altogether; remove those questionnaires, and it becomes clear that the original research protocol was respected, even if the nature of the aggressive words was altered.
+
+This replication attempt suffered from many methodological and design-related issues. For example, the sample size was most likely too small, although no proper power analysis was run, and the sample further lacked generalizability. The low number of participants might be explained by the timing of testing, but it remains unclear why so few men participated. Another important impediment to replication relates to the alteration of the aggressive target words since it is doubtful whether the new sexually aggressive words were of a similar salience as the original ones. In other words, the sexually aggressive words might not have been as centrally relevant to the concept of sexual aggression as were the aggressive words employed by \textcite{BartholowHeinz2006} to the notion of physical aggression. Similarly, the validity of the neutral category of pictures employed remains unclear. Finally, the execution of the hypothesis regarding gender stereotype levels was completely arbitrary and the results uninterpretable.
+
+In conclusion, although the present study failed to replicate the previous finding that alcohol-related cues increase the accessibility of aggressive thoughts (\nptextcite[]{BartholowHeinz2006}; \cite{SubraMullerBegueLBushmanDelmas2010}), this does not mean that the effect is non-existent. Rather, it is probable that the methodology employed in this study was significantly flawed and reduced the likelihood of finding significant differences in the variables. This line of research should be further pursued as it bears significant importance on today’s society. If such results were to be replicated and empirically grounded, it would open new avenues for interventions aimed at decreasing the number of violent incidents that result from alcohol consumption. If cognitions related to alcohol truly make sexually aggressive thoughts more readily accessible, social and educational reforms could be undertaken to raise awareness and work on changing these automatic associations. Finally, if the endorsement of gender stereotypes proves to be a moderator in this association, more comprehensive interventions could be targeted at individuals who hold strong gender stereotypes.
+
+\setlength{\bibhang}{\parindent}
+\nocite{*} 
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\printbibliography
+
+% \newpage
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Peer Reviews}
+% \section*{Peer Reviews}
+% \label{sec:reviews}
+
+% \begin{reviewend}
+%     \begin{enumerate}[label=\textbf{\arabic*}), start=0]
+%     \item \textbf{General comments}
+%         \begin{itemize}
+%             \item The author did a good job addressing each comment; however, some issues remain with the current manuscript. 
+%         \end{itemize}
+
+%     \item \hyperref[sec:take-home]{Take-home}
+%         \begin{enumerate}
+%             \item This paragraph needs to go beyond the fact that the authors tried to replicate and failed and then list the limitations of the study. There was a very interesting and valid theoretical motivation to the current study: choice of images and examining gender. This needs to come up in the take-home. Additionally, the authors should include their best explanation as to why they did not find the expected results. A good possibility is that suggested by reviewer 2: `` sexually aggressive thoughts might be fundamentally different than physically aggressive thoughts''. 
+%         \end{enumerate}
+
+
+%     \item \hyperref[sec:methods]{Methods}
+%         \begin{enumerate}
+%             \item Adding all majors in text is indeed quite overwhelming given how many different majors there are. The author should add all information on majors (including psychology) in an appendix instead. 
+
+%             \item ``However, it is likely that the original questionnaire and the way in which it should be coded were manipulated to the extent that the results were uninterpretable. For this reason, the results of the German Extended Personal Attributes Questionnaire are not reported. The related design-related issues are further explored in the Limitations section.''   Given you are still only describing the methods, I would not include this here. I would stick to ending the description of the questionnaire with ``...gender stereotypes in general (see Appendix B)''. The results for this questionnaire should still be in the result section, but this comment could be moved there.
+
+%             \item From the previous revision: Some of the statistical analyses seem to have been done incorrectly. If the authors found no significant 3-way interaction effect, further 2-way interactions should not be analysed. This is to be removed from the results and discussion (``the two-way interactions between prime type and GSAL and between target word type and GSAL''). ``All results pertaining to GSAL have been removed for reasons discussed earlier.''
+            
+%             I would keep the GSAL in your manuscript for reasons of keeping science transparent with the results of all measures. But make sure the statistics are done correctly.
+%             \begin{enumerate}
+%                 \item Keeping the GSAL results in will consequently mean the following comments should be addressed: 
+%                 \begin{enumerate}
+%                     \item `Gender Stereotype Acceptance Levels' section should go before the Response time
+%                     \item No need to include the majors in the gender for stereotype acceptance levels section [on p.16].
+%                 \end{enumerate}
+%             \end{enumerate}
+%         \end{enumerate}
+
+%     \item \hyperref[sec:discussion]{Discussion}
+%         \begin{enumerate}
+%             \item From the previous revision: ``There needs to be much greater emphasis put on explaining or attempting to find a plausible explanation for the null findings in the first paragraph in the discussion.''
+            
+%             What you added are limitations but not an explanation as to why (theoretically or empirically based) your results did not replicate or why you did not find what you thought you might. 
+%             \begin{itemize}
+%                 \item The suggestion by reviewer 2 on the processing being different for sexual images might be true! Is there any empirical work demonstrating that physical violence and sexual violence are processes differently? Some kind of evidence like this if any, would really drive the point home.
+%                 \item Remove the part added.
+%             \end{itemize}
+%             \item Instead of stating that no power analysis was done as a limitation, simply do one and report it here to show the reader the sample you would have needed given you had more time to complete the study when it was carried out. 
+%             \item Concerning the lack of generalizabiltiy limitation, separate out the gender imbalance (stays in the limitations) from the lack of generalizability, reframed, as a future direction later in the discussion.
+%             \item Your future directions are excellent. Try to relate them to the mechanism you think images may lead to aggressive behavior, this will make your future directions grounded, and seem more valid.
+%         \end{enumerate}
+%     \end{enumerate}
+    
+%     \tcbsubtitle{Editor}
+%     \begin{itemize}
+%     \item We agree with reviewer 1 on everything but two points: 
+%         \begin{enumerate}
+%             \item First, looking at pairwise comparisons after a non-significant omnibus F-test is not statistically inappropriate. This is a common statistical misconception (see Huck, Statistical Misconceptions, 2008, p. 211-214). Rather, the author (you) needs to motivate why such pairwise comparisons are of interest above and beyond the omnibus test. This can be done in a short sentence. 
+%             \item Second, reviewer 1 suggests a post-hoc (aka observed) power analysis. This is a statistical bad practice and usually is uninformative (see Heonig & Heisey, 2001). We would recommend not doing this and keeping the lack of a priori power analysis as a limitation. If the author (you) wishes to address the reviewers comments, we would recommend citing the above article as a reason not to do this follow-up power analysis. 
+%         \end{enumerate}
+%     \end{itemize}
+% \end{reviewend}
+
+% \newpage
+% \begin{reviewend}
+%     \begin{enumerate}[label=\textbf{\arabic*}), start=0]
+%         \item \textbf{General comments}
+%             \begin{itemize}
+%                 \item With a few tweaks regarding the above comments, I think this paper is ready for publication. There were some thoughtful additions given the first round of comments and the paper flows well.
+%                 \item Go back and re-read the transitions between paragraphs to ensure smooth flow throughout the paper. I put in a comment about this in the document itself.
+%                 \item Please make sure not to misspell Bartholow in the final draft; I found two different misspellings of the name in this one.
+%             \end{itemize}
+%         \item \hyperref[sec:introduction]{Introduction}
+%             \begin{itemize}
+%                 \item I want to hear your voice more in the introduction, a little more commentary of previous findings and how they fit together to give a \textit{coherent} picture of the current literature. Right now you have a laundry list of findings.
+%                 \item The use of a non-academic article as a reference detracted from the strength of the paper. I would recommend sticking purely to academic sources (ex. Hignett 2018).
+%             \end{itemize}
+            
+%         \item \hyperref[sec:discussion]{Discussion}
+%             \begin{itemize}
+%                 \item Consider doing a post-hoc power analysis to back up the claim that the sample size was too small. This comes up numerous times throughout the paper.
+%             \end{itemize}
+            
+%         \item \hyperref[sec:conclusion]{Conclusion}
+%             \begin{itemize}
+%                 \item I think the final sweeping statement detracts from the strength of the paper. Consider working out from specific consequences to broader consequences of this research, bring in a more thoughtful description of the potential effects of the research. This closing line is going to leave a taste in the reader's mouth, let's make it a good one!
+%             \end{itemize}
+%     \end{enumerate}
+%     \tcbsubtitle{Editor}
+%     \begin{itemize}
+%         \item We agree with reviewer 2 on everything but the need for a post-hoc power analysis. See our second point \hyperref[sec:reviews]{above}. 
+%     \end{itemize}
+% \end{reviewend}
+
+\newpage
+%\onecolumn
+\phantomsection
+\addcontentsline{toc}{Section}{Appendices}
+\section*{Appendices}
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%
+
+\subsection*{\hypertarget{A}{Appendix A}} 
+\addcontentsline{toc}{subsection}{Appendix A}
+%%%%%%%%%%%%%%%%%%%% Table No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[h] \sffamily
+\begin{tabular}{@{}p{0.6\columnwidth}p{0.25\columnwidth}@{}}
+\toprule
+\textbf{Field of study} & \textit{\textbf{n}} \\ \midrule
+Psychology           & 38 \\
+Biology              & 4  \\
+Languages            & 3  \\
+Education            & 2  \\
+Sociology            & 2  \\
+Physics              & 1  \\
+Politic Sciences     & 1  \\ 
+Biochemistry         & 1  \\
+History              & 1  \\
+English Literature   & 1  \\
+Mathematics          & 1  \\
+Finance              & 1  \\
+Arts Administrations & 1  \\
+Sports Studies       & 1  \\
+\bottomrule
+\end{tabular}
+\caption{Field of study -- Complete list}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 2 ends here %%%%%%%%%%%%%%%%%%%%
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Appendix B}
+\subsection*{\hypertarget{B}{Appendix B}} 
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth, trim={0 0 150px 0}, clip]{media/image2.png}
+    \caption{Demographic Questionairre}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{subsection}{Appendix C}
+\subsection*{\hypertarget{C}{Appendix C}}
+
+\textbf{German Extended Personal Attributes Questionnaire}
+
+
+In general, I see \textbf{MEN} as being:\vspace{-0.7\baselineskip}
+%%%%%%%%%%%%%%%%%%%% Table No: 3 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begingroup
+%\setlength\extrarowheight{3pt}
+\renewcommand{\arraystretch}{{0.1}}
+\begin{table}[h] \sffamily
+\begin{tabularx}{\columnwidth}{@{}p{0.3\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.4\columnwidth}@{}}
+\hline
+Not independent & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very independent \\
+Very passive                    & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very active                   \\
+Not competitive                 & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very competitive              \\
+Decisive                        & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Not decisive                  \\
+Gives up easily                 & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Never gives up                \\
+Not self-confident              & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Self-confident                \\
+Feels inferior                  & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Feels superior                \\
+Doesn’t stand up under pressure & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Stands up under pressure      \\
+Not emotional                   & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very emotional                \\
+Devotes self to others          & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Doesn’t devote self to others \\
+Very rough                      & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very gentle                   \\
+Not helpful                     & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very helpful                  \\
+Very unkind                     & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very kind                     \\
+Not aware of feelings           & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Aware of feelings             \\
+Not understanding               & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very understanding            \\
+Cold                            & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Warm                         
+\end{tabularx}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 3 ends here %%%%%%%%%%%%%%%%%%%%
+
+In general, I see \textbf{WOMEN} as being:\vspace{-.7\baselineskip}
+%%%%%%%%%%%%%%%%%%%% Table No: 4 starts here %%%%%%%%%%%%%%%%%%%
+%\setlength\extrarowheight{3pt}
+\begin{table}[h!] \sffamily
+\begin{tabularx}{\columnwidth}{@{}p{0.3\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.0001\columnwidth}p{0.4\columnwidth}@{}}
+\hline
+Not independent & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very independent \\
+Very passive                    & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very active                   \\
+Not competitive                 & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very competitive              \\
+Decisive                        & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Not decisive                  \\
+Gives up easily                 & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Never gives up                \\
+Not self-confident              & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Self-confident                \\
+Feels inferior                  & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Feels superior                \\
+Doesn’t stand up under pressure & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Stands up under pressure      \\
+Not emotional                   & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very emotional                \\
+Devotes self to others          & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Doesn’t devote self to others \\
+Very rough                      & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very gentle                   \\
+Not helpful                     & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very helpful                  \\
+Very unkind                     & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very kind                     \\
+Not aware of feelings           & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Aware of feelings             \\
+Not understanding               & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Very understanding            \\
+Cold                            & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & Warm                         
+\end{tabularx}
+\end{table}
+\endgroup
+%%%%%%%%%%%%%%%%%%%% Table No: 4 ends here %%%%%%%%%%%%%%%%%%%%
+\newpage
+\phantomsection
+\addcontentsline{toc}{subsection}{Appendix D}
+\subsection*{\hypertarget{D}{Appendix D}}
+
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 5 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[h]\sffamily
+\begin{tabular}{p{0.9in}p{0.9in}p{0.9in}}
+%row no:1
+\multicolumn{1}{p{0.9in}}{Neutral Words} & 
+\multicolumn{1}{p{0.9in}}{Aggressive Words} & 
+\multicolumn{1}{p{0.9in}}{Nonwords} \\
+\hhline{~~~}
+%row no:2
+\multicolumn{1}{p{0.9in}}{Glide \newline Suggest \newline  Observe\newline  Vanish\newline  Move\newline  Narrate\newline  Imagine\newline  Ignored\newline  Improve\newline  Joked\newline  Read\newline  Leave\newline  Listen\newline  Transfer\newline  Reported} & 
+\multicolumn{1}{p{0.9in}}{Touching\newline Incest\newline  Coercion\newline  Molest\newline  Sodomy\newline  Harassment\newline  Grope\newline  Rape\newline  Prey\newline  Perversion\newline  Abuse\newline  Violated\newline  Choke\newline  Stalking\newline   Roofies} & 
+\multicolumn{1}{p{0.9in}}{Sarf\newline  Philst\newline  Wenct\newline  Jork\newline  Atand\newline  Kesh\newline  Morpe\newline  Farn\newline  Lerf\newline  Chib\newline  Dephs\newline  Anage\newline  Steay\newline  Omoga\newline  Benct} \\
+\hhline{~~~}
+
+\end{tabular}
+\caption{Target Word Type – Complete List}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 5 ends here %%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}

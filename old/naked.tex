@@ -1,0 +1,200 @@
+% Document class options:
+% =======================
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+%
+% Using other bibliography styles:
+% =======================
+% Not supported at the moment
+\documentclass[twocolumn, serif]{jote-article}
+
+
+%%% Add the bibliography, make sure it's in the same directory
+\addbibresource{example.bib}
+
+%%% Add additional packages here if required. Usually not needed, except when doing things with figures and tables, god help you then
+
+% This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum. OR use [1-5] to generate the first five, etc.
+\usepackage{lipsum}
+
+
+% Fill in the type of article here. Doesn't matter if capitalized. 
+%%% Options
+% Empirical
+% Reflection
+% Meta-Research
+% Rejected Grant Application
+% Editorial
+
+%%% TODO: Make this a 1-5 option scale to reduce the chance of mistyping
+\papertype{Empirical}
+
+% Enter the title, in Title Case Please
+% Try to keep it under 3 lines
+\title{Oh No! My Experiment Went Kaput!}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Author One}
+%Fill it in again for the PDF metadata. Lame workaround but it works
+\authorone{Author One}
+
+\author[1, 2]{Author Two}
+\authortwo{Author Two}
+
+%List the contribution effort here, they will be listed at the end of the page
+\contributions{Author One did all the work, while Author Two was just slacking.}
+%List the acknowledgments. If there is no companion piece, this is listed below the author info
+\acknowledgments{Author Two would like to thank Author One for doing all the work while they could slack off.}
+%List possible conflict of interest. Will default to saying no conflict exists.
+\interests{Author One was paid for by Big Failed Experiment}
+%List funding
+\funding{}
+% Include full affiliation details for all authors
+\affil[1]{Department of Error, University of Trial, USA USA USA}
+\affil[2]{The streets}
+
+% List the correspondence email of the main correspondent
+\corraddress{Author One, Paradise City}
+\corremail{\href{mailto:author@one.com}{author@one.com}}
+
+% Optionally list the present address of one of the authors
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+% Fill in the DOI of the paper
+
+% Always starts with "10.36850/" and is suffixed with one of the following plus a number
+% e  : empirical
+% r  : reflection
+% mr : meta-research
+% rga: rejected grant application
+% ed : editorial
+\paperdoi{10.36850/eX}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Name et al.}
+
+% The name of the Journal
+\jname{Journal of Trial and Error}
+
+% The year that the article is published
+\jyear{2020}
+
+%The Volume Number
+%\jvolume{Fall}
+
+%The website that's listed in the bottom right
+\jwebsite{https://www.jtrialerror.com}
+
+%%% Only \paperpublished is necessary, any combination of the other two is possible
+
+%When the paper was received
+\paperreceived{1 January, 2020}
+% When the paper was accepted
+\paperaccepted{2 January, 2020}
+% When the paper will be published
+\paperpublished{3 January, 2020}
+% When the paper is published but in YYYY-MM-DD format, for the crossmark button
+\paperpublisheddate{2020-01-03}
+
+% The pages of the article, comment out if rolling article
+%\jpages{1-12}
+% Link to the logo, might be redundant
+\jlogo{media/jote_logo_full.png}
+
+% Fill something here if this is a rolling/online first article, will make ROLLING ARTICLE show up on the first page
+\rolling{YES}
+
+% Sets the paragraph skip to be zero, this should be in the CLS
+\setlength{\parskip}{0pt}
+
+%%% Companion Piece
+
+% Reflection and Empirical articles have each other as companion pieces. Add the DOI, Title, and Abstract of the respective Companion piece here
+\companionurl{https://doi.org/10.36850/rX}
+\companiontitle{Author Three (2020)\newline Very Serious Reflection}
+\companionabstract{\noindent \lipsum[6]}
+
+%%% Abstract
+
+% These two set the height and width of the abstract. There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
+% Higher number means skinnier abstract
+\heightabstract{45mm}
+\widthaffil{40mm}
+%Enter something here in order for the abstract to disappear. Be sure to also delete the abstract 
+\noabstract{}
+% Fill in the keywords that will appear in the abstract, max 7
+\keywordsabstract{a, b, c, d, e, f, g}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Document Starts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
+\begin{frontmatter}
+\maketitle
+%Type your abstract between these things. Max 250 words. Be sure to include the \noindent, looks bad otherwise
+\begin{abstract}
+    faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc mattis enim ut tellus elementum sagittis vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet
+\end{abstract}
+\end{frontmatter}
+
+%% Purpose
+
+%Be sure to add the phantomsection and the addcontentsline. If you want no numbering of the sections but do want bookmarks, then you need them.
+\phantomsection
+\addcontentsline{toc}{section}{Purpose}
+\section*{Purpose}
+\lipsum[2]
+
+%% Take Home Message
+
+\phantomsection
+\addcontentsline{toc}{section}{Take-home Message}
+\lipsum[3]
+
+%% Normal Paper Stuff
+
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+\lipsum[4]
+
+%% Subsection
+
+\phantomsection
+\addcontentsline{toc}{subsection}{Subsection}
+\subsection*{Subsection}
+\lipsum[4]
+
+%%% Citations
+
+
+
+% Citations are handled by .bib files, which can easily be generated by Zotero, EndRote, Refwords, Mendeley etc. 
+
+
+%%% Bibliography
+
+% This just outputs all the references regardless of whether they're actually added in the text or not
+\nocite{*}
+
+% This sets the indent of the references to be nice, should be in the .cls
+\setlength{\bibhang}{\parindent}
+
+\phantomsection \addcontentsline{toc}{section}{References} 
+% Prints the bibliography, duh. But also appends the License, Contributions, Acknowledgments, and Conflicts of Interests
+\printbibliography
+
+
+
+\end{document}

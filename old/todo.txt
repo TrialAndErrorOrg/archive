@@ -1,0 +1,168 @@
+
+% Document class options:
+% =======================
+% blind: Anonymise all author, affiliation, correspondence
+%        and funding information.
+%
+% lineno: Adds line numbers.
+%
+% serif: Sets the body font to be serif. 
+%
+% twocolumn: Sets the body text in two-column layout. 
+% 
+% num-refs: Uses numerical citation and references style 
+%           (Vancouver-authoryear).
+%
+% alpha-refs: Uses author-year citation and references style
+%             (rss).
+%
+% Using other bibliography styles:
+% =======================
+%
+% To specify a different bibiography style
+%
+% 1) Do not use either num-refs or alpha-refs in documentclass.
+% 2) Load natbib package with the options set as needed.
+% 3) Use the \bibliographystyle command to specify the style
+% 
+% Included NJD styles are: 
+%   WileyNJD-ACS
+%   WileyNJD-AMA
+%   WileyNJD-AMS
+%   WileyNJD-APA
+%   WileyNJD-Harvard
+%   WileyNJD-VANCOUVER
+%
+% or you may upload an alternative .bst file 
+% (if requested by the journal).
+%
+% Examples:
+% =======================
+%% Example: Using numerical, sort-by-authors citations.
+\documentclass[twocolumn, serif]{jote-article}
+
+
+
+\usepackage[backend = biber, style=apa]{biblatex}
+\addbibresource{main.bib}
+
+
+
+%% Example: Using author-year citations and anonymising submission
+% \documentclass[blind,alpha-refs]{wiley-article}
+
+%% Example: Using unsrtnat for numerical, in-sequence citations
+% \documentclass{wiley-article}
+% \usepackage[numbers]{natbib}
+% \bibliographystyle{unsrtnat}
+
+%% Example: Using WileyNJD-AMA reference style and superscript
+%%          citations, two-column and serif fonts for AIChE
+% \documentclass[serif,twocolumn,lineno]{wiley-article}
+% \usepackage[super]{natbib}
+% \bibliographystyle{WileyNJD-AMA}
+% \makeatletter
+% \renewcommand{\@biblabel}[1]{#1.}
+% \makeatother
+
+% Add additional packages here if required
+\usepackage{siunitx}
+
+
+\usepackage{float}
+\usepackage{bookmark}
+\usepackage{lipsum}
+% Update article type if known
+% Include section in journal if known, otherwise delete
+\papertype{Editorial}
+
+\title{Bridging the Gap Between What Is Researched and What Is Published}
+
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
+
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Sean Devine}
+\authorone{S. Devine et al.}
+
+\author[2]{Max Bautista Perpinya}
+\author[3,4]{Valentine Delrue}
+\author[2,5]{Stefan Gaillard}
+\author[2]{Thomas F. K. Jorna}
+\author[5,6]{Martijn van der Meer}
+\author[7]{Lottricia Millett}
+\author[8]{Chelsea Pozzebon}
+\author[9]{Jobke Visser}
+
+\contributions{Sean Devine is the lead author. All other authors contributed equally.}
+%\contrib[\authfn{1}]{Sean Devine is the lead author. All other authors contributed equally.}
+
+% Include full affiliation details for all authors
+\affil[1]{Department of Psychology, McGill University, Montreal, Canada }
+\affil[2]{Descartes Centre for the History and Philosophy of the Sciences and the Humanities, Utrecht University, Utrecht, Netherlands }
+\affil[3]{Department of History, Ghent University, Ghent, Belgium }
+\affil[4]{Department of Philosophy and Cultural Heritage at Ca' Foscari, Venice, Italy }
+\affil[5]{Open Science Community Utrecht, Utrecht University, Utrecht, Netherlands }
+\affil[6]{Tilburg School of Humanities and Digital Sciences, Tilburg University, Netherlands.}
+
+\affil[7]{School of English, Drama and Creative Studies, University of Birmingham, Birmingham, United Kingdom }
+\affil[8]{Faculty of Medicine and Health Sciences, McGill University, Montreal, Canada }
+\affil[9]{Department of Philosophy \& Religious Studies, Utrecht University, Utrecht, Netherlands }
+
+\corraddress{JOTE Team (?), KvK address}
+\corremail{\href{mailto:????}{????@jtrialerror.com}}
+
+%\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
+
+\paperdoi{10.36850/ed1}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Devine et al.}
+
+\jname{Journal of Trial and Error}
+\jyear{2020}
+%\jvolume{Fall}
+\jwebsite{https://www.jtrialerror.com}
+%\paperrevised{7 September, 2020}
+%\paperreceived{as}
+\paperpublished{30 November, 2020}
+\paperpublisheddate{2020-11-26}
+
+
+
+%\jpages{1-12}
+\jlogo{media/jote_logo_full.png}
+
+
+\rolling{YES}
+
+
+\heightabstract{65mm}
+\widthaffil{60mm}
+
+\setlength{\parskip}{0pt}
+
+%Enter something here in order for the abstract to dissapear
+\noabstract{Yes}
+
+%\keywordsabstract{epistemic by-products, publication bias, replication geneticization, scientific pluralism}
+
+\begin{document}
+\begin{frontmatter}
+\maketitle
+
+\end{frontmatter}
+
+\phantomsection
+\addcontentsline{\section}{}{}
+\section*{The Journal of Trial and Error}
+
+\nocite{*}
+\setlength{\bibhang}{\parindent}
+\phantomsection \addcontentsline{toc}{section}{References} 
+\printbibliography
+
+
+
+\end{document}
