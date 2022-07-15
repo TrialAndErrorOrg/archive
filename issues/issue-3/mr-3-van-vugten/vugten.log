@@ -1,0 +1,2780 @@
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Homebrew)  (format=lualatex 2022.3.21)  15 JUL 2022 17:56
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten
+(/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten.tex
+LaTeX2e <2021-11-15> patch level 1
+Lua module: luaotfload 2022-03-18 3.21 Lua based OpenType font support
+Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended collection.
+luaotfload | conf : Root cache directory is "/opt/homebrew/Cellar/texlive/20220321/share/texmf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2022-02-24.lua" from kpse-resolved path "/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/luatex/luaotfload/fontloader-2022-02-24.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.119
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "/opt/homebrew/Cellar/texlive/20220321/share/texmf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'. L3 programming layer <2022-02-24>
+Inserting `tracingstacklevels' at position 1 in `input_level_string'. (/Users/thomas/texmf/tex/latex/jote-new-article.cls
+Document Class: jote-new-article 2022/03/01, v2.0
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/extsizes/size9.clo
+File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /opt/homebrew/Cellar/texlive/20220321/share/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen137
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrextend.sty
+Package: scrextend 2021/11/13 v3.35 KOMA-Script package (extend other classes with features of KOMA-Script classes)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
+))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
+))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/trace.sty
+Package: trace 2021/04/18 v1.1f trace LaTeX code
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontspec/fontspec.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2022-02-07 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count191
+\l__pdf_internal_box=\box50
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count192
+\l__fontspec_language_int=\count193
+\l__fontspec_strnum_int=\count194
+\l__fontspec_tmp_int=\count195
+\l__fontspec_tmpa_int=\count196
+\l__fontspec_tmpb_int=\count197
+\l__fontspec_tmpc_int=\count198
+\l__fontspec_em_int=\count199
+\l__fontspec_emdef_int=\count266
+\l__fontspec_strong_int=\count267
+\l__fontspec_strongdef_int=\count268
+\l__fontspec_tmpa_dim=\dimen139
+\l__fontspec_tmpb_dim=\dimen140
+\l__fontspec_tmpc_dim=\dimen141
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen142
+\lightrulewidth=\dimen143
+\cmidrulewidth=\dimen144
+\belowrulesep=\dimen145
+\belowbottomsep=\dimen146
+\aboverulesep=\dimen147
+\abovetopsep=\dimen148
+\cmidrulesep=\dimen149
+\cmidrulekern=\dimen150
+\defaultaddspace=\dimen151
+\@cmidla=\count269
+\@cmidlb=\count270
+\@aboverulesep=\dimen152
+\@belowrulesep=\dimen153
+\@thisruleclass=\count271
+\@lastruleclass=\count272
+\@thisrulewidth=\dimen154
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 227.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen155
+\ar@mcellbox=\box51
+\extrarowheight=\dimen156
+\NC@list=\toks17
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box52
+)
+\everycr=\toks18
+\minrowclearance=\skip51
+)
+\rownum=\count273
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count274
+\calc@Bcount=\count275
+\calc@Adimen=\dimen157
+\calc@Bdimen=\dimen158
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count276
+\calc@Cskip=\skip54
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen159
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen160
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count277
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count278
+\leftroot@=\count279
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count280
+\DOTSCASE@=\count281
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen161
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count282
+\c@MaxMatrixCols=\count283
+\dotsspace@=\muskip16
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
+\tag@help=\toks20
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
+\andhelp@=\toks21
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks22
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+\g_MT_multlinerow_int=\count289
+\l_MT_multwidth_dim=\dimen168
+\origjot=\skip58
+\l_MT_shortvdotswithinadjustabove_dim=\dimen169
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen170
+\l_MT_above_intertext_sep=\dimen171
+\l_MT_below_intertext_sep=\dimen172
+\l_MT_above_shortintertext_sep=\dimen173
+\l_MT_below_shortintertext_sep=\dimen174
+\xmathstrut@box=\box55
+\xmathstrut@dim=\dimen175
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+)
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen178
+\TX@old@table=\dimen179
+\TX@old@col=\dimen180
+\TX@target=\dimen181
+\TX@delta=\dimen182
+\TX@cols=\count290
+\TX@ftn=\toks24
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/dashrule/dashrule.sty
+Package: dashrule 2013/03/28 v1.3 Dashed rules
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)
+\c@hdr@segments=\count291
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2021/12/15 v3.1 ragged2e Package
+\CenteringLeftskip=\skip59
+\RaggedLeftLeftskip=\skip60
+\RaggedRightLeftskip=\skip61
+\CenteringRightskip=\skip62
+\RaggedLeftRightskip=\skip63
+\RaggedRightRightskip=\skip64
+\CenteringParfillskip=\skip65
+\RaggedLeftParfillskip=\skip66
+\RaggedRightParfillskip=\skip67
+\JustifyingParfillskip=\skip68
+\CenteringParindent=\skip69
+\RaggedLeftParindent=\skip70
+\RaggedRightParindent=\skip71
+\JustifyingParindent=\skip72
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip73
+\@affilsep=\skip74
+\c@Maxaffil=\count292
+\c@authors=\count293
+\c@affil=\count294
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks25
+\SOUL@lasttoken=\toks26
+\SOUL@cmds=\toks27
+\SOUL@buffer=\toks28
+\SOUL@token=\toks29
+\SOUL@spaceskip=\skip75
+\SOUL@ttwidth=\dimen183
+\SOUL@uldp=\dimen184
+\SOUL@ulht=\dimen185
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks30
+\AP@partial=\box56
+\AP@footins=\box57
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks31
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen186
+\Hy@linkcounter=\count296
+\Hy@pagecounter=\count297
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count298
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count299
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen187
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count300
+\Field@Width=\dimen188
+\Fld@charsize=\dimen189
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count301
+\c@Item=\count302
+\c@Hfootnote=\count303
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2022-02-21 v7.00n Hyperref driver for luaTeX
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count304
+\c@bookmark@seq@number=\count305
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip76
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/paracol/paracol.sty
+Package: paracol 2018/12/31 v1.35 
+\pcol@currcol=\count306
+\pcol@nextcol=\count307
+\pcol@ncol=\count308
+\pcol@ncolleft=\count309
+\pcol@page=\count310
+\pcol@basepage=\count311
+\pcol@toppage=\count312
+\pcol@footnotebase=\count313
+\pcol@nfootnotes=\count314
+\pcol@mcid=\count315
+\pcol@prevdepth=\dimen190
+\pcol@colht=\dimen191
+\pcol@textfloatsep=\dimen192
+\pcol@lrmargin=\dimen193
+\pagerim=\dimen194
+\pcol@topskip=\skip77
+\belowfootnoteskip=\skip78
+\pcol@topfnotes=\box58
+\pcol@prespan=\box59
+\pcol@rightpage=\box60
+\pcol@colorstack@saved=\box61
+\pcol@tempboxa=\box62
+\pcol@tempboxb=\box63
+\pcol@colorins=\insert252
+\pcol@everyvbox=\toks32
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pdfcomment/pdfcomment.sty
+Package: pdfcomment 2018/11/01 pdfcomment.sty v2.4a - Josef Kleber (C) 2008-2012, 2015-2016, 2018
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
+)
+\XKV@depth=\count316
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@pc@count@i=\count317
+\c@pc@count@ii=\count318
+\c@pc@count@iii=\count319
+\c@pc@count@iv=\count320
+\pc@mathannot@box=\box64
+\pc@nullbox=\box65
+\pc@dima=\skip79
+\pc@dimb=\skip80
+\pc@Sposx=\skip81
+\pc@Sposy=\skip82
+\pc@Eposx=\skip83
+\pc@Eposy=\skip84
+\pc@column=\skip85
+\pc@box@width=\skip86
+\pc@box@height=\skip87
+\pc@box@depth=\skip88
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/datetime2/datetime2.sty
+Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/tracklang/tracklang.tex))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/zref/zref-savepos.sty
+Package: zref-savepos 2020-07-03 v2.32 Module savepos for zref (HO)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+Package zref Info: New property list: savepos on input line 80.
+Package zref Info: New property: posx on input line 85.
+Package zref Info: New property: posy on input line 86.
+)
+\c@zref@unique=\count321
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count322
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/soulpos/soulpos.sty
+Package: soulpos 2021/10/15 v1.2 Fancy underlining
+\ulp@subcnt=\count323
+\ulp@cnt=\count324
+\ulp@out=\write3
+\ulp@in=\read2
+\ulwidth=\dimen195
+)
+Package zref Info: New property list: pdfcomment on input line 2735.
+Package zref Info: New property: PCPDFOBJID on input line 2736.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen196
+\pgfutil@tempdimb=\dimen197
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box66
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks38
+))
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen256
+\pgf@ya=\dimen257
+\pgf@xb=\dimen258
+\pgf@yb=\dimen259
+\pgf@xc=\dimen260
+\pgf@yc=\dimen261
+\pgf@xd=\dimen262
+\pgf@yd=\dimen263
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count325
+\c@pgf@countb=\count326
+\c@pgf@countc=\count327
+\c@pgf@countd=\count328
+\t@pgf@toka=\toks39
+\t@pgf@tokb=\toks40
+\t@pgf@tokc=\toks41
+\pgf@sys@id@count=\count329
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-luatex.def
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count330
+\pgfsyssoftpath@bigbuffer@items=\count331
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen264
+\pgfmath@count=\count332
+\pgfmath@box=\box67
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count333
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen265
+\pgf@picmaxx=\dimen266
+\pgf@picminy=\dimen267
+\pgf@picmaxy=\dimen268
+\pgf@pathminx=\dimen269
+\pgf@pathmaxx=\dimen270
+\pgf@pathminy=\dimen271
+\pgf@pathmaxy=\dimen272
+\pgf@xx=\dimen273
+\pgf@xy=\dimen274
+\pgf@yx=\dimen275
+\pgf@yy=\dimen276
+\pgf@zx=\dimen277
+\pgf@zy=\dimen278
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen279
+\pgf@path@lasty=\dimen280
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen281
+\pgf@shorten@start@additional=\dimen282
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box68
+\pgf@hbox=\box69
+\pgf@layerbox@main=\box70
+\pgf@picture@serial@count=\count334
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen283
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen284
+\pgf@pt@y=\dimen285
+\pgf@pt@temp=\dimen286
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen287
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen288
+\pgf@sys@shading@range@num=\count335
+\pgf@shadingcount=\count336
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box71
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box72
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen289
+\pgf@nodesepend=\dimen290
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count337
+\pgfplotmarksize=\dimen293
+)
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikz@lastmovetox=\dimen298
+\tikz@lastmovetoy=\dimen299
+\tikzleveldistance=\dimen300
+\tikzsiblingdistance=\dimen301
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count338
+\tikznumberofchildren=\count339
+\tikznumberofcurrentchild=\count340
+\tikz@fig@count=\count341
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count342
+\pgfmatrixcurrentcolumn=\count343
+\pgf@matrix@numberofcolumns=\count344
+)
+\tikz@expandcount=\count345
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count346
+\l__lipsum_a_int=\count347
+\l__lipsum_b_int=\count348
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2022/01/07 version 5.0.2 text color boxes
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks47
+\verbatim@line=\toks48
+\verbatim@in@stream=\read4
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box77
+\tcb@upperbox=\box78
+\tcb@lowerbox=\box79
+\tcb@phantombox=\box80
+\c@tcbbreakpart=\count349
+\c@tcblayer=\count350
+\c@tcolorbox@number=\count351
+\tcb@temp=\box81
+\tcb@temp=\box82
+\tcb@temp=\box83
+\tcb@temp=\box84
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '5.0.2'
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/oberdiek/pdfcol.sty
+Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
+)
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box85
+\tcb@totalupperbox=\box86
+\tcb@totallowerbox=\box87
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '5.0.2'
+\tcb@waterbox=\box88
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.0.2'
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '5.0.2'
+\c@tcbrastercolumn=\count352
+\c@tcbrasterrow=\count353
+\c@tcbrasternum=\count354
+\c@tcbraster=\count355
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.2'
+\tcbfitdim=\dimen302
+\tcb@lowerfitdim=\dimen303
+\tcb@upperfitdim=\dimen304
+\tcb@cur@hbadness=\count356
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.2'
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '5.0.2'
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '5.0.2'
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count357
+\lst@gtempboxa=\box89
+\lst@token=\toks49
+\lst@length=\count358
+\lst@currlwidth=\dimen305
+\lst@column=\count359
+\lst@pos=\count360
+\lst@lostspace=\dimen306
+\lst@width=\dimen307
+\lst@newlines=\count361
+\lst@lineno=\count362
+\lst@maxwidth=\dimen308
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count363
+\lst@skipnumbers=\count364
+\lst@framebox=\box90
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '5.0.2'
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '5.0.2'
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+))
+\c@tcblisting=\count365
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. Library `listings` is loaded instead. on input line 29.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '5.0.2'
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '5.0.2'
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '5.0.2'
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '5.0.2'
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count366
+\float@exts=\toks50
+\float@box=\box91
+\@float@everytoks=\toks51
+\@floatcapt=\box92
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty
+Package: xcoffins 2022-02-05 L3 Experimental design level coffins
+\l__coffin_hoffset_dim=\dimen309
+\l__coffin_voffset_dim=\dimen310
+\l__coffin_height_dim=\dimen311
+\l__coffin_depth_dim=\dimen312
+\l__coffin_width_dim=\dimen313
+\l__coffin_totalheight_dim=\dimen314
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+
+
+Package etex Warning: Extended allocation already in use.
+(etex)                etex.sty code will not be used.
+(etex)                To force etex package to load, add
+(etex)                \RequirePackage{etex}
+(etex)                at the start of the document.
+
+)
+\smallwidth=\skip89
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count367
+\Gm@cntv=\count368
+\c@Gm@tempcnt=\count369
+\Gm@bindingoffset=\dimen315
+\Gm@wd@mp=\dimen316
+\Gm@odd@mp=\dimen317
+\Gm@even@mp=\dimen318
+\Gm@layoutwidth=\dimen319
+\Gm@layoutheight=\dimen320
+\Gm@layouthoffset=\dimen321
+\Gm@layoutvoffset=\dimen322
+\Gm@dimlist=\toks52
+
+
+Package geometry Warning: Over-specification in `h'-direction.
+    `width' (369.88582pt) is ignored.
+
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/alphalph/alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lettrine/lettrine.sty
+File: lettrine.sty 2020-03-14 v2.23 (Daniel Flipo)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/minifp/minifp.sty
+Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack-based programing language.
+\MFP@loopctr=\count370
+)
+\c@DefaultLines=\count371
+\c@DefaultDepth=\count372
+\DefaultFindent=\dimen323
+\DefaultNindent=\dimen324
+\DefaultSlope=\dimen325
+\DiscardVskip=\dimen326
+\L@lbox=\box93
+\L@tbox=\box94
+\c@L@lines=\count373
+\c@L@depth=\count374
+\L@Pindent=\dimen327
+\L@Findent=\dimen328
+\L@Nindent=\dimen329
+\L@lraise=\dimen330
+\L@first=\dimen331
+\L@next=\dimen332
+\L@slope=\dimen333
+\L@height=\dimen334
+\L@novskip=\dimen335
+\L@target@ht=\dimen336
+\L@target@dp=\dimen337
+\L@target@tht=\dimen338
+\LettrineWidth=\dimen339
+\LettrineHeight=\dimen340
+\LettrineDepth=\dimen341
+\Llist@everypar=\toks53
+
+Loading lettrine.cfg
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lettrine/lettrine.cfg))
+\c@authorfn=\count375
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.sty
+Package: unicode-math-luatex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/lualatex/lualatex-math/lualatex-math.sty
+Package: lualatex-math 2022/01/01 v1.12 Patches for mathematics typesetting with LuaLaTeX
+Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting with LuaLaTeX)
+\g__um_fam_int=\count376
+\g__um_fonts_used_int=\count377
+\l__um_primecount_int=\count378
+\g__um_primekern_muskip=\muskip18
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/firamath-otf/firamath-otf.sty
+Package: firamath-otf 2019/04/03 v. 0.02a (Herbert Voss) Supports fira math fonts for all luatex/xetex .
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+luaotfload | cache : Lookup cache loaded from /opt/homebrew/Cellar/texlive/20220321/share/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | aux : font no 19 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 19 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Font family 'FiraMathRegular(0)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Scale={1},Numbers={Lining,Monospaced}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 76.
+luaotfload | aux : font no 19 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 19 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Font family 'FiraMathRegular(1)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             Math
+(fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Scale={1},Numbers={Lining,Monospaced}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <7.74->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;"<5.85-7.74>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-5.85>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 76.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/FiraMathRegular(1)/m/n on input line 76.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> TU/FiraMathRegular(1)/b/n on input line 76.
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+luaotfload | aux : font no 19 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 19 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Font family 'FiraMathRegular(2)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             Math
+(fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Scale={1},Numbers={Lining,Monospaced},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =5.21999pt\relax \fontdimen 9\font
+(fontspec)             =4.04999pt\relax \fontdimen 10\font =4.04999pt\relax
+(fontspec)             \fontdimen 11\font =6.29999pt\relax \fontdimen 12\font
+(fontspec)             =4.31999pt\relax \fontdimen 13\font =3.59999pt\relax
+(fontspec)             \fontdimen 14\font =3.59999pt\relax \fontdimen 15\font
+(fontspec)             =2.43pt\relax \fontdimen 16\font =3.15pt\relax
+(fontspec)             \fontdimen 17\font =3.15pt\relax \fontdimen 18\font
+(fontspec)             =3.23999pt\relax \fontdimen 19\font =2.25pt\relax
+(fontspec)             \fontdimen 22\font =2.51999pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <7.74->s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;"<5.85-7.74>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-5.85>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =5.21999pt\relax \fontdimen 9\font =4.04999pt\relax
+(fontspec)             \fontdimen 10\font =4.04999pt\relax \fontdimen 11\font
+(fontspec)             =6.29999pt\relax \fontdimen 12\font =4.31999pt\relax
+(fontspec)             \fontdimen 13\font =3.59999pt\relax \fontdimen 14\font
+(fontspec)             =3.59999pt\relax \fontdimen 15\font =2.43pt\relax
+(fontspec)             \fontdimen 16\font =3.15pt\relax \fontdimen 17\font
+(fontspec)             =3.15pt\relax \fontdimen 18\font =3.23999pt\relax
+(fontspec)             \fontdimen 19\font =2.25pt\relax \fontdimen 22\font
+(fontspec)             =2.51999pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> TU/FiraMathRegular(2)/m/n on input line 76.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> TU/FiraMathRegular(2)/b/n on input line 76.
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+luaotfload | aux : font no 19 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 19 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+luaotfload | aux : font no 21 (nil) does not define feature lnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+luaotfload | aux : font no 21 (nil) does not define feature tnum for script math with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
+(fontspec)                available for font 'FiraMathRegular' with script
+(fontspec)                'Math' and language 'Default'.
+
+
+Package fontspec Info: Font family 'FiraMathRegular(3)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             Math
+(fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Scale={1},Numbers={Lining,Monospaced},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.68399pt\relax \fontdimen 9\font
+(fontspec)             =1.34999pt\relax \fontdimen 10\font =1.34999pt\relax
+(fontspec)             \fontdimen 11\font =1.34999pt\relax \fontdimen 12\font
+(fontspec)             =5.4pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <7.74->s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;"<5.85-7.74>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-5.85>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =0.68399pt\relax \fontdimen 9\font =1.34999pt\relax
+(fontspec)             \fontdimen 10\font =1.34999pt\relax \fontdimen 11\font
+(fontspec)             =1.34999pt\relax \fontdimen 12\font =5.4pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> TU/FiraMathRegular(3)/m/n on input line 76.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> TU/FiraMathRegular(3)/b/n on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 6.48pt on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 5.22pt on input line 76.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 76.
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 9.00096pt on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 6.48068pt on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 5.22055pt on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 8.99904pt on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 6.4793pt on input line 76.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 5.21944pt on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+\c@mv@pnum=\count379
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FiraMathRegular(4)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Numbers={Proportional},Scale={1}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(4)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 78.
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FiraMathRegular(5)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             Math
+(fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Numbers={Proportional},Scale={1}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <7.74->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<5.85-7.74>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-5.85>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(5)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 78.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `pnum' on input line 78.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `pnum'
+(Font)                  OT1/cmr/m/n --> TU/FiraMathRegular(5)/m/n on input line 78.
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+
+Package fontspec Info: FiraMathRegular scale = 1.0001.
+
+
+Package fontspec Info: Font family 'FiraMathRegular(6)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             Math
+(fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Numbers={Proportional},Scale={1},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =5.21999pt\relax \fontdimen 9\font
+(fontspec)             =4.04999pt\relax \fontdimen 10\font =4.04999pt\relax
+(fontspec)             \fontdimen 11\font =6.29999pt\relax \fontdimen 12\font
+(fontspec)             =4.31999pt\relax \fontdimen 13\font =3.59999pt\relax
+(fontspec)             \fontdimen 14\font =3.59999pt\relax \fontdimen 15\font
+(fontspec)             =2.43pt\relax \fontdimen 16\font =3.15pt\relax
+(fontspec)             \fontdimen 17\font =3.15pt\relax \fontdimen 18\font
+(fontspec)             =3.23999pt\relax \fontdimen 19\font =2.25pt\relax
+(fontspec)             \fontdimen 22\font =2.51999pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <7.74->s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<5.85-7.74>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-5.85>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =5.21999pt\relax \fontdimen 9\font =4.04999pt\relax
+(fontspec)             \fontdimen 10\font =4.04999pt\relax \fontdimen 11\font
+(fontspec)             =6.29999pt\relax \fontdimen 12\font =4.31999pt\relax
+(fontspec)             \fontdimen 13\font =3.59999pt\relax \fontdimen 14\font
+(fontspec)             =3.59999pt\relax \fontdimen 15\font =2.43pt\relax
+(fontspec)             \fontdimen 16\font =3.15pt\relax \fontdimen 17\font
+(fontspec)             =3.15pt\relax \fontdimen 18\font =3.23999pt\relax
+(fontspec)             \fontdimen 19\font =2.25pt\relax \fontdimen 22\font
+(fontspec)             =2.51999pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `pnum' on input line 78.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `pnum'
+(Font)                  OMS/cmsy/m/n --> TU/FiraMathRegular(6)/m/n on input line 78.
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+
+Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+
+Package fontspec Info: FiraMathRegular scale = 0.9999.
+
+
+Package fontspec Info: Font family 'FiraMathRegular(7)' created for font 'Fira
+(fontspec)             Math Regular' with options
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             Math
+(fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Numbers={Proportional},Scale={1},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.68399pt\relax \fontdimen 9\font
+(fontspec)             =1.34999pt\relax \fontdimen 10\font =1.34999pt\relax
+(fontspec)             \fontdimen 11\font =1.34999pt\relax \fontdimen 12\font
+(fontspec)             =5.4pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <7.74->s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<5.85-7.74>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-5.85>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =0.68399pt\relax \fontdimen 9\font =1.34999pt\relax
+(fontspec)             \fontdimen 10\font =1.34999pt\relax \fontdimen 11\font
+(fontspec)             =1.34999pt\relax \fontdimen 12\font =5.4pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `pnum' on input line 78.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `pnum'
+(Font)                  OMX/cmex/m/n --> TU/FiraMathRegular(7)/m/n on input line 78.
+)
+luaotfload | aux : font no 52 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 53 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 54 (nil) does not define feature smcp for script latn with language dflt
+
+Package fontspec Info: Font family 'OpenSans(0)' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Ligatures=TeX,Extension={.ttf},Path={../../../fonts/OpenSans/},UprightFont={*-Light},ItalicFont={*-LightItalic},BoldFont={*-SemiBold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-Light.ttf]:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-SemiBold.ttf]:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-LightItalic.ttf]:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+luaotfload | aux : font no 57 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 58 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 59 (nil) does not define feature smcp for script latn with language dflt
+
+Package fontspec Info: Font family 'OpenSans(1)' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Renderer=Basic,Extension={.ttf},Path={../../../fonts/OpenSans/},UprightFont={*-Light},ItalicFont={*-LightItalic},BoldFont={*-SemiBold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-Light.ttf]:mode=base;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-SemiBold.ttf]:mode=base;script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-LightItalic.ttf]:mode=base;script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  TU/FiraMathRegular(1)/m/n --> TU/OpenSans(1)/m/n on input line 345.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> TU/OpenSans(1)/m/it on input line 345.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> TU/OpenSans(1)/b/n on input line 345.
+luaotfload | aux : font no 63 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 64 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 65 (nil) does not define feature smcp for script latn with language dflt
+
+Package fontspec Info: Font family 'OpenSans(2)' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Extension={.ttf},Path={../../../fonts/OpenSans/},UprightFont={*-Regular},ItalicFont={*-Italic},BoldFont={*-Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-Regular.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-Bold.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[../../../fonts/OpenSans/OpenSans-Italic.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
+luaotfload | aux : font no 68 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 69 (nil) does not define feature smcp for script latn with language dflt
+
+Package fontspec Info: Font family 'Overpass(0)' created for font 'Overpass'
+(fontspec)             with options [Path = {../../../},Extension =
+(fontspec)             .ttf,UprightFont = *-Regular,BoldFont = *-SemiBold].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[../../../Overpass-Regular.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../../Overpass-SemiBold.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+luaotfload | aux : font no 72 (nil) does not define feature smcp for script latn with language dflt
+luaotfload | aux : font no 68 (nil) does not define feature smcp for script latn with language dflt
+
+Package fontspec Info: Font family 'Overpass(1)' created for font 'Overpass'
+(fontspec)             with options [Path = ../../../,Extension =
+(fontspec)             .ttf,UprightFont = *-Light,BoldFont = *-Regular].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[../../../Overpass-Light.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../../Overpass-Regular.ttf]:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
+\MT@toks=\toks54
+\MT@tempbox=\box95
+\MT@count=\count380
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1195.
+\MT@outer@kern=\dimen342
+LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
+\MT@listname@count=\count381
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/microtype-luatex.def
+File: microtype-luatex.def 2022/03/14 v3.0d Definitions specific to luatex (RS)
+Lua module: microtype 2022/03/14 3.0d microtype module.
+Module microtype Info: overwriting function `keepligature' on input line 63
+LaTeX Info: Redefining \lsstyle on input line 686.
+LaTeX Info: Redefining \lslig on input line 686.
+\MT@outer@space=\skip90
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+Package: fontawesome5 2021/06/04 v5.15.3 Font Awesome 5
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-helper.sty
+Package: fontawesome5-utex-helper 2021/06/04 v5.15.3 uTeX helper for fontawesome5
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
+Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
+\@catcodetablestackcnt=\count382
+)
+\CatcodeTableOther=\catcodetable12
+\CatcodeTableExpl=\catcodetable13
+)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on input line 69.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on input line 70.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.fd))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/academicons/academicons.sty
+Package: academicons 2021/11/26 v1.9.1 Academicons Icons
+)
+\@float@every@takeHomeFloat=\toks55
+\c@takeHomeFloat=\count383
+\@float@every@originalPurposeFloat=\toks56
+\c@originalPurposeFloat=\count384
+\takeHomeHeight=\skip91
+\@float@every@company=\toks57
+\c@company=\count385
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count386
+\cp@tempcnt=\count387
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count388
+\mult@box=\box96
+\multicol@leftmargin=\dimen343
+\c@unbalance=\count389
+\c@collectmore=\count390
+\doublecol@number=\count391
+\multicoltolerance=\count392
+\multicolpretolerance=\count393
+\full@width=\dimen344
+\page@free=\dimen345
+\premulticols=\dimen346
+\postmulticols=\dimen347
+\multicolsep=\skip92
+\multicolbaselineskip=\skip93
+\partial@page=\box97
+\last@line=\box98
+\maxbalancingoverflow=\dimen348
+\mult@rightbox=\box99
+\mult@grightbox=\box100
+\mult@firstbox=\box101
+\mult@gfirstbox=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\@tempa=\box138
+\c@minrows=\count394
+\c@columnbadness=\count395
+\c@finalcolumnbadness=\count396
+\last@try=\dimen349
+\multicolovershoot=\dimen350
+\multicolundershoot=\dimen351
+\mult@nat@firstbox=\box139
+\colbreak@box=\box140
+\mc@col@check@num=\count397
+)
+\fullwidthlen=\skip94
+\c@tcb@cnt@reviewend=\count398
+\c@tcb@cnt@reviewat=\count399
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
+\FN@temptoken=\toks58
+\footnotemargin=\dimen352
+\@outputbox@depth=\dimen353
+Package footmisc Info: Declaring symbol style bringhurst on input line 695.
+Package footmisc Info: Declaring symbol style chicago on input line 703.
+Package footmisc Info: Declaring symbol style wiley on input line 712.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+Package footmisc Info: Declaring symbol style lamport* on input line 743.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 764.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip95
+\f@nch@O@elh=\skip96
+\f@nch@O@erh=\skip97
+\f@nch@O@olh=\skip98
+\f@nch@O@orh=\skip99
+\f@nch@O@elf=\skip100
+\f@nch@O@erf=\skip101
+\f@nch@O@olf=\skip102
+\f@nch@O@orf=\skip103
+)
+\myoddoffset=\skip104
+
+
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 636.
+
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2020/09/26 v1.10
+
+Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
+Package textpos Info: choosing support for LaTeX3 on input line 61.
+\TP@textbox=\box141
+\TPHorizModule=\dimen354
+\TPVertModule=\dimen355
+\TP@margin=\dimen356
+\TP@absmargin=\dimen357
+Grid set 16 x 16 = 37.34424pt x 49.79231pt
+\TPboxrulesize=\dimen358
+\TP@tbargs=\toks59
+)
+\MainFrame=\box142
+\Logo=\box143
+\PaperType=\box144
+\Authorx=\box145
+\Titlex=\box146
+\AuthSep=\skip105
+\LogoSep=\skip106
+\LogoWidth=\skip107
+\titleheight=\skip108
+\MetaWidth=\skip109
+\MetaHeight=\skip110
+\jote@affilmetadataheight=\skip111
+\jote@abstractheight=\skip112
+\jote@newaffilwidth=\skip113
+\jote@newabstractwidth=\skip114
+\jote@newheight=\skip115
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box147
+\beforetitleunit=\skip116
+\aftertitleunit=\skip117
+\ttl@plus=\dimen359
+\ttl@minus=\dimen360
+\ttl@toksa=\toks60
+\titlewidth=\dimen361
+\titlewidthlast=\dimen362
+\titlewidthfirst=\dimen363
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/quoting/quoting.sty
+Package: quoting 2014/01/28 v0.1c Consolidated environment for displayed text
+\quo@toppartop=\skip118
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip119
+\enit@outerparindent=\dimen364
+\enit@toks=\toks61
+\enit@inbox=\box148
+\enit@count@id=\count400
+\enitdp@description=\count401
+)
+\c@theorem=\count402
+\c@lemma=\count403
+\c@proposition=\count404
+\c@corollary=\count405
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen365
+\captionmargin=\dimen366
+\caption@leftmargin=\dimen367
+\caption@rightmargin=\dimen368
+\caption@width=\dimen369
+\caption@indent=\dimen370
+\caption@parindent=\dimen371
+\caption@hangindent=\dimen372
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count406
+\c@continuedfloat=\count407
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen373
+\caption@adjustwidth@linewidth=\dimen374
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip settings
+\@dblbotnum=\count408
+\c@dblbotnumber=\count409
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box149
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count410
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count411
+\c@listtotal=\count412
+\c@listcount=\count413
+\c@liststart=\count414
+\c@liststop=\count415
+\c@citecount=\count416
+\c@citetotal=\count417
+\c@multicitecount=\count418
+\c@multicitetotal=\count419
+\c@instcount=\count420
+\c@maxnames=\count421
+\c@minnames=\count422
+\c@maxitems=\count423
+\c@minitems=\count424
+\c@citecounter=\count425
+\c@maxcitecounter=\count426
+\c@savedcitecounter=\count427
+\c@uniquelist=\count428
+\c@uniquename=\count429
+\c@refsection=\count430
+\c@refsegment=\count431
+\c@maxextratitle=\count432
+\c@maxextratitleyear=\count433
+\c@maxextraname=\count434
+\c@maxextradate=\count435
+\c@maxextraalpha=\count436
+\c@abbrvpenalty=\count437
+\c@highnamepenalty=\count438
+\c@lownamepenalty=\count439
+\c@maxparens=\count440
+\c@parenlevel=\count441
+\blx@tempcnta=\count442
+\blx@tempcntb=\count443
+\blx@tempcntc=\count444
+\c@blx@maxsection=\count445
+\c@blx@maxsegment@0=\count446
+\blx@notetype=\count447
+\blx@parenlevel@text=\count448
+\blx@parenlevel@foot=\count449
+\c@blx@sectionciteorder@0=\count450
+\blx@entrysetcounter=\count451
+\blx@biblioinstance=\count452
+\labelnumberwidth=\skip120
+\labelalphawidth=\skip121
+\biblabelsep=\skip122
+\bibitemsep=\skip123
+\bibnamesep=\skip124
+\bibinitsep=\skip125
+\bibparsep=\skip126
+\bibhang=\skip127
+\blx@bcfin=\read5
+\blx@bcfout=\write5
+\blx@langwohyphens=\language2
+\c@mincomprange=\count453
+\c@maxcomprange=\count454
+\c@mincompwidth=\count455
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'apa.dbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx
+File: apa.dbx 2021/12/24 v9.15 APA biblatex style data model
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count456
+\c@savedafterword=\count457
+\c@annotator=\count458
+\c@savedannotator=\count459
+\c@author=\count460
+\c@savedauthor=\count461
+\c@bookauthor=\count462
+\c@savedbookauthor=\count463
+\c@commentator=\count464
+\c@savedcommentator=\count465
+\c@editor=\count466
+\c@savededitor=\count467
+\c@editora=\count468
+\c@savededitora=\count469
+\c@editorb=\count470
+\c@savededitorb=\count471
+\c@editorc=\count472
+\c@savededitorc=\count473
+\c@foreword=\count474
+\c@savedforeword=\count475
+\c@holder=\count476
+\c@savedholder=\count477
+\c@introduction=\count478
+\c@savedintroduction=\count479
+\c@namea=\count480
+\c@savednamea=\count481
+\c@nameb=\count482
+\c@savednameb=\count483
+\c@namec=\count484
+\c@savednamec=\count485
+\c@translator=\count486
+\c@savedtranslator=\count487
+\c@shortauthor=\count488
+\c@savedshortauthor=\count489
+\c@shorteditor=\count490
+\c@savedshorteditor=\count491
+\c@narrator=\count492
+\c@savednarrator=\count493
+\c@execproducer=\count494
+\c@savedexecproducer=\count495
+\c@execdirector=\count496
+\c@savedexecdirector=\count497
+\c@with=\count498
+\c@savedwith=\count499
+\c@labelname=\count500
+\c@savedlabelname=\count501
+\c@institution=\count502
+\c@savedinstitution=\count503
+\c@lista=\count504
+\c@savedlista=\count505
+\c@listb=\count506
+\c@savedlistb=\count507
+\c@listc=\count508
+\c@savedlistc=\count509
+\c@listd=\count510
+\c@savedlistd=\count511
+\c@liste=\count512
+\c@savedliste=\count513
+\c@listf=\count514
+\c@savedlistf=\count515
+\c@location=\count516
+\c@savedlocation=\count517
+\c@organization=\count518
+\c@savedorganization=\count519
+\c@origlocation=\count520
+\c@savedoriglocation=\count521
+\c@origpublisher=\count522
+\c@savedorigpublisher=\count523
+\c@publisher=\count524
+\c@savedpublisher=\count525
+\c@language=\count526
+\c@savedlanguage=\count527
+\c@origlanguage=\count528
+\c@savedoriglanguage=\count529
+\c@citation=\count530
+\c@savedcitation=\count531
+\c@pageref=\count532
+\c@savedpageref=\count533
+\shorthandwidth=\skip128
+\shortjournalwidth=\skip129
+\shortserieswidth=\skip130
+\shorttitlewidth=\skip131
+\shortauthorwidth=\skip132
+\shorteditorwidth=\skip133
+\locallabelnumberwidth=\skip134
+\locallabelalphawidth=\skip135
+\localshorthandwidth=\skip136
+\localshortjournalwidth=\skip137
+\localshortserieswidth=\skip138
+\localshorttitlewidth=\skip139
+\localshortauthorwidth=\skip140
+\localshorteditorwidth=\skip141
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count534
+\c@textcitetotal=\count535
+\c@textcitemaxnames=\count536
+\c@biburlbigbreakpenalty=\count537
+\c@biburlbreakpenalty=\count538
+\c@biburlnumpenalty=\count539
+\c@biburlucpenalty=\count540
+\c@biburllcpenalty=\count541
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count542
+)
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+File: apa.bbx 2021/12/24 v9.15 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count543
+\c@bbx:relatedtotal=\count544
+)
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
+
+
+Package biblatex Warning: The starred command '\DeclareDelimAlias*' is
+(biblatex)                deprecated.
+(biblatex)                Use the unstarred version '\DeclareDelimAlias'
+(biblatex)                instead.
+
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already defined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already defined, overwriting.
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx
+File: apa.cbx 2021/12/24 v9.15 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined, overwriting.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2022-02-24 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen375
+\WF@size=\dimen376
+\c@WF@wrappedlines=\count545
+\WF@box=\box150
+\WF@everypar=\toks62
+Package: wrapfig 2003/01/31  v 3.6
+))
+
+LaTeX Info: File `bibliography.bib' already exists on the system.
+            Not generating it from this source.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 221.
+\@quotelevel=\count546
+\@quotereset=\count547
+
+LaTeX Warning: Unused global option(s):
+    [english].
+
+No file vugten.aux.
+
+\openout1 = vugten.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count548
+\scratchdimen=\dimen377
+\scratchbox=\box151
+\nofMPsegments=\count549
+\nofMParguments=\count550
+\everyMPshowfont=\toks63
+\MPscratchCnt=\count551
+\MPscratchDim=\dimen378
+\MPnumerator=\count552
+\makeMPintoPDFobject=\count553
+\everyMPtoPDFconversion=\toks64
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring ON on input line 221.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count554
+)
+LaTeX Info: Redefining \ref on input line 221.
+LaTeX Info: Redefining \pageref on input line 221.
+LaTeX Info: Redefining \nameref on input line 221.
+\@outlinefile=\write6
+
+\openout6 = vugten.out
+\c@lstlisting=\count555
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(136.5733pt, 418.25545pt, 42.67912pt)
+* v-part:(T,H,B)=(35.7655pt, 707.26337pt, 53.64828pt)
+* \paperwidth=597.50787pt
+* \paperheight=796.67715pt
+* \textwidth=418.25545pt
+* \textheight=654.41338pt
+* \oddsidemargin=64.30331pt
+* \evensidemargin=64.30331pt
+* \topmargin=-36.50449pt
+* \headheight=20.0pt
+* \headsep=21.9pt
+* \topskip=9.0pt
+* \footskip=10.95pt
+* \marginparwidth=71.13188pt
+* \marginparsep=21.9pt
+* \columnsep=10.95pt
+* \skip\footins=12.0pt plus 6.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 221.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 221.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 221.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 221.
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)                 
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package: 
+(unicode-math)                 
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)                
+(unicode-math)                 
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+LaTeX Info: Redefining \microtypecontext on input line 221.
+Package microtype Info: Applying patch `item' on input line 221.
+Package microtype Info: Applying patch `toc' on input line 221.
+Package microtype Info: Applying patch `eqnum' on input line 221.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 221.
+
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 221.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `OpenSans' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
+Package biblatex Info: ... file 'english-apa.lbx' found.
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex-apa/english-apa.lbx
+File: english-apa.lbx 2021/12/24 v9.15 APA biblatex localisation
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
+Package biblatex Info: ... file 'american-apa.lbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex-apa/american-apa.lbx
+File: american-apa.lbx 2021/12/24 v9.15 APA biblatex localisation
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+))))
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+
+\openout5 = vugten.bcf
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'vugten.bbl' not found.
+
+No file vugten.bbl.
+Package biblatex Info: Reference section=0 on input line 221.
+Package biblatex Info: Reference segment=0 on input line 221.
+<media/TE_logo_blue_high_res.png, id=43, 177.68182pt x 178.72293pt>
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 227.
+(luatex.def)             Requested size: 43.79999pt x 44.0561pt.
+/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten.tex:227: Missing number, treated as zero.
+<to be read again> 
+\color_group_end: 
+l.227 \end{frontmatter}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten.tex:227: Illegal unit of measure (pt inserted).
+<to be read again> 
+\color_group_end: 
+l.227 \end{frontmatter}
+                     
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Overpass' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for TU+academicons on input line 227.
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/academicons/tuacademicons.fd)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `academicons' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `A' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `F' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `J' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `K' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `L' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `T' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `V' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `W' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `X' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Y' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `k' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `r' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `v' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `w' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `x' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `y' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `1' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `4' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `7' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `.' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `,' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `:' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `;' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `!' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `?' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `@' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `%' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `*' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `+' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `(' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `)' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `/' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `-' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `AE ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `_' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textbackslash ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `quotesinglbase ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `quotedblbase ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `guilsinglleft ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `guilsinglright ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `guillemotleft ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `guillemotright ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textexclamdown ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquestiondown ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textbraceleft ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textbraceright ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textless ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textgreater ' is missing
+(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 227.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `FiraMathRegular' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 227.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 6.00064pt on input line 227.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 227.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
+)
+<media/CROSSMARK_Color_horizontal.png, id=48, 931.48pt x 178.6675pt>
+File: media/CROSSMARK_Color_horizontal.png Graphic file (type png)
+<use media/CROSSMARK_Color_horizontal.png>
+Package luatex.def Info: media/CROSSMARK_Color_horizontal.png  used on input line 227.
+(luatex.def)             Requested size: 62.55238pt x 12.0pt.
+
+
+LaTeX Font Warning: Font shape `TU/OpenSans(0)/m/sc' undefined
+(Font)              using `TU/OpenSans(0)/m/n' instead on input line 230.
+
+Package lettrine.sty Info: Targeted height = 15.72685pt
+(lettrine.sty)             (for loversize=0, accent excluded),
+(lettrine.sty)             Lettrine height = 15.7268pt (T);
+(lettrine.sty)             reported on input line 230.
+
+LaTeX Warning: Citation 'Collaboration2015' on page 1 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'Mazzola2013' on page 1 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'Hugten2021' on page 1 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'Bedeian2010' on page 1 undefined on input line 232.
+
+
+LaTeX Warning: Citation 'Rubin2017' on page 1 undefined on input line 232.
+
+
+LaTeX Warning: Citation 'Witteloostuijn2016' on page 1 undefined on input line 234.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation 'Johns2019' on page 1 undefined on input line 247.
+
+
+LaTeX Warning: Citation 'Davis1971' on page 1 undefined on input line 249.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 250.
+
+
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 250.
+
+[1{/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}
+
+
+\openout3 = vugten.upa
+</Users/thomas/texmf/tex/latex/media/TE_logo_blue_high_res.png></Users/thomas/texmf/tex/latex/media/CROSSMARK_Color_horizontal.png>]
+
+LaTeX Warning: Citation 'Lakatos1970' on page 2 undefined on input line 251.
+
+
+LaTeX Warning: Citation 'Cross1982' on page 2 undefined on input line 251.
+
+
+Overfull \hbox (87.3661pt too wide) in alignment at lines 271--271
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation 'Schwab2012' on page 2 undefined on input line 284.
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 284--285
+\TU/OpenSans(0)/m/sc/9 ful base-lines, or theory-driven null hy-pothe-ses
+ []
+
+
+Overfull \hbox (547.14415pt too wide) in paragraph at lines 296--303
+[][] 
+ []
+
+
+LaTeX Warning: Citation 'Hollenbeck2017' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'Rubin2017' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'Locke2008' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'Schwab2017' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'Rubin2017' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'Rubin2017' on page 2 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'Wasserstein2019' on page 2 undefined on input line 314.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Inserting `luaotfload.letterspace' at position 2 in `pre_linebreak_filter'.
+Inserting `luaotfload.letterspace' at position 3 in `hpack_filter'.
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 315.
+(luatex.def)             Requested size: 16.32686pt x 16.42499pt.
+ [2]
+
+Package tabularx Warning: X Columns too narrow (table too wide)
+(tabularx)                 on input line 339.
+
+
+Overfull \hbox (1473.16124pt too wide) in alignment at lines 339--339
+[][]
+ []
+
+
+LaTeX Warning: Citation 'Hines1988' on page 3 undefined on input line 346.
+
+
+LaTeX Warning: Citation 'Lakatos1970' on page 3 undefined on input line 346.
+
+
+LaTeX Warning: Citation 'Søberg2005' on page 3 undefined on input line 346.
+
+
+LaTeX Warning: Citation 'Weick1999' on page 3 undefined on input line 346.
+
+
+LaTeX Warning: Citation 'Søberg2005' on page 3 undefined on input line 348.
+
+
+LaTeX Warning: Citation 'Lakatos1970' on page 3 undefined on input line 348.
+
+
+LaTeX Warning: Citation 'Cross1982' on page 3 undefined on input line 348.
+
+
+LaTeX Warning: Citation 'Davis1971' on page 3 undefined on input line 350.
+
+
+LaTeX Warning: Citation 'Spector2011' on page 3 undefined on input line 350.
+
+
+LaTeX Warning: Citation 'Davis1971' on page 3 undefined on input line 352.
+
+
+LaTeX Warning: Citation 'Cook1979' on page 3 undefined on input line 354.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation 'Heugens2009' on page 3 undefined on input line 360.
+
+
+LaTeX Warning: Citation 'Murphy2019' on page 3 undefined on input line 360.
+
+
+LaTeX Warning: Citation 'Hollenbeck2017' on page 3 undefined on input line 360.
+
+
+LaTeX Warning: Citation 'Locke2008' on page 3 undefined on input line 360.
+
+
+LaTeX Warning: Citation 'Schwab2017' on page 3 undefined on input line 360.
+
+
+LaTeX Warning: Citation 'Haveman1993' on page 3 undefined on input line 362.
+
+
+LaTeX Warning: Citation 'Bettis2012' on page 3 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'Bettis2012' on page 3 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'Wasserstein2019' on page 3 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'Schwab2011' on page 3 undefined on input line 368.
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 368--369
+\TU/OpenSans(0)/m/sc/9 Pro-pos-als to com-bat un-der-re-port-ing fo-cus on
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 368--369
+\TU/OpenSans(0)/m/sc/9 pre-vent-ing un-der-re-port-ing prac-tices; e.g., de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+\TU/OpenSans(0)/m/sc/9 emphasize p-values ([]; [];
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 371.
+(luatex.def)             Requested size: 16.32686pt x 16.42499pt.
+ [3]
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 387.
+(luatex.def)             Requested size: 16.32686pt x 16.42499pt.
+ [4
+
+] (./vugten.aux * soulpos - computing points - it may take a few seconds *
+\openout3 = vugten.upb
+ (./vugten.upa))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `vugten.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `vugten.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  822FB5E532FC6F8EA644F4F0188CC8F8;1239.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                vugten
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'vugten.run.xml'.
+
+\openout1 = vugten.run.xml
+)
+
+Here is how much of LuaTeX's memory you used:
+ 59466 strings out of 477785
+ 195405,2373549 words of node,token memory allocated
+ 1786 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 4 disc, 4 glue, 4 kern, 21 glyph, 87 attribute, 101 glue_spec, 87 attribute_list, 2 write, 24 pdf_literal, 1 pdf_action, 28 pdf_colorstack nodes
+   avail lists: 1:1,2:859,3:493,4:391,5:345,6:108,7:17808,8:26,9:847,10:19,11:1611,12:1
+ 78112 multiletter control sequences out of 65536+600000
+ 145 fonts using 23086675 bytes
+ 123i,23n,140p,1519b,5161s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<../../../Overpass-Regular.ttf><../../../fonts/OpenSans/OpenSans-LightItalic.ttf><../../../fonts/OpenSans/OpenSans-SemiBold.ttf></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Brands-Regular-400.otf><../../../fonts/OpenSans/OpenSans-Regular.ttf><../../../fonts/OpenSans/OpenSans-Light.ttf></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/truetype/public/academicons/academicons.ttf><../../../Overpass-Light.ttf><../../../Overpass-SemiBold.ttf>
+Output written on vugten.pdf (4 pages, 148392 bytes).
+
+PDF statistics: 162 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 131072)
+ 256 words of extra memory for PDF output out of 10000 (max. 100000000)
+

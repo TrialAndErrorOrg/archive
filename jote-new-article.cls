@@ -212,6 +212,8 @@
 \colorlet{betterlightblack}{lightblack!65!gray!65}
 \colorlet{darklightblack}{lightblack!65!gray!85}
 
+\definecolor{orcidlogocol}{HTML}{a6ce39}
+
 %\if@twocolumn
 %\else
 %  \RequirePackage[right]{lineno}
@@ -230,7 +232,7 @@
   textwidth=130mm,
 %  lines=50,
   textheight=230mm,
-  headsep=2\smallwidth,headheight=20\p@,
+  headsep=2\smallwidth,headheight=20pt,
   footskip=\smallwidth,
   columnsep=\smallwidth,
   includeheadfoot, inner= 4.8cm,
@@ -406,7 +408,7 @@
 
 \RequirePackage{fontawesome5}
 \RequirePackage{academicons}
-\newcommand{\orcid}[1]{ \href{orcid.org/#1}{\textcolor{orcidlogocol}{\kern -0.2em \aiOrcid \kern -0.2em}} }
+\newcommand{\orcid}[1]{ \href{orcid.org/#1}{{\color{orcidlogocol}{\kern-0.2em \aiOrcid \kern-0.2em}}} }
 % Accompanying article box
 %
 %
@@ -562,10 +564,10 @@
 }
 
 % Peer review hover command
-\newcommand{\gotoreview}{\vspace{-14pt\hfill%
+\newcommand{\gotoreview}{\vspace*{-14pt}\hfill%
 \pdftooltip{\textcolor{white}{peer reviews}}{click on the arrow to view the peer review comments on this section}%
 \hyperref[sec:reviews]{$\bigblacktriangledown$}%
-}}
+}
 
 % RGA checkbox command
 \def\checkmark{\tikz\fill[scale=0.2](.4,.25) -- (.65,0) -- (1,.8) -- (.65,.15) -- cycle;}
@@ -634,7 +636,7 @@
 \fancyheadoffset[loh,reh,lof]{\myoddoffset}
 
 \fancyhead[LO]{
-  \setlength{\arrayrulewidth}{.5\p@}%
+  \setlength{\arrayrulewidth}{.5pt}%
   \arrayrulecolor{black}%
 %   \if@issue
 %   \begin{tabularx}{\dimexpr \textwidth + \marginparwidth + \marginparsep\relax}{@{}l | l  >{\raggedleft\arraybackslash}X @{}}%
@@ -655,7 +657,7 @@
 
 %not important for now
 % \fancyhead[LE]{
-%   \setlength{\arrayrulewidth}{.5\p@}%
+%   \setlength{\arrayrulewidth}{.5pt}%
 %   \arrayrulecolor{black}%
 %   \begin{tabularx}{\textwidth}{@{}l | l l >{\raggedleft\arraybackslash}X @{}}%
 %   \thepage & \raisebox{-0.1em}{\includegraphics[height=2\smallwidth]{media/jote_logo_only}} & {\textsc{%
@@ -667,7 +669,7 @@
 %     \if@review Peer Review\fi%
 %   }} & \if@review\begingroup\normalsize Manuscript by\ \  \endgroup\fi\@runningauthor
 %   %\multicolumn{1}{@{}c}{} &
-%   %\raisebox{0.25em}[0pt][0pt]{\colorbox{white}{\includegraphics[height=2.5em]{./media/jote_logo_only}}} &
+%   %\raisebox{0.25em}[0pt][0pt]{\colorbox{white}{\includegraphics[height=2.5em]{media/jote_logo_only}}} &
 %   %\quad%
 %   %\raisebox{0pt}[0pt][0pt]{\includegraphics[height=2.5em]{./jote-logo}}\\
 %   \end{tabularx}%
@@ -735,7 +737,7 @@
 %% First page header + footer %fph
 \fancypagestyle{firstpage}{
 \fancyheadoffset[loh,reh,lof]{\myoddoffset}
-%   \renewcommand{\footrule}{\hdashrule{\textwidth}{0.5\p@}{2\p@}\\[-2\p@]}
+%   \renewcommand{\footrule}{\hdashrule{\textwidth}{0.5pt}{2pt}\\[-2pt]}
 \fancyhead[L]{%
   \if@header
   \hspace{70mm}
@@ -753,10 +755,10 @@
   
   \fancyfoot[L]{%
     \fancyheadoffset[loh,reh,lof]{\myoddoffset}
-  \setlength{\arrayrulewidth}{.5\p@}%
+  \setlength{\arrayrulewidth}{.5pt}%
   \arrayrulecolor{betterlightblack}%
   \overpasslight
- % \fontsize{8pt}{13\p@}
+ % \fontsize{8pt}{13pt}
  \small
   \color{betterlightblack}%
   \if@issue
@@ -790,9 +792,9 @@
 \renewcommand{\Authfont}{\overpasslight}
 \renewcommand{\Affilfont}{\scriptsize\selectfont}
 \renewcommand\AB@authnote[1]{\textsuperscript{#1}}
-\patchcmd{\AB@affilsepx}{\\}{\\[3\p@]}{}{}
+\patchcmd{\AB@affilsepx}{\\}{\vspace*{3pt}}{}{}
 
-\patchcmd{\@author}{\AB@authlist\\[\affilsep]\AB@affillist}{\AB@authlist}{}{}
+\patchcmd{\@author}{\AB@authlist\vspace*{\affilsep}\AB@affillist}{\AB@authlist}{}{}
 
 
 
@@ -933,7 +935,7 @@
 }
 
 %% Abbreviations in the footnote
-\newcommand{\abbrevs}[1]{\blfootnote{{\bfseries\color{betterlightblack}Abbreviations:} #1\\[-3\p@]}}
+\newcommand{\abbrevs}[1]{\blfootnote{{\bfseries\color{betterlightblack}Abbreviations:} #1\vspace*{-3pt}}}
 
 %% Abstract and affiliation in the margin
 \RequirePackage{changepage}
@@ -954,8 +956,8 @@
   \if@noabstract\vspace*{2\smallwidth}\else
   \strictpagecheck%
   \checkoddpage
-  \ifoddpage \reversemarginpar  \begin{adjustwidth*}{\dimexpr \@heightabstract+0\p@}{}%
-  \else  \reversemarginpar \begin{adjustwidth*}{}{\dimexpr \@heightabstract+0\p@}%
+  \ifoddpage \reversemarginpar  \begin{adjustwidth*}{\dimexpr \@heightabstract+0pt}{}%
+  \else  \reversemarginpar \begin{adjustwidth*}{}{\dimexpr \@heightabstract+0pt}%
   \fi
   \vspace*{2\smallwidth}
 
@@ -972,7 +974,7 @@
 \renewcommand{\endabstract}{\endjote@abstract}
 
 \newcommand{\thefpfootnotes}{%
-  \noindent\textcolor{black!50}{\rule{\textwidth}{0.5\p@}}\\
+  \noindent\textcolor{black!50}{\rule{\textwidth}{0.5pt}}\\
   {\scriptsize\selectfont
   \@fpfootnotes}
 }
@@ -1002,9 +1004,6 @@
 
 
 
-%\sectionfont{\large}
-%\subsectionfont{\normalsize}
-%\subsubsectionfont{\small}
 \RequirePackage[explicit]{titlesec}
 
 \titleformat{\section}[block]{}{}{0pt}{\Large}
@@ -1044,7 +1043,7 @@
 
 % quotes and epigraphs
 \RequirePackage{quoting}
-\quotingsetup{vskip=\baselineskip,indentfirst=false,leftmargin=26\p@,rightmargin=26\p@}
+\quotingsetup{vskip=\baselineskip,indentfirst=false,leftmargin=26pt,rightmargin=26pt}
 
 \renewenvironment{quote}{\begin{quoting}}{\end{quoting}}
 
@@ -1056,7 +1055,7 @@
 {\par\hfill\@quotesource\end{quoting}}
 
 \newenvironment{pullquote}
-{\begin{quoting}[vskip=\dimexpr 39\p@-23\p@\relax,leftmargin=12\p@,rightmargin=12\p@,font+={raggedright},begintext={\fontsize{18\p@}{23\p@}\sffamily\mdseries\color{black!50}}]}
+{\begin{quoting}[vskip=\dimexpr 39pt-23pt\relax,leftmargin=12pt,rightmargin=12pt,font+={raggedright},begintext={\fontsize{18pt}{23pt}\sffamily\mdseries\color{black!50}}]}
 {\end{quoting}}
 
 % Enum/itemized
@@ -1095,19 +1094,17 @@
 
 % Captions
     \RequirePackage{caption}
-    \captionsetup[table]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad, size=small}
-    \captionsetup[figure]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={darklightblack}, small}, justification=RaggedRight}
 %\captionsetup*[table]{skip=0.5ex}
 
 % Tables
 \RequirePackage{stfloats} %hopefully lead to better table placement
 \AtBeginEnvironment{table}{%
   \renewcommand{\arraystretch}{1.25}%
-  \setlength{\arrayrulewidth}{1\p@}%
+  \setlength{\arrayrulewidth}{1pt}%
 }
 \AtBeginEnvironment{table*}{%
   \renewcommand{\arraystretch}{1.25}%
-  \setlength{\arrayrulewidth}{1\p@}%
+  \setlength{\arrayrulewidth}{1pt}%
 }
 \RequirePackage{threeparttable}
 \renewcommand{\TPTnoteSettings}{\leftmargin=0pt}
@@ -1184,9 +1181,9 @@
   {}
 
   \begin{mdframed}
-  [linewidth=1\p@,linecolor=black!40,nobreak,
-    innerleftmargin=12\p@,innerrightmargin=12\p@,
-    innertopmargin=12\p@,innerbottommargin=12\p@,
+  [linewidth=1pt,linecolor=black!40,nobreak,
+    innerleftmargin=12pt,innerrightmargin=12pt,
+    innertopmargin=12pt,innerbottommargin=12pt,
     skipabove=\baselineskip]
   {\bfseries\color{betterlightblack}How to cite this article:} #2
   \end{mdframed}
@@ -1200,45 +1197,13 @@
 
 %Append all the necessecary things after the references (license, copyright, acknowledgements)
 \RequirePackage{wrapfig}
-%\pretocmd{\printbibliography}{\fontsize{\normsize}{\normline}\selectfont}{}{}
 \apptocmd{\printbibliography}{%
     \ifdefempty{\@companionkey}{}{
     \ifdefempty{\@acknowledgments}{}{%
     \section{Acknowledgments}%
     \@acknowledgments}}%
-    %\ifdefempty{\@contributions}{}{%
-    %\vskip200pt
-    %\section*{Author Contributions}%
-    %\@contributions}%
-    %
     \ifdefempty{\@interests}{}{\section{Conflict of Interest}\@interests}
- %   \section{License}
- %       \begin{wrapfigure}[2]{L}{0.08\textwidth}%
- %       \vspace{-12pt}
- %       \includegraphics[width=0.1\textwidth]{media/by}%
- %       \end{wrapfigure}
- %       {\bfseries\color{betterlightblack}\textsf{Open Access.}} This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}.
- %       \newline\newline
- %       \textcopyright \text{ }\@runningauthor\ 2022%
   }{}{}
-
-%\RequirePackage{ftnright} %Puts footnotes in the righthand corner always
-
-%\AtEndPreamble{
-%\makeatletter
-%\newcommand*{\cleartoleftpage}{%
-%  \clearpage
-%    \if@twoside
-%    \ifodd\c@page
-%      \hbox{}\newpage
-      %\if@twocolumn
-%        \hbox{}\newpage
-      %\fi
-%    \fi
-%  \fi
-%}
-%\makeatother
-% }
 
 
 % Here we go!
@@ -1252,9 +1217,12 @@
 
 % This will give you MUCH more useful errors
 \setcounter{errorcontextlines}{30}
-
 %\normalsize
 \pagestyle{fancy}
+\AtEndPreamble{%
+    % \captionsetup[table]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad, size=small}
+    \captionsetup{tableposition=top,figureposition=bottom, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={darklightblack}, small}, justification=RaggedRight}
+}
 \AtBeginDocument{%
   \robustify{\ref}
   \robustify{\cite}
