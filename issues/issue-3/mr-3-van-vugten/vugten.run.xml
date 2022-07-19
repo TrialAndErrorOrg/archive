@@ -65,7 +65,7 @@
       <file>english-apa.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
@@ -84,7 +84,7 @@
       <file>vugten.bcf</file>
     </requires>
     <requires type="editable">
-      <file>bibliography.bib</file>
+      <file>vugten.bib</file>
     </requires>
   </external>
 </requests>

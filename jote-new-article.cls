@@ -11,6 +11,7 @@
 \ProvidesClass{jote-new-article}[2022/03/01, v2.0]
 
 
+\setcounter{errorcontextlines}{30}
 %% Definitions for adding journal elements
 \def\@jotetitle{}
 
@@ -152,11 +153,10 @@
 %%
 
 %% v1.2: don't set any defaults
-% \ExecuteOptions{num-refs}
 \ProcessOptions\relax
 
 
-\LoadClass[english,twocolumn,9pt]{extarticle}
+\LoadClass[english,twocolumn,10pt]{article}
 
 \RequirePackage{scrextend}
 \RequirePackage{trace}
@@ -177,8 +177,6 @@
 \RequirePackage{afterpage}
 \RequirePackage{hyperref} %For bookmarks and links
 \RequirePackage{paracol} % necessary to make reviewbox pagebreak work
-%\RequirePackage{cooltooltips} % For hover and comments
-%\RequirePackage[inactive]{fancytooltips} %  allows inclusion of tooltips which contain arbitrary TEX material
 \RequirePackage{pdfcomment} % little bit less complex hover
 \RequirePackage{tikz,lipsum,lmodern}
 \RequirePackage[breakable,skins,most]{tcolorbox}
@@ -186,14 +184,12 @@
 
 \RequirePackage{placeins}
 
-% \RequirePackage{flushend} % Balances two columns at the end of the page
 
 %%% LaTeX3 packages
 \RequirePackage{xcoffins} %to do complicated aligning
 
 \RequirePackage{etex} %for /dimexpr etc
 \tcbuselibrary{skins,xparse,breakable}
-%\RequirePackage[backend = biber, style=apa]{biblatex}
 
 
 %%%%%%%%%%%%%%%
@@ -208,16 +204,12 @@
 \definecolor{jotedark}{HTML}{002642}
 \colorlet{tip}{jotedark}
 \definecolor{joteOrangeLight}{HTML}{fbeacd}
-\colorlet{lightblack}{jotedark!70}
+\colorlet{lightblack}{jotedark!80}
 \colorlet{betterlightblack}{lightblack!65!gray!65}
 \colorlet{darklightblack}{lightblack!65!gray!85}
 
 \definecolor{orcidlogocol}{HTML}{a6ce39}
 
-%\if@twocolumn
-%\else
-%  \RequirePackage[right]{lineno}
-%\fi
 
 
 %%%%%%%%%%%%%%%%%%
@@ -228,16 +220,22 @@
 \setlength{\smallwidth}{\baselineskip}
 
 \RequirePackage
- [paperwidth=210mm,paperheight=280mm,
+ [paperwidth=210mm,
+  paperheight=280mm,
   textwidth=130mm,
-%  lines=50,
-  textheight=230mm,
-  headsep=2\smallwidth,headheight=20pt,
+  % textheight=53\baselineskip,
+  lines=53,
+  headsep=2\smallwidth,
+  headheight=20pt,
   footskip=\smallwidth,
   columnsep=\smallwidth,
-  includeheadfoot, inner= 4.8cm,
-  outer=15mm, bindingoffset=0mm, marginparwidth=2.5cm, marginparsep=2\smallwidth
-  %margin=5cm,
+  includeheadfoot, 
+  inner= 4.8cm,
+  outer=15mm,
+  bindingoffset=0mm, 
+  marginparwidth=2.5cm,
+  marginparsep=2\smallwidth,
+  heightrounded=true,
   ]
 {geometry}
 
@@ -277,6 +275,7 @@
 \newcommand{\companionabstract}[1]{\def\@companionabstract{#1}}
 \newcommand{\companionkey}[1]{\def\@companionkey{#1}}
 \newcommand{\abstracttext}[1]{\def\@abstracttext{#1}}
+\newcommand{\printabstracttext}{\@abstracttext}
 
 \newcommand{\heightabstract}[1]{\def\@heightabstract{#1}}
 \newcommand{\widthaffil}[1]{\def\@widthaffil{#1}}
@@ -345,13 +344,6 @@
 ]
 
 
-%\setmathfont{OpenSans)[
-%    Extension={.ttf},
-%    Path={../../../fonts/OpenSans/},
-%    UprightFont={*-Light},
-%    ItalicFont={*-LightItalic},
-%    BoldFont={*-Medium},
-%]
 
 \newfontfamily\openreg{OpenSans}[
     Extension={.ttf},
@@ -400,7 +392,9 @@
 
 
 %lin in front of section
-\newcommand\jotebar{{\color{joteorange}\kern1pt\rule[-0.31\dp\strutbox]{1.2pt}{0.7\baselineskip}\kern1pt}}
+% rule works like
+% \rule[horizontal displacement]{width}{height}
+\newcommand\jotebar{{\color{joteorange}\kern1pt\rule[0\dp\strutbox]{1.5pt}{0.62\baselineskip}\kern1pt}}
 
 
 
@@ -408,7 +402,7 @@
 
 \RequirePackage{fontawesome5}
 \RequirePackage{academicons}
-\newcommand{\orcid}[1]{ \href{orcid.org/#1}{{\color{orcidlogocol}{\kern-0.2em \aiOrcid \kern-0.2em}}} }
+\newcommand{\orcid}[1]{ \href{https://orcid.org/#1}{{\color{orcidlogocol}{\kern-0.2em \aiOrcid \kern-0.2em}}} }
 % Accompanying article box
 %
 %
@@ -431,7 +425,6 @@
     % look if you have a better idea by all means
     % no raisebox doesnt work
     borderline east ={1em}{0pt}{joteorange},
-    %title={Companion Article}
 }
 
 
@@ -501,19 +494,17 @@
 
 \NewEnviron{companion}{
     \begin{company}%
-        \begin{companionbox}%[
+        \begin{companionbox}
             \RaggedRight%
           {\overpass\large\bfseries Companion Article}
           \vskip.5\smallwidth
             \BODY
-            %\@companionauthor (\@companionyear), 
-            %\@companiontitle
-            %\href{https://doi.org/\@paperdoi}{DOI: \@paperdoi}
         \end{companionbox}
     \end{company}
 }
-\usepackage{changepage}% provides the adjustwidth environment
-\usepackage{multicol}% for multiple columns inside the fullwidth environment
+
+\RequirePackage{changepage}% provides the adjustwidth environment
+% \usepackage{multicol}% for multiple columns inside the fullwidth environment
 
 % The following code should be used *after* any changes to the margins and
 % page layout are made (e.g., after the geometry package has been loaded).
@@ -570,30 +561,51 @@
 }
 
 % RGA checkbox command
-\def\checkmark{\tikz\fill[scale=0.2](.4,.25) -- (.65,0) -- (1,.8) -- (.65,.15) -- cycle;}
+% \def\checkmark{\tikz\fill[scale=0.2](.4,.25) -- (.65,0) -- (1,.8) -- (.65,.15) -- cycle;}
 \newcommand{\checkedbox}{\rlap{\hspace{.08pt} \checkmark}{$\square$}}
 
 %Set the metadata correctly
 \RequirePackage{hyperref}
+% Sets XMP Metadata
+\RequirePackage{hyperxmp}
 
-\AtEndPreamble{
-\makeatletter
 \hypersetup{
-		pdftitle={\@runningauthor\text{ } (\@jyear) - \@title},
-    	pdfauthor = {\@authorone%
-    	\ifdefempty{\@authortwo}{}{, \@authortwo}%
-    	\ifdefempty{\@authorthree}{}{, \@authorthree}%
-    	\ifdefempty{\@authorfour}{}{, \@authorfour }%
-    	\ifdefempty{\@authorfive}{}{, \@authorfive}}
-    	pdfsubject = {\@title},
-    	pdfkeywords = {\@keywordsabstract},
         colorlinks=true,
         linkcolor=jotedark,
         filecolor=jotedark,
         urlcolor=jotedark,
-        citecolor=jotedark}
-\makeatother
+        citecolor=jotedark,
 }
+
+% \AtEndPreamble{
+% \makeatletter
+\AtBeginDocument{
+\hypersetup{
+		pdftitle={\@runningauthor\text{ } (\@jyear) - \@jotetitle},
+    	pdfauthor = {\@runningauthor%
+      %   \@authorone%
+    	% \ifdefempty{\@authortwo}{}{, \@authortwo}%
+    	% \ifdefempty{\@authorthree}{}{, \@authorthree}%
+    	% \ifdefempty{\@authorfour}{}{, \@authorfour }%
+    	% \ifdefempty{\@authorfive}{}{, \@authorfive}
+      },
+    	pdfsubject = {\@abstracttext},
+    	pdfkeywords = {\@keywordsabstract},
+      bookmarksopen=true,
+      bookmarksopenlevel=0,
+      pdfdisplaydoctitle={true}, 
+      pdfnonfullscreenpagemode={UseOutlines}, 
+      pdfcreator={Thomas F.K. Jorna, JOTE Publishers},
+      pdfpublisher={JOTE Publishers},
+pdfcopyright={\textcopyright\  \@jyear, \@runningauthor},
+pdflicenseurl={https://creativecommons.org/licenses/by/4.0},
+ pdfcontacturl={\@corremail},
+  pdfurl={\@paperdoi},
+ pdfdoi={\@paperdoi},
+        }
+}
+% \makeatother
+% }
 
 
 
@@ -604,7 +616,7 @@
 
 %% Draw figure aruond boxes
 % save the meaning of \includegraphics
-%%\AtBeginDocument{
+%%\AtBegirDocument{
 %\LetLtxMacro\latexincludegraphics\includegraphics
 
 % pass the image to \shadowbox
@@ -638,42 +650,13 @@
 \fancyhead[LO]{
   \setlength{\arrayrulewidth}{.5pt}%
   \arrayrulecolor{black}%
-%   \if@issue
-%   \begin{tabularx}{\dimexpr \textwidth + \marginparwidth + \marginparsep\relax}{@{}l | l  >{\raggedleft\arraybackslash}X @{}}%
-%      \thepage &
-%                 \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}}
-%     {\Large\textsc{\lowercase Empirical}}
-%     & \if@review {\normalsize Manuscript by\ \ }\fi \@runningauthor
-%   \end{tabularx}%
-% %
-%   \else
   \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X  r @{}}%
     \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue_high_res.png}} \,
     \Large \color{jotedark} \overpass \jote@articletype
  & \textls[10]{\color{jotedark}\@runningauthor} &  \thepage 
   \end{tabularx}%
-  % \fi
 }
 
-%not important for now
-% \fancyhead[LE]{
-%   \setlength{\arrayrulewidth}{.5pt}%
-%   \arrayrulecolor{black}%
-%   \begin{tabularx}{\textwidth}{@{}l | l l >{\raggedleft\arraybackslash}X @{}}%
-%   \thepage & \raisebox{-0.1em}{\includegraphics[height=2\smallwidth]{media/jote_logo_only}} & {\textsc{%
-%   \if@empirical Empirical \fi%
-%   \if@rga Rejected Grant Application \fi%
-%   \if@reflection Reflection \fi%
-%   \if@editorial Editorial \fi%
-%   \if@meta Meta-Research \fi%
-%     \if@review Peer Review\fi%
-%   }} & \if@review\begingroup\normalsize Manuscript by\ \  \endgroup\fi\@runningauthor
-%   %\multicolumn{1}{@{}c}{} &
-%   %\raisebox{0.25em}[0pt][0pt]{\colorbox{white}{\includegraphics[height=2.5em]{media/jote_logo_only}}} &
-%   %\quad%
-%   %\raisebox{0pt}[0pt][0pt]{\includegraphics[height=2.5em]{./jote-logo}}\\
-%   \end{tabularx}%
-% }
 
 \fancyfoot[LO]{
   \arrayrulecolor{betterlightblack}%
@@ -687,13 +670,6 @@
   \end{tabularx}%
 }
 
-%\fancyfoot[LE]{%
-%  \openlight%
-%  \begin{tabularx}{\textwidth}{@{}X  r @{}}%
-%  \hline
-%  
-%  \end{tabularx}%
-%}
 
 
 %TODO Make this a table so that alignment is super easy
@@ -701,7 +677,7 @@
   \ifdefempty{\@paperreceived}{}{{\openreg\color{jotedark}Received \hspace*{1mm}}\@paperreceived\\}
   \ifdefempty{\@paperaccepted}{}{{\openreg\color{jotedark}Accepted \hspace*{.5mm}}\@paperaccepted\\}
   \ifdefempty{\@paperpublished}{}{{\openreg\color{jotedark}Published }\@paperpublished\\}
-  \ifdefempty{\@paperpublished}{}{{\openreg\color{jotedark}Issued }\@paperissued\\}
+  \ifdefempty{\@paperissued}{}{{\openreg\color{jotedark}Issued }\@paperissued\\}
 
 }
 \newcommand{\receiveddata}{%
@@ -736,17 +712,16 @@
 
 %% First page header + footer %fph
 \fancypagestyle{firstpage}{
+% \setlength{\parskip}{0.0pt plus 1.0pt}
 \fancyheadoffset[loh,reh,lof]{\myoddoffset}
-%   \renewcommand{\footrule}{\hdashrule{\textwidth}{0.5pt}{2pt}\\[-2pt]}
 \fancyhead[L]{%
   \if@header
   \hspace{70mm}
   \begin{tabularx}{\linewidth}{@{} l @{}}
-      {\color{joteorange!70}\bfseries
+      {\color{joteorange!70}\bfseries%
       \textls[60]{%
-        \Huge\overpass\MakeUppercase{\jote@articletype}}
-         \text{   } {\color{joteorange!70}\huge\raisebox{-.1em}{\aiOpenAccess}
-                  }
+        \Huge\overpass\MakeUppercase{\jote@articletype}}%
+         \text{   } {\color{joteorange!70}\huge\raisebox{-.1em}{\aiOpenAccess}}%
      }
   \end{tabularx}
   \fi
@@ -758,7 +733,6 @@
   \setlength{\arrayrulewidth}{.5pt}%
   \arrayrulecolor{betterlightblack}%
   \overpasslight
- % \fontsize{8pt}{13pt}
  \small
   \color{betterlightblack}%
   \if@issue
@@ -792,10 +766,8 @@
 \renewcommand{\Authfont}{\overpasslight}
 \renewcommand{\Affilfont}{\scriptsize\selectfont}
 \renewcommand\AB@authnote[1]{\textsuperscript{#1}}
-\patchcmd{\AB@affilsepx}{\\}{\vspace*{3pt}}{}{}
-
-\patchcmd{\@author}{\AB@authlist\vspace*{\affilsep}\AB@affillist}{\AB@authlist}{}{}
-
+\patchcmd{\AB@affilsepx}{\\}{\\[3\p@]}{}{}
+\patchcmd{\@author}{\AB@authlist\\[\affilsep]\AB@affillist}{\AB@authlist}{}{}
 
 
 
@@ -803,10 +775,6 @@
 
 \RequirePackage{textpos}
 
-\newcommand{\more@metadata}{%
-  
-  \jote@affilmetadata
-}
 
 
 
@@ -821,40 +789,33 @@
 \newlength{\AuthSep}
 \newlength{\LogoSep}
 \newlength{\LogoWidth}
-
-\newcommand{\titlestuff}{
 \setlength{\LogoWidth}{4\smallwidth}
-\vspace*{3\smallwidth}
-\newcommand{\aTitle}{Lorem Ipsum Title\\ Which is too long\\ Too long} % a three lines title
+
+\newcommand{\aTitle}{Lorem Ipsum Title} % a three lines title
 \newcommand{\aLogo}{\includegraphics[width=\LogoWidth]{media/TE_logo_blue_high_res.png}}
 \newcommand{\aAuthors}{\@author}
 \newcommand{\aWord}{\textsc{Cool}}
-
-%\renewcommand{\aTitle}{Which is too long\\ Too long} % test a two lines title
-%\renewcommand{\aTitle}{Which is too long} % test a single line title
-%%***********************************************************
-
-%% Design: format of the title, H distance image-title, V distance title-authors <<<<<<<<<<<<
-\newcommand{\formatTitle}{\Huge\noindent\raggedright\bfseries\overpass} % format the title
-\newcommand{\formatAuthor}{\noindent \raggedright\overpasslight\large}
+\newcommand{\formatTitle}[1]{{\begingroup\hyphenpenalty=10000\Huge\noindent\RaggedRight\bfseries\overpass#1\endgroup}} % format the title
+\newcommand{\formatAuthor}[1]{{\noindent \large\RaggedRight\overpasslight#1}}
 \setlength{\LogoSep}{17mm}  % horizontal sepation
 \setlength{\AuthSep}{2\smallwidth}  % vertical separation
-%%***********************************************************
 
-%% Set
+\newcommand{\titlestuff}{
 \SetHorizontalCoffin\Logo{\aLogo}
-\SetHorizontalCoffin\PaperType{\LogoWidth}{}%{\RaggedRight\large\textsc{\jote@articletype}}
-\SetVerticalCoffin\Authorx{0.9\textwidth}{\formatAuthor\aAuthors}
-\SetVerticalCoffin\Titlex{0.9\textwidth}{\formatTitle\@jotetitle}
-
+% \SetHorizontalCoffin\PaperType\LogoWidth
+\SetVerticalCoffin{\Authorx}{0.9\textwidth}{\formatAuthor{\aAuthors}}
+\SetVerticalCoffin{\Titlex}{0.9\textwidth}{\formatTitle{\@jotetitle}}
+%
 % Assembly
-\JoinCoffins\MainFrame[l,t]\Logo[l,t] % put the image in the frame
-\JoinCoffins\MainFrame[r,vc]\Titlex[l,vc](\LogoSep,0pt) % join the title at an horizontal distance \IntraImage
-\JoinCoffins\MainFrame[\Titlex-l,\Titlex-b]\Authorx[l,t](0pt,-\AuthSep) % join the authors with title and dowm \IntraTitle
-%\JoinCoffins\MainFrame[\Authorx-l,\Authorx-t]\PaperType[l,t](-\LogoSep-\LogoWidth,0pt) % join the word aligned with authors
-
+% put the image in the frame
+\JoinCoffins\MainFrame[l,t]\Logo[l,t](0pt,0pt)
+% join the title at an horizontal distance \IntraImage
+\JoinCoffins\MainFrame[r,vc]\Titlex[l,vc](\LogoSep,0pt)
+% join the authors with title and dowm \IntraTitle
+\JoinCoffins\MainFrame[\Titlex-l,\Titlex-b]\Authorx[l,t](0pt,\dimexpr-\AuthSep\relax)
 %Typeset
-\noindent\TypesetCoffin\MainFrame[l,vc](\dimexpr-\LogoSep-15mm, 0pt)  %put the assambly in the page current insertion point
+%put the assambly in the page current insertion point
+\noindent\TypesetCoffin\MainFrame[l,vc](\dimexpr-\LogoSep-15mm\relax, 0pt)  
 }
 
 
@@ -862,34 +823,45 @@
 \newlength{\titleheight}
 \setlength{\titleheight}{30mm}
 \newlength{\MetaWidth}
-%\settototalheight{\titleheight}{\titlestuff}
 \newlength{\MetaHeight}
 
 \newcommand{\@insert@metadata}{%
   \setlength{\MetaWidth}{%
-  \dimexpr\paperwidth-\textwidth-1.8\marginparsep-\smallwidth%
+  \dimexpr\paperwidth-\textwidth-1.8\marginparsep%-\smallwidth%
   }
   
-  \setlength{\MetaHeight}{\dimexpr\textheight-\CoffinTotalHeight\MainFrame-5.5\smallwidth}
+  \setlength{\MetaHeight}{\dimexpr\textheight-\CoffinTotalHeight\MainFrame-5\smallwidth}
   
-  \begin{textblock*}{\MetaWidth}[0,1](-\MetaWidth,\dimexpr\MetaHeight+\Gm@bmargin -2.2\smallwidth \relax) %\\dimexpr\textheight-\Gm@bmargin-4\smallwidth-1pt\relax)
+  \begin{textblock*}{\MetaWidth}[0,1](%
+                                -\MetaWidth,%
+                                \dimexpr%
+                                  \MetaHeight+\Gm@bmargin% 
+                                \relax%
+                                ) 
     \begin{tcolorbox}[%
-    enhanced, sharp corners, colback=white, frame hidden,%
-    borderline east={0.5pt}{-0em}{joteorange},%
-    right skip = \smallwidth, bottom=-4pt,%
-    height=\MetaHeight, valign=bottom, left skip=0pt]
-\vfill\null
-  \setlength{\parskip}{\baselineskip}%
-  \setlength{\parindent}{\z@}%
-  \jote@affilmetadata
-\end{tcolorbox}
+      enhanced, 
+      sharp corners, 
+      colback=white, 
+      frame hidden,
+      borderline east={0.5pt}{-0em}{joteorange},
+      right skip = \smallwidth, 
+      bottom=-4pt,
+      height=\MetaHeight+\Gm@bmargin-2.35\smallwidth, 
+      valign=bottom, 
+      left skip=0pt]
+        \vfill\null
+        \setlength{\parskip}{\baselineskip}%
+        \setlength{\parindent}{\z@}%
+        \jote@affilmetadata
+    \end{tcolorbox}
   \end{textblock*}
 }
+
 \renewcommand{\maketitle}{%
-\thispagestyle{firstpage}
-\titlestuff
-\@insert@metadata%
-\normalfont\normalsize%
+  \thispagestyle{firstpage}
+  \titlestuff
+  \@insert@metadata
+  \normalfont\normalsize%
 }
 
 
@@ -897,12 +869,12 @@
 
 % Affiliation + other metadata
 \newcommand{\jote@affilmetadata}{%
-  \raggedright
+  \RaggedRight
   \scriptsize%
   \AB@affillist\\
   \vspace*{\smallwidth}
   \if@review
-  This is \ifdefempty{\@prround}{the originally submitted version}{submission \#\@prround} of \if@noabstract \vskip0pt\fi \enquote{\@title}\if@noabstract\vskip0pt\fi with \ifdefempty{\@prround}{}{round \@prround of the} peer review comments attached.
+  This is \ifdefempty{\@prround}{the originally submitted version}{submission \#\@prround} of \if@noabstract \vskip0pt\fi \enquote{\@jotetitle}\if@noabstract\vskip0pt\fi with \ifdefempty{\@prround}{}{round \@prround of the} peer review comments attached.
   {\openreg\color{betterlightblack}Original author(s):} \vskip1pt \textit{\@ogauthor} .
   {\openreg\color{betterlightblack}Published version}\vskip1pt \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}.
   {\openreg\color{betterlightblack}How to read:} \vskip1pt Sections which have peer review comments are marked by $\bigblacktriangledown$ or \hyperref[sec:reviews]{links},\ifdefempty{\@noabstract}{}{\vskip0pt} clicking which directs you to said comments.\ifdefempty{\@noabstract}{}{\vskip0pt} The reviews contain links referring back to the original section.
@@ -924,7 +896,7 @@
     \@funding\vskip\smallwidth
 }%
 {\openreg License}\ \  \faIcon{creative-commons}\  \faIcon{creative-commons-by}\\
-  {\color{darklightblack}This article is licensed under the {\openreg\href{https://www.creativecommons.org/licenses/by-nc-nd/4.0/legalcode}{Creative Commons Attirbution 4.0 (CC-BY 4.0)}} license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
+  {\color{darklightblack}This article is licensed under the {\openreg\href{https://www.creativecommons.org/licenses/by-nc-nd/4.0/legalcode}{Creative Commons Attribution 4.0 (CC-BY 4.0)}} license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
   
     \textcopyright\space \@runningauthor\ \@jyear\\
 
@@ -948,24 +920,24 @@
 \newlength{\jote@newabstractwidth}
 \newlength{\jote@newheight}
 \NewEnviron{jote@abstract}{%
-  \newcommand{\keywords}[1]{%
-    \vskip\smallwidth
-    \noindent{{\color{darklightblack}\textbf{Keywords}}\ }
-    \noindent{ \textit{##1}\par}
-  }%
-  \if@noabstract\vspace*{2\smallwidth}\else
-  \strictpagecheck%
-  \checkoddpage
-  \ifoddpage \reversemarginpar  \begin{adjustwidth*}{\dimexpr \@heightabstract+0pt}{}%
-  \else  \reversemarginpar \begin{adjustwidth*}{}{\dimexpr \@heightabstract+0pt}%
-  \fi
+  % \newcommand{\keywords}[1]{%
+  % }%
   \vspace*{2\smallwidth}
+  \if@noabstract
+  \else
+  % \strictpagecheck%
+  % \checkoddpage
+  % \ifoddpage 
+  % \reversemarginpar  \begin{adjustwidth*}{\dimexpr \@heightabstract+0pt}{}%
+  % \else  \reversemarginpar \begin{adjustwidth*}{}{\dimexpr \@heightabstract+0pt}%
+  % \fi
+  {\BODY\par}
+    \vspace*{\smallwidth}
+    \noindent {\color{darklightblack}\textbf{Keywords }} 
+    \noindent \emph{\@keywordsabstract}
 
-  {\normalsize\selectfont
-  \BODY
-  }
-    \keywords{\textit{\@keywordsabstract}}
-  \end{adjustwidth*}
+
+  % \end{adjustwidth*}
   \vspace*{2\smallwidth}
   \fi
 }%
@@ -990,7 +962,11 @@
        \thefpfootnotes
        \end{figure*}
      }%
-    \twocolumn[\@twocolumnfalse\setlength\parindent{2em}\BODY]%
+    \twocolumn[\begin{@twocolumnfalse}
+      %\setlength\parindent{2em}
+    \BODY
+    \end{@twocolumnfalse}]%
+
     \let\clearpage\oldclearpage
    \else
      \BODY
@@ -1002,28 +978,29 @@
 % Headings
 %%%%%
 
+% \RequirePackage{title}
 
-
+% \RequirePackage{sectsty}
+% \sectionfont{\normalsize\bfseries\RaggedRight}
+% \setcounter{secnumdepth}{0}
+% % \renewcommand\thesection{}
+% % \renewcommand\thesubsection{}
+% % \renewcommand\thesubsubsection{}
+% \subsectionfont{\RaggedRight\normalsize\openreg}
+% \subsubsectionfont{\normalsize\itshape\RaggedRight}
 \RequirePackage[explicit]{titlesec}
 
-\titleformat{\section}[block]{}{}{0pt}{\Large}
-\titleformat{name=\section}[block]
-     {}
- {}{0pt}{\normalsize\bfseries\raggedright#1}
+% \titleformat{\section}[block]{}{}{0pt}{\Large}
+\titleformat{\section}[hang]{}{\jotebar}{5pt}{\normalsize\bfseries\RaggedRight#1}
+\titlespacing*{\section}{0pt}{  12.0pt plus 12.0pt minus 12.0pt}{  12.0pt plus 12.0pt minus 12.0pt}
+%  \titlespacing*{name=\section,numberless}{0pt}{\baselineskip}{0pt}
 
- \titlespacing*{\section}{0pt}{\dimexpr\baselineskip}{\dimexpr\baselineskip-0pt}
- \titlespacing*{name=\section,numberless}{0pt}{\baselineskip}{0pt}
+ \titleformat{\subsection}[block]{\RaggedRight}{}{0pt}{\normalsize\openreg#1}
+ \titlespacing*{\subsection}{0pt}{  12pt plus 6pt minus 6pt}{0pt}
+%  \titlespacing*{name=\subsection,numberless}{0pt}{\baselineskip}{0pt}
 
- \titleformat{\subsection}[block]
-   {\raggedright}
-   {}{0pt}{\normalsize\openreg#1}
-
- \titlespacing*{\subsection}{0pt}{\dimexpr\baselineskip }{2pt}
-
- \titleformat{\subsubsection}[block]
-   {\raggedright}
-   {}{0pt}{\normalsize\selectfont\itshape #1}%Textls sets spacing. 100 is a bit, can take big numbers
- \titlespacing*{\subsubsection}{0pt}{\dimexpr.5\baselineskip }{.5\baselineskip}
+ \titleformat{\subsubsection}[block]{\RaggedRight}{}{0pt}{\normalsize\selectfont\itshape #1}%Textls sets spacing. 100 is a bit, can take big numbers
+ \titlespacing*{\subsubsection}{0pt}{6pt plus 3pt minus 3pt}{6pt plus 3pt minus 3pt}
 
      \titleformat{name=\paragraph}[runin]
        {\mdseries}
@@ -1032,7 +1009,7 @@
        {}%
        {}{0pt}{\textit{#1}\ \ \ }
 
- \titlespacing*{\paragraph}{}{\baselineskip}{0pt}
+ \titlespacing*{\paragraph}{0pt}{\baselineskip}{0pt}
  \titlespacing*{\subparagraph}{\parindent}{\baselineskip}{0pt}
 
 
@@ -1054,9 +1031,9 @@
 {\begin{quoting}\def\@quotesource{#1}}
 {\par\hfill\@quotesource\end{quoting}}
 
-\newenvironment{pullquote}
-{\begin{quoting}[vskip=\dimexpr 39pt-23pt\relax,leftmargin=12pt,rightmargin=12pt,font+={raggedright},begintext={\fontsize{18pt}{23pt}\sffamily\mdseries\color{black!50}}]}
-{\end{quoting}}
+% \newenvironment{pullquote}
+% {\begin{quoting}[vskip=\dimexpr 39pt-23pt\relax,leftmargin=12pt,rightmargin=12pt,font+={RaggedRight},begintext={\fontsize{18pt}{23pt}\sffamily\mdseries\color{black!50}}]}
+% {\end{quoting}}
 
 % Enum/itemized
 \RequirePackage[inline]{enumitem}
@@ -1094,39 +1071,50 @@
 
 % Captions
     \RequirePackage{caption}
-%\captionsetup*[table]{skip=0.5ex}
 
 % Tables
 \RequirePackage{stfloats} %hopefully lead to better table placement
+\RequirePackage{tabularht} % allows you to specify the height of a table, useful to get rid of stupid misalignment issues
 \AtBeginEnvironment{table}{%
   \renewcommand{\arraystretch}{1.25}%
   \setlength{\arrayrulewidth}{1pt}%
 }
+
 \AtBeginEnvironment{table*}{%
   \renewcommand{\arraystretch}{1.25}%
   \setlength{\arrayrulewidth}{1pt}%
 }
+
 \RequirePackage{threeparttable}
 \renewcommand{\TPTnoteSettings}{\leftmargin=0pt}
 \newcommand{\headrow}{\rowcolor{black!20}}
 \newcommand{\thead}[1]{\multicolumn{1}{l}{\bfseries #1\rule[-1.2ex]{0pt}{2em}}}
 
 
+\AtBeginEnvironment{tabular}{%
+\small
+}
+\AtBeginEnvironment{tabularx}{%
+\small
+}
 
 
 
 % References
 % Authordate just uses biblatex apa
 \if@numeric
-  \RequirePackage[backend=biber, citestyle=numeric-comp, sorting=none, bibstyle=apa]{biblatex}
+  \RequirePackage[backend=biber, citestyle=numeric-comp, sorting=none, bibstyle=apa, backref=true, backrefstyle=none]{biblatex}
   \AtEndPreamble{\makeatletter
     \input{numeric.bbx}
   \makeatother}
 \fi
 \if@authordate
-    \RequirePackage[backend=biber, style=apa]{biblatex}
+    \RequirePackage[backend=biber, style=apa,backref=true, backrefstyle=none]{biblatex}
 \fi
-
+\DefineBibliographyStrings{english}{%
+  backrefpage = {see p\adddot},%
+  backrefpages = {see pp\adddot}%
+}
 
 
 
@@ -1162,10 +1150,8 @@
 
 % Make the indentation of bib info not as dramatic like get over yourself
 
-%\AtBeginDocument{
 \setlength{\bibhang}{\parindent}
 \setlength{\bibitemsep}{0.3\smallwidth}
-%}
 
 \defbibheading{bibliography}[\refname]{\section{#1}}
 
@@ -1206,21 +1192,18 @@
   }{}{}
 
 
+\RequirePackage{nowidow}
 % Here we go!
 
 % Set some lengths that might get set otherwise
-\setlength{\textfloatsep}{1\smallwidth}
-%\setlength{\intextsep}{0pt}
-%\setlength{\floatsep}{0pt}
-%\setlength{\bibhang}{\parindent}
-\setlength{\parskip}{0pt}
+% \setlength{\textfloatsep}{1\smallwidth}
+% \setlength{\parskip}{0pt}
+% \setlength{\lineskip}{0pt}
 
 % This will give you MUCH more useful errors
-\setcounter{errorcontextlines}{30}
 %\normalsize
 \pagestyle{fancy}
 \AtEndPreamble{%
-    % \captionsetup[table]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad, size=small}
     \captionsetup{tableposition=top,figureposition=bottom, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={darklightblack}, small}, justification=RaggedRight}
 }
 \AtBeginDocument{%
@@ -1228,6 +1211,27 @@
   \robustify{\cite}
   \ifdef{\citep}{\robustify{\citep}}{}
   \ifdef{\citet}{\robustify{\citet}}{}
+
+% \flushbottom
+\setlength{\emergencystretch}{3em} % prevent overfull line
+
+% \setlength{\textfloatsep}{2\dimexpr\baselineskip + 0pt \relax plus 0.5\dimexpr\baselineskip + 0pt \relax minus 0.5\dimexpr\baselineskip + 0pt \relax} 
+% \setlength{\floatsep}{\dimexpr\baselineskip + 0pt \relax plus 0.5\dimexpr\baselineskip + 0pt \relax minus 0.5\dimexpr\baselineskip + 0pt \relax}
+% \setlength{\intextsep}{\dimexpr\baselineskip + 0pt \relax plus 0.5\dimexpr\baselineskip + 0pt \relax minus 0.5\dimexpr\baselineskip + 0pt \relax}
+
+\setlength{\textfloatsep}{24.0pt plus 24.0pt minus 24.0pt}
+\setlength{\floatsep}{12.0pt plus 12.0pt minus 12.0pt}
+\setlength{\intextsep}{12.0pt plus 12.0pt minus 12.0pt}
+% \setlength{\parskip}{0pt}
+% \raggedbottom
+\setnoclub[1]
+\setnowidow[2]
+% \setlength{abovecaptionskip}{}\\
+% \setlength{belowcaptionskip}\\
+
+% \setlength{textfloatsep}{20.0pt plus 10.0pt minus 10.0pt} 
+% \setlength{floatsep}{12.0pt plus 10.0pt minus 10.0pt}
+% \setlength{intextsep}{12.0pt plus 10.0pt minus 10.0pt}
 }
 
 % Local Variables:

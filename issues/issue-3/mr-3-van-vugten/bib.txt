@@ -1,0 +1,26 @@
+Bedeian, A. G., Taylor, S. G., & Miller, A. N. (2010). Management science on the credibility bubble: Cardinal sins and various misdemeanors. Academy of Management Learning & Education, 9(4), 715-725.
+Bettis, R. A. (2012). The search for asterisks: Compromised statistical tests and flawed theories. Strategic Management Journal, 33(1), 108-113.
+Cook, T. D., Gruder, C. L., Hennigan, K. M., & Flay, B. R. (1979). History of the sleeper effect: Some logical pitfalls in accepting the null hypothesis. Psychological Bulletin, 86(4), 662.
+Cross, R. (1982). The Duhem-Quine thesis, Lakatos and the appraisal of theories in macroeconomics. The Economic Journal, 92(366), 320-340.
+Davis, M. S. (1971). That's interesting! Towards a phenomenology of sociology and a sociology of phenomenology. Philosophy of the Social Sciences, 1(2), 309-344.
+Haveman, H. A. (1993). Follow the leader: Mimetic isomorphism and entry into new markets. Administrative Science Quarterly, 38(4), 593-627.
+Heugens, P. P., & Lander, M. W. (2009). Structure! Agency!(and other quarrels): A meta-analysis of institutional theories of organization. Academy of Management Journal, 52(1), 61-85.
+Hines, R. D. (1988). Popper’s methodology of falsificationism and accounting research. The Accounting Review, 63(4), 657–662. 
+Hollenbeck, J. R., & Wright, P. M. (2017). Harking, Sharking, and Tharking: Making the Case for Post Hoc Analysis of Scientific Data. Journal of Management, 43(1), 5–18.
+Johns, G. (2019). GUIDEPOST: Departures from conventional wisdom: Where’s the next opposite effect? Academy of Management Discoveries. doi:10.5465/amd.2019.0226.
+Lakatos, I. (1970). Falsification and the methodology of scientific research programmes. Criticism and the Growth of Knowledge, 91–196. Cambridge University Press.
+Locke, K., Golden-Biddle, K., & Feldman, M. S. (2008). Perspective—Making doubt generative: rethinking the role of doubt in the research process. Organization Science, 19(6), 907–918.
+Mazzola, J. J., & Deuling, J. K. (2013). Forgetting what we learned as graduate students: HARKing and selective outcome reporting in I–O journal articles. Industrial and Organizational Psychology, 6(3), 279-284.
+Murphy, K. R., & Aguinis, H. (2019). HARKing: How badly can cherry-picking and question trolling produce bias in published results?. Journal of business and psychology, 34(1), 1-17.
+Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. Science, 349(6251).
+Rubin, M. (2017). When does HARKing hurt? Identifying when different types of undisclosed post hoc hypothesizing harm scientific progress. Review of General Psychology, 21(4), 308-320.
+Schwab, A., Abrahamson, E., Starbuck, W. H., & Fidler, F. (2011). Perspective—researchers should make thoughtful assessments instead of null-hypothesis significance tests. Organization Science, 22(4), 1105-1120. 
+Schwab, A. and Starbuck, W.H. (2012). Using baseline models to improve theories about emerging markets In Wang, C.L., Ketchen, D.J. and Bergh, D.D. (Ed.) West Meets East: Toward Methodological Exchange (Research Methodology in Strategy and Management, Vol. 7), pp. 3-33. Emerald Group Publishing Limited, Bingley,. 
+Schwab, A., & Starbuck, W. H. (2017). A call for openness in research reporting: How to turn covert practices into helpful tools. Academy of Management Learning & Education, 16(1), 125-141. 
+Søberg, M. (2005). The Duhem‐Quine thesis and experimental economics: A reinterpretation. Journal of Economic Methodology, 12(4), 581-597. 
+Spector, P. E., & Brannick, M. T. (2011). Methodological urban legends: The misuse of statistical control variables. Organizational Research Methods, 14(2), 287-305. 
+Van Hugten, J. & van Witteloostuijn, A. (2021). The State of the Art of Hypothesis Testing in the Social Sciences. In H. C. Van der Mandele & A. van Witteloostuijn (Eds.), A Future for Economics (1st ed., pp. 167-185). VU University Press.
+Van Witteloostuijn, A. (2016). What happened to Popperian falsification? Publishing neutral and negative findings. Cross Cultural & Strategic Management, 23(3), 481-508. 
+Wasserstein, R. L., Schirm, A. L., & Lazar, N. A. (2019). Moving to a World Beyond “p < 0.05.” The American Statistician, 73(sup1), 1–19.
+Weick, K. E. (1999). Conclusion: Theory Construction as Disciplined Reflexivity: Tradeoffs in the 90s. The Academy of Management Review, 24(4), 797–806.
+

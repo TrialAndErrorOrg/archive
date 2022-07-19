@@ -2788,15 +2788,15 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">vugten.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Collaboration2015</bcf:citekey>
+    <bcf:citekey order="1">OpenScienceCollaboration2015</bcf:citekey>
     <bcf:citekey order="2">Mazzola2013</bcf:citekey>
-    <bcf:citekey order="2">Hugten2021</bcf:citekey>
+    <bcf:citekey order="2">vanHugten2021</bcf:citekey>
     <bcf:citekey order="3">Bedeian2010</bcf:citekey>
     <bcf:citekey order="3">Rubin2017</bcf:citekey>
-    <bcf:citekey order="4">Witteloostuijn2016</bcf:citekey>
+    <bcf:citekey order="4">vanWitteloostuijn2016</bcf:citekey>
     <bcf:citekey order="5">Johns2019</bcf:citekey>
     <bcf:citekey order="6">Davis1971</bcf:citekey>
     <bcf:citekey order="7">Lakatos1970</bcf:citekey>
@@ -2809,52 +2809,58 @@
     <bcf:citekey order="11">Rubin2017</bcf:citekey>
     <bcf:citekey order="12">Rubin2017</bcf:citekey>
     <bcf:citekey order="13">Wasserstein2019</bcf:citekey>
+    <bcf:citekey order="14">Wasserstein2019</bcf:citekey>
     <bcf:citekey order="15">Hines1988</bcf:citekey>
     <bcf:citekey order="15">Lakatos1970</bcf:citekey>
-    <bcf:citekey order="15">Søberg2005</bcf:citekey>
-    <bcf:citekey order="15">Weick1999</bcf:citekey>
-    <bcf:citekey order="16">Søberg2005</bcf:citekey>
-    <bcf:citekey order="17">Lakatos1970</bcf:citekey>
-    <bcf:citekey order="17">Cross1982</bcf:citekey>
-    <bcf:citekey order="18">Davis1971</bcf:citekey>
-    <bcf:citekey order="18">Spector2011</bcf:citekey>
-    <bcf:citekey order="19">Davis1971</bcf:citekey>
-    <bcf:citekey order="20">Cook1979</bcf:citekey>
-    <bcf:citekey order="22">Heugens2009</bcf:citekey>
-    <bcf:citekey order="24">Murphy2019</bcf:citekey>
-    <bcf:citekey order="25">Hollenbeck2017</bcf:citekey>
-    <bcf:citekey order="26">Locke2008</bcf:citekey>
-    <bcf:citekey order="26">Schwab2017</bcf:citekey>
-    <bcf:citekey order="27">Haveman1993</bcf:citekey>
-    <bcf:citekey order="28">Bettis2012</bcf:citekey>
-    <bcf:citekey order="28">Bettis2012</bcf:citekey>
-    <bcf:citekey order="28">Wasserstein2019</bcf:citekey>
-    <bcf:citekey order="28">Schwab2011</bcf:citekey>
-    <bcf:citekey order="29">Collaboration2015</bcf:citekey>
-    <bcf:citekey order="30">Mazzola2013</bcf:citekey>
-    <bcf:citekey order="31">Hugten2021</bcf:citekey>
-    <bcf:citekey order="32">Bedeian2010</bcf:citekey>
-    <bcf:citekey order="33">Rubin2017</bcf:citekey>
-    <bcf:citekey order="34">Witteloostuijn2016</bcf:citekey>
-    <bcf:citekey order="35">Johns2019</bcf:citekey>
-    <bcf:citekey order="36">Davis1971</bcf:citekey>
-    <bcf:citekey order="37">Lakatos1970</bcf:citekey>
-    <bcf:citekey order="38">Cross1982</bcf:citekey>
-    <bcf:citekey order="39">Schwab2012</bcf:citekey>
-    <bcf:citekey order="40">Hollenbeck2017</bcf:citekey>
-    <bcf:citekey order="41">Locke2008</bcf:citekey>
-    <bcf:citekey order="42">Schwab2017</bcf:citekey>
-    <bcf:citekey order="43">Wasserstein2019</bcf:citekey>
-    <bcf:citekey order="44">Hines1988</bcf:citekey>
-    <bcf:citekey order="45">Søberg2005</bcf:citekey>
-    <bcf:citekey order="46">Weick1999</bcf:citekey>
-    <bcf:citekey order="47">Spector2011</bcf:citekey>
-    <bcf:citekey order="48">Cook1979</bcf:citekey>
-    <bcf:citekey order="49">Heugens2009</bcf:citekey>
-    <bcf:citekey order="50">Murphy2019</bcf:citekey>
-    <bcf:citekey order="51">Haveman1993</bcf:citekey>
-    <bcf:citekey order="52">Bettis2012</bcf:citekey>
-    <bcf:citekey order="53">Schwab2011</bcf:citekey>
+    <bcf:citekey order="15">Soberg2005</bcf:citekey>
+    <bcf:citekey order="16">Weick1999</bcf:citekey>
+    <bcf:citekey order="17">Soberg2005</bcf:citekey>
+    <bcf:citekey order="18">Lakatos1970</bcf:citekey>
+    <bcf:citekey order="19">Cross1982</bcf:citekey>
+    <bcf:citekey order="20">Cross1982</bcf:citekey>
+    <bcf:citekey order="21">Davis1971</bcf:citekey>
+    <bcf:citekey order="22">Spector2011</bcf:citekey>
+    <bcf:citekey order="23">Davis1971</bcf:citekey>
+    <bcf:citekey order="24">Cook1979</bcf:citekey>
+    <bcf:citekey order="25">Cook1979</bcf:citekey>
+    <bcf:citekey order="26">Cook1979</bcf:citekey>
+    <bcf:citekey order="27">Cook1979</bcf:citekey>
+    <bcf:citekey order="28">Heugens2009</bcf:citekey>
+    <bcf:citekey order="29">Heugens2009</bcf:citekey>
+    <bcf:citekey order="30">Murphy2019</bcf:citekey>
+    <bcf:citekey order="31">Hollenbeck2017</bcf:citekey>
+    <bcf:citekey order="32">Locke2008</bcf:citekey>
+    <bcf:citekey order="32">Schwab2017</bcf:citekey>
+    <bcf:citekey order="33">Haveman1993</bcf:citekey>
+    <bcf:citekey order="34">Bettis2012</bcf:citekey>
+    <bcf:citekey order="35">Bettis2012</bcf:citekey>
+    <bcf:citekey order="35">Wasserstein2019</bcf:citekey>
+    <bcf:citekey order="36">Schwab2011</bcf:citekey>
+    <bcf:citekey order="37">OpenScienceCollaboration2015</bcf:citekey>
+    <bcf:citekey order="38">Mazzola2013</bcf:citekey>
+    <bcf:citekey order="39">vanHugten2021</bcf:citekey>
+    <bcf:citekey order="40">Bedeian2010</bcf:citekey>
+    <bcf:citekey order="41">Rubin2017</bcf:citekey>
+    <bcf:citekey order="42">vanWitteloostuijn2016</bcf:citekey>
+    <bcf:citekey order="43">Johns2019</bcf:citekey>
+    <bcf:citekey order="44">Davis1971</bcf:citekey>
+    <bcf:citekey order="45">Lakatos1970</bcf:citekey>
+    <bcf:citekey order="46">Cross1982</bcf:citekey>
+    <bcf:citekey order="47">Schwab2012</bcf:citekey>
+    <bcf:citekey order="48">Hollenbeck2017</bcf:citekey>
+    <bcf:citekey order="49">Locke2008</bcf:citekey>
+    <bcf:citekey order="50">Schwab2017</bcf:citekey>
+    <bcf:citekey order="51">Wasserstein2019</bcf:citekey>
+    <bcf:citekey order="52">Hines1988</bcf:citekey>
+    <bcf:citekey order="53">Soberg2005</bcf:citekey>
+    <bcf:citekey order="54">Weick1999</bcf:citekey>
+    <bcf:citekey order="55">Spector2011</bcf:citekey>
+    <bcf:citekey order="56">Cook1979</bcf:citekey>
+    <bcf:citekey order="57">Heugens2009</bcf:citekey>
+    <bcf:citekey order="58">Murphy2019</bcf:citekey>
+    <bcf:citekey order="59">Haveman1993</bcf:citekey>
+    <bcf:citekey order="60">Bettis2012</bcf:citekey>
+    <bcf:citekey order="61">Schwab2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
@@ -2897,4 +2903,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="apa/global//global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

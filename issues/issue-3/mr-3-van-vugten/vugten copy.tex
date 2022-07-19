@@ -1,47 +1,74 @@
- \documentclass[empirical, authordate, meta]{jote-new-article}
+ \documentclass[twocolumn, 10pt]{article}
 % \usepackage[style=apa]{biblatex}
 % \addbibresource{bibliography.bib}\usepackage{graphicx}\usepackage{hyperref}
 
 
 
 % \addbibresource{./bibliography.bib}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage[style=apa]{biblatex}
+\usepackage{tabularx}
+\usepackage{lettrine}
+
+\usepackage{changepage}% provides the adjustwidth environment
+% \usepackage{multicol}% for multiple columns inside the fullwidth environment
+
+% The following code should be used *after* any changes to the margins and
+% page layout are made (e.g., after the geometry package has been loaded).
+\newlength{\fullwidthlen}
+\setlength{\fullwidthlen}{\marginparwidth}
+\addtolength{\fullwidthlen}{\marginparsep}
+
+\newenvironment{fullwidth}{%
+  \begin{adjustwidth}{-\fullwidthlen}{}%
+}{%
+  \end{adjustwidth}%
+}
+
+\usepackage{float}
+
 \addbibresource{vugten.bib}
 
-\jotetitle{An Introduction to \\ \mbox{Complementary Explanation}}
-\keywordsabstract{philosophy of science, falsification, publication bias, complementary explanation}
-\runningauthor{van Hugten}
-\jname{Journal of Trial and Error}
+\title{An Introduction to Complementary Explanation}
 
-\jyear{2022}
-\paperdoi{10.36850/mr3}
-\paperreceived{August 29. 2021}
-\author[1]{Joeri van Hugten{\orcid{https://orcid.org/0000-0002-8040-5192}}}
-\authorone{Joeri van Hugten}
-\affil[1]{Vrije Universiteit Amsterdam}
+\usepackage{caption}
+     \captionsetup{tableposition=top,figureposition=bottom, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={black}, small}, justification=RaggedRight}
+% \keywordsabstract{Philosophy of science, Falsification, Publication bias, Complementary explanation}
+% \runningauthor{van Hugten}
+% \jname{Journal of Trial and Error}
 
-\corremail{\href{mailto:j.g.w.j.van.hugten@vu.nl}{j.g.w.j.van.hugten@vu.nl}}
-\corraddress{Vrije Universiteit Amsterdam}
+% \jyear{2022}
+% \paperdoi{10.36850/mr3}
+% \paperreceived{August 29. 2021}
+% \author[1]{Joeri van Hugten{\orcid{https://orcid.org/0000-0002-8040-5192}}}
+% \authorone{Joeri van Hugten}
+% \affil[1]{Vrije Universiteit Amsterdam}
 
-\paperaccepted{May 12, 2022}
-\paperpublished{July 19, 2022}
-% \paperissued{3 March, 2022}
-\paperpublisheddate{2022-07-19}
-\jwebsite{https://jtrialerror.com}
+% \corremail{\href{mailto:j.g.w.j.van.hugten@vu.nl}{j.g.w.j.van.hugten@vu.nl}}
+% \corraddress{Vrije Universiteit Amsterdam}
 
-\acknowledgments{I would to thank the reviewers, Pablo Martin de Holan, Jana Retkowsky, Arjen van Witteloostuijn, and the OT reading group at Tilburg University for their encouragement and valuable feedback on an earlier version of this work.}
+% \paperaccepted{May 12, 2022}
+% \paperpublished{3 March, 2022}
+% % \paperissued{3 March, 2022}
+% \paperpublisheddate{2022-03-02}
+% \jwebsite{https://jtrialerror.com}
 
-\abstracttext{This paper introduces the practice of complementary explanation; the practice of taking a published result and writing a focused paper that rigorously and systematically describes the implications for a theory that would be rejected by those results. Such spotlighting of a rejected theory counteracts the common alignment between theory and result in published work.}
+% \acknowledgments{I would to thank the reviewers, Pablo Martin de Holan, Jana Retkowsky, Arjen van Witteloostuijn, and the OT reading group at Tilburg University for their encouragement and valuable feedback on an earlier version of this work.}
+
+% \abstracttext{This paper introduces the practice of complementary explanation; the practice of taking a published result and writing a focused paper that rigorously and systematically describes the implications for a theory that would be rejected by those results. Such spotlighting of a rejected theory counteracts the common alignment between theory and result in published work.}
 
 \begin{document}
 
-  \begin{frontmatter}
+  % \begin{frontmatter}
   \maketitle
-  \begin{abstract}
-    \printabstracttext
-  \end{abstract}
-  \end{frontmatter}
-
-\lettrine{T}{he reliability of} the social sciences is threatened by underreporting. Underreporting refers to reported evidence not reflecting all collected evidence. This is concerning if reported evidence is a systematically disproportionate subset of collected evidence. Currently, this is the case with reported evidence being severely biased toward evidence that supports theories. For example, a large-scale replication of 100 psychology experiments replicated only 36 out of 97 significant results \parencite{OpenScienceCollaboration2015}.  In industrial organizational psychology, hypotheses in journal articles are 73\% supported and 12\% rejected, while hypotheses in dissertations (which should be more representative of all collected evidence) are only 33\% supported and 42\% rejected \parencite{Mazzola2013,vanHugten2021}
+  % \begin{abstract}
+    % \printabstracttext
+  % \end{abstract}
+  % \end{frontmatter}
+\the\parskip
+\lettrine{T}{he reliability of} the social sciences is threatened by underreporting. Underreporting refers to reported evidence not reflecting all collected evidence. This is concerning if reported evidence is a systematically disproportionate subset of collected evidence. Currently, this is the case with reported evidence being severely biased toward evidence that supports theories. For example, a large-scale replication of 100 psychology experiments replicated only 36 out of 97 significant results \parencite{OpenScienceCollaboration2015}.  In industrial organizational psychology, hypotheses in journal articles are 73\% supported and 12\% rejected, while hypotheses in dissertations (which should be more representative of all collected evidence) are only 33\% supported and 42\% rejected \parencite{Mazzola2013, Hugten2021}
 
 Underreporting is caused by underreporting practices such as hypothesizing after the results are known (HARKing) and not writing up all conducted tests. This leads to bias because especially results that do not support a paper's theory tend to be the ones not written up, and hypotheses made after the results are known tend to be ones that are in line with those results. Underreporting practices are prevalent. Measuring socially undesirable behavior is difficult, but best efforts suggest that 91\% of academics know faculty who engaged in HARKing in the past year, 77\% knows faculty who selected data that would support their hypothesis and withheld the rest \parencite{Bedeian2010, Rubin2017}
 
@@ -57,7 +84,8 @@ Besides psychological factors (e.g., confirmation bias) and sociological factors
 
 In the theory and hypothesis sections, why do HARKed hypotheses tend to be in line with the result? My personal intuition is that researchers understand that, at the level of the research program, theories aim to explain phenomena, but that this gets mistakenly transferred to believing that also hypotheses aim to explain results, at the level of the individual study. Given that aim, it follows that hypotheses that are not in line with the result are not useful \parencite{Johns2019}. By contrast, falsificationist principles maintain that hypotheses aim to challenge theory. For that aim, also hypotheses that are not in the line with the result can be valuable (as long as they are tightly connected to a theory).
 
-% \clearpage
+In the results section, why are results against hypothesis the underreported kinds of result? 
+\clearpage
 
 \begin{table}[t!] 
 \begin{fullwidth}
@@ -99,7 +127,7 @@ Discussion section focus on explaining the result & Explaining the result is the
 \end{table}
 
 
-In the results section, why are results against hypothesis the underreported kinds of result? A possible underlying belief is that results that support hypotheses grant more valuable knowledge. In direct contrast, a key principle of falsification is that results against hypotheses give more valuable knowledge. For instance, seminal falsificationist Karl Popper argues that we learn more from results against hypotheses. Broadly speaking, the argument is that a result that supports a hypothesis does not imply that the theory is true, because that is affirming the consequent. Specifically, such an inference would go: ‘if theory T is true, then data D should be observed' (i.e., the hypothesis), ‘data D is observed' (i.e., the result is in line with the hypothesis), ‘Therefore, theory T is true'. This is a logical fallacy because there may be alternative explanations for data D. Therefore, researchers try hard to rule out such alternative explanations by using random assignment, control variables, or more advanced statistical techniques. By contrast, a rejected hypothesis does imply that at least one premise in the theory or operationalization is false, because it is denying the consequent which is a valid form of argument (even if alternative explanations were not excluded). Less extremely, \parencite{Davis1971}  influentially argues that results that go against our expectations are more interesting. 
+\noindent A possible underlying belief is that results that support hypotheses grant more valuable knowledge. In direct contrast, a key principle of falsification is that results against hypotheses give more valuable knowledge. For instance, seminal falsificationist Karl Popper argues that we learn more from results against hypotheses. Broadly speaking, the argument is that a result that supports a hypothesis does not imply that the theory is true, because that is affirming the consequent. Specifically, such an inference would go: ‘if theory T is true, then data D should be observed' (i.e., the hypothesis), ‘data D is observed' (i.e., the result is in line with the hypothesis), ‘Therefore, theory T is true'. This is a logical fallacy because there may be alternative explanations for data D. Therefore, researchers try hard to rule out such alternative explanations by using random assignment, control variables, or more advanced statistical techniques. By contrast, a rejected hypothesis does imply that at least one premise in the theory or operationalization is false, because it is denying the consequent which is a valid form of argument (even if alternative explanations were not excluded). Less extremely, \parencite{Davis1971}
 
 In the discussion section, if a rejected hypothesis is reported, why is the expectation that authors explain the result? I speculate that the underlying belief may be that explaining data is a more important goal than improving theory. By contrast, falsificationist principles hold improving theory as the main goal. Therefore, those principles suggest that discussion sections build on the result to contribute contingencies that make the theory less simple or generalizable, and as a result, more accurate \parencite[e.g.,][]{Lakatos1970, Cross1982}. Contributing contingencies can also happen in the process of explaining a result. However, the distinction is especially clear when discussion sections bring in a completely different theory that does fit the result. The distinction also becomes clearer if one imagines a more extreme alternate world in which discussion sections purposefully attempt to bring in additional theories that are opposite to the result. By contrast, current practice is that no further discussion is needed once the result is explained.
 
@@ -115,7 +143,7 @@ Because of the opposition to falsificationist principles in the aspects of under
 \caption{CE Steps}
 \label{tab:3}
 
-\begin{tabularx}{\columnwidth}{@{}>{\RaggedRight\arraybackslash}p{0.38\linewidth} >{\RaggedRight\arraybackslash}p{0.55\linewidth}@{}}
+\begin{tabularx}{\columnwidth}{@{}>{\RaggedRight\arraybackslash}p{0.3\linewidth} >{\RaggedRight\arraybackslash}p{0.62\linewidth}@{}}
 
   \textbf{Steps} & \textbf{Notes}\\
   % \toprule \\
@@ -138,12 +166,13 @@ The term ‘complementary explanation' is a variation on the term ‘alternative
 
 To appreciate CE's unique focus, Table \ref{tab:2} positions CE in the context of a comprehensive list of similar existing practices. CE is similar to counterarguments, competing hypotheses, meaningful baselines, or theory-driven null hypotheses \parencite[e.g.,][]{Schwab2012}. The difference is that CE is to be used after the result is known. Even more extremely, CE can be done after publication by someone who was not the original author. 
 
+\the\baselineskip
 
 CE is like HARKing and spinoffs like Tharking (i.e., transparently hypothesizing after the results are known \parencite{Hollenbeck2017, Rubin2017} and abduction \parencite{Locke2008, Schwab2017} in that all those practices happen after a result is found. However, the difference is that those practices aim to explain a result (although RHarking is, in principal, also open to rejected hypotheses \parencite{Rubin2017}). For example, abduction would never involve explaining the opposite of the result. In other words, hypotheses made after the results are known tend to be ones that are in line with those results. But they need not be that way. CE is like transparently making a hypothesis after the result is known, that is opposite to that result. That shift in focus counteracts the threat of HARKing to research reliability. Finally, CE is like SHarking (suppressing hypotheses after the results are known); the most threatening form of HARKing \parencite{Rubin2017}, except that SHarking focuses on suppressing rejected hypotheses while CE adds exactly such hypotheses.
 
 \section{CE Steps}
 
-The steps to interpret supportive results seem clear: e.g., 1)\ p<0.05, 2)\ hypothesis supported, and 3)\ more confidence in the theory (but see \textcite{Wasserstein2019} for how it is not that simple). By contrast, the application of falsification is impeded by a lack of such clear steps. CE is a way to codify falsificationist interpretation steps. Table \ref{tab:3} summarizes these steps. 
+The steps to interpret supportive results seem clear: e.g., 1)\ $p<0.05$, 2)\ hypothesis supported, and 3)\ more confidence in the theory (but see \textcite{Wasserstein2019} for how it is not that simple). By contrast, the application of falsification is impeded by a lack of such clear steps. CE is a way to codify falsificationist interpretation steps. Table \ref{tab:3} summarizes these steps. 
 
 
 
@@ -162,6 +191,8 @@ Steps 2 to 6 contribute by identifying ways to restore accuracy by trading-off s
 
 Step 7 makes summarizes the complication; making explicit the degeneration that is forced upon the theory by the result. It is possible that a result is inconsistent with a CE because of bad measures, auxiliary premises, or research designs. The CE author can decide whether a CE with a step 7 that reads ‘Measure X does not capture concept A (in some context)' contributes enough to be worth the effort. If a challenged premise is paper-specific, the contribution may be small. On the other hand, the contribution may be large enough if measure X is typical. For example, see \textcite{Cook1979} discussing why insignificant results regarding the cognitive bias ‘sleeper effect' are due to operationalizations not appreciating theoretical nuances. \textcite{Cook1979}'s paper is like a CE paper, except that CE reframes the discussion from ‘in this paper we remind people of some important nuances in the theory, which empirical studies have failed to appreciate, which led to insignificant results' to ‘insignificant results have forced us to appreciate the importance of some nuances, and in this paper, we make explicit the nuances we now believe to be important'. 
 
+
+
 \section{Full circle}
 
 Given those details, we can see how CE counteracts underreporting by improving meta-analyses. Meta-analyses use concept labels as inclusion criteria. For example, \textcite{Heugens2009}'s meta-analysis on ‘mimetic pressure's effect on isomorphism' uses a variety of concept labels to search for literature (e.g., ‘isomorphism', ‘institutional theory'). Underreporting practices cause studies to be described in terms of concepts that are supported by the result. Therefore, meta-analyses disproportionately include studies that support the theory \parencite{Murphy2019}. (Note also that while Tharking \parencite{Hollenbeck2017} and abduction \parencite{Locke2008, Schwab2017} do not mislead like HARKing, they still lead studies to be described in terms of concepts that are supported by the results). 
@@ -172,12 +203,11 @@ Enter CE. For example, a study finds a positive effect of ‘competition' (measu
 
 \section{Conclusion}
 
-Proposals to combat underreporting focus on preventing underreporting practices; e.g., de-emphasize p-values \parencite{Bettis2012}, stop using “p<0.05”, \parencite{Bettis2012, Wasserstein2019}, or abandoning null-hypothesis significance testing \parencite{Schwab2011}. Such proposals are less feasible due to the inertia of current practice. By contrast, CE counteracts underreporting without preventing practices that lead to underreporting; it adds to, rather than changes, current practice. That increases feasibility. That is why the explanation of CE’s value can assume that HARKing and not writing up tests continue at the usual rate. CE’s value does not depend on whether a hypothesis was truly made after the results were known, nor does its value depend on what caused underreporting. CE makes use of the potential for interacting with studies after publication. 
+Proposals to combat underreporting focus on preventing underreporting practices; e.g., de-emphasize p-values \parencite{Bettis2012}, stop using “p<0.05”, \parencite{Bettis2012, Wasserstein2019},or abandoning null-hypothesis significance testing \parencite{Schwab2011}. Such proposals are less feasible due to the inertia of current practice. By contrast, CE counteracts underreporting without preventing practices that lead to underreporting; it adds to, rather than changes, current practice. That increases feasibility. That is why the explanation of CE’s value can assume that HARKing and not writing up tests continue at the usual rate. CE’s value does not depend on whether a hypothesis was truly made after the results were known, nor does its value depend on what caused underreporting. CE makes use of the potential for interacting with studies after publication. 
 
 Moreover, CE is a useful practice, even if underreporting did not exist. First, CE also increases research reliability more directly. When CE is done by others than those who found the result, research reliability is increased simply by having an extra person thinking through the meaning of the data from a fresh perspective. Second, we put strain on others when collecting data. This comes with a responsibility to make the most of our data. CE helps fulfill that responsibility by reusing published results, in contrast to demands for efficient rather than comprehensive presentation, and novel findings.
 
 In sum, I hope people use CE to learn more from the same findings and especially learn about, and from, those things that we currently miss due to underreporting. 
-\clearpage
 
 
 

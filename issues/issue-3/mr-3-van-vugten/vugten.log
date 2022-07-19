@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Homebrew)  (format=lualatex 2022.3.21)  15 JUL 2022 17:56
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Homebrew)  (format=lualatex 2022.3.21)  19 JUL 2022 11:57
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten
@@ -36,19 +36,11 @@ Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'. L3 programming layer <2022-02-24>
 Inserting `tracingstacklevels' at position 1 in `input_level_string'. (/Users/thomas/texmf/tex/latex/jote-new-article.cls
 Document Class: jote-new-article 2022/03/01, v2.0
-(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/extsizes/extarticle.cls
-Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/extsizes/size9.clo
-File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /opt/homebrew/Cellar/texlive/20220321/share/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/exscale.sty
-Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-\big@size=\dimen137
-)
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /opt/homebrew/Cellar/texlive/20220321/share/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \c@part=\count183
 \c@section=\count184
 \c@subsection=\count185
@@ -59,7 +51,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \c@table=\count190
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen138
+\bibindent=\dimen137
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrextend.sty
 Package: scrextend 2021/11/13 v3.35 KOMA-Script package (extend other classes with features of KOMA-Script classes)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -103,30 +95,30 @@ Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
 \l__fontspec_emdef_int=\count266
 \l__fontspec_strong_int=\count267
 \l__fontspec_strongdef_int=\count268
-\l__fontspec_tmpa_dim=\dimen139
-\l__fontspec_tmpb_dim=\dimen140
-\l__fontspec_tmpc_dim=\dimen141
+\l__fontspec_tmpa_dim=\dimen138
+\l__fontspec_tmpb_dim=\dimen139
+\l__fontspec_tmpc_dim=\dimen140
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen142
-\lightrulewidth=\dimen143
-\cmidrulewidth=\dimen144
-\belowrulesep=\dimen145
-\belowbottomsep=\dimen146
-\aboverulesep=\dimen147
-\abovetopsep=\dimen148
-\cmidrulesep=\dimen149
-\cmidrulekern=\dimen150
-\defaultaddspace=\dimen151
+\heavyrulewidth=\dimen141
+\lightrulewidth=\dimen142
+\cmidrulewidth=\dimen143
+\belowrulesep=\dimen144
+\belowbottomsep=\dimen145
+\aboverulesep=\dimen146
+\abovetopsep=\dimen147
+\cmidrulesep=\dimen148
+\cmidrulekern=\dimen149
+\defaultaddspace=\dimen150
 \@cmidla=\count269
 \@cmidlb=\count270
-\@aboverulesep=\dimen152
-\@belowrulesep=\dimen153
+\@aboverulesep=\dimen151
+\@belowrulesep=\dimen152
 \@thisruleclass=\count271
 \@lastruleclass=\count272
-\@thisrulewidth=\dimen154
+\@thisrulewidth=\dimen153
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -139,9 +131,9 @@ File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen155
+\col@sep=\dimen154
 \ar@mcellbox=\box51
-\extrarowheight=\dimen156
+\extrarowheight=\dimen155
 \NC@list=\toks17
 \extratabsurround=\skip49
 \backup@length=\skip50
@@ -166,8 +158,8 @@ Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count274
 \calc@Bcount=\count275
-\calc@Adimen=\dimen157
-\calc@Bdimen=\dimen158
+\calc@Adimen=\dimen156
+\calc@Bdimen=\dimen157
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
@@ -186,10 +178,10 @@ Package: amstext 2021/08/26 v2.01 AMS text
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
-\ex@=\dimen159
+\ex@=\dimen158
 )) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen160
+\pmbraise@=\dimen159
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
@@ -205,7 +197,7 @@ LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box53
 \strutbox@=\box54
-\big@size=\dimen161
+\big@size=\dimen160
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \macc@depth=\count282
@@ -218,12 +210,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \column@=\count287
 \maxfields@=\count288
 \andhelp@=\toks21
-\eqnshift@=\dimen162
-\alignsep@=\dimen163
-\tagshift@=\dimen164
-\tagwidth@=\dimen165
-\totwidth@=\dimen166
-\lineht@=\dimen167
+\eqnshift@=\dimen161
+\alignsep@=\dimen162
+\tagshift@=\dimen163
+\tagwidth@=\dimen164
+\totwidth@=\dimen165
+\lineht@=\dimen166
 \@envbody=\toks22
 \multlinegap=\skip56
 \multlinetaggap=\skip57
@@ -232,16 +224,16 @@ LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
 \g_MT_multlinerow_int=\count289
-\l_MT_multwidth_dim=\dimen168
+\l_MT_multwidth_dim=\dimen167
 \origjot=\skip58
-\l_MT_shortvdotswithinadjustabove_dim=\dimen169
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen170
-\l_MT_above_intertext_sep=\dimen171
-\l_MT_below_intertext_sep=\dimen172
-\l_MT_above_shortintertext_sep=\dimen173
-\l_MT_below_shortintertext_sep=\dimen174
+\l_MT_shortvdotswithinadjustabove_dim=\dimen168
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen169
+\l_MT_above_intertext_sep=\dimen170
+\l_MT_below_intertext_sep=\dimen171
+\l_MT_above_shortintertext_sep=\dimen172
+\l_MT_below_shortintertext_sep=\dimen173
 \xmathstrut@box=\box55
-\xmathstrut@dim=\dimen175
+\xmathstrut@dim=\dimen174
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
@@ -260,15 +252,15 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 107.
 )
-\Gin@req@height=\dimen176
-\Gin@req@width=\dimen177
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen178
-\TX@old@table=\dimen179
-\TX@old@col=\dimen180
-\TX@target=\dimen181
-\TX@delta=\dimen182
+\TX@col@width=\dimen177
+\TX@old@table=\dimen178
+\TX@old@col=\dimen179
+\TX@target=\dimen180
+\TX@delta=\dimen181
 \TX@cols=\count290
 \TX@ftn=\toks24
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/textcase/textcase.sty
@@ -313,9 +305,9 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks28
 \SOUL@token=\toks29
 \SOUL@spaceskip=\skip75
-\SOUL@ttwidth=\dimen183
-\SOUL@uldp=\dimen184
-\SOUL@ulht=\dimen185
+\SOUL@ttwidth=\dimen182
+\SOUL@uldp=\dimen183
+\SOUL@ulht=\dimen184
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/xpatch/xpatch.sty
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -356,7 +348,7 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen186
+\@linkdim=\dimen185
 \Hy@linkcounter=\count296
 \Hy@pagecounter=\count297
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -379,15 +371,15 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
 \c@Hy@tempcnt=\count299
 LaTeX Info: Redefining \url on input line 4749.
-\XeTeXLinkMargin=\dimen187
+\XeTeXLinkMargin=\dimen186
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count300
-\Field@Width=\dimen188
-\Fld@charsize=\dimen189
+\Field@Width=\dimen187
+\Fld@charsize=\dimen188
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -436,11 +428,11 @@ Package: paracol 2018/12/31 v1.35
 \pcol@footnotebase=\count313
 \pcol@nfootnotes=\count314
 \pcol@mcid=\count315
-\pcol@prevdepth=\dimen190
-\pcol@colht=\dimen191
-\pcol@textfloatsep=\dimen192
-\pcol@lrmargin=\dimen193
-\pagerim=\dimen194
+\pcol@prevdepth=\dimen189
+\pcol@colht=\dimen190
+\pcol@textfloatsep=\dimen191
+\pcol@lrmargin=\dimen192
+\pagerim=\dimen193
 \pcol@topskip=\skip77
 \belowfootnoteskip=\skip78
 \pcol@topfnotes=\box58
@@ -514,14 +506,14 @@ Package: soulpos 2021/10/15 v1.2 Fancy underlining
 \ulp@cnt=\count324
 \ulp@out=\write3
 \ulp@in=\read2
-\ulwidth=\dimen195
+\ulwidth=\dimen194
 )
 Package zref Info: New property list: pdfcomment on input line 2735.
 Package zref Info: New property: PCPDFOBJID on input line 2736.
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks35
-\pgfutil@tempdima=\dimen196
-\pgfutil@tempdimb=\dimen197
+\pgfutil@tempdima=\dimen195
+\pgfutil@tempdimb=\dimen196
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box66
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -536,16 +528,16 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen198
-\pgf@y=\dimen199
-\pgf@xa=\dimen256
-\pgf@ya=\dimen257
-\pgf@xb=\dimen258
-\pgf@yb=\dimen259
-\pgf@xc=\dimen260
-\pgf@yc=\dimen261
-\pgf@xd=\dimen262
-\pgf@yd=\dimen263
+\pgf@x=\dimen197
+\pgf@y=\dimen198
+\pgf@xa=\dimen199
+\pgf@ya=\dimen256
+\pgf@xb=\dimen257
+\pgf@yb=\dimen258
+\pgf@xc=\dimen259
+\pgf@yc=\dimen260
+\pgf@xd=\dimen261
+\pgf@yd=\dimen262
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
 \c@pgf@counta=\count325
@@ -573,7 +565,7 @@ File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen264
+\pgfmath@dimen=\dimen263
 \pgfmath@count=\count332
 \pgfmath@box=\box67
 \pgfmath@toks=\toks42
@@ -583,28 +575,28 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 \c@pgfmathroundto@lastzeros=\count333
 )) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen265
-\pgf@picmaxx=\dimen266
-\pgf@picminy=\dimen267
-\pgf@picmaxy=\dimen268
-\pgf@pathminx=\dimen269
-\pgf@pathmaxx=\dimen270
-\pgf@pathminy=\dimen271
-\pgf@pathmaxy=\dimen272
-\pgf@xx=\dimen273
-\pgf@xy=\dimen274
-\pgf@yx=\dimen275
-\pgf@yy=\dimen276
-\pgf@zx=\dimen277
-\pgf@zy=\dimen278
+\pgf@picminx=\dimen264
+\pgf@picmaxx=\dimen265
+\pgf@picminy=\dimen266
+\pgf@picmaxy=\dimen267
+\pgf@pathminx=\dimen268
+\pgf@pathmaxx=\dimen269
+\pgf@pathminy=\dimen270
+\pgf@pathmaxy=\dimen271
+\pgf@xx=\dimen272
+\pgf@xy=\dimen273
+\pgf@yx=\dimen274
+\pgf@yy=\dimen275
+\pgf@zx=\dimen276
+\pgf@zy=\dimen277
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen279
-\pgf@path@lasty=\dimen280
+\pgf@path@lastx=\dimen278
+\pgf@path@lasty=\dimen279
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen281
-\pgf@shorten@start@additional=\dimen282
+\pgf@shorten@end@additional=\dimen280
+\pgf@shorten@start@additional=\dimen281
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box68
@@ -613,12 +605,12 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picture@serial@count=\count334
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen283
+\pgflinewidth=\dimen282
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen284
-\pgf@pt@y=\dimen285
-\pgf@pt@temp=\dimen286
+\pgf@pt@x=\dimen283
+\pgf@pt@y=\dimen284
+\pgf@pt@temp=\dimen285
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -628,10 +620,10 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen287
+\pgfarrowsep=\dimen286
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen288
+\pgf@max=\dimen287
 \pgf@sys@shading@range@num=\count335
 \pgf@shadingcount=\count336
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
@@ -654,15 +646,15 @@ File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen289
-\pgf@nodesepend=\dimen290
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen291
-\pgffor@skip=\dimen292
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
 )) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
@@ -670,16 +662,16 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@plot@mark@count=\count337
-\pgfplotmarksize=\dimen293
+\pgfplotmarksize=\dimen292
 )
-\tikz@lastx=\dimen294
-\tikz@lasty=\dimen295
-\tikz@lastxsaved=\dimen296
-\tikz@lastysaved=\dimen297
-\tikz@lastmovetox=\dimen298
-\tikz@lastmovetoy=\dimen299
-\tikzleveldistance=\dimen300
-\tikzsiblingdistance=\dimen301
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikz@lastmovetox=\dimen297
+\tikz@lastmovetoy=\dimen298
+\tikzleveldistance=\dimen299
+\tikzsiblingdistance=\dimen300
 \tikz@figbox=\box73
 \tikz@figbox@bg=\box74
 \tikz@tempbox=\box75
@@ -787,9 +779,9 @@ Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
 Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.2'
-\tcbfitdim=\dimen302
-\tcb@lowerfitdim=\dimen303
-\tcb@upperfitdim=\dimen304
+\tcbfitdim=\dimen301
+\tcb@lowerfitdim=\dimen302
+\tcb@upperfitdim=\dimen303
 \tcb@cur@hbadness=\count356
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.2'
@@ -802,14 +794,14 @@ Library (tcolorbox): 'tcblistings.code.tex' version '5.0.2'
 \lst@gtempboxa=\box89
 \lst@token=\toks49
 \lst@length=\count358
-\lst@currlwidth=\dimen305
+\lst@currlwidth=\dimen304
 \lst@column=\count359
 \lst@pos=\count360
-\lst@lostspace=\dimen306
-\lst@width=\dimen307
+\lst@lostspace=\dimen305
+\lst@width=\dimen306
 \lst@newlines=\count361
 \lst@lineno=\count362
-\lst@maxwidth=\dimen308
+\lst@maxwidth=\dimen307
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count363
@@ -853,12 +845,12 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: placeins 2005/04/18  v 2.2
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty
 Package: xcoffins 2022-02-05 L3 Experimental design level coffins
-\l__coffin_hoffset_dim=\dimen309
-\l__coffin_voffset_dim=\dimen310
-\l__coffin_height_dim=\dimen311
-\l__coffin_depth_dim=\dimen312
-\l__coffin_width_dim=\dimen313
-\l__coffin_totalheight_dim=\dimen314
+\l__coffin_hoffset_dim=\dimen308
+\l__coffin_voffset_dim=\dimen309
+\l__coffin_height_dim=\dimen310
+\l__coffin_depth_dim=\dimen311
+\l__coffin_width_dim=\dimen312
+\l__coffin_totalheight_dim=\dimen313
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
 
@@ -879,14 +871,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count367
 \Gm@cntv=\count368
 \c@Gm@tempcnt=\count369
-\Gm@bindingoffset=\dimen315
-\Gm@wd@mp=\dimen316
-\Gm@odd@mp=\dimen317
-\Gm@even@mp=\dimen318
-\Gm@layoutwidth=\dimen319
-\Gm@layoutheight=\dimen320
-\Gm@layouthoffset=\dimen321
-\Gm@layoutvoffset=\dimen322
+\Gm@bindingoffset=\dimen314
+\Gm@wd@mp=\dimen315
+\Gm@odd@mp=\dimen316
+\Gm@even@mp=\dimen317
+\Gm@layoutwidth=\dimen318
+\Gm@layoutheight=\dimen319
+\Gm@layouthoffset=\dimen320
+\Gm@layoutvoffset=\dimen321
 \Gm@dimlist=\toks52
 
 
@@ -903,29 +895,29 @@ Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack-
 )
 \c@DefaultLines=\count371
 \c@DefaultDepth=\count372
-\DefaultFindent=\dimen323
-\DefaultNindent=\dimen324
-\DefaultSlope=\dimen325
-\DiscardVskip=\dimen326
+\DefaultFindent=\dimen322
+\DefaultNindent=\dimen323
+\DefaultSlope=\dimen324
+\DiscardVskip=\dimen325
 \L@lbox=\box93
 \L@tbox=\box94
 \c@L@lines=\count373
 \c@L@depth=\count374
-\L@Pindent=\dimen327
-\L@Findent=\dimen328
-\L@Nindent=\dimen329
-\L@lraise=\dimen330
-\L@first=\dimen331
-\L@next=\dimen332
-\L@slope=\dimen333
-\L@height=\dimen334
-\L@novskip=\dimen335
-\L@target@ht=\dimen336
-\L@target@dp=\dimen337
-\L@target@tht=\dimen338
-\LettrineWidth=\dimen339
-\LettrineHeight=\dimen340
-\LettrineDepth=\dimen341
+\L@Pindent=\dimen326
+\L@Findent=\dimen327
+\L@Nindent=\dimen328
+\L@lraise=\dimen329
+\L@first=\dimen330
+\L@next=\dimen331
+\L@slope=\dimen332
+\L@height=\dimen333
+\L@novskip=\dimen334
+\L@target@ht=\dimen335
+\L@target@dp=\dimen336
+\L@target@tht=\dimen337
+\LettrineWidth=\dimen338
+\LettrineHeight=\dimen339
+\LettrineDepth=\dimen340
 \Llist@everypar=\toks53
 
 Loading lettrine.cfg
@@ -1008,7 +1000,7 @@ Package fontspec Info: Font family 'FiraMathRegular(0)' created for font 'Fira
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 76.
+(Font)              scaled to size 10.0pt on input line 76.
 luaotfload | aux : font no 19 (nil) does not define feature lnum for script math with language dflt
 
 Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
@@ -1064,8 +1056,8 @@ Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
 
 Package fontspec Info: Font family 'FiraMathRegular(1)' created for font 'Fira
 (fontspec)             Math Regular' with options
-(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
-(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-6.5,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },Scale={1},Numbers={Lining,Monospaced}].
@@ -1074,13 +1066,13 @@ Package fontspec Info: Font family 'FiraMathRegular(1)' created for font 'Fira
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <7.74->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;"<5.85-7.74>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-5.85>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             <8.6->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;"<6.5-8.6>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-6.5>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 76.
+(Font)              scaled to size 10.0pt on input line 76.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 76.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -1156,40 +1148,40 @@ Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
 
 Package fontspec Info: Font family 'FiraMathRegular(2)' created for font 'Fira
 (fontspec)             Math Regular' with options
-(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
-(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-6.5,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },Scale={1},Numbers={Lining,Monospaced},ScaleAgain=1.0001,FontAdjustment={\fontdimen
-(fontspec)             8\font =5.21999pt\relax \fontdimen 9\font
-(fontspec)             =4.04999pt\relax \fontdimen 10\font =4.04999pt\relax
-(fontspec)             \fontdimen 11\font =6.29999pt\relax \fontdimen 12\font
-(fontspec)             =4.31999pt\relax \fontdimen 13\font =3.59999pt\relax
-(fontspec)             \fontdimen 14\font =3.59999pt\relax \fontdimen 15\font
-(fontspec)             =2.43pt\relax \fontdimen 16\font =3.15pt\relax
-(fontspec)             \fontdimen 17\font =3.15pt\relax \fontdimen 18\font
-(fontspec)             =3.23999pt\relax \fontdimen 19\font =2.25pt\relax
-(fontspec)             \fontdimen 22\font =2.51999pt\relax \fontdimen 20\font
-(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)             8\font =5.79999pt\relax \fontdimen 9\font =4.5pt\relax
+(fontspec)             \fontdimen 10\font =4.5pt\relax \fontdimen 11\font
+(fontspec)             =7.0pt\relax \fontdimen 12\font =4.79999pt\relax
+(fontspec)             \fontdimen 13\font =4.0pt\relax \fontdimen 14\font
+(fontspec)             =4.0pt\relax \fontdimen 15\font =2.7pt\relax \fontdimen
+(fontspec)             16\font =3.5pt\relax \fontdimen 17\font =3.5pt\relax
+(fontspec)             \fontdimen 18\font =3.59999pt\relax \fontdimen 19\font
+(fontspec)             =2.5pt\relax \fontdimen 22\font =2.79999pt\relax
+(fontspec)             \fontdimen 20\font =0pt\relax \fontdimen 21\font
+(fontspec)             =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <7.74->s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;"<5.85-7.74>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-5.85>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             <8.6->s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;"<6.5-8.6>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-6.5>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =5.21999pt\relax \fontdimen 9\font =4.04999pt\relax
-(fontspec)             \fontdimen 10\font =4.04999pt\relax \fontdimen 11\font
-(fontspec)             =6.29999pt\relax \fontdimen 12\font =4.31999pt\relax
-(fontspec)             \fontdimen 13\font =3.59999pt\relax \fontdimen 14\font
-(fontspec)             =3.59999pt\relax \fontdimen 15\font =2.43pt\relax
-(fontspec)             \fontdimen 16\font =3.15pt\relax \fontdimen 17\font
-(fontspec)             =3.15pt\relax \fontdimen 18\font =3.23999pt\relax
-(fontspec)             \fontdimen 19\font =2.25pt\relax \fontdimen 22\font
-(fontspec)             =2.51999pt\relax \fontdimen 20\font =0pt\relax
-(fontspec)             \fontdimen 21\font =0pt\relax 
+(fontspec)             =5.79999pt\relax \fontdimen 9\font =4.5pt\relax
+(fontspec)             \fontdimen 10\font =4.5pt\relax \fontdimen 11\font
+(fontspec)             =7.0pt\relax \fontdimen 12\font =4.79999pt\relax
+(fontspec)             \fontdimen 13\font =4.0pt\relax \fontdimen 14\font
+(fontspec)             =4.0pt\relax \fontdimen 15\font =2.7pt\relax \fontdimen
+(fontspec)             16\font =3.5pt\relax \fontdimen 17\font =3.5pt\relax
+(fontspec)             \fontdimen 18\font =3.59999pt\relax \fontdimen 19\font
+(fontspec)             =2.5pt\relax \fontdimen 22\font =2.79999pt\relax
+(fontspec)             \fontdimen 20\font =0pt\relax \fontdimen 21\font
+(fontspec)             =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `normal' on input line 76.
@@ -1266,28 +1258,28 @@ Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (tnum) not
 
 Package fontspec Info: Font family 'FiraMathRegular(3)' created for font 'Fira
 (fontspec)             Math Regular' with options
-(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
-(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-6.5,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },Scale={1},Numbers={Lining,Monospaced},ScaleAgain=0.9999,FontAdjustment={\fontdimen
-(fontspec)             8\font =0.68399pt\relax \fontdimen 9\font
-(fontspec)             =1.34999pt\relax \fontdimen 10\font =1.34999pt\relax
-(fontspec)             \fontdimen 11\font =1.34999pt\relax \fontdimen 12\font
-(fontspec)             =5.4pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             8\font =0.76pt\relax \fontdimen 9\font =1.5pt\relax
+(fontspec)             \fontdimen 10\font =1.5pt\relax \fontdimen 11\font
+(fontspec)             =1.5pt\relax \fontdimen 12\font =6.0pt\relax \fontdimen
+(fontspec)             13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <7.74->s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;"<5.85-7.74>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-5.85>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
+(fontspec)             <8.6->s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;"<6.5-8.6>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=0;"<-6.5>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =0.68399pt\relax \fontdimen 9\font =1.34999pt\relax
-(fontspec)             \fontdimen 10\font =1.34999pt\relax \fontdimen 11\font
-(fontspec)             =1.34999pt\relax \fontdimen 12\font =5.4pt\relax
-(fontspec)             \fontdimen 13\font =0pt\relax 
+(fontspec)             =0.76pt\relax \fontdimen 9\font =1.5pt\relax \fontdimen
+(fontspec)             10\font =1.5pt\relax \fontdimen 11\font =1.5pt\relax
+(fontspec)             \fontdimen 12\font =6.0pt\relax \fontdimen 13\font
+(fontspec)             =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 76.
@@ -1298,25 +1290,25 @@ LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/FiraMathRegular(3)/b/n on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 6.48pt on input line 76.
+(Font)              scaled to size 7.2pt on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.22pt on input line 76.
+(Font)              scaled to size 5.8pt on input line 76.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 76.
 (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 9.00096pt on input line 76.
+(Font)              scaled to size 10.00107pt on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 6.48068pt on input line 76.
+(Font)              scaled to size 7.20076pt on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.22055pt on input line 76.
+(Font)              scaled to size 5.80061pt on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 76.
+(Font)              scaled to size 9.99893pt on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 6.4793pt on input line 76.
+(Font)              scaled to size 7.19922pt on input line 76.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.21944pt on input line 76.
+(Font)              scaled to size 5.79938pt on input line 76.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1346,7 +1338,7 @@ Package fontspec Info: Font family 'FiraMathRegular(4)' created for font 'Fira
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(4)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 78.
+(Font)              scaled to size 10.0pt on input line 78.
 
 Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
 (fontspec)             doesn't exist).
@@ -1354,8 +1346,8 @@ Package fontspec Info: Could not resolve font "FiraMathRegular/B" (it probably
 
 Package fontspec Info: Font family 'FiraMathRegular(5)' created for font 'Fira
 (fontspec)             Math Regular' with options
-(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
-(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-6.5,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },Numbers={Proportional},Scale={1}].
@@ -1364,13 +1356,13 @@ Package fontspec Info: Font family 'FiraMathRegular(5)' created for font 'Fira
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <7.74->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<5.85-7.74>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-5.85>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
+(fontspec)             <8.6->s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<6.5-8.6>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-6.5>s*[1]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(5)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 78.
+(Font)              scaled to size 10.0pt on input line 78.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `pnum' on input line 78.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `pnum'
@@ -1394,40 +1386,40 @@ Package fontspec Info: FiraMathRegular scale = 1.0001.
 
 Package fontspec Info: Font family 'FiraMathRegular(6)' created for font 'Fira
 (fontspec)             Math Regular' with options
-(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
-(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-6.5,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },Numbers={Proportional},Scale={1},ScaleAgain=1.0001,FontAdjustment={\fontdimen
-(fontspec)             8\font =5.21999pt\relax \fontdimen 9\font
-(fontspec)             =4.04999pt\relax \fontdimen 10\font =4.04999pt\relax
-(fontspec)             \fontdimen 11\font =6.29999pt\relax \fontdimen 12\font
-(fontspec)             =4.31999pt\relax \fontdimen 13\font =3.59999pt\relax
-(fontspec)             \fontdimen 14\font =3.59999pt\relax \fontdimen 15\font
-(fontspec)             =2.43pt\relax \fontdimen 16\font =3.15pt\relax
-(fontspec)             \fontdimen 17\font =3.15pt\relax \fontdimen 18\font
-(fontspec)             =3.23999pt\relax \fontdimen 19\font =2.25pt\relax
-(fontspec)             \fontdimen 22\font =2.51999pt\relax \fontdimen 20\font
-(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)             8\font =5.79999pt\relax \fontdimen 9\font =4.5pt\relax
+(fontspec)             \fontdimen 10\font =4.5pt\relax \fontdimen 11\font
+(fontspec)             =7.0pt\relax \fontdimen 12\font =4.79999pt\relax
+(fontspec)             \fontdimen 13\font =4.0pt\relax \fontdimen 14\font
+(fontspec)             =4.0pt\relax \fontdimen 15\font =2.7pt\relax \fontdimen
+(fontspec)             16\font =3.5pt\relax \fontdimen 17\font =3.5pt\relax
+(fontspec)             \fontdimen 18\font =3.59999pt\relax \fontdimen 19\font
+(fontspec)             =2.5pt\relax \fontdimen 22\font =2.79999pt\relax
+(fontspec)             \fontdimen 20\font =0pt\relax \fontdimen 21\font
+(fontspec)             =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <7.74->s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<5.85-7.74>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-5.85>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
+(fontspec)             <8.6->s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<6.5-8.6>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-6.5>s*[1.0001]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =5.21999pt\relax \fontdimen 9\font =4.04999pt\relax
-(fontspec)             \fontdimen 10\font =4.04999pt\relax \fontdimen 11\font
-(fontspec)             =6.29999pt\relax \fontdimen 12\font =4.31999pt\relax
-(fontspec)             \fontdimen 13\font =3.59999pt\relax \fontdimen 14\font
-(fontspec)             =3.59999pt\relax \fontdimen 15\font =2.43pt\relax
-(fontspec)             \fontdimen 16\font =3.15pt\relax \fontdimen 17\font
-(fontspec)             =3.15pt\relax \fontdimen 18\font =3.23999pt\relax
-(fontspec)             \fontdimen 19\font =2.25pt\relax \fontdimen 22\font
-(fontspec)             =2.51999pt\relax \fontdimen 20\font =0pt\relax
-(fontspec)             \fontdimen 21\font =0pt\relax 
+(fontspec)             =5.79999pt\relax \fontdimen 9\font =4.5pt\relax
+(fontspec)             \fontdimen 10\font =4.5pt\relax \fontdimen 11\font
+(fontspec)             =7.0pt\relax \fontdimen 12\font =4.79999pt\relax
+(fontspec)             \fontdimen 13\font =4.0pt\relax \fontdimen 14\font
+(fontspec)             =4.0pt\relax \fontdimen 15\font =2.7pt\relax \fontdimen
+(fontspec)             16\font =3.5pt\relax \fontdimen 17\font =3.5pt\relax
+(fontspec)             \fontdimen 18\font =3.59999pt\relax \fontdimen 19\font
+(fontspec)             =2.5pt\relax \fontdimen 22\font =2.79999pt\relax
+(fontspec)             \fontdimen 20\font =0pt\relax \fontdimen 21\font
+(fontspec)             =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `pnum' on input line 78.
@@ -1452,28 +1444,28 @@ Package fontspec Info: FiraMathRegular scale = 0.9999.
 
 Package fontspec Info: Font family 'FiraMathRegular(7)' created for font 'Fira
 (fontspec)             Math Regular' with options
-(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=7.74-},{Size=5.85-7.74,Font=Fira
-(fontspec)             Math Regular,Style=MathScript},{Size=-5.85,Font=Fira
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
+(fontspec)             Math Regular,Style=MathScript},{Size=-6.5,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdimens:
 (fontspec)             },Numbers={Proportional},Scale={1},ScaleAgain=0.9999,FontAdjustment={\fontdimen
-(fontspec)             8\font =0.68399pt\relax \fontdimen 9\font
-(fontspec)             =1.34999pt\relax \fontdimen 10\font =1.34999pt\relax
-(fontspec)             \fontdimen 11\font =1.34999pt\relax \fontdimen 12\font
-(fontspec)             =5.4pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             8\font =0.76pt\relax \fontdimen 9\font =1.5pt\relax
+(fontspec)             \fontdimen 10\font =1.5pt\relax \fontdimen 11\font
+(fontspec)             =1.5pt\relax \fontdimen 12\font =6.0pt\relax \fontdimen
+(fontspec)             13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <7.74->s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<5.85-7.74>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-5.85>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
+(fontspec)             <8.6->s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;"<6.5-8.6>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=0;"<-6.5>s*[0.9999]"FiraMathRegular:mode=base;script=math;language=dflt;+pnum;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
-(fontspec)             =0.68399pt\relax \fontdimen 9\font =1.34999pt\relax
-(fontspec)             \fontdimen 10\font =1.34999pt\relax \fontdimen 11\font
-(fontspec)             =1.34999pt\relax \fontdimen 12\font =5.4pt\relax
-(fontspec)             \fontdimen 13\font =0pt\relax 
+(fontspec)             =0.76pt\relax \fontdimen 9\font =1.5pt\relax \fontdimen
+(fontspec)             10\font =1.5pt\relax \fontdimen 11\font =1.5pt\relax
+(fontspec)             \fontdimen 12\font =6.0pt\relax \fontdimen 13\font
+(fontspec)             =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `pnum' on input line 78.
@@ -1523,11 +1515,11 @@ Package fontspec Info: Font family 'OpenSans(1)' created for font 'OpenSans'
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/FiraMathRegular(1)/m/n --> TU/OpenSans(1)/m/n on input line 345.
+(Font)                  TU/FiraMathRegular(1)/m/n --> TU/OpenSans(1)/m/n on input line 344.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/OpenSans(1)/m/it on input line 345.
+(Font)                  OT1/lmr/m/it --> TU/OpenSans(1)/m/it on input line 344.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/OpenSans(1)/b/n on input line 345.
+(Font)                  OT1/lmr/bx/n --> TU/OpenSans(1)/b/n on input line 344.
 luaotfload | aux : font no 63 (nil) does not define feature smcp for script latn with language dflt
 luaotfload | aux : font no 64 (nil) does not define feature smcp for script latn with language dflt
 luaotfload | aux : font no 65 (nil) does not define feature smcp for script latn with language dflt
@@ -1592,7 +1584,7 @@ LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
 LaTeX Info: Redefining \leftprotrusion on input line 1028.
 LaTeX Info: Redefining \rightprotrusion on input line 1036.
 LaTeX Info: Redefining \textls on input line 1195.
-\MT@outer@kern=\dimen342
+\MT@outer@kern=\dimen341
 LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
 \MT@listname@count=\count381
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/microtype-luatex.def
@@ -1636,83 +1628,28 @@ Package: academicons 2021/11/26 v1.9.1 Academicons Icons
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count386
 \cp@tempcnt=\count387
-) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count388
-\mult@box=\box96
-\multicol@leftmargin=\dimen343
-\c@unbalance=\count389
-\c@collectmore=\count390
-\doublecol@number=\count391
-\multicoltolerance=\count392
-\multicolpretolerance=\count393
-\full@width=\dimen344
-\page@free=\dimen345
-\premulticols=\dimen346
-\postmulticols=\dimen347
-\multicolsep=\skip92
-\multicolbaselineskip=\skip93
-\partial@page=\box97
-\last@line=\box98
-\maxbalancingoverflow=\dimen348
-\mult@rightbox=\box99
-\mult@grightbox=\box100
-\mult@firstbox=\box101
-\mult@gfirstbox=\box102
-\@tempa=\box103
-\@tempa=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\@tempa=\box109
-\@tempa=\box110
-\@tempa=\box111
-\@tempa=\box112
-\@tempa=\box113
-\@tempa=\box114
-\@tempa=\box115
-\@tempa=\box116
-\@tempa=\box117
-\@tempa=\box118
-\@tempa=\box119
-\@tempa=\box120
-\@tempa=\box121
-\@tempa=\box122
-\@tempa=\box123
-\@tempa=\box124
-\@tempa=\box125
-\@tempa=\box126
-\@tempa=\box127
-\@tempa=\box128
-\@tempa=\box129
-\@tempa=\box130
-\@tempa=\box131
-\@tempa=\box132
-\@tempa=\box133
-\@tempa=\box134
-\@tempa=\box135
-\@tempa=\box136
-\@tempa=\box137
-\@tempa=\box138
-\c@minrows=\count394
-\c@columnbadness=\count395
-\c@finalcolumnbadness=\count396
-\last@try=\dimen349
-\multicolovershoot=\dimen350
-\multicolundershoot=\dimen351
-\mult@nat@firstbox=\box139
-\colbreak@box=\box140
-\mc@col@check@num=\count397
 )
-\fullwidthlen=\skip94
-\c@tcb@cnt@reviewend=\count398
-\c@tcb@cnt@reviewat=\count399
+\fullwidthlen=\skip92
+\c@tcb@cnt@reviewend=\count388
+\c@tcb@cnt@reviewat=\count389
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperxmp/hyperxmp.sty
+Package: hyperxmp 2020/11/22 v5.9 Store hyperref metadata in XMP format
+\hyxmp@aep@toks=\toks58
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/lualatex/luacode/luacode.sty
+Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
+\luacode@lines=\toks59
+\luacode@table@soft=\catcodetable14
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+\hyxmp@cct=\catcodetable15
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 578.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
-\FN@temptoken=\toks58
-\footnotemargin=\dimen352
-\@outputbox@depth=\dimen353
+\FN@temptoken=\toks60
+\footnotemargin=\dimen342
+\@outputbox@depth=\dimen343
 Package footmisc Info: Declaring symbol style bringhurst on input line 695.
 Package footmisc Info: Declaring symbol style chicago on input line 703.
 Package footmisc Info: Declaring symbol style wiley on input line 712.
@@ -1721,171 +1658,173 @@ Package footmisc Info: Declaring symbol style lamport* on input line 743.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 764.
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip95
-\f@nch@O@elh=\skip96
-\f@nch@O@erh=\skip97
-\f@nch@O@olh=\skip98
-\f@nch@O@orh=\skip99
-\f@nch@O@elf=\skip100
-\f@nch@O@erf=\skip101
-\f@nch@O@olf=\skip102
-\f@nch@O@orf=\skip103
+\f@nch@headwidth=\skip93
+\f@nch@O@elh=\skip94
+\f@nch@O@erh=\skip95
+\f@nch@O@olh=\skip96
+\f@nch@O@orh=\skip97
+\f@nch@O@elf=\skip98
+\f@nch@O@erf=\skip99
+\f@nch@O@olf=\skip100
+\f@nch@O@orf=\skip101
 )
-\myoddoffset=\skip104
+\myoddoffset=\skip102
 
 
-Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 636.
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 648.
 
 (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2020/09/26 v1.10
 
 Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
 Package textpos Info: choosing support for LaTeX3 on input line 61.
-\TP@textbox=\box141
-\TPHorizModule=\dimen354
-\TPVertModule=\dimen355
-\TP@margin=\dimen356
-\TP@absmargin=\dimen357
+\TP@textbox=\box96
+\TPHorizModule=\dimen344
+\TPVertModule=\dimen345
+\TP@margin=\dimen346
+\TP@absmargin=\dimen347
 Grid set 16 x 16 = 37.34424pt x 49.79231pt
-\TPboxrulesize=\dimen358
-\TP@tbargs=\toks59
+\TPboxrulesize=\dimen348
+\TP@tbargs=\toks61
 )
-\MainFrame=\box142
-\Logo=\box143
-\PaperType=\box144
-\Authorx=\box145
-\Titlex=\box146
-\AuthSep=\skip105
-\LogoSep=\skip106
-\LogoWidth=\skip107
-\titleheight=\skip108
-\MetaWidth=\skip109
-\MetaHeight=\skip110
-\jote@affilmetadataheight=\skip111
-\jote@abstractheight=\skip112
-\jote@newaffilwidth=\skip113
-\jote@newabstractwidth=\skip114
-\jote@newheight=\skip115
+\MainFrame=\box97
+\Logo=\box98
+\PaperType=\box99
+\Authorx=\box100
+\Titlex=\box101
+\AuthSep=\skip103
+\LogoSep=\skip104
+\LogoWidth=\skip105
+\titleheight=\skip106
+\MetaWidth=\skip107
+\MetaHeight=\skip108
+\jote@affilmetadataheight=\skip109
+\jote@abstractheight=\skip110
+\jote@newaffilwidth=\skip111
+\jote@newabstractwidth=\skip112
+\jote@newheight=\skip113
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
-\ttl@box=\box147
-\beforetitleunit=\skip116
-\aftertitleunit=\skip117
-\ttl@plus=\dimen359
-\ttl@minus=\dimen360
-\ttl@toksa=\toks60
-\titlewidth=\dimen361
-\titlewidthlast=\dimen362
-\titlewidthfirst=\dimen363
+\ttl@box=\box102
+\beforetitleunit=\skip114
+\aftertitleunit=\skip115
+\ttl@plus=\dimen349
+\ttl@minus=\dimen350
+\ttl@toksa=\toks62
+\titlewidth=\dimen351
+\titlewidthlast=\dimen352
+\titlewidthfirst=\dimen353
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/quoting/quoting.sty
 Package: quoting 2014/01/28 v0.1c Consolidated environment for displayed text
-\quo@toppartop=\skip118
+\quo@toppartop=\skip116
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip119
-\enit@outerparindent=\dimen364
-\enit@toks=\toks61
-\enit@inbox=\box148
-\enit@count@id=\count400
-\enitdp@description=\count401
+\labelindent=\skip117
+\enit@outerparindent=\dimen354
+\enit@toks=\toks63
+\enit@inbox=\box103
+\enit@count@id=\count390
+\enitdp@description=\count391
 )
-\c@theorem=\count402
-\c@lemma=\count403
-\c@proposition=\count404
-\c@corollary=\count405
+\c@theorem=\count392
+\c@lemma=\count393
+\c@proposition=\count394
+\c@corollary=\count395
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen365
-\captionmargin=\dimen366
-\caption@leftmargin=\dimen367
-\caption@rightmargin=\dimen368
-\caption@width=\dimen369
-\caption@indent=\dimen370
-\caption@parindent=\dimen371
-\caption@hangindent=\dimen372
+\caption@tempdima=\dimen355
+\captionmargin=\dimen356
+\caption@leftmargin=\dimen357
+\caption@rightmargin=\dimen358
+\caption@width=\dimen359
+\caption@indent=\dimen360
+\caption@parindent=\dimen361
+\caption@hangindent=\dimen362
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count406
-\c@continuedfloat=\count407
+\c@caption@flags=\count396
+\c@continuedfloat=\count397
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen373
-\caption@adjustwidth@linewidth=\dimen374
+\caption@adjustwidth@hsize=\dimen363
+\caption@adjustwidth@linewidth=\dimen364
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/sttools/stfloats.sty
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip settings
-\@dblbotnum=\count408
-\c@dblbotnumber=\count409
+\@dblbotnum=\count398
+\c@dblbotnumber=\count399
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/oberdiek/tabularht.sty
+Package: tabularht 2019/12/29 v2.7 Tabular with height specified (HO)
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box149
+\@tempboxb=\box104
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count410
+\lrq@indent=\count400
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count411
-\c@listtotal=\count412
-\c@listcount=\count413
-\c@liststart=\count414
-\c@liststop=\count415
-\c@citecount=\count416
-\c@citetotal=\count417
-\c@multicitecount=\count418
-\c@multicitetotal=\count419
-\c@instcount=\count420
-\c@maxnames=\count421
-\c@minnames=\count422
-\c@maxitems=\count423
-\c@minitems=\count424
-\c@citecounter=\count425
-\c@maxcitecounter=\count426
-\c@savedcitecounter=\count427
-\c@uniquelist=\count428
-\c@uniquename=\count429
-\c@refsection=\count430
-\c@refsegment=\count431
-\c@maxextratitle=\count432
-\c@maxextratitleyear=\count433
-\c@maxextraname=\count434
-\c@maxextradate=\count435
-\c@maxextraalpha=\count436
-\c@abbrvpenalty=\count437
-\c@highnamepenalty=\count438
-\c@lownamepenalty=\count439
-\c@maxparens=\count440
-\c@parenlevel=\count441
-\blx@tempcnta=\count442
-\blx@tempcntb=\count443
-\blx@tempcntc=\count444
-\c@blx@maxsection=\count445
-\c@blx@maxsegment@0=\count446
-\blx@notetype=\count447
-\blx@parenlevel@text=\count448
-\blx@parenlevel@foot=\count449
-\c@blx@sectionciteorder@0=\count450
-\blx@entrysetcounter=\count451
-\blx@biblioinstance=\count452
-\labelnumberwidth=\skip120
-\labelalphawidth=\skip121
-\biblabelsep=\skip122
-\bibitemsep=\skip123
-\bibnamesep=\skip124
-\bibinitsep=\skip125
-\bibparsep=\skip126
-\bibhang=\skip127
+\c@tabx@nest=\count401
+\c@listtotal=\count402
+\c@listcount=\count403
+\c@liststart=\count404
+\c@liststop=\count405
+\c@citecount=\count406
+\c@citetotal=\count407
+\c@multicitecount=\count408
+\c@multicitetotal=\count409
+\c@instcount=\count410
+\c@maxnames=\count411
+\c@minnames=\count412
+\c@maxitems=\count413
+\c@minitems=\count414
+\c@citecounter=\count415
+\c@maxcitecounter=\count416
+\c@savedcitecounter=\count417
+\c@uniquelist=\count418
+\c@uniquename=\count419
+\c@refsection=\count420
+\c@refsegment=\count421
+\c@maxextratitle=\count422
+\c@maxextratitleyear=\count423
+\c@maxextraname=\count424
+\c@maxextradate=\count425
+\c@maxextraalpha=\count426
+\c@abbrvpenalty=\count427
+\c@highnamepenalty=\count428
+\c@lownamepenalty=\count429
+\c@maxparens=\count430
+\c@parenlevel=\count431
+\blx@tempcnta=\count432
+\blx@tempcntb=\count433
+\blx@tempcntc=\count434
+\c@blx@maxsection=\count435
+\c@blx@maxsegment@0=\count436
+\blx@notetype=\count437
+\blx@parenlevel@text=\count438
+\blx@parenlevel@foot=\count439
+\c@blx@sectionciteorder@0=\count440
+\blx@entrysetcounter=\count441
+\blx@biblioinstance=\count442
+\labelnumberwidth=\skip118
+\labelalphawidth=\skip119
+\biblabelsep=\skip120
+\bibitemsep=\skip121
+\bibnamesep=\skip122
+\bibinitsep=\skip123
+\bibparsep=\skip124
+\bibhang=\skip125
 \blx@bcfin=\read5
 \blx@bcfout=\write5
 \blx@langwohyphens=\language2
-\c@mincomprange=\count453
-\c@maxcomprange=\count454
-\c@mincompwidth=\count455
+\c@mincomprange=\count443
+\c@maxcomprange=\count444
+\c@mincompwidth=\count445
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -1898,98 +1837,98 @@ File: apa.dbx 2021/12/24 v9.15 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count456
-\c@savedafterword=\count457
-\c@annotator=\count458
-\c@savedannotator=\count459
-\c@author=\count460
-\c@savedauthor=\count461
-\c@bookauthor=\count462
-\c@savedbookauthor=\count463
-\c@commentator=\count464
-\c@savedcommentator=\count465
-\c@editor=\count466
-\c@savededitor=\count467
-\c@editora=\count468
-\c@savededitora=\count469
-\c@editorb=\count470
-\c@savededitorb=\count471
-\c@editorc=\count472
-\c@savededitorc=\count473
-\c@foreword=\count474
-\c@savedforeword=\count475
-\c@holder=\count476
-\c@savedholder=\count477
-\c@introduction=\count478
-\c@savedintroduction=\count479
-\c@namea=\count480
-\c@savednamea=\count481
-\c@nameb=\count482
-\c@savednameb=\count483
-\c@namec=\count484
-\c@savednamec=\count485
-\c@translator=\count486
-\c@savedtranslator=\count487
-\c@shortauthor=\count488
-\c@savedshortauthor=\count489
-\c@shorteditor=\count490
-\c@savedshorteditor=\count491
-\c@narrator=\count492
-\c@savednarrator=\count493
-\c@execproducer=\count494
-\c@savedexecproducer=\count495
-\c@execdirector=\count496
-\c@savedexecdirector=\count497
-\c@with=\count498
-\c@savedwith=\count499
-\c@labelname=\count500
-\c@savedlabelname=\count501
-\c@institution=\count502
-\c@savedinstitution=\count503
-\c@lista=\count504
-\c@savedlista=\count505
-\c@listb=\count506
-\c@savedlistb=\count507
-\c@listc=\count508
-\c@savedlistc=\count509
-\c@listd=\count510
-\c@savedlistd=\count511
-\c@liste=\count512
-\c@savedliste=\count513
-\c@listf=\count514
-\c@savedlistf=\count515
-\c@location=\count516
-\c@savedlocation=\count517
-\c@organization=\count518
-\c@savedorganization=\count519
-\c@origlocation=\count520
-\c@savedoriglocation=\count521
-\c@origpublisher=\count522
-\c@savedorigpublisher=\count523
-\c@publisher=\count524
-\c@savedpublisher=\count525
-\c@language=\count526
-\c@savedlanguage=\count527
-\c@origlanguage=\count528
-\c@savedoriglanguage=\count529
-\c@citation=\count530
-\c@savedcitation=\count531
-\c@pageref=\count532
-\c@savedpageref=\count533
-\shorthandwidth=\skip128
-\shortjournalwidth=\skip129
-\shortserieswidth=\skip130
-\shorttitlewidth=\skip131
-\shortauthorwidth=\skip132
-\shorteditorwidth=\skip133
-\locallabelnumberwidth=\skip134
-\locallabelalphawidth=\skip135
-\localshorthandwidth=\skip136
-\localshortjournalwidth=\skip137
-\localshortserieswidth=\skip138
-\localshorttitlewidth=\skip139
-\localshortauthorwidth=\skip140
-\localshorteditorwidth=\skip141
+\c@afterword=\count446
+\c@savedafterword=\count447
+\c@annotator=\count448
+\c@savedannotator=\count449
+\c@author=\count450
+\c@savedauthor=\count451
+\c@bookauthor=\count452
+\c@savedbookauthor=\count453
+\c@commentator=\count454
+\c@savedcommentator=\count455
+\c@editor=\count456
+\c@savededitor=\count457
+\c@editora=\count458
+\c@savededitora=\count459
+\c@editorb=\count460
+\c@savededitorb=\count461
+\c@editorc=\count462
+\c@savededitorc=\count463
+\c@foreword=\count464
+\c@savedforeword=\count465
+\c@holder=\count466
+\c@savedholder=\count467
+\c@introduction=\count468
+\c@savedintroduction=\count469
+\c@namea=\count470
+\c@savednamea=\count471
+\c@nameb=\count472
+\c@savednameb=\count473
+\c@namec=\count474
+\c@savednamec=\count475
+\c@translator=\count476
+\c@savedtranslator=\count477
+\c@shortauthor=\count478
+\c@savedshortauthor=\count479
+\c@shorteditor=\count480
+\c@savedshorteditor=\count481
+\c@narrator=\count482
+\c@savednarrator=\count483
+\c@execproducer=\count484
+\c@savedexecproducer=\count485
+\c@execdirector=\count486
+\c@savedexecdirector=\count487
+\c@with=\count488
+\c@savedwith=\count489
+\c@labelname=\count490
+\c@savedlabelname=\count491
+\c@institution=\count492
+\c@savedinstitution=\count493
+\c@lista=\count494
+\c@savedlista=\count495
+\c@listb=\count496
+\c@savedlistb=\count497
+\c@listc=\count498
+\c@savedlistc=\count499
+\c@listd=\count500
+\c@savedlistd=\count501
+\c@liste=\count502
+\c@savedliste=\count503
+\c@listf=\count504
+\c@savedlistf=\count505
+\c@location=\count506
+\c@savedlocation=\count507
+\c@organization=\count508
+\c@savedorganization=\count509
+\c@origlocation=\count510
+\c@savedoriglocation=\count511
+\c@origpublisher=\count512
+\c@savedorigpublisher=\count513
+\c@publisher=\count514
+\c@savedpublisher=\count515
+\c@language=\count516
+\c@savedlanguage=\count517
+\c@origlanguage=\count518
+\c@savedoriglanguage=\count519
+\c@citation=\count520
+\c@savedcitation=\count521
+\c@pageref=\count522
+\c@savedpageref=\count523
+\shorthandwidth=\skip126
+\shortjournalwidth=\skip127
+\shortserieswidth=\skip128
+\shorttitlewidth=\skip129
+\shortauthorwidth=\skip130
+\shorteditorwidth=\skip131
+\locallabelnumberwidth=\skip132
+\locallabelalphawidth=\skip133
+\localshorthandwidth=\skip134
+\localshortjournalwidth=\skip135
+\localshortserieswidth=\skip136
+\localshorttitlewidth=\skip137
+\localshortauthorwidth=\skip138
+\localshorteditorwidth=\skip139
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-unicode.def)
@@ -2002,19 +1941,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
-\c@textcitecount=\count534
-\c@textcitetotal=\count535
-\c@textcitemaxnames=\count536
-\c@biburlbigbreakpenalty=\count537
-\c@biburlbreakpenalty=\count538
-\c@biburlnumpenalty=\count539
-\c@biburlucpenalty=\count540
-\c@biburllcpenalty=\count541
+\c@textcitecount=\count524
+\c@textcitetotal=\count525
+\c@textcitemaxnames=\count526
+\c@biburlbigbreakpenalty=\count527
+\c@biburlbreakpenalty=\count528
+\c@biburlnumpenalty=\count529
+\c@biburlucpenalty=\count530
+\c@biburllcpenalty=\count531
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count542
+\c@smartand=\count532
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
@@ -2024,8 +1963,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count543
-\c@bbx:relatedtotal=\count544
+\c@bbx:relatedcount=\count533
+\c@bbx:relatedtotal=\count534
 )
 Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
 Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
@@ -2076,81 +2015,292 @@ Package biblatex Info: ... and expl3
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 )) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen375
-\WF@size=\dimen376
-\c@WF@wrappedlines=\count545
-\WF@box=\box150
-\WF@everypar=\toks62
+\wrapoverhang=\dimen365
+\WF@size=\dimen366
+\c@WF@wrappedlines=\count535
+\WF@box=\box105
+\WF@everypar=\toks64
 Package: wrapfig 2003/01/31  v 3.6
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/nowidow/nowidow.sty
+Package: nowidow 2011/09/20 1.0 Easily prevent widows and orphans
+Package: nowidow 
 ))
 
-LaTeX Info: File `bibliography.bib' already exists on the system.
-            Not generating it from this source.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 221.
-\@quotelevel=\count546
-\@quotereset=\count547
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rlap' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\overpasslight' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\href ' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern -1.99997pt
+(hyperref)                removed on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@family' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in@@' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\series@check@toks' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in@@' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@shape' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delayed@f@adjustment' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\char' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern -1.99997pt
+(hyperref)                removed on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rlap' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\overpasslight' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\href ' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern -1.99997pt
+(hyperref)                removed on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@family' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in@@' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\series@check@toks' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in@@' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@shape' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delayed@f@adjustment' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\char' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern -1.99997pt
+(hyperref)                removed on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 35.
+
+\@quotelevel=\count536
+\@quotereset=\count537
 
 LaTeX Warning: Unused global option(s):
     [english].
 
-No file vugten.aux.
-
+(./vugten.aux)
 \openout1 = vugten.aux
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count548
-\scratchdimen=\dimen377
-\scratchbox=\box151
-\nofMPsegments=\count549
-\nofMParguments=\count550
-\everyMPshowfont=\toks63
-\MPscratchCnt=\count551
-\MPscratchDim=\dimen378
-\MPnumerator=\count552
-\makeMPintoPDFobject=\count553
-\everyMPtoPDFconversion=\toks64
+\scratchcounter=\count538
+\scratchdimen=\dimen367
+\scratchbox=\box106
+\nofMPsegments=\count539
+\nofMParguments=\count540
+\everyMPshowfont=\toks65
+\MPscratchCnt=\count541
+\MPscratchDim=\dimen368
+\MPnumerator=\count542
+\makeMPintoPDFobject=\count543
+\everyMPtoPDFconversion=\toks66
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 221.
+Package hyperref Info: Link coloring ON on input line 35.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count554
+\c@section@level=\count544
 )
-LaTeX Info: Redefining \ref on input line 221.
-LaTeX Info: Redefining \pageref on input line 221.
-LaTeX Info: Redefining \nameref on input line 221.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
+ (./vugten.out) (./vugten.out)
 \@outlinefile=\write6
 
 \openout6 = vugten.out
-\c@lstlisting=\count555
+\c@lstlisting=\count545
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -2159,24 +2309,25 @@ LaTeX Info: Redefining \nameref on input line 221.
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: includehead includefoot 
+* lines: 53
+* modes: includehead includefoot heightrounded 
 * h-part:(L,W,R)=(136.5733pt, 418.25545pt, 42.67912pt)
-* v-part:(T,H,B)=(35.7655pt, 707.26337pt, 53.64828pt)
+* v-part:(T,H,B)=(42.67084pt, 690.0pt, 64.00632pt)
 * \paperwidth=597.50787pt
 * \paperheight=796.67715pt
 * \textwidth=418.25545pt
-* \textheight=654.41338pt
+* \textheight=634.0pt
 * \oddsidemargin=64.30331pt
 * \evensidemargin=64.30331pt
-* \topmargin=-36.50449pt
+* \topmargin=-29.59915pt
 * \headheight=20.0pt
-* \headsep=21.9pt
-* \topskip=9.0pt
-* \footskip=10.95pt
+* \headsep=24.0pt
+* \topskip=10.0pt
+* \footskip=12.0pt
 * \marginparwidth=71.13188pt
-* \marginparsep=21.9pt
-* \columnsep=10.95pt
-* \skip\footins=12.0pt plus 6.0pt minus 2.0pt
+* \marginparsep=24.0pt
+* \columnsep=12.0pt
+* \skip\footins=13.0pt plus 6.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -2187,13 +2338,13 @@ LaTeX Info: Redefining \nameref on input line 221.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 221.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 221.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 221.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 221.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 35.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -2212,12 +2363,12 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 (unicode-math)                colon-like commands, using them will lead to
 (unicode-math)                inconsistencies.
 
-LaTeX Info: Redefining \microtypecontext on input line 221.
-Package microtype Info: Applying patch `item' on input line 221.
-Package microtype Info: Applying patch `toc' on input line 221.
-Package microtype Info: Applying patch `eqnum' on input line 221.
+LaTeX Info: Redefining \microtypecontext on input line 35.
+Package microtype Info: Applying patch `item' on input line 35.
+Package microtype Info: Applying patch `toc' on input line 35.
+Package microtype Info: Applying patch `eqnum' on input line 35.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 221.
+Package microtype Warning: Unable to apply patch `footnote' on input line 35.
 
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -2225,7 +2376,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 221.
+LaTeX Info: Redefining \showhyphens on input line 35.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -2233,6 +2384,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `OpenSans' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 35.
+
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 35.
+
+Package hyperref Warning: Option `pdfdisplaydoctitle' has already been used,
+(hyperref)                setting the option has no effect on input line 35.
+
+
+Package hyperref Warning: Option `pdfnonfullscreenpagemode' has already been used,
+(hyperref)                setting the option has no effect on input line 35.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
@@ -2266,234 +2430,212 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout5 = vugten.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'vugten.bbl' not found.
-
-No file vugten.bbl.
-Package biblatex Info: Reference section=0 on input line 221.
-Package biblatex Info: Reference segment=0 on input line 221.
-<media/TE_logo_blue_high_res.png, id=43, 177.68182pt x 178.72293pt>
+Package biblatex Info: ... file 'vugten.bbl' found.
+ (./vugten.bbl)
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
+<media/TE_logo_blue_high_res.png, id=71, 177.68182pt x 178.72293pt>
 File: media/TE_logo_blue_high_res.png Graphic file (type png)
 <use media/TE_logo_blue_high_res.png>
-Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 227.
-(luatex.def)             Requested size: 43.79999pt x 44.0561pt.
-/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten.tex:227: Missing number, treated as zero.
-<to be read again> 
-\color_group_end: 
-l.227 \end{frontmatter}
-                     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-/Users/thomas/Library/CloudStorage/OneDrive-CenterofTrialandError/Documents/Publications/archive/issues/issue-3/mr-3-van-vugten/vugten.tex:227: Illegal unit of measure (pt inserted).
-<to be read again> 
-\color_group_end: 
-l.227 \end{frontmatter}
-                     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 42.
+(luatex.def)             Requested size: 48.0pt x 48.28036pt.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Overpass' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for TU+academicons on input line 227.
-(/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/academicons/tuacademicons.fd)
+LaTeX Font Info:    Trying to load font information for TU+academicons on input line 42.
+ (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/academicons/tuacademicons.fd)
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `academicons' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package microtype Info: Character `A' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `F' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `J' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `K' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `L' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `T' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `V' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `W' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `X' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `Y' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `k' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `r' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `v' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `w' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `x' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `y' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `1' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `4' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `7' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `.' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `,' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `:' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `;' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `!' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `?' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `@' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `%' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `*' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `+' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `(' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `)' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `/' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `-' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `AE ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `_' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textbackslash ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `quotesinglbase ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `quotedblbase ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `guilsinglleft ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `guilsinglright ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `guillemotleft ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `guillemotright ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textexclamdown ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textquestiondown ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textbraceleft ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textbraceright ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textless ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textgreater ' is missing
-(microtype)             in font `TU/academicons/m/n/10'.
+(microtype)             in font `TU/academicons/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 227.
+(Font)              scaled to size 12.0pt on input line 42.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `FiraMathRegular' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 227.
+(Font)              scaled to size 8.0pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 227.
+(Font)              scaled to size 6.0pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 227.
+(Font)              scaled to size 12.00128pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 227.
+(Font)              scaled to size 8.00085pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 227.
+(Font)              scaled to size 6.00064pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 227.
+(Font)              scaled to size 11.99872pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 227.
+(Font)              scaled to size 7.99915pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 227.
+(Font)              scaled to size 5.99936pt on input line 42.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -2502,236 +2644,164 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 227.
+(Font)              scaled to size 7.0pt on input line 42.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 227.
+(Font)              scaled to size 7.00075pt on input line 42.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 42.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 227.
+(Font)              scaled to size 6.99925pt on input line 42.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 42.
  (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
 )
-<media/CROSSMARK_Color_horizontal.png, id=48, 931.48pt x 178.6675pt>
+<media/CROSSMARK_Color_horizontal.png, id=76, 931.48pt x 178.6675pt>
 File: media/CROSSMARK_Color_horizontal.png Graphic file (type png)
 <use media/CROSSMARK_Color_horizontal.png>
-Package luatex.def Info: media/CROSSMARK_Color_horizontal.png  used on input line 227.
-(luatex.def)             Requested size: 62.55238pt x 12.0pt.
+Package luatex.def Info: media/CROSSMARK_Color_horizontal.png  used on input line 42.
+(luatex.def)             Requested size: 72.9849pt x 14.0pt.
 
 
 LaTeX Font Warning: Font shape `TU/OpenSans(0)/m/sc' undefined
-(Font)              using `TU/OpenSans(0)/m/n' instead on input line 230.
+(Font)              using `TU/OpenSans(0)/m/n' instead on input line 44.
 
-Package lettrine.sty Info: Targeted height = 15.72685pt
+Package lettrine.sty Info: Targeted height = 17.30762pt
 (lettrine.sty)             (for loversize=0, accent excluded),
-(lettrine.sty)             Lettrine height = 15.7268pt (T);
-(lettrine.sty)             reported on input line 230.
+(lettrine.sty)             Lettrine height = 17.30757pt (T);
+(lettrine.sty)             reported on input line 44.
 
-LaTeX Warning: Citation 'Collaboration2015' on page 1 undefined on input line 230.
-
-
-LaTeX Warning: Citation 'Mazzola2013' on page 1 undefined on input line 230.
-
-
-LaTeX Warning: Citation 'Hugten2021' on page 1 undefined on input line 230.
+Underfull \hbox (badness 1092) in paragraph at lines 48--49
+[]\TU/OpenSans(0)/m/sc/10 This pa-per pro-poses a prac-tice to chal-
+ []
 
 
-LaTeX Warning: Citation 'Bedeian2010' on page 1 undefined on input line 232.
+Overfull \hbox (89.30862pt too wide) in alignment at lines 77--77
+[][][]
+ []
 
 
-LaTeX Warning: Citation 'Rubin2017' on page 1 undefined on input line 232.
+Overfull \hbox (89.30408pt too wide) in alignment at lines 97--97
+[][][]
+ []
 
 
-LaTeX Warning: Citation 'Witteloostuijn2016' on page 1 undefined on input line 234.
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 100.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Citation 'Johns2019' on page 1 undefined on input line 247.
-
-
-LaTeX Warning: Citation 'Davis1971' on page 1 undefined on input line 249.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 250.
-
-
-Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 250.
+Package fancyhdr Warning: \fancyheadoffset's `E' option without twoside option is useless on input line 100.
 
 [1{/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}
 
 
 \openout3 = vugten.upa
 </Users/thomas/texmf/tex/latex/media/TE_logo_blue_high_res.png></Users/thomas/texmf/tex/latex/media/CROSSMARK_Color_horizontal.png>]
-
-LaTeX Warning: Citation 'Lakatos1970' on page 2 undefined on input line 251.
-
-
-LaTeX Warning: Citation 'Cross1982' on page 2 undefined on input line 251.
-
-
-Overfull \hbox (87.3661pt too wide) in alignment at lines 271--271
-[][][]
+Underfull \hbox (badness 1584) in paragraph at lines 111--112
+\TU/OpenSans(0)/m/sc/10 Be-cause of the op-po-si-tion to fal-si-fi-ca-tion-
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Citation 'Schwab2012' on page 2 undefined on input line 284.
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 284--285
-\TU/OpenSans(0)/m/sc/9 ful base-lines, or theory-driven null hy-pothe-ses
+Overfull \hbox (86.25607pt too wide) in alignment at lines 133--133
+[][]
  []
-
-
-Overfull \hbox (547.14415pt too wide) in paragraph at lines 296--303
-[][] 
- []
-
-
-LaTeX Warning: Citation 'Hollenbeck2017' on page 2 undefined on input line 308.
-
-
-LaTeX Warning: Citation 'Rubin2017' on page 2 undefined on input line 308.
-
-
-LaTeX Warning: Citation 'Locke2008' on page 2 undefined on input line 308.
-
-
-LaTeX Warning: Citation 'Schwab2017' on page 2 undefined on input line 308.
-
-
-LaTeX Warning: Citation 'Rubin2017' on page 2 undefined on input line 308.
-
-
-LaTeX Warning: Citation 'Rubin2017' on page 2 undefined on input line 308.
-
-
-LaTeX Warning: Citation 'Wasserstein2019' on page 2 undefined on input line 314.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Inserting `luaotfload.letterspace' at position 2 in `pre_linebreak_filter'.
 Inserting `luaotfload.letterspace' at position 3 in `hpack_filter'.
 File: media/TE_logo_blue_high_res.png Graphic file (type png)
 <use media/TE_logo_blue_high_res.png>
-Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 315.
-(luatex.def)             Requested size: 16.32686pt x 16.42499pt.
- [2]
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 137.
+(luatex.def)             Requested size: 17.89394pt x 18.0pt.
 
-Package tabularx Warning: X Columns too narrow (table too wide)
-(tabularx)                 on input line 339.
+Package fancyhdr Warning: \headheight is too small (20.0pt): 
+(fancyhdr)                Make it at least 20.39998pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.39998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.39998pt}.
+
+[2]
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 155.
+(luatex.def)             Requested size: 17.89394pt x 18.0pt.
 
 
-Overfull \hbox (1473.16124pt too wide) in alignment at lines 339--339
-[][]
+Package fancyhdr Warning: \headheight is too small (20.0pt): 
+(fancyhdr)                Make it at least 20.39998pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.39998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.39998pt}.
+
+[3]
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 164.
+(luatex.def)             Requested size: 17.89394pt x 18.0pt.
+
+
+Package fancyhdr Warning: \headheight is too small (20.0pt): 
+(fancyhdr)                Make it at least 20.39998pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.39998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.39998pt}.
+
+[4]
+Underfull \hbox (badness 1320) in paragraph at lines 177--178
+\TU/OpenSans(0)/m/sc/10 found the re-sult, re-search re-li-a-bil-ity is in-
  []
-
-
-LaTeX Warning: Citation 'Hines1988' on page 3 undefined on input line 346.
-
-
-LaTeX Warning: Citation 'Lakatos1970' on page 3 undefined on input line 346.
-
-
-LaTeX Warning: Citation 'Søberg2005' on page 3 undefined on input line 346.
-
-
-LaTeX Warning: Citation 'Weick1999' on page 3 undefined on input line 346.
-
-
-LaTeX Warning: Citation 'Søberg2005' on page 3 undefined on input line 348.
-
-
-LaTeX Warning: Citation 'Lakatos1970' on page 3 undefined on input line 348.
-
-
-LaTeX Warning: Citation 'Cross1982' on page 3 undefined on input line 348.
-
-
-LaTeX Warning: Citation 'Davis1971' on page 3 undefined on input line 350.
-
-
-LaTeX Warning: Citation 'Spector2011' on page 3 undefined on input line 350.
-
-
-LaTeX Warning: Citation 'Davis1971' on page 3 undefined on input line 352.
-
-
-LaTeX Warning: Citation 'Cook1979' on page 3 undefined on input line 354.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Citation 'Heugens2009' on page 3 undefined on input line 360.
-
-
-LaTeX Warning: Citation 'Murphy2019' on page 3 undefined on input line 360.
-
-
-LaTeX Warning: Citation 'Hollenbeck2017' on page 3 undefined on input line 360.
-
-
-LaTeX Warning: Citation 'Locke2008' on page 3 undefined on input line 360.
-
-
-LaTeX Warning: Citation 'Schwab2017' on page 3 undefined on input line 360.
-
-
-LaTeX Warning: Citation 'Haveman1993' on page 3 undefined on input line 362.
-
-
-LaTeX Warning: Citation 'Bettis2012' on page 3 undefined on input line 368.
-
-
-LaTeX Warning: Citation 'Bettis2012' on page 3 undefined on input line 368.
-
-
-LaTeX Warning: Citation 'Wasserstein2019' on page 3 undefined on input line 368.
-
-
-LaTeX Warning: Citation 'Schwab2011' on page 3 undefined on input line 368.
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 368--369
-\TU/OpenSans(0)/m/sc/9 Pro-pos-als to com-bat un-der-re-port-ing fo-cus on
- []
-
-
-Underfull \hbox (badness 4303) in paragraph at lines 368--369
-\TU/OpenSans(0)/m/sc/9 pre-vent-ing un-der-re-port-ing prac-tices; e.g., de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
-\TU/OpenSans(0)/m/sc/9 emphasize p-values ([]; [];
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: media/TE_logo_blue_high_res.png Graphic file (type png)
 <use media/TE_logo_blue_high_res.png>
-Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 371.
-(luatex.def)             Requested size: 16.32686pt x 16.42499pt.
- [3]
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 180.
+(luatex.def)             Requested size: 17.89394pt x 18.0pt.
+
+Package fancyhdr Warning: \headheight is too small (20.0pt): 
+(fancyhdr)                Make it at least 20.39998pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.39998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.39998pt}.
+
+[5]
+Underfull \hbox (badness 1072) in paragraph at lines 190--190
+\TU/OpenSans(0)/m/n/9 F. (2011). PER-SPEC-TIVE—Re-searchers Should
+ []
+
 File: media/TE_logo_blue_high_res.png Graphic file (type png)
 <use media/TE_logo_blue_high_res.png>
-Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 387.
-(luatex.def)             Requested size: 16.32686pt x 16.42499pt.
- [4
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 190.
+(luatex.def)             Requested size: 17.89394pt x 18.0pt.
 
-] (./vugten.aux * soulpos - computing points - it may take a few seconds *
+Package fancyhdr Warning: \headheight is too small (20.0pt): 
+(fancyhdr)                Make it at least 20.39998pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.39998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.39998pt}.
+
+[6
+
+
+Missing character: There is no ‐ (U+2010) in font [../../../fonts/OpenSans/OpenSans-Light.ttf]:mode=node;script=latn;language=dflt;+tlig;!
+]
+File: media/TE_logo_blue_high_res.png Graphic file (type png)
+<use media/TE_logo_blue_high_res.png>
+Package luatex.def Info: media/TE_logo_blue_high_res.png  used on input line 194.
+(luatex.def)             Requested size: 17.89394pt x 18.0pt.
+
+
+Package fancyhdr Warning: \headheight is too small (20.0pt): 
+(fancyhdr)                Make it at least 20.39998pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.39998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.39998pt}.
+
+[7
+
+] (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
+) (/opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/tex/generic/stringenc/se-utf32be.def
+File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
+) (./vugten.aux * soulpos - computing points - it may take a few seconds *
 \openout3 = vugten.upb
  (./vugten.upa))
 
@@ -2740,21 +2810,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+Package rerunfilecheck Info: File `vugten.out' has not changed.
+(rerunfilecheck)             Checksum: BB4D13036C6E7871581CE2E992FB163A;1185.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `vugten.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `vugten.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  822FB5E532FC6F8EA644F4F0188CC8F8;1239.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                vugten
-(biblatex)                and rerun LaTeX afterwards.
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'vugten.run.xml'.
 
@@ -2762,19 +2822,19 @@ Package logreq Info: Writing requests to 'vugten.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 59466 strings out of 477785
- 195405,2373549 words of node,token memory allocated
- 1786 words of node memory still in use:
-   32 hlist, 2 vlist, 14 rule, 4 disc, 4 glue, 4 kern, 21 glyph, 87 attribute, 101 glue_spec, 87 attribute_list, 2 write, 24 pdf_literal, 1 pdf_action, 28 pdf_colorstack nodes
-   avail lists: 1:1,2:859,3:493,4:391,5:345,6:108,7:17808,8:26,9:847,10:19,11:1611,12:1
- 78112 multiletter control sequences out of 65536+600000
- 145 fonts using 23086675 bytes
- 123i,23n,140p,1519b,5161s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<../../../Overpass-Regular.ttf><../../../fonts/OpenSans/OpenSans-LightItalic.ttf><../../../fonts/OpenSans/OpenSans-SemiBold.ttf></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Brands-Regular-400.otf><../../../fonts/OpenSans/OpenSans-Regular.ttf><../../../fonts/OpenSans/OpenSans-Light.ttf></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/truetype/public/academicons/academicons.ttf><../../../Overpass-Light.ttf><../../../Overpass-SemiBold.ttf>
-Output written on vugten.pdf (4 pages, 148392 bytes).
+ 60391 strings out of 477785
+ 156323,2373549 words of node,token memory allocated
+ 1983 words of node memory still in use:
+   32 hlist, 2 vlist, 14 rule, 4 disc, 4 glue, 4 kern, 21 glyph, 105 attribute, 103 glue_spec, 105 attribute_list, 2 shape, 3 write, 24 pdf_literal, 18 pdf_action, 28 pdf_colorstack nodes
+   avail lists: 1:7,2:2181,3:976,4:532,5:316,6:131,7:16391,8:154,9:1048,10:17,11:1505,12:1
+ 78840 multiletter control sequences out of 65536+600000
+ 153 fonts using 24222095 bytes
+ 123i,23n,140p,1690b,5164s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/opentype/public/firamath/FiraMath-Regular.otf><../../../Overpass-Regular.ttf><../../../fonts/OpenSans/OpenSans-LightItalic.ttf><../../../fonts/OpenSans/OpenSans-SemiBold.ttf></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Brands-Regular-400.otf><../../../fonts/OpenSans/OpenSans-Regular.ttf><../../../fonts/OpenSans/OpenSans-Light.ttf></opt/homebrew/Cellar/texlive/20220321/share/texmf-dist/fonts/truetype/public/academicons/academicons.ttf><../../../Overpass-Light.ttf><../../../Overpass-SemiBold.ttf>
+Output written on vugten.pdf (7 pages, 249617 bytes).
 
-PDF statistics: 162 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
- 256 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 355 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 131072)
+ 317 words of extra memory for PDF output out of 10000 (max. 100000000)
 
