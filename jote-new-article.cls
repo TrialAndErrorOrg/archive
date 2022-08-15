@@ -650,11 +650,21 @@ pdflicenseurl={https://creativecommons.org/licenses/by/4.0},
 \fancyhead[LO]{
   \setlength{\arrayrulewidth}{.5pt}%
   \arrayrulecolor{black}%
+  % if it's an issue, we print the page number
+  % if it's rolling we don't because we don't want people citing those pages
+  \if@issue
   \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X  r @{}}%
     \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue_high_res.png}} \,
     \Large \color{jotedark} \overpass \jote@articletype
  & \textls[10]{\color{jotedark}\@runningauthor} &  \thepage 
-  \end{tabularx}%
+  \end{tabularx}
+ \else
+  \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X  @{}}%
+    \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue_high_res.png}} \,
+    \Large \color{jotedark} \overpass \jote@articletype
+ & \textls[10]{\color{jotedark}\@runningauthor} 
+  \end{tabularx}
+ \fi
 }
 
 
