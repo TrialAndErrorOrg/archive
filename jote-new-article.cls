@@ -506,6 +506,12 @@
 \RequirePackage{changepage}% provides the adjustwidth environment
 % \usepackage{multicol}% for multiple columns inside the fullwidth environment
 
+\newtcolorbox{fullwidthbox}{
+    enhanced, 
+    colframe=joteOrangeLight,
+    colback=white, 
+    sharp corners,
+}
 % The following code should be used *after* any changes to the margins and
 % page layout are made (e.g., after the geometry package has been loaded).
 \newlength{\fullwidthlen}
@@ -513,8 +519,9 @@
 \addtolength{\fullwidthlen}{\marginparsep}
 
 \newenvironment{fullwidth}{%
-  \begin{adjustwidth}{-\fullwidthlen}{}%
+  \begin{adjustwidth}{-\fullwidthlen}{}\begin{fullwidthbox}%
 }{%
+  \end{fullwidthbox}%
   \end{adjustwidth}%
 }
 
@@ -676,7 +683,7 @@ pdflicenseurl={https://creativecommons.org/licenses/by/4.0},
   & \\
   \overpasslight
   \@jname, \if@issue \textbf{\@jvolume}(\@jissue),~ \@jpages\else\@jyear\fi &
-  View interactive version \href{https://doi.org/ \@paperdoi \if@review .pr\@prround\fi}{here}.
+  \href{https://doi.org/ \@paperdoi \if@review .pr\@prround\fi}{https://doi.org/\@paperdoi\if@review .pr\@prround\fi}.
   \end{tabularx}%
 }
 
@@ -1081,6 +1088,7 @@ pdflicenseurl={https://creativecommons.org/licenses/by/4.0},
 
 % Captions
     \RequirePackage{caption}
+    \RequirePackage{subcaption}
 
 % Tables
 \RequirePackage{stfloats} %hopefully lead to better table placement
@@ -1224,12 +1232,13 @@ pdflicenseurl={https://creativecommons.org/licenses/by/4.0},
 
 % \flushbottom
 \setlength{\emergencystretch}{3em} % prevent overfull line
+\setlength{\parskip}{0pt}
 
 % \setlength{\textfloatsep}{2\dimexpr\baselineskip + 0pt \relax plus 0.5\dimexpr\baselineskip + 0pt \relax minus 0.5\dimexpr\baselineskip + 0pt \relax} 
 % \setlength{\floatsep}{\dimexpr\baselineskip + 0pt \relax plus 0.5\dimexpr\baselineskip + 0pt \relax minus 0.5\dimexpr\baselineskip + 0pt \relax}
 % \setlength{\intextsep}{\dimexpr\baselineskip + 0pt \relax plus 0.5\dimexpr\baselineskip + 0pt \relax minus 0.5\dimexpr\baselineskip + 0pt \relax}
 
-\setlength{\textfloatsep}{24.0pt plus 24.0pt minus 24.0pt}
+\setlength{\textfloatsep}{12.0pt plus 24.0pt minus 24.0pt}
 \setlength{\floatsep}{12.0pt plus 12.0pt minus 12.0pt}
 \setlength{\intextsep}{12.0pt plus 12.0pt minus 12.0pt}
 % \setlength{\parskip}{0pt}
