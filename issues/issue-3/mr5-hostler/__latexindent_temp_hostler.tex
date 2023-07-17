@@ -1,0 +1,1874 @@
+\documentclass[meta, authordate]{jote-new-article}
+
+
+\jotetitle{The Invisible Workload of Open Research}
+\keywordsabstract{academic capitalism, workload, burnout, administrative burden, open research}
+\abstracttext{It is acknowledged that conducting open research requires additional time and effort compared to conducting ‘closed’ research. However, this additional work is often discussed only in abstract terms, a discourse which ignores the practicalities of how researchers are expected to find the time to engage with these practices in the context of their broader role as multifaceted academics. In the context of a sector that is blighted by stress, burnout, untenable workloads, and hyper-competitive pressures to produce, there is a clear danger that additional expectations to engage in open practices add to the workload burden and increase pressure on academics even further. In this article, the theories of academic capitalism and workload creep are used to explore how workload models currently exploit researchers by mismeasuring academic labour. The specific increase in workload resulting from open practices and associated administration is then outlined, including via the cumulative effects of administrative burden. It is argued that there is a high chance that without intervention, increased expectations to engage in open research practices may lead to unacceptable increases in demands on academics. Finally, the individual and systematic responsibilities to mitigate this are discussed.}
+\runningauthor{Hostler}
+\jname{Journal of Trial \& Error}
+\paperdoi{10.36850/mr5}
+\paperreceived{September 8, 2022}
+\author[1]{Thomas Hostler\orcid{https://orcid.org/0000-0002-4658-692X}}
+\affil[1]{Department of Psychology, Manchester Metropolitan University}
+\corremail{t.hostler@mmu.ac.uk}
+\runningauthor{Hostler}
+\paperaccepted{April 17, 2023}
+\paperpublished{April 30, 2023}
+\paperpublisheddate{2023-04-30}
+\jwebsite{https://journal.trialanderror.org}
+
+\begin{filecontents}{bibliography.bib}
+	@article{Aczel2020,
+    title       = {A consensus-based transparency checklist},
+    author      = {Aczel, B. and Szaszi, B. and Sarafoglou, A. and Kekecs, Z. and Kucharský, Š. and Benjamin, D. and Chambers, C. D. and Fisher, A. and Gelman, A. and Gernsbacher, M. A. and Ioannidis, J. P. and Johnson, E. and Jonas, K. and Kousta, S. and Lilienfeld, S. O. and Lindsay, D. S. and Morey, C. C. and Munafò, M. and Newell, B. R. and Wagenmakers, E.-J.},
+    number      = {1},
+    volume      = {4},
+    url         = {https://doi.org/10.1038/s41562-019-0772-6},
+    doi         = {10.1038/s41562-019-0772-6},
+    date        = {2020},
+    pages       = {4–6},
+    journal     = {Nature Human Behaviour}
+}
+
+
+@article{Aguinis2020,
+    title       = {Actionable recommendations for narrowing the science-practice gap in open science},
+    author      = {Aguinis, H. and Banks, G. C. and Rogelberg, S. G. and Cascio, W. F.},
+    volume      = {158},
+    url         = {https://doi.org/10.1016/j.obhdp.2020.02.007},
+    doi         = {10.1016/j.obhdp.2020.02.007},
+    date        = {2020},
+    pages       = {27–35},
+    journal     = {Organizational Behavior and Human Decision Processes}
+}
+
+
+@article{Allen2019,
+    title       = {Open science challenges, benefits and tips in early career and beyond},
+    author      = {Allen, C. and Mehler, D. M.A.},
+    number      = {5},
+    volume      = {17},
+    url         = {https://doi.org/10.1371/journal.pbio.3000246},
+    doi         = {10.1371/journal.pbio.3000246},
+    date        = {2019},
+    journal     = {PLOS Biology}
+}
+
+
+@article{Anderson2007,
+    title       = {The perverse effects of competition on scientists’ work and relationships},
+    author      = {Anderson, M. S. and Ronning, E. A. and De Vries, R. and Martinson, B. C.},
+    number      = {4},
+    volume      = {13},
+    url         = {https://doi.org/10.1007/s11948-007-9042-5},
+    doi         = {10.1007/s11948-007-9042-5},
+    date        = {2007},
+    pages       = {437–461},
+    journal     = {Science and Engineering Ethics}
+}
+
+
+@article{Armeni2021,
+    title       = {Towards wide-scale adoption of open science practices: The role of open science communities},
+    author      = {Armeni, K. and Brinkman, L. and Carlsson, R. and Eerland, A. and Fijten, R. and Fondberg, R. and Heininga, V. E. and Heunis, S. and Koh, W. Q. and Masselink, M. and Moran, N. and Baoill, Ó. and A., Sarafoglou and A., Schettino and A., Schwamm and H., Sjoerds and Z., Teperek and M., van den Akker and R., O. and van’t Veer, A. and Zurita-Milla, R.},
+    number      = {5},
+    volume      = {48},
+    url         = {https://doi.org/10.1093/scipol/scab039},
+    doi         = {10.1093/scipol/scab039},
+    date        = {2021},
+    pages       = {605–611},
+    journal     = {Science and Public Policy}
+}
+
+
+@article{Azevedo2022,
+    title       = {& Framework for Open and Reproducible Research Training (FORRT},
+    author      = {Azevedo, F. and Liu, M. and Pennington, C. R. and Pownall, M. and Evans, T. R. and Parsons, S. and Elsherif, M. M. and Micheli, L. and Westwood, S. J.},
+    number      = {1},
+    volume      = {15},
+    url         = {https://doi.org/10.1186/s13104-022-05944-1},
+    doi         = {10.1186/s13104-022-05944-1},
+    date        = {2022},
+    journal     = {BMC Research Notes}
+}
+
+
+@article{Bakker2020,
+    title       = {Ensuring the quality and specificity of preregistrations},
+    author      = {Bakker, M. and Veldkamp, C. L.S. and van Assen, M. A.L. M. and Crompvoets, E. A.V. and Ong, H. H. and Nosek, B. A. and Soderberg, C. K. and Mellor, D. and Wicherts, J. M.},
+    number      = {12},
+    volume      = {18},
+    url         = {https://doi.org/10.1371/journal.pbio.3000937},
+    doi         = {10.1371/journal.pbio.3000937},
+    date        = {2020},
+    journal     = {PLOS Biology}
+}
+
+
+@article{Barr2019,
+    title       = {Redesigning methods curricula for reproducibility},
+    author      = {Barr, D. and Cleland Woods, H. and DeBruine, L. and Lai, R. and McAleer, P. and McNee, S. and Nordmann, E. and Paterson, H. and Stack, N.},
+    url         = {https://psyteachr.github.io/sips2019/},
+    date        = {2019}
+}
+
+
+@book{Bastiaansen2019,
+    title       = {10 open science myths – Open Science Community Groningen},
+    author      = {Bastiaansen, J.},
+    url         = {https://openscience-groningen.nl/10-open-science-myths/},
+    publisher   = {Open Science Community Groningen},
+    date        = {2019}
+}
+
+
+@article{Beatson2021,
+    title       = {The gradual retreat from academic citizenship},
+    author      = {Beatson, N. J. and Tharapos, M. and O’Connell, B. T. and Lange, P. and Carr, S. and Copeland, S.},
+    number      = {4},
+    volume      = {76},
+    url         = {https://doi.org/10.1111/hequ.12341},
+    doi         = {10.1111/hequ.12341},
+    date        = {2021},
+    pages       = {715–725},
+    journal     = {Higher Education Quarterly}
+}
+
+
+@article{Bennett2022,
+    title       = {A manifesto for rewarding and recognising Team Infrastructure Roles},
+    author      = {Bennett, A. and Garside, D. and Gould van Pragg, C. and Hostler, T. J. and Kherroubi Garcia, I. and Plomp, E. and Schettino, A. and Teplitzky, S. and Ye, H.},
+    url         = {https://doi.org/10.53962/knm3-bnvx},
+    doi         = {10.53962/knm3-bnvx},
+    date        = {2022},
+    journal     = {Research Equals}
+}
+
+
+@article{Boncori2020,
+    title       = {Workload allocation models in academia: A panopticon of neoliberal control or tools for resistance?},
+    author      = {Boncori, I. and Bizjak, D. and Sicca, L. M.},
+    number      = {1},
+    volume      = {18},
+    url         = {https://doi.org/DOI:},
+    date        = {2020},
+    pages       = {51–69},
+    journal     = {Tamara}
+}
+
+
+@article{Borgerud2020,
+    title       = {Open research data, an archival challenge?},
+    author      = {Borgerud, C. and Borglund, E.},
+    volume      = {20},
+    url         = {https://doi.org/10.1007/s10502-020-09330-3},
+    doi         = {10.1007/s10502-020-09330-3},
+    date        = {2020},
+    pages       = {279–302},
+    journal     = {Archival Science}
+}
+
+
+@article{Bozeman1993,
+    title       = {A theory of government ‘red tape’},
+    author      = {Bozeman, B.},
+    number      = {3},
+    volume      = {3},
+    date        = {1993},
+    pages       = {273–303},
+    journal     = {Journal of Public Administration Research and Theory}
+}
+
+
+@article{Bozeman2017,
+    title       = {Bureaucratization in academic research policy: What causes it?},
+    author      = {Bozeman, B. and Jung, J.},
+    number      = {2},
+    volume      = {1},
+    url         = {https://doi.org/10.1561/110.00000002},
+    doi         = {10.1561/110.00000002},
+    date        = {2017},
+    pages       = {133–214},
+    journal     = {Annals of Science and Technology Policy}
+}
+
+
+@article{Bozeman2020,
+    title       = {Robotic bureaucracy: Administrative burden and red tape in university research},
+    author      = {Bozeman, B. and Youtie, J.},
+    number      = {1},
+    volume      = {80},
+    url         = {https://doi.org/10.1111/puar.13105},
+    doi         = {10.1111/puar.13105},
+    date        = {2020},
+    pages       = {157–162},
+    journal     = {Public Administration Review}
+}
+
+
+@article{Bozeman2021,
+    title       = {Death by a thousand 10-minute tasks: Workarounds and noncompliance in university research administration},
+    author      = {Bozeman, B. and Youtie, J. and Jung, J.},
+    number      = {4},
+    volume      = {53},
+    url         = {https://doi.org/10.1177/0095399720947994},
+    doi         = {10.1177/0095399720947994},
+    date        = {2021},
+    pages       = {527–568},
+    journal     = {Administration & Society}
+}
+
+
+@article{Callard2022,
+    title       = {Replication and reproduction: Crises in psychology and academic labour},
+    author      = {Callard, F.},
+    number      = {2},
+    volume      = {26},
+    url         = {https://doi.org/10.1177/10892680211055660},
+    doi         = {10.1177/10892680211055660},
+    date        = {2022},
+    pages       = {199–211},
+    journal     = {Review of General Psychology}
+}
+
+
+@inbook{Carter2019,
+    title       = {The role of research development professionals in supporting team science},
+    author      = {Carter, S. and Carlson, S. and Crockett, J. and Falk-Krzesinski, H. J. and Lewis, K. and Walker, B. E.},
+    editor      = {Hall, K.L. and Vogel, A.L. and Croyle, R.T.},
+    url         = {https://doi.org/10.1007/978-3-030-20992-6_28},
+    doi         = {10.1007/978-3-030-20992-6_28},
+    publisher   = {Springer International Publishing},
+    date        = {2019},
+    pages       = {375–388},
+    booktitle     = {Strategies for team science success}
+}
+
+
+@article{Chambers2022,
+    title       = {The past, present and future of Registered Reports},
+    author      = {Chambers, C. D. and Tzavella, L.},
+    number      = {1},
+    volume      = {6},
+    url         = {https://doi.org/10.1038/s41562-021-01193-7},
+    doi         = {10.1038/s41562-021-01193-7},
+    date        = {2022},
+    pages       = {29–42},
+    journal     = {Nature Human Behaviour}
+}
+
+
+@book{Collini2012,
+    title       = {What are universities for?},
+    author      = {Collini, S.},
+    publisher   = {Penguin},
+    date        = {2012}
+}
+
+
+@article{Crüwell2019,
+    title       = {Seven easy steps to open science: An annotated reading list},
+    author      = {Crüwell, S. and van Doorn, J. and Etz, A. and Makel, M. C. and Moshontz, H. and Niebaum, J. C. and Orben, A. and Parsons, S. and Schulte-Mecklenbeck, M.},
+    number      = {4},
+    volume      = {227},
+    url         = {https://doi.org/10.1027/2151-2604/a000387},
+    doi         = {10.1027/2151-2604/a000387},
+    date        = {2019},
+    pages       = {237–248},
+    journal     = {Zeitschrift Für Psychologie}
+}
+
+
+@article{CruzRivera2020,
+    title       = {Guidelines for clinical trial protocols for interventions involving artificial intelligence: The SPIRIT-AI extension},
+    author      = {Cruz Rivera, S. and Liu, X. and Chan, A.-W. and Denniston, A. K. and Calvert, M. J. and undefined, S. P.I. R.I. T.-A. I. and Group, C. O.N. S.O. R.T.-A. I.Working},
+    number      = {10},
+    volume      = {2},
+    url         = {https://doi.org/10.1016/S2589-7500(20)30219-3},
+    doi         = {10.1016/S2589-7500(20)30219-3},
+    date        = {2020},
+    pages       = {549– 560},
+    journal     = {The Lancet Digital Health}
+}
+
+
+@article{Csányi2021,
+    title       = {Challenges and open problems of legal document anonymization},
+    author      = {Csányi, G. M. and Nagy, D. and Vági, R. and Vadász, J. P. and Orosz, T.},
+    number      = {8},
+    volume      = {13},
+    url         = {https://doi.org/10.3390/sym13081490},
+    doi         = {10.3390/sym13081490},
+    date        = {2021},
+    pages       = {1490},
+    journal     = {Symmetry}
+}
+
+
+@article{Dollinger2020,
+    title       = {The projectification of the university: Consequences and alternatives},
+    author      = {Dollinger, M.},
+    number      = {6},
+    volume      = {25},
+    url         = {https://doi.org/10.1080/13562517.2020.1722631},
+    doi         = {10.1080/13562517.2020.1722631},
+    date        = {2020},
+    pages       = {669–682},
+    journal     = {Teaching in Higher Education}
+}
+
+
+@article{Eronen2021,
+    title       = {The theory crisis in psychology: How to move forward},
+    author      = {Eronen, M. I. and Bringmann, L. F.},
+    number      = {4},
+    volume      = {16},
+    url         = {https://doi.org/10.1177/1745691620970586},
+    doi         = {10.1177/1745691620970586},
+    date        = {2021},
+    pages       = {779–788},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Eynden2016,
+    title       = {Survey of Wellcome researchers and their attitudes to open research},
+    author      = {Eynden, V. V.D. and Knight, G. and Vlad, A. and Radler, B. and Tenopir, C. and Leon, D. and Manista, F. and Whitworth, J. and Corti, L.},
+    url         = {https://doi.org/10.6084/M9.FIGSHARE.4055448.V1},
+    doi         = {10.6084/M9.FIGSHARE.4055448.V1},
+    date        = {2016},
+    journal     = {Wellcome Trust}
+}
+
+
+@inbook{Fecher2014,
+    title       = {Open science: one term, five schools of thought},
+    author      = {Fecher, B. and Friesike, S.},
+    editor      = {Bartling, S. and Friesike, S.},
+    url         = {https://doi.org/10.1007/978-3-319-00026-8_2},
+    doi         = {10.1007/978-3-319-00026-8_2},
+    publisher   = {Springer International Publishing},
+    date        = {2014},
+    pages       = {17–47},
+    booktitle     = {Opening science}
+}
+
+
+@article{FernándezPinto2020,
+    title       = {Open science for private interests? How the logic of open science contributes to the commercialization of research},
+    author      = {Fernández Pinto, M.},
+    volume      = {5, Article 588331},
+    url         = {https://doi.org/10.3389/frma.2020.588331},
+    doi         = {10.3389/frma.2020.588331},
+    date        = {2020},
+    journal     = {Frontiers in Research Metrics and Analytics}
+}
+
+
+@article{Forscher2022,
+    title       = {The benefits, barriers, and risks of big team science},
+    author      = {Forscher, P. S. and Wagenmakers, E.-J. and Coles, N. A. and Silan, M. A.A. and Dutra, N. B. and Basnight-Brown, D. and IJzerman, H.},
+    url         = {https://doi.org/10.31234/osf.io/2mdxh},
+    doi         = {10.31234/osf.io/2mdxh},
+    date        = {2022}
+}
+
+
+@article{Gabelica2022,
+    title       = {Many researchers were not compliant with their published data sharing statement: Mixed-methods study},
+    author      = {Gabelica, M. and Bojčić, R. and Puljak, L.},
+    volume      = {150},
+    url         = {https://doi.org/10.1016/j.jclinepi.2022.05.019},
+    doi         = {10.1016/j.jclinepi.2022.05.019},
+    date        = {2022},
+    pages       = {33–41},
+    journal     = {Journal of Clinical Epidemiology}
+}
+
+
+@article{Gärtner2022,
+    title       = {Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology},
+    author      = {Gärtner, A. and Leising, D. and Schönbrodt, F. D.},
+    url         = {https://doi.org/10.31234/osf.io/5yexm},
+    doi         = {10.31234/osf.io/5yexm},
+    date        = {2022}
+}
+
+
+@article{Gewin2022,
+    title       = {Has the ‘great resignation’ hit academia?},
+    author      = {Gewin, V.},
+    number      = {7912},
+    volume      = {606},
+    url         = {https://doi.org/10.1038/d41586-022-01512-6},
+    doi         = {10.1038/d41586-022-01512-6},
+    date        = {2022},
+    pages       = {211–213},
+    journal     = {Nature}
+}
+
+
+@article{Gordon2022,
+    title       = {Invisible labor and the associate professor: Identity and workload inequity},
+    author      = {Gordon, H. R. and Willink, K. and Hunter, K.},
+    url         = {https://doi.org/10.1037/dhe0000414},
+    doi         = {10.1037/dhe0000414},
+    date        = {2022},
+    journal     = {Journal of Diversity in Higher Education}
+}
+
+
+@article{Gownaris2022,
+    title       = {Barriers to full participation in the open science life cycle among early career researchers},
+    author      = {Gownaris, N. J. and Vermeir, K. and Bittner, M.-I. and Gunawardena, L. and Kaur-Ghumaan, S. and Lepenies, R. and Ntsefong, G. N. and Zakari, I. S.},
+    number      = {1},
+    volume      = {21},
+    url         = {https://doi.org/10.5334/dsj-2022-002},
+    doi         = {10.5334/dsj-2022-002},
+    date        = {2022},
+    pages       = {2},
+    journal     = {Data Science Journal}
+}
+
+
+@article{Grahe2020,
+    title       = {Open science promotes diverse, just, and sustainable research and educational outcomes},
+    author      = {Grahe, J. E. and Cuccolo, K. and Leighton, D. C. and Cramblet Alvarez, L. D.},
+    number      = {1},
+    volume      = {19},
+    url         = {https://doi.org/10.1177/1475725719869164},
+    doi         = {10.1177/1475725719869164},
+    date        = {2020},
+    pages       = {5–20},
+    journal     = {Psychology Learning & Teaching}
+}
+
+
+@article{Hagger2022,
+    title       = {Developing an open science ‘mindset’},
+    author      = {Hagger, M. S.},
+    number      = {1},
+    volume      = {10},
+    url         = {https://doi.org/10.1080/21642850.2021.2012474},
+    doi         = {10.1080/21642850.2021.2012474},
+    date        = {2022},
+    pages       = {1–21},
+    journal     = {Health Psychology and Behavioral Medicine}
+}
+
+
+@article{Havard2012,
+    title       = {Triggers for research ethics consultation},
+    author      = {Havard, M. and Cho, M. K. and Magnus, D.},
+    number      = {118},
+    volume      = {4},
+    url         = {https://doi.org/10.1126/scitranslmed.3002734},
+    doi         = {10.1126/scitranslmed.3002734},
+    date        = {2012},
+    journal     = {Science Translational Medicine}
+}
+
+
+@article{Hefce2016,
+    title       = {Concordant on Open Research Data},
+    author      = {Hefce, Research Councils U. K. and UK, Universities and Trust, Wellcome},
+    url         = {https://www.ukri.org/files/legacy/documents/concordatonopenresearchdata-pdf/},
+    date        = {2016}
+}
+
+
+@article{Henry2018,
+    title       = {Consensus guidelines for the uniform reporting of study ethics in anatomical research within the framework of the anatomical quality assurance (AQUA) checklist: Framework of the AQUA Checklist},
+    author      = {Henry, B. M. and Vikse, J. and Pekala, P. and Loukas, M. and Tubbs, R. S. and Walocha, J. A. and Jones, D. G. and Tomaszewski, K. A.},
+    number      = {4},
+    volume      = {31},
+    url         = {https://doi.org/10.1002/ca.23069},
+    doi         = {10.1002/ca.23069},
+    date        = {2018},
+    pages       = {521–524},
+    journal     = {Clinical Anatomy}
+}
+
+
+@article{Hogan2011,
+    title       = {Is higher education spending more on administration and, if so, why? Perspectives},
+    author      = {Hogan, J.},
+    number      = {1},
+    volume      = {15},
+    url         = {https://doi.org/10.1080/13603108.2010.532316},
+    doi         = {10.1080/13603108.2010.532316},
+    date        = {2011},
+    pages       = {7–13},
+    journal     = {Policy and Practice in Higher Education}
+}
+
+
+@article{Holcombe2019,
+    title       = {Contributorship, not authorship: Use CRediT to indicate who did what},
+    author      = {Holcombe, A.},
+    number      = {3},
+    volume      = {7},
+    url         = {https://doi.org/10.3390/publications7030048},
+    doi         = {10.3390/publications7030048},
+    date        = {2019},
+    pages       = {48},
+    journal     = {Publications}
+}
+
+
+@article{Hostler2022,
+    title       = {Open research reforms and the capitalist university’s priorities and practices: Areas of opposition and alignment},
+    author      = {Hostler, T.},
+    url         = {https://doi.org/10.31235/osf.io/r4qgc},
+    doi         = {10.31235/osf.io/r4qgc},
+    date        = {2022}
+}
+
+
+@article{Jessop2018,
+    title       = {On academic capitalism},
+    author      = {Jessop, B.},
+    number      = {1},
+    volume      = {12},
+    url         = {https://doi.org/10.1080/19460171.2017.1403342},
+    doi         = {10.1080/19460171.2017.1403342},
+    date        = {2018},
+    pages       = {104–109},
+    journal     = {Critical Policy Studies}
+}
+
+
+@article{Kenny2019,
+    title       = {Academic administration & service workloads in Australian Universities},
+    author      = {Kenny, J. and Fluck, A. E.},
+    number      = {2},
+    volume      = {61},
+    date        = {2019},
+    pages       = {21–30},
+    journal     = {Australian Universities Review}
+}
+
+
+@article{Kenny2022,
+    title       = {Emerging principles for the allocation of academic work in universities},
+    author      = {Kenny, J. and Fluck, A. E.},
+    number      = {6},
+    volume      = {83},
+    url         = {https://doi.org/10.1007/s10734-021-00747-y},
+    doi         = {10.1007/s10734-021-00747-y},
+    date        = {2022},
+    pages       = {1371–1388},
+    journal     = {Higher Education}
+}
+
+
+@article{Kernohan2019,
+    title       = {A beginner’s guide to academic workload modelling},
+    author      = {Kernohan, D.},
+    url         = {https://wonkhe.com/blogs/a-beginners-guide-to-academic-workload-modelling/},
+    date        = {2019-11-03}
+}
+
+
+@article{Kolsaker2008,
+    title       = {Academic professionalism in the managerialist era: A study of English universities},
+    author      = {Kolsaker, A.},
+    number      = {5},
+    volume      = {33},
+    url         = {https://doi.org/10.1080/03075070802372885},
+    doi         = {10.1080/03075070802372885},
+    date        = {2008},
+    pages       = {513–525},
+    journal     = {Studies in Higher Education}
+}
+
+
+@article{Lakens2014,
+    title       = {Sailing from the seas of chaos into the corridor of stability: Practical recommendations to increase the informational value of studies},
+    author      = {Lakens, D. and Evers, E. R.K.},
+    number      = {3},
+    volume      = {9},
+    url         = {https://doi.org/10.1177/1745691614528520},
+    doi         = {10.1177/1745691614528520},
+    date        = {2014},
+    pages       = {278–292},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Levin2017,
+    title       = {How does one “open” science? Questions of value in biological research},
+    author      = {Levin, N. and Leonelli, S.},
+    number      = {2},
+    volume      = {42},
+    url         = {https://doi.org/10.1177/0162243916672071},
+    doi         = {10.1177/0162243916672071},
+    date        = {2017},
+    pages       = {280–305},
+    journal     = {Science, Technology, & Human Values}
+}
+
+
+@article{Long2020,
+    title       = {Accounting academic workloads: Balancing workload creep to avoid depreciation in the higher education sector},
+    author      = {Long, D. W. and Barnes, A. P.L. and Northcote, P. M. and Williams, P. T.},
+    number      = {2},
+    volume      = {1},
+    url         = {https://doi.org/10.22158/eshs.v1n2p55},
+    doi         = {10.22158/eshs.v1n2p55},
+    date        = {2020},
+    pages       = {55},
+    journal     = {Education, Society and Human Studies}
+}
+
+
+@article{Lowndes2017,
+    title       = {Our path to better science in less time using open data science tools},
+    author      = {Lowndes, J. S.S. and Best, B. D. and Scarborough, C. and Afflerbach, J. C. and Frazier, M. R. and O’Hara, C. C. and Jiang, N. and Halpern, B. S.},
+    number      = {6},
+    volume      = {1},
+    url         = {https://doi.org/10.1038/s41559-017-0160},
+    doi         = {10.1038/s41559-017-0160},
+    date        = {2017},
+    journal     = {Nature Ecology & Evolution}
+}
+
+
+@article{Lyons2010,
+    title       = {Regulated autonomy or autonomous regulation? Collective bargaining and academic workloads in Australian universities},
+    author      = {Lyons, M. and Ingersoll, L.},
+    number      = {2},
+    volume      = {32},
+    url         = {https://doi.org/10.1080/13600800903440592},
+    doi         = {10.1080/13600800903440592},
+    date        = {2010},
+    pages       = {137–148},
+    journal     = {Journal of Higher Education Policy and Management}
+}
+
+
+@article{Macfarlane2011,
+    title       = {The morphing of academic practice: Unbundling and the rise of the para-academic},
+    author      = {Macfarlane, B.},
+    number      = {1},
+    volume      = {65},
+    url         = {https://doi.org/10.1111/j.1468-2273.2010.00467.x},
+    doi         = {10.1111/j.1468-2273.2010.00467.x},
+    date        = {2011},
+    pages       = {59–73},
+    journal     = {Higher Education Quarterly}
+}
+
+
+@article{Miller2019,
+    title       = {Where does the time go? An academic workload case study at an Australian university},
+    author      = {Miller, J.},
+    number      = {6},
+    volume      = {41},
+    url         = {https://doi.org/10.1080/1360080X.2019.1635328},
+    doi         = {10.1080/1360080X.2019.1635328},
+    date        = {2019},
+    pages       = {633–645},
+    journal     = {Journal of Higher Education Policy and Management}
+}
+
+
+@article{Munafò2019,
+    title       = {Raising research quality will require collective action},
+    author      = {Munafò, M.},
+    number      = {7786},
+    volume      = {576},
+    url         = {https://doi.org/10.1038/d41586-019-03750-7},
+    doi         = {10.1038/d41586-019-03750-7},
+    date        = {2019},
+    pages       = {183–183},
+    journal     = {Nature}
+}
+
+
+@article{Munafò2017,
+    title       = {A manifesto for reproducible science},
+    author      = {Munafò, M. and Nosek, B. A. and Bishop, D. V.M. and Button, K. S. and Chambers, C. and Percie du Sert, N. and Simonsohn, U. and Wagenmakers, E.-J. and Ware, J. J. and Ioannidis, J. P.A.},
+    number      = {1},
+    volume      = {1},
+    url         = {https://doi.org/10.1038/s41562-016-0021},
+    doi         = {10.1038/s41562-016-0021},
+    date        = {2017},
+    journal     = {Nature Human Behaviour}
+}
+
+
+@book{Münch2014,
+    title       = {Academic capitalism: Universities in the global struggle for excellence},
+    author      = {Münch, R.},
+    publisher   = {Routledge},
+    date        = {2014}
+}
+
+
+@article{Nicholls2022,
+    title       = {The impact of working in academia on researchers’ mental health and well-being: A systematic review and qualitative meta-synthesis},
+    author      = {Nicholls, H. and Nicholls, M. and Tekin, S. and Lamb, D. and Billings, J.},
+    number      = {5},
+    volume      = {17},
+    url         = {https://doi.org/10.1371/journal.pone.0268890},
+    doi         = {10.1371/journal.pone.0268890},
+    date        = {2022},
+    journal     = {PLOS ONE}
+}
+
+
+@book{Nosek2019,
+    title       = {Strategy for culture change},
+    author      = {Nosek, B. A.},
+    url         = {https://www.cos.io/blog/strategy-for-culture-change},
+    publisher   = {Centre for Open Science},
+    date        = {2019}
+}
+
+
+@article{bib60,
+    title       = {Preregistration is hard, and worthwhile},
+    author      = {Nosek, B. A., Beck, E. D., Campbell, L., Flake, J. K., Hardwicke, T. E., Mellor, D. T., van ’t Veer, A. E., & Vazire, S.},
+    number      = {10},
+    volume      = {23},
+    url         = {https://doi.org/10.1016/j.tics.2019.07.009},
+    doi         = {10.1016/j.tics.2019.07.009},
+    date        = {2019},
+    pages       = {815–818},
+    journal     = {Trends in Cognitive Sciences}
+}
+
+
+@article{Nosek2018,
+    title       = {The preregistration revolution},
+    author      = {Nosek, B. A. and Ebersole, C. R. and DeHaven, A. C. and Mellor, D. T.},
+    number      = {11},
+    volume      = {115},
+    url         = {https://doi.org/10.1073/pnas.1708274114},
+    doi         = {10.1073/pnas.1708274114},
+    date        = {2018},
+    pages       = {2600–2606},
+    journal     = {Proceedings of the National Academy of Sciences}
+}
+
+
+@article{Nosek2012,
+    title       = {Scientific utopia: II. Restructuring incentives and practices to promote truth over publishability},
+    author      = {Nosek, B. A. and Spies, J. R. and Motyl, M.},
+    number      = {6},
+    volume      = {7},
+    url         = {https://doi.org/10.1177/1745691612459058},
+    doi         = {10.1177/1745691612459058},
+    date        = {2012},
+    pages       = {615–631},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Obels2020,
+    title       = {Analysis of open data and computational reproducibility in Registered Reports in psychology},
+    author      = {Obels, P. and Lakens, D. and Coles, N. A. and Gottfried, J. and Green, S. A.},
+    number      = {2},
+    volume      = {3},
+    url         = {https://doi.org/10.1177/2515245920918872},
+    doi         = {10.1177/2515245920918872},
+    date        = {2020},
+    pages       = {229–237},
+    journal     = {Advances in Methods and Practices in Psychological Science}
+}
+
+
+@article{O’Leary2013,
+    title       = {Data collection in cancer clinical trials: Too much of a good thing?},
+    author      = {O’Leary, E. and Seow, H. and Julian, J. and Levine, M. and Pond, G. R.},
+    number      = {4},
+    volume      = {10},
+    url         = {https://doi.org/10.1177/1740774513491337},
+    doi         = {10.1177/1740774513491337},
+    date        = {2013},
+    pages       = {624–632},
+    journal     = {Clinical Trials}
+}
+
+
+@article{Pagliaro2021,
+    title       = {Purposeful evaluation of scholarship in the open science era},
+    author      = {Pagliaro, M.},
+    number      = {1},
+    volume      = {12},
+    url         = {https://doi.org/10.3390/challe12010006},
+    doi         = {10.3390/challe12010006},
+    date        = {2021},
+    journal     = {Challenges}
+}
+
+
+@article{Papadopoulos2017,
+    title       = {The mismeasure of academic labour},
+    author      = {Papadopoulos, A.},
+    number      = {3},
+    volume      = {36},
+    url         = {https://doi.org/10.1080/07294360.2017.1289156},
+    doi         = {10.1080/07294360.2017.1289156},
+    date        = {2017},
+    pages       = {511–525},
+    journal     = {Higher Education Research & Development}
+}
+
+
+@inbook{Pownall2021,
+    title       = {Embedding open and reproducible science into teaching: A bank of lesson plans and resources},
+    author      = {Pownall, M. and Azevedo, F. and Aldoh, A. and Elsherif, M. and Vasilev, M. and Pennington, C. R. and Robertson, O. and Tromp, M. V. and Liu, M. and Makel, M. C. and Tonge, N. and Moreau, D. and Horry, R. and Shaw, J. and Tzavella, L. and McGarrigle, R. and Talbot, C. and Parsons, S. and undefined, F. O.R. R.T.},
+    url         = {https://doi.org/10.1037/stl0000307},
+    doi         = {10.1037/stl0000307},
+    date        = {2021},
+    booktitle     = {Scholarship of Teaching and Learning in Psychology}
+}
+
+
+@inbook{Rees2015,
+    title       = {Developing a research strategy at a research intensive university: A Pro Vice Chancellor’s perspective},
+    author      = {Rees, T.},
+    editor      = {Dingwall, R. and McDonnell, M.},
+    publisher   = {SAGE Publications Ltd},
+    date        = {2015},
+    pages       = {565–580},
+    booktitle     = {The SAGE handbook of research management}
+}
+
+
+@article{Reimer2014,
+    title       = {Imperial College London submission to the RCUK review on open access},
+    author      = {Reimer, T.},
+    url         = {https://doi.org/10.25561/15558},
+    doi         = {10.25561/15558},
+    place       = {Imperial College London},
+    date        = {2014}
+}
+
+
+@article{Consulting2014,
+    title       = {Counting the costs of open access},
+    author      = {Consulting, Research},
+    url         = {http://www.researchconsulting.co.uk/wp-content/uploads/2014/11/Research-Consulting-Counting-the-Costs-of-OA-Final.pdf},
+    date        = {2014}
+}
+
+
+@article{RhysEvans2021,
+    title       = {Improving evidence-based practice through preregistration of applied research: Barriers and recommendations},
+    author      = {Rhys Evans, T. and Branney, P. and Clements, A. and Hatton, E.},
+    number      = {2},
+    volume      = {30},
+    url         = {https://doi.org/10.1080/08989621.2021.1969233},
+    doi         = {10.1080/08989621.2021.1969233},
+    date        = {2021},
+    pages       = {88–108},
+    journal     = {Accountability in Research}
+}
+
+
+@article{Robson2021,
+    title       = {Promoting open science: A holistic approach to changing behaviour},
+    author      = {Robson, S. G. and Baum, M. A. and Beaudry, J. L. and Beitner, J. and Brohmer, H. and Chin, J. M. and Jasko, K. and Kouros, C. D. and Laukkonen, R. E. and Moreau, D. and Searston, R. A. and Slagter, H. A. and Steffens, N. K. and Tangen, J. M. and Thomas, A.},
+    number      = {1},
+    volume      = {7},
+    url         = {https://doi.org/10.1525/collabra.30137},
+    doi         = {10.1525/collabra.30137},
+    date        = {2021},
+    journal     = {Collabra: Psychology}
+}
+
+
+@article{Rochon2010,
+    title       = {Financial Conflicts of Interest Checklist 2010 for clinical research studies. Open Medicine: A Peer-Reviewed, Independent},
+    author      = {Rochon, P. A. and Hoey, J. and Chan, A.-W. and Ferris, L. E. and Lexchin, J. and Kalkar, S. R. and Sekeres, M. and Wu, W. and Van Laethem, M. and Gruneir, A. and Maskalyk, J. and Streiner, D. L. and Gold, J. and Taback, N. and Moher, D.},
+    number      = {1},
+    volume      = {4},
+    date        = {2010},
+    pages       = {69–91},
+    journal     = {Open-Access Journal}
+}
+
+
+@article{Rockwell2009,
+    title       = {The FDP Faculty Burden Survey},
+    author      = {Rockwell, S.},
+    number      = {2},
+    volume      = {16},
+    date        = {2009},
+    pages       = {29–44},
+    journal     = {Research Management Review}
+}
+
+
+@article{Sarafoglou2022,
+    title       = {A survey on how preregistration affects the research workflow: Better science but more work},
+    author      = {Sarafoglou, A. and Kovacs, M. and Bakos, B. and Wagenmakers, E.-J. and Aczel, B.},
+    number      = {7},
+    volume      = {9},
+    url         = {https://doi.org/10.1098/rsos.211997},
+    doi         = {10.1098/rsos.211997},
+    date        = {2022},
+    pages       = {211997},
+    journal     = {Royal Society Open Science}
+}
+
+
+@article{Saunders2015,
+    title       = {Anonymising interview data: Challenges and compromise in practice},
+    author      = {Saunders, B. and Kitzinger, J. and Kitzinger, C.},
+    number      = {5},
+    volume      = {15},
+    url         = {https://doi.org/10.1177/1468794114550439},
+    doi         = {10.1177/1468794114550439},
+    date        = {2015},
+    pages       = {616–632},
+    journal     = {Qualitative Research}
+}
+
+
+@article{Scheliga2014,
+    title       = {Putting open science into practice: A social dilemma? First Monday},
+    author      = {Scheliga, K. and Friesike, S.},
+    url         = {https://doi.org/10.5210/fm.v19i9.5381},
+    doi         = {10.5210/fm.v19i9.5381},
+    date        = {2014}
+}
+
+
+@book{Schneider2015,
+    title       = {The censor’s hand: The misregulation of human-subject research},
+    author      = {Schneider, C. E.},
+    publisher   = {MIT Press},
+    date        = {2015}
+}
+
+
+@article{Seidl2016,
+    title       = {Optimal career strategies and brain drain in academia},
+    author      = {Seidl, A. and Wrzaczek, S. and El Ouardighi, F. and Feichtinger, G.},
+    number      = {1},
+    volume      = {168},
+    url         = {https://doi.org/10.1007/s10957-015-0747-3},
+    doi         = {10.1007/s10957-015-0747-3},
+    date        = {2016},
+    pages       = {268–295},
+    journal     = {Journal of Optimization Theory and Applications}
+}
+
+
+@article{Somerville2021,
+    title       = {Learn when—and how—to say no in your professional life},
+    author      = {Somerville, L. H.},
+    url         = {https://doi.org/10.1126/science.caredit.abg4310},
+    doi         = {10.1126/science.caredit.abg4310},
+    date        = {2021},
+    journal     = {Science}
+}
+
+
+@article{Spellman2015,
+    title       = {A short (personal) future history of revolution 2.0},
+    author      = {Spellman, B. A.},
+    number      = {6},
+    volume      = {10},
+    url         = {https://doi.org/10.1177/1745691615609918},
+    doi         = {10.1177/1745691615609918},
+    date        = {2015},
+    pages       = {886–899},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Staniszewska2017,
+    title       = {GRIPP2 reporting checklists: Tools to improve reporting of patient and public involvement in research},
+    author      = {Staniszewska, S. and Brett, J. and Simera, I. and Seers, K. and Mockford, C. and Goodlad, S. and Altman, D. G. and Moher, D. and Barber, R. and Denegri, S. and Entwistle, A. and Littlejohns, P. and Morris, C. and Suleman, R. and Thomas, V. and Tysall, C.},
+    number      = {1},
+    volume      = {3},
+    url         = {https://doi.org/10.1186/s40900-017-0062-2},
+    doi         = {10.1186/s40900-017-0062-2},
+    date        = {2017},
+    pages       = {13},
+    journal     = {Research Involvement and Engagement}
+}
+
+
+@article{Stewart2021,
+    title       = {Improving research quality: The view from the UK Reproducibility Network institutional leads for research improvement},
+    author      = {Stewart, A. J. and Farran, E. K. and Grange, J. A. and Macleod, M. and Munafò, M. and Newton, P. and Shanks, D. R. and the UKRN Institutional Leads},
+    number      = {1},
+    volume      = {14},
+    url         = {https://doi.org/10.1186/s13104-021-05883-3},
+    doi         = {10.1186/s13104-021-05883-3},
+    date        = {2021},
+    pages       = {458},
+    journal     = {BMC Research Notes}
+}
+
+
+@article{Stewart2015,
+    title       = {The urgent need for clinical research reform to permit faster, less expensive access to new therapies for lethal diseases},
+    author      = {Stewart, D. J. and Batist, G. and Kantarjian, H. M. and Bradford, J.-P. and Schiller, J. H. and Kurzrock, R.},
+    number      = {20},
+    volume      = {21},
+    url         = {https://doi.org/10.1158/1078-0432.CCR-14-3246},
+    doi         = {10.1158/1078-0432.CCR-14-3246},
+    date        = {2015},
+    pages       = {4561–4568},
+    journal     = {Clinical Cancer Research}
+}
+
+
+@article{Stewart2008,
+    title       = {Regulation - the real threat to clinical research},
+    author      = {Stewart, P. M. and Stears, A. and Tomlinson, J. W. and Brown, M. J.},
+    volume      = {337, Article a1732},
+    url         = {https://doi.org/10.1136/bmj.a1732},
+    doi         = {10.1136/bmj.a1732},
+    date        = {2008},
+    journal     = {BMJ}
+}
+
+
+@article{Stewart2022,
+    title       = {Reforms to improve reproducibility and quality must be coordinated across the research ecosystem: The view from the UKRN Local Network Leads},
+    author      = {Stewart, S. L.K. and Pennington, C. R. and da Silva, G. R. and Ballou, N. and Butler, J. and Dienes, Z. and Jay, C. and Rossit, S. and Samara, A. and Leads, U. K.Reproducibility Network Local Network},
+    number      = {1},
+    volume      = {15},
+    url         = {https://doi.org/10.1186/s13104-022-05949-w},
+    doi         = {10.1186/s13104-022-05949-w},
+    date        = {2022},
+    journal     = {BMC Research Notes}
+}
+
+
+@article{Szollosi2020,
+    title       = {Is preregistration worthwhile?},
+    author      = {Szollosi, A. and Kellen, D. and Navarro, D. J. and Shiffrin, R. and van Rooij, I. and Van Zandt, T. and Donkin, C.},
+    number      = {2},
+    volume      = {24},
+    url         = {https://doi.org/10.1016/j.tics.2019.11.009},
+    doi         = {10.1016/j.tics.2019.11.009},
+    date        = {2020},
+    pages       = {94–95},
+    journal     = {Trends in Cognitive Sciences}
+}
+
+
+@article{Tenopir2011,
+    title       = {Data sharing by scientists: Practices and perceptions},
+    author      = {Tenopir, C. and Allard, S. and Douglass, K. and Aydinoglu, A. U. and Wu, L. and Read, E. and Manoff, M. and Frame, M.},
+    number      = {6},
+    volume      = {6},
+    url         = {https://doi.org/10.1371/journal.pone.0021101},
+    doi         = {10.1371/journal.pone.0021101},
+    date        = {2011},
+    journal     = {PLoS ONE}
+}
+
+
+@article{Uher2023,
+    title       = {What’s wrong with rating scales? Psychology’s replication and confidence crisis cannot be solved without transparency in data generation},
+    author      = {Uher, J.},
+    volume      = {e12740},
+    url         = {https://doi.org/10.1111/spc3.12740},
+    doi         = {10.1111/spc3.12740},
+    date        = {2023},
+    journal     = {Social and Personality Psychology Compass, Article}
+}
+
+
+@article{bib90,
+    title       = {Counting the costs of casualisation in higher education},
+    author      = {undefined, University and Union, College},
+    url         = {https://www.ucu.org.uk/media/10336/Counting-the-costs-of-casualisation-in-higher-education-Jun-19/pdf/ucu_casualisation_in_HE_survey_report_Jun19.pdf},
+    date        = {2019}
+}
+
+
+@article{bib91,
+    title       = {Four fights dispute FAQs},
+    author      = {undefined, University and Union, College},
+    url         = {https://www.ucu.org.uk/article/11818/Four-fights-dispute-FAQs},
+    date        = {2022}
+}
+
+
+@article{Urbina‐Garcia2020,
+    title       = {What do we know about university academics’ mental health? A systematic literature review},
+    author      = {Urbina‐Garcia, A.},
+    number      = {5},
+    volume      = {36},
+    url         = {https://doi.org/10.1002/smi.2956},
+    doi         = {10.1002/smi.2956},
+    date        = {2020},
+    pages       = {563–585},
+    journal     = {Stress and Health}
+}
+
+
+@article{UygunTunç2022,
+    title       = {Is open science neoliberal?},
+    author      = {Uygun Tunç, D. and Tunç, M. N. and Eper, Z. B.},
+    volume      = {174569162211148},
+    url         = {https://doi.org/10.1177/17456916221114835},
+    doi         = {10.1177/17456916221114835},
+    date        = {2022},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Vican2020,
+    title       = {Metrics, money, and managerialism: Faculty experiences of competing logics in higher education},
+    author      = {Vican, S. and Friedman, A. and Andreasen, R.},
+    number      = {1},
+    volume      = {91},
+    url         = {https://doi.org/10.1080/00221546.2019.1615332},
+    doi         = {10.1080/00221546.2019.1615332},
+    date        = {2020},
+    pages       = {139–164},
+    journal     = {The Journal of Higher Education}
+}
+
+
+@article{Weitzenboeck2022,
+    title       = {The GDPR and unstructured data: Is anonymization possible?},
+    author      = {Weitzenboeck, E. M. and Lison, P. and Cyndecka, M. and Langford, M.},
+    volume      = {ipac008},
+    url         = {https://doi.org/10.1093/idpl/ipac008},
+    doi         = {10.1093/idpl/ipac008},
+    date        = {2022},
+    journal     = {International Data Privacy Law}
+}
+
+
+@article{Wicherts2016,
+    title       = {Degrees of freedom in planning, running, analyzing, and reporting psychological studies: A checklist to avoid p-hacking},
+    author      = {Wicherts, J. M. and Veldkamp, C. L.S. and Augusteijn, H. E.M. and Bakker, M. and van Aert, R. C.M. and van Assen, M. A.L. M.},
+    url         = {https://doi.org/10.3389/fpsyg.2016.01832},
+    doi         = {10.3389/fpsyg.2016.01832},
+    date        = {2016}
+}
+
+
+@article{Wilkinson2016,
+    title       = {The FAIR Guiding Principles for scientific data management and stewardship},
+    author      = {Wilkinson, M. D. and Dumontier, M. and Aalbersberg, Ij J. and Appleton, G. and Axton, M. and Baak, A. and Blomberg, N. and Boiten, J.-W. and da Silva Santos, L. B. and Bourne, P. E. and Bouwman, J. and Brookes, A. J. and Clark, T. and Crosas, M. and Dillo, I. and Dumon, O. and Edmunds, S. and Evelo, C. T. and Finkers, R. and Mons, B.},
+    number      = {1},
+    volume      = {3},
+    url         = {https://doi.org/10.1038/sdata.2016.18},
+    doi         = {10.1038/sdata.2016.18},
+    date        = {2016},
+    journal     = {Scientific Data}
+}
+
+
+@article{Williams2022,
+    title       = {So, if this is going to be done within my usual hours as part of my current role, what would you like me to stop doing and what reassurances can you offer that this won’t adversely affect my career prospects?},
+    author      = {Williams, H.},
+    url         = {https://twitter.com/alrightPET/status/1534785730995789827?s=20&t=qcWB_lHaL_7tEgU6Z3ym0A},
+    date        = {2022}
+}
+
+
+@book{Ziman2000,
+    title       = {Real science: What it is and what it means},
+    author      = {Ziman, J. M.},
+    publisher   = {Cambridge University Press},
+    date        = {2000}
+}
+\end{filecontents}
+
+\begin{document}
+
+
+\begin{frontmatter}
+    \maketitle
+    \begin{abstract}
+      \printabstracttext
+    \end{abstract}
+  \end{frontmatter}
+
+
+% \section{Take home message}
+
+
+
+% Open research takes more time compared to closed research, but this additional work is likely to be made invisible in university workload models. Workloads are already at capacity leading to stress, burnout, and departures from academia. Current discourse around open research neglects a holistic view of academic labour, meaning these issues have been ignored.
+
+
+
+
+
+
+
+% \section{Introduction}
+
+
+
+\lettrine{I}{t} is widely accepted that conducting open research can improve the endeavour of collaborative human knowledge generation. Here, “open research”\footnote{ The term ‘open research’ has been chosen here instead of ‘open science’ given that many of the practices mentioned are used in disciplines and research paradigms that would not define themselves as sciences (e.g. qualitative research).} refers to a variety of practices that make the plans, procedures, labour, and outputs of research publicly available, although the phrase covers broader meanings elsewhere \parencites{Fecher2014}. Any one individual open practice such as preregistration or data sharing may have a variety of axiological benefits \parencites{Uygun Tunç2022}, but taken together, transparency of the research process improves the epistemic reliability of a piece of research, which facilitates incremental knowledge generation. It also supports an environment by which epistemically unreliable research (whether through errors or bias) can be discounted or ignored \parencites{Lakens2014}.
+
+
+
+Compared to ‘closed’ research, where the only publicly available element of research is a final journal report, open research involves transparently cataloguing as much of the research process as possible. It has been argued that transparent workflows can reduce inefficiency and save time once implemented \parencites{Lowndes2017}. However, in practice, conducting open research involves additional time and effort compared to closed research, not only in the process of sharing materials to disciplinary standards, but also in the development of new skills and knowledge to enable this. Generally, the additional work required to conduct open research has been acknowledged (and justified) by proponents of open research reforms \parencites[e.g.][]{Allen2019}{Robson2021}{Scheliga2014}{Stewart2021}.
+
+
+
+However, the current discourse promoting open research fails to engage sufficiently with how additional workload impacts the \emph{practicalities} of academic labour \parencites{Callard2022}. The majority of literature discussing open research reforms is in the field of ‘meta-research’ and has typically viewed closed research as a systematic or cultural problem: characterizing researchers as fallible human agents working in systems and contexts that encourage bias and closed practices. Examples include discussion of issues such as the incentives for conducting open practices \parencites{Nosek2012}, biases in publication workflows \parencites{Chambers2022}, recognition and reward of open research practices \parencites{Munafò2019} and compliance with open research mandates \parencites{Gabelica2022}. Whilst these are important issues, the common perspective is that researchers exist solely to conduct research and are primarily judged and motivated by success in this domain. This neglects the fact that the majority of researchers are employed \emph{not} solely as researchers but rather as academics, a role that involves a large number of other activities that compete for time and resources, including teaching, administration, income generation, knowledge exchange, and supervision. Even for academics who are primarily researchers, transparency may not be a priority concern given other important and competing demands such as increasing research regulation \parencites{Stewart2008}, novel ethical issues \parencites{Havard2012}, or grappling with fundamental issues in theory development \parencites{Eronen2021} and methodology \parencites{Uher2023}. By solely focusing on “open research” as a separable pursuit, meta-research neglects to acknowledge that the additional workload required by open research cannot always be practically accommodated in the day-to-day duties of academics and the time and resources they have available.
+
+
+
+This is a critical issue, given the increasing systematic degradation of working standards across academia: There is ample evidence that many academics are already at “capacity” in terms of the amount of work they do \parencites{Long2020}, and yet workloads are still increasing. This has led to endemic levels of stress and burnout in the sector \parencites{Urbina‐Garcia2020}, mental health crises \parencites{Nicholls2022}, recourse to industrial action to protest against overwork \parencites{University2022}, and a recognition that the sector is haemorrhaging talent to industry where working conditions are seen to be more favourable \parencites{Gewin2022}{Seidl2016}. It is therefore crucial to explore the blind spot in meta-research of how the additional workload of open research may potentially negatively impact on working conditions of academics.
+
+
+
+The oversight can be addressed by utilising research from the field of higher education studies, including the theory of academic capitalism \parencites{Jessop2018}. This theory suggests the scholarly ecosystem can be viewed as a type of market, where institutions are capitalist actors in competition with one another. From this perspective, the way that universities (as the primary employers of most academics) are organised, and subsequently their priorities, policies, and relationship with (and potentially exploitation of) academic labour can be examined. The lens of academic capitalism can therefore offer new insights on the way that open research reforms may be practically prevailed upon academics \parencites{Hostler2022}, in order to anticipate problems and provide solutions.
+
+
+
+The rest of the paper is structured as follows: first, I explain the theoretical framework of academic capitalism, including how academic labour is typically controlled by universities using a “workload model” and exploited via “workload creep”. Second, I explain how various open research practices add to the time burden and workload of conducting research, including via the cumulative and unnecessary effect of administrative burden. Third, I will explore how additional open research activities may not be sufficiently accounted for in a workload model, leading to detrimental effects on academics’ well-being. Finally, I will conclude with some discussions of potential solutions and the responsibilities of both individuals and institutions to address these issues.
+
+
+
+\section{Theoretical Background}
+
+
+
+\subsection{Academic Capitalism}
+
+
+
+The theory of \emph{academic capitalism} comes from higher education research and refers to the tendency for universities to operate in competition with each other in markets, competing over both economic and social capital. This tendency is manifested in their priorities, activities, internal organisation, and management. Whilst there are various specific forms of academic capitalism \parencites{Jessop2018}, as an overarching theory it provides a framework which enables universities to be considered as strategic actors, rather than passive organizational units \parencites{Münch2014}.
+
+
+
+Through this lens, universities (like all capitalist actors) seek to maximise the utilization of their resources to remain competitive against one another in a variety of zero-sum ‘markets’ including student recruitment, research funding, national research evaluation exercises, and national and global university rankings \parencites{Collini2012}. Primary among a university’s resources is its academic labour, which it attempts to “steer” towards its own goals through its internal management policies \parencites{Rees2015}, and find innovative ways of organizing to improve its (economic) efficiency, for example through the use of fixed-term or part-time contracts \parencites{Macfarlane2011}.
+
+
+
+The strategic deployment of academic labour is not \emph{necessarily} exploitative, and managerialist organization in universities is increasingly tolerated and accepted by academics \parencites{Kolsaker2008}. However, increased oversight and capitalist logic is also seen to enable normalizing exploitative practices when financial considerations are prioritized over traditional academic professional values \parencites{Vican2020}. This is epitomized by the finding that the majority of casualized academic staff are required to work more hours than which they are paid for in order to complete the work required in their contract \parencites[i.e., marking essays to a suitable academic standard][]{University2019}.
+
+
+
+Universities are not purely capitalists and have many competing interests, and the drivers of these interests are dynamic and set by the broader economic and political conditions from which they are created. Often, a university’s specific goals are congruous with the metrics and conditions tied to these drivers, for example the criteria used to judge research excellence in national research evaluation exercises. Changes to these metrics subsequently influence the university’s strategic plans, leading to the re-allocation of resources and new instructions to academics. The work by open research advocates to change these drivers to reward openness - such as funder mandates for open data \parencites{Hefce2016}, or changes to university ranking criteria \parencites{Pagliaro2021} - are therefore some of the most powerful tools for system-wide adoption of open research practices.
+
+
+
+However, efforts to change a university’s strategic priorities to support open research do nothing to alter the underlying capitalist framework, and so do not tackle the issues of working conditions raised in this article. Academic labour can also potentially be exploited to serve the interests of open research: the competitive pressures of “publish or perish” can easily become “publish open research or perish”. Indeed, any changes to working practices or expectations can provide perfect cover (intentionally or not) for increased exploitation \parencites{Hostler2022}. To understand how the promotion of open research can lead to negative changes in working conditions, a closer look at how academic labour is currently organized is required.
+
+
+
+\subsection{The Workload Model}
+
+
+
+An academic’s job typically consists of a large number of activities in addition to research. A comprehensive analysis of an academic’s typical work over a three-month period is provided by \textcite{Miller2019}, covering five main areas of teaching, research, administration, community service, and ‘other’. Whilst academics have responsibility for organising \emph{when} they perform each of these duties, universities are increasingly using managerial practices to assign the range and volume of the tasks themselves \parencites{Kenny2022}, in the form of a “workload model”: a system for “projectifying” time into limited, measurable, slots that can be allocated to different activities \parencites{Dollinger2020}. Workload models are typically based on an annual measure of time that is allocated across different activities, forming a “split” of work across a year. For example, 40% of time dedicated to research, 40% to teaching and 20% to administration. Certain components of workload models are due to regulatory requirements \parencites{Kernohan2019}, but they are also a useful tool for a capitalist university seeking to understand and maximise the efficiency of the deployment of its human resources. The use of such models is divisive. Some academics view them as a threat to their autonomy \parencites{Boncori2020}, and whilst they may for some represent a level of protection against being given too many tasks, many others view them as a mechanism for universities to demand unrealistic levels of work from academics by underestimating the time taken for different activities \parencites{Papadopoulos2017}. There is also a general acknowledgement that workload models are not comprehensive and that a significant proportion of the actual work that academics do that is unaccounted for \parencites{Kenny2019}{Miller2019}.
+
+
+
+Whilst the time spent on different activities is allocated via workload models, academic performance is typically assessed via departmental or individual targets for outcomes or outputs of academic work. These outcomes are often cascaded from university-level metrics, for example, the number of papers published and in which journals, and the amount of research funding accrued. For researchers employed on temporary contracts, these are targets that are required to secure the next job and “survive” in academia \parencites{Anderson2007}. The discrepancy between the time available to work on different academic activities and the expectations of performance is a key driver of stress and discontent. Many academics already feel that their workloads are at “untenable” levels and that additional time is needed to meet expectations, leading to burnout \parencites{Beatson2021}. Within this context, expectations to perform \emph{additional} duties to conduct open research, whether from formal mandates by funders or universities, or informal social expectations to remain competitive, have the potential to make things worse if insufficiently accounted for (made ‘invisible’) in a workload model. Unfortunately, historical trends suggest that open research practices will \emph{not} be accounted for in workloads, as I explain below.
+
+
+
+\subsection{Workload Creep}
+
+
+
+One likely way in which open research may be insufficiently accounted for is via its inclusion in “workload creep”. This phenomenon exploits the fact that workload models do not provide a granular breakdown of activities, meaning that expectations around what should be achieved in a given time can be subtly changed without a corresponding change in the amount of hours dedicated to a task \parencites{Long2020}. This is particularly common in the case of research, where changes to research expectations (in terms of quantity or quality of outputs) may be raised without extra time or resources made available. In the case of open research, there is a high potential for expectations to engage in open research to become widespread, but without additional time on academics’ workloads dedicated to the activity. These expectations may originate either from employer’s performance standards, for example requiring evidence of open research in hiring and promotion criteria \parencites{Gärtner2022}{Robson2021}, or from mandates for openness from funders, journals, or legislation \parencites{Nosek2019}.
+
+
+
+The broader discourse around academic workload acknowledges the reality of workload creep. Advice to early career academics is to simply learn how to “say no” to requests to perform additional work \parencites{Somerville2021}, or to ask a manager “what would you like me to stop doing?” \parencites{Williams2022}. However, it is difficult to apply either of these approaches to changes to research expectations. It is unlikely that open research practices will be explicitly requested by an individual such as a manager to whom one can say “no”: academics will either be encouraged or mandated to adopt them by anonymous university or journal policies, which are difficult to contest, or they will do so out of their own volition to remain competitively employable. This then hampers bargaining power in discussions with managers about workloads, making it difficult to secure changes in workload models to accommodate the additional time required.
+
+
+
+The issue of workload creep can already be seen in the open research practice of ‘open access’, where funded research outputs are mandated to be made publicly available, requiring additional work by academics to understand and comply with these requirements \parencites{Research Consulting2014}. However, this additional work is not reflected in workloads in terms of an increase in the number of hours per year given for research (which in ‘full capacity’ workloads would require other tasks to be removed), or in changes to performance expectations of an explicit decrease in the number of publications expected per year. Complying with an open access requirement may only take about 30 minutes \parencites{Reimer2014}, but conducting other open research practices (such as sharing materials, data, code, or preregistrations) would confer a much more significant time burden if expected or mandated in the same way. In the next section I provide several examples of how open research practices may lead to a significant increased time burden.
+
+
+
+
+
+
+
+
+
+
+
+\section{Additional Workload of Open Research}
+
+
+
+There are numerous open research practices, the benefits of which are discussed in detail elsewhere \parencites[e.g.][]{Munafò2017}{Nosek2018} and not all need be applied to every piece of research. However, adopting any new practice typically involves making changes to a researchers’ existing practices, bringing additional workload. This includes time spent learning and applying ‘open’ practices, the cumulative workload of novel administrative work, and the indirect labour of teaching and mentoring open research. These are explained in turn below:
+
+
+
+\subsection{Workload of Specific Open Practices}
+
+
+
+\subsubsection{Preregistration}
+
+
+
+Preregistration involves providing a detailed explanation of a researcher’s planned data collection procedure, hypotheses, and analysis plan, so that researcher degrees of freedom in analysis decisions can be observed. However, in order for a preregistration to achieve this functionality, it must be “precise”, “specific” and “exhaustive” \parencites{Bakker2020}. This involves communicating plans in a substantially greater level of detail than required in traditional research administration (e.g. for the purposes of ethical review, grant applications), as \emph{multiple }alternative analysis strategies need to be considered and explained (including what will \emph{not }be done) depending on different data collection outcomes including outliers, missing data, and violation of statistical assumptions \parencites{Bakker2020}. The checklist by \textcite{Wicherts2016} presents 34 different degrees of freedom that researchers should define in advance in a preregistration to prevent \emph{p}-hacking. For the majority of researchers, following such a checklist represents an increase in the explicit planning needed for a research project, where many of their decisions will be based on implicit assumptions. It takes additional time to explicitly articulate these plans and decisions, especially in a form that is understandable to people unfamiliar with the project. The suggestion that a preregistration should typically take only “30–60 minutes” \parencites{Aguinis2020} is likely to be an inaccurate generalization, depending on the type and complexity of the research and the experience of the researcher, although the time taken should decrease with practice \parencites{Nosek2019}.
+
+
+
+\subsubsection{Data Sharing}
+
+
+
+Data sharing is an open research practice that takes significantly more effort compared to a traditional closed approach; insofar as a closed approach takes no effort at all, involving simply ignoring or rebuffing sharing requests \parencites{Gabelica2022}. In contrast, done properly and in line with the principles of Findable, Accessible, Interoperable, Reusable \parencites[FAIR][]{Wilkinson2016}, data sharing takes a considerable amount of time. First, data must be properly anonymized in order to be shared ethically, a process that is particularly difficult for qualitative data such as interviews \parencites{Saunders2015}, legal documents \parencites{Csányi2021}, and unstructured, high-dimensional data such audio and video recordings \parencites{Weitzenboeck2022}. Second, data should be findable, which means taking time to access and use an appropriate data repository, make sure settings are correct to comply with ethical restrictions, and that sufficient meta-data is provided. Finally, to be accessible, interoperable, and reusable, data must be organized and labelled to community standards and formatted and described in such a way as to be understandable to others who are not familiar with how it was collected or processed, both of which may represent departures from how a researcher typically organises data for their own use.
+
+
+
+\subsubsection{Analysis Code}
+
+
+
+Open code refers to sharing the analysis code used to produce the output found in the final report from the research data. This is an open practice that may be unfamiliar to some researchers, especially those who use graphical user interface (GUI) programs such as SPSS where viewing and understanding the underlying code is not necessary to analyse data. Compiling and sharing analysis code may therefore require training and the acquisition of new skills to be able to do this adequately, if a researcher is not experienced in doing this. Some researchers argue that using proprietary programs such as SPSS is not ideal for open research, since it takes more effort for those without access to these programs to utilize and interpret the code \parencites{Obels2020}. This may encourage researchers to utilise open source alternative programs, such as JASP or \emph{R, }where sharing code is significantly easier, although this in itself involves the development of new software skills and workflows. As with data, the shared code also needs to be written or annotated in such a way to ensure usability for other researchers \parencites{Obels2020}, which takes extra time compared to writing code for one’s own use, which may use idiosyncratic shorthand.
+
+
+
+Openness Agreements & Administration\textbf{ }
+
+
+
+In complex projects, additional administration is often required to facilitate the use of open research practices. This is particularly true in research with a large number of collaborators. Here, legal documents may be required to certify sharing agreements for data, materials, or outputs, particularly in cases where different elements of a project have different levels of openness across different time frames. For example, in cases where separable elements of a piece of software may be “owned” by different parties in a collaboration \parencites{Levin2017} or where industry collaboration requires delaying the timing of release of results or materials to maintain a competitive edge \parencites{Fernández Pinto2020}. With the increasing size of research teams and complexity of projects, such agreements become lengthier and take additional time to complete and get approval from all parties. Additional administration (compared to closed research) may also come in the form of recording contributions to research projects (e.g. CREDIT taxonomy; Holcombe, 2019) or providing meta-data about open research practices in the form of transparency statements or checklists \parencites{Aczel2020}. Administration has a particularly close relationship with workload creep, and below I explain how the theory of administrative burden can further illuminate how the process of integrating minor administrative tasks into existing workflows can exacerbate the time burden of open research.
+
+
+
+\subsection{Administrative Burden}
+
+
+
+Whilst preparing a large set of audio-visual data to FAIR sharing standards may be a significant technical undertaking, many open research practices may be viewed as essentially administrative tasks involving documenting information about a piece of research. This includes writing preregistrations, data sharing documentation, and statements about the openness (or not) of open practices for different elements of a project. The theory of “administrative burden” \parencites{Bozeman1993} can be used to explore how in many cases the additional time spent completing these tasks is unnecessary and unnoticed in workload estimates. Administrative burden theory acknowledges that all administration represents a time burden, but that in many cases it represents unnecessary “red tape” when it does not help to fulfil a regulation’s functional objectives. An example of unnecessary research administration might be an ethics form that asks a researcher whether they are using radioactive materials, despite the fact that due to their discipline (e.g. psychology), the answer should be obvious \parencites{Bozeman2020}. In the case of open research, red tape may involve requirements to write transparency statements or complete checklists about the availability of data or materials where none exist (e.g. review papers), or explain the (non)existence of preregistrations for research in which this practice is not required or its use contested (e.g. exploratory or qualitative research).
+
+
+
+Red tape can also be seen in the case of “rule redundancy” \parencites{Bozeman2017} resulting from bureaucratic overlap, where administration such as explanations of data sharing arrangements is duplicated across platforms (e.g. for funding applications, ethics applications, and journal requirements), but often with different specifications. Another example of rule redundancy is with preregistrations, documents which may closely mirror elements of existing research administration, such as research protocols required for ethical review. Whilst the existence of a protocol may make completing a separate preregistration easier (or vice-versa), \emph{functionally} the duplication of the information may be unnecessary if one document could potentially serve both purposes, yet generates extra workload when the different formats of each document requires time to adapt the content to move information between the two.
+
+
+
+Administrative burden is often exacerbated when technology is used to remotely facilitate administration and therefore lacks the nuance to accurately capture the reality of a particular context. Dialogue with the technology provider is then required to resolve discrepancies, inconspicuously increasing time burden. For example, platforms or infrastructure to facilitate open practices such as preregistration or sharing data or materials may be unclearly worded or not fit for purpose for particular kinds of research or data \parencites[e.g.][]{Borgerud2020}{Rhys Evans2021}. This is particularly the case in disciplines such as the humanities, where what constitutes “data” or even “research outputs” may be unusual (including physical objects). The widespread adoption of the ethical norms and terminology from positivist biomedical research in the ethical review process is inappropriate for much social science research and a historical example of creating extra administrative burden for certain groups of scholars \parencites{Schneider2015}. This foreshadows the potential for open research practices such as preregistration, developed from a similarly narrow statistical perspective \parencites{Nosek2018}, to also be misapplied to other areas of research if administered remotely. Increased administrative burden also occurs when existing technology and systems in the research ecosystem fail to keep pace with developments and trends in research resulting from greater openness. This issue can already be seen in archaic manuscript submission systems which do not accommodate the hundreds of authors found on “big team science” projects enabled by the use of open research practices, requiring significant additional time spent doing administration \parencites{Forscher2022}. The scope for the multitude of open research requirements and applications to novel forms of research to outpace existing technology means that such examples are likely to become more common.
+
+
+
+The growth of administrative burden has two facets that make it difficult to combat. The first is that administration can often be convincingly defended on the basis that it collects data that has potential utility or that it is necessary to assure compliance with regulations or mandates. However, whether all the data collected from research administration \emph{is} strictly necessary or ever actually used is contested \parencites{O’Leary2013}, and as many open research practices and associated administration are not yet widely adopted there is a lack of evidence on the actual benefits (e.g., of transparency statements) to consider against potential or actual time costs. There are strong arguments that existing research administration is already excessive and prohibitive, particularly for certain types of research such as clinical trials \parencites{Stewart2015}. Some estimates put the amount of time allocated to research that is spent on administration at 42% \parencites{Rockwell2009} and there is evidence that researchers already employ “workarounds” or exhibit non-compliance to reduce this burden \parencites{Bozeman2021}. More fundamentally, it has been argued that research administration is an ineffective way to ensure compliance with regulations \parencites{Schneider2015}, as it can easily be falsified \parencites[e.g., claiming data is available when it is not][]{Gabelica2022}.
+
+
+
+The second issue is that administrative burden is a \emph{cumulative} problem. The time cost of any one individual instance of administration can easily be dismissed as trivial: it might take only ten minutes to complete a transparency checklist. In the context of a workload model measuring time annually, this represents <.01% of a researcher’s time. However, cumulatively, such administration adds up. In addition to a checklist about methodological transparency \parencites{Aczel2020}, a researcher may also be compelled to complete an ethics transparency checklist \parencites{Henry2018}, a financial conflict of interest checklist \parencites{Rochon2010}, a patient and public involvement checklist \parencites{Staniszewska2017}, and/or a clinical practice guidelines checklist \parencites{Cruz Rivera2020}. When considered in the wider context of an all-round academic job, potential sources of administration multiply even further. Administration is increasing in universities across all elements of an academic role \parencites{Hogan2011}, all of which compete for importance and time. Minor administrative tasks are constantly introduced to collect data relating to pedagogy, supervision, equality and diversity, technology enhanced learning, financial auditing, health and safety, data protection compliance, employment law, and so on. The cumulative impact of ‘trivial’ pieces of administration has been described as “death by a thousand 10-minute tasks” \parencites{Bozeman2021}. However, it is only the academic themself that sees the impact of this burden as it is they who need to devote time to completing all of these tasks. The full picture of administrative burden is therefore difficult to detect as it is only visible when considered \emph{holistically}, a perspective that meta-research and other siloed analyses of individual aspects of academic work often overlook.
+
+
+
+
+
+
+
+\subsection{Fostering Open Research: Teaching and Supervision}
+
+
+
+A final way in which open research invisibly adds to workload is through the expectation that academics not only engage in open research themselves but teach and mentor open research practices to junior colleagues, and graduate and undergraduate students. This can be through direct reforms to teaching materials and curriculums, but also through supervision and informal mentoring. Understanding the why and how-to of open research reforms is a big task that necessarily requires knowledge of the philosophy, history, and sociology of science, as well as the practical data science and technological skills discussed previously \parencites{Crüwell2019}. Therefore, instructing graduate and undergraduate students on such topics may require significant reform of existing teaching and supervision practices, which have been described as “largely outdated” \parencites{Azevedo2022}. The issue of updating existing curricula with new knowledge is not one that is unique to research methods, and workloads typically include time to update and rewrite teaching content (although this is often already underestimated). Resources have been developed and shared to reduce this burden \parencites[e.g., lesson plans][]{Pownall2021}, however, the “revolutionary” changes that open research reforms represent \parencites{Spellman2015} still make this task considerable and time consuming. Major changes such as shifting to teaching reproducible analysis software like \emph{R} may require significant investments in staff training \parencites[e.g.][]{Barr2019}, again a time sink that is rarely captured in workload models. These issues also apply to the informal mentoring of colleagues and PhD students, work that is typically already neglected in workload models and falls disproportionately on structurally disadvantaged staff \parencites{Gordon2022}. Adding in mentoring of open research skills and knowledge to existing supervision of how to navigate academia and research methods again represents additional activities that are practically time consuming, but that are not reflected in workload models.
+
+
+
+\section{Discussion}
+
+
+
+The root of the issue of workload models is that as models, they are by definition “simulations of measurement” of academic work rather than accurate records of real-world labour, but their use \emph{precedes} the reality in discussions and expectations of the work of academics \parencites{Papadopoulos2017}. By erroneously “measuring” the reality of the time it takes to perform certain activities or ignoring others entirely, expectations of academic work are unrealistic, yet from a managerial perspective, justified. Open research practices represent a novel type of academic labour with high potential to be mismeasured or made invisible by workload models, raising expectations to even more unrealistic levels.
+
+
+
+The actual additional workload of open research is highly dependent on the type of research and the specific practices adopted. Whilst the time burden of tasks such as data sharing or teaching open research may be clear and significant, others such as administration, checklists, or preregistration may be deceptively trivial. However, such trivial tasks can easily add up and multiply, and are thus much more likely to ‘creep’ into workloads undetected. Taken together, the additional workload required for openness could therefore easily consume any time “saved” by efficiency gains from open workflows \parencites{Lowndes2017}.
+
+
+
+The benefits of open research practices have been widely discussed \parencites{Munafò2017}, and generally speaking researchers have positive attitudes towards adopting open research practices, finding them worthwhile \parencites{Eynden2016}{Lowndes2017}, and recommending their use to others \parencites{Sarafoglou2022}. However, high time cost is repeatedly identified as one of the main barriers to the adoption of open practices \parencites{Eynden2016}{Gownaris2022}{Tenopir2011} and time is the main thing that researchers lack, with workloads at capacity across the sector, having already reached “untenable” levels \parencites{Long2020}{Papadopoulos2017}. Historically, institutions have responded to increases in workload and administration by implementing managerial practices such as workload models that aim to increase efficiency by raising expectations of what researchers should achieve in their existing available time. This has led to endemic levels of stress and mental health issues across academia, with unrealistic expectations and excessive workload cited as the primary causes \parencites{Nicholls2022}{Urbina‐Garcia2020}.
+
+
+
+Without intervention, there is currently no reason to expect that the additional workload required by open research practices will not follow the same pattern of being integrated into existing workloads without a sufficient increase in time available, and thus exacerbate the crisis. The theory of academic capitalism suggests that the responsibility for addressing potential discrepancies between modelled and actual workload will not be taken up voluntarily by university management, who may at best ignore such issues, or at worse tacitly approve of them as a form of capitalist efficiency \parencites{Lyons2010}. In other words, if university management can choose not to incorporate open research into workload models, then they won’t.
+
+
+
+Acknowledging the implications of operating in a capitalist academic system presents a dilemma for open research advocates looking to improve the quality of research without exacerbating existing issues with working conditions. Fairly integrating expectations and incentives to conduct open research into a system which already exploits academic labour is a difficult task, and good intentions on a systematic level can have perverse individual outcomes. On a systematic level it is certainly a desirable outcome if open research is rewarded, thus helping to position responsible researchers into long-term careers and raising the quality of research across the board. But on an individual level it is not a desirable outcome for a researcher already working at maximum capacity and at risk of burnout to be expected to perform extra tasks in order to be able to achieve or retain secure employment. Both of these outcomes can co-occur and uncritical progress towards the former may inadvertently trigger the latter. This duality has implications for both the responsibility of individuals and the design of systems in promoting open research, which I explain below.
+
+
+
+\subsubsection{Implications for Individuals}
+
+
+
+First, proponents of open research reforms must acknowledge how the extra work of conducting open research may be practically accommodated in a researcher’s existing workload. Although some have attempted to do this \parencites[e.g.][]{Robson2021}, elsewhere the issue is neglected or downplayed. Suggestions that concerns about the workload of open research are an example of a “myth” \parencites{Bastiaansen2019} or a “misconception” that can be corrected by “positive advocacy” \parencites{Hagger2022} are unhelpful to having honest conversations about the practical negative consequences of conducting open research. Claims that open practices such as sharing resources \emph{reduce} workload \parencites{Grahe2020} only reflect the perspective of those utilising shared resources, and not those involved in doing the sharing. Efficiency gains from open research which nominally “save time” \parencites{Lowndes2017} may be inconsequential if open research also results in increased expectations of open outputs in the form of workload creep.
+
+
+
+Second, open research advocates should not promote open research practices uncritically. Despite the benefits, all open research practices have an accompanying cost of time, which is a rare and increasingly depleted resource. Even trivial administrative tasks can have a cumulative impact. Whilst it may not be possible to accurately predict potential time costs and benefits in advance of proposing or promoting a new open research initiative, rigorous meta-research should be planned and conducted to evaluate the actual benefits and costs of open research practices. For example, research has investigated the impact of preregistrations on researcher workflow \parencites{Sarafoglou2022}. If a practice is shown to have minimal actual benefit (e.g., if transparency statements go largely unread, or preregistrations fail to prevent researcher bias) then their continued promotion should be re-evaluated or discontinued.
+
+
+
+Third, open research advocates, particularly those with influence in universities, should engage more directly with issues of academic labour \parencites{Callard2022}{Hostler2022}. When promoting open research reforms in universities or conducting open practices themselves they should advocate not only for investments in open research infrastructure and training but to receive extra time in workload allocations to acknowledge the additional burden of open research. Advocates writing about issues of systems and incentives should familiarize themselves with literature on academic capitalism \parencites{Jessop2018} and issues of workload modelling \parencites{Papadopoulos2017} and acknowledge and address the implications of policy suggestions on workload. They should listen to and support workers’ rights groups and trade unions in academia and take a broader interest in how changes to research infrastructure and practice can have negative effects on labour conditions, and take a more holistic view of researchers as part of an increasingly troubled and discontented higher education sector.
+
+
+
+\subsubsection{Implications for Systems}
+
+
+
+One proposed solution to the issue of the extra work required for open research is a move to team-based research, and the use of specialists to support academics with open research requirements \parencites{Stewart2021}. It is a sensible suggestion and one that is likely to be amenable to institutions as it dovetails with many aspects of the ‘post-academic’ re-organization of research in universities \parencites{Ziman2000}. In several places it has already been implemented, with an increase in university research professionals and support services to help with open research practices \parencites{Carter2019}, which can directly reduce workload for academics. However, it is a long-term solution, and the availability of such specialist support is not yet consistent across the sector \parencites{Stewart2022}. There is also much work to be done to fairly embed such roles in the infrastructure of university research and to ensure such specialist labour is not exploited itself, and is appropriately funded and rewarded \parencites{Bennett2022}.
+
+
+
+Where institutions do implement policies and mandates for current academics to practice open research, these should be designed to minimize unnecessary “red tape” in the form of administration that does not aid the reform’s \emph{functional objectives}. This requires a clear understanding and explanation of what the functional objective of the reform actually is, which itself requires evaluating the reforms’ axiological position and benefits (Uygun Tunç et al., 2022). For many reforms (e.g., preregistration or data sharing for certain types or programs of research), such arguments may be contested (e.g., Szollosi et al., 2020), making suggestions that preregistration should be mandatory for publication (Aguinis et al., 2020) a clear example of potential ‘red tape’. Designing systems to minimize red tape is not an easy task, as both standardization (which does not accommodate non-standard research), as well as diversity (which can result in inconsistent and confusing nomenclature) can be potential sources of administrative burden. In addition, systems should aim to minimize rule redundancy, for example by \emph{replacing} research protocols with preregistration documents during ethical review, to avoid unnecessary duplication of similar documents for different purposes. Policies and interventions should also carefully consider whether administration for the purposes of generating (meta)data about (open) research activities is justified, which whilst \emph{potentially} useful for a number of reasons, may not be worth the cost of the added burden.
+
+
+
+If institutions decide to devote funding and resources to support open research, then these should where possible be directed to activities and interventions which practically reduce the time-burden of conducting open research. This includes using funding to provide dedicated workload hours for open research practices, as well as revaluating research performance targets to acknowledge that conducting open research may take significantly longer. Any changes to workload or research expectations should be developed and implemented in consultation with academic staff, made fully transparent, and be flexible and under continuous review \parencites{Kenny2022}. Training and guidance for open research should be as targeted as possible (i.e., disciplinary and methodologically specific) to reduce the time-burden on researchers for interpreting and applying such guidance to their own projects. Grassroots open science communities have an important role in developing and delivering such training and mentoring in an accessible way \parencites{Armeni2021}, although those involved in fostering these communities should also be appropriately workloaded and resourced for these tasks by their institutions.
+
+
+
+The broader systems within which universities operate and compete should also be considered in the promotion of open research. Universities respond to market drivers; if a funder requires research data to be made open, then an astute university will invest in infrastructure to support researchers to do this to ensure continued access to the funding. If university rankings rewarded open research, a competitive university would try to ensure its research outputs performed well on these metrics. By this logic, if funders and rankers valued or mandated fair workloads and working conditions for academics as a condition of eligibility, universities would be inclined to adapt to remain competitive in this new environment.
+
+
+
+Finally, it should be remembered that universities are complex, multifaceted, organizations and not solely capitalist actors. They have many competing and sometimes conflicting interests, which can ebb and flow depending on the current climate and conditions. Nevertheless, they are nearly always \emph{strategic}, and direct intervention is often required by those advocating for change to highlight the benefits of one particular priority (e.g., staff wellbeing) over the costs of another (time spent on open research). This has implications for the way in which initiatives relating to promoting open research are designed, described, and advocated for.
+
+
+
+\subsection{Conclusion}
+
+
+
+The uncritical promotion of expectations to conduct open research within a framework of academic capitalism may inadvertently increase workload for researchers at a time when demands on time are already excessive and academics are struggling to cope. It is neither the specific role nor within the capability of open research advocates to tackle the root causes of workload issues, but they must be aware of the potential implications of their calls for systemic changes in incentives for open research. Understanding how academic labour is organized and viewing universities through the lens of academic capitalism can help open research advocates to promote open research practices in responsible and sustainable ways.
+
+
+
+\subsection{Acknowledgements}
+
+
+
+My initial work on this topic was conducted whilst undertaking an MA in Higher Education with the University Teaching Academy at Manchester Metropolitan University and I would like to thank my supervisor Bernard Lisewski for his support during this. I would also like to thank Yael Benn for her comments on an initial draft of this manuscript.
+
+
+
+
+
+
+
+
+
+
+
+\subsection{References}
+
+
+
+Aczel, B., Szaszi, B., Sarafoglou, A., Kekecs, Z., Kucharský, Š., Benjamin, D., Chambers, C. D., Fisher, A., Gelman, A., Gernsbacher, M. A., Ioannidis, J. P., Johnson, E., Jonas, K., Kousta, S., Lilienfeld, S. O., Lindsay, D. S., Morey, C. C., Munafò, M., Newell, B. R., … Wagenmakers, E.-J. (2020). A consensus-based transparency checklist. \emph{Nature Human Behaviour}, \emph{4}(1), 4–6. https://doi.org/10.1038/s41562-019-0772-6
+
+
+
+Aguinis, H., Banks, G. C., Rogelberg, S. G., & Cascio, W. F. (2020). Actionable recommendations for narrowing the science-practice gap in open science. \emph{Organizational Behavior and Human Decision Processes}, \emph{158}, 27–35. https://doi.org/10.1016/j.obhdp.2020.02.007
+
+
+
+Allen, C., & Mehler, D. M. A. (2019). Open science challenges, benefits and tips in early career and beyond. \emph{PLOS Biology}, \emph{17}(5), Article e3000246. https://doi.org/10.1371/journal.pbio.3000246
+
+
+
+Anderson, M. S., Ronning, E. A., De Vries, R., & Martinson, B. C. (2007). The perverse effects of competition on scientists’ work and relationships. \emph{Science and Engineering Ethics}, \emph{13}(4), 437–461. https://doi.org/10.1007/s11948-007-9042-5
+
+
+
+Armeni, K., Brinkman, L., Carlsson, R., Eerland, A., Fijten, R., Fondberg, R., Heininga, V. E., Heunis, S., Koh, W. Q., Masselink, M., Moran, N., Ó Baoill, A., Sarafoglou, A., Schettino, A., Schwamm, H., Sjoerds, Z., Teperek, M., van den Akker, O. R., van’t Veer, A., & Zurita-Milla, R. (2021). Towards wide-scale adoption of open science practices: The role of open science communities. \emph{Science and Public Policy}, \emph{48}(5), 605–611. https://doi.org/10.1093/scipol/scab039
+
+
+
+Azevedo, F., Liu, M., Pennington, C. R., Pownall, M., Evans, T. R., Parsons, S., Elsherif, M. M., Micheli, L., Westwood, S. J., & Framework for Open and Reproducible Research Training (FORRT). (2022). Towards a culture of open scholarship: The role of pedagogical communities. \emph{BMC Research Notes}, \emph{15}(1), Article 75. https://doi.org/10.1186/s13104-022-05944-1
+
+
+
+Bakker, M., Veldkamp, C. L. S., van Assen, M. A. L. M., Crompvoets, E. A. V., Ong, H. H., Nosek, B. A., Soderberg, C. K., Mellor, D., & Wicherts, J. M. (2020). Ensuring the quality and specificity of preregistrations. \emph{PLOS Biology}, \emph{18}(12), Article e3000937. https://doi.org/10.1371/journal.pbio.3000937
+
+
+
+Barr, D., Cleland Woods, H., DeBruine, L., Lai, R., McAleer, P., McNee, S., Nordmann, E., Paterson, H., & Stack, N. (2019). \emph{Redesigning methods curricula for reproducibility}. https://psyteachr.github.io/sips2019/
+
+
+
+Bastiaansen, J. (2019). 10 open science myths – Open Science Community Groningen. \emph{Open Science Community Groningen}. https://openscience-groningen.nl/10-open-science-myths/
+
+
+
+Beatson, N. J., Tharapos, M., O’Connell, B. T., Lange, P., Carr, S., & Copeland, S. (2021). The gradual retreat from academic citizenship. \emph{Higher Education Quarterly}, \emph{76}(4), 715–725. https://doi.org/10.1111/hequ.12341
+
+
+
+Bennett, A., Garside, D., Gould van Pragg, C., Hostler, T. J., Kherroubi Garcia, I., Plomp, E., Schettino, A., Teplitzky, S., & Ye, H. (2022). A manifesto for rewarding and recognising Team Infrastructure Roles. \emph{Research Equals}. https://doi.org/10.53962/knm3-bnvx
+
+
+
+Boncori, I., Bizjak, D., & Sicca, L. M. (2020). Workload allocation models in academia: A panopticon of neoliberal control or tools for resistance? \emph{Tamara}, \emph{18}(1), 51–69. https://doi.org/DOI: 10.7206/tamara.1532-5555.8
+
+
+
+Borgerud, C., & Borglund, E. (2020). Open research data, an archival challenge? \emph{Archival Science}, \emph{20}, 279–302. https://doi.org/10.1007/s10502-020-09330-3
+
+
+
+Bozeman, B. (1993). A theory of government ‘red tape’. \emph{Journal of Public Administration Research and Theory}, \emph{3}(3), 273–303.
+
+
+
+Bozeman, B., & Jung, J. (2017). Bureaucratization in academic research policy: What causes it? \emph{Annals of Science and Technology Policy}, \emph{1}(2), 133–214. https://doi.org/10.1561/110.00000002
+
+
+
+Bozeman, B., & Youtie, J. (2020). Robotic bureaucracy: Administrative burden and red tape in university research. \emph{Public Administration Review}, \emph{80}(1), 157–162. https://doi.org/10.1111/puar.13105
+
+
+
+Bozeman, B., Youtie, J., & Jung, J. (2021). Death by a thousand 10-minute tasks: Workarounds and noncompliance in university research administration. \emph{Administration & Society}, \emph{53}(4), 527–568. https://doi.org/10.1177/0095399720947994
+
+
+
+Callard, F. (2022). Replication and reproduction: Crises in psychology and academic labour. \emph{Review of General Psychology}, \emph{26}(2), 199-211. https://doi.org/10.1177/10892680211055660
+
+
+
+Carter, S., Carlson, S., Crockett, J., Falk-Krzesinski, H. J., Lewis, K., & Walker, B. E. (2019). The role of research development professionals in supporting team science. In K. L. Hall, A. L. Vogel, & R. T. Croyle (Eds.), \emph{Strategies for team science success} (pp. 375–388). Springer International Publishing. https://doi.org/10.1007/978-3-030-20992-6_28
+
+
+
+Chambers, C. D., & Tzavella, L. (2022). The past, present and future of Registered Reports. \emph{Nature Human Behaviour}, \emph{6}(1), 29–42. https://doi.org/10.1038/s41562-021-01193-7
+
+
+
+Collini, S. (2012). \emph{What are universities for?} Penguin.
+
+
+
+Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., Orben, A., Parsons, S., & Schulte-Mecklenbeck, M. (2019). Seven easy steps to open science: An annotated reading list. \emph{Zeitschrift Für Psychologie}, \emph{227}(4), 237–248. https://doi.org/10.1027/2151-2604/a000387
+
+
+
+Cruz Rivera, S., Liu, X., Chan, A.-W., Denniston, A. K., Calvert, M. J., & SPIRIT-AI and CONSORT-AI Working Group. (2020). Guidelines for clinical trial protocols for interventions involving artificial intelligence: The SPIRIT-AI extension. \emph{The Lancet Digital Health}, \emph{2}(10), e549–e560. https://doi.org/10.1016/S2589-7500(20)30219-3
+
+
+
+Csányi, G. M., Nagy, D., Vági, R., Vadász, J. P., & Orosz, T. (2021). Challenges and open problems of legal document anonymization. \emph{Symmetry}, \emph{13}(8), 1490. https://doi.org/10.3390/sym13081490
+
+
+
+Dollinger, M. (2020). The projectification of the university: Consequences and alternatives. \emph{Teaching in Higher Education}, \emph{25}(6), 669–682. https://doi.org/10.1080/13562517.2020.1722631
+
+
+
+Eronen, M. I., & Bringmann, L. F. (2021). The theory crisis in psychology: How to move forward. \emph{Perspectives on Psychological Science}, \emph{16}(4), 779–788. https://doi.org/10.1177/1745691620970586
+
+
+
+Eynden, V. V. D., Knight, G., Vlad, A., Radler, B., Tenopir, C., Leon, D., Manista, F., Whitworth, J., & Corti, L. (2016). \emph{Survey of Wellcome researchers and their attitudes to open research}. Wellcome Trust. https://doi.org/10.6084/M9.FIGSHARE.4055448.V1
+
+
+
+Fecher, B., & Friesike, S. (2014). Open science: one term, five schools of thought. In S. Bartling & S. Friesike (Eds.), \emph{Opening science} (pp. 17–47). Springer International Publishing. https://doi.org/10.1007/978-3-319-00026-8_2
+
+
+
+Fernández Pinto, M. (2020). Open science for private interests? How the logic of open science contributes to the commercialization of research. \emph{Frontiers in Research Metrics and Analytics}, \emph{5}, Article 588331. https://doi.org/10.3389/frma.2020.588331
+
+
+
+Forscher, P. S., Wagenmakers, E.-J., Coles, N. A., Silan, M. A. A., Dutra, N. B., Basnight-Brown, D., & IJzerman, H. (2022). \emph{The benefits, barriers, and risks of big team science}. PsyArXiv. https://doi.org/10.31234/osf.io/2mdxh
+
+
+
+Gabelica, M., Bojčić, R., & Puljak, L. (2022). Many researchers were not compliant with their published data sharing statement: Mixed-methods study. \emph{Journal of Clinical Epidemiology}, 150, 33-41. https://doi.org/10.1016/j.jclinepi.2022.05.019
+
+
+
+Gärtner, A., Leising, D., & Schönbrodt, F. D. (2022). \emph{Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology}. PsyArXiv. https://doi.org/10.31234/osf.io/5yexm
+
+
+
+Gewin, V. (2022). Has the ‘great resignation’ hit academia? \emph{Nature}, \emph{606}(7912), 211–213. https://doi.org/10.1038/d41586-022-01512-6
+
+
+
+Gordon, H. R., Willink, K., & Hunter, K. (2022). Invisible labor and the associate professor: Identity and workload inequity. \emph{Journal of Diversity in Higher Education}. https://doi.org/10.1037/dhe0000414
+
+
+
+Gownaris, N. J., Vermeir, K., Bittner, M.-I., Gunawardena, L., Kaur-Ghumaan, S., Lepenies, R., Ntsefong, G. N., & Zakari, I. S. (2022). Barriers to full participation in the open science life cycle among early career researchers. \emph{Data Science Journal}, \emph{21}(1), 2. https://doi.org/10.5334/dsj-2022-002
+
+
+
+Grahe, J. E., Cuccolo, K., Leighton, D. C., & Cramblet Alvarez, L. D. (2020). Open science promotes diverse, just, and sustainable research and educational outcomes. \emph{Psychology Learning & Teaching}, \emph{19}(1), 5–20. https://doi.org/10.1177/1475725719869164
+
+
+
+Hagger, M. S. (2022). Developing an open science ‘mindset’. \emph{Health Psychology and Behavioral Medicine}, \emph{10}(1), 1–21. https://doi.org/10.1080/21642850.2021.2012474
+
+
+
+Havard, M., Cho, M. K., & Magnus, D. (2012). Triggers for research ethics consultation. \emph{Science Translational Medicine}, \emph{4}(118). https://doi.org/10.1126/scitranslmed.3002734
+
+
+
+Hefce, Research Councils UK, Universities UK, & Wellcome Trust. (2016). \emph{Concordant on Open Research Data}. https://www.ukri.org/files/legacy/documents/concordatonopenresearchdata-pdf/
+
+
+
+Henry, B. M., Vikse, J., Pekala, P., Loukas, M., Tubbs, R. S., Walocha, J. A., Jones, D. G., & Tomaszewski, K. A. (2018). Consensus guidelines for the uniform reporting of study ethics in anatomical research within the framework of the anatomical quality assurance (AQUA) checklist: Framework of the AQUA Checklist. \emph{Clinical Anatomy}, \emph{31}(4), 521–524. https://doi.org/10.1002/ca.23069
+
+
+
+Hogan, J. (2011). Is higher education spending more on administration and, if so, why? \emph{Perspectives: Policy and Practice in Higher Education}, \emph{15}(1), 7–13. https://doi.org/10.1080/13603108.2010.532316
+
+
+
+Holcombe, A. (2019). Contributorship, not authorship: Use CRediT to indicate who did what. \emph{Publications}, \emph{7}(3), 48. https://doi.org/10.3390/publications7030048
+
+
+
+Hostler, T. (2022). \emph{Open research reforms and the capitalist university’s priorities and practices: Areas of opposition and alignment}. SocArXiv. https://doi.org/10.31235/osf.io/r4qgc
+
+
+
+Jessop, B. (2018). On academic capitalism. \emph{Critical Policy Studies}, \emph{12}(1), 104–109. https://doi.org/10.1080/19460171.2017.1403342
+
+
+
+Kenny, J., & Fluck, A. E. (2019). Academic administration & service workloads in Australian Universities. \emph{Australian Universities Review}, \emph{61}(2), 21–30.
+
+
+
+Kenny, J., & Fluck, A. E. (2022). Emerging principles for the allocation of academic work in universities. \emph{Higher Education}, \emph{83}(6), 1371–1388. https://doi.org/10.1007/s10734-021-00747-y
+
+
+
+Kernohan, D. (2019, November 3). A beginner’s guide to academic workload modelling. \emph{WonkHE}. https://wonkhe.com/blogs/a-beginners-guide-to-academic-workload-modelling/
+
+
+
+Kolsaker, A. (2008). Academic professionalism in the managerialist era: A study of English universities. \emph{Studies in Higher Education}, \emph{33}(5), 513–525. https://doi.org/10.1080/03075070802372885
+
+
+
+Lakens, D., & Evers, E. R. K. (2014). Sailing from the seas of chaos into the corridor of stability: Practical recommendations to increase the informational value of studies. \emph{Perspectives on Psychological Science}, \emph{9}(3), 278–292. https://doi.org/10.1177/1745691614528520
+
+
+
+Levin, N., & Leonelli, S. (2017). How does one “open” science? Questions of value in biological research. \emph{Science, Technology, & Human Values}, \emph{42}(2), 280–305. https://doi.org/10.1177/0162243916672071
+
+
+
+Long, D. W., Barnes, A. P. L., Northcote, P. M., & Williams, P. T. (2020). Accounting academic workloads: Balancing workload creep to avoid depreciation in the higher education sector. \emph{Education, Society and Human Studies}, \emph{1}(2), p55. https://doi.org/10.22158/eshs.v1n2p55
+
+
+
+Lowndes, J. S. S., Best, B. D., Scarborough, C., Afflerbach, J. C., Frazier, M. R., O’Hara, C. C., Jiang, N., & Halpern, B. S. (2017). Our path to better science in less time using open data science tools. \emph{Nature Ecology & Evolution}, \emph{1}(6), Article 0160. https://doi.org/10.1038/s41559-017-0160
+
+
+
+Lyons, M., & Ingersoll, L. (2010). Regulated autonomy or autonomous regulation? Collective bargaining and academic workloads in Australian universities. \emph{Journal of Higher Education Policy and Management}, \emph{32}(2), 137–148. https://doi.org/10.1080/13600800903440592
+
+
+
+Macfarlane, B. (2011). The morphing of academic practice: Unbundling and the rise of the para-academic. \emph{Higher Education Quarterly}, \emph{65}(1), 59–73. https://doi.org/10.1111/j.1468-2273.2010.00467.x
+
+
+
+Miller, J. (2019). Where does the time go? An academic workload case study at an Australian university. \emph{Journal of Higher Education Policy and Management}, \emph{41}(6), 633–645. https://doi.org/10.1080/1360080X.2019.1635328
+
+
+
+Munafò, M. (2019). Raising research quality will require collective action. \emph{Nature}, \emph{576}(7786), 183–183. https://doi.org/10.1038/d41586-019-03750-7
+
+
+
+Munafò, M., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J. J., & Ioannidis, J. P. A. (2017). A manifesto for reproducible science. \emph{Nature Human Behaviour}, \emph{1}(1) Article 0021. https://doi.org/10.1038/s41562-016-0021
+
+
+
+Münch, R. (2014). \emph{Academic capitalism: Universities in the global struggle for excellence}. Routledge.
+
+
+
+Nicholls, H., Nicholls, M., Tekin, S., Lamb, D., & Billings, J. (2022). The impact of working in academia on researchers’ mental health and well-being: A systematic review and qualitative meta-synthesis. \emph{PLOS ONE}, \emph{17}(5), Article e0268890. https://doi.org/10.1371/journal.pone.0268890
+
+
+
+Nosek, B. A. (2019). Strategy for culture change. \emph{Centre for Open Science}. https://www.cos.io/blog/strategy-for-culture-change
+
+
+
+Nosek, B. A., Beck, E. D., Campbell, L., Flake, J. K., Hardwicke, T. E., Mellor, D. T., van ’t Veer, A. E., & Vazire, S. (2019). Preregistration is hard, and worthwhile. \emph{Trends in Cognitive Sciences}, \emph{23}(10), 815–818. https://doi.org/10.1016/j.tics.2019.07.009
+
+
+
+Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. \emph{Proceedings of the National Academy of Sciences}, \emph{115}(11), 2600–2606. https://doi.org/10.1073/pnas.1708274114
+
+
+
+Nosek, B. A., Spies, J. R., & Motyl, M. (2012). Scientific utopia: II. Restructuring incentives and practices to promote truth over publishability. \emph{Perspectives on Psychological Science}, \emph{7}(6), 615–631. https://doi.org/10.1177/1745691612459058
+
+
+
+Obels, P., Lakens, D., Coles, N. A., Gottfried, J., & Green, S. A. (2020). Analysis of open data and computational reproducibility in Registered Reports in psychology. \emph{Advances in Methods and Practices in Psychological Science}, \emph{3}(2), 229–237. https://doi.org/10.1177/2515245920918872
+
+
+
+O’Leary, E., Seow, H., Julian, J., Levine, M., & Pond, G. R. (2013). Data collection in cancer clinical trials: Too much of a good thing? \emph{Clinical Trials}, \emph{10}(4), 624–632. https://doi.org/10.1177/1740774513491337
+
+
+
+Pagliaro, M. (2021). Purposeful evaluation of scholarship in the open science era. \emph{Challenges}, \emph{12}(1), Article 6. https://doi.org/10.3390/challe12010006
+
+
+
+Papadopoulos, A. (2017). The mismeasure of academic labour. \emph{Higher Education Research & Development}, \emph{36}(3), 511–525. https://doi.org/10.1080/07294360.2017.1289156
+
+
+
+Pownall, M., Azevedo, F., Aldoh, A., Elsherif, M., Vasilev, M., Pennington, C. R., Robertson, O., Tromp, M. V., Liu, M., Makel, M. C., Tonge, N., Moreau, D., Horry, R., Shaw, J., Tzavella, L., McGarrigle, R., Talbot, C., Parsons, S., & FORRT. (2021). Embedding open and reproducible science into teaching: A bank of lesson plans and resources. \emph{Scholarship of Teaching and Learning in Psychology}. https://doi.org/10.1037/stl0000307
+
+
+
+Rees, T. (2015). Developing a research strategy at a research intensive university: A Pro Vice Chancellor’s perspective. In R. Dingwall & M. McDonnell (Eds.), \emph{The SAGE handbook of research management} (pp. 565–580). SAGE Publications Ltd.
+
+
+
+Reimer, T. (2014). \emph{Imperial College London submission to the RCUK review on open access}. Imperial College London. https://doi.org/10.25561/15558
+
+
+
+Research Consulting. (2014). \emph{Counting the costs of open access}. http://www.researchconsulting.co.uk/wp-content/uploads/2014/11/Research-Consulting-Counting-the-Costs-of-OA-Final.pdf
+
+
+
+Rhys Evans, T., Branney, P., Clements, A., & Hatton, E. (2021). Improving evidence-based practice through preregistration of applied research: Barriers and recommendations. \emph{Accountability in Research 30(2), 88-108}. https://doi.org/10.1080/08989621.2021.1969233
+
+
+
+Robson, S. G., Baum, M. A., Beaudry, J. L., Beitner, J., Brohmer, H., Chin, J. M., Jasko, K., Kouros, C. D., Laukkonen, R. E., Moreau, D., Searston, R. A., Slagter, H. A., Steffens, N. K., Tangen, J. M., & Thomas, A. (2021). Promoting open science: A holistic approach to changing behaviour. \emph{Collabra: Psychology}, \emph{7}(1), Article 30137. https://doi.org/10.1525/collabra.30137
+
+
+
+Rochon, P. A., Hoey, J., Chan, A.-W., Ferris, L. E., Lexchin, J., Kalkar, S. R., Sekeres, M., Wu, W., Van Laethem, M., Gruneir, A., Maskalyk, J., Streiner, D. L., Gold, J., Taback, N., & Moher, D. (2010). Financial Conflicts of Interest Checklist 2010 for clinical research studies. \emph{Open Medicine: A Peer-Reviewed, Independent, Open-Access Journal}, \emph{4}(1), e69-91.
+
+
+
+Rockwell, S. (2009). The FDP Faculty Burden Survey. \emph{Research Management Review}, \emph{16}(2), 29–44.
+
+
+
+Sarafoglou, A., Kovacs, M., Bakos, B., Wagenmakers, E.-J., & Aczel, B. (2022). A survey on how preregistration affects the research workflow: Better science but more work. \emph{Royal Society Open Science}, \emph{9}(7), Article 211997. https://doi.org/10.1098/rsos.211997
+
+
+
+Saunders, B., Kitzinger, J., & Kitzinger, C. (2015). Anonymising interview data: Challenges and compromise in practice. \emph{Qualitative Research}, \emph{15}(5), 616–632. https://doi.org/10.1177/1468794114550439
+
+
+
+Scheliga, K., & Friesike, S. (2014). Putting open science into practice: A social dilemma? \emph{First Monday}. https://doi.org/10.5210/fm.v19i9.5381
+
+
+
+Schneider, C. E. (2015). \emph{The censor’s hand: The misregulation of human-subject research}. MIT Press.
+
+
+
+Seidl, A., Wrzaczek, S., El Ouardighi, F., & Feichtinger, G. (2016). Optimal career strategies and brain drain in academia. \emph{Journal of Optimization Theory and Applications}, \emph{168}(1), 268–295. https://doi.org/10.1007/s10957-015-0747-3
+
+
+
+Somerville, L. H. (2021). Learn when—and how—to say no in your professional life. \emph{Science}. https://doi.org/10.1126/science.caredit.abg4310
+
+
+
+Spellman, B. A. (2015). A short (personal) future history of revolution 2.0. \emph{Perspectives on Psychological Science}, \emph{10}(6), 886–899. https://doi.org/10.1177/1745691615609918
+
+
+
+Staniszewska, S., Brett, J., Simera, I., Seers, K., Mockford, C., Goodlad, S., Altman, D. G., Moher, D., Barber, R., Denegri, S., Entwistle, A., Littlejohns, P., Morris, C., Suleman, R., Thomas, V., & Tysall, C. (2017). GRIPP2 reporting checklists: Tools to improve reporting of patient and public involvement in research. \emph{Research Involvement and Engagement}, \emph{3}(1), 13. https://doi.org/10.1186/s40900-017-0062-2
+
+
+
+Stewart, A. J., Farran, E. K., Grange, J. A., Macleod, M., Munafò, M., Newton, P., Shanks, D. R., & the UKRN Institutional Leads. (2021). Improving research quality: The view from the UK Reproducibility Network institutional leads for research improvement. \emph{BMC Research Notes}, \emph{14}(1), 458. https://doi.org/10.1186/s13104-021-05883-3
+
+
+
+Stewart, D. J., Batist, G., Kantarjian, H. M., Bradford, J.-P., Schiller, J. H., & Kurzrock, R. (2015). The urgent need for clinical research reform to permit faster, less expensive access to new therapies for lethal diseases. \emph{Clinical Cancer Research}, \emph{21}(20), 4561–4568. https://doi.org/10.1158/1078-0432.CCR-14-3246
+
+
+
+Stewart, P. M., Stears, A., Tomlinson, J. W., & Brown, M. J. (2008). Regulation - the real threat to clinical research. \emph{BMJ}, \emph{337}, Article a1732. https://doi.org/10.1136/bmj.a1732
+
+
+
+Stewart, S. L. K., Pennington, C. R., da Silva, G. R., Ballou, N., Butler, J., Dienes, Z., Jay, C., Rossit, S., Samara, A., & U. K. Reproducibility Network (UKRN) Local Network Leads. (2022). Reforms to improve reproducibility and quality must be coordinated across the research ecosystem: The view from the UKRN Local Network Leads. \emph{BMC Research Notes}, \emph{15}(1), Article 58. https://doi.org/10.1186/s13104-022-05949-w
+
+
+
+Szollosi, A., Kellen, D., Navarro, D. J., Shiffrin, R., van Rooij, I., Van Zandt, T., & Donkin, C. (2020). Is preregistration worthwhile? \emph{Trends in Cognitive Sciences}, \emph{24}(2), 94–95. https://doi.org/10.1016/j.tics.2019.11.009
+
+
+
+Tenopir, C., Allard, S., Douglass, K., Aydinoglu, A. U., Wu, L., Read, E., Manoff, M., & Frame, M. (2011). Data sharing by scientists: Practices and perceptions. \emph{PLoS ONE}, \emph{6}(6), Article e21101. https://doi.org/10.1371/journal.pone.0021101
+
+
+
+Uher, J. (2023). What’s wrong with rating scales? Psychology’s replication and confidence crisis cannot be solved without transparency in data generation. \emph{Social and Personality Psychology Compass, }Article\emph{ }e12740. https://doi.org/10.1111/spc3.12740
+
+
+
+University & College Union. (2019). \emph{Counting the costs of casualisation in higher education}. https://www.ucu.org.uk/media/10336/Counting-the-costs-of-casualisation-in-higher-education-Jun-19/pdf/ucu_casualisation_in_HE_survey_report_Jun19.pdf
+
+
+
+University & College Union. (2022). \emph{Four fights dispute FAQs}. https://www.ucu.org.uk/article/11818/Four-fights-dispute-FAQs
+
+
+
+Urbina‐Garcia, A. (2020). What do we know about university academics’ mental health? A systematic literature review. \emph{Stress and Health}, \emph{36}(5), 563–585. https://doi.org/10.1002/smi.2956
+
+
+
+Uygun Tunç, D., Tunç, M. N., & Eper, Z. B. (2022). Is open science neoliberal? \emph{Perspectives on Psychological Science}, 174569162211148. https://doi.org/10.1177/17456916221114835
+
+
+
+Vican, S., Friedman, A., & Andreasen, R. (2020). Metrics, money, and managerialism: Faculty experiences of competing logics in higher education. \emph{The Journal of Higher Education}, \emph{91}(1), 139–164. https://doi.org/10.1080/00221546.2019.1615332
+
+
+
+Weitzenboeck, E. M., Lison, P., Cyndecka, M., & Langford, M. (2022). The GDPR and unstructured data: Is anonymization possible? \emph{International Data Privacy Law}, ipac008. https://doi.org/10.1093/idpl/ipac008
+
+
+
+Wicherts, J. M., Veldkamp, C. L. S., Augusteijn, H. E. M., Bakker, M., van Aert, R. C. M., & van Assen, M. A. L. M. (2016). Degrees of freedom in planning, running, analyzing, and reporting psychological studies: A checklist to avoid p-hacking. \emph{Frontiers in Psychology}, \emph{7, }Article 1832. https://doi.org/10.3389/fpsyg.2016.01832
+
+
+
+Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., … Mons, B. (2016). The FAIR Guiding Principles for scientific data management and stewardship. \emph{Scientific Data}, \emph{3}(1), Article 160018. https://doi.org/10.1038/sdata.2016.18
+
+
+
+Williams, H. [@alrightPET]. (2022). \emph{So, if this is going to be done within my usual hours as part of my current role, what would you like me to stop doing and what reassurances can you offer that this won’t adversely affect my career prospects?} [Tweet] Twitter. https://twitter.com/alrightPET/status/1534785730995789827?s=20&t=qcWB_lHaL_7tEgU6Z3ym0A
+
+
+
+Ziman, J. M. (2000). \emph{Real science: What it is and what it means}. Cambridge University Press.
+
+
+
+
+
+
+\end{document}
