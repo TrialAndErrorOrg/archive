@@ -1,0 +1,431 @@
+\documentclass[authordate,meta]{jote-new-article}
+
+\addbibresource{submission.bib}
+
+\jotetitle{A Manifesto for Rewarding and Recognising Team Infrastructure Roles}
+\keywordsabstract{Team Infrastructure Roles, Rewards and Recognition, Research Evaluation, Team Science, Career}
+\abstracttext{The Scientific Reform Movement has highlighted the need for large research teams with diverse skills. This has necessitated the growth of professional team infrastructure roles (TIRs) who support research through specialised skills, but do not have primary responsibility for conceiving or leading research projects. TIRs such as Lab Technicians, Project Managers, Data Stewards, Community Managers, and Research Software Engineers all play an important role in ensuring the success of a research project, but are commonly neglected under current reward and recognition procedures, which focus on the individual academic researcher instead of the teams involved.
+Without meaningful identification and recognition of TIR contributions, we risk reinforcing the conceptual and practical division between academic researchers and TIRs. This situation is inequitable and detrimental to the research enterprise: the limited potential for career advancement for TIRs may cause them to leave for other occupations, ultimately leading to a loss of institutional skill, expertise, and memory.
+This contribution explores the evolution of specialist TIRs and the status of these positions in various settings. We provide three case study descriptions of TIR activities, so that readers may become more familiar with the breadth and depth of their work. We then propose system level changes designed to embed meaningful recognition of all contributions. Acknowledging the contributions of all research roles will help retain skill and expertise, and lead to collaborative research ecosystems that are well-positioned to address complex research challenges.}
+\runningauthor{Bennett et al.}
+\jname{Journal of Trial \& Error}
+\jyear{2023}
+\paperpublisheddate{2023-07-31}
+\paperdoi{10.36850/mr8}
+\paperreceived{September 30, 2022}
+\author[1]{Arielle Bennett\orcid{0000-0002-0154-2982}}
+\affil[1]{The Alan Turing Institute; The Turing Way}
+\corremail{\href{mailto:ariellebennettlovell@gmail.com}{ariellebennettlovell@gmail.com}}
+\corraddress{The Alan Turing Institute; The Turing Way}
+\runningauthor{Bennett et al.}
+\author[2]{Daniel Garside\orcid{0000-0002-4579-003X}}
+\affil[2]{National Institutes of Health}
+\author[3]{\mbox{Cassandra Gould van Praag\orcid{0000-0002-8584-4637}}}
+\affil[3]{Wellcome Centre for Integrative Neuroimaging, University of Oxford}
+\author[4]{Thomas J. Hostler\orcid{0000-0002-4658-692X}}
+\affil[4]{Manchester Metropolitan University, UK}
+\author[5]{Ismael Kherroubi Garcia\orcid{0000-0002-6850-8375}}
+\affil[5]{Kairoi Ltd; Open Life Science}
+\author[6]{Esther Plomp\orcid{0000-0003-3625-1357}}
+\affil[6]{Delft University of Technology, Faculty of Applied Sciences}
+\author[7]{Antonio Schettino\orcid{0000-0001-8065-6082}}
+\affil[7]{Erasmus University Rotterdam; IGDORE}
+\author[8]{Samantha Teplitzky\orcid{0000-0001-7071-332X}}
+\affil[8]{University of California, Berkeley}
+\author[9]{Hao Ye\orcid{0000-0002-8630-1458}}
+\affil[9]{University of Florida}
+\paperaccepted{June 26, 2023}
+\paperpublished{July 31, 2023}
+\jwebsite{https://journal.trialanderror.org}
+
+
+\begin{document}
+\begin{frontmatter}
+  \maketitle
+  \begin{abstract}
+    \printabstracttext
+  \end{abstract}
+\end{frontmatter}
+
+
+
+
+
+
+
+% \section{A take-home message }
+
+
+
+% Recent socio-technical advancements have highlighted the need for large research teams with diverse skills. This has necessitated the growth of professional team infrastructure roles (TIRs) who support research through specialised skills. TIRs play an important role in ensuring the success of a research project but are neglected under current reward and recognition procedures. We provide three case studies of TIR activities and propose system level changes to recognise TIR contributions. Acknowledging the contributions of all research roles will help retain skill and expertise, and lead to collaborative research ecosystems that are better equipped to address complex research challenges.
+
+
+
+
+
+
+
+
+
+
+
+\lettrine{T}{he} social and technological developments of recent decades have reinforced the notion of science as a team-based enterprise. As we tackle increasingly complex scientific questions \parencites{Coles2022}, we leverage the strengths of diverse research teams, recognising that we cannot solve the significant challenges of our time through isolated endeavours. This increased diversity in practice is part and parcel of the Scientific Reform Movement, which seeks to promote the uptake of practices that improve the transparency of the research process \parencites{Penders2022}, as well as to provide recognition for these practises \parencites{Coles2023}. Reform of academic publication and authorship practices are one route to address such issues, but we see authorship (or contributorship, see \textcites{Rennie1997} as a symptom of entrenched inequity, rather than the source of it. The Scientific Reform movement should go beyond reformation of publishing and aim instead to address fundamental roots of academic inequity, such as the perceptions of what it means to be a researcher and participate in research. In this piece we will explore a broad range of factors which may lead to inequity in the academic workforce and suggest changes to research systems to improve equitable practices.
+
+
+
+
+
+
+
+\section{The emergence of TIRs}
+
+
+
+
+
+
+
+To illustrate the increasingly diverse and team-based approaches to research, consider that over 5,000 named authors across the globe collaborated in the detection of the Higgs Boson at CERN \parencites{Castelvecchi2015}, how successful climate models require expertise in atmospheric physics, soil science, meteorology, and more \parencites{Huebner2017}, or the integration of research into artificial intelligence with moral philosophy \parencites{Jobin2019}. With increasing collaboration and growing research complexity, new specialised roles have emerged to support research processes. We call these \emph{team infrastructure roles }(TIRs), making explicit their structural function in the research process. TIRs bring vital expertise to the process of research, but they are not well integrated in traditional academic organisational structures.
+
+
+
+
+
+
+
+
+
+
+
+TIRs contributing to the research process include laboratory technicians, project managers, grant officers, finance managers, privacy officers, patent officers, and internal review board members \parencites{Heffner1979}{UKRI2023}. These roles are known collectively as “professional service staff” or “research professionals”. Their position in between supporting roles and academic researchers has been referred to as the “third space” \parencites{Whitchurch2008}. While some contributions of these roles may appear to be solely bureaucratic, one cannot deny the value of a skilled project manager, finance manager or technician in handling their respective responsibilities. We provide some examples of TIRs and their diverse areas of speciality in section 3. These examples and perspectives are primarily informed by our academic experience in the US and Europe. The challenges, case studies, and changes that we suggest may be less applicable, or necessary, in other contexts. For example, low/middle income countries may prioritise other forms of research reform rather than dedicate resources to these types of positions \parencites{Bezuidenhout2018}{Bezuidenhout2017}{Onie2020}.
+
+
+
+
+
+
+
+The emergence of new TIRs has introduced unmapped complexity into the academic ecosystem, particularly in relation to recognition, reward, and development. We argue that successful integration of TIRs in the academic system will require naming, exploring, and resolving frictions associated with these new roles.
+
+
+
+\section{Challenges}
+
+
+
+\subsection{Lack of autonomy within TIR roles}
+
+
+
+Academic researchers are afforded substantial freedom in determining their career paths. This stems from historical positioning of academic researchers as “appointees” who perform scholarship as a public duty, rather than “employees” who are a means of production for a university \parencites{Finkin2011}. This legitimises autonomy in the management of day-to-day activities and professional development \parencites{Wolf2021}, contributing to an internally recognised credit system.
+
+
+
+
+
+
+
+In contrast, many TIRs are employed as “technical staff”, with a specific remit in their job description to perform support activities, governed by the requirements of academic researchers or the broader goals of the research institute. Consequently, pursuing projects or publications outside of this support remit can be seen as a distraction. This lack of autonomy limits the ability of TIRs to prioritise the growth of their skills alongside evolving research disciplines or methodology, constrains their opportunities for progression towards leadership roles, and ultimately squanders their ability to inform the direction of the research agenda.
+
+
+
+\subsection{Limited formalisation of career pathways}
+
+
+
+Many TIR careers lack development pathways \parencites{NCRIS2022}{Virágh2019}. This is in contrast to academic research careers, where the criteria for promotion up to the highest levels are well documented, clearly advertised, and often supported by formal and informal systems of mentoring. For example, the \emph{Vitae Researcher Development Framework} \parencites{Vitae2014} maps out academic researchers' expected skill development across all facets of scholarly activity. Individuals employed in Human Resources or Finance positions can also access industry-specific accreditation and qualifications to support their progression (for example, training offered through the Chartered Institute of Personnel and Development for Human Resources professionals, or the Association of Chartered Certified Accountants for accountants).
+
+
+
+
+
+
+
+In contrast, conventional opportunities for career development, such as increasing job responsibility and resulting uplifts in remuneration \parencites{UKRI-ResearchEngland2022}{Virágh2019}, are inconsistent for TIRs. Individuals in TIR positions may therefore look outside of the academy for progression, with subsequent departures leading to institutional memory loss \parencites{Bossu2018}{McInturff2022}. A lack of professional recognition also introduces challenges in funding TIRs, especially where salaries are not competitive with similar roles outside of academia \parencites{UKRI-ResearchEngland2022}. The restriction of developmental opportunities, lack of established profiles and compensation, and limited funding routes leave TIRs to act as lone advocates for their own positions, a stressful and complicated task due to their unique niche within the academic organisational structures.
+
+
+
+\subsection{Prejudice against TIR activities and career choices}
+
+
+
+The growing availability of TIRs in research institutes means that academic researchers can increasingly “outsource” some of the research responsibilities that were traditionally theirs alone. Passing those tasks to professionals may be viewed by some as “a hollowing out of [...] what it means [...] to be an academic” \parencites[71]{Macfarlane2011}. By this account, whilst specialisation of roles and responsibilities may increase efficiency, it may also negatively impact traditional academic values and identity, reinforcing a working culture geared only towards maximum productivity \parencites{Beatson2021}{Limas2022}{WellcomeTrust2020}. Thus, the mere existence of TIRs may be viewed negatively by some within the academy.
+
+
+
+
+
+
+
+Prejudice can also result from changes to the status of roles within an institution. \parencites{Harloe2005} suggest that moving to a “co-operative form of production” akin to co-creation, rather than one in which TIRs simply facilitate the work of academics, may undermine the “collegial culture” in universities. In this culture, research academics have traditionally had exclusive responsibilities in determining their university's governance and organisation through engagement with institutional decision-making systems (such as committees). TIRs may thus be viewed as yet another non-academic staff member whose increasing influence dilutes academics' autonomy and authority, and/or increases their already heavy workload. This perspective highlights current tensions in the system: TIRs may be perceived as not sufficiently qualified to exert influence in the system, despite the fact that many TIRs are highly skilled researchers with doctoral degrees and years of academic experience \parencites{Teperek2022}{UKRI-ResearchEngland2022}.
+
+
+
+
+
+
+
+TIRs may also be stigmatised as ”failed academics” because they do not pursue traditional academic careers \parencites{ARMA2020}{Gouldpraag2022}{Sever2017}. This parallels the prejudice against “leaving academia" for industry, often viewed as a last resort for those who “couldn't hack it” \parencites{Gewin2022}.
+
+
+
+
+
+
+
+These prejudices towards the activities and career choices of TIRs make it more difficult to enact changes to infrastructure and reward systems which could benefit them. It also contributes to “imposter syndrome”, with the barriers to reward and progression implicitly reinforcing the message that TIRs are of lower status than academic researchers \parencites{Sims2021}{UKRI-ResearchEngland2022}. Relatedly, the prejudice can also go the other way: TIRs may believe that academics' reluctance to engage with their help is limiting the potential of an institution \parencites{Harloe2005}. These tensions can negatively impact attempts at institutional change.
+
+
+
+\subsection{Recognition of TIR contributions}
+
+
+
+Academic incentives are often focused on the contributions of the individual, and the image of a “lone academic genius” \parencites{Elkins-tanton2021}. This is reinforced by prizes awarded to singular “outstanding” academic researchers, the common practice of naming a research group by the lead Professor (for example, the “Smith lab”), and apparent ownership of team members (“[Person X] is \emph{my} PhD student” or “\emph{my} postdoc”). The power to confer authorship is generally enacted by senior researcher(s) and, in many disciplines, only the first and last authors are deemed to have done the actual work. Practically, however, research builds on previous work as well as a diversity of contributions that do not always lead to authorship and are therefore not formally recognised \parencites{Coles2022}{Forscher2020}{Shirazi2014}{Tiokhin2021}. By focusing solely on individuals and first/last authorship positions on publications, the academic research system neglects the value of a broader set of contributors - with their own unique skills and expertise \parencites{Baum2022}. This results in precarious positions for TIRs, as their work rarely translates directly to authorship, let alone a first or last authorship position. TIRs are therefore not fully participating in the credit economy \parencites{Zollman2018}, where prestige from authorship and awards can bring further rewards in the form of downstream funding success and access to high-status jobs \parencites{Huebner2020}.
+
+
+
+\section{Growth of TIRs}
+
+
+
+Some emerging TIRs have been exemplary in handling the challenges outlined above. These examples may serve to illustrate the utility of making TIR duties, performance expectations and influence more explicit, along with the merits of forming professional communities of practice. These roles have been listed in order of more established (Research Software Engineer) to relatively recent (Research Application Manager). These roles exemplify how well-resourced TIRs can bring substantial value to the academic workflow. In \textbf{Table 1} we additionally summarise career trajectories and opportunities for recognition in each role.
+
+
+
+\subsection{Example 1: Research Software Engineer}
+
+
+
+Research software engineering represents an established specialised research role: a hybrid between researcher and programmer which requires expertise in both research and programming. Similar roles have existed for decades with a variety of titles, but the specific title -- Research Software Engineer (RSE) -- was conceived at Collaborations Workshop in Oxford in 2012 \parencites{Hettrick2016}, followed by the formation of the RSE Association in 2013. The rise of RSEs demonstrates the power of naming and defining a role, providing an identity and focal point for action \parencites{Sims2021}. \textcite{Hettrick2016} summarises the first four years of actions by the RSE Association, including numerous articles, market analysis, and policy work. Today, there are RSE networks on every continent, an international council of RSE associations, and an emerging, standardised career path for RSEs. Many institutions have established RSE groups, independent of research labs, while the Netherlands eScience Centre is an example of an independent organisation which centres the role of RSEs in the research process. This is the result of sustained, organised advocacy efforts by both researchers and RSEs.
+
+
+
+
+
+
+
+RSEs function both as individuals in embedded roles as well as consolidated groups who provide expertise on a project-by-project basis within their institutions. This “consultant” model provides access to RSE expertise for groups who do not have the budget for longer term investment.
+
+
+
+\subsection{Example 2: Research Community Manager}
+
+
+
+Research Community Managers (also known as Scientific Community Managers) foster collaboration, engagement, connection, and productivity among members of a community, where a \emph{community }is a group of people united by a common tool, discipline, location, service, or interest. Only in recent years the coordination and management of scientific communities has become formalised, as cross-institutional and international collaborations have become more common. The \emph{Center for Scientific Collaboration and Community Engagement} (CSCCE) was established in 2016 to provide training, support infrastructure, and advocacy for Research Community Managers, formalising it as a distinct professional role \parencites{CSCCE2022}. The first Community Engagement Fellowship cohort in 2017 kick-started the conversation around the nature of scientific community management and its unique challenges and considerations compared to communities outside academia. The CSCCE provides a space where Research Community Managers can receive support, domain-specific updates, and opportunities for collaboration and professional development. The CSCCE is now developing a community manager certification \parencites{CSCCE2022a}, so that individuals who are expected to foster community engagement can perform their role with confidence and a thorough understanding of the technical and theoretical basis of community activities.
+
+
+
+\subsection{Example 3: Research Application Manager}
+
+
+
+Research Application Managers \parencites[RAMs;][]{TheTuringWayCommunityRecord2022a} bring product thinking and stakeholder engagement to research outputs. For example, RAMs at The Alan Turing Institute address the need for sustainability of research infrastructure, extend existing research outputs and software, and seek opportunities to reuse and reproduce these outputs in new scenarios \parencites{TheTuringWayCommunityRecord2022a}. RAMs think beyond the research project cycle, cultivate a broader understanding of a discipline's trajectory, and understand the interconnectedness of scientific research more broadly. This role is still emerging as distinct from a Product Manager in industry or an academic Innovation Officer, with little formal documentation or organised advocacy in place. RAMs represent an interesting example of a newly emerging TIR which may experience a similar trajectory as RSEs and Research Community Managers.
+
+
+\begin{table*}[t]
+  \begin{fullwidth}
+    \caption{TIR Case Studies described in section 3. The table provides a summary of each role, whether there is an established professional advocacy organisation, expected career trajectories and professional development, comparisons to roles outside of research, and how these roles can be recognised.}
+    \begin{tabularx}{\linewidth}{@{} >{\arraybackslash\raggedright}X >{\arraybackslash\raggedright}X >{\arraybackslash\raggedright}X X @{}}
+                                                   & \textbf{Research Software Engineer (RSE)}                                                                            & \textbf{Research Community Manager (RCM)}
+                                                   & \textbf{Research Application Manager (RAM)}                                                                                                                           \\
+      \midrule
+      \textbf{Summary of Role}                     & Creates and/or maintains software specifically intended for research purposes
+                                                   & Fosters collaboration and engagement among a specific scientific community
+                                                   & Guides research projects (including infrastructure) for sustained impact and reuse through user community engagement
+      \\
+
+      \textbf{Professional Organisation}           & National and regional RSE associations
+                                                   & CSCCE                                                                                                                & None yet                                       \\
+
+      \textbf{Sources of Professional Development} & Software development training; Software Sustainability Institute
+                                                   & Community management training; CSCCE                                                                                 & Product management training                    \\
+
+      \textbf{Career Pathways}                     & Increasing rank, management of other RSEs or RSE teams
+                                                   & director of organisations, scientific organisation administration, programme/network management
+                                                   & None yet                                                                                                                                                              \\
+
+      \textbf{Non-research Equivalents}            & Software development                                                                                                 & Community/outreach manager, developer advocate
+                                                   & Developer relations, product manager, developer advocate                                                                                                              \\
+
+      \textbf{Reward/Recognition Opportunities}    & Conferences, software publications, software citation, awards
+                                                   & Conferences, informal praise, training and development opportunities, contributorship on publications, awards
+                                                   & Conferences, Inter-institute interactions, wider uptake of projects                                                                                                   \\
+    \end{tabularx}
+  \end{fullwidth}
+\end{table*}
+
+
+
+
+
+
+
+
+
+\section{Pathways forward}
+
+
+
+Here we present pathways through the challenges described in section 2 and towards the successes of the case studies highlighted in section 3. We identify first steps towards a vision in which all TIRs are appropriately rewarded, recognised, and integrated with the work and priorities of research academics. An appropriate next stage will be the evaluation of costs and practicality of each intervention in supporting immediate or long-term change, with iterative piloting and refinement towards the idealised vision.
+
+
+
+
+
+
+
+\subsection{Re-imagine the research system to emphasise the process, not only the outcomes}
+
+
+
+Although research is primarily viewed in terms of knowledge production, we take inspiration from the values described in the SCOPE framework \parencites{INORMS2022} and recommend that individual \emph{outputs} (such as publications, discoveries, technologies) be deprioritised in favour of elevating the \emph{process.} More specifically\emph{, }many research activities do not directly lead to outputs that are commonly measured and rewarded in academia,\emph{ }such as those of the TIR case studies described previously. Additionally, efforts that improve the research process by increasing transparency, reproducibility, and cooperation may not lead to journal publications. A narrow focus on publications as a reward mechanism will necessarily draw time away from such improvements. The focus on individual outputs additionally encourages implicit or explicit "gaming" of the system, with production metrics being prioritised above all other concerns \parencites[Goodhart's law][]{Goodhart1984}.
+
+
+
+One way to emphasise the research process is through normalising the sharing of research artefacts (such as protocols, data objects, code, preprints) produced through the process. A move to more frequent or continuous publishing will alleviate some of the pressures associated with precarious contracts, such as the lag between contribution and traditional journal authorship. Expanding \emph{incremental publications to include research artefacts, broadly defined, }can also reduce gatekeeping around authorship—research groups may be more willing to acknowledge a named contribution where there is a clearer connection between the work and the published object. For example, a lab technician working on a protocol will have a stronger claim to be a named contributor on a published protocol than a research paper that uses that protocol. Alongside systems that are specific for one type of output (for example, \href{https://arxiv.org}{\underline{arXiv}} for preprints or \href{https://prereview.org}{\underline{PREreview}} for published peer reviews), general-purpose platforms such as \href{https://www.researchequals.com}{\underline{ResearchEquals}}, \href{https://www.pubpub.org/}{\underline{PubPub}}, and \href{https://blog.science-octopus.org}{\underline{Octopus}} enable the creation of a timely and persistent record of broad research contributions. By affording attention and credit to a broader range of output types, the primacy of the final journal article in evaluation metrics will be reduced and each contribution will garner respect in its own right.
+
+
+
+\subsection{An expansive system for recognising contributions}
+
+
+
+We imagine a future where research is inclusive and participatory, with each contribution being valuable to the process and subsequent outcomes. This requires the acknowledgment that different individuals bring a diverse and meaningful array of skills and expertise, including those from backgrounds that lack traditional academic credentialing. Contributions can be in the form of materially-visible work (for example writing, data collection, software development), workflow improvements, ideation, and more. A thorough and accurate accounting of all contributions will require moving beyond quantifiable metrics such as datasets curated or lines of code written. As TIRs can support the research process in a myriad of ways, integrating qualitative descriptions of their contributions will be necessary to properly recognise their efforts.
+
+
+
+The Contributor Roles Taxonomy (CRediT; \parencites{Brand2015} is an increasingly popular framework for recognising contributions. However, even with 14 codified roles, the CRediT system does not fully address the problem of recognising diverse contributions. As previously noted, it is too common that "research" is synonymous with "peer-reviewed publication", when there are many other contributions that are impactful within the research endeavour. For example, Harris et al. \parencites{Harris2020} published on the decades-long collaborative NumPy programming library project. There was a notable lack of gender diversity among the listed authors of the published report \parencites{Gallant2022}, despite gender diversity among the more recent code and documentation contributors \parencites{WeberMendonça2020}, raising the question of how to recognise indirect contributions. If research is conducted in a version control system that tracks all changes (such as the \href{https://osf.io}{\underline{Open Science Framework}}), one might assume all contributions would be observable and easily collated. But such a system will overlook efforts that are not readily recorded in said system (such as coordination and planning efforts, or offline discussions). The Turing Way's ‘\href{https://the-turing-way.netlify.app/afterword/contributors-record.html}{\underline{Record of Contributions}}' \parencites{TheTuringWayCommunityRecord2022} demonstrates one way to recognise all forms of contributions, where indirect contributions can be nominated into the tracking system: namely, using the all-contributors bot \parencites{Allall_2022}. In addition, systems for tracking impact via citations will need to be much more comprehensive. For example, even with Digital Object Identifiers (DOI) emerging as a de facto standard, a DOI generated using Zenodo is only recorded as a citation if it is properly indexed, which is currently not always the case.
+
+
+
+Furthermore, a focus on publications will neglect some TIR contributions entirely, especially for roles where the primary responsibilities do not include research. Indeed, TIR contributions can include teaching, training, mentorship, lab supervision, and consultations provided by specialised experts in funding acquisition, outreach, project management, statistics, data analysis, or software development. These contributions rely on research content expertise yet are not easily folded into publishable research objects. Although some of these activities are performed within the remit of high-level leadership, appointment to such positions often requires evidence of a “successful research career”, ignoring the expertise accumulated in TIR roles. Although it is unrealistic to expect any single system for recognising contributions to be ideal for every context, a credit framework that is customisable for different institutions and locales is an important first step towards addressing these challenges.
+
+
+
+\subsection{A system to validate research outputs}
+
+
+
+The above framework presupposes a large expansion in the types of research outputs. However, there may be resistance in recognising these outputs as "valid" because many lack formal systems for external peer review. Indeed, a system which incentivises “productivity” without an assessment of quality (no matter the output type) could lead to decreased trust in research. To ensure the quality of research outputs, and the ability for researchers to build effectively upon each other's works, systems should be established for expert review of all research outputs. Mirroring the peer review system for publications, TIRs could then participate by contributing their experience and skills to the review process.
+
+
+
+Notwithstanding the complex debates about open peer review \parencites{Heesen2021}{Ross-Hellauer2017}, unremitted labour \parencites{Aczel2021}, and power dynamics \parencites{Huber2022}, peer review can serve a useful purpose in validating research outputs. Realising an appropriate system for peer review of diverse research outputs, however, will require large infrastructural and behavioural shifts. In the case of research software, such systems have already emerged in venues such as \parencites{Ropensci2022}, pyOpenSci \parencites{Holdgraf2022}, and the \parencites{JournalofOpenSourceSoftware2022}. For other types of outputs, a peer review system would need to be designed to integrate effectively with how the outputs are used. For example, research protocols cannot be easily modified following reviewers' suggestion, so there would have to be a well-specified role or aim for reviewer feedback beyond the suggestion of changes.
+
+
+
+\subsection{Standardised roles and pathways for career development}
+
+
+
+As demonstrated in the case studies of \textbf{section 3}, and by Jetten et al., \parencites{Jetten2021} for the Data Stewards in the Netherlands, the trend to professionalise TIRs leads to improvements in the visibility of their work, increased opportunities for training and networking with peers, and role-specific rewards and recognition. We argue that professionalisation also improves the integration of TIRs within research organisational structures. As seen with Research Software Engineers, TIRs may operate in fully independent teams that consult with academic researchers. This structure necessitates leadership responsibility, creating the opportunity for parity in responsibility and compensation between an academic researcher managing a lab group and a TIR managing a team of research support specialists. TIR leadership will also invite a degree of autonomy to direct activities and professional development within the team, including the opportunity to contribute to larger infrastructural change through service on institutional committees. The demarcation of specific responsibilities also supports negotiations to command a salary commensurate with expertise and makes it easier for individuals to move across institutions.
+
+
+
+
+
+
+
+Professionalisation is, however, hampered by variability in the recognition and career support available to TIRs across institutions. This variability could be addressed through the creation of a new job family and pathway which parallels the development of the distinction between "Research", "Teaching and Research", or "Teaching and Scholarship" grades found in many UK institutions (for example the \parencites{Universitysussex_academic_2019} and \parencites{UniversityofStAndrews2015}), and the work by the National Collaborative Research Infrastructure Strategy \parencites{NCRIS2022}. Promotion levels in these new job families should match academic and managerial roles, in contrast to the Technical and Operational or Facilities profiles that only go as high as a standard post-doctoral grade. We note that these job families were legitimised in the UK following negotiation between campus trade unions (University and Colleges Union (UCU), Unite and Unison) and representatives of the employers. Such a change may therefore require engagement of Unions across the sector to advocate on behalf of all research institution employees.
+
+
+
+
+
+
+
+The professionalisation of TIRs could be further accelerated if larger mainstream funders created TIR fellowships (see similar recommendations by \parencites{Teperek2022}{UKRI-ResearchEngland2022}. This would require a cultural change from funders to value long-term investment in individual TIRs, and infrastructural change in how funds are distributed. In our idealised future, once role profiles are professionalised and standardised, institutions may ensure the continuity of support without the need for individual fellowships, through dedicated structural funding. A recent report by the UK Science, Innovation and Technology Government committee \parencites{Science2023} on Reproducibility and Research Integrity recommended that “Funders and universities should develop dedicated funding for the presence of statistical experts and software developers in research teams. In tandem, universities should work on developing formalised, aspirational career paths for these professions.” showing fledgling support for this idea at the highest level\parencites{Science2023}.
+
+
+
+\section{Conclusion}
+
+
+
+Recent socio-technical advancements have brought attention to the opportunities and needs surrounding research teams with diverse expert skills. Nevertheless, there is considerable work to be done to ensure that all individuals who make significant contributions to research teams are appropriately acknowledged and rewarded. TIRs are a unique facet of this problem, as positions dedicated to support research, but existing outside the typical researcher career structure. As a result, TIRs experience a lack of autonomy, have limited opportunities for career development, and face prejudice for deviating from the traditional academic credit system.
+
+
+
+
+
+
+
+While acknowledging that there are significant challenges faced by TIRs in the current academic model, we highlighted three cases where there have been efforts to professionalise TIR profiles, thereby creating communities, recognisable standards in training, development opportunities, and collective advocacy: Research Software Engineers, Research Community Managers, and Research Application Managers.
+
+
+
+
+
+
+
+Drawing from the successes and learnings of these case studies in Section 4, we suggest four system-level changes to address issues in the systems of reward and recognition available to TIRs, and their integration with the work and priorities of research academics. A summary of each proposal is provided below:
+
+
+
+
+
+
+\begin{enumerate}
+
+  \item Shift the focus of academic research to appropriately value the \emph{process} of the endeavour, not only the \emph{prestige} of the outputs. Acknowledging that no output is necessarily final, we advocate for frequent or continuous public documentation (publication) of every stage of research, allowing for recognition of various contributions at each stage.
+
+
+
+
+
+
+
+  \item Expand the system for recognising contributions, going beyond the implementation of CRediT, by acknowledging contributions that are not visible in the form of authorship.
+
+
+
+
+
+
+
+  \item Create mechanisms for validating the quality and impact of non-journal outputs akin to peer review, noting that this will require infrastructural development in the delivery of review, and agreement on review standards for different output types.
+
+
+
+
+
+
+
+  \item Standardise and professionalise roles and pathways for career development, culminating in an academic career track which is distinct from the current "researcher" versus "non-researcher" dichotomy and, importantly, not restricted in the level of influence or reward achievable.
+
+\end{enumerate}
+
+
+
+
+
+These proposals are offered at a time of increasing focus on increasing support for the open dissemination of research outputs \parencites{Concordatgroup_concordat_2016}{Nelson2022}{Unesco2021}, calls to improve the broader culture of academia \parencites{Coara2022}{WellcomeTrust2020}, improving the bureaucratic efficiency of academia \parencites{IndependentReviewofResearchBureaucracy2022}, and the existing commitments to improve TIR positions \parencites{NCRIS2022}{TechnicianCommitment2020}. If we seek to actualise the reform and ambitions of motions such as the San Francisco Declaration on Research Assessment \parencites{Dora2012}, we must acknowledge that there is significant scope to modernise the culture and tools we use to recognise and reward contributions. Systemic changes that improve the access of TIRs to career satisfaction will impact the reward and recognition processes relevant to the entire academy, making room to acknowledge, value and celebrate more diverse contributions and contributors to research.
+
+
+
+
+
+
+
+\section{Acknowledgements}
+
+
+
+We thank Dylan Roskam-Edris for helpful comments and Julien Colomb for sharing resources. Many thanks to Sarahanne Field for editing this issue and for her support and patience in the process. Thanks to Yo Yehudi for input on the abstract and title of this work. We thank Sander van der Laan and Theodosios Famprikis for their input on the preprint of this work. We thank Natalia B. Dutra and Christopher R. Chartier for their helpful and constructive reviews.
+
+
+
+
+
+
+
+\section{Funding}
+
+
+
+Arielle Bennett's contributions were supported by Wave 1 of The UKRI Strategic Priorities Fund under the EPSRC Grant EP/W006022/1, particularly the “Tools, Practices \& Systems” theme within that grant \& The Alan Turing Institute'. Cassandra Gould van Praag was supported by the NIHR Oxford Health Biomedical Research Centre and funded in whole, or in part, by the Wellcome Trust. Antonio Schettino was employed at Erasmus Research Services as Senior Advisor Open Science.
+
+\printbibliography
+\end{document}
