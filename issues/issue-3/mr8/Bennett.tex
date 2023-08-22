@@ -10,7 +10,7 @@ This contribution explores the evolution of specialist TIRs and the status of th
 \runningauthor{Bennett et al.}
 \jname{Journal of Trial \& Error}
 \jyear{2023}
-\paperpublisheddate{2023-07-31}
+\paperpublisheddate{2023-08-14}
 \paperdoi{10.36850/mr8}
 \paperreceived{September 30, 2022}
 \author[1]{Arielle Bennett\orcid{0000-0002-0154-2982}}
@@ -35,9 +35,25 @@ This contribution explores the evolution of specialist TIRs and the status of th
 \author[9]{Hao Ye\orcid{0000-0002-8630-1458}}
 \affil[9]{University of Florida}
 \paperaccepted{June 26, 2023}
-\paperpublished{July 31, 2023}
+\paperpublished{August 14, 2023}
 \jwebsite{https://journal.trialanderror.org}
 
+\makeatletter
+    \g@addto@macro\UrlBreaks
+    {%
+        \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+        \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+        \do\u\do\v\do\w\do\x\do\y\do\z\do\&\do\1\do\2\do\3%
+        \do\4\do\5\do\6\do\7\do\8\do\9\do\0\do\/\do\.%
+    }
+    \g@addto@macro\UrlSpecials
+    {%
+        \do\/{\mbox{\UrlFont/}\hskip 0pt plus 10pt}%
+    }
+\makeatother
+\setcounter{biburlucpenalty}{1}  %break URL after uppercase character
+\setcounter{biburlnumpenalty}{1} %break URL after number
+\setcounter{biburllcpenalty}{1}  %break URL after lowercase character
 
 \begin{document}
 \begin{frontmatter}
@@ -97,7 +113,7 @@ To illustrate the increasingly diverse and team-based approaches to research, co
 
 
 
-TIRs contributing to the research process include laboratory technicians, project managers, grant officers, finance managers, privacy officers, patent officers, and internal review board members \parencites{Heffner1979}{UKRI2023}. These roles are known collectively as “professional service staff” or “research professionals”. Their position in between supporting roles and academic researchers has been referred to as the “third space” \parencites{Whitchurch2008}. While some contributions of these roles may appear to be solely bureaucratic, one cannot deny the value of a skilled project manager, finance manager or technician in handling their respective responsibilities. We provide some examples of TIRs and their diverse areas of speciality below and in Table 1. These examples and perspectives are primarily informed by our academic experience in the US and Europe. The challenges, case studies, and changes that we suggest may be less applicable, or necessary, in other contexts. For example, low/middle income countries may prioritise other forms of research reform rather than dedicate resources to these types of positions \parencites{Bezuidenhout2018}{Bezuidenhout2017}{Onie2020}.
+TIRs contributing to the research process include laboratory technicians, project managers, grant officers, finance managers, privacy officers, patent officers, and internal review board members \parencites{Heffner1979}{UKRI2023}. These roles are known collectively as “professional service staff” or “research professionals”. Their position in between supporting roles and academic researchers has been referred to as the “third space” \parencites{Whitchurch2008}. While some contributions of these roles may appear to be solely bureaucratic, one cannot deny the value of a skilled project manager, finance manager or technician in handling their respective responsibilities. We provide some examples of TIRs and their diverse areas of speciality below and in \textbf{Table 1}. These examples and perspectives are primarily informed by our academic experience in the US and Europe. The challenges, case studies, and changes that we suggest may be less applicable, or necessary, in other contexts. For example, low/middle income countries may prioritise other forms of research reform rather than dedicate resources to these types of positions \parencites{Bezuidenhout2018}{Bezuidenhout2017}{Onie2020}.
 
 
 
@@ -157,7 +173,7 @@ The growing availability of TIRs in research institutes means that academic rese
 
 
 
-Prejudice can also result from changes to the status of roles within an institution. \parencites{Harloe2005} suggest that moving to a “co-operative form of production” akin to co-creation, rather than one in which TIRs simply facilitate the work of academics, may undermine the “collegial culture” in universities. In this culture, research academics have traditionally had exclusive responsibilities in determining their university's governance and organisation through engagement with institutional decision-making systems (such as committees). TIRs may thus be viewed as yet another non-academic staff member whose increasing influence dilutes academics' autonomy and authority, and/or increases their already heavy workload. This perspective highlights current tensions in the system: TIRs may be perceived as not sufficiently qualified to exert influence in the system, despite the fact that many TIRs are highly skilled researchers with doctoral degrees and years of academic experience \parencites{Teperek2022}{UKRI-ResearchEngland2022}.
+Prejudice can also result from changes to the status of roles within an institution. \textcites{Harloe2005} suggest that moving to a “co-operative form of production” akin to co-creation, rather than one in which TIRs simply facilitate the work of academics, may undermine the “collegial culture” in universities. In this culture, research academics have traditionally had exclusive responsibilities in determining their university's governance and organisation through engagement with institutional decision-making systems (such as committees). TIRs may thus be viewed as yet another non-academic staff member whose increasing influence dilutes academics' autonomy and authority, and/or increases their already heavy workload. This perspective highlights current tensions in the system: TIRs may be perceived as not sufficiently qualified to exert influence in the system, despite the fact that many TIRs are highly skilled researchers with doctoral degrees and years of academic experience \parencites{Teperek2022}{UKRI-ResearchEngland2022}.
 
 
 
@@ -226,7 +242,7 @@ Research Application Managers \parencites[RAMs;][]{TheTuringWayCommunityRecord20
 
 \begin{table*}[t]
   \begin{fullwidth}
-    \caption{A summary of each of the example roles described in the main text, highlighting, whether there is an established professional advocacy organisation, expected career trajectories and professional development, comparisons to roles outside of research, and how these roles can be recognised.}
+    \caption{A summary of each of the example roles described in the main text, highlighting whether there is an established professional advocacy organisation, expected career trajectories and professional development, comparisons to roles outside of research, and how these roles can be recognised.}
     \begin{tabularx}{\linewidth}{@{} >{\arraybackslash\raggedright}X >{\arraybackslash\raggedright}X >{\arraybackslash\raggedright}X X @{}}
                                                    & \textbf{Research Software Engineer (RSE)}                                                                            & \textbf{Research Community Manager (RCM)}
                                                    & \textbf{Research Application Manager (RAM)}                                                                                                                           \\
@@ -268,7 +284,7 @@ Research Application Managers \parencites[RAMs;][]{TheTuringWayCommunityRecord20
 
 
 
-Here we present pathways through the challenges described in and towards the successes of the highlighted case studies. We identify first steps towards a vision in which all TIRs are appropriately rewarded, recognised, and integrated with the work and priorities of research academics. An appropriate next stage will be the evaluation of costs and practicality of each intervention in supporting immediate or long-term change, with iterative piloting and refinement towards the idealised vision.
+Here we present pathways through the challenges described and towards the successes of the highlighted case studies. We identify first steps towards a vision in which all TIRs are appropriately rewarded, recognised, and integrated with the work and priorities of research academics. An appropriate next stage will be the evaluation of costs and practicality of each intervention in supporting immediate or long-term change, with iterative piloting and refinement towards the idealised vision.
 
 
 
@@ -336,7 +352,7 @@ Professionalisation is, however, hampered by variability in the recognition and 
 
 
 
-The professionalisation of TIRs could be further accelerated if larger mainstream funders created TIR fellowships (see similar recommendations by \texcites{Teperek2022}{UKRI-ResearchEngland2022}. This would require a cultural change from funders to value long-term investment in individual TIRs, and infrastructural change in how funds are distributed. In our idealised future, once role profiles are professionalised and standardised, institutions may ensure the continuity of support without the need for individual fellowships, through dedicated structural funding. A recent report by the UK Science, Innovation and Technology Government committee \parencites{Science2023} on Reproducibility and Research Integrity recommended that “Funders and universities should develop dedicated funding for the presence of statistical experts and software developers in research teams. In tandem, universities should work on developing formalised, aspirational career paths for these professions.” showing fledgling support for this idea at the highest level \parencites{Science2023}.
+The professionalisation of TIRs could be further accelerated if larger mainstream funders created TIR fellowships (see similar recommendations by \textcites{Teperek2022}{UKRI-ResearchEngland2022}). This would require a cultural change from funders to value long-term investment in individual TIRs, and infrastructural change in how funds are distributed. In our idealised future, once role profiles are professionalised and standardised, institutions may ensure the continuity of support without the need for individual fellowships, through dedicated structural funding. A recent report by the UK Science, Innovation and Technology Government committee \parencites{Science2023} on Reproducibility and Research Integrity recommended that “Funders and universities should develop dedicated funding for the presence of statistical experts and software developers in research teams. In tandem, universities should work on developing formalised, aspirational career paths for these professions.” showing fledgling support for this idea at the highest level \parencites{Science2023}.
 
 
 
@@ -408,7 +424,7 @@ These proposals are offered at a time of increasing focus on increasing support 
 
 
 \section{Contributions}
-CRediT contributions were established using tenzing \parencites{Holcombe_2020}.
+CRediT contributions were established using tenzing \parencites{Holcombe_2020}:
 
 \begin{itemize}
 \item \textbf{Arielle Bennett}: Conceptualisation, Project administration, Supervision, Writing - original draft, and Writing - review \& editing.
