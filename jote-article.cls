@@ -121,7 +121,7 @@
 }
 
 \DeclareOption{seplic}{
-    \@seplictrue
+  \@seplictrue
 }
 
 %% Options for papertype
@@ -219,15 +219,15 @@
 \setlength{\smallwidth}{\baselineskip}
 
 \RequirePackage
- [paperwidth=210mm,paperheight=280mm,
+[paperwidth=210mm,paperheight=280mm,
   textwidth=130mm,
-%  lines=55,
+  %  lines=55,
   textheight=230mm,
   headsep=2\smallwidth,headheight=20\p@,
   footskip=\smallwidth,columnsep=\smallwidth, includeheadfoot, inner= 4.8cm,
   outer=15mm, bindingoffset=0mm, marginparwidth=2.5cm, marginparsep=2\smallwidth
   %margin=5cm,
-  ]
+]
 {geometry}
 
 \RequirePackage{alphalph}
@@ -324,24 +324,24 @@
 %SmallCapsFeatures={Letters=SmallCaps}
 %]{Open Sans Regular}
 \setmainfont{Open Sans}[
-%Scale={0.85},
-    %SmallCapsFont={Noto Sans},
-%   BoldSmallCapsFont= {Noto Sans Black},
-    %SmallCapsFeatures={Letters=SmallCaps},
+  %Scale={0.85},
+  %SmallCapsFont={Noto Sans},
+  %   BoldSmallCapsFont= {Noto Sans Black},
+  %SmallCapsFeatures={Letters=SmallCaps},
   %  Extension=.ttf,
   %  Path=./fonts/Open_Sans/static/OpenSans/,
-    UprightFont={*-Light},
-    BoldFont={*-Bold}
+  UprightFont={*-Light},
+  BoldFont={*-Bold}
 ]
 
 
 %\newfontfamily\openlight{[OpenSans-Light.ttf]}
 
 \newfontfamily\overpass{Overpass}[
- %   Path={./OverpassFonts/},
- %   Extension={.ttf},
-    BoldFont={* SemiBold},
-    UprightFont={* Regular},
+  %   Path={./OverpassFonts/},
+  %   Extension={.ttf},
+  BoldFont={* SemiBold},
+  UprightFont={* Regular},
 ]
 
 %\newfontfamily\openreg{
@@ -368,18 +368,18 @@
 \definecolor{orcidlogocol}{HTML}{A6CE39}
 \tikzset{
   orcidlogo/.pic={
-    \fill[orcidlogocol] svg{M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z};
-    \fill[white] svg{M86.3,186.2H70.9V79.1h15.4v48.4V186.2z}
-                 svg{M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z}
-                 svg{M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z};
-  }
+      \fill[orcidlogocol] svg{M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z};
+      \fill[white] svg{M86.3,186.2H70.9V79.1h15.4v48.4V186.2z}
+      svg{M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z}
+      svg{M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z};
+    }
 }
 
 \newcommand\orcidicon[1]{\href{https://orcid.org/\def\@orcidicon#1}{\mbox{\scalerel*{
-\begin{tikzpicture}[yscale=-1,transform shape]
-\pic{orcidlogo};
-\end{tikzpicture}
-}{|}}}}
+        \begin{tikzpicture}[yscale=-1,transform shape]
+          \pic{orcidlogo};
+        \end{tikzpicture}
+      }{|}}}}
 
 \RequirePackage{academicons}
 \newcommand{\orcid}[1]{ \href{orcid.org/#1}{\textcolor{orcidlogocol}{\kern -0.2em \aiOrcid \kern -0.2em}} }
@@ -401,7 +401,7 @@
 \NewEnviron{takehomemessage}{
   \begin{takehome}
     \begin[enhanced, sharp corners, frame hidden]{tcolorbox}
-      \BODY
+    \BODY
     \end{tcolorbox}
   \end{takehome}
 }
@@ -420,7 +420,7 @@
 
 \newenvironment{fullwidth}{%
   \begin{adjustwidth*}{}{-\fullwidthlen}%
-}{%
+    }{%
   \end{adjustwidth*}%
 }
 
@@ -436,10 +436,10 @@
   colframe=gray!25!white,
   coltitle=gray!50!black,
   subtitle style={bottomrule=.5pt,
-    toprule=0pt,
-    colframe=gray,
-    colback=gray!10!white,
-    coltext=gray!70!black}
+      toprule=0pt,
+      colframe=gray,
+      colback=gray!10!white,
+      coltext=gray!70!black}
 }
 
 
@@ -455,16 +455,16 @@
   colframe=gray!25!white,
   coltitle=gray!50!black,
   subtitle style={bottomrule=.5pt,
-    toprule=0pt,
-    colback=gray!10!white,
-    coltext=gray!70!black}
+      toprule=0pt,
+      colback=gray!10!white,
+      coltext=gray!70!black}
 }
 
 % Peer review hover command
 \newcommand{\gotoreview}{\vspace{-14pt\hfill%
-\pdftooltip{\textcolor{white}{peer reviews}}{click on the arrow to view the peer review comments on this section}%
-\hyperref[sec:reviews]{$\bigblacktriangledown$}%
-}}
+    \pdftooltip{\textcolor{white}{peer reviews}}{click on the arrow to view the peer review comments on this section}%
+    \hyperref[sec:reviews]{$\bigblacktriangledown$}%
+  }}
 
 % RGA checkbox command
 \def\checkmark{\tikz\fill[scale=0.2](.4,.25) -- (.65,0) -- (1,.8) -- (.65,.15) -- cycle;}
@@ -476,19 +476,19 @@
 \AtEndPreamble{
 \makeatletter
 \hypersetup{
-		pdftitle={\@runningauthor\text{ } (\@jyear) - \@title},
-    	pdfauthor = {\@authorone%
-    	\ifdefempty{\@authortwo}{}{, \@authortwo}%
-    	\ifdefempty{\@authorthree}{}{, \@authorthree}%
-    	\ifdefempty{\@authorfour}{}{, \@authorfour }%
-    	\ifdefempty{\@authorfive}{}{, \@authorfive}}
-    	pdfsubject = {\@title},
-    	pdfkeywords = {\@keywordsabstract},
-        colorlinks=true,
-        linkcolor=jotedark,
-        filecolor=jotedark,
-        urlcolor=jotedark,
-        citecolor=jotedark}
+pdftitle={\@runningauthor\text{ } (\@jyear) - \@title},
+pdfauthor = {\@authorone%
+    \ifdefempty{\@authortwo}{}{, \@authortwo}%
+    \ifdefempty{\@authorthree}{}{, \@authorthree}%
+    \ifdefempty{\@authorfour}{}{, \@authorfour }%
+    \ifdefempty{\@authorfive}{}{, \@authorfive}}
+pdfsubject = {\@title},
+pdfkeywords = {\@keywordsabstract},
+colorlinks=true,
+linkcolor=jotedark,
+filecolor=jotedark,
+urlcolor=jotedark,
+citecolor=jotedark}
 \makeatother
 }
 
@@ -498,7 +498,7 @@
 
 % Formatting of footer for first page
 %% v1.4: can't use "real" footnotes anymore for twocolumn
-\RequirePackage[flushmargin,bottom,norule, marginal]{footmisc}
+\RequirePackage[flushmargin,splitrule,bottom,norule, marginal]{footmisc}
 %   \def\blfootnote{\gdef\@thefnmark{}\@footnotetext}
 %   \appto{\footnotelayout}{\fontsize{6\p@}{9\p@}\sffamily\mdseries}
 %   \let\oldfootnoterule\footnoterule
@@ -521,19 +521,19 @@
 \fancyhead[LO]{
   \setlength{\arrayrulewidth}{.5\p@}%
   \arrayrulecolor{black}%
-%   \if@issue
-%   \begin{tabularx}{\dimexpr \textwidth + \marginparwidth + \marginparsep\relax}{@{}l | l  >{\raggedleft\arraybackslash}X @{}}%
-%      \thepage &
-%                 \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}}
-%     {\Large\textsc{\lowercase Empirical}}
-%     & \if@review {\normalsize Manuscript by\ \ }\fi \@runningauthor
-%   \end{tabularx}%
-% %
-%   \else
+  %   \if@issue
+  %   \begin{tabularx}{\dimexpr \textwidth + \marginparwidth + \marginparsep\relax}{@{}l | l  >{\raggedleft\arraybackslash}X @{}}%
+  %      \thepage &
+  %                 \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}}
+  %     {\Large\textsc{\lowercase Empirical}}
+  %     & \if@review {\normalsize Manuscript by\ \ }\fi \@runningauthor
+  %   \end{tabularx}%
+  % %
+  %   \else
   \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X r @{}}%
     \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}} \text{}
     \Large Empirical
- & {\selectfont\small\@runningauthor &  \thepage}
+     & {\selectfont\small\@runningauthor & \thepage}
   \end{tabularx}%
   % \fi
 }
@@ -562,21 +562,21 @@
   \arrayrulecolor{lightblack!70}%
   \fontsize{8\p@}{10pt}\selectfont\color{lightblack!50}%
   \begin{tabularx}{\dimexpr \textwidth + \myoddoffset }{@{}X  r @{}}%
-  \hline
-  & \\
-  \@jname, \@jyear~ \if@review \else \if@issue \textit{\@jvolume}(\@jissue),~ \@jpages\fi\fi &
-  View interactive version \href{https://doi.org/ \@paperdoi \if@review .pr\@prround\fi}{here}.
-  %\textcopyright~\@jyear\space jote Periodicals, Inc. &
+    \hline
+                                                                                               & \\
+    \@jname, \@jyear~ \if@review \else \if@issue \textit{\@jvolume}(\@jissue),~ \@jpages\fi\fi &
+    View interactive version \href{https://doi.org/ \@paperdoi \if@review .pr\@prround\fi}{here}.
+    %\textcopyright~\@jyear\space jote Periodicals, Inc. &
   \end{tabularx}%
 }
 
 \fancyfoot[LE]{%
   \fontsize{7\p@}{13\p@}\sffamily\mdseries%
   \begin{tabularx}{\textwidth}{@{}X  r @{}}%
-  \hline
-  % View interactive version  \href{\@paperdoi\if@review
+    \hline
+    % View interactive version  \href{\@paperdoi\if@review
     %.pr\ifdefempty{\@prround}{1}{\@prround}\fi}{here}. &
-  %  \textit{\@jname}~ \@jyear~ \if@review \else\if@issue \textit{\@jvolume}(\@jissue),~ \@jpages\fi \fi
+    %  \textit{\@jname}~ \@jyear~ \if@review \else\if@issue \textit{\@jvolume}(\@jissue),~ \@jpages\fi \fi
   \end{tabularx}%
 }
 
@@ -591,71 +591,71 @@
   % All this mess is to assure that any combination of \@paperpublished, \@paperreceived and \@paperaccepted will work. It only assumes that \@paperpublished is there, the other two can be there in any combination. Just trust me, it's not worth going through
   &
   \ifdefempty{\@paperreceived}%
-    {\ifdefempty{\@paperaccepted}%
+  {\ifdefempty{\@paperaccepted}%
     {\multicolumn{1}{@{}l}{Published\ifdefempty{\@rolling}{\if@review \ Online\fi}{ Online}: \@paperpublished}}
     {Accepted: \@paperaccepted, }%
-    }
+  }
   {Received: \@paperreceived, } &
   \ifdefempty{\@paperreceived}%
-    {\ifdefempty{\@paperaccepted}%
-        {\multicolumn{1}{@{}l}{}}%
+  {\ifdefempty{\@paperaccepted}%
+    {\multicolumn{1}{@{}l}{}}%
     {\multicolumn{1}{@{}l}{Published\ifdefempty{\@rolling}{}{ Online}: \@paperpublished}}
-    }
+  }
   {%
     \ifdefempty{\@paperaccepted}%
-        {\ifdefempty{\@paperreceived}{\multicolumn{1}{l}{}}{\multicolumn{1}{l}{Published\ifdefempty{\@rolling}{}{ Online}: \@paperpublished}}}
+    {\ifdefempty{\@paperreceived}{\multicolumn{1}{l}{}}{\multicolumn{1}{l}{Published\ifdefempty{\@rolling}{}{ Online}: \@paperpublished}}}
     %
     {Accepted: \@paperaccepted, }
-    }&
+  }&
   \ifdefempty{\@paperreceived}%
-    {\multicolumn{1}{l}{}
-    }{%
-  \ifdefempty{\@paperaccepted}%
-        {\multicolumn{1}{c}{}}%
+  {\multicolumn{1}{l}{}
+  }{%
+    \ifdefempty{\@paperaccepted}%
+    {\multicolumn{1}{c}{}}%
     {Published\ifdefempty{\@rolling}{}{ Online}: \@paperpublished}}%
-    &
-    \href{\@jwebsite}{https://www.jtrialerror.com}
-  }
+  &
+  \href{\@jwebsite}{https://www.jtrialerror.com}
+}
 
 %% First page header + footer %fph
 \fancypagestyle{firstpage}{
-\fancyheadoffset[loh,reh,lof]{\myoddoffset}
-%   \renewcommand{\footrule}{\hdashrule{\textwidth}{0.5\p@}{2\p@}\\[-2\p@]}
-\fancyhead[L]{%
-  \if@header
-  \hspace{70mm}
-  \begin{tabularx}{\linewidth}{@{} p{20mm} >{\raggedright\arraybackslash}m{5em} >{\raggedleft\arraybackslash}X @{}}
-    &
-  \color{black!70} % \includegraphics[height=5em]{media/TE_logo_blue@2048px.png} &
-  &
-      {\color{jotedark!40}\bfseries
-      {\large\overpass\MakeUppercase{Empirical}}
-    \text{   } {\color{joteorange}\huge\raisebox{-.25em}{\aiOpenAccess}}
-   % \raisebox{-.5\smallwidth}{
-   % \includegraphics[height=1.5\smallwidth]{media/CROSSMARK_Color_square_no_text.png}}
-    }
-  \end{tabularx}
-  \fi
+  \fancyheadoffset[loh,reh,lof]{\myoddoffset}
+  %   \renewcommand{\footrule}{\hdashrule{\textwidth}{0.5\p@}{2\p@}\\[-2\p@]}
+  \fancyhead[L]{%
+    \if@header
+      \hspace{70mm}
+      \begin{tabularx}{\linewidth}{@{} p{20mm} >{\raggedright\arraybackslash}m{5em} >{\raggedleft\arraybackslash}X @{}}
+         &
+        \color{black!70} % \includegraphics[height=5em]{media/TE_logo_blue@2048px.png} &
+         &
+        {\color{jotedark!40}\bfseries
+            {\large\overpass\MakeUppercase{Empirical}}
+            \text{   } {\color{joteorange}\huge\raisebox{-.25em}{\aiOpenAccess}}
+            % \raisebox{-.5\smallwidth}{
+            % \includegraphics[height=1.5\smallwidth]{media/CROSSMARK_Color_square_no_text.png}}
+          }
+      \end{tabularx}
+    \fi
   }
   \fancyfoot[L]{%
     \fancyheadoffset[loh,reh,lof]{\myoddoffset}
-  \setlength{\arrayrulewidth}{.5\p@}%
-  \arrayrulecolor{lightblack!70}%
-  \fontsize{8pt}{13\p@}\selectfont\color{lightblack!70}%
-  \if@issue
-    \begin{tabularx}{\linewidth}{@{}p{\dimexpr \marginparwidth + 6mm \relax} l >{\raggedleft\arraybackslash}X | r}%
-      &
-     \@jname  \@jyear, {\bfseries\color{lightblack}\@jvolume} (\@jissue) \@jyear
-      & \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}
-      & \thepage
-    \end{tabularx}%
-  \else
-    \begin{tabularx}{\linewidth}{@{}p{\dimexpr \marginparwidth + 3mm \relax} l  >{\raggedleft\arraybackslash}X @{}}%
-      &
-      \@jname, \@jyear
-      & \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}
-    \end{tabularx}
-  \fi
+    \setlength{\arrayrulewidth}{.5\p@}%
+    \arrayrulecolor{lightblack!70}%
+    \fontsize{8pt}{13\p@}\selectfont\color{lightblack!70}%
+    \if@issue
+      \begin{tabularx}{\linewidth}{@{}p{\dimexpr \marginparwidth + 6mm \relax} l >{\raggedleft\arraybackslash}X | r}%
+         &
+        \@jname  \@jyear, {\bfseries\color{lightblack}\@jvolume} (\@jissue) \@jyear
+         & \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}
+         & \thepage
+      \end{tabularx}%
+    \else
+      \begin{tabularx}{\linewidth}{@{}p{\dimexpr \marginparwidth + 3mm \relax} l  >{\raggedleft\arraybackslash}X @{}}%
+         &
+        \@jname, \@jyear
+         & \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}
+      \end{tabularx}
+    \fi
   }
 }
 
@@ -741,57 +741,57 @@
 \newlength{\LogoWidth}
 
 \newcommand{\titlestuff}{
-\setlength{\LogoWidth}{4\smallwidth}
-\vspace*{3\baselineskip}
-\newcommand{\aTitle}{Lorem Ipsum Title\\ Which is too long\\ Too long} % a three lines title
-\newcommand{\aLogo}{\includegraphics[width=\LogoWidth]{media/TE_logo_blue@2048px.png}}
-\newcommand{\aAuthors}{\overpass\@author}
-\newcommand{\aWord}{\textsc{Cool}}
+  \setlength{\LogoWidth}{4\smallwidth}
+  \vspace*{3\baselineskip}
+  \newcommand{\aTitle}{Lorem Ipsum Title\\ Which is too long\\ Too long} % a three lines title
+  \newcommand{\aLogo}{\includegraphics[width=\LogoWidth]{media/TE_logo_blue@2048px.png}}
+  \newcommand{\aAuthors}{\overpass\@author}
+  \newcommand{\aWord}{\textsc{Cool}}
 
-%\renewcommand{\aTitle}{Which is too long\\ Too long} % test a two lines title
-%\renewcommand{\aTitle}{Which is too long} % test a single line title
-%%***********************************************************
+  %\renewcommand{\aTitle}{Which is too long\\ Too long} % test a two lines title
+  %\renewcommand{\aTitle}{Which is too long} % test a single line title
+  %%***********************************************************
 
-%% Design: format of the title, H distance image-title, V distance title-authors <<<<<<<<<<<<
-\newcommand{\formatTitle}{\fontsize{20pt}{20pt}\noindent\raggedright\bfseries\overpass} % format the title
-\setlength{\LogoSep}{17mm}  % horizontal sepation
-\setlength{\AuthSep}{2\smallwidth}  % vertical separation
-%%***********************************************************
+  %% Design: format of the title, H distance image-title, V distance title-authors <<<<<<<<<<<<
+  \newcommand{\formatTitle}{\fontsize{20pt}{20pt}\noindent\raggedright\bfseries\overpass} % format the title
+  \setlength{\LogoSep}{17mm}  % horizontal sepation
+  \setlength{\AuthSep}{2\smallwidth}  % vertical separation
+  %%***********************************************************
 
-%% Set
-\SetHorizontalCoffin\Logo{\aLogo}
-\SetVerticalCoffin\PaperType{\LogoWidth}{}%{\RaggedRight\large\textsc{\jote@articletype}}
-\SetHorizontalCoffin\Authorx{\aAuthors}
-\SetVerticalCoffin\Titlex{0.9\textwidth}{\formatTitle\@jotetitle}
+  %% Set
+  \SetHorizontalCoffin\Logo{\aLogo}
+  \SetVerticalCoffin\PaperType{\LogoWidth}{}%{\RaggedRight\large\textsc{\jote@articletype}}
+  \SetHorizontalCoffin\Authorx{\aAuthors}
+  \SetVerticalCoffin\Titlex{0.9\textwidth}{\formatTitle\@jotetitle}
 
-% Assembly
-\JoinCoffins\MainFrame[l,t]\Logo[l,t] % put the image in the frame
-\JoinCoffins\MainFrame[r,vc]\Titlex[l,vc](\LogoSep,0pt) % join the title at an horizontal distance \IntraImage
-\JoinCoffins\MainFrame[\Titlex-l,\Titlex-b]\Authorx[l,vc](0pt,-\AuthSep) % join the authors with title and dowm \IntraTitle
-\JoinCoffins\MainFrame[\Authorx-l,\Authorx-B]\PaperType[l,B](-\LogoSep-\LogoWidth,0pt) % join the word aligned with authors
+  % Assembly
+  \JoinCoffins\MainFrame[l,t]\Logo[l,t] % put the image in the frame
+  \JoinCoffins\MainFrame[r,vc]\Titlex[l,vc](\LogoSep,0pt) % join the title at an horizontal distance \IntraImage
+  \JoinCoffins\MainFrame[\Titlex-l,\Titlex-b]\Authorx[l,vc](0pt,-\AuthSep) % join the authors with title and dowm \IntraTitle
+  \JoinCoffins\MainFrame[\Authorx-l,\Authorx-B]\PaperType[l,B](-\LogoSep-\LogoWidth,0pt) % join the word aligned with authors
 
-%Typeset
-\noindent\TypesetCoffin\MainFrame[l,vc](\dimexpr-\LogoSep-17mm, 0pt)  %put the assambly in the page current insertion point
+  %Typeset
+  \noindent\TypesetCoffin\MainFrame[l,vc](\dimexpr-\LogoSep-17mm, 0pt)  %put the assambly in the page current insertion point
 }
 
 
 %\newcommand{\titlesss}{%
 %  \vspace*{3\baselineskip}
 %  \noindent\begin{minipage}{\linewidth}
-    %\raggedright
+%\raggedright
 %    \hspace{-36mm}
 %  \begin{NiceTabular}{@{} m{0.2\linewidth} m{1.5mm} m{\textwidth} @{}}
 %    \if@header\else
 %    \Block[r]{}{\includegraphics[width=15mm]{media/TE_logo_blue@2048px.png}}
 %    \f3
 %    & &    \Block[l]{}<\overpass\huge\bfseries>{\@jotetitle}
-     %   \if@header
-     %   \vspace{\baselineskip}
-     %   \else
-     %   \vspace{\bigspace}
-     %   \fi
+%   \if@header
+%   \vspace{\baselineskip}
+%   \else
+%   \vspace{\bigspace}
+%   \fi
 %    \\[40pt]
-    %\Block[r]{}{\textsc{\jote@articletype}}
+%\Block[r]{}{\textsc{\jote@articletype}}
 %    & &    \Block[l]{}{\@author}
 %  \end{NiceTabular}
 %\end{minipage}%
@@ -807,36 +807,36 @@
   \setlength{\MetaWidth}{\dimexpr\paperwidth-\textwidth-1.8\marginparsep-1.5\smallwidth}
   \begin{textblock*}{\MetaWidth}[0,1](-\MetaWidth,\dimexpr\textheight-\Gm@bmargin-6\smallwidth-1pt\relax)
     \begin{tcolorbox}[enhanced, sharp corners, colback=white, frame hidden, borderline east={0.5pt}{-0em}{joteorange}, right skip = \smallwidth, bottom=-4pt,
-      height=\dimexpr\textheight-\CoffinTotalHeight\MainFrame-5\smallwidth-7pt, valign=bottom, left skip=0pt]
-\vfill\null
-  \setlength{\parskip}{\baselineskip}%
-  \setlength{\parindent}{\z@}%
-  \jote@affilmetadata
-\end{tcolorbox}
+        height=\dimexpr\textheight-\CoffinTotalHeight\MainFrame-5\smallwidth-7pt, valign=bottom, left skip=0pt]
+      \vfill\null
+      \setlength{\parskip}{\baselineskip}%
+      \setlength{\parindent}{\z@}%
+      \jote@affilmetadata
+    \end{tcolorbox}
   \end{textblock*}
 }
 \renewcommand{\maketitle}{%
   %\@cover@logo%
-\thispagestyle{firstpage}
-\titlestuff
-\@insert@metadata%
-%  \vspace{-2.5\baselineskip}
-%\vspace{\bigspace}%
-%  \noindent\begin{minipage}{0.9\linewidth}
-%    \raggedright
-%  {\vskip2\baselineskip
-%    \hspace{-38mm}\raisebox{-10mm}{\includegraphics[width=30mm]{media/jote-logo.jpg}}
-%    \hspace{7mm}{\overpass\huge\bfseries\@title\par}}
-%  \vspace{-2.5\baselineskip}
-%  \vspace{\bigspace}
-%  \hspace{-36mm}
-%  \begin{tabularx}{\textwidth}{@{} >{\arraybackslash\raggedleft}p{0.2\linewidth} p{1.5mm} l @{}}
-%  {\overpass\bfseries\large\MakeUppercase\jote@articletype} & &    \@author
-%  \end{tabularx}
-%\end{minipage}%
-%  \vspace{-2.5\baselineskip}
-%\vspace{\bigspace}%
-\normalfont\normalsize%
+  \thispagestyle{firstpage}
+  \titlestuff
+  \@insert@metadata%
+  %  \vspace{-2.5\baselineskip}
+  %\vspace{\bigspace}%
+  %  \noindent\begin{minipage}{0.9\linewidth}
+  %    \raggedright
+  %  {\vskip2\baselineskip
+  %    \hspace{-38mm}\raisebox{-10mm}{\includegraphics[width=30mm]{media/jote-logo.jpg}}
+  %    \hspace{7mm}{\overpass\huge\bfseries\@title\par}}
+  %  \vspace{-2.5\baselineskip}
+  %  \vspace{\bigspace}
+  %  \hspace{-36mm}
+  %  \begin{tabularx}{\textwidth}{@{} >{\arraybackslash\raggedleft}p{0.2\linewidth} p{1.5mm} l @{}}
+  %  {\overpass\bfseries\large\MakeUppercase\jote@articletype} & &    \@author
+  %  \end{tabularx}
+  %\end{minipage}%
+  %  \vspace{-2.5\baselineskip}
+  %\vspace{\bigspace}%
+  \normalfont\normalsize%
 }
 
 
@@ -857,14 +857,14 @@
 %  \end{tabular}%
 %  \vskip24\p@%
 %  \noindent\begin{minipage}{0.8\textwidth}\@author\end{minipage}%
-  %\vskip12\p@%
-  %\vspace*{-1\baselineskip}%
+%\vskip12\p@%
+%\vspace*{-1\baselineskip}%
 %  \thispagestyle{firstpage}
 %  \renewcommand{\tabcolsep}{6pt}
 
-  %\@insert@metadata
+%\@insert@metadata
 
-  %inserts metadata on its own line if there's no abstract
+%inserts metadata on its own line if there's no abstract
 %  \ifdefempty{\@noabstract}{}{\jote@affilmetadata%
 %    \vspace{\baselineskip} \hrule \vspace{2\baselineskip}
 %}
@@ -878,34 +878,34 @@
   \AB@affillist\\
   \vspace*{\smallwidth}
   \if@review
-  This is \ifdefempty{\@prround}{the originally submitted version}{submission \#\@prround} of \ifdefempty{\@noabstract}{}{\vskip0pt}\enquote{\@title}\ifdefempty{\@noabstract}{}{\vskip0pt} with \ifdefempty{\@prround}{}{round \@prround of the} peer review comments attached.
-  {\bfseries\color{lightblack}Original author(s):} \vskip1pt \textit{\@ogauthor} .
-  {\bfseries\color{lightblack!70}Published version}\vskip1pt \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}.
-  {\bfseries\color{lightblack!70}How to read:} \vskip1pt Sections which have peer review comments are marked by $\bigblacktriangledown$ or \hyperref[sec:reviews]{links},\ifdefempty{\@noabstract}{}{\vskip0pt} clicking which directs you to said comments.\ifdefempty{\@noabstract}{}{\vskip0pt} The reviews contain links referring back to the original section.
+    This is \ifdefempty{\@prround}{the originally submitted version}{submission \#\@prround} of \ifdefempty{\@noabstract}{}{\vskip0pt}\enquote{\@title}\ifdefempty{\@noabstract}{}{\vskip0pt} with \ifdefempty{\@prround}{}{round \@prround of the} peer review comments attached.
+      {\bfseries\color{lightblack}Original author(s):} \vskip1pt \textit{\@ogauthor} .
+      {\bfseries\color{lightblack!70}Published version}\vskip1pt \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}.
+    {\bfseries\color{lightblack!70}How to read:} \vskip1pt Sections which have peer review comments are marked by $\bigblacktriangledown$ or \hyperref[sec:reviews]{links},\ifdefempty{\@noabstract}{}{\vskip0pt} clicking which directs you to said comments.\ifdefempty{\@noabstract}{}{\vskip0pt} The reviews contain links referring back to the original section.
   \else
-  \ifdefempty{\@contributions}{}{\authfn{2}\@contributions}
-  \vskip0pt
-  \receiveddatahori
-  \vskip\smallwidth
-  {\bfseries\color{lightblack}Correspondence}\\
-  \@corraddress\\
-  \@corremail
-  \vskip\smallwidth
-  \ifdefempty{\@rgainfo}{}{%
-   {\bfseries\color{lightblack}Grant Application to: }%
-   \@rgainfo\vskip\smallwidth
- }%
-  \ifdefempty{\@funding}{}{%
-    {\bfseries\color{lightblack}Funding: }%
-    \@funding\vskip\smallwidth
-}%
-  \ifdefempty{\@companionkey}{%
-    \ifdefempty{\@acknowledgments}{}{{\bfseries\color{lightblack}Acknowledgments}\\
-      \@acknowledgments\vskip\smallwidth
-    }}{}
-  \textcopyright\space The Author(s) \@jyear\\
-  {\color{lightblack!70}This article is licensed under a CC-BY 4.0 license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
-  \vskip\smallwidth% \href{https://crossmark.crossref.org/dialog/?doi=\@paperdoi\&domain=pdf\&date_stamp=\@paperpublisheddate}{\includegraphics[width=9\normsize]{media/CROSSMARK_Color_horizontal.png}}%
+    \ifdefempty{\@contributions}{}{\authfn{2}\@contributions}
+    \vskip0pt
+    \receiveddatahori
+    \vskip\smallwidth
+    {\bfseries\color{lightblack}Correspondence}\\
+    \@corraddress\\
+    \@corremail
+    \vskip\smallwidth
+    \ifdefempty{\@rgainfo}{}{%
+      {\bfseries\color{lightblack}Grant Application to: }%
+      \@rgainfo\vskip\smallwidth
+    }%
+    \ifdefempty{\@funding}{}{%
+      {\bfseries\color{lightblack}Funding: }%
+      \@funding\vskip\smallwidth
+    }%
+    \ifdefempty{\@companionkey}{%
+      \ifdefempty{\@acknowledgments}{}{{\bfseries\color{lightblack}Acknowledgments}\\
+        \@acknowledgments\vskip\smallwidth
+      }}{}
+    \textcopyright\space The Author(s) \@jyear\\
+    {\color{lightblack!70}This article is licensed under a CC-BY 4.0 license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
+    \vskip\smallwidth% \href{https://crossmark.crossref.org/dialog/?doi=\@paperdoi\&domain=pdf\&date_stamp=\@paperpublisheddate}{\includegraphics[width=9\normsize]{media/CROSSMARK_Color_horizontal.png}}%
   \fi%
 }
 
@@ -933,15 +933,15 @@
   \checkoddpage
   \ifoddpage \reversemarginpar  \begin{adjustwidth*}{\dimexpr \@heightabstract+0\p@}{}%
   \else  \reversemarginpar \begin{adjustwidth*}{}{\dimexpr \@heightabstract+0\p@}%
-  \fi
-  \vspace*{2\smallwidth}
+      \fi
+      \vspace*{2\smallwidth}
 
-  {\fontsize{9pt}{12pt}\selectfont
-  \BODY
-  }
-    \keywords{\textit{\@keywordsabstract}}
-  \end{adjustwidth*}
-  \vspace*{2\smallwidth}
+      {\fontsize{9pt}{12pt}\selectfont
+        \BODY
+      }
+      \keywords{\textit{\@keywordsabstract}}
+    \end{adjustwidth*}
+    \vspace*{2\smallwidth}
   \fi
 }%
 
@@ -949,27 +949,27 @@
 \renewcommand{\endabstract}{\endjote@abstract}
 
 \newcommand{\thefpfootnotes}{%
-  \noindent\textcolor{black!50}{\rule{\textwidth}{0.5\p@}}\\
-  {\fontsize{6\p@}{9\p@}\selectfont
-  \@fpfootnotes}
+\noindent\textcolor{black!50}{\rule{\textwidth}{0.5\p@}}\\
+{\fontsize{6\p@}{9\p@}\selectfont
+\@fpfootnotes}
 }
 
 \definecolor{pinky}{HTML}{f3e1ce}
 %% v1.4: Add two-column mode
 \NewEnviron{frontmatter}{%
-   \if@twocolumn
+  \if@twocolumn
     \let\oldclearpage\clearpage
     \let\clearpage\relax
     \ifdefvoid{\@fpfootnotes}{}{%
-       \begin{figure*}[b!]
-       \thefpfootnotes
-       \end{figure*}
-     }%
+      \begin{figure*}[b!]
+        \thefpfootnotes
+      \end{figure*}
+    }%
     \twocolumn[\@twocolumnfalse\setlength\parindent{2em}\BODY]%
     \let\clearpage\oldclearpage
-   \else
-     \BODY
-   \fi%
+  \else
+    \BODY
+  \fi%
 }
 
 
@@ -985,30 +985,30 @@
 %\subsubsectionfont{\small}
 \RequirePackage[explicit]{titlesec}
 
-  \titleformat{name=\section}[block]
-    {}
-    {}{0pt}{\fontsize{11pt}{\normline}\bfseries\raggedright#1}
+\titleformat{name=\section}[block]
+{}
+{}{0pt}{\fontsize{11pt}{\normline}\bfseries\raggedright#1}
 
 \titlespacing*{\section}{0pt}{\dimexpr\baselineskip}{\dimexpr\baselineskip-0pt}
 \titlespacing*{name=\section,numberless}{0pt}{\baselineskip}{0pt}
 
 \titleformat{\subsection}[block]
-  {\raggedright}
-  {}{0pt}{\fontsize{10pt}{\dimexpr\normline-2pt}\openreg#1}
+{\raggedright}
+{}{0pt}{\fontsize{10pt}{\dimexpr\normline-2pt}\openreg#1}
 
 \titlespacing*{\subsection}{0pt}{\dimexpr\baselineskip -2pt}{2pt}
 
 \titleformat{\subsubsection}[block]
-  {\raggedright}
-  {}{0pt}{\fontsize{10pt}{\normline}\selectfont\itshape #1}%Textls sets spacing. 100 is a bit, can take big numbers
+{\raggedright}
+{}{0pt}{\fontsize{10pt}{\normline}\selectfont\itshape #1}%Textls sets spacing. 100 is a bit, can take big numbers
 \titlespacing*{\subsubsection}{0pt}{\dimexpr\baselineskip - 2pt}{0pt}
 
-    \titleformat{name=\paragraph}[runin]
-      {\bfseries}
-      {}{0pt}{#1\ \ }
-    \titleformat{\subparagraph}[runin]
-      {}
-      {}{0pt}{\textit{#1}\ \ \ }
+\titleformat{name=\paragraph}[runin]
+{\bfseries}
+{}{0pt}{#1\ \ }
+\titleformat{\subparagraph}[runin]
+{}
+{}{0pt}{\textit{#1}\ \ \ }
 
 \titlespacing*{\paragraph}{\parindent}{0\baselineskip}{0pt}
 \titlespacing*{\subparagraph}{\parindent}{0\baselineskip}{0pt}
@@ -1029,11 +1029,11 @@
 
 \newenvironment{epigraph}[1]
 {\begin{quoting}\def\@quotesource{#1}}
-{\par\hfill\@quotesource\end{quoting}}
+    {\par\hfill\@quotesource\end{quoting}}
 
 \newenvironment{pullquote}
 {\begin{quoting}[vskip=\dimexpr 39\p@-23\p@\relax,leftmargin=12\p@,rightmargin=12\p@,font+={raggedright},begintext={\fontsize{18\p@}{23\p@}\sffamily\mdseries\color{black!50}}]}
-{\end{quoting}}
+    {\end{quoting}}
 
 % Enum/itemized
 \RequirePackage[inline]{enumitem}
@@ -1056,18 +1056,18 @@
 \newtheorem{corollary}{Corollary}
 
 \newenvironment{proof}[1][Proof]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 \newenvironment{definition}[1][Definition]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 \newenvironment{example}[1][Example]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 \newenvironment{remark}[1][Remark]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 
 \newcommand{\qed}{\nobreak \ifvmode \relax \else
-      \ifdim\lastskip<1.5em \hskip-\lastskip
+    \ifdim\lastskip<1.5em \hskip-\lastskip
       \hskip1.5em plus0em minus0.5em \fi \nobreak
-      \vrule height0.75em width0.5em depth0.25em\fi}
+    \vrule height0.75em width0.5em depth0.25em\fi}
 
 % Captions
 \RequirePackage[tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad]{caption}
@@ -1107,10 +1107,10 @@
   \RequirePackage[backend=biber, citestyle=numeric-comp, sorting=none, bibstyle=apa]{biblatex}
   \AtEndPreamble{\makeatletter
     \input{numeric.bbx}
-  \makeatother}
+    \makeatother}
 \fi
 \if@authordate
-    \RequirePackage[backend=biber, style=apa]{biblatex}
+  \RequirePackage[backend=biber, style=apa]{biblatex}
 \fi
 \if@amsrefs
   \RequirePackage{amsrefs}
@@ -1123,15 +1123,15 @@
   \backmatter%
   \ifstrequal{#1}{suppinfo}
   {\section{Supporting Information}
-  Additional Supporting Information may be found online in the supporting information for this article.}
+    Additional Supporting Information may be found online in the supporting information for this article.}
   {}
 
   \begin{mdframed}
-  [linewidth=1\p@,linecolor=black!40,nobreak,
-    innerleftmargin=12\p@,innerrightmargin=12\p@,
-    innertopmargin=12\p@,innerbottommargin=12\p@,
-    skipabove=\baselineskip]
-  {\bfseries\color{lightblack}How to cite this article:} #2
+    [linewidth=1\p@,linecolor=black!40,nobreak,
+      innerleftmargin=12\p@,innerrightmargin=12\p@,
+      innertopmargin=12\p@,innerbottommargin=12\p@,
+      skipabove=\baselineskip]
+    {\bfseries\color{lightblack}How to cite this article:} #2
   \end{mdframed}
 }
 
@@ -1145,30 +1145,30 @@
 \RequirePackage{wrapfig}
 %\pretocmd{\printbibliography}{\fontsize{\normsize}{\normline}\selectfont}{}{}
 \apptocmd{\printbibliography}{%
-    \ifdefempty{\@companionkey}{}{
-    \ifdefempty{\@acknowledgments}{}{%
+\ifdefempty{\@companionkey}{}{
+  \ifdefempty{\@acknowledgments}{}{%
     \section*{Acknowledgments}%
     \@acknowledgments}}%
-    %\ifdefempty{\@contributions}{}{%
-    %\vskip200pt
-    %\section*{Author Contributions}%
-    %\@contributions}%
-    %
-    \ifdefempty{\@interests}{}{\section{Conflict of Interest}\@interests}
-    \ifdefempty{\@companionabstract}{}{\section{Companion Piece}
-        %\@companiontitle \newline
-        \noindent\paragraph{Abstract.}\@companionabstract \newline
-        \noindent \fullcite{\@companionkey}
-    }
-    \section{License}
-        \begin{wrapfigure}[2]{L}{0.08\textwidth}%
-        \vspace{-12pt}
-        \includegraphics[width=0.1\textwidth]{media/by}%
-        \end{wrapfigure}
-        {\bfseries\color{lightblack}\textsf{Open Access.}} This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}.
-        \newline\newline
-        \textcopyright \text{ }The Author(s) 2021%
-  }{}{}
+%\ifdefempty{\@contributions}{}{%
+%\vskip200pt
+%\section*{Author Contributions}%
+%\@contributions}%
+%
+\ifdefempty{\@interests}{}{\section{Conflict of Interest}\@interests}
+\ifdefempty{\@companionabstract}{}{\section{Companion Piece}
+  %\@companiontitle \newline
+  \noindent\paragraph{Abstract.}\@companionabstract \newline
+  \noindent \fullcite{\@companionkey}
+}
+\section{License}
+\begin{wrapfigure}[2]{L}{0.08\textwidth}%
+  \vspace{-12pt}
+  \includegraphics[width=0.1\textwidth]{media/by}%
+\end{wrapfigure}
+{\bfseries\color{lightblack}\textsf{Open Access.}} This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}.
+\newline\newline
+\textcopyright \text{ }The Author(s) 2021%
+}{}{}
 
 \RequirePackage{ftnright} %Puts footnotes in the righthand corner always
 
@@ -1179,9 +1179,9 @@
 %    \if@twoside
 %    \ifodd\c@page
 %      \hbox{}\newpage
-      %\if@twocolumn
+%\if@twocolumn
 %        \hbox{}\newpage
-      %\fi
+%\fi
 %    \fi
 %  \fi
 %}
@@ -1204,7 +1204,7 @@
 %\normalsize
 \pagestyle{fancy}
 \AtBeginDocument{%
-%\fontsize{\normsize}{\normline}\selectfont
+  %\fontsize{\normsize}{\normline}\selectfont
   \robustify{\ref}
   \robustify{\cite}
   \ifdef{\citep}{\robustify{\citep}}{}
