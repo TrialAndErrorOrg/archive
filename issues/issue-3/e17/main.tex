@@ -10,6 +10,7 @@
 
 \usepackage[backend=biber,style=apa]{biblatex}
 
+
 \addbibresource{bibliography.bib}
 
 \jotetitle{Empathic Accuracy, Mindfulness, and Facial Emotion Recognition: An Experimental Study}
@@ -733,7 +734,7 @@
 
 
 
-	Some uncertainty remains as to whether the findings were due to the interventions or some pre-existing group differences. In terms of our outcome measure, we note that the EA task was administered after the interventions but not before. A repeated-measures design would have allowed for a better test of the effectiveness of the interventions. While the task can be administered twice \parencites[aan het][]{Rot2014}, we did not do this due to time constraints.
+	Some uncertainty remains as to whether the findings were due to the interventions or some pre-existing group differences. In terms of our outcome measure, we note that the EA task was administered after the interventions but not before. A repeated-measures design would have allowed for a better test of the effectiveness of the interventions. While the task can be administered twice \parencites{aanhetRot2014}, we did not do this due to time constraints.
 
 
 
@@ -793,6 +794,11 @@
 
 	The authors declare they have no conflict of interest.
 
+    \section{Informed Consent}
+    All participants provided written informed consent.
+
+    \newpage
+
 
 	\section{Acknowledgments}
 
@@ -800,21 +806,21 @@
 
 
 \printbibliography
-\clearpage
+\onecolumn
 
 \section{Tables}
 
 
 
-\begin{table*}
+\begin{table*}[h!]
     \begin{fullwidth}
-    \caption{Demographic, questionnaire, and task data for the three intervention groups.}
+    \caption{Demographic, questionnaire, and task data for the three intervention groups}
     \begin{tabularx}{\linewidth}{@{} l l l l l l l l l l l l l l l l l l l l l  @{}}
          \multicolumn{6}{l}{}
         \\
 
-        \textbf{Demographic data} & \textbf{Mindfulness (n=22)} & FER training(n=23)
-        & Control(n=24) & X\textsuperscript{2}/F & \emph{p} \\
+        \textbf{Demographic data} & \textbf{Mindfulness (n=22)} & \textbf{FER training(n=23)}
+        & \textbf{Control(n=24)} & \textbf{X\textsuperscript{2}/F} & \textbf{\emph{p}} \\
 
          Age in years & 20 (2) & 21 (3) & 21 (3) & 1.00 & 0.38 \\
 
@@ -851,14 +857,16 @@
 \end{fullwidth}
 \end{table*}
 
+\clearpage
 
 
 
-
-Table 2. Results of multilevel regression analyses
-
-\begin{table}
-    \begin{tabularx}{\linewidth}{@{} l l l l l l l l l l l l l l l l l l l l l l @{}}
+\begin{table*}[h!]
+    \begin{fullwidth}
+        \small
+        \caption{Results of multilevel regression analyses}
+        \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{} p{4em} l l l l l l l l l l l l l l l l l l l l l @{}}
         \hline Variables & Model 1 & Model 2 & Model 3 & Model 3\textsuperscript{a}
         & Model 3\textsuperscript{b} & Model 4 & Model 5 & Model 6 & Model 6\textsuperscript{a}
         & Model 6\textsuperscript{b} & Model 7 & Model 8 \\
@@ -907,17 +915,17 @@ Table 2. Results of multilevel regression analyses
 
         \hline Level 1 * Level 2 &  &  &  &  &  &  &  &  &  &  &  &  \\
 
-        \hline \underline{Target sex * Condition}(ref: Female, Mindfulness) &  &  &
+        \hline \multicolumn{10}{@{}l}{\underline{Target sex * Condition}(ref: Female, Mindfulness)} 
 
-        &  &  &  &  &  &  &  &  &  \\
-
-         Male targets, control &  &  &  &  &  &  & 0.35 (0.21) &  &  &  &  &  \\
-
-         Male targets, FER training &  &  &  &  &  &  & 0.32 (0.21) &  &  &  &  &
          \\
 
-         \underline{Valence * Condition}(ref: Positive, Mindfulness) &  &  &  &  &
-         &  &  &  &  &  &  &  \\
+         \multicolumn{3}{@{}l}{Male targets, control} &  &  &  &  & 0.35 (0.21) &  &  &  &  &  \\
+
+         \multicolumn{3}{@{}l}{Male targets, FER training} &  &  &  &  & 0.32 (0.21) &  &  &  &  &
+         \\
+
+         \multicolumn{10}{@{}l}{\underline{Valence * Condition}(ref: Positive, Mindfulness)} 
+          \\
 
          Negative, control &  &  &  &  &  &  &  & 0.02 (0.19) & -0.03 (0.36) & 0.10 (0.24)
         &  &  \\
@@ -925,15 +933,16 @@ Table 2. Results of multilevel regression analyses
          Negative, FER training &  &  &  &  &  &  &  & -0.21 (0.20) & 0.02 (0.37)
         & -0.25 (0.24) &  &  \\
 
+\bottomrule
+                                                                \\
+    \end{tabular}}
+    (a) Only film clips involving male targets included in analysis. (b)Only film clips involving female targets included in analysis. Condition was coded 1 = control, 2 = FER training, 3 = mindfulness intervention. Target sex was coded 1 = male, 2 = female. Valence was coded 1 = negative 2 = positive. Understanding Dutch was a continuous variable; scores were grand-mean centred prior to analysis. Mother tongue was coded 0 = not Dutch, 1 = Dutch. Standard errors in parentheses; ***\emph{p} < 0.001, **\emph{p} < 0.01, *\emph{p} < 0.05.
+\end{fullwidth}
+\end{table*}
 
-    \end{tabularx}
-\end{table}
 
 
-
-
-
-\textsuperscript{a}Only film clips involving male targets included in analysis. \textsuperscript{b}Only film clips involving female targets included in analysis. Condition was coded 1 = control, 2 = FER training, 3 = mindfulness intervention. Target sex was coded 1 = male, 2 = female. Valence was coded 1 = negative 2 = positive. Understanding Dutch was a continuous variable; scores were grand-mean centred prior to analysis. Mother tongue was coded 0 = not Dutch, 1 = Dutch. Standard errors in parentheses; ***\emph{p} < 0.001, **\emph{p} < 0.01, *\emph{p} < 0.05.
+\clearpage
 
 
 
@@ -945,19 +954,18 @@ Table 2. Results of multilevel regression analyses
 
 
 
-Figure 1. EA after intervention in participants varying in their understanding of Dutch.
 
 
-
-        \begin{figure}
-            \includegraphics[width=\linewidth]{media/image1.png}
-
-            \caption{}
+        \begin{figure*}[h!]
+            \begin{fullwidth}
+                \centering
+            \includegraphics[width=0.9\linewidth]{media/image1.png}
+            \caption{EA after intervention in participants varying in their understanding of Dutch. Note: *p<0.0083 (comparison with control intervention). EA = Empathic accuracy. FER = facial emotion recognition. SD = standard deviation. SE = standard error.}
 
             \label{fig:rId12}
 
-
-        \end{figure}
+            \end{fullwidth}
+        \end{figure*}
         
-Note. *p<0.0083 (comparison with control intervention). EA = Empathic accuracy. FER = facial emotion recognition. SD = standard deviation. SE = standard error.
+
 \end{document}
