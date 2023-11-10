@@ -10,6 +10,7 @@
 
 \usepackage[backend=biber,style=apa]{biblatex}
 
+\usepackage{rotating}
 
 \addbibresource{bibliography.bib}
 
@@ -26,17 +27,19 @@
 \jyear{2023}
 \paperdoi{10.36850/e17}
 \paperreceived{October 3, 2022}
-\author[1]{\mbox{Marije aan het Rot\orcid{0000-0001-6761-7513}}}
-\affil[1]{Department of Psychology
-\& School of Behavioural and Cognitive Neurosciences, University of Groningen, The Netherlands}
+\paperaccepted{September 21, 2023}
+\paperpublished{November 9, 2023}
+\author[1,2]{\mbox{Marije aan het Rot\orcid{0000-0001-6761-7513}}}
+\affil[1]{Department of Psychology, University of Groningen, The Netherlands}
 \corremail{\href{mailto:m.aan.het.rot@rug.nl}{m.aan.het.rot@rug.nl}}
 \corraddress{University of Groningen}
 \runningauthor{aan het Rot et al.}
-\author[2]{\mbox{Merle-Marie Pittelkow}}
-\affil[2]{Department of Psychology, University of Groningen, The Netherlands}
-\author[2]{\mbox{D. Elisabeth Eckardt]\orchid{0000-0002-7487-7898}}}
-\author[2]{\mbox{Nils Simonsen}}
-\author[2]{\mbox{Brian D. Ostafin}}
+\author[1]{\mbox{Merle-Marie Pittelkow\orcid{0000-0002-7487-7898}}}
+\affil[1]{Department of Psychology
+\& School of Behavioural and Cognitive Neurosciences, University of Groningen, The Netherlands }
+\author[1]{\mbox{D. Elisabeth Eckardt}}
+\author[1]{\mbox{Nils Simonsen}}
+\author[1]{\mbox{Brian D. Ostafin}}
 \jwebsite{https://journal.trialanderror.org}
 
 \begin{filecontents}{bibliography.bib}
@@ -834,7 +837,7 @@
 
          \textbf{Questionnaire data}\textsuperscript{a} \\
 
-         Understanding Dutch (range 0-4) & 1.8 (2) & 1.9 (2) & 2.3 (1) \& 0.48 & 0.62
+         Understanding Dutch (range 0-4) & 1.8 (2) & 1.9 (2) & 2.3 (1) & 0.48 & 0.62
         \\
 
          Understanding English (range 0-4) & 3.7 (1) & 3.3 (1) & 3.5 (1) & 1.95 & 0.15
@@ -860,87 +863,60 @@
 \clearpage
 
 
-
-\begin{table*}[h!]
-    \begin{fullwidth}
+\begin{sidewaystable}[h!]
         \small
         \caption{Results of multilevel regression analyses}
         \resizebox{\textwidth}{!}{
     \begin{tabular}{@{} p{4em} l l l l l l l l l l l l l l l l l l l l l @{}}
-        \hline Variables & Model 1 & Model 2 & Model 3 & Model 3\textsuperscript{a}
-        & Model 3\textsuperscript{b} & Model 4 & Model 5 & Model 6 & Model 6\textsuperscript{a}
-        & Model 6\textsuperscript{b} & Model 7 & Model 8 \\
+        \hline Variables & Model 1 & Model 2 & Model 3 & Model 3\textsuperscript{a} & Model 3\textsuperscript{b} & Model 4 & Model 5 & Model 6 & Model 6\textsuperscript{a} & Model 6\textsuperscript{b} & Model 7 & Model 8 \\
 
-        \hline Intercept & 0.85 (0.07)*** & 0.88 (0.06)*** & 0.74 (0.10)*** &
-        0.46 (0.15)** & 0.87 (0.09)*** & 0.79 (0.10)*** & 0.87 (0.11)*** &
-        0.73 (0.12)*** & 0.45 (0.18)* & 0.89 (0.13)*** & 0.84 (0.08)*** &
-        0.87 (0.09)*** \\
+        \hline Intercept & 0.85 (0.07)*** & 0.88 (0.06)*** & 0.74 (0.10)*** & 0.46 (0.15)** & 0.87 (0.09)*** & 0.79 (0.10)*** & 0.87 (0.11)*** & 0.73 (0.12)*** & 0.45 (0.18)* & 0.89 (0.13)*** & 0.84 (0.08)*** & 0.87 (0.09)*** \\
 
         \hline Level 1 &  &  &  &  &  &  &  &  &  &  &  &  \\
 
-        \hline \underline{Valence}(ref: Positive) &  &  &  &  &  &  &  &  &  &  &
-        &  \\
+        \hline \underline{Valence}(ref: Positive) &  &  &  &  &  &  &  &  &  &  & &  \\
 
-         Negative &  & -0.18 (0.09)* &  &  &  &  &  & 0.03 (0.14) & 0.03 (0.26) & -0.05 (0.17)
-        &  & -0.06 (0.08) \\
+         Negative &  & -0.18 (0.09)* &  &  &  &  &  & 0.03 (0.14) & 0.03 (0.26) & -0.05 (0.17) &  & -0.06 (0.08) \\
 
          \underline{Target sex }(ref: Female) &  &  &  &  &  &  &  &  &  &  &  &  \\
 
-         Male & -0.04 (0.08) &  &  &  &  & -0.18 (0.09)* & -0.41 (0.15)** &  &  &
-        & -0.18 (0.09)* & -0.18 (0.09)* \\
+         Male & -0.04 (0.08) &  &  &  &  & -0.18 (0.09)* & -0.41 (0.15)** &  &  & & -0.18 (0.09)* & -0.18 (0.09)* \\
 
         \hline Level 2 &  &  &  &  &  &  &  &  &  &  &  &  \\
 
-        \hline \underline{Condition}(ref: : Mindfulness) &  &  &  &  &  &  &  &  &
+        \hline \underline{Condition}(ref: : Mindfulness) &  &  &  &  &  &  &  &  &  &  &  &  \\
 
-        &  &  &  \\
+         Control &  &  & 0.09 (0.14) & 0.33 (0.21) & -0.03 (0.13) & 0.09 (0.14) & -0.03 (0.15) & 0.08 (0.17) & 0.34 (0.25) & -0.08 (0.18) & -0.02 (0.10) & -0.02 (0.10) \\
 
-         Control &  &  & 0.09 (0.14) & 0.33 (0.21) & -0.03 (0.13) & 0.09 (0.14) & -0.03 (0.15)
-        & 0.08 (0.17) & 0.34 (0.25) & -0.08 (0.18) & -0.02 (0.10) & -0.02 (0.10) \\
+         FER training &  &  & 0.17 (0.14) & 0.40 (0.21) & 0.07 (0.13) & 0.17 (0.14) & 0.07 (0.15) & 0.28 (0.17) & 0.39 (0.25) & 0.21 (0.18) & 0.14 (0.10) & 0.14 (0.10) \\
 
-         FER training &  &  & 0.17 (0.14) & 0.40 (0.21) & 0.07 (0.13) & 0.17 (0.14)
-        & 0.07 (0.15) & 0.28 (0.17) & 0.39 (0.25) & 0.21 (0.18) & 0.14 (0.10) & 0.14 (0.10)
-        \\
+         \underline{Understanding Dutch} &  &  &  &  &  &  &  &  &  &  & 0.38 (0.07)*** & 0.38 (0.07)*** \\
 
-         \underline{Understanding Dutch} &  &  &  &  &  &  &  &  &  &  & 0.38 (0.07)***
-        & 0.38 (0.07)*** \\
-
-         \underline{Understanding Dutch * Condition}(ref: Mindfulness) &  &  &  &
-        &  &  &  &  &  &  &  &  \\
+         \underline{Understanding Dutch * Condition}(ref: Mindfulness) &  &  &  & &  &  &  &  &  &  &  &  \\
 
          Control &  &  &  &  &  &  &  &  &  &  & 0.01 (0.10) & 0.01 (0.10) \\
 
-         FER training &  &  &  &  &  &  &  &  &  &  & -0.23 (0.10)* &
-        -0.23 (0.10)* \\
+         FER training &  &  &  &  &  &  &  &  &  &  & -0.23 (0.10)* & -0.23 (0.10)* \\
 
         \hline Level 1 * Level 2 &  &  &  &  &  &  &  &  &  &  &  &  \\
 
-        \hline \multicolumn{10}{@{}l}{\underline{Target sex * Condition}(ref: Female, Mindfulness)} 
-
-         \\
+        \hline \multicolumn{10}{@{}l}{\underline{Target sex * Condition}(ref: Female, Mindfulness)} \\
 
          \multicolumn{3}{@{}l}{Male targets, control} &  &  &  &  & 0.35 (0.21) &  &  &  &  &  \\
 
-         \multicolumn{3}{@{}l}{Male targets, FER training} &  &  &  &  & 0.32 (0.21) &  &  &  &  &
-         \\
+         \multicolumn{3}{@{}l}{Male targets, FER training} &  &  &  &  & 0.32 (0.21) &  &  &  &  & \\
 
-         \multicolumn{10}{@{}l}{\underline{Valence * Condition}(ref: Positive, Mindfulness)} 
-          \\
+         \multicolumn{10}{@{}l}{\underline{Valence * Condition}(ref: Positive, Mindfulness)} \\
 
-         Negative, control &  &  &  &  &  &  &  & 0.02 (0.19) & -0.03 (0.36) & 0.10 (0.24)
-        &  &  \\
+         Negative, control &  &  &  &  &  &  &  & 0.02 (0.19) & -0.03 (0.36) & 0.10 (0.24) &  &  \\
 
-         Negative, FER training &  &  &  &  &  &  &  & -0.21 (0.20) & 0.02 (0.37)
-        & -0.25 (0.24) &  &  \\
+         Negative, FER training &  &  &  &  &  &  &  & -0.21 (0.20) & 0.02 (0.37) & -0.25 (0.24) &  &  \\
 
 \bottomrule
                                                                 \\
     \end{tabular}}
     (a) Only film clips involving male targets included in analysis. (b)Only film clips involving female targets included in analysis. Condition was coded 1 = control, 2 = FER training, 3 = mindfulness intervention. Target sex was coded 1 = male, 2 = female. Valence was coded 1 = negative 2 = positive. Understanding Dutch was a continuous variable; scores were grand-mean centred prior to analysis. Mother tongue was coded 0 = not Dutch, 1 = Dutch. Standard errors in parentheses; ***\emph{p} < 0.001, **\emph{p} < 0.01, *\emph{p} < 0.05.
-\end{fullwidth}
-\end{table*}
-
-
+\end{sidewaystable}
 
 \clearpage
 
