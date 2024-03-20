@@ -41,7 +41,7 @@
 \paperdoi{10.36850/mr10}
 \paperreceived{December 20, 2022}
 \paperaccepted{October 27, 2023}
-\paperpublished{March 1, 2024}
+\paperpublished{March 15, 2024}
 \paperpublisheddate{2024-03-01}
 
    \jname{Journal of Trial \& Error}
@@ -66,25 +66,12 @@
 
 \corremail{\href{mailto:maximilian.linde@gesis.org}{maximilian.linde@gesis.org}}
 \corraddress{Maximilian Linde, GESIS - Leibniz Institute for the Social Sciences, Unter Sachsenhausen 6-8, 50667 Cologne, Germany}
-% \authorsaffiliations{{Unit of Psychometrics and Statistics, Department of Psychology, Faculty of Behavioural and Social Sciences, University of Groningen, Groningen, The Netherlands},{QUEST Center for Responsible Research, Berlin Institute of Health at Charit{\'{e}}, Berlin, Germany},{Unit of Clinical and Developmental Neuropsychology, Department of Psychology, Faculty of Behavioural and Social Sciences, University of Groningen, Groningen, The Netherlands}}
 
 \abstracttext{Practicing open science can have benefits for the career prospects of individual researchers or labs through higher quality work and increased chances of publication. However, being an outspoken advocate of open science might also indirectly benefit individual scientific careers, in the form of status in a scientific community, decisions for tenure, and eligibility for certain kinds of funding. Therefore, it may be profitable for individual labs to appear to engage in open science practices, without actually putting in the associated effort or doing only the bare minimum. In this article, we explore two types of academic behavior through a dynamic computational model \parencite[cf.][]{SmaldinoMcelreath2016} of an academic community that rewards open science: ($1$) practicing open science and/or ($2$) advocating open science. Crossing these two types of behavior leads to four different kinds of labs and we examine which of them thrive in this academic community. We found that labs that practice and advocate open science dominate in a scientific community that values open science. Implications of the model results are discussed.}
 
 \keywordsabstract{computational model, cultural evolution, metascience, open science, reform}
 
-% \authornote{
-% Correspondence concerning this article should be addressed to: Maximilian~Linde, University~of~Groningen, Department~of~Psychology, Grote~Kruisstraat~2/1, Heymans~Building, Room~217, 9712~TS~Groningen, The~Netherlands, Phone:~(+31)~50~363~2702, E-mail:~m.linde@rug.nl.
 
-% \addORCIDlink{Maximilian Linde}{0000-0001-8421-090X}
-
-% \addORCIDlink{Merle-Marie Pittelkow}{0000-0002-7487-7898}
-
-% \addORCIDlink{Nina R. Schwarzbach}{0000-0002-0129-0340}
-
-% \addORCIDlink{Don van Ravenzwaaij}{0000-0002-5030-4091}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -96,21 +83,15 @@
 \end{frontmatter}
 
 
-\begin{takeHomeMessage}%o{Take-home Message}
+\begin{takeHomeMessage}
 
   Labs that practice open science (e.g., preregistration, registered reports, sharing data, materials and codes, and open access publishing) and advocate open science (e.g., through social media) thrive in a scientific community that values open science. At the same time,  “quick-and-dirty” science is still prevalent, as evidenced by high false positive and false discovery rates. Based on the specific assumptions of our model, our results suggest that labs that practice and advocate open science are dominating in a scientific community that values open science. These results are encouraging to those who feel practicing open science  “is not worth it”: in addition to benefits to science at large, our results suggest engaging with open science can benefit individual researchers if open science is sufficiently rewarded.
 \end{takeHomeMessage}
 
-% \section{Purpose of the Study}
 
-% In this article, we explored the benefits of practicing and advocating open science in a scientific community that rewards open science. To this end, we extended a computational model by \textcite{SmaldinoMcelreath2016} who demonstrated that the current incentive structure in science that rewards many and highly cited publications could lead to low quality studies. We extended this computational model by including four different lab types that are a factorial combination of practicing open science (yes/no) and advocating open science (yes/no). In this work, we ($1$) examine which lab type(s) dominate(s) in a scientific community that values open science and ($2$) investigate the dynamics of several characteristics in a scientific culture.
+\lettrine{I}{nitiatives} to improve science often follow times of crisis. For example, the open science (OS) movement originated from a crisis in psychology, referred to as replication crisis, crisis of credibility, confidence, or reproducibility \parencites{spellman_open_2018}{pashler_editors_2012}{baker_dutch_2016}{Ioannidis2005}{open_science_collaboration_estimating_2015}{simmons_false-positive_2011}{wagenmakers_agenda_2012}{fiedler_voodoo_2011}. Broadly speaking, the OS movement aims to make the scientific process more transparent, accessible, and reproducible. Practices associated with this movement (OS practices) include preregistration and the use of registered reports to reduce researcher's degrees of freedom \parencites{MunafoNosekBishop_2017}{chambers_registered_2013}, protocol, data and code sharing to improve reproducibility and replicability \parencite{national_academies_of_sciences_improving_2019}, and the use of preprints and open access publishing to increase the dissemination and accessibility of research findings \parencites{mckiernan_how_2016}{mikki_scholarly_2017}. Incentives such as ``OS badges'' rewarding openly sharing data or material   \parencite{kidwell_badges_2016}, and preregistration (\href{https://osf.io/tvyxz/}{https://osf.io/tvyxz/}) advertise and identify ``trustworthy'' research \parencite{schneider_rebuilding_2020}. More recently, additional badges for open access publication, open code, open source, and open science grants have been proposed \parencite{guzman-ramirez_badges_2023}.
 
-% \pagebreak
-% \section{Introduction}
-
-\lettrine{I}{nitiatives} to improve science often follow times of crisis. For example, the open science (OS) movement originated from a crisis in psychology, referred to as replication crisis, crisis of credibility, confidence, or reproducibility \parencite{spellman_open_2018, pashler_editors_2012, baker_dutch_2016, Ioannidis2005, open_science_collaboration_estimating_2015, simmons_false-positive_2011, wagenmakers_agenda_2012, fiedler_voodoo_2011}. Broadly speaking, the OS movement aims to make the scientific process more transparent, accessible, and reproducible. Practices associated with this movement (OS practices) include preregistration and the use of registered reports to reduce researcher's degrees of freedom \parencite{MunafoNosekBishop_2017, chambers_registered_2013}, protocol, data and code sharing to improve reproducibility and replicability \parencite{national_academies_of_sciences_improving_2019}, and the use of preprints and open access publishing to increase the dissemination and accessibility of research findings \parencite{mckiernan_how_2016, mikki_scholarly_2017}. Incentives such as ``OS badges'' rewarding openly sharing data or material   \parencite{kidwell_badges_2016}, and preregistration (\href{https://osf.io/tvyxz/}{https://osf.io/tvyxz/}) advertise and identify ``trustworthy'' research \parencite{schneider_rebuilding_2020}. More recently, additional badges for open access publication, open code, open source, and open science grants have been proposed \parencite{guzman-ramirez_badges_2023}.
-
-There is wide-spread agreement that adopting OS practices has advantages for both science at large as well as the individual researcher \parencite{AllenMehler2019, mckiernan_how_2016, markowetz_five_2015}. Researchers are encouraged to use OS practices to advance their career by increasing their citation count, generating media attention, attracting potential collaborators, and getting job and funding opportunities \parencite{mckiernan_how_2016}. Moreover, policy decisions aim to recognize and reward the use of open science (\href{https://www.nwo.nl/en/recognition-and-rewards}{see, e.g., https://www.nwo.nl/en/recognition-and-rewards}). However, incentivising OS practices might bring along secondary, unintended problems. As the traditional publish-or-perish culture may have inspired questionable research practices like $p$-hacking and hypothesizing after the results are known, so too may the elevated status and increased publication chances of practitioners of OS inspire advocating OS without actually engaging in OS practices.
+There is wide-spread agreement that adopting OS practices has advantages for both science at large as well as the individual researcher \parencites{AllenMehler2019}{mckiernan_how_2016}{markowetz_five_2015}. Researchers are encouraged to use OS practices to advance their career by increasing their citation count, generating media attention, attracting potential collaborators, and getting job and funding opportunities \parencites{mckiernan_how_2016}. Moreover, policy decisions aim to recognize and reward the use of open science (\href{https://www.nwo.nl/en/recognition-and-rewards}{see, e.g., https://www.nwo.nl/en/recognition-and-rewards}). However, incentivising OS practices might bring along secondary, unintended problems. As the traditional publish-or-perish culture may have inspired questionable research practices like $p$-hacking and hypothesizing after the results are known, so too may the elevated status and increased publication chances of practitioners of OS inspire advocating OS without actually engaging in OS practices.
 
 \subsection{The Present Study}
 
@@ -145,7 +126,7 @@ Variation in these four characteristics leads to variation in fitness of the lab
       top=\dimexpr\smallwidth,
       bottom=\dimexpr\smallwidth,
       title={\vskip-.7em%
-          Box 1: Evolution in \textcite{SmaldinoMcelreath2016}%
+          Box 1: Evolution in\\ \mbox{Smalidino and Mcelreath (2016)}%
           \vspace*{.2em}},
       before upper={\parindent10pt},
     ]
@@ -239,11 +220,11 @@ We made the following assumptions about the impact of practicing OS on the survi
   %
   \item \textbf{Practicing OS leads to higher workload ($e$).}
 
-        The practice of OS requires more work and time compared to closed science \parencite[][]{hostler_invisible_2023}. New skills and knowledge need to be acquired and the research process involves additional steps, such as pre-registration, data and code cleaning, and additional administration \parencite[e.g., drafting openness agreements][]{hostler_invisible_2023}. Indeed, practicing OS is associated with an increase in workload, work-related stress, and longer time to completion of a research project \parencite{SarafoglouKovacsBakos_2022, TothBanksMellor_2021}. Seen as ``increasing effort decreases the productivity of a lab, because it takes longer to perform rigorous research'' \parencite[][p.~$6$]{SmaldinoMcelreath2016}, we reasoned that labs that practice OS should have a higher $e$ than labs that do not practice OS. If, for instance, a traditional study were to take $400$ work hours to be completed, we assumed that practicing OS would add $20$ hours. This translates into a $5\%$ increase in effort for OS studies (i.e., $\left(400+20\right)/400=1.05$). We believe this to be a conservative estimate of the increase in $e$.
+        The practice of OS requires more work and time compared to closed science \parencite[][]{hostler_invisible_2023}. New skills and knowledge need to be acquired and the research process involves additional steps, such as pre-registration, data and code cleaning, and additional administration \parencites[e.g., drafting openness agreements][]{hostler_invisible_2023}. Indeed, practicing OS is associated with an increase in workload, work-related stress, and longer time to completion of a research project \parencites{SarafoglouKovacsBakos_2022}{TothBanksMellor_2021}. Seen as ``increasing effort decreases the productivity of a lab, because it takes longer to perform rigorous research'' \parencite[][p.~$6$]{SmaldinoMcelreath2016}, we reasoned that labs that practice OS should have a higher $e$ than labs that do not practice OS. If, for instance, a traditional study were to take $400$ work hours to be completed, we assumed that practicing OS would add $20$ hours. This translates into a $5\%$ increase in effort for OS studies (i.e., $\left(400+20\right)/400=1.05$). We believe this to be a conservative estimate of the increase in $e$.
         %
   \item \textbf{Practicing OS increases the probability of publishing negative novel findings ($C_{N-}$).}
 
-        The proportion of published findings with statistically non-significant results is higher for registered reports \parencite[$60.5\%$;][]{AllenMehler2019} or preregistered studies \parencite[$52\%$;][]{TothBanksMellor_2021} compared to traditional research, with estimates ranging from $0\%$ to $20\%$ \parencite[e.g.,][]{AllenMehler2019, Fanelli2012}. In what follows, we take the liberal estimates: $60\%$ of non-significant OS studies get published and $20\%$ of non-significant traditional studies get published. Assuming the same absolute number of published significant studies in both fields, this means that for every eight statistically significant traditional studies two statistically non-significant traditional studies get published ($80\%$ vs $20\%$); and for every eight statistically significant OS studies twelve statistically non-significant OS studies get published ($40\%$ vs $60\%$). Taking the ratio of statistically non-significant OS studies to statistically non-significant traditional studies, we find that for every non-significant traditional study that gets published, six non-significant OS studies get published. In the original model, the probability of publishing a novel non-significant finding was $C_{N-}=0$. In our extension, we increased this to $C_{N-}=0.05$ for traditional studies. To incorporate the six-to-one ratio of non-significant studies between traditional and OS, we set $C_{N-}=0.3$ for OS studies.
+        The proportion of published findings with statistically non-significant results is higher for registered reports \parencite[$60.5\%$;][]{AllenMehler2019} or preregistered studies \parencite[$52\%$;][]{TothBanksMellor_2021} compared to traditional research, with estimates ranging from $0\%$ to $20\%$ \parencites[e.g.,][]{AllenMehler2019}{Fanelli2012}. In what follows, we take the liberal estimates: $60\%$ of non-significant OS studies get published and $20\%$ of non-significant traditional studies get published. Assuming the same absolute number of published significant studies in both fields, this means that for every eight statistically significant traditional studies two statistically non-significant traditional studies get published ($80\%$ vs $20\%$); and for every eight statistically significant OS studies twelve statistically non-significant OS studies get published ($40\%$ vs $60\%$). Taking the ratio of statistically non-significant OS studies to statistically non-significant traditional studies, we find that for every non-significant traditional study that gets published, six non-significant OS studies get published. In the original model, the probability of publishing a novel non-significant finding was $C_{N-}=0$. In our extension, we increased this to $C_{N-}=0.05$ for traditional studies. To incorporate the six-to-one ratio of non-significant studies between traditional and OS, we set $C_{N-}=0.3$ for OS studies.
         %
   \item \textbf{Practicing OS leads to papers that are rewarded more ($V_{N+}$, $V_{N-}$, $V_{R+}$, $V_{R-}$).}
 
@@ -267,7 +248,7 @@ We made the following assumptions about the impact of advocating OS on the survi
         %
   \item \textbf{Advocating OS leads to papers that are rewarded more ($V_{N+}$, $V_{N-}$, $V_{R+}$, $V_{R-}$).}
 
-        We assume that publications from labs that advocate OS are rewarded more because they might be read and cited more often. For example, papers that are shared on Twitter (as done by many OS advocates) have a citation advantage over papers that are not shared \parencite{LadeiraslopesClarkeVidalperez_2020, LucArcherArora_2021}. We did not find studies specifically focusing on the citation advantage for sharing OS papers on Twitter or other platforms, so we decided to use a heuristic of equating the payoff advantage for labs that advocate OS with the payoff advantage for labs that practice OS (see above; i.e., $48.3\%$).
+        We assume that publications from labs that advocate OS are rewarded more because they might be read and cited more often. For example, papers that are shared on Twitter (as done by many OS advocates) have a citation advantage over papers that are not shared \parencites{LadeiraslopesClarkeVidalperez_2020}{LucArcherArora_2021}. We did not find studies specifically focusing on the citation advantage for sharing OS papers on Twitter or other platforms, so we decided to use a heuristic of equating the payoff advantage for labs that advocate OS with the payoff advantage for labs that practice OS (see above; i.e., $48.3\%$).
 
 \end{enumerate}
 %
