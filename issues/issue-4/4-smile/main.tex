@@ -5,7 +5,7 @@
 \jotetitle{Smile, You’re on Camera: Investigating the Relationship between Selfie Smiles and Distress}
 \keywordsabstract{mobile sensing, video, selfie, facial expression, smile}
 \abstracttext{Background: This study examined the relationship between (1) participant smiling in daily “selfie” videos and (2) self-reported distress. Given the extensive use of digital devices for sharing expressions of non-verbal behavior, and some speculation that these expressions may reveal psychological states—including emotional distress—we wanted to understand whether facial expression in these TikTok-like videos were correlated with standardized measures of psychological distress. Based on the work of Paul Ekman and others, which posits that facial expressions are universal reflections of people’s inner states, we predicted that smiling would be inversely related to psychological distress.
-Method: Twenty-four undergraduate students, aged 18+ years (M = 18.35, SD = 2.75), were prompted to record a two-minute selfie video each evening during two weeks of data collection (i.e., 14 total days). They were instructed to describe various aspects of their day. They also completed self-report questionnaires at the end of each assessment week, including the Depression Anxiety Stress Scale (DASS), Perceived Stress Scale (PSS), and the Pittsburgh Sleep Quality Index (PSQI).
+Method: Twenty-four undergraduate students, aged 18+ years \textit{(M = 18.35, SD = 2.75)}, were prompted to record a two-minute selfie video each evening during two weeks of data collection (i.e., 14 total days). They were instructed to describe various aspects of their day. They also completed self-report questionnaires at the end of each assessment week, including the Depression Anxiety Stress Scale (DASS), Perceived Stress Scale (PSS), and the Pittsburgh Sleep Quality Index (PSQI).
 Results: A counterintuitive effect was observed whereby smiling intensity during selfie videos was positively correlated with individual differences in anxiety, depression, and stress.
 Discussion: This study challenges the common view that facial expressions necessarily reflect our inner emotions. It provides preliminary evidence that a mobile sensing app that captures selfies—along with other naturalistic data—may help elucidate the relationship between facial expressions and emotions.}
 \runningauthor{Lind et al.}
@@ -114,7 +114,7 @@ This study focuses on the relationship between (1) participant smiling in selfie
 
 
 
-This debate continues to animate facial expression research specifically and emotion research more broadly (Ekman, 2016). Fridlund's behavioral ecology view of facial expressions leads a robust field of research advancing motivation-communication views, while Lisa Feldman Barrett has led the development of constructivist emotion theories, which characterize emotion and facial expressions as comprised of orthogonal dimensions of valence and arousal (Barrett, 2006; Mayo \& Heilig, 2019). A growing wave of evidence undermines Ekman's framework, including studies conducted in the same settings where Ekman first found support for his views (i.e., in small, indigenous societies; Crivelli et al., 2017; Gendron et al., 2018). This wave has a sturdy bulwark to overcome: in a survey of about 150 top researchers of emotion, 80\% of respondents endorsed an Ekman-aligned view that facial expressions provide universally interpretable read-outs of emotions (Ekman, 2016).
+This debate continues to animate facial expression research specifically and emotion research more broadly (Ekman, 2016). Fridlund's behavioral ecology view of facial expressions leads a robust field of research advancing motivation-communication views, while Lisa Feldman Barrett has led the development of constructivist emotion theories, which characterize emotion and facial expressions as comprised of orthogonal dimensions of valence and arousal (Barrett, 2006; Mayo \& Heilig, 2019). A growing wave of evidence undermines Ekman's framework, including studies conducted in the same settings where Ekman first found support for his views (i.e., in small, indigenous societies; Crivelli et al., 2017; Gendron et al., 2018). This wave has a sturdy bulwark to overcome: In a survey of about 150 top researchers of emotion, 80\% of respondents endorsed an Ekman-aligned view that facial expressions provide universally interpretable read-outs of emotions (Ekman, 2016).
 
 
 
@@ -228,7 +228,7 @@ At baseline, participants completed the computerized version of the Stress and A
                & \textbf{Change}                                                                                                                                \\
 
 
-               & Mean                                         & SD                                            & Range      & Mean  & SD    & Range      &       \\
+               & Mean                                         & \textit{SD}                                            & Range      & Mean  & \textit{SD}    & Range      &       \\
       \midrule
 
       Smiling  & 0.60                                         & 0.44                                          & 0.02-1.60  & 0.55  & 0.43  & 0.02-1.65  & -0.05 \\
@@ -248,7 +248,7 @@ At baseline, participants completed the computerized version of the Stress and A
   \end{fullwidth}
 \end{table*}
 
-The 24 participants generated 325 selfie videos. We used OpenFace, a “facial behavior analysis toolkit,” to conduct automated analysis of participants' smiles. OpenFace output includes facial landmark detection, facial landmark and head pose tracking, facial action unit recognition, gaze tracking, and facial feature extraction (Baltrusaitis et al., 2018). Action units (AUs) refer to small movements of the face, like action unit 6 (“the cheek raiser”) or action unit 9 (“the nose wrinkler”). We focused on facial action unit 12 (AU12), commonly referred to as the “lip corner puller,” which captures smiling. Smiling warrants special attention for two reasons: one, the smile is the most common facial expression in the datasets used to develop facial expression analysis software, so it is the facial expression that OpenFace detects most reliably; and two, smiling is meaningful around the world and relates to important life outcomes (Godoy et al., 2005). OpenFace produces both a categorical present/absent measure of action units and a continuous intensity measure of action units. We focused on the intensity measure (range: 0-5) to capture nuance in smiling behavior beyond just presence and absence. We chose not to check the content of the selfie videos because we wanted to determine whether fully automated facial expression analysis (i.e., without a human in the loop), was a viable approach for future, large-scale studies.
+The 24 participants generated 325 selfie videos. We used OpenFace, a “facial behavior analysis toolkit,” to conduct automated analysis of participants' smiles. OpenFace output includes facial landmark detection, facial landmark and head pose tracking, facial action unit recognition, gaze tracking, and facial feature extraction (Baltrusaitis et al., 2018). Action units (AUs) refer to small movements of the face, like action unit 6 (“the cheek raiser”) or action unit 9 (“the nose wrinkler”). We focused on facial action unit 12 (AU12), commonly referred to as the “lip corner puller,” which captures smiling. Smiling warrants special attention for two reasons: One, the smile is the most common facial expression in the datasets used to develop facial expression analysis software, so it is the facial expression that OpenFace detects most reliably; and two, smiling is meaningful around the world and relates to important life outcomes (Godoy et al., 2005). OpenFace produces both a categorical present/absent measure of action units and a continuous intensity measure of action units. We focused on the intensity measure (range: 0-5) to capture nuance in smiling behavior beyond just presence and absence. We chose not to check the content of the selfie videos because we wanted to determine whether fully automated facial expression analysis (i.e., without a human in the loop), was a viable approach for future, large-scale studies.
 
 
 
@@ -296,12 +296,12 @@ The 24 participants generated 325 selfie videos. We used OpenFace, a “facial b
     \caption{Mean and standard deviation of smiling intensity by gender.}
     \begin{tabularx}{\linewidth}{@{} X l l @{}}
       \toprule
-      \textbf{Gender}  & \textbf{N} & \textbf{Smiling Intensity} \\
+      \textbf{Gender}  & \textit{\textbf{N}} & \textbf{Smiling Intensity} \\
       \midrule
 
-      Cisgender Female & 12         & 0.68 (SD = 0.46)           \\
+      Cisgender Female & 12         & 0.68 (\textit{SD} = 0.46)           \\
 
-      Cisgender Male   & 12         & 0.47 (SD = 0.34)           \\
+      Cisgender Male   & 12         & 0.47 (\textit{SD} = 0.34)           \\
       \bottomrule
     \end{tabularx}
 
@@ -310,17 +310,17 @@ The 24 participants generated 325 selfie videos. We used OpenFace, a “facial b
     \caption{Mean and standard deviation of smiling intensity by racial and ethnic identity.}
     \begin{tabularx}{\linewidth}{@{} X r l @{}}
       \toprule
-      \textbf{Race/Ethnicity} & \textbf{N} & \textbf{Smiling Intensity} \\
+      \textbf{Race/Ethnicity} & \textbf{\textit{N}} & \textbf{Smiling Intensity} \\
       \midrule
 
 
-      Asian                   & 3          & 0.61 (SD = 0.38)           \\
+      Asian                   & 3          & 0.61 (\textit{SD} = 0.38)           \\
 
-      Hispanic                & 3          & 0.21 (SD = 0.17)           \\
+      Hispanic                & 3          & 0.21 (\textit{SD} = 0.17)           \\
 
-      Multiracial             & 3          & 0.45 (SD = 0.31)           \\
+      Multiracial             & 3          & 0.45 (\textit{SD} = 0.31)           \\
 
-      White                   & 15         & 0.67 (SD = 0.44)           \\
+      White                   & 15         & 0.67 (\textit{SD} = 0.44)           \\
       \bottomrule
     \end{tabularx}
   \end{fullwidth}
@@ -334,17 +334,17 @@ To test our hypothesis that smiling intensity would decrease as distress increas
 %     \caption{Mean and standard deviation of smiling intensity by racial and ethnic identity.}
 %     \begin{tabularx}{\linewidth}{@{} X l l @{}}
 %       \toprule
-%       \textbf{Race/Ethnicity} & \textbf{N} & \textbf{Smiling Intensity} \\
+%       \textbf{Race/Ethnicity} & \textbf{\textit{N}} & \textbf{Smiling Intensity} \\
 %       \midrule
 
 
-%       Asian                   & 3          & 0.61 (SD = 0.38)           \\
+%       Asian                   & 3          & 0.61 (\textit{SD} = 0.38)           \\
 
-%       Hispanic                & 3          & 0.21 (SD = 0.17)           \\
+%       Hispanic                & 3          & 0.21 (\textit{SD} = 0.17)           \\
 
-%       Multiracial             & 3          & 0.45 (SD = 0.31)           \\
+%       Multiracial             & 3          & 0.45 (\textit{SD} = 0.31)           \\
 
-%       White                   & 15         & 0.67 (SD = 0.44)           \\
+%       White                   & 15         & 0.67 (\textit{SD} = 0.44)           \\
 %       \bottomrule
 %     \end{tabularx}
 %   \end{fullwidth}
@@ -361,7 +361,7 @@ To test our hypothesis that smiling intensity would decrease as distress increas
 
 
 
-First, we checked to see if the academic stress paradigm had the desired effect: did participants report feeling more distressed during the high-stress week? Yes, for the most part! Second, we checked smiling behavior: did it change in the predicted direction as well? Yes, participants smiled less--numerically but not statistically significantly, \emph{hmmm}-- in the high-stress week! These patterns (Table 1) presaged well for our hypothesis that increases in distress would be associated with decreases in smiling, and we were feeling pretty clever \emph{if we do say so ourselves}. When we tested our hypothesis by regressing the residuals of the symptom scores on the residuals of the smile intensity scores, however, non-significant results rudely contradicted our cleverness. Anxiety residuals regressed on smiling residuals yielded: \emph{F}(1,22) = 1.04, \emph{p} = NS, Adjusted \emph{R}\textsuperscript{2} = 0.002.
+First, we checked to see if the academic stress paradigm had the desired effect: Did participants report feeling more distressed during the high-stress week? Yes, for the most part! Second, we checked smiling behavior: Did it change in the predicted direction as well? Yes, participants smiled less—numerically but not statistically significantly, \emph{hmmm}—in the high-stress week! These patterns (Table 1) presaged well for our hypothesis that increases in distress would be associated with decreases in smiling, and we were feeling pretty clever \emph{if we do say so ourselves}. When we tested our hypothesis by regressing the residuals of the symptom scores on the residuals of the smile intensity scores, however, non-significant results rudely contradicted our cleverness. Anxiety residuals regressed on smiling residuals yielded: \emph{F}(1,22) = 1.04, \emph{p} = NS, Adjusted \emph{R}\textsuperscript{2} = 0.002.
 
 
 
@@ -391,7 +391,7 @@ Look at those p-values! They're huge! (Relatively speaking, of course— we all 
 
 
 
-Our null findings forced us to reckon with an inconvenient truth: the academic stress paradigm may not have worked very well. It's true that we saw changes in the hypothesized directions, but these changes were small and only statistically significant in the case of self-reported anxiety (\emph{t}(23) = -2.14, \emph{p} < .05).
+Our null findings forced us to reckon with an inconvenient truth: The academic stress paradigm may not have worked very well. It's true that we saw changes in the hypothesized directions, but these changes were small and only statistically significant in the case of self-reported anxiety (\emph{t}(23) = -2.14, \emph{p} < .05).
 
 
 
@@ -547,7 +547,7 @@ While these findings may be counterintuitive, their essence—that we may smile 
 
 
 
-Do you know for sure why the dog is smiling despite the flames and smoke? We don't. The same is true of the results of this study: we know we saw an unexpected, compelling pattern in the data, and we don't know why. We'd like to offer some ways to think about these results.
+Do you know for sure why the dog is smiling despite the flames and smoke? We don't. The same is true of the results of this study: We know we saw an unexpected, compelling pattern in the data, and we don't know why. We'd like to offer some ways to think about these results.
 
 
 
@@ -724,7 +724,7 @@ The authors declared the following potential conflicts of interest with respect 
 
 
 
-\hspace*{\parindent}Antony, M. M., Bieling, P. J., Cox, B. J., Enns, M. W., \& Swinson, R. P. (1998). Psychometric properties of the 42-item and 21-item versions of the Depression Anxiety Stress Scales in clinical groups and a community sample. \emph{Psychological Assessment}, \emph{10}(2), 176. https://doi.org/10.1037/1040-3590.10.2.176
+\hspace*{\parindent}Antony, M. M., Bieling, P. J., Cox, B. J., Enns, M. W., \& Swinson, R. P. (1998). Psychometric properties of the 42-item and 21-item versions of the Depression Anxiety Stress Scales in clinical groups and a community sample. \emph{Psychological Assessment}, \emph{10}(2), 176--181. https://doi.org/10.1037/1040-3590.10.2.176
 
 
 
@@ -732,11 +732,11 @@ Baltrusaitis, T., Zadeh, A., Lim, Y. C., \& Morency, L.-P. (2018). OpenFace 2.0:
 
 
 
-Barrett, L. F. (2006). Are Emotions Natural Kinds? \emph{Perspectives on Psychological Science}, \emph{1}(1), 28--58. https://doi.org/10.1111/j.1745-6916.2006.00003.x
+Barrett, L. F. (2006). Are emotions natural kinds? \emph{Perspectives on Psychological Science}, \emph{1}(1), 28--58. https://doi.org/10.1111/j.1745-6916.2006.00003.x
 
 
 
-Barrett, L. F., Adolphs, R., Marsella, S., Martinez, A. M., \& Pollak, S. D. (2019). Emotional Expressions Reconsidered: Challenges to Inferring Emotion From Human Facial Movements. \emph{Psychological Science in the Public Interest}, \emph{20}(1), Article 1. https://doi.org/10.1177/1529100619832930
+Barrett, L. F., Adolphs, R., Marsella, S., Martinez, A. M., \& Pollak, S. D. (2019). Emotional expressions reconsidered: Challenges to inferring emotion from human facial movements. \emph{Psychological Science in the Public Interest}, \emph{20}(1), 1--68. https://doi.org/10.1177/1529100619832930
 
 
 
@@ -744,11 +744,11 @@ Buysse, D. J., Reynolds, C. F., Monk, T. H., Berman, S. R., \& Kupfer, D. J. (19
 
 
 
-Byrne, M. L., Lind, M. N., Horn, S. R., Mills, K. L., Nelson, B. W., Barnes, M. L., Slavich, G. M., \& Allen, N. B. (2021). Using mobile sensing data to assess stress: Associations with perceived and lifetime stress, mental health, sleep, and inflammation. \emph{DIGITAL HEALTH}, \emph{7}, 20552076211037227. https://doi.org/10.1177/20552076211037227
+Byrne, M. L., Lind, M. N., Horn, S. R., Mills, K. L., Nelson, B. W., Barnes, M. L., Slavich, G. M., \& Allen, N. B. (2021). Using mobile sensing data to assess stress: Associations with perceived and lifetime stress, mental health, sleep, and inflammation. \emph{DIGITAL HEALTH}, \emph{7}. https://doi.org/10.1177/20552076211037227
 
 
 
-Cohen, J. (1992). A Power Primer. \emph{Psychological Bulletin}, \emph{112}(1), 155--159.
+Cohen, J. (1992). A power primer. \emph{Psychological Bulletin}, \emph{112}(1), 155--159. https://doi.org/10.1037/0033-2909.112.155
 
 
 
@@ -764,7 +764,7 @@ Crivelli, C., Russell, J. A., Jarillo, S., \& Fernández-Dols, J.-M. (2017). Rec
 
 
 
-Deeb-Swihart, J., Polack, C., Gilbert, E., \& Essa, I. (2017). Selfie-Presentation in Everyday Life: A Large-Scale Characterization of Selfie Contexts on Instagram. \emph{Proceedings of the International AAAI Conference on Web and }\emph{Social Media}, \emph{11}(1), 42--51. https://doi.org/10.1609/icwsm.v11i1.14896
+Deeb-Swihart, J., Polack, C., Gilbert, E., \& Essa, I. (2017). Selfie-presentation in everyday life: A large-scale characterization of selfie contexts on Instagram. \emph{Proceedings of the International AAAI Conference on Web and }\emph{Social Media}, \emph{11}(1), 42--51. https://doi.org/10.1609/icwsm.v11i1.14896
 
 
 
@@ -772,11 +772,11 @@ Duval, S., \& Wicklund, R. A. (1972). \emph{A theory of objective }\emph{self aw
 
 
 
-Ekman, P. (1993). Facial expression and emotion. \emph{American Psychologist}, \emph{48}(4), 384. https://doi.org/10.1037/0003-066X.48.4.384
+Ekman, P. (1993). Facial expression and emotion. \emph{American Psychologist}, \emph{48}(4), 384--392. https://doi.org/10.1037/0003-066X.48.4.384
 
 
 
-Ekman, P. (2016). What Scientists Who Study Emotion Agree About. \emph{Perspectives on Psychological Science}, \emph{11}(1), 31--34. https://doi.org/10.1177/1745691615596992
+Ekman, P. (2016). What scientists who study emotion agree about. \emph{Perspectives on Psychological Science}, \emph{11}(1), 31--34. https://doi.org/10.1177/1745691615596992
 
 
 
@@ -792,15 +792,15 @@ Fridlund, A. J. (1994). \emph{Human Facial Expression: An Evolutionary View}. Ac
 
 
 
-Gendron, M., Crivelli, C., \& Barrett, L. F. (2018). Universality Reconsidered: Diversity in Making Meaning of Facial Expressions. \emph{Current Directions in Psychological Science}, \emph{27}(4), 211--219. https://doi.org/10.1177/0963721417746794
+Gendron, M., Crivelli, C., \& Barrett, L. F. (2018). Universality reconsidered: Diversity in making meaning of facial expressions. \emph{Current Directions in Psychological Science}, \emph{27}(4), 211--219. https://doi.org/10.1177/0963721417746794
 
 
 
-Godoy, R., Reyes-García, V., Huanca, T., Tanner, S., Leonard, W. R., McDade, T., \& Vadez, V. (2005). Do smiles have a face value? Panel evidence from Amazonian Indians. \emph{Journal of Economic Psychology}, \emph{26}(4), Article 4. https://doi.org/10.1016/j.joep.2004.10.004
+Godoy, R., Reyes-García, V., Huanca, T., Tanner, S., Leonard, W. R., McDade, T., \& Vadez, V. (2005). Do smiles have a face value? Panel evidence from Amazonian Indians. \emph{Journal of Economic Psychology}, \emph{26}(4), 469--490. https://doi.org/10.1016/j.joep.2004.10.004
 
 
 
-Götz, F. M., Stieger, S., \& Reips, U.-D. (2017). Users of the main smartphone operating systems (iOS, Android) differ only little in personality. \emph{PLOS ONE}, \emph{12}(5), e0176921. https://doi.org/10.1371/journal.pone.0176921
+Götz, F. M., Stieger, S., \& Reips, U.-D. (2017). Users of the main smartphone operating systems (iOS, Android) differ only little in personality. \emph{PLOS ONE}, \emph{12}(5), Article e0176921. https://doi.org/10.1371/journal.pone.0176921
 
 
 
@@ -812,7 +812,7 @@ Green, K. (2013). \emph{On Fire} [Comic]. http://gunshowcomic.com/648
 
 
 
-Kachur, A., Osin, E., Davydov, D., Shutilov, K., \& Novokshonov, A. (2020). Assessing the Big Five personality traits using real-life static facial images. \emph{Scientific Reports}, \emph{10}(1), Article 1. https://doi.org/10.1038/s41598-020-65358-6
+Kachur, A., Osin, E., Davydov, D., Shutilov, K., \& Novokshonov, A. (2020). Assessing the Big Five personality traits using real-life static facial images. \emph{Scientific Reports}, \emph{10}(1), Article 8487. https://doi.org/10.1038/s41598-020-65358-6
 
 
 
@@ -820,7 +820,7 @@ Lee, E.-H. (2012). Review of the Psychometric Evidence of the Perceived Stress S
 
 \balance
 
-Lind, M. N., Byrne, M. L., Wicks, G., Smidt, A. M., \& Allen, N. B. (2018). The Effortless Assessment of Risk States (EARS) Tool: An Interpersonal Approach to Mobile Sensing. \emph{JMIR Mental Health}, \emph{5}(3), Article 3. https://doi.org/10.2196/10334
+Lind, M. N., Byrne, M. L., Wicks, G., Smidt, A. M., \& Allen, N. B. (2018). The Effortless Assessment of Risk States (EARS) tool: An interpersonal approach to mobile sensing. \emph{JMIR Mental Health}, \emph{5}(3), Article 3. https://doi.org/10.2196/10334
 
 
 
@@ -828,7 +828,7 @@ Lovibond, P. F., \& Lovibond, S. H. (1995). The structure of negative emotional 
 
 
 
-Mayo, L. M., \& Heilig, M. (2019). In the face of stress: Interpreting individual differences in stress-induced facial expressions. \emph{Neurobiology of Stress}, \emph{10}, 100166. https://doi.org/10.1016/j.ynstr.2019.100166
+Mayo, L. M., \& Heilig, M. (2019). In the face of stress: Interpreting individual differences in stress-induced facial expressions. \emph{Neurobiology of Stress}, \emph{10}, Article 100166. https://doi.org/10.1016/j.ynstr.2019.100166
 
 
 
@@ -836,7 +836,7 @@ Qiu, L., Lu, J., Yang, S., Qu, W., \& Zhu, T. (2015). What does your selfie say 
 
 
 
-Rychlowska, M., Jack, R. E., Garrod, O. G. B., Schyns, P. G., Martin, J. D., \& Niedenthal, P. M. (2017). Functional Smiles: Tools for Love, Sympathy, and War. \emph{Psychological Science}, \emph{28}(9), Article 9. https://doi.org/10.1177/0956797617706082
+Rychlowska, M., Jack, R. E., Garrod, O. G. B., Schyns, P. G., Martin, J. D., \& Niedenthal, P. M. (2017). Functional smiles: Tools for love, sympathy, and war. \emph{Psychological Science}, \emph{28}(9), 1259-1270. https://doi.org/10.1177/0956797617706082
 
 
 
@@ -844,11 +844,11 @@ Siegal, J. (2017, July 20). Android continues to increase its sizable lead over 
 
 
 
-Slavich, G. M., \& Shields, G. S. (2018). Assessing Lifetime Stress Exposure Using the Stress and Adversity Inventory for Adults (Adult STRAIN): An Overview and Initial Validation. \emph{Psychosomatic Medicine}, \emph{80}(1), 17--27. https://doi.org/10.1097/PSY.0000000000000534
+Slavich, G. M., \& Shields, G. S. (2018). Assessing lifetime stress exposure using the Stress and Adversity Inventory for Adults (Adult STRAIN): An overview and initial validation. \emph{Psychosomatic Medicine}, \emph{80}(1), 17--27. https://doi.org/10.1097/PSY.0000000000000534
 
 
 
-Zunhammer, M., Eberle, H., Eichhammer, P., \& Busch, V. (2013). Somatic Symptoms Evoked by Exam Stress in University Students: The Role of Alexithymia, Neuroticism, Anxiety and Depression. \emph{PLOS ONE}, \emph{8}(12), e84911. https://doi.org/10.1371/journal.pone.0084911
+Zunhammer, M., Eberle, H., Eichhammer, P., \& Busch, V. (2013). Somatic symptoms evoked by exam stress in university students: The role of alexithymia, aeuroticism, anxiety and depression. \emph{PLOS ONE}, \emph{8}(12), Article e84911. https://doi.org/10.1371/journal.pone.0084911
 
 
 
