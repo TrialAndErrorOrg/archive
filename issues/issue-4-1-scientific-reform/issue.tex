@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+
+% Set up fonts
+\setmainfont[
+    BoldFont={* Semibold}
+]{Open Sans}
+\newfontfamily\titlefont{Overpass}
+
+% Define colors
+\definecolor{background}{HTML}{FEAF0C}
+
+\geometry{a4paper, margin=1in}
+\pagestyle{empty}
+\usepackage{ragged2e}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=background, colframe=background, sharp corners, boxrule=0pt, width=\textwidth, height=\textheight, valign=center, nobeforeafter, title={\vspace*{-\baselineskip}\Huge \color{black}\textbf{Contents}},
+  ]
+
+
+  \vspace{2cm}
+
+  \begin{flushleft}
+    \noindent\begin{tabularx}{\textwidth}{p{0.1\textwidth} >{\RaggedLeft\arraybackslash\large}X}
+      \textbf{1-4}   & \textbf{Untangling Strings}                                                                                                                                                  \\
+                     & by \textit{Laurien Hakvoort \& Avi Gilbao}                                                                                                                                   \\
+      \\
+      \textbf{5-14}  & \textbf{To Structure or not to Structure, That Is the Question: Mistakes Made in Music Therapy in Light of the Dilemma Whether or not Therapy Sessions Should be Structured} \\
+                     & by \textit{Chava Wiess}                                                                                                                                                      \\
+      \\
+      \textbf{15-21} & \textbf{Embracing the "Wrong" in Classical Music Interpretation: About Finding Balance Between Tradition and Creativity in Classical Music Performance}                      \\
+                     & by \textit{Sophie de Ruijter}                                                                                                                                                \\
+      \\
+      \textbf{22-28} & \textbf{"Towards a Perfect Tune": Navigating the Notions of Failure, Mistake and Competence in Nordoff-Robbins Music Therapy with Marginalized Mothers}                      \\
+                     & by \textit{Afra Jurkiewicz}                                                                                                                                                  \\
+      \\
+      \textbf{29-35} & \textbf{"Not Again": When the Therapist Resists}                                                                                                                             \\
+                     & by \textit{Nele Fiers}                                                                                                                                                       \\
+    \end{tabularx}
+  \end{flushleft}
+
+\end{tcolorbox}
+
+\end{document}
