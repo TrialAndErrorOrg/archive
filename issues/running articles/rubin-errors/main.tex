@@ -1,0 +1,2615 @@
+\documentclass[authordate, empirical]{jote-new-article}
+
+\usepackage{caption}
+
+\usepackage{tabularx}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+
+\addbibresource{bibliography.bib}
+
+\jotetitle{Type I Error Rates are Not Usually Inflated}
+\keywordsabstract{false positives, questionable research practices, replication crisis, significance testing, Type I error rate inflation}
+\abstracttext{The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this article, I offer an alternative view. I argue that questionable and other research practices do not usually inflate relevant Type I error rates. I begin by introducing the concept of Type I error rates and distinguishing between statistical errors and theoretical errors. I then illustrate my argument with respect to model misspecification, multiple testing, selective inference, forking paths, exploratory analyses, p-hacking, optional stopping, double dipping, and HARKing. In each case, I demonstrate that relevant Type I error rates are not usually inflated above their nominal level, and in the rare cases that they are, the inflation is easily identified and resolved. I conclude that the replication crisis may be explained, at least in part, by researchers’ misinterpretation of statistical errors and their underestimation of theoretical errors.}
+\runningauthor{Rubin}
+\jname{Journal of Trial \& Error}
+\jyear{2024}
+\paperdoi{10.36850/4d35-44bd}
+\paperreceived{December 5, 2023}
+\author[1]{\mbox{Mark Rubin\orcid{0000-0002-6483-8561}}}
+\affil[1]{Durham University}
+\corremail{\href{mailto:Mark-Rubin@outlook.com}{Mark-Rubin@outlook.com}}
+\corraddress{Durham University}
+\runningauthor{Rubin}
+\paperaccepted{May 11, 2024}
+\paperpublished{October 11, 2024}
+\paperpublisheddate{2024-10-11}
+\jwebsite{https://journal.trialanderror.org}
+
+\begin{filecontents}{bibliography.bib}
+	@article{Altman1995,
+    title       = {Absence of evidence is not evidence of absence},
+    author      = {Altman, D. G. and Bland, J. M.},
+    number      = {7003},
+    volume      = {311},
+    url         = {https://doi.org/10.1136/bmj.311.7003.485},
+    doi         = {10.1136/bmj.311.7003.485},
+    date        = {1995},
+    pages       = {485--485},
+    journal     = {British Medical Journal}
+}
+
+
+@article{Armstrong2014,
+    title       = {When to use the Bonferroni correction},
+    author      = {Armstrong, R. A.},
+    number      = {5},
+    volume      = {34},
+    url         = {https://doi.org/10.1111/opo.12131},
+    doi         = {10.1111/opo.12131},
+    date        = {2014},
+    pages       = {502--508},
+    journal     = {Ophthalmic and Physiological Optics}
+}
+
+
+@article{Barrett2015,
+    title       = {Psychology is not in crisis},
+    author      = {Barrett, L. F.},
+    url         = {https://www.nytimes.com/2015/09/01/opinion/psychology-is-not-in-crisis.html},
+    date        = {2015},
+    journal     = {The New York Times}
+}
+
+
+@article{Bender2001,
+    title       = {Adjusting for multiple testing—when and how?},
+    author      = {Bender, R. and Lange, S.},
+    number      = {4},
+    volume      = {54},
+    url         = {https://doi.org/10.1016/S0895-4356(00)00314-0},
+    doi         = {10.1016/S0895-4356(00)00314-0},
+    date        = {2001},
+    pages       = {343--349},
+    journal     = {Journal of Clinical Epidemiology}
+}
+
+
+@article{Benjamin2018,
+    title       = {Redefine statistical significance},
+    author      = {Benjamin, D. J. and Berger, J. O. and Johannesson, M. and Nosek, B. A. and Wagenmakers, E. J. and Berk, R. and Bollen, K. A. and Brembs, B. and Brown, L. and Camerer, C. and Cesarini, D. and Chambers, C. D. and Clyde, M. and Cook, T. D. and De Boeck, P. and Dienes, Z. and Dreber, A. and Easwaran, K. and Efferson, C. and Johnson, V. E.},
+    number      = {1},
+    volume      = {2},
+    url         = {https://doi.org/10.1038/s41562-017-0189-z},
+    doi         = {10.1038/s41562-017-0189-z},
+    date        = {2018},
+    pages       = {6--10},
+    journal     = {Nature Human Behaviour}
+}
+
+
+@article{Bergkvist2020,
+    title       = {Preregistration as a way to limit questionable research practice in advertising research},
+    author      = {Bergkvist, L.},
+    number      = {7},
+    volume      = {39},
+    url         = {https://doi.org/10.1080/02650487.2020.1753441},
+    doi         = {10.1080/02650487.2020.1753441},
+    date        = {2020},
+    pages       = {1172--1180},
+    journal     = {International Journal of Advertising}
+}
+
+
+@article{Berk1995,
+    title       = {Statistical inference for apparent populations},
+    author      = {Berk, R. A. and Western, B. and Weiss, R. E.},
+    volume      = {25},
+    url         = {https://doi.org/10.2307/271073},
+    doi         = {10.2307/271073},
+    date        = {1995},
+    pages       = {421--458},
+    journal     = {Sociological Methodology}
+}
+
+
+@article{Birnbaum1962,
+    title       = {On the foundations of statistical inference},
+    author      = {Birnbaum, A.},
+    number      = {298},
+    volume      = {57},
+    url         = {https://doi.org/10.1080/01621459.1962.10480660},
+    doi         = {10.1080/01621459.1962.10480660},
+    date        = {1962},
+    pages       = {269--306},
+    journal     = {Journal of the American Statistical Association}
+}
+
+
+@article{Bolles1962,
+    title       = {The difference between statistical hypotheses and scientific hypotheses},
+    author      = {Bolles, R. C.},
+    number      = {3},
+    volume      = {11},
+    url         = {https://doi.org/10.2466/pr0.1962.11.3.639},
+    doi         = {10.2466/pr0.1962.11.3.639},
+    date        = {1962},
+    pages       = {639--645},
+    journal     = {Psychological Reports}
+}
+
+
+@article{Boring1919,
+    title       = {Mathematical vs. scientific significance},
+    author      = {Boring, E. G.},
+    number      = {10},
+    volume      = {16},
+    url         = {https://doi.org/10.1037/h0074554},
+    doi         = {10.1037/h0074554},
+    date        = {1919},
+    pages       = {335--338},
+    journal     = {Psychological Bulletin}
+}
+
+
+@article{Brower1949,
+    title       = {The problem of quantification in psychological science},
+    author      = {Brower, D.},
+    number      = {6},
+    volume      = {56},
+    url         = {https://doi.org/10.1037/h0061802},
+    doi         = {10.1037/h0061802},
+    date        = {1949},
+    pages       = {325--333},
+    journal     = {Psychological Review}
+}
+
+
+@article{Chow1998,
+    title       = {Précis of statistical significance: {R}ationale, validity, and utility},
+    author      = {Chow, S. L.},
+    number      = {2},
+    volume      = {21},
+    url         = {https://doi.org/10.1017/S0140525X98001162},
+    doi         = {10.1017/S0140525X98001162},
+    date        = {1998},
+    pages       = {169--194},
+    journal     = {Behavioral and Brain Sciences}
+}
+
+
+@article{Cook1996,
+    title       = {Multiplicity considerations in the design and analysis of clinical trials},
+    author      = {Cook, R. J. and Farewell, V. T.},
+    number      = {1},
+    volume      = {159},
+    url         = {http://doi.org/10.2307/2983471},
+    doi         = {10.2307/2983471},
+    date        = {1996},
+    pages       = {93--110},
+    journal     = {Journal of the Royal Statistical Society: Series A (Statistics in Society}
+}
+
+
+@article{Cox1958,
+    title       = {Some problems connected with statistical inference},
+    author      = {Cox, D. R.},
+    number      = {2},
+    volume      = {29},
+    url         = {http://doi.org/10.1214/aoms/1177706618},
+    doi         = {10.1214/aoms/1177706618},
+    date        = {1958},
+    pages       = {357--372},
+    journal     = {Annals of Mathematical Statistics}
+}
+
+
+@inbook{Cox2010,
+    title       = {Objectivity and conditionality in frequentist inference},
+    author      = {Cox, D. R. and Mayo, D. G.},
+    editor      = {Mayo, D.G. and Spanos, A.},
+    url         = {http://doi.org/10.1017/CBO9780511657528},
+    doi         = {10.1017/CBO9780511657528},
+    publisher   = {Cambridge University Press},
+    date        = {2010},
+    pages       = {276--304},
+    booktitle     = {Error and inference: Recent exchanges on experimental reasoning, reliability, and the objectivity and rationality of science}
+}
+
+
+@article{DelGiudice2021,
+    title       = {A traveler's guide to the multiverse: {P}romises, pitfalls, and a framework for the evaluation of analytic decisions},
+    author      = {Del Giudice, M. and Gangestad, S. W.},
+    number      = {1},
+    volume      = {4},
+    url         = {https://doi.org/10.1177/2515245920954925},
+    doi         = {10.1177/2515245920954925},
+    date        = {2021},
+    journal     = {Advances in Methods and Practices in Psychological Science}
+}
+
+
+@article{Dennis2019,
+    title       = {Errors in statistical inference under model misspecification: {E}vidence, hypothesis testing, and {AIC}},
+    author      = {Dennis, B. and Ponciano, J. M. and Taper, M. L. and Lele, S. R.},
+    volume      = {7, Article 372},
+    url         = {https://doi.org/10.3389/fevo.2019.00372},
+    doi         = {10.3389/fevo.2019.00372},
+    date        = {2019},
+    journal     = {Frontiers in Ecology and Evolution}
+}
+
+
+@article{Devezer2023,
+    title       = {Rigorous exploration in a model-centric science via epistemic iteration},
+    author      = {Devezer, B. and Buzbas, E. O.},
+    number      = {2},
+    volume      = {12},
+    url         = {https://doi.org/10.1037/mac0000121},
+    doi         = {10.1037/mac0000121},
+    date        = {2023},
+    pages       = {189--194},
+    journal     = {Journal of Applied Research in Memory and Cognition}
+}
+
+
+@article{Devezer2021,
+    title       = {The case for formal methodology in scientific reform},
+    author      = {Devezer, B. and Navarro, D. J. and Vandekerckhove, J. and Buzbas, E. O.},
+    number      = {3},
+    volume      = {8},
+    url         = {https://doi.org/10.1098/rsos.200805},
+    doi         = {10.1098/rsos.200805},
+    date        = {2021},
+    journal     = {Article 200805. HYPERLINK}
+}
+
+
+@article{Feynman1955,
+    title       = {The value of science},
+    author      = {Feynman, R. P.},
+    number      = {3},
+    volume      = {19},
+    url         = {https://calteches.library.caltech.edu/1575/1/Science.pdf},
+    date        = {1955},
+    pages       = {13--15},
+    journal     = {Engineering and Science}
+}
+
+
+@book{Firestein2012,
+    title       = {Ignorance: {H}ow it drives science},
+    author      = {Firestein, S.},
+    publisher   = {Oxford University Press},
+    date        = {2012}
+}
+
+
+@inbook{Fisher1922,
+    title       = {On the mathematical foundations of theoretical statistics},
+    author      = {Fisher, R. A.},
+    volume      = {222},
+    url         = {https://doi.org/10.1098/rsta.1922.0009},
+    doi         = {10.1098/rsta.1922.0009},
+    date        = {1922},
+    pages       = {309--368},
+    booktitle     = {Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character}
+}
+
+
+@article{Fisher1926,
+    title       = {The arrangement of field experiments},
+    author      = {Fisher, R. A.},
+    volume      = {33},
+    url         = {https://doi.org/10.23637/rothamsted.8v61q},
+    doi         = {10.23637/rothamsted.8v61q},
+    date        = {1926},
+    pages       = {503--515},
+    journal     = {Journal of the Ministry of Agriculture}
+}
+
+
+@article{Fisher1930,
+    title       = {Inverse probability},
+    author      = {Fisher, R. A.},
+    number      = {4},
+    volume      = {26},
+    url         = {https://doi.org/10.1017/S0305004100016297},
+    doi         = {10.1017/S0305004100016297},
+    date        = {1930},
+    pages       = {528--535},
+    journal     = {Mathematical Proceedings of the Cambridge Philosophical Society}
+}
+
+
+@book{Fisher1956,
+    title       = {Statistical methods and scientific inference},
+    author      = {Fisher, R. A.},
+    publisher   = {Oliver \& Boyd},
+    date        = {1956}
+}
+
+
+@book{Fisher1971,
+    title       = {The design of experiments},
+    author      = {Fisher, R. A.},
+    publisher   = {Hafner Press},
+    date        = {1971}
+}
+
+
+@article{Fraser2019,
+    title       = {The p-value function and statistical inference},
+    author      = {Fraser, D. A. S.},
+    number      = {sup1},
+    volume      = {73},
+    url         = {https://doi.org/10.1080/00031305.2018.1556735},
+    doi         = {10.1080/00031305.2018.1556735},
+    date        = {2019},
+    pages       = {135--147},
+    journal     = {The American Statistician}
+}
+
+
+@article{García-Pérez2023,
+    title       = {Use and misuse of corrections for multiple testing},
+    author      = {García-Pérez, M. A.},
+    volume      = {8, Article 100120},
+    url         = {https://doi.org/10.1016/j.metip.2023.100120},
+    doi         = {10.1016/j.metip.2023.100120},
+    date        = {2023},
+    journal     = {Methods in Psychology}
+}
+
+
+@article{Gelman2014,
+    title       = {The statistical crisis in science},
+    author      = {Gelman, A. and Loken, E.},
+    volume      = {102, Article 460},
+    url         = {http://dx.doi.org/10.1511/2014.111.460},
+    doi         = {10.1511/2014.111.460},
+    date        = {2014},
+    journal     = {American Scientist}
+}
+
+
+@inbook{Gigerenzer1993,
+    title       = {The superego, the ego, and the id in statistical reasoning},
+    author      = {Gigerenzer, G.},
+    editor      = {Keren, G. and Lewis, C.},
+    publisher   = {Lawrence Erlbaum Associates},
+    date        = {1993},
+    pages       = {311--339},
+    booktitle     = {A handbook for data analysis in the behavioral sciences: Methodological issues}
+}
+
+
+@article{Gigerenzer2018,
+    title       = {Statistical rituals: {T}he replication delusion and how we got there},
+    author      = {Gigerenzer, G.},
+    number      = {2},
+    volume      = {1},
+    url         = {https://doi.org/10.1177/2515245918771329},
+    doi         = {10.1177/2515245918771329},
+    date        = {2018},
+    pages       = {198--218},
+    journal     = {Advances in Methods and Practices in Psychological Science}
+}
+
+
+@article{Greenland2017,
+    title       = {For and against methodologies: {S}ome perspectives on recent causal and statistical inference debates},
+    author      = {Greenland, S.},
+    volume      = {32},
+    url         = {https://doi.org/10.1007/s10654-017-0230-6},
+    doi         = {10.1007/s10654-017-0230-6},
+    date        = {2017},
+    pages       = {3--20},
+    journal     = {European Journal of Epidemiology}
+}
+
+
+@article{Greenland2017,
+    title       = {Invited commentary: {T}he need for cognitive science in methodology},
+    author      = {Greenland, S.},
+    number      = {6},
+    volume      = {186},
+    url         = {https://doi.org/10.1093/aje/kwx259},
+    doi         = {10.1093/aje/kwx259},
+    date        = {2017},
+    pages       = {639--645},
+    journal     = {American Journal of Epidemiology}
+}
+
+
+@article{Greenland2021,
+    title       = {Analysis goals, error-cost sensitivity, and analysis hacking: {E}ssential considerations in hypothesis testing and multiple comparisons},
+    author      = {Greenland, S.},
+    number      = {1},
+    volume      = {35},
+    url         = {https://doi.org/10.1111/ppe.12711},
+    doi         = {10.1111/ppe.12711},
+    date        = {2021},
+    pages       = {8--23},
+    journal     = {Paediatric and Perinatal Epidemiology}
+}
+
+
+@article{Greenland2023,
+    title       = {Connecting simple and precise p-values to complex and ambiguous realities},
+    author      = {Greenland, S.},
+    number      = {3},
+    volume      = {50},
+    url         = {https://doi.org/10.1111/sjos.12645},
+    doi         = {10.1111/sjos.12645},
+    date        = {2023},
+    pages       = {899--914},
+    journal     = {Scandinavian Journal of Statistics}
+}
+
+
+@article{Greenland2016,
+    title       = {Statistical tests, P values, confidence intervals, and power: {A} guide to misinterpretations},
+    author      = {Greenland, S. and Senn, S. J. and Rothman, K. J. and Carlin, J. B. and Poole, C. and Goodman, S. N. and Altman, D. G.},
+    volume      = {31},
+    url         = {https://doi.org/10.1007/s10654-016-0149-3},
+    doi         = {10.1007/s10654-016-0149-3},
+    date        = {2016},
+    pages       = {337--350},
+    journal     = {European Journal of Epidemiology}
+}
+
+
+@article{Hager2013,
+    title       = {The statistical theories of Fisher and of Neyman and Pearson: {A} methodological perspective},
+    author      = {Hager, W.},
+    number      = {2},
+    volume      = {23},
+    url         = {https://doi.org/10.1177/0959354312465483},
+    doi         = {10.1177/0959354312465483},
+    date        = {2013},
+    pages       = {251--270},
+    journal     = {Theory \& Psychology}
+}
+
+
+@article{Haig2009,
+    title       = {Inference to the best explanation: {A} neglected approach to theory appraisal in psychology},
+    author      = {Haig, B. D.},
+    number      = {2},
+    volume      = {122},
+    url         = {https://doi.org/10.2307/27784393},
+    doi         = {10.2307/27784393},
+    date        = {2009},
+    pages       = {219--234},
+    journal     = {The American Journal of Psychology}
+}
+
+
+@book{Haig2018,
+    title       = {Method matters in psychology: {E}ssays in applied philosophy of science},
+    author      = {Haig, B. D.},
+    url         = {https://doi.org/10.1007/978-3-030-01051-5},
+    doi         = {10.1007/978-3-030-01051-5},
+    publisher   = {Springer},
+    date        = {2018}
+}
+
+
+@article{Hancock1996,
+    title       = {The quest for α: {D}evelopments in multiple comparison procedures in the quarter century since},
+    author      = {Hancock, G. R. and Klockars, A. J.},
+    number      = {3},
+    volume      = {66},
+    url         = {https://doi.org/10.3102/00346543066003269},
+    doi         = {10.3102/00346543066003269},
+    date        = {1996},
+    pages       = {269--306},
+    journal     = {Review of Educational Research}
+}
+
+
+@article{Hewes2003,
+    title       = {Methods as tools: {A} response to O'Keefe},
+    author      = {Hewes, D. E.},
+    number      = {3},
+    volume      = {29},
+    url         = {https://doi.org/10.1111/j.1468-2958.2003.tb00847.x},
+    doi         = {10.1111/j.1468-2958.2003.tb00847.x},
+    date        = {2003},
+    pages       = {448--454},
+    journal     = {Human Communication Research}
+}
+
+
+@article{Hitchcock2004,
+    title       = {Prediction versus accommodation and the risk of overfitting},
+    author      = {Hitchcock, C. and Sober, E.},
+    number      = {1},
+    volume      = {55},
+    url         = {https://doi.org/10.1093/bjps/55.1.1},
+    doi         = {10.1093/bjps/55.1.1},
+    date        = {2004},
+    pages       = {1--34},
+    journal     = {British Journal for the Philosophy of Science}
+}
+
+
+@article{Hochberg1987,
+    title       = {Multiple comparison procedures},
+    author      = {Hochberg, Y. and Tamrane, A. C.},
+    url         = {http://doi.org/10.1002/9780470316672},
+    doi         = {10.1002/9780470316672},
+    date        = {1987},
+    journal     = {Wiley}
+}
+
+
+@article{Hurlbert2012,
+    title       = {Lopsided reasoning on lopsided tests and multiple comparisons},
+    author      = {Hurlbert, S. H. and Lombardi, C. M.},
+    number      = {1},
+    volume      = {54},
+    url         = {https://doi.org/10.1111/j.1467-842X.2012.00652.x},
+    doi         = {10.1111/j.1467-842X.2012.00652.x},
+    date        = {2012},
+    pages       = {23--42},
+    journal     = {Australian \& New Zealand Journal of Statistics}
+}
+
+
+@article{John2012,
+    title       = {Measuring the prevalence of questionable research practices with incentives for truth telling},
+    author      = {John, L. K. and Loewenstein, G. and Prelec, D.},
+    number      = {5},
+    volume      = {23},
+    url         = {https://doi.org/10.1177/0956797611430953},
+    doi         = {10.1177/0956797611430953},
+    date        = {2012},
+    pages       = {524--532},
+    journal     = {Psychological Science}
+}
+
+
+@article{Kerr1998,
+    title       = {{HARK}ing: {H}ypothesizing after the results are known},
+    author      = {Kerr, N. L.},
+    number      = {3},
+    volume      = {2},
+    url         = {http://doi.org/10.1207/s15327957pspr0203\_4},
+    doi         = {10.1207/s15327957pspr0203\_4},
+    date        = {1998},
+    pages       = {196--217},
+    journal     = {Personality and Social Psychology Review}
+}
+
+
+@inproceedings{Kim2004,
+    title       = {Picking the most likely candidates for further development: {N}ovel intersection-union tests for addressing multi-component hypotheses in comparative genomics},
+    author      = {Kim, K. and Zakharkin, S. O. and Loraine, A. and Allison, D. B.},
+    url         = {http://www.uab.edu/cngi/pdf/2004/JSM\%202004\%20-IUTs\%20Kim\%20et\%20al.pdf},
+    date        = {2004},
+    pages       = {1396--1402},
+    booktitle     = {Proceedings of the American Statistical Association, ASA Section on ENAR Spring Meeting}
+}
+
+
+@article{undefined2018,
+    title       = {Many Labs 2: {I}nvestigating variation in replicability across samples and settings},
+    author      = {Klein, R. A., Vianello, M., Hasselman, F., Adams, B. G., Adams Jr, R. B., Alper, S., Aveyard, M., Axt, J. R., Babalola, M. T., Bahník, S., Batra, R., Berkics, M., Bernstein, M. J., Berry, D. R., Bialobrzeska, O., Binan, E. D., Bocian, K., Brandt, M. J., Busching, R., ... \& Sowden, W.},
+    number      = {4},
+    volume      = {1},
+    url         = {https://doi.org/10.1177/2515245918810225},
+    doi         = {10.1177/2515245918810225},
+    date        = {2018},
+    pages       = {443--490},
+    journal     = {Advances in Methods and Practices in Psychological Science}
+}
+
+
+@article{Kotzen2013,
+    title       = {Multiple studies and evidential defeat},
+    author      = {Kotzen, M.},
+    number      = {1},
+    volume      = {47},
+    url         = {http://www.jstor.org/stable/43828821},
+    date        = {2013},
+    pages       = {154--180},
+    journal     = {Noûs}
+}
+
+
+@article{Kriegeskorte2009,
+    title       = {Circular analysis in systems neuroscience: {T}he dangers of double dipping},
+    author      = {Kriegeskorte, N. and Simmons, W. K. and Bellgowan, P. S. and Baker, C. I.},
+    number      = {5},
+    volume      = {12},
+    url         = {https://doi.org/10.1038/nn.2303},
+    doi         = {10.1038/nn.2303},
+    date        = {2009},
+    pages       = {535--540},
+    journal     = {Nature Neuroscience}
+}
+
+
+@book{Kuhn1977,
+    title       = {The essential tension: {S}elected studies in the scientific tradition and change},
+    author      = {Kuhn, T. S.},
+    publisher   = {The University of Chicago Press},
+    date        = {1977}
+}
+
+
+@article{Lehmann1993,
+    title       = {The Fisher, Neyman-Pearson theories of testing hypotheses: {O}ne theory or two?},
+    author      = {Lehmann, E. L.},
+    number      = {424},
+    volume      = {88},
+    url         = {https://doi.org/10.1080/01621459.1993.10476404},
+    doi         = {10.1080/01621459.1993.10476404},
+    date        = {1993},
+    pages       = {1242--1249},
+    journal     = {Journal of the American Statistical Association}
+}
+
+
+@article{Lykken1968,
+    title       = {Statistical significance in psychological research},
+    author      = {Lykken, D. T.},
+    number      = {3},
+    volume      = {70},
+    url         = {https://doi.org/10.1037/h0026141},
+    doi         = {10.1037/h0026141},
+    date        = {1968},
+    pages       = {151--159},
+    journal     = {Psychological Bulletin}
+}
+
+
+@article{Mackonis2013,
+    title       = {Inference to the best explanation, coherence and other explanatory virtues},
+    author      = {Mackonis, A.},
+    number      = {6},
+    volume      = {190},
+    url         = {https://doi.org/10.1007/s11229-011-0054-y},
+    doi         = {10.1007/s11229-011-0054-y},
+    date        = {2013},
+    pages       = {975--995},
+    journal     = {Synthese}
+}
+
+
+@article{Maier2022,
+    title       = {Justify your alpha: {A} primer on two practical approaches},
+    author      = {Maier, M. and Lakens, D.},
+    number      = {2},
+    volume      = {5},
+    url         = {https://doi.org/10.1177/25152459221080396},
+    doi         = {10.1177/25152459221080396},
+    date        = {2022},
+    journal     = {Advances in Methods and Practices in Psychological Science}
+}
+
+
+@article{Matsunaga2007,
+    title       = {Familywise error in multiple comparisons: {D}isentangling a knot through a critique of O'Keefe's arguments against alpha adjustment},
+    author      = {Matsunaga, M.},
+    number      = {4},
+    volume      = {1},
+    url         = {https://doi.org/10.1080/19312450701641409},
+    doi         = {10.1080/19312450701641409},
+    date        = {2007},
+    pages       = {243--265},
+    journal     = {Communication Methods and Measures}
+}
+
+
+@book{Mayo1996,
+    title       = {Error and the growth of experimental knowledge},
+    author      = {Mayo, D. G.},
+    publisher   = {The University of Chicago Press},
+    date        = {1996}
+}
+
+
+@article{Mayo2014,
+    title       = {On the Birnbaum argument for the strong likelihood principle},
+    author      = {Mayo, D. G.},
+    volume      = {29},
+    url         = {http://doi.org/10.1214/13-STS457},
+    doi         = {10.1214/13-STS457},
+    date        = {2014},
+    pages       = {227--239},
+    journal     = {Statistical Science}
+}
+
+
+@book{Mayo2018,
+    title       = {Statistical inference as severe testing: {H}ow to get beyond the statistics wars},
+    author      = {Mayo, D. G.},
+    url         = {http://doi.org/10.1017/9781107286184},
+    doi         = {10.1017/9781107286184},
+    publisher   = {Cambridge University Press},
+    date        = {2018}
+}
+
+
+@article{Mayo2017,
+    title       = {A poor prognosis for the diagnostic screening critique of statistical tests},
+    author      = {Mayo, D. G. and Morey, R. D.},
+    url         = {https://doi.org/10.31219/osf.io/ps38b},
+    doi         = {10.31219/osf.io/ps38b},
+    date        = {2017},
+    journal     = {OSFPreprints}
+}
+
+
+@article{Mayo2006,
+    title       = {Severe testing as a basic concept in a Neyman--Pearson philosophy of induction},
+    author      = {Mayo, D. G. and Spanos, A.},
+    number      = {2},
+    volume      = {57},
+    url         = {https://doi.org/10.1093/bjps/axl003},
+    doi         = {10.1093/bjps/axl003},
+    date        = {2006},
+    pages       = {323--357},
+    journal     = {The British Journal for the Philosophy of Science}
+}
+
+
+@article{undefined2023,
+    title       = {Statistical significance" and statistical reporting: {M}oving beyond binary},
+    author      = {McShane, B. B., Bradlow, E. T., Lynch, J. G. Jr., \& Meyer, R. J.},
+    number      = {3},
+    volume      = {88},
+    url         = {http://doi.org/10.1177/00222429231216910},
+    doi         = {10.1177/00222429231216910},
+    date        = {2023},
+    pages       = {1--19},
+    journal     = {Journal of Marketing}
+}
+
+
+@article{Meehl1978,
+    title       = {Theoretical risks and tabular asterisks: {S}ir Karl, Sir Ronald, and the slow progress of soft psychology},
+    author      = {Meehl, P. E.},
+    number      = {4},
+    volume      = {46},
+    url         = {https://doi.org/10.1037/0022-006X.46.4.806},
+    doi         = {10.1037/0022-006X.46.4.806},
+    date        = {1978},
+    pages       = {806--834},
+    journal     = {Journal of Consulting and Clinical Psychology}
+}
+
+
+@article{Meehl1990,
+    title       = {Appraising and amending theories: {T}he strategy of Lakatosian defense and two principles that warrant it},
+    author      = {Meehl, P. E.},
+    number      = {2},
+    volume      = {1},
+    url         = {http://www.jstor.org/stable/1448768},
+    date        = {1990},
+    pages       = {108--141},
+    journal     = {Psychological Inquiry}
+}
+
+
+@article{Meehl1990,
+    title       = {Why summaries of research on psychological theories are often uninterpretable},
+    author      = {Meehl, P. E.},
+    number      = {1},
+    volume      = {66},
+    url         = {https://doi.org/10.2466/pr0.1990.66.1.195},
+    doi         = {10.2466/pr0.1990.66.1.195},
+    date        = {1990},
+    pages       = {195--244},
+    journal     = {Psychological Reports}
+}
+
+
+@inbook{Meehl1997,
+    title       = {The problem is epistemology, not statistics: {R}eplace significance tests by confidence intervals and quantify accuracy of risky numerical predictions},
+    author      = {Meehl, P. E.},
+    editor      = {Harlow, L.L. and Mulaik, S.A. and Steiger, J.H.},
+    publisher   = {Lawrence Erlbaum Associates},
+    date        = {1997},
+    pages       = {393--425},
+    booktitle     = {What if there were no significance tests?}
+}
+
+
+@article{Merton1987,
+    title       = {Three fragments from a sociologist's notebooks: {E}stablishing the phenomenon, specified ignorance, and strategic research materials},
+    author      = {Merton, R. K.},
+    number      = {1},
+    volume      = {13},
+    url         = {https://doi.org/10.1146/annurev.so.13.080187.000245},
+    doi         = {10.1146/annurev.so.13.080187.000245},
+    date        = {1987},
+    pages       = {1--29},
+    journal     = {Annual Review of Sociology}
+}
+
+
+@article{Molloy2022,
+    title       = {Multiplicity adjustments in parallel-group multi-arm trials sharing a control group: {C}lear guidance is needed},
+    author      = {Molloy, S. F. and White, I. R. and Nunn, A. J. and Hayes, R. and Wang, D. and Harrison, T. S.},
+    volume      = {113, Article 106656},
+    url         = {https://doi.org/10.1016/j.cct.2021.106656},
+    doi         = {10.1016/j.cct.2021.106656},
+    date        = {2022},
+    journal     = {Contemporary Clinical Trials}
+}
+
+
+@article{Morgan2007,
+    title       = {P value fetishism and use of the Bonferroni adjustment},
+    author      = {Morgan, J. F.},
+    volume      = {10},
+    url         = {http://doi.org/10.1136/ebmh.10.2.34},
+    doi         = {10.1136/ebmh.10.2.34},
+    date        = {2007},
+    pages       = {34--35},
+    journal     = {Evidence-Based Mental Health}
+}
+
+
+@article{Munafò2017,
+    title       = {A manifesto for reproducible science},
+    author      = {Munafò, M. R. and Nosek, B. A. and Bishop, D. V. and Button, K. S. and Chambers, C. D. and Percie du Sert, N. and Simonsohn, U. and Wagenmakers, E. J. and Ware, J. J. and Ioannidis, J.},
+    volume      = {1, Article 0021},
+    url         = {https://doi.org/10.1038/s41562-016-0021},
+    doi         = {10.1038/s41562-016-0021},
+    date        = {2017},
+    journal     = {Nature Human Behaviour}
+}
+
+
+@article{Musgrave1974,
+    title       = {Logical versus historical theories of confirmation},
+    author      = {Musgrave, A.},
+    number      = {1},
+    volume      = {25},
+    url         = {https://doi.org/10.1093/bjps/25.1.1},
+    doi         = {10.1093/bjps/25.1.1},
+    date        = {1974},
+    pages       = {1--23},
+    journal     = {The British Journal for the Philosophy of Science}
+}
+
+
+@book{Neyman1950,
+    title       = {First course in probability and statistics},
+    author      = {Neyman, J.},
+    publisher   = {Henry Holt},
+    date        = {1950}
+}
+
+
+@article{Neyman1977,
+    title       = {Frequentist probability and frequentist statistics},
+    author      = {Neyman, J.},
+    volume      = {36},
+    url         = {https://doi.org/10.1007/BF00485695},
+    doi         = {10.1007/BF00485695},
+    date        = {1977},
+    pages       = {97--131},
+    journal     = {Synthese}
+}
+
+
+@article{Neyman1928,
+    title       = {On the use and interpretation of certain test criteria for purposes of statistical inference: {P}art I},
+    author      = {Neyman, J. and Pearson, E. S.},
+    number      = {2)},
+    volume      = {1},
+    url         = {http://},
+    doi         = {10.2307/2331945},
+    date        = {1928},
+    pages       = {175--240},
+    journal     = {Biometrika}
+}
+
+
+@article{Neyman1933,
+    title       = {{IX}. On the problem of the most efficient tests of statistical hypotheses},
+    author      = {Neyman, J. and Pearson, E. S.},
+    volume      = {231},
+    url         = {https://doi.org/10.1098/rsta.1933.0009},
+    doi         = {10.1098/rsta.1933.0009},
+    date        = {1933},
+    pages       = {289--337},
+    journal     = {Philosophical Transactions of the Royal Society A}
+}
+
+
+@article{Nosek2018,
+    title       = {The preregistration revolution},
+    author      = {Nosek, B. A. and Ebersole, C. R. and DeHaven, A. C. and Mellor, D. T.},
+    number      = {11},
+    volume      = {115},
+    url         = {https://doi.org/10.1073/pnas.1708274114},
+    doi         = {10.1073/pnas.1708274114},
+    date        = {2018},
+    pages       = {2600--2606},
+    journal     = {Proceedings of the National Academy of Sciences}
+}
+
+
+@article{Nosek2022,
+    title       = {Replicability, robustness, and reproducibility in psychological science},
+    author      = {Nosek, B. A. and Hardwicke, T. E. and Moshontz, H. and Allard, A. and Corker, K. S. and Dreber, A. and Fidler, F. and Hilgard, J. and Kline Struhl, M. and Nuijten, M. B. and Rohrer, J. M. and Romero, F. and Scheel, A. M. and Scherer, L. D. and Schönbrodt, F. D. and Vazire, S.},
+    volume      = {73},
+    url         = {https://doi.org/10.1146/annurev-psych-020821-114157},
+    doi         = {10.1146/annurev-psych-020821-114157},
+    date        = {2022},
+    pages       = {719--748},
+    journal     = {Annual Review of Psychology}
+}
+
+
+@article{Nosek2014,
+    title       = {Registered reports},
+    author      = {Nosek, B. A. and Lakens, D.},
+    number      = {3},
+    volume      = {45},
+    url         = {https://doi.org/10.1027/1864-9335/a000192},
+    doi         = {10.1027/1864-9335/a000192},
+    date        = {2014},
+    pages       = {137--141},
+    journal     = {Social Psychology}
+}
+
+
+@article{Oberauer2019,
+    title       = {Addressing the theory crisis in psychology},
+    author      = {Oberauer, K. and Lewandowsky, S.},
+    number      = {5},
+    volume      = {26},
+    url         = {https://doi.org/10.3758/s13423-019-01645-2},
+    doi         = {10.3758/s13423-019-01645-2},
+    date        = {2019},
+    pages       = {1596--1618},
+    journal     = {Psychonomic Bulletin \& Review}
+}
+
+
+@article{Collaboration2015,
+    title       = {Estimating the reproducibility of psychological science},
+    author      = {Collaboration, Open Science},
+    number      = {6251},
+    volume      = {349},
+    url         = {https://doi.org/10.1126/science.aac4716},
+    doi         = {10.1126/science.aac4716},
+    date        = {2015},
+    journal     = {Science}
+}
+
+
+@article{Parker2020,
+    title       = {Non-adjustment for multiple testing in multi-arm trials of distinct treatments: {R}ationale and justification},
+    author      = {Parker, R. A. and Weir, C. J.},
+    number      = {5},
+    volume      = {17},
+    url         = {https://doi.org/10.1177/1740774520941419},
+    doi         = {10.1177/1740774520941419},
+    date        = {2020},
+    pages       = {562--566},
+    journal     = {Clinical Trials}
+}
+
+
+@article{Parker2022,
+    title       = {Multiple secondary outcome analyses: {P}recise interpretation is important},
+    author      = {Parker, R. A. and Weir, C. J.},
+    volume      = {23},
+    url         = {https://doi.org/10.1186/s13063-021-05975-2},
+    doi         = {10.1186/s13063-021-05975-2},
+    date        = {2022},
+    pages       = {27},
+    journal     = {Trials}
+}
+
+
+@article{Parker2016,
+    title       = {Transparency in ecology and evolution: {R}eal problems, real solutions},
+    author      = {Parker, T. H. and Forstmeier, W. and Koricheva, J. and Fidler, F. and Hadfield, J. D. and Chee, Y. E. and Kelly, C. D. and Gurevitch, J. and Nakagawa, S.},
+    number      = {9},
+    volume      = {31},
+    url         = {https://doi.org/10.1016/j.tree.2016.07.002},
+    doi         = {10.1016/j.tree.2016.07.002},
+    date        = {2016},
+    pages       = {711--719},
+    journal     = {Trends in Ecology \& Evolution}
+}
+
+
+@article{Perneger1998,
+    title       = {What's wrong with Bonferroni adjustments},
+    author      = {Perneger, T. V.},
+    volume      = {316},
+    url         = {https://doi.org/10.1136/bmj.316.7139.1236},
+    doi         = {10.1136/bmj.316.7139.1236},
+    date        = {1998},
+    pages       = {1236--1238},
+    journal     = {British Medical Journal}
+}
+
+
+@article{Pollard1987,
+    title       = {On the probability of making Type I errors},
+    author      = {Pollard, P. and Richardson, J. T.},
+    number      = {1},
+    volume      = {102},
+    url         = {https://doi.org/10.1037/0033-2909.102.1.159},
+    doi         = {10.1037/0033-2909.102.1.159},
+    date        = {1987},
+    pages       = {159--163},
+    journal     = {Psychological Bulletin}
+}
+
+
+@book{Popper1962,
+    title       = {Conjectures and refutations: {T}he growth of scientific knowledge},
+    author      = {Popper, K. R.},
+    publisher   = {Basic Books},
+    date        = {1962}
+}
+
+
+@book{Popper2002,
+    title       = {The logic of scientific discovery},
+    author      = {Popper, K. R.},
+    publisher   = {Routledge},
+    date        = {2002}
+}
+
+
+@article{Redish2018,
+    title       = {Reproducibility failures are essential to scientific inquiry},
+    author      = {Redish, D. A. and Kummerfeld, E. and Morris, R. L. and Love, A. C.},
+    number      = {20},
+    volume      = {115},
+    url         = {https://doi.org/10.1073/pnas.1806370115},
+    doi         = {10.1073/pnas.1806370115},
+    date        = {2018},
+    pages       = {5042--5046},
+    journal     = {Proceedings of the National Academy of Sciences}
+}
+
+
+@book{Reichenbach1938,
+    title       = {Experience and prediction: {A}n analysis of the foundations and the structure of knowledge},
+    author      = {Reichenbach, H.},
+    url         = {https://philarchive.org/archive/REIEAP-2},
+    publisher   = {The University of Chicago Press},
+    date        = {1938}
+}
+
+
+@article{Reid1995,
+    title       = {The roles of conditioning in inference},
+    author      = {Reid, N.},
+    number      = {2},
+    volume      = {10},
+    url         = {https://doi.org/10.1214/ss/1177010027},
+    doi         = {10.1214/ss/1177010027},
+    date        = {1995},
+    pages       = {138--157},
+    journal     = {Statistical Science}
+}
+
+
+@article{Reid2015,
+    title       = {On some principles of statistical inference},
+    author      = {Reid, N. and Cox, D. R.},
+    number      = {2},
+    volume      = {83},
+    url         = {http://},
+    doi         = {10.1111/insr.12067},
+    date        = {2015},
+    pages       = {293--308},
+    journal     = {International Statistical Review}
+}
+
+
+@article{Rothman1990,
+    title       = {No adjustments are needed for multiple comparisons},
+    author      = {Rothman, K. J.},
+    number      = {1},
+    volume      = {1},
+    url         = {https://www.jstor.org/stable/20065622},
+    date        = {1990},
+    pages       = {43--46},
+    journal     = {Epidemiology}
+}
+
+
+@book{Rothman2008,
+    title       = {Modern epidemiology},
+    author      = {Rothman, K. J. and Greenland, S. and Lash, T. L.},
+    publisher   = {Lippincott Williams \& Wilkins},
+    date        = {2008}
+}
+
+
+@article{Rubin2017,
+    title       = {An evaluation of four solutions to the forking paths problem: {A}djusted alpha, preregistration, sensitivity analyses, and abandoning the Neyman-Pearson approach},
+    author      = {Rubin, M.},
+    number      = {4},
+    volume      = {21},
+    url         = {https://doi.org/10.1037/gpr0000135},
+    doi         = {10.1037/gpr0000135},
+    date        = {2017},
+    pages       = {321--329},
+    journal     = {Review of General Psychology}
+}
+
+
+@article{Rubin2017,
+    title       = {Do p values lose their meaning in exploratory analyses? It depends how you define the familywise error rate},
+    author      = {Rubin, M.},
+    number      = {3},
+    volume      = {21},
+    url         = {https://doi.org/10.1037/gpr0000123},
+    doi         = {10.1037/gpr0000123},
+    date        = {2017},
+    pages       = {269--275},
+    journal     = {Review of General Psychology}
+}
+
+
+@article{Rubin2020,
+    title       = {Does preregistration improve the credibility of research findings?},
+    author      = {Rubin, M.},
+    number      = {4},
+    volume      = {16},
+    url         = {https://doi.org/10.20982/tqmp.16.4.p376},
+    doi         = {10.20982/tqmp.16.4.p376},
+    date        = {2020},
+    pages       = {376--390},
+    journal     = {The Quantitative Methods for Psychology}
+}
+
+
+@article{Rubin2020,
+    title       = {Repeated sampling from the same population?” A critique of Neyman and Pearson's responses to Fisher},
+    author      = {Rubin, M.},
+    volume      = {10, Article 42},
+    url         = {https://doi.org/10.1007/s13194-020-00309-6},
+    doi         = {10.1007/s13194-020-00309-6},
+    date        = {2020},
+    pages       = {1--15},
+    journal     = {European Journal for Philosophy of Science}
+}
+
+
+@article{Rubin2021,
+    title       = {There's no need to lower the significance threshold when conducting single tests of multiple individual hypotheses},
+    author      = {Rubin, M.},
+    volume      = {610},
+    url         = {https://doi.org/10.20935/AL610},
+    doi         = {10.20935/AL610},
+    date        = {2021},
+    journal     = {Academia Letters, Article}
+}
+
+
+@article{Rubin2021,
+    title       = {What type of Type I error? Contrasting the Neyman-Pearson and Fisherian approaches in the context of exact and direct replications},
+    author      = {Rubin, M.},
+    volume      = {198},
+    url         = {https://doi.org/10.1007/s11229-019-02433-0},
+    doi         = {10.1007/s11229-019-02433-0},
+    date        = {2021},
+    pages       = {5809--5834},
+    journal     = {Synthese}
+}
+
+
+@article{Rubin2021,
+    title       = {When to adjust alpha during multiple testing: {A} consideration of disjunction, conjunction, and individual testing},
+    author      = {Rubin, M.},
+    volume      = {199},
+    url         = {https://doi.org/10.1007/s11229-021-03276-4},
+    doi         = {10.1007/s11229-021-03276-4},
+    date        = {2021},
+    pages       = {10969--11000},
+    journal     = {Synthese}
+}
+
+
+@article{Rubin2022,
+    title       = {The costs of {HARK}ing},
+    author      = {Rubin, M.},
+    number      = {2},
+    volume      = {73},
+    url         = {https://doi.org/10.1093/bjps/axz050},
+    doi         = {10.1093/bjps/axz050},
+    date        = {2022},
+    pages       = {535--560},
+    journal     = {British Journal for the Philosophy of Science}
+}
+
+
+@article{Rubin2024,
+    title       = {Inconsistent multiple testing corrections: {T}he fallacy of using family-based error rates to make inferences about individual hypotheses},
+    author      = {Rubin, M.},
+    volume      = {10, Article 100140},
+    url         = {https://doi.org/10.1016/j.metip.2024.100140},
+    doi         = {10.1016/j.metip.2024.100140},
+    date        = {2024},
+    journal     = {Methods in Psychology}
+}
+
+
+@article{Rubin2022,
+    title       = {Exploratory hypothesis tests can be more compelling than confirmatory hypothesis tests},
+    author      = {Rubin, M. and Donkin, C.},
+    url         = {https://doi.org/10.1080/09515089.2022.2113771},
+    doi         = {10.1080/09515089.2022.2113771},
+    date        = {2022},
+    pages       = {1--29},
+    journal     = {Philosophical Psychology}
+}
+
+
+@article{Savitz1995,
+    title       = {Multiple comparisons and related issues in the interpretation of epidemiologic data},
+    author      = {Savitz, D. A. and Olshan, A. F.},
+    number      = {9},
+    volume      = {142},
+    url         = {https://doi.org/10.1093/oxfordjournals.aje.a117737},
+    doi         = {10.1093/oxfordjournals.aje.a117737},
+    date        = {1995},
+    pages       = {904--908},
+    journal     = {American Journal of Epidemiology}
+}
+
+
+@article{Schulz2005,
+    title       = {Multiplicity in randomised trials I: {E}ndpoints and treatments},
+    author      = {Schulz, K. F. and Grimes, D. A.},
+    number      = {9470},
+    volume      = {365},
+    url         = {https://doi.org/10.1016/S0140-6736(05)66461-6},
+    doi         = {10.1016/S0140-6736(05)66461-6},
+    date        = {2005},
+    pages       = {1591--1595},
+    journal     = {The Lancet}
+}
+
+
+@book{Senn2007,
+    title       = {Statistical issues in drug development},
+    author      = {Senn, S.},
+    publisher   = {Wiley},
+    date        = {2007}
+}
+
+
+@article{Simmons2011,
+    title       = {False-positive psychology: {U}ndisclosed flexibility in data collection and analysis allows presenting anything as significant},
+    author      = {Simmons, J. P. and Nelson, L. D. and Simonsohn, U.},
+    number      = {11},
+    volume      = {22},
+    url         = {https://doi.org/10.1177/0956797611417632},
+    doi         = {10.1177/0956797611417632},
+    date        = {2011},
+    pages       = {1359--1366},
+    journal     = {Psychological Science}
+}
+
+
+@article{Simonsohn2020,
+    title       = {Specification curve analysis},
+    author      = {Simonsohn, U. and Simmons, J. P. and Nelson, L. D.},
+    number      = {11},
+    volume      = {4},
+    url         = {https://doi.org/10.1038/s41562-020-0912-z},
+    doi         = {10.1038/s41562-020-0912-z},
+    date        = {2020},
+    pages       = {1208--1214},
+    journal     = {Nature Human Behaviour}
+}
+
+
+@article{Sinclair2013,
+    title       = {Alpha level adjustments for multiple dependent variable analyses and their applicability—A review},
+    author      = {Sinclair, J. and Taylor, P. J. and Hobbs, S. J.},
+    number      = {1},
+    volume      = {7},
+    date        = {2013},
+    pages       = {17--20},
+    journal     = {International Journal of Sports Science Engineering}
+}
+
+
+@article{Spanos2006,
+    title       = {Where do statistical models come from? Revisiting the problem of specification},
+    author      = {Spanos, A.},
+    volume      = {49},
+    url         = {https://doi.org/10.1214/074921706000000419},
+    doi         = {10.1214/074921706000000419},
+    date        = {2006},
+    pages       = {98--119},
+    journal     = {Optimality}
+}
+
+
+@article{Spanos2010,
+    title       = {Akaike-type criteria and the reliability of inference: {M}odel selection versus statistical model specification},
+    author      = {Spanos, A.},
+    number      = {2},
+    volume      = {158},
+    url         = {https://doi.org/10.1016/j.jeconom.2010.01.011},
+    doi         = {10.1016/j.jeconom.2010.01.011},
+    date        = {2010},
+    pages       = {204--220},
+    journal     = {Journal of Econometrics}
+}
+
+
+@article{Steegen2016,
+    title       = {Increasing transparency through a multiverse analysis},
+    author      = {Steegen, S. and Tuerlinckx, F. and Gelman, A. and Vanpaemel, W.},
+    number      = {5},
+    volume      = {11},
+    url         = {https://doi.org/10.1177/1745691616658637},
+    doi         = {10.1177/1745691616658637},
+    date        = {2016},
+    pages       = {702--712},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Stefan2023,
+    title       = {Big little lies: {A} compendium and simulation of p-hacking strategies},
+    author      = {Stefan, A. M. and Schönbrodt, F. D.},
+    number      = {2},
+    volume      = {10},
+    url         = {https://doi.org/10.1098/rsos.220346},
+    doi         = {10.1098/rsos.220346},
+    date        = {2023},
+    journal     = {Royal Society Open Science}
+}
+
+
+@article{Syrjänen2023,
+    title       = {Novel prediction and the problem of low-quality accommodation},
+    author      = {Syrjänen, P.},
+    volume      = {202, Article 182},
+    url         = {https://doi.org/10.1007/s11229-023-04400-2},
+    doi         = {10.1007/s11229-023-04400-2},
+    date        = {2023},
+    journal     = {Synthese}
+}
+
+
+@article{Szollosi2021,
+    title       = {Arrested theory development: {T}he misguided distinction between exploratory and confirmatory research},
+    author      = {Szollosi, A. and Donkin, C.},
+    number      = {4},
+    volume      = {16},
+    url         = {https://doi.org/10.1177/1745691620966796},
+    doi         = {10.1177/1745691620966796},
+    date        = {2021},
+    pages       = {717--724},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Taylor2015,
+    title       = {Statistical learning and selective inference},
+    author      = {Taylor, J. and Tibshirani, R. J.},
+    number      = {25},
+    volume      = {112},
+    url         = {https://doi.org/10.1073/pnas.1507583112},
+    doi         = {10.1073/pnas.1507583112},
+    date        = {2015},
+    pages       = {7629--7634},
+    journal     = {Proceedings of the National Academy of Sciences}
+}
+
+
+@book{Tukey1953,
+    title       = {The problem of multiple comparisons},
+    author      = {Tukey, J. W.},
+    publisher   = {Princeton University},
+    date        = {1953}
+}
+
+
+@article{Turkheimer2004,
+    title       = {On the logic of hypothesis testing in functional imaging},
+    author      = {Turkheimer, F. E. and Aston, J. A. and Cunningham, V. J.},
+    volume      = {31},
+    url         = {https://doi.org/10.1007/s00259-003-1387-7},
+    doi         = {10.1007/s00259-003-1387-7},
+    date        = {2004},
+    pages       = {725--732},
+    journal     = {European Journal of Nuclear Medicine and Molecular Imaging}
+}
+
+
+@article{Uygun-Tunç2023,
+    title       = {A falsificationist treatment of auxiliary hypotheses in social and behavioral sciences: {S}ystematic replications framework},
+    author      = {Uygun-Tunç, D. and Tunç, M. N.},
+    volume      = {7},
+    url         = {https://doi.org/10.15626/MP.2021.2756},
+    doi         = {10.15626/MP.2021.2756},
+    date        = {2023},
+    journal     = {Meta-Psychology}
+}
+
+
+@article{Veazie2006,
+    title       = {When to combine hypotheses and adjust for multiple tests},
+    author      = {Veazie, P. J.},
+    number      = {3 pt 1},
+    volume      = {41},
+    url         = {http://doi.org/10.1111/j.1475-6773.2006.00512.x},
+    doi         = {10.1111/j.1475-6773.2006.00512.x},
+    date        = {2006},
+    pages       = {804--818},
+    journal     = {Health Services Research}
+}
+
+
+@book{Venn1876,
+    title       = {The logic of chance},
+    author      = {Venn, J.},
+    publisher   = {Macmillan and Co},
+    date        = {1876}
+}
+
+
+@inbook{Wagenmakers2016,
+    title       = {Statistical tools such as p-values and confidence intervals are meaningful only for strictly confirmatory analyses},
+    author      = {Wagenmakers, E. J.},
+    url         = {https://www.psychologicalscience.org/observer/why-preregistration-makes-me-nervous\#comment-7860633},
+    date        = {2016-09-01},
+    booktitle     = {In turn, preregistration is one}
+}
+
+
+@article{Wagenmakers2012,
+    title       = {An agenda for purely confirmatory research},
+    author      = {Wagenmakers, E. J. and Wetzels, R. and Borsboom, D. and van der Maas, H. L. and Kievit, R. A.},
+    number      = {6},
+    volume      = {7},
+    url         = {https://doi.org/10.1177/1745691612463078},
+    doi         = {10.1177/1745691612463078},
+    date        = {2012},
+    pages       = {632--638},
+    journal     = {Perspectives on Psychological Science}
+}
+
+
+@article{Wasserman2013,
+    title       = {Double misunderstandings about p-values. Normal Deviate},
+    author      = {Wasserman, L.},
+    url         = {https://normaldeviate.wordpress.com/2013/03/14/double-misunderstandings-about-p-values/},
+    date        = {2013-03-14}
+}
+
+
+@article{Wilson1962,
+    title       = {A note on the inconsistency inherent in the necessity to perform multiple comparisons},
+    author      = {Wilson, W.},
+    number      = {4},
+    volume      = {59},
+    url         = {https://doi.org/10.1037/h0040447},
+    doi         = {10.1037/h0040447},
+    date        = {1962},
+    pages       = {296--300},
+    journal     = {Psychological Bulletin}
+}
+
+
+@inbook{Worrall2010,
+    title       = {Theory confirmation and novel evidence},
+    author      = {Worrall, J.},
+    editor      = {Mayo, D.G. and Spanos, A.},
+    url         = {http://doi.org/10.1017/CBO9780511657528},
+    doi         = {10.1017/CBO9780511657528},
+    publisher   = {Cambridge University Press},
+    date        = {2010},
+    pages       = {125--169},
+    booktitle     = {Error and inference: Recent exchanges on experimental reasoning, reliability, and the objectivity and rationality of science}
+}
+\end{filecontents}
+
+\begin{document}
+\begin{frontmatter}
+  \maketitle
+  \begin{abstract}
+    \printabstracttext
+  \end{abstract}
+\end{frontmatter}
+
+
+	\section{\textbf{Type I Error Rates Are Not Usually Inflated}}
+
+
+
+	\section{\textbf{Abstract}}
+
+
+
+	The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as \emph{p}-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this article, I offer an alternative view. I argue that questionable and other research practices do not usually inflate relevant Type I error rates. I begin by introducing the concept of Type I error rates and distinguishing between statistical errors and theoretical errors. I then illustrate my argument with respect to model misspecification, multiple testing, selective inference, forking paths, exploratory analyses, \emph{p}-hacking, optional stopping, double dipping, and HARKing. In each case, I demonstrate that relevant Type I error rates are not usually inflated above their nominal level, and in the rare cases that they are, the inflation is easily identified and resolved. I conclude that the replication crisis may be explained, at least in part, by researchers' misinterpretation of statistical errors and their underestimation of theoretical errors.
+
+
+
+
+
+
+
+	\emph{Keywords}: false positives; questionable research practices; replication crisis; significance testing; Type I error rate inflation
+
+
+
+
+
+
+
+
+
+
+
+	During significance testing, a Type I error occurs when a researcher decides to reject a true null hypothesis (Neyman \& Pearson, 1928, p. 177; Neyman \& Pearson, 1933, p. 296). Type I errors are thought to play an important role in explaining the replication crisis in science. When the results of a study fail to replicate, the replication failure may be attributed to a Type I error in the original study. In other words, one of several reasons for a failed replication is that the null hypothesis is true and the original study's significant result was a false positive (Nosek et al., 2022, p. 726).
+
+
+
+	The replication “crisis” occurred because replication rates were lower than “expected or desired” (Nosek et al., 2022, p. 724; see also Munafò et al., 2017, p. 1; Open Science Collaboration, 2015, p. 7). Unexpectedly low replication rates have been attributed to larger than expected Type I error rates which, in turn, have been attributed to the use of questionable research practices. For example, Simmons et al. (2011) argued that “despite empirical psychologists' nominal endorsement of a low rate of false-positive findings (≤ .050), flexibility in data collection, analysis, and reporting dramatically increases actual false-positive rates” (p. 1359). Hence, questionable research practices are thought to inflate actual Type I error rates above the nominal conventional level of .050, leading to an unexpectedly high level of false positives in the literature and, consequently, unexpectedly low replication rates.
+
+
+
+	In this article, I offer the alternative view that relevant Type I error rates are not usually inflated by questionable research practices (e.g., \emph{p}-hacking) or other research practices (e.g., model misspecification, exploratory analyses). I agree that Type I errors can be responsible for some replication failures. However, I argue that Type I error rate \emph{inflation} is relatively rare, and that when it does occur it is easily identified and resolved. I conclude that theoretical errors provide a better explanation of the replication crisis than Type I error inflation.
+
+
+
+	My argument is consistent with philosophies of science and statistics that consider the logical relations between a hypothesis and its test result in the context of justification independent from their psychological origins, including researcher biases in the context of discovery (Popper, 1962, p. 140; Popper, 2002 p. 7; Reichenbach, 1938, p. 5). Based on this “logico-historical” view (Musgrave, 1974, p. 3), I argue that “actual” Type I error rates can be logically deduced from reported statistical inferences without referring to planned testing procedures that include the way in which hypotheses and evidence are constructed and selected. Consequently, my logical inference-based approach diverges from Mayo's (1996, 2018) error statistical approach, and it does not require preregistration to assess Type I error rates (Rubin, 2020a).
+
+
+
+	I begin with an introduction to Type I error rates that distinguishes them from theoretical errors. I then consider a range of questionable and other research practices that are thought to inflate Type I error rates. In particular, I consider model misspecification, multiple testing, selective inference, forking paths, exploratory analyses,\emph{ p}-hacking, optional stopping, double dipping, and HARKing. I demonstrate that relevant Type I error rates are not usually inflated by these practices. I conclude by summarizing my arguments, discussing the evidence for Type I error rate inflation, and considering some implications for our understanding of the replication crisis.
+
+
+
+	Before proceeding further, it is worth addressing a few potential misconceptions about my position. I am not arguing that questionable research practices do not exist. There is clear evidence that researchers sometimes engage in questionable research practices (e.g., John et al., 2012). My point is that these practices do not usually inflate Type I error rates. I am also not arguing that researchers are always honest or that they do not exploit researcher degrees of freedom. For example, I accept that researchers may falsely portray a post hoc hypothesis as an a priori hypothesis. However, I argue that this and other questionable research practices do not usually inflate Type I error rates. Furthermore, none of the points that I make condone dishonesty and the nondisclosure of potentially relevant information. Again, they only support the argument that questionable and other research practices do not usually inflate relevant Type I error rates. Finally, I am not denying that some of these research practices can be problematic. However, my argument is that they may increase\emph{ theoretical errors,} rather than \emph{statistical errors}. In other words, they may lead to theoretical misinterpretation rather than Type I error rate inflation.
+
+
+
+
+
+
+
+	\section{Introduction to Type I Error Rates}
+
+
+
+	\subsection{What Is a Type I Error Rate?}
+
+
+
+	A Type I error rate is the frequency with which a researcher would decide to reject a true null hypothesis when they base their decision on the results of a significance test that is performed on a long run of random samples that are drawn from a null population in an imaginary situation in which random sampling error is the only source of error. There are four points to note about this definition.
+
+
+
+	First, the word “population” refers to not only a population of research participants, but also a population of study-specific research methods and conditions. This population of participants, methods, and conditions is randomly sampled each time the significance test is conducted (Fisher, 1922, p. 313).
+
+
+
+	Second, in scientific contexts, the population is not fully known. By definition, a “scientist” does not fully understand the relevant and irrelevant aspects of the populations that they are studying. Indeed, it is for this reason that they are studying those populations! Consequently, scientists face a reference class problem when attempting to specify the population to which their Type I error rate applies (Venn, 1876). They handle this problem by making theoretically informed guesses about the relevant and irrelevant aspects of the populations that are the subject of their statistical inferences. However, these guesses can be wrong! As Fisher (1956) explained, during significance testing “the population in question is hypothetical, … it could be defined in many ways, and … the first to come to mind may be quite misleading” (p. 78). Hence, scientists must continually ask themselves: “of what population is this a random sample?” (Fisher, 1922, p. 313).
+
+
+
+	Third, Type I error rates are based on an imaginary situation in which random sampling error is the \emph{only} source of error that can affect a researcher's decision to reject the null hypothesis. Of course, in the real world, many other sources of error can influence a researcher's decision (e.g., errors in data collection and entry, errors in research methodology, and/or errors in theoretical interpretation). However, Type I error rates do not refer to any of these other sources of error. They only refer to errors based on random sampling error (Berk et al., 1995, p. 423; Fisher, 1956, p. 44; Neyman \& Pearson, 1928, pp. 177, 232). Hence, we must imagine that \emph{if} a null hypothesis was true (i.e., if all samples were drawn from the null population), and \emph{if }random sampling error was the \emph{only} source of decision-making error, \emph{then} the Type I error rate would indicate the frequency with which a researcher would reject the null hypothesis in a long run of repeated random sampling.
+
+
+
+	Finally, the idea of a frequency of decision-making errors during a long run of repeated random sampling from a null population is consistent with the Neyman-Pearson approach to hypothesis testing (Neyman \& Pearson, 1928, 1933). However, a Type I error can also be conceptualised within the alternative Fisherian approach (Fisher, 1956, 1971). In this case, a Type I error \emph{probability} (not rate) represents the \emph{epistemic} probability (not aleatory probability) of making a Type I error in relation to a \emph{single} decision (not a long run of decisions) to reject a null hypothesis based on an observed test statistic from the \emph{current sample} (not a long run of samples; Rubin, 2020b, 2021b).
+
+
+
+
+
+
+
+	\subsection{What Is Type I Error Rate Inflation?}
+
+
+
+	Type I error rate inflation occurs when the \emph{actual} Type I error rate is higher than the \emph{nominal} Type I error rate. The nominal Type I error rate is the rate that is set by the researcher, and it is used to determine whether an observed \emph{p} value is “significant” or “nonsignificant.” Hence, the nominal Type I error rate is also referred to as a \emph{significance threshold} or \emph{alpha level}. It is used to control the frequency of making a Type I error during a long run of repeated sampling.
+
+
+
+	The actual Type I error rate can be higher than the nominal Type I error rate in the context of multiple testing. For example, imagine that a researcher aims to make a decision about a null hypothesis based on three tests of that hypothesis, each with an alpha level of .050. Further imagine that the researcher is prepared to accept a significant result on \emph{any} of the three tests as sufficient grounds for rejecting the null hypothesis. In this case, the researcher's actual (familywise) Type I error rate for their decision will be .143. Consequently, if they set the alpha level for their decision at .050, then their actual Type I error rate (.143) will be inflated above their nominal Type I error rate (.050). As I discuss later, this multiple testing problem underlies several of the research practices that are thought to inflate Type I error rates (selective inference, forking paths, exploratory analyses, \emph{p}-hacking, optional stopping).
+
+
+
+	Importantly, the word “actual” in the phrase “actual Type I error rate” does not imply that we are able to identify “real” false positive results in any given study. The probability of a “real” false positive result would refer to the conditional posterior probability that a null hypothesis is true given its rejection (i.e., Pr[\emph{H}\textsubscript{0} is true | reject \emph{H}\textsubscript{0}]). However, it is not possible to quantify this probability in scientific contexts (Meehl, 1997, p. 397; Neyman \& Pearson, 1928, p. 176; Pollard \& Richardson, 1987, p. 162). Instead, we must consider the hypothetical probability of rejecting a null hypothesis when it is true (i.e., Pr[reject \emph{H}\textsubscript{0 }; \emph{H}\textsubscript{0} is true]).\textsuperscript{1 }It is this hypothetical probability, rather than the conditional posterior probability, that represents the actual Type I error rate.
+
+
+
+	People sometimes confuse the actual Type I error rate with the conditional posterior probability (Mayo \& Morey, 2017; Pollard \& Richardson, 1987). For example, they might argue that, if you reject 200 null hypotheses using an alpha level of .050, and only 100 of those hypotheses are true, then you will end up with five actual Type I errors (i.e., 100 × .050). However, this scenario refers to the probability that a null hypothesis is true when it is rejected, Pr(\emph{H}\textsubscript{0} is true | reject \emph{H}\textsubscript{0}), rather than the probability of rejecting a null hypothesis when it is true, Pr(reject \emph{H}\textsubscript{0}; \emph{H}\textsubscript{0} is true). Confusing these two types of probability can be described as a Bayesian inversion fallacy (Gigerenzer, 2018; Greenland et al., 2016). During significance testing, the actual Type I error rate does not refer to the probability or prevalence of true null hypotheses; it simply assumes that each null hypothesis is true and then represents the frequency with which each hypothesis would be rejected given random sampling error per se (Fisher, 1971, p. 17). Hence, to return to the previous example, a person who rejects 200 null hypotheses using an alpha level of .050 should expect to make 10 \emph{actual} Type I errors (i.e., 200 × .050), not 5 (100 × .050), because they should assume (imagine) that all 200 hypotheses are true.\textsuperscript{2}
+
+
+
+	Finally, it should be noted that nominal Type I error rates tend to be based on a research field's conventional alpha level (e.g., \emph{p} ≤ .050). Nonetheless, individual researchers can choose alpha levels that are more or less stringent than the conventional level (Benjamin et al., 2018; Maier \& Lakens, 2022). Hence, Type I error rate inflation should be distinguished from unconventional alpha levels. In particular, Type I error rate inflation should be judged by comparing the actual Type I error rate for a statistical inference with the nominal Type I error rate for that inference (i.e., the alpha level) on the understanding that the nominal level may be set at a conventional or unconventional level. For example, although an actual Type I error rate of .100 may be higher than a field's conventional alpha level of .050, it cannot be said to be “inflated” if the researcher has explicitly set their alpha level at the unconventional level of .100. If Type I error rate inflation was judged relative to the conventional alpha level, rather than the nominal alpha level, then any researcher who set their alpha level higher than the conventional level could be said to have an inflated Type I error rate!
+
+
+
+	\subsection{Type I Error Rates Do Not Refer to Theoretical Errors}
+
+
+
+	It is important to distinguish between \emph{statistical inferences} and\emph{ theoretical inferences} because Type I error rates only refer to the former (e.g., Meehl, 1978, p. 824; Meehl, 1997, p. 401; see also Bolles, 1962; Chow, 1998; Cox, 1958, p. 357; Hager, 2013, p. 259; Mayo \& Spanos, 2006, p. 341; Neyman, 1950, p. 290). During significance testing, a statistical inference refers to a statistical null hypothesis which states that samples are drawn from a study-specific null population in the context of random sampling error per se. Statistical inferences are always supported by inferential statistics, and they usually describe test results as being either “significant” or “nonsignificant.” For example, the following statement is a statistical inference: “Compared to male participants, female participants reported significantly more positive attitudes towards ice cream, \emph{t}(326) = 2.62, \emph{p} = .009.” In this example, the researcher has provisionally rejected the statistical null hypothesis that female participants \emph{do not} report more positive attitudes towards ice cream than male participants. Their alpha level (e.g., .050) indicates the frequency with which they would make an error in rejecting this statistical null hypothesis in a long run of random sampling from the statistical null population.
+
+
+
+	In contrast to statistical inferences, theoretical inferences refer to substantive hypotheses that generalize beyond the specifics of the current study. Consequently, they are not directly associated with study-specific Type I error rates. For example, a substantive inference might be that, “compared to men, women have more positive attitudes towards ice cream.”
+
+
+
+	The distinction between statistical and theoretical inferences leads to a parallel distinction between statistical and theoretical errors. Statistical errors refer to Type I and Type II errors. In contrast, theoretical errors refer to a wide range of misinterpretations about (a) theory (e.g., misinterpreted theoretical rationales, hypotheses, and predictions), (b) methodology (e.g., misspecified participant populations, sampling procedures, testing conditions, stimuli, manipulations, measures, controls, etc.), (c) data (e.g., misspecified procedures for data selection, entry, coding, cleaning, aggregation, etc.), and (d) analyses (e.g., misspecified statistical models and assumptions, misinterpreted statistical results).
+
+
+
+	Theoretical errors may occur in the absence of statistical errors. In other words, researchers may make theoretical misinterpretations before and after correctly rejecting statistical null hypotheses. Meehl's (1990b, 1997) concept of \emph{crud }provides a good example. Crud is a real but theoretically trivial effect (e.g., a methodological artefact). As Meehl (1990b) explained, crud consists of “\emph{real} differences, \emph{real} correlations, \emph{real} trends and patterns” (pp. 207-208, emphasis in original). Hence, crud “does not refer to statistical error, whether of the first or the second kind” (i.e., Type I or II errors; Meehl, 1997, p. 402). In particular, “we are not dealing here with some source of statistical error (the occurrence of random sampling fluctuations). That source of error is limited by the significance level we choose” (Meehl, 1990b, p. 207). Nonetheless, researchers may make theoretical errors about crud by misinterpreting it as theoretically important effects. Such errors may be conceptualized as \emph{theoretical} false positives (i.e., incorrectly accepting crud as being supportive of a substantive alternative hypothesis) rather than \emph{statistical} false positives (i.e., incorrectly rejecting a statistical null hypothesis).
+
+
+
+	Theoretical errors may also have a larger impact than statistical errors (Bolles, 1962, p. 645; Cox, 1958, p. 357; Fisher, 1926, pp. 504-505; Greenland, 2017b, p. 640). Hence, a researcher's probability of incorrectly rejecting a substantive null hypothesis and incorrectly accepting a substantive alternative hypothesis may be greater than their alpha level because their decisions are influenced by numerous theoretical errors in addition to Type I errors.
+
+
+
+	Researchers may sometimes confuse statistical errors with theoretical errors and assume that their Type I error rate indicates the probability of incorrectly rejecting a substantive null hypothesis in the real world rather than a statistical null hypothesis in an imaginary long run of repeated sampling. Greenland (2017b, 2023) described this confusion as “statistical reification.” He argued that researchers sometimes forget that their “statistical analyses are merely thought experiments” based on idealized assumptions that are unlikely to be true in the real world. The outcome of this confusion is “overconfident inference” (Greenland, 2017a, p. 4; Greenland, 2017b, p. 640; see also Brower, 1949, p. 327; Gigerenzer, 1993, p. 329; Meehl, 1990b, p. 225). In particular, researchers may have unwarranted credulity in a substantive conclusion based on their incorrect belief that the Type I error rate covers one or more theoretical errors.
+
+
+
+	Finally, unlike statistical errors, theoretical errors cannot be quantified. As Meehl (1997) explained, “it is tempting to conflate the inference relation between statistics and parameters with the relation between accepted parameter values and the substantive theory; and because the former is numerified (e.g., a Bayesian posterior, a confidence belt, a significance level), one tends to think the latter is numerified also, or (somehow) \emph{should} be” (p. 397; emphasis in original). However, as Neyman and Pearson (1928) explained, “the sum total of the reasons which will weigh with the investigator in accepting or rejecting the hypothesis can very rarely be expressed in numerical terms. All that is possible for him is to balance the results of a mathematical summary, formed upon certain assumptions, against other less precise impressions based upon a priori or a posteriori considerations” (p. 176). Note that rigorous pretesting, validation, and preregistration of a priori considerations and testing assumptions do not make them infallible and do not exclude their contribution to the overall probability of making a substantive error in scientific research (Uygun-Tunç \& Tunç, 2023, p. 6). Even in the most rigorous research, the probability of a substantive error refers to not only statistical errors but also the unquantifiable and unknowable probability that the researcher has made a theoretical error.
+
+
+
+	\section{The Impact of Various Research Practices on Type I Error Rates}
+
+
+
+	\subsection{Model Misspecification}
+
+
+
+	Model misspecification does not inflate Type I error rates because a Type I error rate assumes that the associated null model is “true” or at least “adequate,” which means that it is correctly (adequately) specified, and that the only source of influential error is random sampling error. To argue that modelling error inflates Type I error rates is to commit the Bayesian inversion fallacy and believe that Type I error rates are influenced by the probability of the correctness of the model to which they refer (Gigerenzer, 2018; Greenland et al., 2016; Pollard \& Richardson, 1987).
+
+
+
+	This is not to say that null models are always correctly specified. The point here is only that the frequentist concept of a Type I error rate assumes that they are. Of course, in reality, null models may be misspecified. In particular, (a) the statistical null model may not adequately represent the experimental null model, and/or (b) the experimental null model may not adequately represent the theoretical null model (Devezer \& Buzbas, 2023; Spanos, 2006). These model misspecifications may then lead to serious inferential errors. However, these errors are theoretical rather than statistical. Hence, it is more appropriate to conceive model misspecification as inflating \emph{Type III} errors, rather than Type I errors. As Dennis et al. (2019) explained, Type III errors occur when “neither the null nor the alternative hypothesis model adequately describes the data (Mosteller, 1948)” (p. 2).
+
+
+
+	\subsection{Multiple Testing}
+
+
+
+	The term \emph{multiple testing} covers several types of testing situation. Here, I distinguish between (a) single tests of multiple individual hypotheses and (b) multiple tests of a single joint hypothesis. I argue that Type I error rate inflation never occurs in the first situation, and that it is not problematic in the second situation because it is easily identified and resolved.
+
+
+
+	\subsubsection{Single Tests of Multiple Individual Null Hypotheses}
+
+
+
+	Imagine that a researcher conducts a study in which they test for gender differences on 20 different dependent variables that measure a variety of different attitudes (e.g., attitudes towards abortion, environmentalism, the death penalty, pizza, ice cream, and so on). In this case, the researcher is testing 20 different null hypotheses (i.e., \emph{H}\textsubscript{0,1, }\emph{H}\textsubscript{0,2, }\emph{H}\textsubscript{0,}\textsubscript{3, ,…}\textsubscript{ }\emph{H}\textsubscript{0,20}). Further imagine that the researcher sets their alpha level at the conventional level of .050 for each statistical inference that they make about each null hypothesis. We can call this alpha level the \emph{individual} alpha level (i.e., α\textsubscript{Individual} = .050) because it refers to the frequency with which the researcher would incorrectly reject each individual null hypothesis. This type of testing situation represents single tests of multiple individual null hypotheses. In this case, there is no more than one opportunity to make a Type I error in relation to each individual null hypothesis because none of the hypotheses undergo more than one test.
+
+
+
+	In a review of 109 research articles published in the journals \emph{Behavior Research Methods} and \emph{Psychological Science} between 2021 and June 2022, García-Pérez (2023) found that \emph{all} cases of multiple testing represented single tests of multiple individual hypotheses. Extrapolating from this evidence, it is likely that single tests of multiple individual hypotheses represent the most common type of multiple testing.
+
+
+
+	It has also been repeatedly shown that single tests of multiple individual hypotheses do not result in Type I error rate inflation, regardless of how many single tests are undertaken (Armstrong, 2014, p. 505; Cook \& Farewell, 1996, pp. 96--97; Fisher, 1971, p. 206; García-Pérez, 2023, p. 15; Greenland, 2021, p. 5; Hewes, 2003, p. 450; Hitchcock \& Sober, 2004, pp. 24-25; Hurlbert \& Lombardi, 2012, p. 30; Matsunaga, 2007, p. 255; Molloy et al., 2022, p. 2; Parker \& Weir, 2020, p. 564; Parker \& Weir, 2022, p. 2; Rothman, 1990, p. 45; Rubin, 2017b, pp. 271--272; Rubin, 2020a, p. 380; Rubin, 2021a, 2021c, pp. 10978-10983; Rubin, 2024, p. 3; Savitz \& Olshan, 1995, p. 906; Senn, 2007, pp. 150-151; Sinclair et al., 2013, p. 19; Tukey, 1953, p. 82; Turkheimer et al., 2004, p. 727; Veazie, 2006, p. 809; Wilson, 1962, p. 299). Consequently, it can be concluded the most common form of multiple testing does not inflate Type I error rates.
+
+
+
+	People sometimes doubt the absence of Type I error rate inflation during single tests of multiple individual null hypotheses, but it is easy to demonstrate: In general, the actual Type I error rate is computed using the formula 1 - (1 - α)\textsuperscript{\emph{k}}, where \emph{k} is the number of tests that are used to make a decision about a specific null hypothesis. During single tests of multiple individual null hypotheses, \emph{k} = 1 because only one test is used to make a decision about each null hypothesis. Hence, the actual Type I error rate for each statistical inference is equal to 1 - (1 - α\textsubscript{Individual})\textsuperscript{1}, which is equal to the nominal α\textsubscript{Individual} (e.g., 1 -- [1 - .050]\textsuperscript{1 }= .050; see Rubin, 2024, Confusion II).
+
+
+
+	\subsubsection{Multiple Tests of a Single Joint Null Hypothesis}
+
+
+
+	Now imagine that the researcher groups some of the 20 dependent variables together for some reason. For example, they might consider attitudes about abortion, environmentalism, and the death penalty to be theoretically exchangeable in the context of a broader joint hypothesis about political orientation. In this case, the researcher might be prepared to accept a significant gender difference in relation to \emph{at least one} of these three hypotheses in order to make a statistical inference that there is a significant gender difference in political orientation. Here, the three null hypotheses (\emph{H}\textsubscript{0,1}, \emph{H}\textsubscript{0,2}, \& \emph{H}\textsubscript{0,3}) are treated as \emph{constituent} null hypotheses that form part of a broader \emph{joint} intersection null hypothesis about political orientation: “\emph{H}\textsubscript{0,1 }and\emph{ H}\textsubscript{0,2 }and \emph{H}\textsubscript{0,3}.” In this case, the rejection of \emph{any one }of the three constituent null hypotheses is sufficient to reject the entire intersection null hypothesis and make the statistical inference that, for example, “compared to male participants, female participants reported significantly more left-wing attitudes: abortion \emph{t}(326) = 2.54, \emph{p} = .011; environmentalism\textsubscript{ }\emph{t}(326) = .030, \emph{p} = .979; death penalty\textsubscript{ }\emph{t}(326) = 1.44, \emph{p} = .150.” In this example, the test statistics refer to each of the tests of the three constituent hypotheses and, because at least one of the \emph{p} values is significant at the conventional level (\emph{p} = .011), the researcher can reject the entire joint null hypothesis about “left-wing attitudes.”
+
+
+
+	During this \emph{union-intersection testing} (e.g., Hochberg \& Tamrane, 1987, p. 28; Kim et al., 2004), the actual familywise Type I error rate for the joint null hypothesis is always larger than the nominal alpha level for each of the constituent hypotheses: α\textsubscript{Constituent}. For example, if α\textsubscript{Constituent} is set at .050, then the familywise error rate will be 1 - (1 - α\textsubscript{Constituent})\textsuperscript{\emph{k}}, where \emph{k} is the number of constituent null hypotheses that are included in the joint null hypothesis. Hence, in the present example, the familywise error rate will be 1.00 - (1 - .050)\textsuperscript{3} = .143.
+
+
+
+	One concern here is that the Type I error rate for decisions about each of the \emph{constituent} null hypotheses becomes inflated. However, this concern is unwarranted. α\textsubscript{Constituent }is the nominal alpha level for the per comparison Type I error rate, and this error rate does not become inflated during multiple tests of a single joint null hypothesis for the same reason that α\textsubscript{Individual} does not become inflated during single tests of multiple individual null hypotheses (i.e., 1 - [1 - α\textsubscript{Constituent}]\textsuperscript{1} = α\textsubscript{Constituent}; Rubin, 2021c, p. 10979; Rubin, 2024; Tukey, 1953).
+
+
+
+	Another concern is that the Type I error rate for the decision about the \emph{joint} null hypothesis can become inflated. This concern is legitimate. In order to identify this Type I error rate inflation, we need to check whether the \emph{actual} familywise Type I error rate for the \emph{joint} null hypothesis is higher than the \emph{nominal} familywise Type I error rate for the \emph{joint} null hypothesis: α\textsubscript{Joint}. If both α\textsubscript{Constituent} and α\textsubscript{Joint} are set at the same level (e.g., the conventional level of .050), then the actual Type I error rate for the joint null hypothesis will be inflated above α\textsubscript{Joint}. However, researchers can avoid this inflation by adjusting α\textsubscript{Constituent} downwards until the familywise Type I error rate is at α\textsubscript{Joint}. For example, if \emph{k} = 3 and both α\textsubscript{Constituent} and α\textsubscript{Joint} are originally set at .050, then a Bonferroni adjustment (i.e., α ÷ \emph{k}) can be used to reduce α\textsubscript{Constituent} from .050 to .017 in order to maintain the familywise Type I error rate for the joint null hypothesis at the nominal α\textsubscript{Joint} of .050.
+
+
+
+	What happens if researchers do not adjust α\textsubscript{Constituent}? In this case, there will be Type I error rate inflation. However, this inflation can be easily identified and resolved by readers. For example, reconsider the previous statistical inference: “Compared to male participants, female participants reported significantly more left-wing attitudes: abortion \emph{t}(326) = 2.54, \emph{p} = .011; environmentalism\textsubscript{ }\emph{t}(326) = .030, \emph{p} = .979; death penalty\textsubscript{ }\emph{t}(326) = 1.44, \emph{p} = .150.” Here, it is clear that three test results are used to make a single statistical inference about a joint hypothesis that is broader than any of the three constituent hypotheses (i.e., “significantly more left-wing attitudes”). In the absence of any other information, we can assume that the tests use a conventional unadjusted α\textsubscript{Constituent} of .050. It is also clear that not all of the tests need to be significant to make the statistical inference (i.e., \emph{p}s\emph{ }= .011, .979, \& .150). Hence, the statistical inference is based on union-intersection testing. Finally, we can assume that α\textsubscript{Joint }has also been set at the conventional level of .050. Consequently, we can conclude that the actual familywise Type I error rate for this statistical inference is greater than a conventional α\textsubscript{Joint} of .050. In other words, there is Type I error rate inflation. However, the inflation is transparent, and so it can be the target of criticism by reviewers and readers. The inflation is also easily computed (.143 relative to a conventional α\textsubscript{Joint} of .050). Finally, the inflation is easily resolved. For example, any reader can implement a Bonferroni adjustment to remove the Type I error rate inflation and conclude that, using a conventional α\textsubscript{Joint} of .050 and an adjusted α\textsubscript{Constituent} of .017, the researcher's overall statistical inference would remain valid due to the \emph{p} = .011 result.
+
+
+
+	Is transparent reporting necessary to identify and resolve Type I error inflation in this situation? In particular, to determine \emph{k}, do readers need to be aware of all other tests that a researcher conducted? No, they do not, because the researcher is obviously not using any other test results to make their statistical inference. More generally, \emph{k} is the number of tests that are formally associated with a reported statistical inference. \emph{k} is not necessarily the number of tests that a researcher conducted, or planned to conduct, in their study. This position is consistent with philosophies of science and statistics that focus on the logical relations between a hypothesis and its evidence without considering their psychological origins (Fisher, 1956; Popper, 1962, 2002). Following this philosophy, a familywise error rate can be logically deduced from a potentially unplanned reported statistical inference rather than needing to be predetermined based on planned inferences that may never eventuate (cf. Mayo, 1996, p. 296). Furthermore, undisclosed alterations to planned inferences do not impact the validity of a familywise error rate that is logically deduced from an unplanned statistical inference.
+
+
+
+	Certainly, a familywise error rate may be logically inconsistent with a reported statistical inference (Rubin, 2024). For example, a reported statistical inference may be formally associated with \emph{three} significance tests when the familywise error rate is computed on the basis of only \emph{two} of these tests. However, as previously discussed, this logical error is readily identifiable by checking (a) the number of tests that are reported as being associated with a statistical inference and (b) the number of tests that are reported as being used to compute the associated familywise error rate. Again, it is not necessary to consult a preregistered plan to identify and resolve this logical inconsistency in the reported information.
+
+
+
+	Finally, it is worth noting that flexible theorizing and flexible theories allow the post hoc construction of multiple different joint null hypotheses and associated familywise error rates. As I discuss later in the section on \emph{p}-hacking, researchers' personal biases (including hindsight and confirmation biases) may influence which constructions are tested and reported. However, scientific hypotheses are usually judged on the basis of theoretical virtues (e.g., plausibility, universality, precision, depth, breadth, coherence, parsimony, etc.; Kuhn, 1977, p. 103; Mackonis, 2013; Popper, 1962, p. 56, p. 232; Popper, 2002, p. 438) rather than a researcher's personal motives and biases (e.g., to try to report a significant result and publish a paper; Reichenbach, 1938, p. 5; Popper, 1962, p. 140; Popper, 2002 p. 7; Rubin, 2022, pp. 541-542; Rubin \& Donkin, 2022, p. 19). Consequently, the lack of transparency about these personal biases does not prevent a rigorous appraisal of the theoretical rationales in question (Rubin, 2017, p. 314; Rubin, 2022, p. 539).
+
+
+
+	\subsubsection{Studywise Type I Error Rates}
+
+
+
+	Researchers are sometimes concerned about the probability of making at least one Type I error in their study or experiment. This concern about a \emph{studywise} or \emph{experimentwise} Type I error rate implies that they are making a statistical inference about a joint studywise null hypothesis that can be rejected by \emph{any} single significant result in their study. In practice, however, it is not common for researchers to make this type of inference because joint studywise null hypotheses do not usually have a useful theoretical basis. Consequently, most researchers should not be concerned about their studywise Type I error rate because it relates to a joint null hypothesis that they are not testing. Instead, researchers should be concerned about the error rates for the individual and/or joint hypotheses about which they actually make statistical inferences (Rubin, 2021c, p. 10991; Rubin, 2024).
+
+
+
+	To illustrate, reconsider the previous example in which a researcher tested for gender differences on 20 different dependent variables that measured a wide range of attitudes. Recall that three of these attitudes could be grouped into a theoretically meaningful joint null hypothesis about political orientation (i.e., attitudes towards abortion, environmentalism, and the death penalty). However, the other attitudes had nothing to do with political orientation and so had no theoretical basis for being included in this joint null hypothesis (e.g., attitudes about pizza and ice cream). The same issue of theoretical relevance applies to the consideration of joint studywise null hypotheses. Hence, in the present example, the researcher may not have a good theoretical basis for considering all 20 null hypotheses as constituents of a single joint null hypothesis that can be rejected following at least one significant gender difference. This being the case, they should not make a statistical inference about this studywise null hypothesis, and they should not be concerned about its associated studywise Type I error rate.
+
+
+
+	To be clear, I am not claiming that studywise error rates are \emph{always} irrelevant. They are relevant whenever researchers make statistical inferences about associated joint studywise null hypotheses on the basis of union-intersection testing and, in this case, researchers should adjust their α\textsubscript{Constituent} in order to control their studywise error rate at α\textsubscript{Joint}. My point is that this situation is likely to be relatively rare because, typically, a single study will include a collection of disparate hypotheses that do not form a theoretically meaningful joint studywise null hypothesis in aggregate (for similar views, see Bender \& Lange, 2001, p. 343; Hancock \& Klockars, 1996, p. 270; Hewes, 2003, p. 450; Hochberg \& Tamrane, 1987, p. 7; Morgan, 2007, p. 34; Oberauer \& Lewandowsky, 2019, p. 1609; Parker \& Weir, 2020, p. 2; Perneger, 1998, p. 1236; Rothman et al., 2008, pp. 236-237; Rubin, 2017b, p. 271; Rubin, 2020a, p. 382; Schulz \& Grimes, 2005, p. 1592). In such cases, a statistical inference about a joint studywise null hypothesis would need to be relatively vague and atheoretical, along the lines of: “The study's effect was significant.” It is not common for researchers to make this sort of abstract atheoretical statistical inference. Instead, researchers usually make more specific, theory-based statistical inferences that relate to substantive theoretical claims. Hence, as in the gender differences example, the researcher might infer that, “compared to male participants, female participants reported significantly more left-wing attitudes: abortion \emph{t}(326) = 2.54, \emph{p} = .011; environmentalism\textsubscript{ }\emph{t}(326) = .030, \emph{p} = .979; death penalty\textsubscript{ }\emph{t}(326) = 1.44, \emph{p} = .150.”
+
+
+
+	\subsubsection{Summary}
+
+
+
+	Type I error rate inflation is neither common nor problematic during multiple testing. The most common form of multiple testing is represented by single tests of multiple individual null hypotheses (García-Pérez, 2023). Most experts agree that this type of multiple testing does not inflate relevant Type I error rates because only one test is used to decide on each null hypothesis. Consequently, the most common form of multiple testing does not inflate Type I error rates. Indeed, the inappropriate (illogical) use of alpha adjustments in this type of testing situation may result in Type I error rate \emph{deflation}, rather than \emph{inflation} (Rubin, 2024).
+
+
+
+	A less common form of multiple testing is represented by multiple tests of a single joint null hypothesis (union-intersection testing). Type I error rate inflation is possible in this case because, if both α\textsubscript{Constituent} and α\textsubscript{Joint} are set at the same level, then the actual Type I error rate for the joint null hypothesis will be inflated above α\textsubscript{Joint}. However, this inflation can be easily identified by comparing (a) the number of statistical tests that are formally associated with a reported statistical inference and (b) the number of statistical tests that are used to compute the associated familywise error rate. Type I error rate inflation will be readily apparent if (a) is larger than (b), and it can be easily resolved by recomputing the familywise error rate using the correct number of tests as represented by (a).
+
+
+
+	Finally, multiple testing increases the studywise Type I error rate above α\textsubscript{Constituent}. However, researchers do not usually make statistical inferences about the associated joint studywise null hypotheses, and so this increase is usually irrelevant. Nonetheless, if it does become relevant, then it can be easily identified and resolved by adjusting α\textsubscript{Constituent} as described above.
+
+
+
+	\subsection{Selective Inference}
+
+
+
+	Imagine that a researcher checks the effect sizes of 100 correlations between 200 different variables (e.g., \emph{x}\textsubscript{1}--\emph{y}\textsubscript{1}, \emph{x}\textsubscript{2}--\emph{y}\textsubscript{2}, \emph{x}\textsubscript{3}--\emph{y}\textsubscript{3}, … \emph{x}\textsubscript{100}--\emph{y}\textsubscript{100}) and then decides to perform a significance test on the correlation between variables \emph{x}\textsubscript{57} and \emph{y}\textsubscript{57} because it had the largest effect size (for a similar example, see Taylor \& Tibshirani, 2015, p. 7629). If the researcher uses the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} result to reject a joint null hypothesis that could be rejected by a significant result on \emph{any} of the 100 constituent correlations, then they would need to adjust their α\textsubscript{Constituent }downwards to prevent their familywise error rate from exceeding their α\textsubscript{Joint}. However, it is uncommon for researchers to make such a \emph{selective inference}. Instead, researchers tend to make statistical inferences that are \emph{limited to} their selected test and data rather than extended to unselected tests and data that they could have used (Birnbaum, 1962, pp. 278-279; Cox, 1958, p. 359-361; Cox \& Mayo, 2010, p. 296; Lehmann, 1993, pp. 1245-1246; Mayo, 2014, p. 232; Reid \& Cox, 2015, p. 300). Hence, the researcher in the present example would be more likely to use the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} result to reject an individual null hypothesis about the relationship between \emph{x}\textsubscript{57} and \emph{y}\textsubscript{57} rather than a joint intersection null hypothesis about the relationships between \emph{x}\textsubscript{1}--\emph{y}\textsubscript{1}, \emph{x}\textsubscript{2}--\emph{y}\textsubscript{2}, \emph{x}\textsubscript{3}--\emph{y}\textsubscript{3}, … \emph{x}\textsubscript{100}--\emph{y}\textsubscript{100}. In the individual case, α\textsubscript{Constituent }and α\textsubscript{Joint} are irrelevant to the researcher's inference, and an unadjusted α\textsubscript{Individual} can be used without any concern about Type I error rate inflation. Note that, as discussed previously, this point stands even if the researcher does not disclose that they considered the other 99 correlations because those correlations are not formally associated with their reported statistical inference, which is about the relationship between \emph{x}\textsubscript{57} and \emph{y}\textsubscript{57}.
+
+
+
+	Alternatively, the researcher may decide to make a statistical inference about a joint null hypothesis based on a family of correlations, such as “\emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and\textsubscript{ }\emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and\textsubscript{ }\emph{x}\textsubscript{58}--\emph{y}\textsubscript{58}.” For example, in an fMRI study, these correlations might occur within the same brain region and, again, they may be selected because they “look promising.” In this case, the familywise error rate can be logically deduced from the statistical inference (i.e., \emph{k} = 3), and the formal theoretical rationale for the joint hypothesis can be critically evaluated on the basis of its theoretical virtues. Again, the familywise error rate for the statistical inference is not inflated by the existence of alternative planned or unplanned statistical inferences that could have been based on other joint null hypotheses from the set of correlations.
+
+
+
+	People sometimes confuse individual and constituent null hypotheses in this situation. For example, it is true that α\textsubscript{Constituent }would need to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} correlation to reject a joint null hypothesis that could be rejected by at least one significant result from among 100 potential correlations, because \emph{k} = 100 for this selective inference. Similarly, as described above, α\textsubscript{Constituent }would need to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} correlation to reject a joint null hypothesis that could be rejected by at least one significant result from among three potential correlations (e.g., “\emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and\textsubscript{ }\emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and\textsubscript{ }\emph{x}\textsubscript{58}--\emph{y}\textsubscript{58}”), because \emph{k} = 3 for this selective inference. However, this point does not imply that α\textsubscript{Individual} needs to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} result to reject the \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} null hypothesis, because \emph{k }= 1 for this individual inference.
+
+
+
+	Part of the confusion here is that people assume that selective \emph{analyses} always lead to selective \emph{inferences}. On the contrary, selective analyses usually lead to inferences that are \emph{limited to the selection}. For example, a researcher may select data and/or variables for analysis from a broader set. However, this act does not then obligate them to make a selective inference about a joint null hypothesis that refers to other data or variables from that set. Instead, it would be more usual for them to limit their inference to the data or variables that they have selected (i.e., an \emph{unconditional} inference about the selected data rather than a \emph{conditional} inference that is conditioned on the selection procedure).
+
+
+
+	More generally, it is important to avoid confusion about the reference sets to which statistical inferences refer. As Neyman (1950) explained, “many errors in computing probabilities are committed because of losing sight of the set of objects to which a given probability is meant to refer” (p. 15). A Type I error rate is meant to refer to a decision about a specified statistical (individual or joint) null population and not to any broader population from which that null population may have been selected. Hence, the selection of a particular subset of data for testing from a more inclusive set because it “looks promising” will not inflate the Type I error rate for a statistical inference as long as that inference refers to a population based on \emph{that particular subset of data} and not to a population based on the more inclusive set of data (for related discussions, see Fisher, 1956, p. 88-89; Kotzen, 2013, p. 167; Rubin, 2021c, p. 10983). For example, conducting multiple tests of a gender difference in the preference for ice cream in different European countries and then selectively reporting the results for France may bias claims about a gender difference in Europe but not claims about a gender difference in France. Of course, the result in France may represent a Type I error. However, this possibility is covered by the alpha level of the test that was conducted on the French data.
+
+
+
+	\subsection{Forking Paths}
+
+
+
+	A forking path occurs during data analysis when a result from one sample of data inspires a researcher to conduct a specific test in a situation in which they would have conducted a different test if they had observed a different result using a different sample (Gelman \& Loken, 2014). For example, a researcher might report that “this variable was included as a covariate in the analysis because it was significantly correlated with the outcome variable.” The implication here is that the variable would \emph{not} have been included as a covariate if it had \emph{not} been significantly correlated with the outcome variable in a different sample of data. Consequently, if the researcher makes a statistical inference about a joint null hypothesis that can be rejected following a significant result on at least one of the two tests (i.e., the test that includes the covariate and the test that does not), then their familywise Type I error rate will be greater than the α\textsubscript{Constituent }for each test (Rubin, 2020a, p. 380). Hence, the forking paths problem resolves to a case of multiple testing in which the “invisible multiplicity” is only apparent in a long run of repeated sampling (Gelman \& Loken, 2014, p. 460).
+
+
+
+	The forking paths problem assumes that a researcher will make a statistical inference about a joint null hypothesis that comprises the two forking paths in their analysis (e.g., a test that includes a covariate and a test that does not). \emph{If} the researcher makes this statistical inference, then they can adjust their α\textsubscript{Constituent }to retain their α\textsubscript{Joint} at the actual familywise error rate (i.e., α\textsubscript{Constituent }÷\textsubscript{ }2; Rubin, 2017a, p. 324). However, it is more likely that the researcher would make a more limited statistical inference based on only \emph{one} test in \emph{one} of the two forking paths (Birnbaum, 1962, pp. 278-279; Cox, 1958, p. 359-361; Cox \& Mayo, 2010, p. 296; Lehmann, 1993, pp. 1245-1246; Mayo, 2014, p. 232; Reid \& Cox, 2015, p. 300). In this case, the researcher's inference would refer to an imaginary long run of repeated sampling that, for example, always includes the variable as a covariate and never excludes it. An unadjusted α\textsubscript{Individual }would then be appropriate. Note that the Type I error rate is not inflated in either of these two situations.
+
+
+
+	\subsection{Exploratory Analyses}
+
+
+
+	An exploratory data analysis is one in which a study's analytical approach is guided by idiosyncratic results in one sample of data that may not occur in other samples. Consequently, the tests that are undertaken in one instance of an exploratory analysis may be quite different to those undertaken in repetitions of that analysis. This issue leads to multiple tests of a joint studywise null hypothesis both \emph{within each repetition} of the exploratory study and \emph{across the long run of its repetitions}. In theory, the associated studywise error rate would then need to account for every null hypothesis that could possibly be tested during the exploratory analysis and its repetitions. This situation has led several people to conclude that the exploratory studywise error rate cannot be computed or controlled (e.g., Hochberg \& Tamrane, 1987, p. 6; Nosek \& Lakens, 2014, p. 138; Wagenmakers, 2016). As Wagenmakers (2016) explained, “the problem is one of multiple comparisons with the number of comparisons unknown (De Groot, 1956/2014).”
+
+
+
+	There are three problems with this line of reasoning. First, in practice, a researcher is \emph{least} likely to make a statistical inference about a joint studywise null hypothesis during an \emph{exploratory} analysis because, in this situation, they are least likely to have a satisfactory theoretical rationale for aggregating a potentially infinite number of result-contingent null hypotheses into a single joint studywise null hypothesis.
+
+
+
+	Second, if a researcher does make a statistical inference about an exploratory joint studywise null hypothesis, then it would need to be relatively abstract and atheoretical (e.g., “the study's effect was significant”). Again, it is not common for researchers to make this type of statistical inference. Instead, they are likely to make more specific theory-based statistical inferences that relate to substantive theoretical inferences.
+
+
+
+	Finally, if a researcher was to make a statistical inference about an exploratory joint studywise null hypothesis, then they would need to tie it to specific statistical results. They could not simply report that, “based on an unknown number of unspecified tests that could have been conducted, the study's effect was significant.” They would need to specify the tests (actual and potential) and results (\emph{p }values) that form the basis for their statistical inference. Of course, they would only be able to specify a finite number of tests and, consequently, it would be possible for them to specify \emph{k} and adjust α\textsubscript{Constituent} in order to prevent Type I error rate inflation. In other words, the act of specifying a statistical inference includes making known the statistical tests upon which it rests. It is worth noting that recent work on multiverse analyses and specification curve analyses demonstrates the feasibility of making known large numbers of diverse statistical tests during exploratory data analyses (Del Giudice \& Gangestad, 2021; Simonsohn et al., 2020; Steegen et al., 2016).
+
+
+
+	In summary, in most cases, there is no need for researchers to be concerned about the inflation of an exploratory studywise Type I error rate because this error rate is irrelevant to the more limited and theoretically defined statistical inferences that they usually make. However, if researchers do proceed to make vague atheoretical statistical inferences about exploratory joint studywise hypotheses, then they will need to specify the tests involved, and so they will be able to specify \emph{k}, adjust α\textsubscript{Constituent}, and control the associated studywise error rate at α\textsubscript{Joint}.
+
+
+
+	\subsection{\emph{P}-Hacking}
+
+
+
+	\emph{P}-hacking is a questionable research practice that is intended to find and selectively report significant results. In their seminal article on “false positive psychology,” Simmons et al. (2011) proposed that \emph{p}-hacking inflates Type I error rates due to multiple testing. As they explained (p. 1359),
+
+
+
+	it is common (and accepted practice) for researchers to explore various analytic alternatives, to search for a combination that yields “statistical significance,” and to then report only what “worked.” The problem, of course, is that the likelihood of at least one (of many) analyses producing a falsely positive finding at the 5\% level is necessarily greater than 5\%.
+
+
+
+	On this basis, Simmons et al. (2011, p. 1359) argued that “undisclosed flexibility in data collection and analysis allows presenting anything as significant.”
+
+
+
+	A more formal analysis of Simmons et al.'s (2011) argument is as follows: If both α\textsubscript{Constituent} and α\textsubscript{Joint} are set at .050 during the union-intersection testing of an exploratory joint studywise null hypothesis, then the actual exploratory studywise error rate will exceed α\textsubscript{Joint}, and it will be easier to reject the exploratory joint studywise null hypothesis than it would be if the studywise error rate matched α\textsubscript{Joint}. Importantly, however, this situation does not allow researchers to present “anything as significant.” It only allows researchers to present the\emph{ exploratory joint studywise alternative hypothesis} as significant and, given its atheoretical rationale, this hypothesis will be abstract and scientifically useless, akin to: “The study's effect was significant.” Again, researchers tend to make more specific and theoretically informative statistical inferences based on (a) single tests of theory-based individual hypotheses and (b) multiple (union-intersection) tests of theory-based joint null hypotheses. Hence, I consider the implications of \emph{p}-hacking in each of these two contexts below.
+
+
+
+	\subsubsection{P-Hacking During Single Tests of Multiple Individual Null Hypotheses}
+
+
+
+	As explained previously, the actual Type I error rate for a single test of an individual null hypothesis remains at α\textsubscript{Individual} even if (a) multiple such tests are conducted side-by-side within the same study, and (b) some of the tests are conducted but not reported (for related discussions, see Rubin, 2017a, 2020a, 2021c, 2024). Simmons et al. (2011) are correct that, when \emph{k }≥ 2, familywise Type I error rates will be greater than α\textsubscript{Constituent} and greater than .050 when α\textsubscript{Constituent} is set at .050. However, neither of these points imply the inflation of Type I error rates for statistical inferences based on single tests of multiple individual null hypotheses. The argument that \emph{p}-hacking causes Type I error rate inflation during single tests of multiple individual null hypotheses confuses statistical inferences about \emph{individual} null hypotheses with statistical inferences about \emph{joint} null hypotheses.
+
+
+
+	To illustrate, consider Simmons et al.'s (2011) demonstration of the impact of \emph{p}-hacking on Type I error rates. Simmons et al. performed multiple tests on a real data set until they found a significant result that supported the outlandish theoretical inference that listening to the Beatles' song “When I'm Sixty-Four” makes people chronologically younger relative to listening to a control song (so-called “chronological rejuvenation”). The researchers then performed a series of simulations to compute the percentage of random samples in which there was at least one significant result in a family of, for example, “three \emph{t }tests, one on each of two dependent variables and a third on the average of these two variables” (i.e., Situation A in Table 1 of Simmons et al., 2011, p. 1361). Using an α\textsubscript{Constituent} of .050, an actual familywise Type I error rate of .095 was calculated. Note that, because the dependent variables were correlated with one another, this error rate is lower than the expected rate of .150 (Simmons et al., 2011, p. 1365, Note 3). Nonetheless, it is higher than the α\textsubscript{Constituent} of .050. Consequently, the researchers concluded that “flexibility in analyzing two dependent variables (correlated at \emph{r} = .50) nearly doubles the probability of obtaining a false-positive finding” (p. 1361). This conclusion is correct. However, the “false-positive finding” in question relates to the incorrect rejection of a \emph{joint} null hypothesis (i.e., that song condition has no effect on \emph{any} of the three dependent variables), not an \emph{individual} null hypothesis (e.g., that song condition has no effect on the first dependent variable), and the statistical inferences that are made in Simmons et al.'s demonstration are about \emph{individual} null hypotheses, not \emph{joint} null hypotheses. Hence, although Simmons et al.'s conclusion is correct, it is also irrelevant to the type of statistical inference that they consider.
+
+
+
+	To illustrate further, consider this part of a larger example that Simmons et al. (2011, p. 1364, bold text in original) used to demonstrate a fictitious researcher's selective reporting. In the following extract, the bolded text refers to a statistical inference that the researcher decided to report because it referred to a significant result, and the nonbolded text refers to a statistical inference that the researcher decided not to report because it referred to a nonsignificant result:
+
+
+
+	\textbf{An ANCOVA revealed the predicted effect: According to their birth dates, people were nearly a year-and-a-half younger after listening to “When I'm Sixty-Four” (adjusted }\emph{\textbf{M}}\textbf{ = 20.1 years) rather than to “Kalimba” (adjusted }\emph{\textbf{M }}\textbf{= 21.5 years), }\emph{\textbf{F}}\textbf{(}\textbf{1, 17) = 4.92, }\emph{\textbf{p}}\textbf{ = .040.} Without controlling for father's age, the age difference was smaller and did not reach significance (\emph{M}s = 20.3 and 21.2, respectively), \emph{F}(1, 18) = 1.01, \emph{p} = .33.
+
+
+
+	Importantly, in the above extract, both of the researcher's statistical inferences are based on single tests of individual null hypotheses, each underwritten by a separate statistical test and\emph{ p} value (i.e., \emph{k }= 1 for each decision about each null hypothesis). Consequently, the actual Type I error rates for each statistical inference are consistent with a conventional α\textsubscript{Individual} of .050. Furthermore, the fact that the second test is not reported has no impact on the actual Type I error rate of the first test, because the Type I error rate for the first statistical inference refers to an imaginary long run of random sampling in which father's age is \emph{always} included as a covariate in the test.
+
+
+
+	Simmons et al.'s (2011) concern about Type I error rate inflation would only be warranted if their fictitious researcher made a statistical inference about a \emph{joint} null hypothesis that referred to \emph{both} the bolded and the nonbolded tests. Obviously, in the current example, the researcher does not report the nonbolded test, and so they do not make a statistical inference about an associated joint null hypothesis. However, even if the researcher reported both tests as indicated above, they would still not be making a statistical inference about a joint null hypothesis. They would be following the more common approach of making two statistical inferences about two individual null hypotheses. They would only make a statistical inference about a joint null hypothesis if they used two or more significance tests to make a single decision about a single (joint) null hypothesis (Rubin, 2024). To illustrate, the following example represents a case of Type I error rate inflation during a statistical inference about a joint null hypothesis (assuming that α\textsubscript{Constituent} and α\textsubscript{Joint} are both set at .050):
+
+
+
+	An ANCOVA found that type of song had a significant effect on birth date (father's age included as a covariate, \emph{F}(1, 17) = 4.92, \emph{p} = .040; father's age excluded as a covariate, \emph{F}(1, 18) = 1.01, \emph{p} = .330.
+
+
+
+	Contrary to the present view, Nosek et al. (2018) argued that nontransparent selective reporting inflates the Type I error rate. Consequently, as they explained, “transparent reporting that 1 in 20 experiments or 1 in 20 analyses yielded a positive result will help researchers identify the one as a likely false positive” (p. 2603). However, like Simmons et al. (2011), this explanation confuses statistical inferences about individual hypotheses with statistical inferences about joint hypotheses. If researchers make a statistical inference based on a single test of an individual hypothesis, then their actual Type I error rate for this inference will be α\textsubscript{Individual} regardless of whether they make 1, 20, or a million other statistical inferences and even if their statistical result for that inference is the only significant result that they obtain or report. On the other hand, if researchers make a statistical inference based on the union-intersection testing of a joint null hypothesis that includes 20 constituent experiments or analyses, then their actual familywise Type I error rate for that inference will be 1 - (1 - α\textsubscript{Constituent})\textsuperscript{20}. However, contrary to Nosek et al., this familywise error rate does not refer to a “likely false positive” in relation to any “one” experiment or analysis (i.e., a constituent hypothesis; Rubin, 2024). It refers to an incorrect decision about a \emph{joint} null hypothesis that is based on the entire\emph{ family} of 20 experiments or analyses. Again, (a) if researchers do not make a statistical inference about this joint null hypothesis, then there is no need for them to be concerned about its familywise error rate, (b) researchers do not usually make statistical inferences about joint null hypotheses unless they have some theoretical rationale for doing so, and (c) if researchers do make statistical inferences about joint null hypotheses, then they can adjust their α\textsubscript{Constituent }in order to control their α\textsubscript{Joint }at some specified level.
+
+
+
+	\subsubsection{P-Hacking During Union-Intersection Testing of a Joint Null Hypothesis}
+
+
+
+	Does \emph{p}-hacking inflate the actual familywise Type I error rate when a researcher makes a statistical inference about a joint null hypothesis based on union-intersection testing? No, it does not, because the familywise error rate refers to the researcher's specified reported statistical inference and not to any other statistical inference that they made and then failed to report during their \emph{p}-hacking.
+
+
+
+	To illustrate, imagine that a researcher undertakes 20 union-intersection tests of a joint null hypothesis. They set α\textsubscript{Constituent} at .0025 in order to maintain α\textsubscript{Joint} at the conventional level of .050 (i.e., .0025 × 20). Using this α\textsubscript{Constituent}, they find no significant result. However, they notice that the smallest of their 20 \emph{p} values is .004. They decide not to report their first set of union-intersection tests because it failed to reject the joint null hypothesis (i.e., they engage in selective reporting). Instead, they conduct a second set of union-intersection tests that includes 10 of the previous 20 null hypotheses, and they deliberately include the hypothesis that yielded the \emph{p} = .004 result in this family of constituent hypotheses. This time, they set α\textsubscript{Constituent} at .005, which continues to maintain α\textsubscript{Joint} at the conventional level of .050 (i.e., .005 × 10). Note that the researcher now knows that the \emph{p} = .004 result will be significant using an α\textsubscript{Constituent} of .005, and so they know in advance that they are able to reject their new joint null hypothesis. Does this \emph{p}-hacking and selective reporting inflate the actual familywise Type I error rate above α\textsubscript{Joint}? No, it does not, because the nominal α\textsubscript{Joint} of .050 matches the actual familywise Type I error rate for the researcher's specified statistical inference, which has a \emph{k} of 10 and an α\textsubscript{Constituent} of .005.
+
+
+
+	The fact that \emph{k} was 20 for an unreported statistical inference does not affect the Type I error rate for the reported statistical inference, for which \emph{k} is 10. More generally, the Type I error rate for a statistical inference about an individual or joint null hypothesis is not impacted by other statistical inferences that could, would, or should have been made about other individual or joint null hypotheses. Additionally, it is not impacted by other statistical inferences that were planned or actually made and then either reported or not reported. Arguing that Type I error rates should be adjusted when making multiple statistical inferences confuses α\textsubscript{Constituent} with α\textsubscript{Individual }and α\textsubscript{Joint}. It is necessary to adjust α\textsubscript{Constituent} when using multiple tests to make a single statistical inference about a single joint null hypothesis. However, it is not necessary to adjust either α\textsubscript{Individual }or α\textsubscript{Joint} when making multiple statistical inferences about multiple individual or joint null hypotheses (see Rubin, 2024, Confusion III).
+
+
+
+	Also, note that the researcher deliberately selected the reported set of union-intersection tests \emph{because} they yielded a significant result. Again, however, this point does not alter the actual Type I error rate for their statistical inference, which matches their α\textsubscript{Joint} of .050. Consequently, they are entitled to claim that their test provides a conventionally low rate of erroneous rejection in a hypothetical long run of repeated random sampling.
+
+
+
+	Finally, in reporting their test, the researcher is likely to provide a theoretical rationale for the inclusion and exclusion of the specific constituent hypotheses in their joint null hypothesis, and they may omit the fact the \emph{p} = .004 result inspired their construction of this hypothesis. Again, however, this situation is not necessarily problematic because a researcher's personal motives and informal inspirations are not usually taken into account during the formal evaluation of scientific hypotheses (Popper, 1962, p. 140; Popper, 2002 p. 7; Reichenbach, 1938, p. 5; Rubin, 2022, pp. 541-542; Rubin \& Donkin, 2022, p. 19). Instead, hypotheses tend to be judged on the basis of theoretical virtues (e.g., plausibility, universality, precision, depth, breadth, coherence, parsimony, etc.; Kuhn, 1977, p. 103; Mackonis, 2013; Popper, 1962, p. 56, p. 232; Popper, 2002, p. 438). Hence, in the present example, reviewers and other readers would be able to evaluate the quality of the researcher's theoretical rationale for their joint null hypothesis, even if they are unaware of the researcher's\emph{ p}-hacking (Rubin, 2017, p. 314; Rubin, 2022, p. 539). If the theoretical rationale for including and excluding the various constituent hypotheses in the joint hypothesis is cogently deduced from a well-established, coherent theory that explains a broad range of other effects in a relatively deep and efficient manner, then it should be given serious consideration regardless of the timing of its deduction.
+
+
+
+	\subsubsection{Summary}
+
+
+
+	In summary, it is true that \emph{p}-hacking makes it easier to reject an exploratory joint studywise null hypothesis comprised of every null hypothesis that could possibly be tested in a study and its repetitions. However, researchers do not usually make statistical inferences about such hypotheses because they are not usually theoretically informative. For example, researchers do not usually claim that “the study's effect was significant,” independent of any theoretical explanation. Instead, they tend to make more specific statistical inferences about (a) single tests of theory-based individual hypotheses and (b) multiple (union-intersection) tests of theory-based joint null hypotheses. \emph{P}-hacking does not usually inflate the relevant Type I error rates in either of these cases.
+
+
+
+	\subsubsection{P-Hacking May Increase Theoretical Errors, Not Statistical Errors}
+
+
+
+	To be clear, I am not denying that \emph{p}-hacking occurs, and I am not arguing that it is always harmless. I am only arguing that it does not usually inflate relevant Type I error rates. In some cases, \emph{p}-hacking may be problematic because it increases\emph{ theoretical errors,} rather than \emph{statistical errors}, and it does so as a result of \emph{biased selective reporting }(Rubin, 2020a, p. 383).
+
+
+
+	For example, in Simmons et al.'s (2011) scenario, the inference that listening to the song “When I'm Sixty-Four” makes people younger may represent a theoretical error rather than a statistical error. In particular, the \emph{p}-hacked result may be a statistical \emph{true positive }that has been misinterpreted as representing “chronological rejuvenation” when it actually represents Meehlian crud or some other statistically real but theoretically misleading effect (Meehl, 1990b, pp. 207-208). In this case, the problem is theoretical misinterpretation rather than Type I error rate inflation.
+
+
+
+	Theoretical errors are more likely to occur when the overall pattern of theoretically relevant evidence is obscured due to biased selective reporting. Hence, it is important to try to identify and reduce biased reporting through the use of open science practices such as open data, open research materials, and robustness, multiverse, and specification curve analyses. For example, reporting all of the evidence for and against chronological rejuvenation would be likely to show that the \emph{p}-hacked result is part of a tiny minority of confirmatory evidence compared to a vast majority of disconfirmatory evidence, including other significant results that can be misinterpreted as showing the opposite of chronological rejuvenation (i.e., accelerated ageing!).
+
+
+
+	Importantly, theoretical errors can also be reduced through a rigorous critical evaluation of relevant theory. For example, in Simmons et al.'s (2011) scenario, we might ask: What larger theoretical framework explains “chronological rejuvenation”? What is the quality of that theory relative to other explanations for the results? How well does that theory justify the specific methodological and analytical decisions that the researcher made (e.g., including father's age as a covariate)? And what other evidence is there for and against the theory in the current study aside from a single ANCOVA result? These theoretical issues were not considered in Simmons et al.'s scenario. However, in practice, they would operate as an important (not infallible) line of defence against theoretical errors by helping to (a) screen out low-quality theories and (b) motivate and guide efforts to detect biased selective reporting (see also Simmons et al., 2011, p. 1363, Point 3; Rubin, 2017, p. 314; Syrjänen, 2023, p. 16).
+
+
+
+	Neyman and Pearson (1928, p. 232) cautioned that significance “tests should only be regarded as tools which must be used with discretion and understanding, and not as instruments which in themselves give the final verdict” (see also Bolles, 1962, p. 645; Boring, 1919, pp. 337-338; Chow, 1998, p. 169; Cox, 1958, p. 357; Hager, 2013, p. 261; Haig, 2018, p. 199; Lykken, 1968, p. 158; McShane et al., 2023; Meehl, 1978, p. 824; Meehl, 1997, p. 401; Szollosi \& Donkin, 2021, p. 5). \emph{P}-hacking is most problematic for those who ignore this advice and rely on \emph{p} values as the sole arbiters of scientific decisions rather than as mere steppingstones on the way to making substantive theoretical inferences during a fallible process of inference to the best explanation (Haig, 2009; Mackonis, 2013).
+
+
+
+	\subsection{Optional Stopping}
+
+
+
+	In the case of undisclosed optional stopping or data peeking, a researcher tests a hypothesis using a certain sample size and then collect more data and retest that same hypothesis using a larger sample size if their first test does not yield a significant result. They then continue this process until they obtain a significant result, at which point they report their significant result and hide their nonsignificant results.
+
+
+
+	Undisclosed optional stopping represents result-dependent multiple testing across a series of tests that have different sample sizes. A key concern here is that the α\textsubscript{Constituent} for each test needs to be adjusted to account for the union-intersection testing of a joint null hypothesis that will be rejected when one of the tests yields a significant result. Failure to adjust α\textsubscript{Constituent} will lead to inflation of the familywise error rate above α\textsubscript{Joint}. A further a concern is that, if the number of “stop-and-tests” is not specified in advance, then the actual familywise Type I error rate will be incalculable in repetitions of an exploratory optional stopping procedure. However, neither of these concerns is warranted.
+
+
+
+	First, a researcher who engages in undisclosed optional stopping has no choice but to limit their statistical inference to their final reported sample size because, by definition, they do not refer to any of their previous tests that used different sample sizes. In this case, it is appropriate for the researcher to use an unadjusted α\textsubscript{Individual}. Here, α\textsubscript{Individual} refers to the frequency with which they would make an incorrect decision to reject the specified statistical null hypothesis during an imaginary long run of repeated random sampling in which samples are the same size as that used in the final reported test (e.g., \emph{N} = 300; Fraser, 2019, p. 140; Reid, 1995, p. 138). This long run would not include any of the other unreported tests that yielded nonsignificant results (e.g., \emph{N}s = 270, 280, \& 290) or any of the tests that might have occurred had the current test not yielded a significant result (e.g., \emph{N}s = 310, 320, 330, etc.). Certainly, it is possible to make an inference about a joint null hypothesis that refers to other tests in the series (see below). However, this would represent a different statistical inference that is warranted by a different (familywise) Type I error rate. The current statistical inference is restricted to a reference set that excludes the unreported tests. As in the case of \emph{p}-hacking, the fact that this inference is reported \emph{because} it refers to a significant result does not alter the individual hypothetical probability of that result. To illustrate, imagine that you throw a 20-sided dice, hoping to get an “8,” and you only throw the dice again if you fail to get an “8” on your previous throw. You finally get an “8” on your 20\textsuperscript{th} throw. In this case, it would be correct to report that you had a .050 probability of getting an “8” \emph{on that }\emph{particular throw} even if you did not report your first 19 unsuccessful throws. This individual (marginal) probability is not invalidated by the fact that the familywise (union) probability of getting an “8” in \emph{at least one of the 20 throws} is .642. Furthermore, given that your probability statement refers to a single throw, a repetition of the associated procedure would only entail a single throw, and not 20 throws.
+
+
+
+	Second, if a researcher wanted to adjust their α\textsubscript{Constituent} to maintain their familywise Type I error rate at α\textsubscript{Joint }during the process of optional stopping, then they could do so without planning the number of stop-and-tests in advance. Again, relevant Type I error rates refer to reported statistical inferences and not to planned but unreported statistical inferences. Hence, for example, if a researcher planned to adjust their familywise Type I error rate for a series of five stop-and-tests but ended up deviating from that plan and making a statistical inference about a series of only three stop-and-tests, then they should adjust their α\textsubscript{Constituent} based on \emph{k }= 3, not \emph{k} = 5. In this case, their actual familywise error rate for their specified (\emph{k} = 3) statistical inference would match their α\textsubscript{Joint }for that inference.
+
+
+
+	There may be a concern that the researcher may not report their “actual” number of stop-and-tests in the previous example. However, we should not be concerned about the overall number of tests that a researcher has happened to perform. Instead, we should be concerned about the “actual” number of tests that are formally associated with a specific statistical inference (i.e., \emph{k}) and, in the current case, that number is three, not five.
+
+
+
+	Finally, as with \emph{p}-hacking, there may also be a concern that a researcher's selective reporting is hiding relevant disconfirming evidence (i.e., biased selective reporting). It is debatable whether the null results from prior stop-and-tests represent “disconfirming evidence” given that null results represent the absence of evidence rather than evidence of absence (Altman \& Bland, 1995). Nonetheless, even if null results are accepted as disconfirming evidence, the presence of this undisclosed evidence will not inflate the Type I error rate because, as discussed previously, hiding disconfirming evidence biases theoretical inferences, not statistical inferences. Furthermore, a significant result obtained via undisclosed optional stopping may either confirm or disconfirm a directional hypothesis. Hence, if a researcher stops data collection when they obtain a significant result, regardless of whether that result confirms or disconfirms their hypothesis, then their optional stopping will not bias their theoretical inference about their directional hypothesis (Rubin, 2020a, p. 381).
+
+
+
+	\subsection{Double Dipping}
+
+
+
+	It has been proposed that the same data cannot be used to both generate and then test the same hypothesis (e.g., Nosek et al., 2018, p. 2600; Wagenmakers et al., 2012, p. 633). Engaging in this double dipping strategy is thought to inflate Type I error rates. For example, Wagenmakers et al. (2012, p. 633) argued that, “if you carry out a hypothesis test on the very data that inspired that test in the first place then the statistics are invalid… Whenever a researcher uses double-dipping strategies, Type I error rates will be inflated and\emph{ p} values can no longer be trusted.”
+
+
+
+	Contrary to this argument, carrying out a hypothesis test on the same data that inspired the test does not necessarily invalidate the statistics. For example, it is perfectly acceptable to use the result from one statistical test to create a statistical null hypothesis for a second test which is then tested using the same data as long as the second test's result is independent from the first test's result. The logical problem of circularity only occurs when the same result is used to both (a) support the theoretical rationale for a hypothesis and (b) claim additional support for that hypothesis (Devezer et al., 2021; Kriegeskorte et al., 2009, p. 535; Rubin \& Donkin, 2022, pp. 5-6; Spanos, 2010, p. 216; Worrall, 2010, p. 131). Furthermore, this problem of circularity represents a theoretical error, rather than a statistical error. Consequently, although double dipping may sometimes invalidate theoretical inferences, it does not inflate Type I error rates.
+
+
+
+	\subsection{HARKing}
+
+
+
+	Hypothesising after the results are known, or HARKing, refers to the questionable research practice of “presenting post hoc hypotheses in a research report as if they were, in fact, a priori hypotheses” (Kerr, 1998, p. 197). HARKing is thought to inflate Type I error rates (e.g., Bergkvist, 2020; Stefan \& Schönbrodt, 2023, p. 4). However, HARKing represents post hoc \emph{theorizing}, and so it affects theoretical inferences rather than statistical inferences. Indeed, in his seminal article on the subject, Kerr (1998, p. 205) did not argue that HARKing inflates Type I error rates. Instead, his concern was that, when “a Type I error is followed by HARKing, then ‘theory' is constructed to account for what is, in fact, an illusory effect” (p. 205). In other words, he was not concerned that HARKing inflates Type I error rates, but rather that it may be used to “translate Type I errors into theory” (Kerr, 1998, p. 205).
+
+
+
+	Kerr (1998) conceded that Type I errors can also be translated into theory following explicit, transparent, post hoc theorizing, rather than undisclosed HARKing. However, he believed that the translation is more problematic following HARKing because “an explicitly post hoc hypothesis implicitly acknowledges its dependence upon the result in hand as a cornerstone (or perhaps, the entirety) of its foundation, and thereby sensitizes the reader to the vulnerability of the hypothesis to the risks of an immediate Type I error” (Kerr, 1998, p. 205). Contrary to this reasoning, “the risks of an immediate Type I error” do not vary as a function of either the origin or quality of a hypothesis. To believe that they do is to commit the Bayesian inversion fallacy. Hence, there is no reason to believe that HARKing either inflates Type I error rates or that it exacerbates the costs of Type I errors.
+
+
+
+	\section{Evidence for Type I Error Rate Inflation?}
+
+
+
+	What about the evidence of Type I error rate inflation? There are two problems with this evidence that threaten its validity.
+
+
+
+	First, similar to Simmons et al.'s (2011) demonstration, evidence of Type I error inflation tends to confound statistical inferences about \emph{individual} null hypotheses with statistical inferences about \emph{joint} null hypotheses. For example, simulations of actual Type I error rates compute the familywise error rate for a joint null hypothesis and then apply that error rate to individual null hypotheses, claiming that, because the familywise error rate is, for example, .143, there is a .143 chance of incorrectly rejecting \emph{each} \emph{individual }null hypothesis. Again, this reasoning is widely acknowledged to be incorrect (Armstrong, 2014, p. 505; Cook \& Farewell, 1996, pp. 96--97; Fisher, 1971, p. 206; García-Pérez, 2023, p. 15; Greenland, 2021, p. 5; Hewes, 2003, p. 450; Hurlbert \& Lombardi, 2012, p. 30; Matsunaga, 2007, p. 255; Molloy et al., 2022, p. 2; Parker \& Weir, 2020, p. 564; Parker \& Weir, 2022, p. 2; Rothman, 1990, p. 45; Rubin, 2017b, pp. 271--272; Rubin, 2020a, p. 380; Rubin, 2021a, 2021c, pp. 10978-10983; Rubin, 2024, p. 3; Savitz \& Olshan, 1995, p. 906; Senn, 2007, pp. 150-151; Sinclair et al., 2013, p. 19; Tukey, 1953, p. 82; Turkheimer et al., 2004, p. 727; Veazie, 2006, p. 809; Wilson, 1962, p. 299).
+
+
+
+	Second, evidence of Type I error rate inflation may also depend on a fallacious comparison between (a) the probability of rejecting a null hypothesis when it is true and (b) the probability of a null hypothesis being true when it is rejected (Pollard \& Richardson, 1987). As discussed previously, the first probability is equivalent to a frequentist Type I error rate: Pr(reject \emph{H}\textsubscript{0 }; \emph{H}\textsubscript{0} is true). However, the second probability does not provide an appropriate benchmark against which to judge Type I error rate inflation because it represents a conditional posterior probability about the truth of the null hypothesis: Pr(\emph{H}\textsubscript{0} is true | reject \emph{H}\textsubscript{0}). Hence, showing that Pr(\emph{H}\textsubscript{0} is true | reject \emph{H}\textsubscript{0}) > Pr(reject \emph{H}\textsubscript{0 }; \emph{H}\textsubscript{0} is true) does not provide a valid demonstration of Type I error rate inflation. Instead, it demonstrates the Bayesian inversion fallacy because it confuses the unconditional probability of rejecting a true null hypothesis with the conditional probability that a null hypothesis is true given that it has been rejected (Gigerenzer, 2018; Greenland et al., 2016; Mayo \& Morey, 2017; Pollard \& Richardson, 1987).
+
+
+
+	\section{Implications for the Replication Crisis}
+
+
+
+	Type I error rate inflation may not be a major contributor to the replication crisis. Certainly, some failed replications may be due to Type I errors in original studies. However, actual Type I error rates are rarely inflated above their nominal levels, and so the level of Type I errors in a field is liable to be around that field's conventional nominal level (see also Neyman, 1977, p. 108). Hence, Type I error rate inflation cannot explain unexpectedly low replication rates.
+
+
+
+	In contrast, theoretical errors may be higher than expected. In particular, unacknowledged misinterpretations of theory, methodology, data, and analyses may all inflate theoretical errors above their “nominal” expected level, resulting in incorrect theoretical inferences and unexpectedly low replication rates. For example, researchers may assume a higher degree of theoretical equivalence between an original study and a “direct” replication than is warranted. A failed replication may then represent the influence of an unrecognized “hidden moderator” that produces a true positive result in the original study and a true negative result in the replication study. Of course, scientists should attempt to specify and investigate such hidden moderators in future studies (Klein et al., 2018, p. 482). Nonetheless, ignoring hidden moderators does not mitigate their deleterious impact on replicability!
+
+
+
+	From this perspective, the replication crisis may be explained, at least in part, by researchers' underestimation of theoretical errors and their misinterpretation of statistical errors (i.e., statistical reification; Greenland, 2017b, 2023; see also Brower, 1949; Gigerenzer, 1993). Specifically, researchers may overestimate (a) their theoretical understanding of effects and (b) the extent to which a Type I error rate implies replicability. These two issues may combine to produce overconfident researchers who have unrealistically high expectations about replication rates during “direct” replications (Rubin, 2021, pp. 5828-5829). Accordingly, an appropriate response to the replication crisis is for researchers to adopt a more modest perspective that recognizes (a) the important role of scientific ignorance during theoretical inferences (e.g., Feynman, 1955; Firestein, 2012; Merton, 1987) and (b) the limited scope of Type I error rates during statistical inferences (e.g., Bolles, 1962; Cox, 1958; Fisher, 1926; Greenland, 2017a, 2017b). This more modest perspective may help to provide more realistic expectations about replication rates and a better appreciation of replication failures as a vital aspect of scientific progress (Barrett, 2015; Redish et al., 2018; Rubin, 2021b).
+
+
+
+	\section{Summary and Conclusion}
+
+
+
+	The replication crisis has been partly explained in terms of Type I error rate inflation. In particular, it has been argued that questionable research practices inflate actual Type I error rates above their nominal levels, leading to an unexpectedly high level of false positives in the literature and, consequently, unexpectedly low replication rates. In this article, I have offered the alternative view that questionable and other research practices do not usually inflate relevant Type I error rates.
+
+
+
+	During significance testing, each statistical inference is assigned a nominal Type I error rate or alpha level. Type I error rate inflation occurs if the \emph{actual} Type I error rate for that inference is higher than the \emph{nominal} error rate. The actual Type I error rate can be calculated using the formula 1 - (1 - α)\textsuperscript{\emph{k}}, in which \emph{k} is the number of significance tests that are used to make the statistical inference. I have argued that the actual Type I error rate is not usually inflated above the nominal rate and that, when it is, the inflation is transparent and easily resolved because\emph{ k} is known by readers. Indeed, \emph{k} must be known by readers because the researcher must formally associate their statistical inference with one or more significance tests, and \emph{k} is the number of those tests. A key point here is that \emph{k} is not the number of tests that a researcher conducted, including those that they conducted and did not report. Instead, \emph{k} is the number of tests that the researcher formally associates with a statistical inference about a specified null hypothesis.
+
+
+
+	It is true that some actual Type I error rates may be above a field's conventional alpha level. However, this issue does not necessarily represent Type I error rate inflation. Type I error rate inflation only occurs when the actual Type I error rate for a specified statistical inference is higher than the nominal Type I error rate for that inference, regardless of whether that nominal rate is higher or lower than the conventional level.
+
+
+
+	It is true that the Type I error rate for a researcher's specified statistical inference about a particular individual or joint null hypothesis may be different to the Type I error rates for other statistical inferences that they could, would, or should have made about other individual or joint null hypotheses or for other statistical inferences that they planned to make or actually made and then either reported or failed to report. It is also true that different researchers may disagree about which are the most appropriate or theoretically relevant statistical inferences or alpha levels in any given research situation. However, none of these points imply that the actual Type I error rate for a researcher's reported statistical inference is inflated above the alpha level that they have set for that particular inference.
+
+
+
+	It is true that the actual familywise Type I error rate is always above α\textsubscript{Constituent}. However, researchers can adjust α\textsubscript{Constituent} to avoid Type I error rate inflation with respect to their statistical inferences about associated joint null and, if they do not adjust α\textsubscript{Constituent}, then the extent of the inflation will be transparent to others and easily resolved. Hence, this potential issue is not problematic.
+
+
+
+	It is also true that the \emph{studywise} Type I error rate is always above α\textsubscript{Constituent}. However, researchers do not usually make statistical inferences about joint studywise null hypotheses, and so this point is usually irrelevant. Nonetheless, if a studywise error rate does become relevant, then it can be identified and controlled by adjusting α\textsubscript{Constituent}. This adjustment is even possible if researchers take the unusual step of making relatively vague and atheoretical statistical inferences about exploratory joint studywise null hypotheses (e.g., “the study's effect was significant”) because, even in this case, they will need to specify the relevant statistical tests that they are using to make this inference.
+
+
+
+	Finally, it is true that a researcher's probability of incorrectly rejecting a substantive null hypothesis and incorrectly accepting a substantive alternative hypothesis may be greater than their alpha level because this probability may be influenced by theoretical errors as well as Type I errors. However, these theoretical errors cannot be said to inflate Type I error rates because Type I error rates refer to random sampling error per se. They do not account for theoretical errors.
+
+
+
+	Based on these points, I have argued that the following research practices do not usually inflate relevant Type I error rates: model misspecification, multiple testing, selective inference, forking paths, exploratory analyses,\emph{ p}-hacking, optional stopping, double dipping, and HARKing. My view is consistent with a logico-historical approach to hypothesis testing that considers the logical relations between a reported hypothesis and its test results independent from the psychological origin of the hypothesis and results (e.g., researcher bias; Musgrave, 1974, p. 17; Reichenbach, 1938, p. 5; Popper, 1962, p. 140; Popper, 2002 p. 7). Hence, contrary to Mayo's (1996, 2018) error statistical approach, my logical inference-based approach denies that “biasing selection effects” in the testing context inflate Type I error rates. Instead, it offers a more restricted conceptualization of Type I error rates as indicators of the frequency of incorrect decisions in hypothetical and potentially unplanned testing situations in which random sampling error is the only source of decision-making error. This more modest conceptualization may help to provide more realistic expectations about replication rates and, consequently, less concern about replication failures.
+
+
+
+	\section{Endnotes}
+
+	\begin{enumerate}
+
+
+		\item The semicolon in “Pr(reject \emph{H}\textsubscript{0 }\textbf{; }\emph{H}\textsubscript{0} is true)” is used to indicate that “\emph{H}\textsubscript{0} is true” is a fixed assumption, rather than a random variable that can be true or false. Hence, Pr(reject \emph{H}\textsubscript{0 }\textbf{; }\emph{H}\textsubscript{0} is true) is an unconditional probability rather than a conditional probability. In contrast, the vertical bar in “Pr(\emph{H}\textsubscript{0} is true \textbf{| }reject \emph{H}\textsubscript{0})” is used to indicate a conditional probability (Mayo \& Morey, 2017, Footnote 2; Mayo \& Spanos, 2006, p. 331; Wasserman, 2013).
+
+
+
+		\item
+		Fisher (1930, p. 530) explained that the Bayesian approach of “inverse probability” is applicable when “we know that the population from which our observations were drawn had itself been drawn at random from a super-population of known specification” (e.g., a superpopulation of 200 null populations of which 100 are known to be true and 100 are known to be false). Hence, as Cox (1958) explained, “if the population sampled has itself been selected by a random procedure with known prior probabilities, it seems to be generally agreed that inference should be made using Bayes's theorem” (pp. 357-358).
+
+
+	\end{enumerate}
+
+
+
+
+
+	\section{References}
+
+
+
+	Altman, D. G., \& Bland, J. M. (1995). Absence of evidence is not evidence of absence. \emph{British Medical Journal, 311}(7003), 485--485. \href{https://doi.org/10.1136/bmj.311.7003.485}{https://doi.org/10.1136/bmj.311.7003.485}
+
+
+
+	Armstrong, R. A. (2014). When to use the Bonferroni correction. \emph{Ophthalmic and Physiological Optics, 34}(5), 502-508. \href{https://doi.org/10.1111/opo.12131}{https://doi.org/10.1111/opo.12131}
+
+
+
+	Barrett, L. F. (2015). Psychology is not in crisis. \emph{The New York Times}. \href{https://www.nytimes.com/2015/09/01/opinion/psychology-is-not-in-crisis.html}{https://www.nytimes.com/2015/09/01/opinion/psychology-is-not-in-crisis.html}
+
+
+
+	Bender, R., \& Lange, S. (2001). Adjusting for multiple testing—when and how? \emph{Journal of Clinical Epidemiology, 54}(4)\emph{, }343-349. \href{https://doi.org/10.1016/S0895-4356(00)00314-0}{https://doi.org/10.1016/S0895-4356(00)00314-0}
+
+
+
+	Benjamin, D. J., Berger, J. O., Johannesson, M., Nosek, B. A., Wagenmakers, E. J., Berk, R., Bollen, K. A., Brembs, B., Brown, L., Camerer, C., Cesarini, D., Chambers, C. D., Clyde, M., Cook, T. D., De Boeck, P., Dienes, Z., Dreber, A., Easwaran, K., Efferson, C., ... \& Johnson, V. E. (2018). Redefine statistical significance. \emph{Nature Human Behaviour, 2}(1), 6-10. \href{https://doi.org/10.1038/s41562-017-0189-z}{https://doi.org/10.1038/s41562-017-0189-z}
+
+
+
+	Bergkvist, L. (2020). Preregistration as a way to limit questionable research practice in advertising research. \emph{International Journal of Advertising}, \emph{39}(7), 1172-1180. \href{https://doi.org/10.1080/02650487.2020.1753441}{https://doi.org/10.1080/02650487.2020.1753441}
+
+
+
+	Berk, R. A., Western, B., \& Weiss, R. E. (1995). Statistical inference for apparent populations. \emph{Sociological Methodology, 25,} 421-458. \href{https://doi.org/10.2307/271073}{https://doi.org/10.2307/271073}
+
+
+
+	Birnbaum, A. (1962). On the foundations of statistical inference. \emph{Journal of the American Statistical Association}, \emph{57}(298), 269-306. \href{https://doi.org/10.1080/01621459.1962.10480660}{https://doi.org/10.1080/01621459.1962.10480660}
+
+
+
+	Bolles, R. C. (1962). The difference between statistical hypotheses and scientific hypotheses. \emph{Psychological Reports}, \emph{11}(3), 639-645. \href{https://doi.org/10.2466/pr0.1962.11.3.639}{https://doi.org/10.2466/pr0.1962.11.3.639}
+
+
+
+	Boring, E. G. (1919). Mathematical vs. scientific significance. \emph{Psychological Bulletin, 16}(10), 335-338. \href{https://doi.org/10.1037/h0074554}{https://doi.org/10.1037/h0074554}
+
+
+
+	Brower, D. (1949). The problem of quantification in psychological science. \emph{Psychological Review, 56}(6), 325--333. \href{https://doi.org/10.1037/h0061802}{https://doi.org/10.1037/h0061802}
+
+
+
+	Chow, S. L. (1998). Précis of statistical significance: Rationale, validity, and utility. \emph{Behavioral and Brain Sciences, 21}(2), 169-194. \href{https://doi.org/10.1017/S0140525X98001162}{https://doi.org/10.1017/S0140525X98001162}
+
+
+
+	Cook, R. J., \& Farewell, V. T. (1996). Multiplicity considerations in the design and analysis of clinical trials.\emph{ Journal of the Royal Statistical Society: Series A (Statistics in Society), 159}(1)\emph{, }93-110. \href{http://doi.org/10.2307/2983471}{http://doi.org/10.2307/2983471}
+
+
+
+	Cox, D. R. (1958). Some problems connected with statistical inference. \emph{Annals of Mathematical Statistics, 29}(2), 357-372. http://doi.org/10.1214/aoms/1177706618
+
+
+
+	Cox, D. R., \& Mayo, D. G. (2010). Objectivity and conditionality in frequentist inference. In D. G. Mayo \& A. Spanos (Eds.), \emph{Error and inference: Recent exchanges on experimental reasoning, reliability, and the objectivity and rationality of science} (pp. 276-304). Cambridge University Press. http://doi.org/10.1017/CBO9780511657528
+
+
+
+	Del Giudice, M., \& Gangestad, S. W. (2021). A traveler's guide to the multiverse: Promises, pitfalls, and a framework for the evaluation of analytic decisions. \emph{Advances in Methods and Practices in Psychological Science, 4}(1). \href{https://doi.org/10.1177/2515245920954925}{https://doi.org/10.1177/2515245920954925}
+
+
+
+	Dennis, B., Ponciano, J. M., Taper, M. L., \& Lele, S. R. (2019). Errors in statistical inference under model misspecification: Evidence, hypothesis testing, and AIC. \emph{Frontiers in Ecology and Evolution, 7,} Article 372. \href{https://doi.org/10.3389/fevo.2019.00372}{https://doi.org/10.3389/fevo.2019.00372}
+
+
+
+	Devezer, B., \& Buzbas, E. O. (2023). Rigorous exploration in a model-centric science via epistemic iteration. \emph{Journal of Applied Research in Memory and Cognition, 12}(2), 189--194. \href{https://doi.org/10.1037/mac0000121}{https://doi.org/10.1037/mac0000121}
+
+
+
+	Devezer, B., Navarro, D. J., Vandekerckhove, J., \& Buzbas, E. O. (2021). The case for formal methodology in scientific reform. \emph{Royal Society Open Science, 8}(3), Article 200805. https://doi.org/10.1098/rsos.200805
+
+
+
+	Feynman, R. P. (1955). The value of science. \emph{Engineering and Science, 19}(3), 13-15. \href{https://calteches.library.caltech.edu/1575/1/Science.pdf}{https://calteches.library.caltech.edu/1575/1/Science.pdf}
+
+
+
+	Firestein, S. (2012). \emph{Ignorance: How it drives science}. Oxford University Press.
+
+
+
+	Fisher, R. A. (1922). On the mathematical foundations of theoretical statistics. \emph{Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character, 222,} 309-368. \href{https://doi.org/10.1098/rsta.1922.0009}{https://doi.org/10.1098/rsta.1922.0009}
+
+
+
+	Fisher, R. A. (1926). The arrangement of field experiments. \emph{Journal of the Ministry of Agriculture. 33, }503-515. \href{https://doi.org/10.23637/rothamsted.8v61q}{https://doi.org/10.23637/rothamsted.8v61q}
+
+
+
+	Fisher, R. A. (1930). Inverse probability. \emph{Mathematical Proceedings of the Cambridge Philosophical Society, 26}(4), 528-535. \href{https://doi.org/10.1017/S0305004100016297}{https://doi.org/10.1017/S0305004100016297}
+
+
+
+	Fisher, R. A. (1956). \emph{Statistical methods and scientific inference}. Oliver \& Boyd.
+
+
+
+	Fisher, R. A. (1971). \emph{The design of experiments }(9\textsuperscript{th} ed.)\emph{.} Hafner Press.
+
+
+
+	Fraser, D. A. S. (2019). The \emph{p}-value function and statistical inference. \emph{The American Statistician}, \emph{73}(sup1), 135-147. \href{https://doi.org/10.1080/00031305.2018.1556735}{https://doi.org/10.1080/00031305.2018.1556735}
+
+
+
+	García-Pérez, M. A. (2023). Use and misuse of corrections for multiple testing. \emph{Methods in Psychology}, \emph{8}, Article 100120. \href{https://doi.org/10.1016/j.metip.2023.100120}{https://doi.org/10.1016/j.metip.2023.100120}
+
+
+
+	Gelman, A., \& Loken, E. (2014). The statistical crisis in science. \emph{American Scientist, 102,} Article 460. \href{http://www.google.com/url?q=http%3A%2F%2Fdx.doi.org%2F10.1511%2F2014.111.460&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHR0KgWDzAsR3DARSGVOIw6Y9k40g}{http://dx.doi.org/10.1511/2014.111.460}
+
+
+
+	Gigerenzer, G. (1993). The superego, the ego, and the id in statistical reasoning. In G. Keren \& C. Lewis (Eds.), \emph{A handbook for data analysis in the behavioral sciences: Methodological issues} (pp. 311--339). Lawrence Erlbaum Associates.
+
+
+
+	Gigerenzer, G. (2018). Statistical rituals: The replication delusion and how we got there. \emph{Advances in Methods and Practices in Psychological Science, 1}(2), 198-218. \href{https://doi.org/10.1177/2515245918771329}{https://doi.org/10.1177/2515245918771329}
+
+
+
+	Greenland, S. (2017a). For and against methodologies: Some perspectives on recent causal and statistical inference debates. \emph{European Journal of Epidemiology, 32,} 3-20. \href{https://doi.org/10.1007/s10654-017-0230-6}{https://doi.org/10.1007/s10654-017-0230-6}
+
+
+
+	Greenland, S. (2017b). Invited commentary: The need for cognitive science in methodology. \emph{American Journal of Epidemiology}, \emph{186}(6), 639-645. \href{https://doi.org/10.1093/aje/kwx259}{https://doi.org/10.1093/aje/kwx259}
+
+
+
+	Greenland, S. (2021). Analysis goals, error-cost sensitivity, and analysis hacking: Essential considerations in hypothesis testing and multiple comparisons. \emph{Paediatric and Perinatal Epidemiology, 35}(1)\emph{, }8-23. \href{https://doi.org/10.1111/ppe.12711}{https://doi.org/10.1111/ppe.12711}
+
+
+
+	Greenland, S. (2023). Connecting simple and precise \emph{p}-values to complex and ambiguous realities. \emph{Scandinavian Journal of Statistics, 50}(3)\emph{,} 899-914. \href{https://doi.org/10.1111/sjos.12645}{https://doi.org/10.1111/sjos.12645}
+
+
+
+	Greenland, S., Senn, S. J., Rothman, K. J., Carlin, J. B., Poole, C., Goodman, S. N., \& Altman, D. G. (2016). Statistical tests, \emph{P} values, confidence intervals, and power: A guide to misinterpretations. \emph{European Journal of Epidemiology}, \emph{31}, 337-350. \href{https://doi.org/10.1007/s10654-016-0149-3}{https://doi.org/10.1007/s10654-016-0149-3}
+
+
+
+	Hager, W. (2013). The statistical theories of Fisher and of Neyman and Pearson: A methodological perspective. \emph{Theory \& Psychology, 23}(2)\emph{,} 251-270. \href{https://doi.org/10.1177/0959354312465483}{https://doi.org/10.1177/0959354312465483}
+
+
+
+	Haig, B. D. (2009). Inference to the best explanation: A neglected approach to theory appraisal in psychology. \emph{The American Journal of Psychology}, \emph{122}(2), 219--234. \href{https://doi.org/10.2307/27784393}{https://doi.org/10.2307/27784393}
+
+
+
+	Haig, B. D. (2018). \emph{Method matters in psychology: Essays in applied philosophy of science}. Springer. https://doi.org/10.1007/978-3-030-01051-5
+
+
+
+	Hancock, G. R., \& Klockars, A. J. (1996). The quest for α: Developments in multiple comparison procedures in the quarter century since. \emph{Review of Educational Research}, \emph{66}(3), 269-306. \href{https://doi.org/10.3102/00346543066003269}{https://doi.org/10.3102/00346543066003269}
+
+
+
+	Hewes, D. E. (2003). Methods as tools: A response to O'Keefe. \emph{Human Communication Research, 29}(3)\emph{,} 448-454. \href{https://doi.org/10.1111/j.1468-2958.2003.tb00847.x}{https://doi.org/10.1111/j.1468-2958.2003.tb00847.x}
+
+
+
+	Hitchcock, C., \& Sober, E. (2004). Prediction versus accommodation and the risk of overfitting. \emph{British Journal for the Philosophy of Science, 55}(1), 1-34. \href{https://doi.org/10.1093/bjps/55.1.1}{https://doi.org/10.1093/bjps/55.1.1}
+
+
+
+	Hochberg, Y., \& Tamrane, A. C. (1987). \emph{Multiple comparison procedures.} Wiley. http://doi.org/10.1002/9780470316672
+
+
+
+	Hurlbert, S. H., \& Lombardi, C. M. (2012). Lopsided reasoning on lopsided tests and multiple comparisons. \emph{Australian \& New Zealand Journal of Statistics, 54}(1), 23-42. \href{https://doi.org/10.1111/j.1467-842X.2012.00652.x}{https://doi.org/10.1111/j.1467-842X.2012.00652.x}
+
+
+
+	John, L. K., Loewenstein, G., \& Prelec, D. (2012). Measuring the prevalence of questionable research practices with incentives for truth telling. \emph{Psychological Science, 23}(5), 524-532. \href{https://doi.org/10.1177/0956797611430953}{https://doi.org/10.1177/0956797611430953}
+
+
+
+	Kerr, N. L. (1998). HARKing: Hypothesizing after the results are known. \emph{Personality and Social Psychology Review, 2}(3)\emph{, }196-217. http://doi.org/10.1207/s15327957pspr0203\_4
+
+
+
+	Kim, K., Zakharkin, S. O., Loraine, A., \& Allison, D. B. (2004). Picking the most likely candidates for further development: Novel intersection-union tests for addressing multi-component hypotheses in comparative genomics. \emph{Proceedings of the American Statistical Association, ASA Section on ENAR Spring Meeting} (pp. 1396-1402). \href{http://www.uab.edu/cngi/pdf/2004/JSM%202004%20-IUTs%20Kim%20et%20al.pdf}{http://www.uab.edu/cngi/pdf/2004/JSM\%202004\%20-IUTs\%20Kim\%20et\%20al.pdf}
+
+
+
+	Klein, R. A., Vianello, M., Hasselman, F., Adams, B. G., Adams Jr, R. B., Alper, S., Aveyard, M., Axt, J. R., Babalola, M. T., Bahník, S., Batra, R., Berkics, M., Bernstein, M. J., Berry, D. R., Bialobrzeska, O., Binan, E. D., Bocian, K., Brandt, M. J., Busching, R., ... \& Sowden, W. (2018). Many Labs 2: Investigating variation in replicability across samples and settings. \emph{Advances in Methods and Practices in Psychological Science, 1}(4), 443-490. \href{https://doi.org/10.1177/2515245918810225}{https://doi.org/10.1177/2515245918810225}
+
+
+
+	Kotzen, M. (2013). Multiple studies and evidential defeat. \emph{Noûs, 47}(1), 154-180. \href{http://www.jstor.org/stable/43828821}{http://www.jstor.org/stable/43828821}
+
+
+
+	Kriegeskorte, N., Simmons, W. K., Bellgowan, P. S., \& Baker, C. I. (2009). Circular analysis in systems neuroscience: The dangers of double dipping. \emph{Nature Neuroscience, 12}(5), 535-540. \href{https://doi.org/10.1038/nn.2303}{https://doi.org/10.1038/nn.2303}
+
+
+
+	Kuhn, T. S. (1977). \emph{The essential tension: Selected studies in the scientific tradition and change. }The University of Chicago Press.
+
+
+
+	Lehmann, E. L. (1993). The Fisher, Neyman-Pearson theories of testing hypotheses: One theory or two? \emph{Journal of the American Statistical Association, 88}(424)\emph{,} 1242-1249. \href{https://doi.org/10.1080/01621459.1993.10476404}{https://doi.org/10.1080/01621459.1993.10476404}
+
+
+
+	Lykken, D. T. (1968). Statistical significance in psychological research. \emph{Psychological Bulletin, 70}(3), 151-159. \href{https://doi.org/10.1037/h0026141}{https://doi.org/10.1037/h0026141}
+
+
+
+	Mackonis, A. (2013). Inference to the best explanation, coherence and other explanatory virtues. \emph{Synthese, 190}(6), 975-995. \href{https://doi.org/10.1007/s11229-011-0054-y}{https://doi.org/10.1007/s11229-011-0054-y}
+
+
+
+	Maier, M., \& Lakens, D. (2022). Justify your alpha: A primer on two practical approaches. \emph{Advances in Methods and Practices in Psychological Science, 5}(2). \href{https://doi.org/10.1177/25152459221080396}{https://doi.org/10.1177/25152459221080396}
+
+
+
+	Matsunaga, M. (2007). Familywise error in multiple comparisons: Disentangling a knot through a critique of O'Keefe's arguments against alpha adjustment. \emph{Communication Methods and Measures, 1}(4)\emph{, }243-265. \href{https://doi.org/10.1080/19312450701641409}{https://doi.org/10.1080/19312450701641409}
+
+
+
+	Mayo, D. G. (1996). \emph{Error and the growth of experimental knowledge}. The University of Chicago Press.
+
+
+
+	Mayo, D. G. (2014). On the Birnbaum argument for the strong likelihood principle. \emph{Statistical Science, 29,} 227-239. http://doi.org/10.1214/13-STS457
+
+
+
+	Mayo, D. G. (2018). \emph{Statistical inference as severe testing: How to get beyond the statistics wars}. Cambridge University Press. http://doi.org/10.1017/9781107286184
+
+
+
+	Mayo, D. G., \& Morey, R. D. (2017). \emph{A poor prognosis for the diagnostic screening critique of statistical tests.} OSFPreprints. \href{https://doi.org/10.31219/osf.io/ps38b}{https://doi.org/10.31219/osf.io/ps38b}
+
+
+
+	Mayo, D. G., \& Spanos, A. (2006). Severe testing as a basic concept in a Neyman--Pearson philosophy of induction. \emph{The British Journal for the Philosophy of Science, 57}(2), 323-357. \href{https://doi.org/10.1093/bjps/axl003}{https://doi.org/10.1093/bjps/axl003}
+
+
+
+	McShane, B. B., Bradlow, E. T., Lynch, J. G. Jr., \& Meyer, R. J. (2023). “Statistical significance" and statistical reporting: Moving beyond binary. \emph{Journal of Marketing, 88}(3), 1-19. http://doi.org/10.1177/00222429231216910
+
+
+
+	Meehl, P. E. (1978). Theoretical risks and tabular asterisks: Sir Karl, Sir Ronald, and the slow progress of soft psychology. \emph{Journal of Consulting and Clinical Psychology, 46}(4)\emph{,} 806-834. \href{https://doi.org/10.1037/0022-006X.46.4.806}{https://doi.org/10.1037/0022-006X.46.4.806}
+
+
+
+	Meehl, P. E. (1990a). Appraising and amending theories: The strategy of Lakatosian defense and two principles that warrant it. \emph{Psychological Inquiry, 1}(2), 108-141. \href{http://www.jstor.org/stable/1448768}{http://www.jstor.org/stable/1448768}
+
+
+
+	Meehl, P. E. (1990b). Why summaries of research on psychological theories are often uninterpretable. \emph{Psychological Reports}, \emph{66}(1), 195--244. \href{https://doi.org/10.2466/pr0.1990.66.1.195}{https://doi.org/10.2466/pr0.1990.66.1.195}
+
+
+
+	Meehl, P. E. (1997). The problem is epistemology, not statistics: Replace significance tests by confidence intervals and quantify accuracy of risky numerical predictions. In L. L. Harlow, S. A. Mulaik, \& J. H. Steiger (Eds.), \emph{What if there were no significance tests?} (pp. 393--425). Lawrence Erlbaum Associates.
+
+
+
+	Merton, R. K. (1987). Three fragments from a sociologist's notebooks: Establishing the phenomenon, specified ignorance, and strategic research materials. \emph{Annual Review of Sociology, 13}(1), 1-29. \href{https://doi.org/10.1146/annurev.so.13.080187.000245}{https://doi.org/10.1146/annurev.so.13.080187.000245}
+
+
+
+	Molloy, S. F., White, I. R., Nunn, A. J., Hayes, R., Wang, D., \& Harrison, T. S. (2022). Multiplicity adjustments in parallel-group multi-arm trials sharing a control group: Clear guidance is needed. \emph{Contemporary Clinical Trials}, \emph{113}, Article 106656. \href{https://doi.org/10.1016/j.cct.2021.106656}{https://doi.org/10.1016/j.cct.2021.106656}
+
+
+
+	Morgan, J. F. (2007). \emph{P} value fetishism and use of the Bonferroni adjustment. \emph{Evidence-Based Mental Health}, \emph{10}, 34-35. http://doi.org/10.1136/ebmh.10.2.34
+
+
+
+	Munafò, M. R., Nosek, B. A., Bishop, D. V., Button, K. S., Chambers, C. D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E. J., Ware, J. J., \& Ioannidis, J. (2017). A manifesto for reproducible science. \emph{Nature Human Behaviour, 1}, Article 0021. \href{https://doi.org/10.1038/s41562-016-0021}{https://doi.org/10.1038/s41562-016-0021}
+
+
+
+	Musgrave, A. (1974). Logical versus historical theories of confirmation. \emph{The British Journal for the Philosophy of Science, 25}(1), 1-23. \href{https://doi.org/10.1093/bjps/25.1.1}{https://doi.org/10.1093/bjps/25.1.1}
+
+
+
+	Neyman, J. (1950). \emph{First course in probability and statistics.} Henry Holt.
+
+
+
+	Neyman, J. (1977). Frequentist probability and frequentist statistics. \emph{Synthese, 36,} 97--131. \href{https://doi.org/10.1007/BF00485695}{https://doi.org/10.1007/BF00485695}
+
+
+
+	Neyman, J., \& Pearson, E. S. (1928). On the use and interpretation of certain test criteria for purposes of statistical inference: Part I. \emph{Biometrika 20}\emph{A}(1/2)\emph{,} 175--240. \href{http://dx.doi.org/10.2307/2331945}{http:// doi.org/10.2307/2331945}
+
+
+
+	Neyman, J., \& Pearson, E. S. (1933). IX. On the problem of the most efficient tests of statistical hypotheses. \emph{Philosophical Transactions of the Royal Society A, 231,} 289-337. \href{https://doi.org/10.1098/rsta.1933.0009}{https://doi.org/10.1098/rsta.1933.0009}
+
+
+
+	Nosek, B. A., Ebersole, C. R., DeHaven, A. C., \& Mellor, D. T. (2018). The preregistration revolution. \emph{Proceedings of the National Academy of Sciences, 115}(11)\emph{,} 2600-2606. \href{https://doi.org/10.1073/pnas.1708274114}{https://doi.org/10.1073/pnas.1708274114}
+
+
+
+	Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., Fidler, F., Hilgard, J., Kline Struhl, M., Nuijten, M. B., Rohrer, J. M., Romero, F., Scheel, A. M., Scherer, L. D., Schönbrodt, F. D., \& Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. \emph{Annual Review of Psychology, 73}, 719-748. \href{https://doi.org/10.1146/annurev-psych-020821-114157}{https://doi.org/10.1146/annurev-psych-020821-114157}
+
+
+
+	Nosek, B. A., \& Lakens, D. (2014). Registered reports\emph{. Social Psychology, 45}(3), 137-141. \href{https://doi.org/10.1027/1864-9335/a000192}{https://doi.org/10.1027/1864-9335/a000192}
+
+
+
+	Oberauer, K., \& Lewandowsky, S. (2019). Addressing the theory crisis in psychology. \emph{Psychonomic Bulletin \& Review, 26}(5), 1596-1618. \href{https://doi.org/10.3758/s13423-019-01645-2}{https://doi.org/10.3758/s13423-019-01645-2}
+
+
+
+	Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. \emph{Science, 349}(6251), Article aac4716. \href{https://doi.org/10.1126/science.aac4716}{https://doi.org/10.1126/science.aac4716}
+
+
+
+	Parker, R. A., \& Weir, C. J. (2020). Non-adjustment for multiple testing in multi-arm trials of distinct treatments: Rationale and justification. \emph{Clinical Trials, 17}(5), 562-566. \href{https://doi.org/10.1177/1740774520941419}{https://doi.org/10.1177/1740774520941419}
+
+
+
+	Parker, R. A., \& Weir, C. J. (2022). Multiple secondary outcome analyses: Precise interpretation is important. \emph{Trials}, \emph{23}, Article 27. \href{https://doi.org/10.1186/s13063-021-05975-2}{https://doi.org/10.1186/s13063-021-05975-2}
+
+
+
+	Parker, T. H., Forstmeier, W., Koricheva, J., Fidler, F., Hadfield, J. D., Chee, Y. E., Kelly, C. D., Gurevitch, J., \& Nakagawa, S. (2016). Transparency in ecology and evolution: Real problems, real solutions. \emph{Trends in Ecology \& Evolution, 31}(9), 711-719. https://doi.org/10.1016/j.tree.2016.07.002
+
+
+
+	Perneger, T. V. (1998). What's wrong with Bonferroni adjustments. \emph{British Medical Journal, 316,} 1236-1238. \href{https://doi.org/10.1136/bmj.316.7139.1236}{https://doi.org/10.1136/bmj.316.7139.1236}
+
+
+
+	Pollard, P., \& Richardson, J. T. (1987). On the probability of making Type I errors. \emph{Psychological Bulletin}, \emph{102}(1), 159-163. \href{https://psycnet.apa.org/doi/10.1037/0033-2909.102.1.159}{https://doi.org/10.1037/0033-2909.102.1.159}
+
+
+
+	Popper, K. R. (1962). \emph{Conjectures and refutations: The growth of scientific knowledge.} Basic Books.
+
+
+
+	Popper, K. R. (2002). \emph{The logic of scientific discovery.} Routledge.
+
+
+
+	Redish, D. A., Kummerfeld, E., Morris, R. L., \& Love, A. C. (2018). Reproducibility failures are essential to scientific inquiry. \emph{Proceedings of the National Academy of Sciences, 115}(20), 5042--5046. \href{https://doi.org/10.1073/pnas.1806370115}{https://doi.org/10.1073/pnas.1806370115}
+
+
+
+	Reichenbach, H. (1938). \emph{Experience and prediction: An analysis of the foundations and the structure of knowledge.} The University of Chicago Press. \href{https://philarchive.org/archive/REIEAP-2}{https://philarchive.org/archive/REIEAP-2}
+
+
+
+	Reid, N. (1995). The roles of conditioning in inference. \emph{Statistical Science}, \emph{10}(2), 138-157. \href{https://doi.org/10.1214/ss/1177010027}{https://doi.org/10.1214/ss/1177010027}
+
+
+
+	Reid, N., \& Cox, D. R. (2015). On some principles of statistical inference. \emph{International Statistical Review, 83}(2)\emph{,} 293-308. \href{http://dx.doi.org/10.1111/insr.12067}{http:// doi.org/10.1111/insr.12067}
+
+
+
+	Rothman, K. J. (1990). No adjustments are needed for multiple comparisons. \emph{Epidemiology, 1}(1)\emph{,} 43-46. \href{https://www.jstor.org/stable/20065622}{https://www.jstor.org/stable/20065622}
+
+
+
+	Rothman, K. J., Greenland, S., \& Lash, T. L. (2008). \emph{Modern epidemiology} (3\textsuperscript{rd} ed.). Lippincott Williams \& Wilkins.
+
+
+
+	Rubin, M. (2017a). An evaluation of four solutions to the forking paths problem: Adjusted alpha, preregistration, sensitivity analyses, and abandoning the Neyman-Pearson approach. \emph{Review of General Psychology, 21}(4)\emph{,} 321-329. \href{https://doi.org/10.1037/gpr0000135}{https://doi.org/10.1037/gpr0000135}
+
+
+
+	Rubin, M. (2017b). Do \emph{p} values lose their meaning in exploratory analyses? It depends how you define the familywise error rate. \emph{Review of General Psychology, 21}(3)\emph{,} 269-275. \href{https://doi.org/10.1037/gpr0000123}{https://doi.org/10.1037/gpr0000123}
+
+
+
+	Rubin, M. (2020a). Does preregistration improve the credibility of research findings? \emph{The Quantitative Methods for Psychology, 16}(4), 376--390. \href{https://doi.org/10.20982/tqmp.16.4.p376}{https://doi.org/10.20982/tqmp.16.4.p376}
+
+
+
+	Rubin, M. (2020b). “Repeated sampling from the same population?” A critique of Neyman and Pearson's responses to Fisher. \emph{European Journal for Philosophy of Science, 10,} Article 42, 1-15. \href{https://doi.org/10.1007/s13194-020-00309-6}{https://doi.org/10.1007/s13194-020-00309-6}
+
+
+
+	Rubin, M. (2021a). There's no need to lower the significance threshold when conducting single tests of multiple individual hypotheses. \emph{Academia Letters,} Article 610. \href{https://doi.org/10.20935/AL610}{https://doi.org/10.20935/AL610}
+
+
+
+	Rubin, M. (2021b). What type of Type I error? Contrasting the Neyman-Pearson and Fisherian approaches in the context of exact and direct replications. \emph{Synthese, 198,} 5809--5834. \href{https://doi.org/10.1007/s11229-019-02433-0}{https://doi.org/10.1007/s11229-019-02433-0}
+
+
+
+	Rubin, M. (2021c). When to adjust alpha during multiple testing: A consideration of disjunction, conjunction, and individual testing. \emph{Synthese, 199,} 10969--11000. \href{https://doi.org/10.1007/s11229-021-03276-4}{https://doi.org/10.1007/s11229-021-03276-4}
+
+
+
+	Rubin, M. (2022). The costs of HARKing. \emph{British Journal for the Philosophy of Science, 73}(2), 535-560.\emph{ }\href{https://doi.org/10.1093/bjps/axz050}{https://doi.org/10.1093/bjps/axz050}
+
+
+
+	Rubin, M. (2024). Inconsistent multiple testing corrections: The fallacy of using family-based error rates to make inferences about individual hypotheses. \emph{Methods in Psychology, 10, }Article 100140. \href{https://doi.org/10.1016/j.metip.2024.100140}{https://doi.org/10.1016/j.metip.2024.100140}
+
+
+
+	Rubin, M., \& Donkin, C. (2022). Exploratory hypothesis tests can be more compelling than confirmatory hypothesis tests. \emph{Philosophical Psychology, }1-29. \href{https://doi.org/10.1080/09515089.2022.2113771}{https://doi.org/10.1080/09515089.2022.2113771}
+
+
+
+	Savitz, D. A., \& Olshan, A. F. (1995). Multiple comparisons and related issues in the interpretation of epidemiologic data. \emph{American Journal of Epidemiology, 142}(9), 904-908. \href{https://doi.org/10.1093/oxfordjournals.aje.a117737}{https://doi.org/10.1093/oxfordjournals.aje.a117737}
+
+
+
+	Schulz, K. F., \& Grimes, D. A. (2005). Multiplicity in randomised trials I: Endpoints and treatments. \emph{The Lancet, 365}(9470)\emph{,} 1591-1595. \href{https://doi.org/10.1016/S0140-6736(05)66461-6}{https://doi.org/10.1016/S0140-6736(05)66461-6}
+
+
+
+	Senn, S. (2007). \emph{Statistical issues in drug development }(2nd ed.)\emph{.} Wiley.
+
+
+
+	Simmons, J. P., Nelson, L. D., \& Simonsohn, U. (2011). False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. \emph{Psychological Science, 22}(11), 1359-1366. \href{https://doi.org/10.1177/0956797611417632}{https://doi.org/10.1177/0956797611417632}
+
+
+
+	Simonsohn, U., Simmons, J. P., \& Nelson, L. D. (2020). Specification curve analysis\emph{. Nature Human Behaviour, 4}(11), 1208-1214. \href{https://doi.org/10.1038/s41562-020-0912-z}{https://doi.org/10.1038/s41562-020-0912-z}
+
+
+
+	Sinclair, J., Taylor, P. J., \& Hobbs, S. J. (2013). Alpha level adjustments for multiple dependent variable analyses and their applicability—A review. \emph{International Journal of Sports Science Engineering, 7}(1)\emph{,} 17-20.
+
+
+
+	Spanos, A. (2006). Where do statistical models come from? Revisiting the problem of specification. \emph{Optimality, 49,} 98-119. \href{https://doi.org/10.1214/074921706000000419}{https://doi.org/10.1214/074921706000000419}
+
+
+
+	Spanos, A. (2010). Akaike-type criteria and the reliability of inference: Model selection versus statistical model specification. \emph{Journal of Econometrics}, \emph{158}(2), 204-220. \href{https://doi.org/10.1016/j.jeconom.2010.01.011}{https://doi.org/10.1016/j.jeconom.2010.01.011}
+
+
+
+	Steegen, S., Tuerlinckx, F., Gelman, A., \& Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. \emph{Perspectives on Psychological Science, 11}(5), 702-712. \href{https://doi.org/10.1177/1745691616658637}{https://doi.org/10.1177/1745691616658637}
+
+
+
+	Stefan, A. M., \& Schönbrodt, F. D. (2023). Big little lies: A compendium and simulation of p-hacking strategies. \emph{Royal Society Open Science}, \emph{10}(2), Article 220346. \href{https://doi.org/10.1098/rsos.220346}{https://doi.org/10.1098/rsos.220346}
+
+
+
+	Syrjänen, P. (2023). Novel prediction and the problem of low-quality accommodation. \emph{Synthese}, 202, Article 182. \href{https://doi.org/10.1007/s11229-023-04400-2}{https://doi.org/10.1007/s11229-023-04400-2}
+
+
+
+	Szollosi, A., \& Donkin, C. (2021). Arrested theory development: The misguided distinction between exploratory and confirmatory research. \emph{Perspectives on Psychological Science, 16}(4), 717-724. \href{https://doi.org/10.1177/1745691620966796}{https://doi.org/10.1177/1745691620966796}
+
+
+
+	Taylor, J., \& Tibshirani, R. J. (2015). Statistical learning and selective inference. \emph{Proceedings of the National Academy of Sciences, 112}(25), 7629-7634. \href{https://doi.org/10.1073/pnas.1507583112}{https://doi.org/10.1073/pnas.1507583112}
+
+
+
+	Tukey, J. W. (1953). \emph{The problem of multiple comparisons.} Princeton University.
+
+
+
+	Turkheimer, F. E., Aston, J. A., \& Cunningham, V. J. (2004). On the logic of hypothesis testing in functional imaging. \emph{European Journal of Nuclear Medicine and Molecular Imaging, 31, }725-732. \href{https://doi.org/10.1007/s00259-003-1387-7}{https://doi.org/10.1007/s00259-003-1387-7}
+
+
+
+	Uygun-Tunç, D., \& Tunç, M. N. (2023). A falsificationist treatment of auxiliary hypotheses in social and behavioral sciences: Systematic replications framework. \emph{Meta-Psychology, 7}. \href{https://doi.org/10.15626/MP.2021.2756}{https://doi.org/10.15626/MP.2021.2756}
+
+
+
+	Veazie, P. J. (2006). When to combine hypotheses and adjust for multiple tests. \emph{Health Services Research, 41}(3 pt 1), 804-818. http://doi.org/10.1111/j.1475-6773.2006.00512.x
+
+
+
+	Venn, J. (1876). \emph{The logic of chance} (2\textsuperscript{nd} ed.). Macmillan and Co.
+
+
+
+	Wagenmakers, E. J. (2016, September 1). Statistical tools such as p-values and confidence intervals are meaningful only for strictly confirmatory analyses. In turn, preregistration is one. [Comment on the blog post “Why preregistration makes me nervous”]. \emph{Psychological Science.} https://www.psychologicalscience.org/observer/why-preregistration-makes-me-nervous\#comment-7860633
+
+
+
+	Wagenmakers, E. J., Wetzels, R., Borsboom, D., van der Maas, H. L., \& Kievit, R. A. (2012). An agenda for purely confirmatory research. \emph{Perspectives on Psychological Science, 7}(6), 632-638. \href{https://www.google.com/url?q=https%3A%2F%2Fdoi.org%2F10.1177%2F1745691612463078&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNE9UTzy_PNf8OKtUSxCBKbDKaAADw}{https://doi.org/10.1177/1745691612463078}
+
+
+
+	Wasserman, L. (2013, March 14). Double misunderstandings about \emph{p}-values. \emph{Normal Deviate.} \href{https://normaldeviate.wordpress.com/2013/03/14/double-misunderstandings-about-p-values/}{https://normaldeviate.wordpress.com/2013/03/14/double-misunderstandings-about-p-values/}
+
+
+
+	Wilson, W. (1962). A note on the inconsistency inherent in the necessity to perform multiple comparisons. \emph{Psychological Bulletin, 59}(4)\emph{,} 296-300. \href{https://doi.org/10.1037/h0040447}{https://doi.org/10.1037/h0040447}
+
+
+
+	Worrall, J. (2010). Theory conﬁrmation and novel evidence. In D. G. Mayo \& A. Spanos (Eds.), \emph{Error and inference: Recent exchanges on experimental reasoning, reliability, and the objectivity and rationality of science }(pp. 125-169)\emph{.} Cambridge University Press. http://doi.org/10.1017/CBO9780511657528
+
+
+
+
+
+
+\end{document}
