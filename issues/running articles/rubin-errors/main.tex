@@ -14,7 +14,7 @@
 
 \jotetitle{Type I Error Rates are Not Usually Inflated}
 \keywordsabstract{false positives, questionable research practices, replication crisis, significance testing, Type I error rate inflation}
-\abstracttext{The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as p-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this article, I offer an alternative view. I argue that questionable and other research practices do not usually inflate relevant Type I error rates. I begin by introducing the concept of Type I error rates and distinguishing between statistical errors and theoretical errors. I then illustrate my argument with respect to model misspecification, multiple testing, selective inference, forking paths, exploratory analyses, p-hacking, optional stopping, double dipping, and HARKing. In each case, I demonstrate that relevant Type I error rates are not usually inflated above their nominal level, and in the rare cases that they are, the inflation is easily identified and resolved. I conclude that the replication crisis may be explained, at least in part, by researchers’ misinterpretation of statistical errors and their underestimation of theoretical errors.}
+\abstracttext{The inflation of Type I error rates is thought to be one of the causes of the replication crisis. Questionable research practices such as \emph{p}-hacking are thought to inflate Type I error rates above their nominal level, leading to unexpectedly high levels of false positives in the literature and, consequently, unexpectedly low replication rates. In this article, I offer an alternative view. I argue that questionable and other research practices do not usually inflate relevant Type I error rates. I begin by introducing the concept of Type I error rates and distinguishing between statistical errors and theoretical errors. I then illustrate my argument with respect to model misspecification, multiple testing, selective inference, forking paths, exploratory analyses, \emph{p}-hacking, optional stopping, double dipping, and HARKing. In each case, I demonstrate that relevant Type I error rates are not usually inflated above their nominal level, and in the rare cases that they are, the inflation is easily identified and resolved. I conclude that the replication crisis may be explained, at least in part, by researchers’ misinterpretation of statistical errors and their underestimation of theoretical errors.}
 \runningauthor{Rubin}
 \jname{Journal of Trial \& Error}
 \jyear{2024}
@@ -33,9 +33,14 @@
 \begin{document}
 \begin{frontmatter}
   \maketitle
+  
   \begin{abstract}
     \printabstracttext
+
+
+	
   \end{abstract}
+  
 \end{frontmatter}
 
 
@@ -55,7 +60,7 @@
 
 
 
-	In this article, I offer the alternative view that relevant Type I error rates are not usually inflated by questionable research practices (e.g., \emph{p}-hacking) or other research practices (e.g., model misspecification, exploratory analyses). I agree that Type I errors can be responsible for some replication failures. However, I argue that Type I error rate \emph{inflation} is relatively rare, and that when it does occur it is easily identified and resolved. I conclude that theoretical errors provide a better explanation of the replication crisis than Type I error inflation.
+	In this article, I offer the alternative view that relevant Type I error rates are not usually inflated by questionable research practices (e.g., \emph{p}-hacking) or other research practices (e.g., model misspecification, exploratory analyses). I agree that Type I errors can be responsible for some replication failures. However, I argue that Type I error rate \emph{inflation} is relatively rare, and that when it does occur it is easily identified and resolved. I conclude that theoretical errors provide a better explanation of the replication crisis than Type I error rate inflation.
 
 
 
@@ -91,7 +96,7 @@
 
 
 
-	Second, in scientific contexts, the population is not fully known. By definition, a “scientist” does not fully understand the relevant and irrelevant aspects of the populations that they are studying. Indeed, it is for this reason that they are studying those populations! Consequently, scientists face a reference class problem when attempting to specify the population to which their Type I error rate applies (Venn, 1876). They handle this problem by making theoretically informed guesses about the relevant and irrelevant aspects of the populations that are the subject of their statistical inferences. However, these guesses can be wrong! As Fisher (1956) explained, during significance testing “the population in question is hypothetical, … it could be defined in many ways, and … the first to come to mind may be quite misleading” (p. 78). Hence, scientists must continually ask themselves: “of what population is this a random sample?” (Fisher, 1922, p. 313).
+	Second, in scientific contexts, the population is not fully known. By definition, a “scientist” does not fully understand the relevant and irrelevant aspects of the populations that they are studying. Indeed, it is for this reason that they are studying those populations! Consequently, scientists face a reference class problem when attempting to specify the population to which their Type I error rate applies (Venn, 1876). They handle this problem by making theoretically informed guesses about the relevant and irrelevant aspects of the populations that are the subject of their statistical inferences. However, these guesses can be wrong! As Fisher (1956) explained, during significance testing “the population in question is hypothetical, … it could be defined in many ways, and … the first to come to mind may be quite misleading” (p. 78). Hence, scientists must continually ask themselves: “Of what population is this a random sample?” (Fisher, 1922, p. 313).
 
 
 
@@ -99,7 +104,7 @@
 
 
 
-	Finally, the idea of a frequency of decision-making errors during a long run of repeated random sampling from a null population is consistent with the Neyman-Pearson approach to hypothesis testing (Neyman \& Pearson, 1928, 1933). However, a Type I error can also be conceptualised within the alternative Fisherian approach (Fisher, 1956, 1971). In this case, a Type I error \emph{probability} (not rate) represents the \emph{epistemic} probability (not aleatory probability) of making a Type I error in relation to a \emph{single} decision (not a long run of decisions) to reject a null hypothesis based on an observed test statistic from the \emph{current sample} (not a long run of samples; Rubin, 2020b, 2021b).
+	Finally, the idea of a frequency of decision-making errors during a long run of repeated random sampling from a null population is consistent with the Neyman-Pearson approach to hypothesis testing (Neyman \& Pearson, 1928, 1933). However, a Type I error can also be conceptualized within the alternative Fisherian approach (Fisher, 1956, 1971). In this case, a Type I error \emph{probability} (not rate) represents the \emph{epistemic} probability (not aleatory probability) of making a Type I error in relation to a \emph{single} decision (not a long run of decisions) to reject a null hypothesis based on an observed test statistic from the \emph{current sample} (not a long run of samples; Rubin, 2020b, 2021b).
 
 
 
@@ -231,7 +236,7 @@
 
 
 
-	Is transparent reporting necessary to identify and resolve Type I error inflation in this situation? In particular, to determine \emph{k}, do readers need to be aware of all other tests that a researcher conducted? No, they do not, because the researcher is obviously not using any other test results to make their statistical inference. More generally, \emph{k} is the number of tests that are formally associated with a reported statistical inference. \emph{k} is not necessarily the number of tests that a researcher conducted, or planned to conduct, in their study. This position is consistent with philosophies of science and statistics that focus on the logical relations between a hypothesis and its evidence without considering their psychological origins (Fisher, 1956; Popper, 1962, 2002). Following this philosophy, a familywise error rate can be logically deduced from a potentially unplanned reported statistical inference rather than needing to be predetermined based on planned inferences that may never eventuate (cf. Mayo, 1996, p. 296). Furthermore, undisclosed alterations to planned inferences do not impact the validity of a familywise error rate that is logically deduced from an unplanned statistical inference.
+	Is transparent reporting necessary to identify and resolve Type I error rate inflation in this situation? In particular, to determine \emph{k}, do readers need to be aware of all other tests that a researcher conducted? No, they do not, because the researcher is obviously not using any other test results to make their statistical inference. More generally, \emph{k} is the number of tests that are formally associated with a reported statistical inference. \emph{k} is not necessarily the number of tests that a researcher conducted, or planned to conduct, in their study. This position is consistent with philosophies of science and statistics that focus on the logical relations between a hypothesis and its evidence without considering their psychological origins (Fisher, 1956; Popper, 1962, 2002). Following this philosophy, a familywise error rate can be logically deduced from a potentially unplanned reported statistical inference rather than needing to be predetermined based on planned inferences that may never eventuate (cf. Mayo, 1996, p. 296). Furthermore, undisclosed alterations to planned inferences do not impact the validity of a familywise error rate that is logically deduced from an unplanned statistical inference.
 
 
 
@@ -265,7 +270,7 @@
 
 
 
-	Type I error rate inflation is neither common nor problematic during multiple testing. The most common form of multiple testing is represented by single tests of multiple individual null hypotheses (García-Pérez, 2023). Most experts agree that this type of multiple testing does not inflate relevant Type I error rates because only one test is used to decide on each null hypothesis. Consequently, the most common form of multiple testing does not inflate Type I error rates. Indeed, the inappropriate (illogical) use of alpha adjustments in this type of testing situation may result in Type I error rate \emph{deflation}, rather than \emph{inflation} (Rubin, 2024).
+	Type I error rate inflation is neither common nor problematic during multiple testing. The most common form of multiple testing is represented by single tests of multiple individual null hypotheses (García-Pérez, 2023). Most experts agree that this type of multiple testing does not inflate relevant Type I error rates because only one test is used to make a decision about each null hypothesis. Consequently, the most common form of multiple testing does not inflate Type I error rates. Indeed, the inappropriate (illogical) use of alpha adjustments in this type of testing situation may result in Type I error rate \emph{deflation}, rather than \emph{inflation} (Rubin, 2024).
 
 
 
@@ -285,11 +290,11 @@
 
 
 
-	Alternatively, the researcher may decide to make a statistical inference about a joint null hypothesis based on a family of correlations, such as “\emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and \emph{x}\textsubscript{58}--\emph{y}\textsubscript{58}.” For example, in an fMRI study, these correlations might occur within the same brain region and, again, they may be selected because they “look promising.” In this case, the familywise error rate can be logically deduced from the statistical inference (i.e., \emph{k} = 3), and the formal theoretical rationale for the joint hypothesis can be critically evaluated on the basis of its theoretical virtues. Again, the familywise error rate for the statistical inference is not inflated by the existence of alternative planned or unplanned statistical inferences that could have been based on other joint null hypotheses from the set of correlations.
+	Alternatively, the researcher may decide to make a statistical inference about a joint null hypothesis based on a family of correlations, such as “\emph{x}\textsubscript{56}--\emph{y}\textsubscript{56} and \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and \emph{x}\textsubscript{58}--\emph{y}\textsubscript{58}.” For example, in an fMRI study, these correlations might occur within the same brain region and, again, they may be selected because they “look promising.” In this case, the familywise error rate can be logically deduced from the statistical inference (i.e., \emph{k} = 3), and the formal theoretical rationale for the joint hypothesis can be critically evaluated on the basis of its theoretical virtues. Again, the familywise error rate for the statistical inference is not inflated by the existence of alternative planned or unplanned statistical inferences that could have been based on other joint null hypotheses from the set of correlations.
 
 
 
-	People sometimes confuse individual and constituent null hypotheses in this situation. For example, it is true that α\textsubscript{Constituent} would need to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} correlation to reject a joint null hypothesis that could be rejected by at least one significant result from among 100 potential correlations, because \emph{k} = 100 for this selective inference. Similarly, as described above, α\textsubscript{Constituent} would need to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} correlation to reject a joint null hypothesis that could be rejected by at least one significant result from among three potential correlations (e.g., “\emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and \emph{x}\textsubscript{58}--\emph{y}\textsubscript{58}”), because \emph{k} = 3 for this selective inference. However, this point does not imply that α\textsubscript{Individual} needs to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} result to reject the \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} null hypothesis, because \emph{k }= 1 for this individual inference.
+	People sometimes confuse individual and constituent null hypotheses in this situation. For example, it is true that α\textsubscript{Constituent} would need to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} correlation to reject a joint null hypothesis that could be rejected by at least one significant result from among 100 potential correlations, because \emph{k} = 100 for this selective inference. Similarly, as described above, α\textsubscript{Constituent} would need to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} correlation to reject a joint null hypothesis that could be rejected by at least one significant result from among three potential correlations (e.g., “\emph{x}\textsubscript{56}--\emph{y}\textsubscript{56} and \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} and \emph{x}\textsubscript{58}--\emph{y}\textsubscript{58}”), because \emph{k} = 3 for this selective inference. However, this point does not imply that α\textsubscript{Individual} needs to be adjusted when using the significant \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} result to reject the \emph{x}\textsubscript{57}--\emph{y}\textsubscript{57} null hypothesis, because \emph{k }= 1 for this individual inference.
 
 
 
@@ -299,7 +304,7 @@
 
 	More generally, it is important to avoid confusion about the reference sets to which statistical inferences refer. As Neyman (1950) explained, “many errors in computing probabilities are committed because of losing sight of the set of objects to which a given probability is meant to refer” (p. 15). A Type I error rate is meant to refer to a decision about a specified statistical (individual or joint) null population and not to any broader population from which that null population may have been selected. Hence, the selection of a particular subset of data for testing from a more inclusive set because it “looks promising” will not inflate the Type I error rate for a statistical inference as long as that inference refers to a population based on \emph{that particular subset of data} and not to a population based on the more inclusive set of data (for related discussions, see Fisher, 1956, p. 88-89; Kotzen, 2013, p. 167; Rubin, 2021c, p. 10983). For example, conducting multiple tests of a gender difference in the preference for ice cream in different European countries and then selectively reporting the results for France may bias claims about a gender difference in Europe but not claims about a gender difference in France. Of course, the result in France may represent a Type I error. However, this possibility is covered by the alpha level of the test that was conducted on the French data.
 
-
+\pagebreak
 
 	\subsection{Forking Paths}
 
@@ -369,12 +374,12 @@
 
 
 
-	To illustrate further, consider this part of a larger example that Simmons et al. (2011, p. 1364, bold text in original) used to demonstrate a fictitious researcher's selective reporting. In the following extract, the bolded text refers to a statistical inference that the researcher decided to report because it referred to a significant result, and the nonbolded text refers to a statistical inference that the researcher decided not to report because it referred to a nonsignificant result:
+	To illustrate further, consider this part of a larger example that Simmons et al. (2011, p. 1364) used to demonstrate a fictitious researcher's selective reporting. In the following extract, the italicized text refers to a statistical inference that the researcher decided to report because it referred to a significant result, and the nonitalicized text refers to a statistical inference that the researcher decided not to report because it referred to a nonsignificant result:
 
 	
-	\begin{minipage}{.46\textwidth}%
-		\emph{An ANCOVA revealed the predicted effect: According to their birth dates, people were nearly a year-and-a-half younger after listening to “When I'm Sixty-Four” (adjusted }M\emph{ = 20.1 years) rather than to “Kalimba” (adjusted }M \emph{= 21.5 years), }F\emph{(1, 17) = 4.92, }p\emph{ = .040.} Without controlling for father's age, the age difference was smaller and did not reach significance (\emph{M}s = 20.3 and 21.2, respectively), \emph{F}(1, 18) = 1.01, \emph{p} = .33.
-	\end{minipage}%
+	\begin{quote}%
+		\emph{\emph{An ANCOVA revealed the predicted effect: According to their birth dates, people were nearly a year-and-a-half younger after listening to “When I'm Sixty-Four” (adjusted }M\emph{ = 20.1 years) rather than to “Kalimba” (adjusted }M \emph{= 21.5 years), }F\emph{(1, 17) = 4.92, }p\emph{ = .040.} Without controlling for father's age, the age difference was smaller and did not reach significance (\emph{M}s = 20.3 and 21.2, respectively), \emph{F}(1, 18) = 1.01, \emph{p} = .33.}
+	\end{quote}%
 
 		
 
@@ -384,13 +389,13 @@
 
 
 
-	Simmons et al.'s (2011) concern about Type I error rate inflation would only be warranted if their fictitious researcher made a statistical inference about a \emph{joint} null hypothesis that referred to \emph{both} the bolded and the nonbolded tests. Obviously, in the current example, the researcher does not report the nonbolded test, and so they do not make a statistical inference about an associated joint null hypothesis. However, even if the researcher reported both tests as indicated above, they would still not be making a statistical inference about a joint null hypothesis. They would be following the more common approach of making two statistical inferences about two individual null hypotheses. They would only make a statistical inference about a joint null hypothesis if they used two or more significance tests to make a single decision about a single (joint) null hypothesis (Rubin, 2024). To illustrate, the following example represents a case of Type I error rate inflation during a statistical inference about a joint null hypothesis (assuming that α\textsubscript{Constituent} and α\textsubscript{Joint} are both set at .050):
+	Simmons et al.'s (2011) concern about Type I error rate inflation would only be warranted if their fictitious researcher made a statistical inference about a \emph{joint} null hypothesis that referred to \emph{both} the italicized and the nonitalicized tests. Obviously, in the current example, the researcher does not report the nonitalicized test, and so they do not make a statistical inference about an associated joint null hypothesis. However, even if the researcher reported both tests as indicated above, they would still not be making a statistical inference about a joint null hypothesis. They would be following the more common approach of making two statistical inferences about two individual null hypotheses. They would only make a statistical inference about a joint null hypothesis if they used two or more significance tests to make a single decision about a single (joint) null hypothesis (Rubin, 2024). To illustrate, the following example represents a case of Type I error rate inflation during a statistical inference about a joint null hypothesis (assuming that α\textsubscript{Constituent} and α\textsubscript{Joint} are both set at .050):
 
 
+\begin{quote}
+	\emph{An ANCOVA found that type of song had a significant effect on birth date (father's age included as a covariate, \emph{F}(1, 17) = 4.92, \emph{p} = .040; father's age excluded as a covariate, \emph{F}(1, 18) = 1.01, \emph{p} = .330.}
 
-	An ANCOVA found that type of song had a significant effect on birth date (father's age included as a covariate, \emph{F}(1, 17) = 4.92, \emph{p} = .040; father's age excluded as a covariate, \emph{F}(1, 18) = 1.01, \emph{p} = .330.
-
-
+\end{quote}
 
 	Contrary to the present view, Nosek et al. (2018) argued that nontransparent selective reporting inflates the Type I error rate. Consequently, as they explained, “transparent reporting that 1 in 20 experiments or 1 in 20 analyses yielded a positive result will help researchers identify the one as a likely false positive” (p. 2603). However, like Simmons et al. (2011), this explanation confuses statistical inferences about individual hypotheses with statistical inferences about joint hypotheses. If researchers make a statistical inference based on a single test of an individual hypothesis, then their actual Type I error rate for this inference will be α\textsubscript{Individual} regardless of whether they make 1, 20, or a million other statistical inferences and even if their statistical result for that inference is the only significant result that they obtain or report. On the other hand, if researchers make a statistical inference based on the union-intersection testing of a joint null hypothesis that includes 20 constituent experiments or analyses, then their actual familywise Type I error rate for that inference will be 1 - (1 - α\textsubscript{Constituent})\textsuperscript{20}. However, contrary to Nosek et al., this familywise error rate does not refer to a “likely false positive” in relation to any “one” experiment or analysis (i.e., a constituent hypothesis; Rubin, 2024). It refers to an incorrect decision about a \emph{joint} null hypothesis that is based on the entire\emph{ family} of 20 experiments or analyses. Again, (a) if researchers do not make a statistical inference about this joint null hypothesis, then there is no need for them to be concerned about its familywise error rate, (b) researchers do not usually make statistical inferences about joint null hypotheses unless they have some theoretical rationale for doing so, and (c) if researchers do make statistical inferences about joint null hypotheses, then they can adjust their α\textsubscript{Constituent} in order to control their α\textsubscript{Joint} at some specified level.
 
@@ -496,7 +501,7 @@
 
 
 
-	Hypothesising after the results are known, or HARKing, refers to the questionable research practice of “presenting post hoc hypotheses in a research report as if they were, in fact, a priori hypotheses” (Kerr, 1998, p. 197). HARKing is thought to inflate Type I error rates (e.g., Bergkvist, 2020; Stefan \& Schönbrodt, 2023, p. 4). However, HARKing represents post hoc \emph{theorizing}, and so it affects theoretical inferences rather than statistical inferences. Indeed, in his seminal article on the subject, Kerr (1998, p. 205) did not argue that HARKing inflates Type I error rates. Instead, his concern was that, when “a Type I error is followed by HARKing, then ‘theory' is constructed to account for what is, in fact, an illusory effect” (p. 205). In other words, he was not concerned that HARKing inflates Type I error rates, but rather that it may be used to “translate Type I errors into theory” (Kerr, 1998, p. 205).
+	Hypothesizing after the results are known, or HARKing, refers to the questionable research practice of “presenting post hoc hypotheses in a research report as if they were, in fact, a priori hypotheses” (Kerr, 1998, p. 197). HARKing is thought to inflate Type I error rates (e.g., Bergkvist, 2020; Stefan \& Schönbrodt, 2023, p. 4). However, HARKing represents post hoc \emph{theorizing}, and so it affects theoretical inferences rather than statistical inferences. Indeed, in his seminal article on the subject, Kerr (1998, p. 205) did not argue that HARKing inflates Type I error rates. Instead, his concern was that, when “a Type I error is followed by HARKing, then ‘theory' is constructed to account for what is, in fact, an illusory effect” (p. 205). In other words, he was not concerned that HARKing inflates Type I error rates, but rather that it may be used to “translate Type I errors into theory” (Kerr, 1998, p. 205).
 
 
 
@@ -512,7 +517,7 @@
 
 
 
-	First, similar to Simmons et al.'s (2011) demonstration, evidence of Type I error inflation tends to confound statistical inferences about \emph{individual} null hypotheses with statistical inferences about \emph{joint} null hypotheses. For example, simulations of actual Type I error rates compute the familywise error rate for a joint null hypothesis and then apply that error rate to individual null hypotheses, claiming that, because the familywise error rate is, for example, .143, there is a .143 chance of incorrectly rejecting \emph{each} \emph{individual }null hypothesis. Again, this reasoning is widely acknowledged to be incorrect (Armstrong, 2014, p. 505; Cook \& Farewell, 1996, pp. 96--97; Fisher, 1971, p. 206; García-Pérez, 2023, p. 15; Greenland, 2021, p. 5; Hewes, 2003, p. 450; Hurlbert \& Lombardi, 2012, p. 30; Matsunaga, 2007, p. 255; Molloy et al., 2022, p. 2; Parker \& Weir, 2020, p. 564; Parker \& Weir, 2022, p. 2; Rothman, 1990, p. 45; Rubin, 2017b, pp. 271--272; Rubin, 2020a, p. 380; Rubin, 2021a, 2021c, pp. 10978-10983; Rubin, 2024, p. 3; Savitz \& Olshan, 1995, p. 906; Senn, 2007, pp. 150-151; Sinclair et al., 2013, p. 19; Tukey, 1953, p. 82; Turkheimer et al., 2004, p. 727; Veazie, 2006, p. 809; Wilson, 1962, p. 299).
+	First, similar to Simmons et al.'s (2011) demonstration, evidence of Type I error rate inflation tends to confound statistical inferences about \emph{individual} null hypotheses with statistical inferences about \emph{joint} null hypotheses. For example, simulations of actual Type I error rates compute the familywise error rate for a joint null hypothesis and then apply that error rate to individual null hypotheses, claiming that, because the familywise error rate is, for example, .143, there is a .143 chance of incorrectly rejecting \emph{each} \emph{individual }null hypothesis. Again, this reasoning is widely acknowledged to be incorrect (Armstrong, 2014, p. 505; Cook \& Farewell, 1996, pp. 96--97; Fisher, 1971, p. 206; García-Pérez, 2023, p. 15; Greenland, 2021, p. 5; Hewes, 2003, p. 450; Hurlbert \& Lombardi, 2012, p. 30; Matsunaga, 2007, p. 255; Molloy et al., 2022, p. 2; Parker \& Weir, 2020, p. 564; Parker \& Weir, 2022, p. 2; Rothman, 1990, p. 45; Rubin, 2017b, pp. 271--272; Rubin, 2020a, p. 380; Rubin, 2021a, 2021c, pp. 10978-10983; Rubin, 2024, p. 3; Savitz \& Olshan, 1995, p. 906; Senn, 2007, pp. 150-151; Sinclair et al., 2013, p. 19; Tukey, 1953, p. 82; Turkheimer et al., 2004, p. 727; Veazie, 2006, p. 809; Wilson, 1962, p. 299).
 
 
 
@@ -587,7 +592,9 @@
 
 	\end{enumerate}
 
-
+	\section{Acknowledgement} 
+	
+	I am grateful to members of the academic community on social media for providing feedback on a previous version of this article. I am also grateful to Sander Greenland for his suggestions.
 
 
 
@@ -683,7 +690,7 @@
 
 
 
-	Fisher, R. A. (1926). The arrangement of field experiments. \emph{Journal of the Ministry of Agriculture. 33, }503-515. \url{https://doi.org/10.23637/rothamsted.8v61q}
+	Fisher, R. A. (1926). The arrangement of field experiments. \emph{Journal of the Ministry of Agriculture, 33, }503-515. \url{https://doi.org/10.23637/rothamsted.8v61q}
 
 
 
@@ -1003,7 +1010,7 @@
 
 
 
-	Rubin, M., \& Donkin, C. (2022). Exploratory hypothesis tests can be more compelling than confirmatory hypothesis tests. \emph{Philosophical Psychology, }1-29. \url{https://doi.org/10.1080/09515089.2022.2113771}
+	Rubin, M., \& Donkin, C. (2022). Exploratory hypothesis tests can be more compelling than confirmatory hypothesis tests. \emph{Philosophical Psychology, 37}(8), 2019-2047. \url{https://doi.org/10.1080/09515089.2022.2113771}
 
 
 
@@ -1047,7 +1054,7 @@
 
 
 
-	Syrjänen, P. (2023). Novel prediction and the problem of low-quality accommodation. \emph{Synthese}, 202, Article 182. \url{https://doi.org/10.1007/s11229-023-04400-2}
+	Syrjänen, P. (2023). Novel prediction and the problem of low-quality accommodation. \emph{Synthese}, \emph{202}, Article 182. \url{https://doi.org/10.1007/s11229-023-04400-2}
 
 
 
