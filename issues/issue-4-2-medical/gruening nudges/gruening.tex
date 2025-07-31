@@ -1,9 +1,9 @@
 \documentclass[reflection, authordate]{jote-new-article}
 
-
-
-
-
+% \usepackage[absolute,overlay]{textpos}
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
+\usepackage{tikz}
 \addbibresource{bibliography.bib}
 
 \begin{filecontents}{bibliography.bib}
@@ -496,8 +496,33 @@
   \end{abstract}
 \end{frontmatter}
 
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[align=left, text width=15cm, anchor=north west] 
+    at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+    {
+        \noindent{\textbf{Correction notice}} \\
+        Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.\vspace{2pt}
+        \noindent{{\color{joteorange}\rule{\linewidth}{1pt}}}
+    };
+\end{tikzpicture}
+
+
+
 \lettrine{W}{ith} rapid technological advancements researchers and practitioners are offered new and improved opportunities to intervene with individuals’ behavior and knowledge digitally. Whole industry sectors focus on digital interventions that aim to increase the flourishing and well-being of the receiver (e.g., apps like \emph{one sec}\footnote{ one-sec.app/, an app to decrease automatic digital consumption and promote deliberate consumption.} or \emph{Structured}\footnote{ structured.app/, an app to promote structured day-planning.}). Psychological research has also focused on developing and scrutinizing digital nudges to advance a multitude of fields concerned with but not limited to prosociality offline and online \parencites[e.g.][]{Matias2019}{Tyler2021}[for a conceptual review,][]{Grüning2022}, misinformation \parencites[e.g.][]{Donovan2020}{Guess2020}{Lutzke2019}[for a review,][]{Kozyreva2022}, consumption of digital contents \parencites[e.g.][]{Grüning2023}, and medical health behavior \parencites[e.g.][]{Glasgow2021}{Horne2022}{Luong2021}.
 
+% \begin{errata}
+%     \RaggedRight%
+%     {\overpass\large\bfseries Correction notice}
+%     \vskip.5\smallwidth
+%     Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.
+
+%     \RaggedRight%
+%     {\overpass\large\bfseries Companion article}
+%     \vskip.5\smallwidth
+%     \fullcite{Hartman2021}
+
+% \end{errata}
 
 \begin{companion}
   \fullcite{Hartman2021}

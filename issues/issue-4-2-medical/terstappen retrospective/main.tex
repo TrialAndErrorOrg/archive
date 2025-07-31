@@ -10,6 +10,11 @@
 
 \usepackage[backend=biber,style=apa]{biblatex}
 
+
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
+\usepackage{tikz}
+
 \addbibresource{bibliography.bib}
 
 \jotetitle{Prenatal Sildenafil and Fetal-placental Programming in Human Pregnancies Complicated by Fetal Growth Restriction: A Retrospective Gene Expression Analysis}
@@ -615,6 +620,19 @@
 \begin{takeHomeMessage}
   Fetal growth restriction (FGR) predisposes to cardiorenal diseases later in life. Prenatal administration of sildenafil showed beneficial effects on cardiovascular health in animal FGR offspring. However, this study did not support the potency of sildenafil to reprogram the cardiorenal health in human pregnancies complicated by FGR.
 \end{takeHomeMessage}
+
+
+
+\begin{tikzpicture}[remember picture, overlay]
+    % Position the notice's top-left corner relative to the page's top-left corner.
+    \node[align=left, text width=15cm, anchor=north west] 
+    at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+    {
+        \noindent{\textbf{Correction notice}} \\
+        Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.\vspace{2pt}
+        \noindent{{\color{joteorange}\rule{\linewidth}{1pt}}}
+    };
+\end{tikzpicture}
 
 
 \lettrine{F}{etal} growth restriction (FGR) describes the inability of the fetus to reach its intrinsic growth potential. Early-onset FGR is most commonly caused by maternal vascular malperfusion resulting in placental insufficiency; a reduced uteroplacental blood flow impairs oxygen and nutrient supply towards the fetus \parencites{Burton2018}. Multiple lines of evidence suggest that exposure to this unfavorable intrauterine environment results in fetal adaptations, impaired maturation of organ development, and triggers developmental programming of cardiorenal diseases later in life \parencites{Barker2006}{Sundrani2017}{Chen2012}{Henriksen2002}. FGR offspring, and their future generations, are more susceptible to develop cardiovascular and renal disease, including hypertension, ischemic heart disease, chronic kidney disease and end-stage renal disease in adulthood \parencites{Malhotra2019}{White2009}{Gjerde2020}{Kooiman2020}{Demicheva2014}{Dötsch2016}{Sehgal2020}{Nüsken2020}. Adverse developmental programming might underlie this increased risk \parencites{Sehgal2020}{Nüsken2020}. A recent study showed altered gene expression and gene sets related to cardiovascular health and renal development in human umbilical vein endothelial cells (HUVECs) between placental insufficiency-induced FGR and control \parencites{Terstappen2020}.

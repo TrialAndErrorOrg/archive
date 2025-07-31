@@ -1,6 +1,11 @@
 \documentclass[authordate, empirical]{jote-new-article}
 
 
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\usepackage{tikz}
+
+
+
 \usepackage{balance}
 \jotetitle{Smile, You’re on Camera: Investigating the Relationship between Selfie Smiles and Distress}
 \keywordsabstract{mobile sensing, video, selfie, facial expression, smile}
@@ -41,21 +46,15 @@ Discussion: This study challenges the common view that facial expressions necess
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{tikzpicture}[remember picture, overlay]
+    \node[align=left, text width=15cm, anchor=north west] 
+    at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+    {
+        \noindent{\textbf{Correction notice}} \\
+        Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.\vspace{2pt}
+        \noindent{{\color{joteorange}\rule{\linewidth}{1pt}}}
+    };
+\end{tikzpicture}
 
 
 

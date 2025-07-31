@@ -5,7 +5,8 @@
 \usepackage{tabularx}
 
 \usepackage{graphicx}
-
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
 \usepackage{hyperref}
 
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -39,10 +40,23 @@
   \end{abstract}
 \end{frontmatter}
 
+	
+
 
 	\section{Commentary by Samantha Copeland \& Stuart Firestein}
 
-
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[align=left, anchor=north west] 
+		at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+		{
+			\begin{minipage}{15cm}
+			\raggedright
+			\textbf{Correction notice} \\
+			Incorrect Article Type Labeling: This article was previously mislabeled as an empirical article. This has now been corrected.\vspace{2pt} % Optional: adds a little space between text and line
+			{\color{joteorange}\rule{\linewidth}{1pt}}
+			\end{minipage}
+		};
+	\end{tikzpicture}
 
 
 

@@ -1,9 +1,10 @@
 \documentclass[authordate, reflection]{jote-new-article}
 
 \usepackage{caption}
-
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
 \usepackage{tabularx}
-
+\usepackage{tikz}
 \usepackage{graphicx}
 
 \usepackage{hyperref}
@@ -43,14 +44,25 @@
 \end{frontmatter}
 
 
+	
 
 
 
 
 	\section{Introduction}
 
-
-
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[align=left, anchor=north west] 
+		at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+		{
+			\begin{minipage}{15cm}
+			\raggedright
+			\textbf{Correction notice} \\
+			Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.\vspace{2pt}
+			{\color{joteorange}\rule{\linewidth}{1pt}}
+			\end{minipage}
+		};
+	\end{tikzpicture}
 	How do we ensure that an entire country gets vaccinated? By "we," I mean scientists and policymakers committed to safeguarding population health. Since nation-states began prioritizing the health of their populations, vaccination has become a deeply political issue (e.g., Porter, 2005; Vargha \& Wilkins, 2023). A single jab operates on two levels: It protects the individual from future disease while also subjecting them to potential side effects. At the societal level, widespread vaccination can lead to “herd immunity,” shielding the population once enough individuals are immunized. Achieving this state requires healthy individuals to accept the small personal risks of vaccination, even when the likelihood of encountering the pathogen or developing side-effects is negligible.
 
 

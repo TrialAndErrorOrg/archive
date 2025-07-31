@@ -3,7 +3,8 @@
 \usepackage{caption}
 
 \usepackage{tabularx}
-
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
 \usepackage{graphicx}
 
 \usepackage{hyperref}
@@ -38,8 +39,18 @@
 \end{frontmatter}
 
 
-
-
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[align=left, anchor=north west] 
+		at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+		{
+			\begin{minipage}{15cm}
+			\raggedright
+			\textbf{Correction notice} \\
+			Incorrect Article Type Labeling: This article was previously mislabeled as an empirical article. This has now been corrected.\vspace{2pt} % Optional: adds a little space between text and line
+			{\color{joteorange}\rule{\linewidth}{1pt}}
+			\end{minipage}
+		};
+	\end{tikzpicture}
 	The governance of risk is a highly technical endeavor. If we want to know whether a product like a chemical substance poses a risk to human health and should be regulated, we have to conduct laboratory tests under highly controlled conditions. We may for example expose a number of mice to the chemical substance and see if they are harmed. The variables of such tests -- the number of mice, the dosage, exposure time, and organs tested -- are precisely defined and stipulated in international standards, which result from hundreds of rigorous scientific studies yielding a scientific consensus.
 
 

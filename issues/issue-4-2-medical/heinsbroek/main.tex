@@ -10,6 +10,11 @@
 
 \usepackage[backend=biber,style=apa]{biblatex}
 
+
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
+\usepackage{tikz}
+
 \addbibresource{bibliography.bib}
 
 \jotetitle{Issues in Clinical Studies Leading to Medical Research Ethics Committee (MREC) Negative Decisions} \keywordsabstract{clinical trials, clinical studies, research assessment, medical research ethics committee, medical research ethics}
@@ -86,9 +91,22 @@
 
 
 
+
+
+
+
+
 \lettrine{I}{n} the Netherlands, medical scientific research in which human volunteers are subjected to procedures, or are required to follow rules of behavior, needs to be reviewed by an accredited MREC, as per the Dutch law for ‘Medical Research involving Human Subjects'. The Netherlands has 14 accredited MRECs and their operations are overseen by the Central Committee on Research Involving Human Subjects (CCMO).
 
-
+\begin{tikzpicture}[remember picture, overlay]
+    \node[align=left, text width=15cm, anchor=north west] 
+    at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+    {
+        \noindent{\textbf{Correction notice}} \\
+        Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.\vspace{2pt}
+        \noindent{{\color{joteorange}\rule{\linewidth}{1pt}}}
+    };
+\end{tikzpicture}
 
 MRECs determine if studies comply to the current legislation, regulations and guidelines concerning human subject research. This includes the General Data Protection Regulation \parencites[GDPR;][]{TheEuropeanParliament2016}, the Medical Research Involving Human Subjects Act \parencites[WMO;][]{NederlandseOverheid2022}, the Clinical Trial Regulation \parencites[CTR;][]{TheEuropeanParliament2014} or the Clinical Trial Directive   \parencites[CTD, till 31\textsuperscript{st} of January 2022;][]{TheEuropeanParliament2001}, Medical Device Regulation \parencites[MDR;][]{TheEuropeanParliament2021}, In Vitro Diagnostics Regulation \parencites[IVDR;][]{TheEuropeanParliament2017}, guideline for Good Clinical Practice \parencites{EuropeanMedicinesAgency2016}, Dutch Embryo Act \parencites{NederlandseOverheid2021} and the Declaration of Helsinki \parencites{TheWorldMedicalAssociation2013}. The kind of documents needed for assessment, the way a dossier is submitted, and the committee that assesses a research protocol depends on legislation and the regulations applicable to the study. With the increase in regulation, it becomes more common that submitted studies are returned to the applicant because of mistakes in the submission procedures or documents. For instance, clinical trials with medicinal products are sometimes still submitted directly to the MREC, while these should now be submitted via the Clinical Trials Information System (CTIS). Furthermore, medical device studies are not always submitted as an MDR-study, and as a result documents may be missing. Only when the study is submitted correctly and all essential documentation is available, the review process can start.
 

@@ -1,12 +1,19 @@
 \documentclass[authordate, empirical]{jote-new-article}
 
 \usepackage{caption}
-
+\usepackage{tikz}
 \usepackage{tabularx}
 
 \usepackage{graphicx}
 
 \usepackage{hyperref}
+
+\usepackage{titlesec}
+
+
+\PassOptionsToPackage{absolute,overlay}{textpos}
+\RequirePackage{xcolor}
+
 
 
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -1408,6 +1415,19 @@
 \end{frontmatter}
 
 
+\begin{tikzpicture}[remember picture, overlay]
+    \node[align=left, text width=15cm, anchor=north west] 
+    at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+    {
+        \noindent{\textbf{Correction notice}} \\
+        Incorrect Special Issue Labeling (Article erroneously excluded): This article was previously not labeled as part of a special issue due to an error. This has now been corrected.\vspace{2pt}
+        \noindent{{\color{joteorange}\rule{\linewidth}{1pt}}}
+    };
+\end{tikzpicture}
+
+
+
+
 
 
 
@@ -1427,12 +1447,7 @@
 \end{takeHomeMessage}
 
 
-
-
-
-
 \lettrine{I}{ntermittent} fasting is an umbrella term for several related dietary regimens that are based on the cyclical alternation of periods of usual food intake and periods of fasting, that is, periods in which food intake is significantly reduced or completely eliminated (Mattson et al., 2017). In contrast to caloric restriction dietary regimens, the emphasis in fasting is not on reducing caloric intake, but on limiting the period of feeding (Mattson \& Longo, 2014; Khedkar, 2020). Three fasting regimens are most common. These are: whole day fasting, that is, complete abstinence from food 1 or 2 days a week; alternate day fasting, that is, limiting food consumption to a maximum of 25\% of usual intake every other day; and time restricted eating (TRE) in which the change of fasting and feeding periods takes place within 1 day (Patterson \& Sears, 2017). The main premise underlying weight loss with intermittent fasting is that a person cannot fully compensate for the energy deficit they achieve during the fasting period (Rynders et al., 2019). Reviews (Patterson et al., 2015; Welton et al., 2020) show that various fasting regimens are indeed effective method of losing weight, as statistically significant weight loss was found in a majority of the studies. TRE is currently the most popular form of intermittent fasting because the fasting period lasts much shorter than those in the other forms (Moro et al., 2016).
-
 
 
 It has been shown that intermittent fasting interventions also lead to improvements in symptoms of metabolic syndrome such as insulin resistance, hypertension, and inflammation (Harvie et al., 2010; Moro et al., 2016). However, intermittent fasting drew attention among scientists in fields outside of nutrition, due to reports of its positive effects on psychological well-being (Patterson \& Sears, 2017). Early studies have shown that caloric restriction in rodents leads to improved maze learning (Idrobo et al., 1987) and has a protective effect against cognitive decline in old age (Ingram et al., 1987). Relatively recent research shows that restricting the feeding period to 8 hours promotes neurogenesis and has protective effects after a stroke (Manzanero et al., 2014), and it also affects neurotrophin regulation (Marosi \& Mattson, 2014). The results of a longitudinal study demonstrated that a group that adhered to caloric restriction for 2 years achieved greater improvements in working memory test as compared to the control group (Leclerc et al., 2020). People who consistently adhered to intermittent fasting performed better on cognitive tests than those who adhered poorly or not at all (Ooi et al., 2020). At the same time, a recent systematic review (Benau et al., 2021) showed that short-term fasting (3-48 hours) is more likely to be associated with impairment rather than improvement in higher-order cognitive functions.
