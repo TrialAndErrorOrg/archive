@@ -311,7 +311,7 @@ def extract_metadata_from_tex(tex_file_path):
         # Extract various fields using regex patterns
         patterns = {
             'doi': r'\\paperdoi\{([^}]+)\}',
-            'title': r'\\jotetitle\{([^}]+)\}',
+            'title': r'\\(?:jotetitle|title)\{([^}]+)\}',
             'keywords': r'\\keywordsabstract\{([^}]+)\}',
             'abstract': r'\\abstracttext\{(.*?)\}',
             'journal_name': r'\\jname\{([^}]+)\}',
@@ -353,6 +353,11 @@ def extract_metadata_from_tex(tex_file_path):
             if abstract_match:
                 abstract_text = abstract_match.group(1).strip()
                 metadata['abstract'] = clean_latex_text(abstract_text)
+
+        if 'title' not in metadata or not metadata['title']:
+            title_match = re.search(r'\\title\{([^}]+)\}', content)
+            if title_match:
+                metadata['title'] = clean_latex_text(title_match.group(1))
         
         # Extract authors and affiliations with better matching
         authors = []
@@ -542,6 +547,13 @@ def create_doaj_article_json(metadata):
             # If parsing fails, use the year from jyear
             pass
     
+
+    resolved_url = resolve_doi_url(metadata.get('doi', ''))
+    if not resolved_url:
+        print(f"Failed to resolve DOI {metadata.get('doi', '')}")
+        return None
+
+
     # Build the article JSON
     article = {
         "bibjson": {
