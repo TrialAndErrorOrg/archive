@@ -1,0 +1,11 @@
+[project]
+name = "jote-archive"
+version = "0.1.0"
+description = "Scripts for fetching Crossref XML and submitting to DOAJ"
+dependencies = [
+    "requests>=2.25.0",
+    "python-dotenv>=0.19.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = []
