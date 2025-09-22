@@ -11,7 +11,8 @@
 \addbibresource{hartman.bib}
  %%% Add additional packages here if required.Usually not needed, except when doing things with figures and tables, god help you then % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum.OR use[1 - 5] to generate the first five, etc.nnn
 
-\usepackage{balance}
+% \usepackage{balance}
+
  \jotetitle{The Gloria Adherence Subproject: Problems and Randomization Mistakes}
  % List abbreviations here, if any.Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
 %\abbrevs{ % ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
@@ -36,7 +37,7 @@
 \author[1, 2]{Maarten~Boers}
 
  % Fill it in again for the PDF metadata.Lame workaround but it works % Format: \authorone{...} \authortwo{...}
- \authorone{Hartman et al.}
+%  \authorone{Hartman et al.}
  % List the contribution effort here, they will be listed at the end of the page % List the acknowledgments.If there is no companion piece, this is listed below the author info %
  %\acknowledgments{
  %J. W. J. Bijlsma, R. Christensen, Y. M. Smulders and S. H. Ralston are members of the scientific advisory committee of the GLORIA trial.
@@ -47,48 +48,83 @@
 % \funding{ The GLORIA project was funded by the \emph{European Union's Horizon 2020 Research and Innovation Programme} under the topic `Personalizing Health and Care' (grant number 634886).}
 % Include full affiliation details for all authors
 
-\affil[1]{Amsterdam Rheumatology and Immunology Center, Amsterdam UMC, location VUmc, Amsterdam, Netherlands}
-\affil[2]{Epidemiology \& Data Science, Amsterdam UMC, Vrije Universiteit, Amsterdam, Netherlands} \affil[3]{Department of Rheumatology and Clinical immunology, Maasstad Hospital, Rotterdam, Netherlands} \affil[4]{ Department of Rheumatology, Groene Hart Hospital, Gouda, Netherlands} \affil[5]{Department of Rheumatology, Antonius Hospital, Sneek, Netherlands}
-\affil[6]{Department of Rheumatology and Clinical Immunology, University Medical Center Utrecht, Utrecht, Netherlands}
-\affil[7]{Department of Rheumatology, Gelre Hospitals, Apeldoorn, Netherlands} \affil[8]{Department of Rheumatology, Leids University Medical Center, Leiden, Netherlands}
-\affil[9]{Department of Rheumatology, Northwest Clinics, Alkmaar, Netherlands} \affil[10]{Department of Rheumatology, Haga Hospital, Den Haag, Netherlands} \affil[11]{Tools Patient Empowerment, Amsterdam, Netherlands} \affil[12]{BeyonDevices LDA, Sobral de Monte Agra\c{c}o, Portugal} \affil[13]{Bluepharma, Ind\'ustria Farmac\^eutica, S.A., Coimbra, Portugal}
+\affil[1]{{\tiny Amsterdam Rheumatology and Immunology Center, Amsterdam UMC, location VUmc, Amsterdam, Netherlands}}
+\affil[2]{{\tiny Epidemiology \& Data Science, Amsterdam UMC, Vrije Universiteit, Amsterdam, Netherlands}}
+\affil[3]{{\tiny Department of Rheumatology and Clinical immunology, Maasstad Hospital, Rotterdam, Netherlands}}
+\affil[4]{{\tiny Department of Rheumatology, Groene Hart Hospital, Gouda, Netherlands}}
+\affil[5]{{\tiny Department of Rheumatology, Antonius Hospital, Sneek, Netherlands}}
+\affil[6]{{\tiny Department of Rheumatology and Clinical Immunology, University Medical Center Utrecht, Utrecht, Netherlands}}
+\affil[7]{{\tiny Department of Rheumatology, Gelre Hospitals, Apeldoorn, Netherlands}}
+\affil[8]{{\tiny Department of Rheumatology, Leids University Medical Center, Leiden, Netherlands}}
+\affil[9]{{\tiny Department of Rheumatology, Northwest Clinics, Alkmaar, Netherlands}}
+\affil[10]{{\tiny Department of Rheumatology, Haga Hospital, Den Haag, Netherlands}}
+\affil[11]{{\tiny Tools Patient Empowerment, Amsterdam, Netherlands}}
+\affil[12]{{\tiny BeyonDevices LDA, Sobral de Monte Agra\c{c}o, Portugal}}
+\affil[13]{{\tiny Bluepharma, Ind\'ustria Farmac\^eutica, S.A., Coimbra, Portugal}}
 % List the correspondence email of the main correspondent
+\corremail{\href{l.hartman@amsterdamumc.nl}{l.hartman@amsterdamumc.nl}}
 \corraddress{Linda Hartman  \href{l.hartman@amsterdamumc.nl}{l.hartman@amsterdamumc.nl}}
  % Optionally list the present address of one of the authors %\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
- % Fill in the DOI of the paper % Always starts with '10.36850/' and is suffixed with one of the following plus a number % e : empirical % r : reflection % mr : meta - research % rga: rejected grant application % ed : editorial \paperdoi{10.36850/TOBEFILLEDIN}
+ % Fill in the DOI of the paper % Always starts with '10.36850/' and is suffixed with one of the following plus a number % e : empirical % r : reflection % mr : meta - research % rga: rejected grant application % ed : editorial
  % Include the name of the author that should appear in the running header
  \runningauthor{Hartman et al.}
- % The name of the Journal
- \jname{Journal of Trial and Error}
- % The year that the article is published
+%  % The name of the Journal
+%  \jname{Journal of Trial and Error}
+%  % The year that the article is published
  \jyear{2021}
- % The Volume Number
+%  % The Volume Number
   \jvolume{2}
   
+  \paperdoi{10.36850/e6}
   \jissue{1}
   \setcounter{page}{50}
   \jpages{50-55}
- % The website that's listed in the bottom right \jwebsite{ https://www.jtrialerror.com}
- %%% Only \paperpublished is necessary, any combination of the other two is possible % When the paper was received % Format: 1 January, 1900
+%  % The website that's listed in the bottom right \jwebsite{ https://www.jtrialerror.com}
+%  %%% Only \paperpublished is necessary, any combination of the other two is possible % When the paper was received % Format: 1 January, 1900
  \paperreceived{3 June, 2021}
- % When the paper was accepted % Format: 1 January, 1900
+%  % When the paper was accepted % Format: 1 January, 1900
  \paperaccepted{24 August, 2021}
- % When the paper will be published % Format: 1 January, 1900
+%  % When the paper will be published % Format: 1 January, 1900
  \paperpublished{18 October, 2021}
  \paperissued{3 March, 2022}
- % When the paper is published but in YYYY - MM - DD format, for the crossmark button
+%  % When the paper is published but in YYYY - MM - DD format, for the crossmark button
  \paperpublisheddate{2021-10-18}
- % The pages of the article, comment out if rolling article
- % \jpages{1 - 12}
- % Link to the logo, might be redundant
- % Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page \rolling{}
- % Sets the paragraph skip to be zero, this should be in the CLS
- %%% Companion Piece % Reflection and Empirical articles have each other as companion pieces.Add the DOI, Title, and Abstract of the respective Companion piece here %%% Abstract % These two set the height and width of the abstract.There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic % Higher number means skinnier abstract
-% Enter something here in order for the abstract to disappear.Be sure to also delete the abstract \noabstract{}
-% Fill in the keywords that will appear in the abstract, max 7
- \keywordsabstract{
- medication adherence, electronic caps, rheumatoid arthritis, nested trial, randomization
- }
+%  % The pages of the article, comment out if rolling article
+%  \jpages{1 - 12}
+%  % Link to the logo, might be redundant
+%  % Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page \rolling{}
+%  % Sets the paragraph skip to be zero, this should be in the CLS
+%  %%% Companion Piece % Reflection and Empirical articles have each other as companion pieces.Add the DOI, Title, and Abstract of the respective Companion piece here %%% Abstract % These two set the height and width of the abstract.There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic % Higher number means skinnier abstract
+% % Enter something here in order for the abstract to disappear.Be sure to also delete the abstract \noabstract{}
+% % Fill in the keywords that will appear in the abstract, max 7
+ \keywordsabstract{medication adherence, electronic caps, rheumatoid arthritis, nested trial, randomization}
+\jwebsite{https://journal.trialanderror.org}
+
+ \abstracttext{Medication adherence, which is the extent to which patients take their medication as prescribed, is essential in treating chronic inflammatory diseases such as rheumatoid arthritis (RA). Therefore, we nested a subproject in the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial to add a low-dose prednisolone (5 mg/day) or placebo to the standard care in older people (65+ years) with RA. Adherence was measured with an electronic monitoring cap that recorded bottle openings in all patients. In the subproject, we performed an adherence intervention with an advanced cap that could communicate with an application on the smart device via Bluetooth. We randomized patients with a smart device to receive or not to receive adherence reminders on the smart device for three months. Multiple problems emerged that precluded an answer to the research question: sample size (overly optimistic estimates of older patients with a smart device), logistic issues (availability of smartcaps, data extraction), randomization and treatment allocation errors (despite training of personnel), and low quality of the data in the intervention group (hardware failure, discovered too late because data was read in batches). For future trials planning to include a subproject, we recommend keeping it simple, starting with a field test before the actual study starts, and monitoring data from the beginning of the study.}
+
+%  \jotetitle{Three Persistent Myths about Open Science}
+% \keywordsabstract{open science, diversity, data sharing, preregistration, meta-science}
+% \abstracttext{Knowledge and implementation of open science principles and behaviors remains uneven across the sciences, despite over 10 years of intensive education and advocacy. One reason for the slow and uneven progress of the open science movement is a set of closely held myths about the implications of open science practices, bolstered by recurring objections and arguments that have long been addressed. This paper covers three of these major recurring myths: 1) that open science conflicts with prioritizing diversity, 2) that “open data” is a binary choice between fully open and accessible and completely closed off, and 3) that preregistration is only appropriate for certain types of research designs. Putting these myths to rest is necessary as we work towards improving our scientific practice.}
+% \runningauthor{Syed}
+\jname{Journal of Trial \& Error}
+% \jyear{2024}
+% \paperdoi{10.36850/mr11}
+% \paperreceived{September 12, 2023}
+% \author[1]{\mbox{Moin Syed\orcid{0000-0003-4759-3555}}}
+% \affil[1]{Department of Psychology, University of Minnesota,	Minneapolis-Saint Paul, United States of America}
+% \corremail{\href{mailto:moin@umn.edu}{moin@umn.edu}}
+% \corraddress{University of Minnesota}
+% \runningauthor{Syed}
+% \paperaccepted{January 25, 2024}
+% \paperpublished{April 8, 2024}
+% \paperpublisheddate{2024-03-31}
+% \jwebsite{https://journal.trialanderror.org}
+
+\setcounter{page}{32}
+\jvolume{4}
+\jissue{2}
+\paperissued{December 23, 2024}
+\jpages{32--45}
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document Starts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,7 +133,8 @@
  \begin{frontmatter}
    \maketitle % Type your abstract between these things.Max 250 words.Be sure to include the \noindent, looks bad otherwise
    \begin{abstract}
-  Medication adherence, which is the extent to which patients take their medication as prescribed, is essential in treating chronic inflammatory diseases such as rheumatoid arthritis (RA). Therefore, we nested a subproject in the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial to add a low-dose prednisolone (5 mg/day) or placebo to the standard care in older people (65+ years) with RA. Adherence was measured with an electronic monitoring cap that recorded bottle openings in all patients. In the subproject, we performed an adherence intervention with an advanced cap that could communicate with an application on the smart device via Bluetooth. We randomized patients with a smart device to receive or not to receive adherence reminders on the smart device for three months. Multiple problems emerged that precluded an answer to the research question: sample size (overly optimistic estimates of older patients with a smart device), logistic issues (availability of smartcaps, data extraction), randomization and treatment allocation errors (despite training of personnel), and low quality of the data in the intervention group (hardware failure, discovered too late because data was read in batches). For future trials planning to include a subproject, we recommend keeping it simple, starting with a field test before the actual study starts, and monitoring data from the beginning of the study. \end{abstract}
+    \printabstracttext
+  \end{abstract}
  \end{frontmatter}
  
 
