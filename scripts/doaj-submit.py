@@ -505,11 +505,11 @@ def resolve_doi_url(doi):
                     return match.group(1)
         
         # Fallback to constructed URL
-        return f"https://journal.trialanderror.org/pub/{doi.split('/')[-1]}"
+        return None
         
     except Exception:
         # Fallback to constructed URL
-        return f"https://journal.trialanderror.org/pub/{doi.split('/')[-1]}"
+        return None
 
 
 def create_doaj_article_json(metadata):
@@ -549,9 +549,10 @@ def create_doaj_article_json(metadata):
     
 
     resolved_url = resolve_doi_url(metadata.get('doi', ''))
+    print(f"Resolved URL: {resolved_url}")
     if not resolved_url:
         print(f"Failed to resolve DOI {metadata.get('doi', '')}")
-        return None
+        raise ValueError(f"Failed to resolve DOI {metadata.get('doi', '')}. You probably don't want to submit this article to DOAJ yet.")
 
 
     # Build the article JSON
