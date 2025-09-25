@@ -52,7 +52,8 @@
 \newbox{\myorcidaffilbox}
 \sbox{\myorcidaffilbox}{\large\includegraphics[height=1.7ex]{media/ORCIDiD_icon32x32.png}}
 
-\author[1]{Veronika Cheplygina}% I want to make Orcids work but thats for later \protect\href{https://orcid.org/0000-0003-0176-9324}{\includegraphics[width=5em]{media/ORCIDiD_iconvector.pdf}}}
+\author[1]{Veronika Cheplygina}
+% I want to make Orcids work but thats for later \protect\href{https://orcid.org/0000-0003-0176-9324}{\includegraphics[width=5em]{media/ORCIDiD_iconvector.pdf}}}
 \authorone{Veronika Cheplygina}
 
 
@@ -108,7 +109,6 @@
 \begin{frontmatter}
 \maketitle 
 \begin{abstract}
-%\phantomsection
 Machine learning (ML) has great potential for early diagnosis of disease from medical scans, and at times, has even been shown to outperform experts. However, ML algorithms need large amounts of annotated data -- scans with outlined abnormalities - for good performance. The time-consuming annotation process limits the progress of ML in this field.
 
 To address the annotation problem, multiple instance learning (MIL) algorithms were proposed, which learn from scans that have been diagnosed, but not annotated in detail. Unfortunately, these algorithms are not good enough at predicting where the abnormalities are located, which is important for diagnosis and prognosis of disease. This limits the application of these algorithms in research and in clinical practice.
