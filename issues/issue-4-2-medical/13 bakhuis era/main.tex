@@ -1,0 +1,342 @@
+\documentclass[authordate, reflection,issue]{jote-new-article}
+
+\usepackage{caption}
+
+\usepackage{tabularx}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+
+\addbibresource{bibliography.bib}
+
+\jotetitle{In the era of whole transcriptome sequencing: Reflections on the Molecular Genetic Effect of Prenatal Sildenafil for Fetal Growth Restriction}
+\keywordsabstract{reflection, sildenafil, fetal growth restriction}
+\abstracttext{In this reflection article, we evaluate a sub study of the STRIDER trial by Terstappen et al., which investigated the molecular effects of prenatal sildenafil administration in pregnancies complicated by fetal growth restriction (FGR). Unfortunately, this trial revealed no clinical benefit and even an increased risk of persistent pulmonary hypertension in neonates. After an early trial cessation, this sub study tried to elucidate tissue-specific sildenafil effects by performing RNA sequencing on placental tissues and human umbilical vein endothelial cells. While no significant differences were found on gene level, modest pathway-level alterations (specifically in nitric oxide and immune signaling pathways) were observed. We here reflect on the methodological strengths of combining clinical and molecular data, but also point out limitations of this study such as the restricted gene set choice and the absence of an analysis stratified by neonatal outcome. For future drug repurposing studies, we highlight the importance of a broad molecular characterization of target tissues to fully explain effects that are observed in clinical trials.}
+\jname{Journal of Trial \& Error}
+\jyear{2025}
+\paperdoi{10.36850/44b9-4bf3}
+\paperreceived{March 27, 2025}
+\author[1]{\mbox{Carsten F.J. Bakhuis\orcid{0000-0002-2344-9252}}}
+\affil[1]{The New Utrecht School, Utrecht, the Netherlands}
+\corremail{\href{mailto:M.A.G.vanderHeyden@umcutrecht.nl}{M.A.G.vanderHeyden@umcutrecht.nl}}
+\corraddress{Department of Medical Physiology, University Medical Center Utrecht}
+\runningauthor{Bakhuis \& van der Heyden}
+\author[2]{\mbox{Marcel A.G. van der Heyden\orcid{0000-0002-4225-7942}}}
+\affil[2]{Department of Medical Physiology, University Medical Center Utrecht, the Netherlands}
+\paperaccepted{April 28, 2025}
+\paperpublished{June 21, 2025}
+\paperpublisheddate{2025-06-21}
+\jwebsite{https://journal.trialanderror.org}
+
+\setcounter{page}{122}
+\jissue{2}
+\jvolume{4}
+\jpages{122-127}
+\specialissue{Scientific Failure and Uncertainty in the Health Domain}
+\articletype{Special Issue - Reflection}
+
+\begin{document}
+\begin{frontmatter}
+  \maketitle
+  \begin{abstract}
+    \printabstracttext
+  \end{abstract}
+\end{frontmatter}
+
+
+
+	
+	\section{Introduction}
+
+
+
+	Fetal growth restriction (FGR) is defined as the inability of a fetus to reach its intrinsic growth potential. The most used classification in clinical practice is of the American College of Obstetrics and Gynecology, which defines FGR as an estimated fetal weight below the tenth percentile (American College of Obstetrics and Gynecology, 2019; Nardozza et al., 2017). This occurs in 5-10\% of all pregnancies in higher income countries (Damhuis et al., 2021; Frøen et al., 2004). FGR constitutes a major clinical challenge, as it is the second leading cause of perinatal mortality (Nardozza et al., 2017). This is especially true for early onset FGR (before 32 weeks of gestation), with a combined antenatal and neonatal mortality rate of 19\% as presented in a recent systematic review (Pels, Beune, et al., 2020). Moreover, an association between FGR and diseases in adulthood has been observed, amongst others for cardiovascular and renal disease (Barker, 2006; Demicheva \& Crispi, 2014; Frøen et al., 2004; White et al., 2009).\textsuperscript{ }The underlying etiologic mechanism of FGR is placental insufficiency, with or without maternal diseases, fetal chromosomal abnormalities, or an infection (Bruin et al., 2021).
+
+	\begin{companion}
+		Terstappen et al. (2023) \vskip.5\smallwidth
+		\emph{Prenatal sildenafil and fetal-placental programming in human pregnancies complicated by fetal growth restriction: A retrospective gene expression analysis}\vskip.5\smallwidth
+		\href{https://doi.org/10.36850/e16}{DOI: 10.36850/e16}
+		\vskip-2\baselineskip
+	\end{companion}
+
+	Despite advancements in prenatal care, effective therapeutic interventions for FGR remain limited, necessitating continued research into potential treatments. One such candidate that has come to attention is sildenafil, a phosphodiesterase-5 inhibitor known for its vasodilatory effects, primarily used in the management of erectile dysfunction and pulmonary hypertension (Pels et al., 2023). The hypothesis that sildenafil could enhance uteroplacental blood flow and thereby improve fetal growth was initially supported by promising results from various animal studies (Burke et al., 2016; Stanley et al., 2012), whilst some other preceding animal studies indicated a negative effect of sildenafil (Miller et al., 2009; Nassar et al., 2012). In 2017, results from a meta-analysis were published summarizing the results of several of these animal studies, indicating an overall potential beneficial effect of sildenafil administration (Paauw et al., 2017).
+
+
+
+
+	
+
+
+
+
+	\section{The STRIDER consortium and the Dutch STRIDER trial}
+
+
+
+	To evaluate the efficacy of sildenafil in human pregnancies complicated by FGR, the international Sildenafil TheRapy In Dismal prognosis Early-onset intrauterine growth Restriction (STRIDER) consortium was launched in 2014 (Pels et al., 2017). The STRIDER consortium consisted of research groups from several countries: New Zealand/Australia, Canada, the United Kingdom, and the Netherlands. Patients were included from 2014 to 2020 and results from individual studies were initially published separately (Groom et al., 2019; Paauw et al., 2017; Pels, Derks, et al., 2020; Sharp et al., 2018; von Dadelszen et al., 2022). The results from the Dutch STRIDER trial were published in 2020. In the Dutch trial, pregnant women with an amenorrhea duration between 20 and 30 weeks with severe FGR were randomized to either sildenafil or placebo treatment. However, in a planned interim analysis of the Dutch STRIDER trial, the hypothesized beneficial effect was not observed. Even so, a significantly increased risk of persistent pulmonary hypertension in neonates (PPHN) was observed. After this interim analysis, the further execution of the Dutch STRIDER trial was halted in 2018. The authors therefore describe their results based on all patients and samples included up until that moment (Pels, Derks, et al., 2020).
+
+
+
+	In an effort to explain the unexpectedly unfavorable observations of the trial and to further elucidate the effect of prenatal sildenafil administration on both the human fetus and placenta, a sub study was performed in the Dutch STRIDER trial. In this sub study, the effect of sildenafil on specifically cardiovascular and renal programming was studied using RNA sequencing (RNAseq; Terstappen et al., 2023). To discriminate between effects present within the fetal vascular system and in the placenta, both Human Umbilical Vein Endothelial Cells (HUVECs) samples and placental tissues of sildenafil-treated and placebo-treated patients underwent whole transcriptome RNAseq. In this reflection article, we will first go over some characteristics of RNAseq and HUVECs, summarize the study results, and then reflect thereon.
+
+
+
+
+
+
+
+	\subsection{RNA sequencing and HUVECs: An introduction}
+
+
+
+	RNA sequencing (RNAseq) is a powerful and increasingly used technique to analyze the complete transcriptome of a given sample. Using RNAseq, scientists can (amongst other things) evaluate the expression of certain genes by a quantification of the RNA levels of that specific gene. By comparing gene expression levels between specific patient groups, a so-called differential expression analysis can be performed (Khatoon et al., 2014). In the context of this study, RNAseq was used to compare the transcriptomic profiles from tissues derived from sildenafil-treated and placebo-treated patients, aiming to identify differentially expressed genes and certain pathways influenced by sildenafil.
+
+
+
+	This study used both placenta tissues and Human Umbilical Vein Endothelial Cells (HUVECs). HUVECs are a well-established model for studying vascular biology and endothelial cell function. The cells are derived from the endothelium of the umbilical vein after childbirth, providing a representative cell type for examining vascular responses in vitro. However, that does cause some limitations with their usage. First, as HUVECs are obtained from the umbilical vein, they may not fully represent the total variety of fetal endothelial cells. Second, as they are harvested at birth, they may not completely reflect temporal changes which occurred during pregnancy and drug exposure. Also, as HUVECs are fetal tissue and not maternal tissue, sex differences between fetuses influence gene expression (Medina-Leyte et al., 2020).\textsuperscript{ }For that reason, the STRIDER sub study also corrected for this (Terstappen et al., 2023). Another limitation is that gene expression in HUVECs is generally heavily influenced by preterm birth (Medina-Leyte et al., 2020).\textsuperscript{ }As the mean gestational age at birth in the sildenafil treated group was approximately 2 weeks shorter than the placebo group (30.8 versus 32.2 weeks, respectively), this may have influenced the results from the gene expression analysis, although this difference in gestational age was not significant. Despite these limitations, HUVECs are in this setting the most accessible and relatively representative model to investigate the effect of sildenafil on fetal endothelial development.
+
+
+
+
+
+
+
+	\subsection{Summary of the results}
+
+
+
+	In an effort to explain the potential effect of prenatal sildenafil administration on both the fetus and the placenta in the presence of FGR, the authors performed differential gene expression analysis within each tissue type (i.e., HUVEC or placenta) to compare patients with and without exposure of sildenafil.
+
+
+
+	First, they performed an overall differential gene expression analysis on all genes and emphasized specifically for genes known to be involved in cardiovascular or renal health or in the nitric oxide (NO) pathway. In this analysis, no significant differences were seen between the sildenafil- and placebo-treated groups. Second, the authors performed a so-called gene set analysis, where pathways consisting of specific genes are used as input and differences in pathway functioning can be explored. In this analysis, an upregulation of gene sets involved in the nitric oxide pathway and a varying up- and downregulation for immune pathway genes was observed in the placental tissues of the sildenafil-treated group. According to the authors, the upregulation of the three NO-related gene sets may represent the true pharmacological effect of sildenafil, although these differences were minimal and independent of usage duration of sildenafil. The observed upregulation of interleukin-10 related pathways might represent an anti-inflammatory response induced by the exposure to sildenafil, as the expression levels also correlated with the usage duration (Terstappen et al., 2023).
+
+
+
+	In general, the results of this study are therefore somewhat difficult to interpret. Although sildenafil may not directly influence cardiovascular or renal programming at the individual gene level, it may modulate broader biological pathways relevant to placental function and immune regulation. This therefore underscores the high complexity of developmental programming in pregnancy and the effects that FGR may have thereon.
+
+
+
+	In this reflection article, we aim to evaluate the approaches used in this sub study, explore alternative analytical strategies, and propose future directions for research.
+
+
+
+
+
+
+
+	\section{Reflection on “Prenatal sildenafil and fetal-placental programming in human pregnancies complicated by fetal growth restriction: A retrospective gene expression analysis”}
+
+
+
+	The Dutch STRIDER trial added valuable information to the literature, as it sought to provide a treatment for a yet unmet clinical need. This contribution of an in-human clinical trial is especially valuable after the conflicting results of preceding animal studies, as these results may be difficult to translate to human physiology given the large interspecies differences that are often observed. Despite the negative results of the initial placebo-controlled trial, the authors still tried to elucidate the specific mechanisms of action of sildenafil in this sub study. While prenatal sildenafil administration does not improve pregnancy outcomes, this transcriptomic analysis provided valuable insights into potential molecular pathways that may be modulated by sildenafil exposure. Therefore, this study highlights the complexity of the pharmacological interactions that may occur when testing new interventions to treat FGR, which is also relevant for future trials with other candidate treatments for this yet unmet clinical need.
+
+
+
+	As a general remark, we are very supportive of this type of translational research coupled to a clinical trial to better explain drug-tissue interactions observed in humans. In many cases, a clinical trial follows after an effect observation during in-vitro studies. However, considering a drug repurposing study such as the STRIDER trial, it is still critical to characterize the changes that certain tissues undergo when a drug is tested for a new application. In our opinion, this should be standard practice, regardless of an eventual beneficial or non-beneficial effect of the tested drug. Also, the broad approach of this study by using both HUVECs and placental tissues must be applauded. Our reflection will therefore mainly focus on potential other analyses which could have been performed with both the generated data in this study, and the samples themselves.
+
+
+
+	The authors themselves acknowledge their sample size as the main limitation, with usable samples of 13 sildenafil-treated patients (placental tissues, of whom 12 with HUVEC samples) and 13 placebo controls (placental tissue, of whom 8 with HUVEC samples; Terstappen et al., 2023). This hampered sample size was of course due to the early cessation of the Dutch STRIDER trial, but did limit the statistical power to detect more subtle molecular genetic alterations induced by the sildenafil treatment. This is especially true for the HUVEC group, where less samples were available as compared to the placental tissues. Nevertheless, one might expect that in this limited sample size the most relevant molecular genetic effect of sildenafil usage would have been detected as well. Therefore, this sub study did not yet provide us with a satisfactory answer to if and how sildenafil may influence the human placenta and/or the fetus. Still, the presence of such an influence may be logically deducted from the fact that, in the initial STRIDER trial, PPHN was observed significantly more frequent after sildenafil application (Pels, Derks, et al., 2020). Other processes or pathways, which have not been detected in this RNAseq study, may therefore be involved.
+
+
+
+	In the context of this sub-study, it must be noted that this transcriptomic approach to explain fetal and placental effects of sildenafil administration represents only a part of the potential complex processes involved. If we therefore want to better characterize the influence of sildenafil, other studies could focus on identifying other potential processes which may have been influenced. Examples of these studies could include DNA methylation analysis on the one hand, and proteomics (for example by means of mass spectrometry) to investigate post-translational changes on the other hand. As the authors of this sub study mention a potential application of sildenafil in early pregnancy to prevent pregnancy loss, it is advisable to first characterize the precise mechanisms of action and influence of this drug better.
+
+
+
+	Another possibility might have been a less restricted choice of gene sets for the differential gene expression analysis. Now, only gene sets known to be influential for cardiovascular or renal programming or to be involved in NO signaling were specifically studied. This approach does narrow the results, of course, where a potential effect of sildenafil through a primarily more unexpected (and therefore not included) pathway would go unnoticed. The authors did perform an overall analysis of differential gene expression, which did not show a clear distinction between the treated and untreated group. However, a targeted approach with gene sets of more pathways and processes may have shed even more light on the consequences of sildenafil application on the fetus and placenta.
+
+
+
+	In addition to this last remark, it may also be interesting to compare the HUVEC and placental samples of neonates with and without PPHN after sildenafil usage. Although this was not the primary goal of this study, it would have been a good subject for a follow-up study after the initial observation in the regular STRIDER trial of the significantly increased PPHN frequency. For example, within the sildenafil exposed group, differential gene expression analysis could have been performed to compare the three patients with PPHN to the patients without PPHN. Despite the very limited sample size of such an analysis, this may have given an indication of the presence of critical sildenafil-influenced pathways, and the respective relevant gene sets could then have been studied in the overall trial population. Ultimately, such a comparison may also help to identify patients which are at risk for PPHN in the future if sildenafil is to be applied during pregnancy for other potential indications.
+
+
+
+	In conclusion, despite the effort of the STRIDER consortium, sildenafil did not prove to be the “golden bullet” for the treatment of FGR. Although the authors have done extensive research to gain insights on a molecular-genetic level of the influence of sildenafil, this study did not yet provide us with a satisfactory answer to explain the observed effects in the trial. To reduce pregnancy losses or adverse neonatal outcomes due to FGR, future research should focus on an even better characterization of the mechanisms involved in FGR. By doing so, the scientific community can come up with the best suitable targets or even with candidate drugs for this yet unmet clinical need.
+
+
+
+
+
+
+
+
+
+
+
+	\section{References}
+
+
+
+	American College of Obstetricians and Gynecologists' Committee on Practice Bulletins—Obstetrics and the Society for Maternal-Fetal Medicine. (2019). ACOG Practice Bulletin No. 204: Fetal Growth Restriction. \emph{Obstetrics and Gynecology, 133}(2), e97--e109. \url{https://doi.org/10.1097/AOG.0000000000003070}
+
+
+
+	Barker, D. J. (2006). Adult consequences of fetal growth restriction. \emph{Clinical Obstetrics and Gynecology, 49}(2), 270--283. \url{https://doi.org/10.1097/00003081-200606000-00009}
+
+
+
+
+
+
+
+	Bruin, C., Damhuis, S., Gordijn, S., \& Ganzevoort, W. (2021). Evaluation and management of suspected fetal growth restriction. \emph{Obstetrics and Gynecology Clinics of North America, 48}(2), 371--385. \url{https://doi.org/10.1016/j.ogc.2021.02.007}
+
+
+
+
+
+
+
+	Burke, S. D., Zsengellér, Z. K., Khankin, E. V., Lo, A. S., Rajakumar, A., DuPont, J. J., McCurley, A., Moss, M. E., Zhang, D., Clark, C. D., Wang, A., Seely, E. W., Kang, P. M., Stillman, I. E., Jaffe, I. Z., \& Karumanchi, S. A. (2016). Soluble fms-like tyrosine kinase 1 promotes angiotensin II sensitivity in preeclampsia. \emph{The Journal of Clinical Investigation, 126}(7), 2561--2574. \url{https://doi.org/10.1172/JCI83918}
+
+
+
+
+
+
+
+	Damhuis, S. E., Ganzevoort, W., \& Gordijn, S. J. (2021). Abnormal fetal growth: Small for gestational age, fetal growth restriction, large for gestational age: Definitions and Epidemiology. \emph{Obstetrics and Gynecology Clinics of North America}, \emph{48}(2), 267--279. \url{https://doi.org/10.1016/j.ogc.2021.02.002}
+
+
+
+
+
+
+
+	Demicheva, E., \& Crispi, F. (2014). Long-term follow-up of intrauterine growth restriction: Cardiovascular disorders. \emph{Fetal Diagnosis and Therapy, 36}(2), 143--153. \url{https://doi.org/10.1159/000353633}
+
+
+
+
+
+
+
+	Frøen, J. F., Gardosi, J. O., Thurmann, A., Francis, A., \& Stray-Pedersen, B. (2004). Restricted fetal growth in sudden intrauterine unexplained death. \emph{Acta Obstetricia et Gynecologica Scandinavica, 83}(9), 801--807. \url{https://doi.org/10.1111/j.0001-6349.2004.00602.x}
+
+
+
+
+
+
+
+	Groom, K. M., McCowan, L. M., Mackay, L. K., Lee, A. C., Gardener, G., Unterscheider, J., Sekar, R., Dickinson, J. E., Muller, P., Reid, R. A., Watson, D., Welsh, A., Marlow, J., Walker, S. P., Hyett, J., Morris, J., Stone, P. R., \& Baker, P. N. (2019). STRIDER NZAus: A multicentre randomised controlled trial of sildenafil therapy in early-onset fetal growth restriction. \emph{BJOG: An International Journal of Obstetrics and Gynaecology, 126}(8), 997--1006. \url{https://doi.org/10.1111/1471-0528.15658}
+
+
+
+
+
+
+
+	Khatoon, Z., Figler, B., Zhang, H., \& Cheng, F. (2014). Introduction to RNA-Seq and its applications to drug discovery and development. \emph{Drug Development Research, 75}(5), 324--330. \url{https://doi.org/10.1002/ddr.21215}
+
+
+
+
+
+
+
+	Medina-Leyte, D. J., Domínguez-Pérez, M., Mercado, I., Villarreal-Molina, M. T., \& Jacobo-Albavera, L. (2020). Use of Human Umbilical Vein Endothelial Cells (HUVEC) as a model to study cardiovascular disease: A review. \emph{Applied Sciences,} \emph{10}(3), Article 938. \url{https://doi.org/10.3390/app10030938}
+
+
+
+
+
+
+
+	Miller, S. L., Loose, J. M., Jenkin, G., \& Wallace, E. M. (2009). The effects of sildenafil citrate (Viagra) on uterine blood flow and well being in the intrauterine growth-restricted fetus. \emph{American Journal of Obstetrics and Gynecology, 200}(1), 102.e1--102.e1027. \url{https://doi.org/10.1016/j.ajog.2008.08.029}
+
+
+
+
+
+
+
+	Nardozza, L. M., Caetano, A. C., Zamarian, A. C., Mazzola, J. B., Silva, C. P., Marçal, V. M., Lobo, T. F., Peixoto, A. B., \& Araujo Júnior, E. (2017). Fetal growth restriction: Current knowledge. \emph{Archives of Gynecology and Obstetrics, 295}(5), 1061--1077. \url{https://doi.org/10.1007/s00404-017-4341-9}
+
+
+
+	Nassar, A. H., Masrouha, K. Z., Itani, H., Nader, K. A., \& Usta, I. M. (2012). Effects of sildenafil in Nω-nitro-L-arginine methyl ester-induced intrauterine growth restriction in a rat model. \emph{American Journal of Perinatology, 29}(6), 429--434. \url{https://doi.org/10.1055/s-0032-1304823}
+
+
+
+
+
+
+
+	Paauw, N. D., Terstappen, F., Ganzevoort, W., Joles, J. A., Gremmels, H., \& Lely, A. T. (2017). Sildenafil during pregnancy: A preclinical meta-analysis on fetal growth and maternal blood pressure. \emph{Hypertension, 70}(5), 998--1006. \url{https://doi.org/10.1161/HYPERTENSIONAHA.117.09690}
+
+
+
+
+
+
+
+	Pels, A., Kenny, L. C., Alfirevic, Z., Baker, P. N., von Dadelszen, P., Gluud, C., Kariya, C. T., Mol, B. W., Papageorghiou, A. T., van Wassenaer-Leemhuis, A. G., Ganzevoort, W., Groom, K. M., \& International STRIDER Consortium. (2017). STRIDER (Sildenafil TheRapy In Dismal prognosis Early onset fetal growth Restriction): An international consortium of randomised placebo-controlled trials. \emph{BMC Pregnancy and Childbirth, 17}(1), Article 440. \url{https://doi.org/10.1186/s12884-017-1594-z}
+
+
+
+
+
+
+
+	Pels, A., Beune, I. M., van Wassenaer-Leemhuis, A. G., Limpens, J., \& Ganzevoort, W. (2020). Early-onset fetal growth restriction: A systematic review on mortality and morbidity. \emph{Acta Obstetricia et Gynecologica Scandinavica}, \emph{99}(2), 153--166. \url{https://doi.org/10.1111/aogs.13702}
+
+
+
+
+
+
+
+	Pels, A., Derks, J., Elvan-Taspinar, A., van Drongelen, J., de Boer, M., Duvekot, H., van Laar, J., van Eyck, J., Al-Nasiry, S., Sueters, M., Post, M., Onland, W., van Wassenaer-Leemhuis, A., Naaktgeboren, C., Jakobsen, J. C., Gluud, C., Duijnhoven, R. G., Lely, T., Gordijn, S., …, \& the Dutch STRIDER Trial Group. (2020). Maternal sildenafil vs placebo in pregnant women with severe early-onset fetal growth restriction: A randomized clinical trial. \emph{JAMA Network Open, 3}(6), Article e205323. \url{https://doi.org/10.1001/jamanetworkopen.2020.5323}
+
+
+
+
+
+
+
+	Pels, A., Ganzevoort, W., Kenny, L. C., Baker, P. N., von Dadelszen, P., Gluud, C., Kariya, C. T., Leemhuis, A. G., Groom, K. M., Sharp, A. N., Magee, L. A., Jakobsen, J. C., Mol, B. W. J., \& Papageorghiou, A. T. (2023). Interventions affecting the nitric oxide pathway versus placebo or no therapy for fetal growth restriction in pregnancy. \emph{The Cochrane Database of Systematic Reviews, 7}(7), Article CD014498. \url{https://doi.org/10.1002/14651858.CD014498}
+
+
+
+
+
+
+
+	Sharp, A., Cornforth, C., Jackson, R., Harrold, J., Turner, M. A., Kenny, L. C., Baker, P. N., Johnstone, E. D., Khalil, A., von Dadelszen, P., Papageorghiou, A. T., Alfirevic, Z., \& STRIDER group. (2018). Maternal sildenafil for severe fetal growth restriction (STRIDER): A multicentre, randomised, placebo-controlled, double-blind trial. \emph{The Lancet: Child \& Adolescent Health, 2}(2), 93--102. \url{https://doi.org/10.1016/S2352-4642(17)30173-6}
+
+
+
+	Stanley, J. L., Andersson, I. J., Poudel, R., Rueda-Clausen, C. F., Sibley, C. P., Davidge, S. T., \& Baker, P. N. (2012). Sildenafil citrate rescues fetal growth in the catechol-O-methyl transferase knockout mouse model. \emph{Hypertension, 59}(5), 1021--1028. \url{https://doi.org/10.1161/HYPERTENSIONAHA.111.186270}
+
+
+
+
+
+
+
+	Terstappen, F., Plösch, T., Calis, J. J. A., Ganzevoort, W., Pels, A., Paauw, N. D., Gordijn, S. J., van Rijn, B. B., Mokry, M., \& Lely, A. T. (2023). Prenatal sildenafil and fetal-placental programming in human pregnancies complicated by fetal growth restriction: A retrospective gene expression analysis [Special issue]\emph{. Journal of Trial and Error}. \url{https://doi.org/10.36850/e16}
+
+
+
+
+
+
+
+	von Dadelszen, P., Audibert, F., Bujold, E., Bone, J. N., Sandhu, A., Li, J., Kariya, C., Chung, Y., Lee, T., Au, K., Skoll, M. A., Vidler, M., Magee, L. A., Piedboeuf, B., Baker, P. N., Lalji, S., \& Lim, K. I. (2022). Halting the Canadian STRIDER randomised controlled trial of sildenafil for severe, early-onset fetal growth restriction: Ethical, methodological, and pragmatic considerations. \emph{BMC Research Notes, 15}(1), Article 244. \url{https://doi.org/10.1186/s13104-022-06107-y}
+
+
+
+
+
+
+
+	White, S. L., Perkovic, V., Cass, A., Chang, C. L., Poulter, N. R., Spector, T., Haysom, L., Craig, J. C., Salmi, I. A., Chadban, S. J., \& Huxley, R. R. (2009). Is low birth weight an antecedent of CKD in later life? A systematic review of observational studies. \emph{American Journal of Kidney Diseases, 54}(2), 248--261. \url{https://doi.org/10.1053/j.ajkd.2008.12.042}
+
+
+\end{document}
