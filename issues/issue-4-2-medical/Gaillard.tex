@@ -1,33 +1,72 @@
 \documentclass{article}
 
-% Use the pdfpages package
 \usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{bookmark}
 
-% Optional: Remove page numbers and margins for a seamless look
 \usepackage[margin=0pt]{geometry}
 \pagestyle{empty}
 
-\begin{document}
+\hypersetup{
+    pdftitle={Medical Journal Compilation},
+    pdfauthor={Various Authors},
+    pdfpagemode=UseOutlines,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
 
-% Include each PDF file. The [pages=-] option includes all pages.
-% The path is relative to the .tex file.
+\begin{document}
+\pdfbookmark[1]{Cover}{cover}
 \includepdf[pages=-]{coverdigital.pdf}
+
+\pdfbookmark[1]{Table of Contents}{toc}
 \includepdf[pages=-]{Medical contents.pdf}
+
+\pdfbookmark[1]{The Case for Embracing Trial-and-Error in Health Research: Rethinking Failure and Uncertainty as Foundations of Progress}{article1}
 \includepdf[pages=-]{1 gaillard editorial/main.pdf}
+
+\pdfbookmark[1]{How to Fail Successfully}{article2}
 \includepdf[pages=-]{2 prakken fail successfully/main.pdf}
+
+\pdfbookmark[1]{Issues in Clinical Studies Leading to Medical Research Ethics Committee (MREC) Negative Decisions}{article3}
 \includepdf[pages=-]{3 heinsbroek/main.pdf}
+
+\pdfbookmark[1]{The "Function" of Art?: Challenges of Setting Up Artistic Research Residencies in Elderly Care Institutions}{article4}
 \includepdf[pages=-]{4 hubner function/main.pdf}
+
+\pdfbookmark[1]{Medical Expert Endorsement Fails to Reduce Vaccine Hesitancy in U.K. Residents}{article5}
 \includepdf[pages=-]{5 panizza endorsement/main.pdf}
+
+\pdfbookmark[1]{On the Significance of Place: Vaccination Refusal as a Situated Phenomenon}{article6}
 \includepdf[pages=-]{6 meer significance of place/main.pdf}
+
+\pdfbookmark[1]{Digital Nudges: A Reflection on Challenges and Improvements Inspired by the Gloria Adherence Subproject}{article7}
 \includepdf[pages=-]{7 gruening nudges/gruening.pdf}
+
+\pdfbookmark[1]{Cognitive Functions, Mood and Sleep Quality after Two Months of Intermittent Fasting}{article8}
 \includepdf[pages=-]{8 hromatko/main.pdf}
+
+\pdfbookmark[1]{Cognitive or Emotional Improvement through Intermittent Fasting? Reflections on Hype and Reality}{article9}
 \includepdf[pages=-]{9 schleim reflections/main.pdf}
+
+\pdfbookmark[1]{Smile, You’re on Camera: Investigating the Relationship between Selfie Smiles and Distress}{article10}
 \includepdf[pages=-]{10 lind smile/main.pdf}
+
+\pdfbookmark[1]{A Smiling Paradox: Exploring the Constructed Nature of Emotions. A Reflection on the Relationship Between Smiling in Selfies and Distress}{article11}
 \includepdf[pages=-]{11 reitsema smile/main.pdf}
+
+\pdfbookmark[1]{Prenatal Sildenafil and Fetal-placental Programming in Human Pregnancies Complicated by Fetal Growth Restriction: A Retrospective Gene Expression Analysis}{article12}
 \includepdf[pages=-]{12 terstappen retrospective/main.pdf}
+
+\pdfbookmark[1]{In the Era of Whole Transcriptome Sequencing: Reflections on the Molecular Genetic Effect of Prenatal Sildenafil for Fetal Growth Restriction}{article13}
 \includepdf[pages=-]{13 bakhuis era/main.pdf}
+
+\pdfbookmark[1]{Partial Endothelial Trepanation Versus Deep Anterior Lamellar Keratoplasty in Keratoconus Patients: Results of the PENTACON Trial}{article14}
 \includepdf[pages=-]{14 wisse pentacon/main.pdf}
+
+\pdfbookmark[1]{Reflection on the PENTACON Trial: Lessons Learned from an Unpublished Study}{article15}
 \includepdf[pages=-]{15 wisse reflection/main.pdf}
-% ... add a line for every PDF file you have
 
 \end{document}
