@@ -4,7 +4,7 @@
 \PassOptionsToPackage{absolute,overlay}{textpos}
 \usepackage{tikz}
 
-
+\usepackage{placeins}
 
 \usepackage{balance}
 \jotetitle{Smile, you’re on camera: Investigating the relationship between selfie smiles and distress}
@@ -37,7 +37,7 @@ Discussion: This study challenges the common view that facial expressions necess
 \setcounter{page}{91}
 \jissue{2}
 \jvolume{4}
-\jpages{91-101}
+\jpages{91--101}
 \specialissue{Scientific Failure and Uncertainty in the Health Domain}
 \articletype{Special Issue - Empirical}
 
@@ -76,7 +76,8 @@ Discussion: This study challenges the common view that facial expressions necess
 
 This study draws its data from the Effortless Assessment of Stressful Experiences project, a small but mighty pilot. The project aimed to find out whether a mobile sensing app, the Effortless Assessment Research System (EARS; Figure 1), could produce meaningful data about distress without EARS itself driving research participants crazy. This study builds on two existing publications from the project: a paper introducing EARS, including information about its excellent acceptability (Lind et al., 2018), and a paper on the associations between EARS data (typed text), self-reported stress, and biological markers of inflammation (Byrne et al., 2021).
 
-
+\par
+\FloatBarrier
 
 \begin{takeHomeMessage}
 
@@ -86,9 +87,7 @@ This study draws its data from the Effortless Assessment of Stressful Experience
 
 
 
-
-
-\begin{figure}[b]
+\begin{figure}[H]
   \begin{fullwidth}
     \centering
     \includegraphics[width=.5\linewidth]{media/image1.png}
@@ -103,7 +102,7 @@ This study draws its data from the Effortless Assessment of Stressful Experience
 \end{figure}
 
 
-\begin{figure}[b!]
+\begin{figure}[H]
   \begin{fullwidth}
     \centering
     \includegraphics[width=.8\linewidth]{media/image2.jpeg}
@@ -393,7 +392,7 @@ We made a final attempt at testing our hypothesis during the peer review process
 
 
 
-Look at those p-values! They're huge! (Relatively speaking, of course— we all know p-values are not measures of magnitude.) While the direction of the simple fixed effects aligned with our hypothesis that increased distress would predict decreased smiling, we once again fell far short of statistical significance.
+Look at those p-values! They're huge! (Relatively speaking, of course—we all know p-values are not measures of magnitude.) While the direction of the simple fixed effects aligned with our hypothesis that increased distress would predict decreased smiling, we once again fell far short of statistical significance.
 
 
 
@@ -402,6 +401,18 @@ Our null findings forced us to reckon with an inconvenient truth: The academic s
 
 
 
+
+\begin{figure}[h!]
+  \begin{fullwidth}
+    \includegraphics[width=\linewidth]{media/image4.png}
+
+    \caption{Anxiety and smiling intensity increase together.}
+
+  \end{fullwidth}
+  \label{fig:rId11}
+
+
+\end{figure}
 
 
 
@@ -422,8 +433,6 @@ From this point forward, we conducted exploratory data analysis. Given the failu
 
 
 
-
-
 We moved on to exploring the relationships among the key variables. There we were, plotting bivariate associations in the hopes of resurrecting our hypothesis, when all of a sudden:
 
 
@@ -432,17 +441,7 @@ We moved on to exploring the relationships among the key variables. There we wer
 
 
 
-\begin{figure}[h!]
-  \begin{fullwidth}
-    \includegraphics[width=\linewidth]{media/image4.png}
 
-    \caption{Anxiety and smiling intensity increase together.}
-
-  \end{fullwidth}
-  \label{fig:rId11}
-
-
-\end{figure}
 
 
 
@@ -569,7 +568,7 @@ Do you know for sure why the dog is smiling despite the flames and smoke? We don
 
 
 
-Our original hypothesis rested on the expressed emotion framework advanced by Paul Ekman, which conflicted with the behavioral ecology view of Alan Fridlund. This study, with its finding that smiling increased alongside stress, anxiety, and depression, may lend more support to Dr. Fridlund's view that facial expressions primarily serve a person's communication goals. For example, participants experiencing more anxiety might be more worried about wanting the implied audience (e.g., researchers) to like them and their videos, so they might smile more. However, we cannot say conclusively that these findings support Dr. Fridlund's view -- only that in a dichotomous scenario where Dr. Ekman and Dr. Fridlund oppose each other (such as, say, a boxing match), these findings align more with Dr. Fridlund.
+Our original hypothesis rested on the expressed emotion framework advanced by Paul Ekman, which conflicted with the behavioral ecology view of Alan Fridlund. This study, with its finding that smiling increased alongside stress, anxiety, and depression, may lend more support to Dr. Fridlund's view that facial expressions primarily serve a person's communication goals. For example, participants experiencing more anxiety might be more worried about wanting the implied audience (e.g., researchers) to like them and their videos, so they might smile more. However, we cannot say conclusively that these findings support Dr. Fridlund's view—only that in a dichotomous scenario where Dr. Ekman and Dr. Fridlund oppose each other (such as, say, a boxing match), these findings align more with Dr. Fridlund.
 
 
 
@@ -605,7 +604,7 @@ Various aspects of the study design limit these findings. First, the academic st
 
 
 
-In addition, at three key points in the protocol, we missed opportunities to gather helpful data. First --and most embarrassingly-- we failed to measure positive affect in a study focused on smiling, which makes it impossible to say anything about how smiling might have related to positive emotions. Second, we failed to use ecological momentary assessment to ask participants about their moods when they recorded each selfie video. Third, we failed to ask participants during debriefing about who they imagined the audience to be for their selfie videos. The selfie videos carried with them two additional limitations. We instructed participants to talk throughout their videos, which is likely to have introduced extra noise to the automated facial analysis. We also opted not to hand code or check OpenFace's analysis of the videos, which means that our analysis did not benefit from a human in the loop.
+In addition, at three key points in the protocol, we missed opportunities to gather helpful data. First—and most embarrassingly—we failed to measure positive affect in a study focused on smiling, which makes it impossible to say anything about how smiling might have related to positive emotions. Second, we failed to use ecological momentary assessment to ask participants about their moods when they recorded each selfie video. Third, we failed to ask participants during debriefing about who they imagined the audience to be for their selfie videos. The selfie videos carried with them two additional limitations. We instructed participants to talk throughout their videos, which is likely to have introduced extra noise to the automated facial analysis. We also opted not to hand code or check OpenFace's analysis of the videos, which means that our analysis did not benefit from a human in the loop.
 
 
 
@@ -615,13 +614,6 @@ Finally, these exploratory findings are based on a small, predominately white sa
 
 
 
-
-
-\subsection{Unforeseen evils}
-
-
-
-Having ventured into perilous digital mental health territory, we must learn from the valiant scientists who have gone before us and specify what our findings \emph{do not} mean. This study provides no evidence that the selfie videos in any way cause distress. This is a correlational study that suggests that distress and smiling, in this particular context, tend to increase together. Furthermore, these findings should be interpreted in the context of revelations about the biases baked into many automated facial analysis tools. The training datasets that underpin OpenFace vary in both their intentional inclusion of diverse faces and their disclosure of the dataset's demographics. As we were underpowered to test for significant differences in smiling intensity between participants based on racial or ethnic identity in this study (Table 4), it is appropriate to proceed with caution with the application of automated facial analysis to racially and ethnically diverse samples.
 
 \begin{table}[b!]
   \begin{adjustwidth}{-4cm}{}
@@ -668,6 +660,13 @@ Having ventured into perilous digital mental health territory, we must learn fro
 \end{table}
 
 
+
+
+\subsection{Unforeseen evils}
+
+
+
+Having ventured into perilous digital mental health territory, we must learn from the valiant scientists who have gone before us and specify what our findings \emph{do not} mean. This study provides no evidence that the selfie videos in any way cause distress. This is a correlational study that suggests that distress and smiling, in this particular context, tend to increase together. Furthermore, these findings should be interpreted in the context of revelations about the biases baked into many automated facial analysis tools. The training datasets that underpin OpenFace vary in both their intentional inclusion of diverse faces and their disclosure of the dataset's demographics. As we were underpowered to test for significant differences in smiling intensity between participants based on racial or ethnic identity in this study (Table 4), it is appropriate to proceed with caution with the application of automated facial analysis to racially and ethnically diverse samples.
 
 
 \section{Conclusion}
