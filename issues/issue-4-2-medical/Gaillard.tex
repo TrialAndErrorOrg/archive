@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{bookmark}
 
+\usepackage{xcolor}
 \usepackage[margin=0pt]{geometry}
 \pagestyle{empty}
 
@@ -19,7 +20,7 @@
 
 \begin{document}
 \pdfbookmark[1]{Cover}{cover}
-\includepdf[pages=-]{coverdigital.pdf}
+\includepdf[pages=-]{coverprint.pdf}
 
 \pdfbookmark[1]{Table of contents}{toc}
 \includepdf[pages=-]{Medical contents.pdf}
@@ -69,4 +70,10 @@
 \pdfbookmark[1]{Reflection on the PENTACON Trial: Lessons learned from an unpublished study}{article15}
 \includepdf[pages=-]{15 wisse reflection/main.pdf}
 
+
+\clearpage
+\definecolor{bluestuff}{HTML}{0E263F}
+\pagecolor{bluestuff}
+\mbox{}
+\clearpage
 \end{document}
