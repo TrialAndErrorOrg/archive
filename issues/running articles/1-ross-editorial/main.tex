@@ -1,4 +1,4 @@
-\documentclass[authordate, empirical]{jote-new-article}
+\documentclass[authordate, editorial]{jote-new-article}
 
 \usepackage{caption}
 
@@ -42,6 +42,18 @@
   \end{abstract}
 \end{frontmatter}
 
+\begin{tikzpicture}[remember picture, overlay]
+		\node[align=left, anchor=north west] 
+		at ([xshift=4.7cm, yshift=-0.3cm]current page.north west) 
+		{
+			\begin{minipage}{15cm}
+			\raggedright
+			\textbf{Correction notice} \\
+			Incorrect Article Type Labeling: This article was previously mislabeled as an empirical article. This has now been corrected.\vspace{2pt} % Optional: adds a little space between text and line
+			{\color{joteorange}\rule{\linewidth}{1pt}}
+			\end{minipage}
+		};
+\end{tikzpicture}
 
 \lettrine{I}{n} the systematic progression of scientific inquiry, serendipity -- happy discovery attributable neither to luck nor skills but rather a combination of the two -- serves as a critical mechanism, fostering incremental advancements through the recombination of existing ideas and observations, often catalyzing novel developments in unanticipated yet fruitful directions. In a recent paper, \textcites[][p. 2]{Henrich2023} write that “new inventions, fresh insights, and novel ideas involve incremental steps that recombine—often through a healthy dose of serendipity—existing ideas, technologies, observations, and concepts”. This is not a new observation. Robert Merton's interest in collecting stories of serendipity began as early as the 1940s, ultimately and arguably founding the current field of research in serendipity with the publication of \emph{The Travels and Adventures of Serendipity }with Elinor Barber \parencites{Merton2004}{Yaqub2018} and influencing foundational research such as Pek Van Andel's (\hspace*{-2pt}\citeyear{VanAndel1994}) seminal categorization of collected examples of the phenomenon \parencites{foster2003serendipity}.
 
