@@ -1,4 +1,4 @@
-\documentclass[authordate, empirical]{jote-new-article}
+\documentclass[authordate, meta]{jote-new-article}
 
 \usepackage{caption}
 
@@ -12,8 +12,8 @@
 
 \addbibresource{bibliography.bib}
 
-\jotetitle{The statistical tests used in the literature on conditioned place preference induced by nicotine in mice are underpowered}
-\keywordsabstract{meta-research, hypothetical effect sizes, statistical power, false discovery rate, conditioned place preference (CPP), nicotine}
+\jotetitle{The Statistical Tests Used in the Literature on Conditioned Place Preference Induced by Nicotine in Mice Are Underpowered}
+\keywordsabstract{meta-research, hypothetical effect sizes, statistical power, false discovery rate, conditioned place preference, nicotine}
 \abstracttext{\textbf{Introduction:} In recent decades, concerns have been raised about the validity and reliability of many research results. Inadequate research practices, including insufficient statistical power, have contributed to the replication crisis. The statistical tests of numerous studies in the neurobehavioral sciences are often underpowered, with inflated effect sizes and high rates of false discoveries. To explore these issues in experimental psychopharmacology, this study focused on the rewarding effects of nicotine using the conditioned place preference (CPP) task in mice.
 \textbf{Methods:} We assessed, across a set of selected articles, whether the statistical power of the included tests, calculated using external small, medium, and large hypothetical effect sizes (Cohen’s \emph{f} and \emph{d}), reached the conventional .80 threshold, and how these powers related to the observed effect sizes. We also examined the association between observed effect sizes and sample sizes and estimated Predictive Positive Value (PPV) and False Discovery Rate (FDR) for pre-study probabilities of \emph{H}\textsubscript{1} being true ranging from .001 to .99.
 \textbf{Results:} Across 61 articles (1995–2024) comprising 129 statistical tests, all calculated powers fall below the conventional 0.80 threshold for small and medium hypothetical effect sizes, and only 7.1 to 41.7 percent reach this level for large effect sizes. None of the studies report a complete and justified power analysis or any other formal sample size justification. Effect sizes are negatively related to both power and sample size, with smaller, underpowered studies tending to report inflated effects. As a result, many studies, especially those with low or medium levels of pre-study probabilities, show reduced PPV and elevated FDR.
@@ -24,11 +24,12 @@
 \paperdoi{10.36850/34b0-42b1}
 \paperreceived{July 26, 2024}
 \author[1]{\mbox{François Léonard\orcid{0000-0002-4506-4062}}}
-\affil[1]{University of Liège, Liège, Belgium}
+\affil[1]{Department of Education, University of Liège, Liège, Belgium}
 \corremail{\href{mailto:francois.leonard@uliege.be}{francois.leonard@uliege.be}}
 \corraddress{University of Liège}
 \runningauthor{Léonard \& Tirelli}
-\author[1]{\mbox{Ezio Tirelli\orcid{0009-0005-3591-2645}}}
+\author[2]{\mbox{Ezio Tirelli\orcid{0009-0005-3591-2645}}}
+\affil[2]{Board of Ethics and Scientific Integrity, University of Liège, Liège, Belgium}
 \paperaccepted{October 2, 2025}
 \paperpublished{December 13, 2025}
 \paperpublisheddate{2025-12-13}
@@ -72,7 +73,7 @@
 
 
 
-	In recent decades, the scientific community has become increasingly aware of the problem of reproducibility and replicability in published confirmatory research findings. This concern stems from the observation that many study results cannot be reproduced reliably, casting doubt on their validity (Begley \& Ioannidis, 2015; Errington et al., 2021; Munafò et al., 2017; Open Science Collaboration, 2015). A substantial body of literature has identified numerous probable contributing factors, across a range of scientific fields. Among these factors, a broad spectrum of inadequate or questionable research practices stands out as particularly influential (John et al., 2012; Van Calster et al., 2017). While the literature describes a multitude of such practices, the following are among the best characterized examples: the prioritization of statistically significant effects coupled with misconceptions about the p-value (Gigerenzer, 2018; Greenland et al., 2016; Halsey et al., 2015; Lytsy et al., 2022); excessive flexibility in study design and data analysis (Motulsky, 2014; Patel et al., 2015; Simmons et al., 2011); flawed experimental methodology or statistical approaches, often involving multiple errors (Altman, 1994; Darling, 2024; Nieuwenhuis et al., 2011; Smith, 2017); and insufficient statistical power, which is considered as one of the most pervasive and detrimental threats to the reliability of scientific findings (Bishop, 2019; Button et al., 2013; Ioannidis, 2005).
+	In recent decades, the scientific community has become increasingly aware of the problem of reproducibility and replicability in published confirmatory research findings. This concern stems from the observation that many study results cannot be reproduced reliably, casting doubt on their validity (Begley \& Ioannidis, 2015; Errington et al., 2021; Munafò et al., 2017; Open Science Collaboration, 2015). A substantial body of literature has identified numerous probable contributing factors, across a range of scientific fields. Among these factors, a broad spectrum of inadequate or questionable research practices stands out as particularly influential (John et al., 2012; van Calster et al., 2017). While the literature describes a multitude of such practices, the following are among the best characterized examples: the prioritization of statistically significant effects coupled with misconceptions about the \emph{p}-value (Gigerenzer, 2018; Greenland et al., 2016; Halsey et al., 2015; Lytsy et al., 2022); excessive flexibility in study design and data analysis (Motulsky, 2014; Patel et al., 2015; Simmons et al., 2011); flawed experimental methodology or statistical approaches, often involving multiple errors (Altman, 1994; Darling, 2024; Nieuwenhuis et al., 2011; Smith, 2017); and insufficient statistical power, which is considered as one of the most pervasive and detrimental threats to the reliability of scientific findings (Bishop, 2019; Button et al., 2013; Ioannidis, 2005).
 
 
 
@@ -80,7 +81,7 @@
 
 
 
-	It is generally accepted that optimal statistical power should reach or exceed .80. However, a substantial body of meta-research has shown that this conventional threshold is routinely unmet in studies reporting statistically significant results, across fields such as psychological sciences (Fraley \& Vazire, 2014; Hussey, 2023; Stanley et al., 2018; Szucs \& Ioannidis, 2017), neuroscience (Button et al., 2013; Dumas-Mallet et al., 2017; Mitra et al., 2019; Quintana, 2020; Szucs \& Ioannidis, 2017), experimental medicine and clinical health research (de Vries et al., 2023; Gaeta \& Brydges 2020; Kinney et al., 2020; Lamberink et al., 2017; Turner et al., 2013), economics (Ioannidis et al., 2017), animal-based experimental research (Button et al., 2013; Bonapersona et al., 2021; Carneiro et al., 2018), and the natural sciences (Cleasby et al., 2021; Jennions \& Møller, 2003; Smith et al., 2011; Yang et al., 2023). Across these domains, underpowered tests often fail to detect potentially relevant effects smaller than those highlighted in the very studies where they are applied. In the case of non-significant results, such failures may reflect insufficient sensitivity rather than the true absence of an effect, leading to false negatives (Cohen, 1962; Giuffrida, 2014; Hofmeister et al., 2007; Moher et al., 1994; Quintana, 2020).
+	It is generally accepted that optimal statistical power should reach or exceed .80. However, a substantial body of meta-research has shown that this conventional threshold is routinely unmet in studies reporting statistically significant results, across fields such as psychological sciences (Fraley \& Vazire, 2014; Hussey, 2023; Stanley et al., 2018; Szucs \& Ioannidis, 2017), neuroscience (Button et al., 2013; Dumas-Mallet et al., 2017; Mitra et al., 2019; Quintana, 2020; Szucs \& Ioannidis, 2017), experimental medicine and clinical health research (de Vries et al., 2023; Gaeta \& Brydges 2020; Kinney et al., 2020; Lamberink et al., 2017; Turner et al., 2013), economics (Ioannidis et al., 2017), animal-based experimental research (Bonapersona et al., 2021; Button et al., 2013; Carneiro et al., 2018), and the natural sciences (Cleasby et al., 2021; Jennions \& Møller, 2003; Smith et al., 2011; Yang et al., 2023). Across these domains, underpowered tests often fail to detect potentially relevant effects smaller than those highlighted in the very studies where they are applied. In the case of non-significant results, such failures may reflect insufficient sensitivity rather than the true absence of an effect, leading to false negatives (Cohen, 1962; Giuffrida, 2014; Hofmeister et al., 2007; Moher et al., 1994; Quintana, 2020).
 
 
 
@@ -92,11 +93,11 @@
 
 
 
-	Importantly, observed effect sizes tend to be inflated in studies with small sample sizes, high variability, and low statistical power. This arises because a wide sampling distribution allows observed effects to deviate substantially from the true effect especially at the smallest p-values, a statistical phenomenon known as a Type M (Magnitude) error (Gelman \& Carlin, 2014; Halsey et al., 2015).When statistical significance is used as a selection criterion, only the largest observed effects have a chance to reach statistical significance under low power, leading to systematic overestimation of the effect size, the Winner's Curse (Ioannidis, 2008). The published literature may further amplify this inflation through publication bias, which preferentially retains statistically significant findings (Ioannidis, 2005). A negative relationship has been described between the observed effect size and the sample size or the power in large sets of articles and tests dealing with clinical trials meta-analyses (Ioannidis, 2008; Pereira \& Ioannidis, 2011), various areas of psychological research (Kühberger et al., 2014; Szucs \& Ioannidis, 2017), neurocognitive and health sciences (Button et al., 2013; David et al., 2013; Dumas-Mallet et al., 2017; Szucs \& Ioannidis, 2017), and behavioral ecology and evolutionary biology (Cleasby et al., 2021). This relationship has also been documented in more thematically focused analyses, including animal models of stroke treatments (Schmidt-Pogoda et al., 2019), multiple sclerosis (Vesterinen et al., 2010), the effects of high-intensity interval training on health (Ekkekakis et al., 2023), and the behavioral effects of intranasal oxytocin in humans (Quintana, 2020; Walum et al., 2016). Published inflated effect sizes can mislead sample size calculations and produce underpowered tests, thereby weakening studies whose design relies directly on such estimates (see for example the Bayesian modeling by Etz and Vandekerckhove, 2016).
+	Importantly, observed effect sizes tend to be inflated in studies with small sample sizes, high variability, and low statistical power. This arises because a wide sampling distribution allows observed effects to deviate substantially from the true effect especially at the smallest \emph{p}-values, a statistical phenomenon known as a Type M (Magnitude) error (Gelman \& Carlin, 2014; Halsey et al., 2015). When statistical significance is used as a selection criterion, only the largest observed effects have a chance to reach statistical significance under low power, leading to systematic overestimation of the effect size, the Winner's Curse (Ioannidis, 2008). The published literature may further amplify this inflation through publication bias, which preferentially retains statistically significant findings (Ioannidis, 2005). A negative relationship has been described between the observed effect size and the sample size or the power in large sets of articles and tests dealing with clinical trials meta-analyses (Ioannidis, 2008; Pereira \& Ioannidis, 2011), various areas of psychological research (Kühberger et al., 2014; Szucs \& Ioannidis, 2017), neurocognitive and health sciences (Button et al., 2013; David et al., 2013; Dumas-Mallet et al., 2017; Szucs \& Ioannidis, 2017), and behavioral ecology and evolutionary biology (Cleasby et al., 2021). This relationship has also been documented in more thematically focused analyses, including animal models of stroke treatments (Schmidt-Pogoda et al., 2019), multiple sclerosis (Vesterinen et al., 2010), the effects of high-intensity interval training on health (Ekkekakis et al., 2023), and the behavioral effects of intranasal oxytocin in humans (Quintana, 2020; Walum et al., 2016). Published inflated effect sizes can mislead sample size calculations and produce underpowered tests, thereby weakening studies whose design relies directly on such estimates (see for example the Bayesian modeling by Etz and Vandekerckhove, 2016).
 
 
 
-	Another important consequence of low power and small sample sizes is a fall in the probability that the reported statistically significant effects are true (the predictive positive value, PPV) and, complementarily, an increase in the probability that these effects are false (the false discovery rate, FDR). The calculation of PPV and FDR, which are post-study probabilities, incorporates the pre-study probabilities (prior odds or plausibility) that the alternative hypothesis ($H1$) is true given a statistically significant result (existence of an effect). With low pre-study probabilities of $H1$, low power can have severe consequences, leading to a substantial proportion of research findings being false, in other words attributable solely to chance. This has been illustrated both in the studies cited above and in others conducted in the same or closely related fields (Baldwin, 2017; Button et al., 2013; Ekkekakis et al., 2023; Ioannidis, 2005; Lodder et al., 2019; Schmidt-Pogoda et al., 2019; Schrenck, 2023; Szucs \& Ioannidis, 2017; Walum et al., 2016; Wilson \& Wixted, 2018).
+	Another important consequence of low power and small sample sizes is a fall in the probability that the reported statistically significant effects are true (the predictive positive value, PPV) and, complementarily, an increase in the probability that these effects are false (the false discovery rate, FDR). The calculation of PPV and FDR, which are post-study probabilities, incorporates the pre-study probabilities (prior odds or plausibility) that the alternative hypothesis (\emph{H}\textsubscript{1}) is true given a statistically significant result (existence of an effect). With low pre-study probabilities of \emph{H}\textsubscript{1} , low power can have severe consequences, leading to a substantial proportion of research findings being false, in other words attributable solely to chance. This has been illustrated both in the studies cited above and in others conducted in the same or closely related fields (Baldwin, 2017; Button et al., 2013; Ekkekakis et al., 2023; Ioannidis, 2005; Lodder et al., 2019; Schmidt-Pogoda et al., 2019; Schrenck, 2023; Szucs \& Ioannidis, 2017; Walum et al., 2016; Wilson \& Wixted, 2018).
 
 
 
@@ -112,7 +113,7 @@
 
 
 
-	\subsection{Identification of articles}
+	\subsection{Identification of Articles}
 
 
 
@@ -124,23 +125,23 @@
 
 
 
-	\subsection{Data extraction}
+	\subsection{Data Extraction}
 
 
 
-	Data were extracted from the included articles by the first author, using a LibreOffice Calc spreadsheet. In case of doubt during the extraction, the second author was consulted. The extracted data were based on the following characteristics of the study: first author, journal abbreviation, publication year, kind of preference or choice required in the CPP (forced, unforced, unspecified), type of CPP procedure (biased, unbiased, unspecified), type of statistical tests (\emph{F}-tests, unpaired-group \emph{t}-tests, and paired-group \emph{t}-tests), values of statistics, degrees of freedom, \emph{p}-value, and sample size. Effect sizes were calculated from the values of statistics and degrees of freedom. Missing or incomplete sample sizes were computed using the degrees of freedom. Additionally, since none of the studies reported observed effect sizes, we calculated them using the statistical test value and the corresponding degrees of freedom (whenever possible). Missing \emph{p}-values were calculated from the type of test, its value, and the degrees of freedom. Any tests and results that were not relevant to the main CPP outcome were disregarded.
+	Data were extracted from the included articles by the first author, using a LibreOffice Calc spreadsheet. In case of doubt during the extraction, the second author was consulted. The extracted data were based on the following characteristics of the study: first author, journal abbreviation, publication year, type of preference or choice required in the CPP (forced, unforced, unspecified), type of CPP procedure (biased, unbiased, unspecified), type of statistical tests (\emph{F}-tests, unpaired-group \emph{t}-tests, and paired-group \emph{t}-tests), values of statistics, degrees of freedom, \emph{p}-value, and sample size. Effect sizes were calculated from the values of statistics and degrees of freedom. Missing or incomplete sample sizes were computed using the degrees of freedom. Additionally, since none of the studies reported observed effect sizes, we calculated them using the statistical test value and the corresponding degrees of freedom (whenever possible). Missing \emph{p}-values were calculated from the type of test, its value, and the degrees of freedom. Any tests and results that were not relevant to the main CPP outcome were disregarded.
 
 
 
-	\section{Statistical power: Calculations and distributions}
+	\section{Statistical Power: Calculations and Distributions}
 
 
 
-	Any calculation of statistical power ($1-\beta$) necessitates a given alpha threshold (type-I error), a given sample size (number of experimental units) and a hypothetical (or prospective) effect size. Such an effect size can be provided by a meta-analysis (e.g., Button et al., 2013; Walum et al., 2016). Given that, to our knowledge, no meta-analysis is available in the field, we used the three conventional Cohen effect size classifications as hypothetical effect sizes for the \emph{F}-tests and \emph{t}-tests (Cohen's \emph{f} of 0.10, 0.25, and 0.40, and Cohen's \emph{d} of 0.2, 0.5, and 0.8) to compute the corresponding statistical power (power-to-detect) for each identified test. This approach essentially amounts to computing the prospective power of the test as if the published study were being redesigned using the reported sample sizes. The median powers and corresponding interquartile ranges (\emph{IQR}) were then derived independently for all \emph{F}-tests and \emph{t}-tests in three ways: (1) including both statistically significant and non-significant tests, (2) including only statistically significant tests, and (3) including only non-significant tests. Additionally, we examined changes in statistical power over time by computing the median and interquartile range (\emph{IQR}) of power within each publication-year quartile (years were grouped due to wide variation in the number of articles per year).
+	Any calculation of statistical power ($1-\beta$) necessitates a given alpha threshold (type I error), a given sample size (number of experimental units) and a hypothetical (or expected) effect size. Such an effect size can be provided by a meta-analysis (e.g., Button et al., 2013; Walum et al., 2016). Given that, to our knowledge, no meta-analysis is available in the field, we used the three conventional Cohen effect size classifications as hypothetical effect sizes for the \emph{F}-tests and \emph{t}-tests (Cohen's \emph{f} of 0.10, 0.25, and 0.40, and Cohen's \emph{d} of 0.2, 0.5, and 0.8) to compute the corresponding statistical power (power-to-detect) for each identified test. This approach essentially amounts to computing the prospective power of the test as if the published study were being redesigned using the reported sample sizes. The median powers and corresponding interquartile ranges (\emph{IQR}) were then derived independently for all \emph{F}-tests and \emph{t}-tests in three ways: (1) including both statistically significant and non-significant tests, (2) including only statistically significant tests, and (3) including only non-significant tests. Additionally, we examined changes in statistical power over time by computing the median and interquartile range (\emph{IQR}) of power within each publication-year quartile (years were grouped due to wide variation in the number of articles per year).
 
 
 
-	\subsection{Relationship between observed effect size and statistical power}
+	\subsection{Relationship Between Observed Effect Size and Statistical Power}
 
 
 
@@ -148,11 +149,11 @@
 
 
 
-	For each of the six power analyses, each based on one of the three external conventional effect sizes, a linear regression line was added solely to visually illustrate the observed relationship between statistically significant effect sizes and recalculated power, without drawing any parametric inferences. The strength and significance of the monotonic association were instead assessed using Spearman's rank correlation (\emph{\rho}\textsubscript{\emph{s}}), which does not rely on parametric assumptions. The corresponding 95\% confidence intervals were estimated via 10,000 bootstrap resamples, and the associated p-values are reported.
+	For each of the six power analyses, each based on one of the three external conventional effect sizes, a linear regression line was added solely to visually illustrate the observed relationship between statistically significant effect sizes and recalculated power, without drawing any parametric inferences. The strength and significance of the monotonic association were instead assessed using Spearman's rank correlation (\rho\textsubscript{\emph{s}}), which does not rely on parametric assumptions. The corresponding 95\% confidence intervals were estimated via 10,000 bootstrap resamples, and the associated \emph{p}-values are reported.
 
 
 
-	\subsection{Relationship between observed effect size and sample size per group}
+	\subsection{Relationship Between Observed Effect Size and Sample Size per Group}
 
 
 
@@ -160,11 +161,11 @@
 
 
 
-	\subsection{Predictive positive value ($PPV$) and valse discovery rate ($FDR$)}
+	\subsection{Predictive Positive Value (\emph{PPV}) and False Discovery Rate (\emph{FDR})}
 
 
 
-	The predictive positive value ($PPV$, also True Discovery Rate), which represents the probability that a statistically significant effect is a true discovery, not due to chance, was calculated using the formula $PPV=\frac{(1-\beta)R}{(1-\beta)R+\alpha}$. Similarly, the probability that a statistically significant effect is a false discovery was determined using the formula $FDR=\frac{\alpha}{(1-\beta)R+\alpha}$. Here, R denotes the pre-study odds (or prior odds) of the alternative hypothesis (H\textsubscript{1}) relative to the null hypothesis (H\textsubscript{0}). Formally, it is defined as the ratio: $pH1pH0$. In this framework, H\textsubscript{1}\emph{​} (the alternative hypothesis) corresponds to the assumption that a genuine effect exists, whereas H\textsubscript{0}\emph{​} (the null hypothesis) corresponds to the assumption that no real effect is present. To investigate the relationship between effect sizes, types of tests, $PPV$, and $FDR$, we calculated $PPV$ and $FDR$ curves for each of the six hypothetical effect sizes, across a representative range of possible pre-study probabilities for $H_1$ (ranging from .001 to .99), using the statistical median power of statistically significant tests. Note that a highly powered test with a low pre-study probability of $H_1$, as well as a less powered test with a high pre-study probability of $H_1$, can produce similar $PPV$ or $FDR$.
+	The predictive positive value (\emph{PPV}, also True Discovery Rate), which represents the probability that a statistically significant effect is a true discovery, not due to chance, was calculated using the formula $PPV=\frac{(1-\beta)R}{(1-\beta)R+\alpha}$. Similarly, the probability that a statistically significant effect is a false discovery was determined using the formula $FDR=\frac{\alpha}{(1-\beta)R+\alpha}$. Here, \emph{R} denotes the pre-study odds (or prior odds) of the alternative hypothesis (\emph{H}\textsubscript{1}) relative to the null hypothesis (\emph{H}\textsubscript{0}). Formally, it is defined as the ratio: $\frac{p_{H_1}}{p_{H_0}}$. In this framework, \emph{H}\textsubscript{1} (the alternative hypothesis) corresponds to the assumption that a genuine effect exists, whereas \emph{H}\textsubscript{0} (the null hypothesis) corresponds to the assumption that no real effect is present. To investigate the relationship between effect sizes, types of tests, \emph{PPV}, and \emph{FDR}, we calculated \emph{PPV} and \emph{FDR} curves for each of the six hypothetical effect sizes, across a representative range of possible pre-study probabilities for \emph{H}\textsubscript{1} (ranging from .001 to .99), using the statistical median power of statistically significant tests. Note that a highly powered test with a low pre-study probability of \emph{H}\textsubscript{1}, as well as a less powered test with a high pre-study probability of \emph{H}\textsubscript{1}, can produce similar \emph{PPV} or \emph{FDR}.
 
 
 
@@ -202,7 +203,26 @@
 
 	Figure 1 shows the distributions of individual statistical powers derived from three external hypothetical effect sizes (\emph{f} = 0.1, 0.25, and 0.4; \emph{d} = 0.2, 0.5, and 0.8) for each test type, combining significant and non-significant results. The dataset includes 89 \emph{F}-tests and 40 \emph{t}-tests. None of the tests based on small or medium effect sizes reach the conventional .80 power threshold, with many individual powers as low as .05 or .10. This pattern is reflected in the median powers of .096 and .068 for the two smallest effects (Cohen's \emph{f} and \emph{d} respectively), and, to a lesser extent, in the median powers of .345 and .170 for the two medium effect sizes. For large effect sizes, the median powers are higher, up to .705 for the \emph{F}-tests, yet still below .80. Consistently, only 40.4\% of the \emph{F}-tests reach or exceed the .80 threshold. For the \emph{t}-tests, the median power for the large effect size is .358, with only 10\% meeting or exceeding this benchmark.
 
+	\begin{figure*}[p]
+        \centering
+		\includegraphics[width=.7\textwidth]{media/image2.png}
 
+		\caption{Distributions of statistical power to detect external small, medium, or large hypothetical effect sizes, across significant and non-significant combined tests. The three left-hand panels show results for \emph{F}-tests (\emph{n} = 89), and the three right-hand panels for \emph{t}-tests (\emph{n} = 40). Each panel displays the distribution of power estimates for detecting one of the external conventional effect sizes, Cohen’s \emph{f} = 0.1, 0.25, 0.4 for \emph{F}-tests, and Cohen’s \emph{d} = 0.2, 0.5, 0.8 for \emph{t}-tests, using the original sample size reported in the analyzed articles. The median power and interquartile range (IQR) are indicated within each panel. The vertical dashed line marks the conventional threshold of 0.80 for adequate statistical power. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
+
+		\label{fig:rId8}
+
+
+	\end{figure*}
+		\begin{figure*}[p]
+        \centering
+		\includegraphics[width=.7\textwidth]{media/image4.png}
+
+		\caption{Distributions of statistical power to detect external small, medium, or large hypothetical effect sizes for the statistically significant tests. The left-hand panels correspond to \emph{F}-tests (n = 72), and the right-hand panels to \emph{t}-tests (n = 28). Each panel shows the distribution of power estimates for detecting one of the external conventional effect sizes, Cohen's \emph{f} = 0.1, 0.25, 0.4 for \emph{F}-tests, and Cohen's \emph{d} = 0.2, 0.5, 0.8 for \emph{t}-tests, based on the original sample size reported in the analyzed articles. The median power and interquartile range (IQR) are reported within each panel. The vertical dashed line marks the conventional threshold of 0.80 for adequate statistical power. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
+
+		\label{fig:rId10}
+
+
+	\end{figure*}
 
 	Figure 2 shows the distributions of individual powers calculated using the three external hypothetical effect sizes (\emph{f} = 0.1, 0.25, and 0.4; \emph{d} = 0.2, 0.5, and 0.8) for each test type, considering only statistically significant results (72 \emph{F}-tests and 28 \emph{t}-tests). No tests based on small or medium effect sizes reach the conventional .80 power threshold, and many individual powers are close to .05 or .10. This results in very low median powers of .096 and .068 for the two smallest effects (Cohen's \emph{f} and \emph{d} respectively), and, to a lesser extent, in median powers of .345 and .170 for the two medium effect sizes. Statistical powers are higher for the large effect sizes: for the \emph{F}-tests, median values reach .710, with 41.7\% attaining or surpassing .80 power; for the \emph{t}-tests, the median power is only .358, with just 7.1\% meeting this threshold. Notably, the median statistical powers are very similar, if not virtually identical, between significant and non-significant tests.
 
@@ -210,7 +230,33 @@
 
 	Figure 3 shows that, for the non-significant tests (17 \emph{F}-tests and 12 \emph{t}-tests), all individual powers obtained for the two smallest effect sizes (\emph{f} = 0.1 and 0.25; \emph{d} = 0.2 and 0.5) are well below the .80 threshold, regardless of the test type. In these four cases, the median powers are .088 and .097 for the smallest effects, and .300 and .353 for the medium effect sizes. For the largest effect sizes (\emph{f} = 0.4 and \emph{d} = 0.8), the distribution of individual powers is more variable, with 35.3\% of \emph{F}-tests and 16.7\% of \emph{t}-tests reaching or exceeding .80 power. The corresponding median powers are .630 and .714, respectively, substantially higher than those calculated for the smaller effect sizes. Overall, the pattern of results closely resembles that observed in the two other analyses (combining significant and non-significant tests, and significant tests only), despite the much smaller number of tests in this subset.
 
+		\begin{table*}
+        \caption{Median statistical power [IQR] across publication year quartiles}
+		\begin{tabularx}{\textwidth}{@{} l l l l l l l @{}}
+			\hline \textbf{Test type} & \textbf{Effect size} & \textbf{≤2008} & \textbf{2009-2013}
+			& \textbf{2014-2017} & \textbf{≥2018} \\
 
+			\hline \textbf{\emph{F}-tests} & \textbf{Small} & .108[.089, .119] &
+			.098 [.088, .127] & .084[.075, .092] & .085[.070, .113] \\
+
+			  & \textbf{Medium} & .434[.303, .477] & .360[.297, .540] & .270[.212, .329]
+			& .277[.197, .480] \\
+
+			  & \textbf{Large} & .818[.637, .861] & .726[.640, .913] & .575[.455, 0.698]
+			& .589[.453, .862] \\
+
+			\hline \textbf{\emph{t}-tests} & \textbf{Small} & .104[.081, .107] & .097[.085, .107]
+			& .066[.065, .068] & .116[.088, .121] \\
+
+			  & \textbf{Medium} & .396[.244, .410] & .353[.278, .410] & .152[.146, .170]
+			& .465[.286, .491] \\
+
+			  & \textbf{Large} & .773[.466, .790] & .714[.591, .790] & .316[.299, .358]
+			& .848[.525, .870] \\
+
+
+		\end{tabularx}
+	\end{table*}
 
 	Table 1 shows the median statistical power (with interquartile ranges) of the included tests across publication-year quartiles. Statistical power related to \emph{F}-tests tends to decline over time for the three hypothetical effect sizes, with consistently very low values for small effect sizes. For \emph{t}-tests, a similar pattern appears across the first three publication-year quartiles with a slight increase in recent years, although power levels remain insufficient for small and medium effect sizes. Overall, there is no indication of meaningful improvement in the most recent years (since 2018).
 
@@ -222,25 +268,73 @@
 
 	Figure 4 depicts the relationship between the observed effect sizes for the two types of statistically significant tests (Cohen's \emph{f} or Cohen's \emph{d}) and the powers recalculated from the three effect sizes used as hypothetical values in these power calculations. For the two smallest hypothetical effect sizes (\emph{f} = 0.1 and \emph{d} = 0.2), the observed effect sizes are distributed almost entirely along the vertical axis, with disproportionately large values suggesting strong overestimation. None corresponds to a power exceeding .2. With the two medium hypothetical effect sizes (\emph{f} = 0.25 and \emph{d} = 0.5), the observed effect sizes are more widely dispersed in relation to the recalculated powers, with several very large values associated with various power levels, but fewer approaching the .8 threshold. For these two hypothetical effect sizes, no test reaches or exceeds the minimally accepted power of .8. When powers are recalculated from the two larger hypothetical effect sizes (\emph{f} = 0.4 and \emph{d} = 0.8), several very large observed effect sizes again appear at various power levels, mostly below .8. However, unlike the previous cases, 41.7\% of the observed \emph{f} values and 7.1\% of the observed \emph{d} values exceed this threshold, most clustering around the corresponding hypothetical effect size.
 
+	\newpage
+\onecolumn
 
 
-	These six patterns of points are characterized by negative slopes and are supported by statistically significant non-parametric correlations. For the \emph{F}-tests, the Spearman's correlations are \emph{\rho}\textsubscript{s} = --.414, --.424, and --.431 for the small, medium, and large hypothetical effect sizes (\emph{f} = 0.1, 0.25, and 0.4), with corresponding 95\% CIs of [--.612, --.183], [--.618, --.198], and [--.623, --.202] (\emph{p} = .0002997, .0002048, and.0001556). For the \emph{t}-tests, the respective Spearman's correlations are --.585, --.592, and --.592 for the small, medium, and large effect sizes (\emph{d} = 0.2, 0.5, and 0.8), with 95\% CIs of [--.774, --.298], [--.776, --.299], and [--.784, --.307] (\emph{p} = .001069, .0008958, and .0008958). Across the six analyses, the correlations reveal a moderate yet consistent monotonic association between the variables. Statistical significance appears strong despite the modest, though not small, sample size, pointing to a clear overall trend while leaving substantial variability unexplained.
+	\begin{figure}[H]
+        \centering
+		\includegraphics[width=.7\textwidth]{media/image6.png}
+
+		\caption{Distributions of statistical power to detect external small, medium, or large hypothetical effect sizes for the statistically non-significant tests. The left-hand panels correspond to \emph{F}-tests (n = 17), and the right-hand panels to \emph{t}-tests (n = 12). Each panel shows the distribution of power estimates for detecting one of the external conventional effect sizes, Cohen's \emph{f} = 0.1, 0.25, 0.4 for \emph{F}-tests, and Cohen's \emph{d} = 0.2, 0.5, 0.8 for \emph{t}-tests, based on the original sample size reported in the analyzed articles. The median power and interquartile range (IQR) are reported within each panel. The vertical dashed line marks the conventional threshold of 0.80 for adequate statistical power. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
+
+		\label{fig:rId12}
 
 
+	\end{figure}
+\twocolumn
+	These six patterns of points are characterized by negative slopes and are supported by statistically significant non-parametric correlations. For the \emph{F}-tests, the Spearman's correlations are \rho\textsubscript{s} = --.414, --.424, and --.431 for the small, medium, and large hypothetical effect sizes (\emph{f} = 0.1, 0.25, and 0.4), with corresponding 95\% CIs of [--.612, --.183], [--.618, --.198], and [--.623, --.202] (\emph{p} = .0002997, .0002048, and{ }.0001556). For the \emph{t}-tests, the respective Spearman's correlations are --.585, --.592, and --.592 for the small, medium, and large effect sizes (\emph{d} = 0.2, 0.5, and 0.8), with 95\% \emph{CI}s of [--.774, --.298], [--.776, --.299], and [--.784, --.307] (\emph{p} = .001069, .0008958, and{ }.0008958). Across the six analyses, the correlations reveal a moderate yet consistent monotonic association between the variables. Statistical significance appears strong despite the modest, though not small, sample size, pointing to a clear overall trend while leaving substantial variability unexplained.
+
+
+	\begin{figure*}
+        \centering
+		\includegraphics[width=.7\textwidth]{media/image10.png}
+
+		\caption{Relationship between sample size per group and observed effect size (Cohen's \emph{f} or Cohen's \emph{d}) for the statistically significant \emph{F}-tests and \emph{t}-tests. In each panel, the vertical dashed line marks the median sample size per group, and the horizontal dashed line marks the median effect size. These lines divide the panel into four quadrants, inserted primarily for clarity and presentation purposes (see text), with the number of tests indicated in each quadrant. The solid line depicts a simple regression fit to illustrate the general trend in the data. For two \emph{t}-tests, the calculation of Cohen's \emph{d} was not possible.}
+
+		\label{fig:rId16}
+
+
+	\end{figure*}
 
 	\subsection{Relationship Between Observed Effect Sizes and Sample Sizes per Group}
 
 
 
-	In statistically significant \emph{F}-tests with effect sizes above the total median (Figure 5 left-hand graph, horizontal dashed line, median Cohen's \emph{f} = 0.531, \emph{IQR} = [0.365, 0.800]), 25 are associated with sample sizes smaller than the total median sample size, and 20 are associated with sample sizes equal to or greater than the total median sample size (vertical dashed line, median sample size per group = 12.5, \emph{IQR} = [9.8, 21.5]). While the 25 small-sample effect sizes include the 10 largest of all effects, most of the 20 effect sizes with samples at or above the median cluster close to the median effect size. The few effect sizes associated with the largest sample sizes per group are below or close to the median. The relationship between the sample size per group and effect size (Cohen's \emph{d}) of statistically significant \emph{t}-tests (right-hand graph, Figure 1) is less striking than that found for the \emph{F}-tests. The 10 largest effect sizes corresponded to smaller sample sizes per group, strictly below the median (vertical dashed line, median sample size per group = 9, \emph{IQR} = [7.875; 14]). Most of the effect sizes associated with the largest sample sizes (above the median) are below or close to the median of the effect sizes (median Cohen's \emph{d} = 0.667, \emph{IQR} = [0.331, 1.166]). A downward-sloping linear regression line highlights these patterns, which are also supported by statistically significant negative Spearman's correlations (for \emph{F}-tests: \emph{\rho}\textsubscript{s} = --.464, 95\% CI [--.644, --.244], \emph{p} = .00004094; for \emph{t}-tests: \emph{\rho}\textsubscript{s} = --.521, 95\% CI [--.705, --.184], \emph{p} = .004511). Here too, the correlations point to moderate, directionally stable links between the variables.
+	In statistically significant \emph{F}-tests with effect sizes above the total median (Figure 5 left-hand graph, horizontal dashed line, median Cohen's \emph{f} = 0.531, \emph{IQR} = [0.365, 0.800]), 25 are associated with sample sizes smaller than the total median sample size, and 20 are associated with sample sizes equal to or greater than the total median sample size (vertical dashed line, median sample size per group = 12.5, \emph{IQR} = [9.8, 21.5]). While the 25 small-sample effect sizes include the 10 largest of all effects, most of the 20 effect sizes with samples at or above the median cluster close to the median effect size. The few effect sizes associated with the largest sample sizes per group are below or close to the median. The relationship between the sample size per group and effect size (Cohen's \emph{d}) of statistically significant \emph{t}-tests (right-hand graph, Figure 5) is less striking than that found for the \emph{F}-tests. The 10 largest effect sizes corresponded to smaller sample sizes per group, strictly below the median (vertical dashed line, median sample size per group = 9, \emph{IQR} = [7.875; 14]). Most of the effect sizes associated with the largest sample sizes (above the median) are below or close to the median of the effect sizes (median Cohen's \emph{d} = 0.667, \emph{IQR} = [0.331, 1.166]). A downward-sloping linear regression line highlights these patterns, which are also supported by statistically significant negative Spearman's correlations (for \emph{F}-tests: \emph{\rho}\textsubscript{s} = --.464, 95\% \emph{CI} [--.644, --.244], \emph{p} = .00004094; for \emph{t}-tests: \emph{\rho}\textsubscript{s} = --.521, 95\% \\emph{CI} [--.705, --.184], \emph{p} = .004511). Here too, the correlations point to moderate, directionally stable links between the variables.
 
 
 
-	\subsection{Positive Predicted Value ($PPV$) and False Discovery Rate ($FDR$) }
+
+
+	\begin{figure*}[p]
+        \centering
+		\includegraphics[width=.7\textwidth]{media/image8.png}
+
+		\caption{Relationship between statistical power (power-to-detect) and observed effect sizes for the statistically significant \emph{F}-tests and \emph{t}-tests. Powers were calculated under three hypothetical effect sizes corresponding to Cohen's \emph{f} or \emph{d} benchmarks (small, medium, large; top to bottom). Each point is an individual test. The solid line in each panel shows a simple regression fit illustrating the overall trend. The vertical dashed line marks the conventional power threshold of 0.80; the horizontal dotted line marks the hypothetical effect size. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
+
+		\label{fig:rId14}
+
+
+	\end{figure*}
+
+	
+	\begin{figure*}[p]
+        \centering
+		\includegraphics[width=.7\textwidth]{media/image12.png}
+
+		\caption{Relationship between the pre-study probability of H\textsubscript{1} being true and either the positive predictive value (PPV, left-hand panels), or the false discovery rate (FDR, right-hand panels). The two upper panels show the \emph{F}-tests (Cohen's \emph{f}) and the lower panels the \emph{t}-tests (Cohen's \emph{d}). The horizontal grey line marks reference values (PPV=.95; FDR=.05) shown for illustrative purposes, by analogy with conventional 5\% \emph{FDR} control used in multiple testing procedures. In each panel, the curve representing power = 0.8 serves as a reference, while the three other curves represent the calculated median statistical powers shown in the panel.}
+
+		\label{fig:rId18}
+
+
+	\end{figure*}
+
+	\subsection{Positive Predicted Value (\emph{PPV}) and False Discovery Rate (\emph{FDR}) }
 
 
 
-	In the top left-hand graph in Figure 6, the $PPV$ curves dealing with the statistically significant \emph{F}-tests increase with the $H1$ pre-study probability for each of the three Cohen's \emph{f} and the corresponding median statistical powers. The three $PPV$ are smaller at the lower $H1$ pre-study probabilities, and they are greater at the higher median statistical powers (see for example \emph{p}($H1$) = .1, \emph{p}($H1$) = .5, and \emph{p}($H1$) = .75). More precisely, as regards the smallest effect size (\emph{f} = 0.1; power = .096), with an $H1$ pre-study probability of .5 the $PPV$ is .657. At the larger effect sizes (\emph{f} = 0.25; \emph{f} = 0.4) and statistical powers (.345; .710), the $PPV$ are .873 and .934. All $PPV$ are smaller at the $H1$ pre-study probability of .1 (.175; .434; and .612 for the three effect sizes).In the top right-hand graph of Figure 6, the $FDR$ curves concerning the \emph{F}-tests decrease continuously with the $H1$ pre-study probability. Hence, for the smallest effect size (\emph{f} = 0.1; power = .096), with an $H1$ pre-study probability of .5, the $FDR$ is .343. At the larger effect sizes (\emph{f} = 0.25; \emph{f} = 0.4) and statistical powers (.345; .710), the $FDR$ are .126 and .066. The $FDR$ are much higher at the $H1$ pre-study probability of .1 (.824; .566; and .388).The bottom left-hand graph of Figure 6 presents the $PPV$ curves for statistically significant \emph{t}-tests (Cohen's \emph{d} effect sizes). The patterns of results are similar to those found for the \emph{F}-tests but with lower values: For the smallest effect size (\emph{d} = 0.2; power = .068), the $PPV$ is 0.578 at an $H1$ pre-study probability of .5. At larger effect sizes (\emph{d} = 0.5; \emph{d} = 0.8) and corresponding statistical powers (.170; .358), the $PPV$ are .772 and .887. For small (\emph{d} = 0.2), medium (\emph{d }= 0.5), and large (\emph{d} = 0.8) effect sizes, respectively, the $PPV$ are .132, .274, and .443 at the $H1$ pre-study probability of.1.The bottom right-hand graph of Figure 6 depicts the $FDR$ curves for the \emph{t}-tests. For the smallest effect size (\emph{d} = 0.2; power = .068), at an $H1$ pre-study probability of .5, the $FDR$ is .422. At larger effect sizes (\emph{d} = 0.5; \emph{d} = 0.8) and related statistical powers (.170; .358), the $FDR$ are .228 and .123. The $FDR$ are much higher at the low $H1$ pre-study probability of .1 (.868; .726; and .557).
+	In the top left-hand graph in Figure 6, the \emph{PPV} curves dealing with the statistically significant \emph{F}-tests increase with the \emph{H}\textsubscript{1} pre-study probability for each of the three Cohen's \emph{f} and the corresponding median statistical powers. The three \emph{PPV} are smaller at the lower \emph{H}\textsubscript{1} pre-study probabilities, and they are greater at the higher median statistical powers (see for example \emph{p}(\emph{H}\textsubscript{1}) = .1, \emph{p}(\emph{H}\textsubscript{1}) = .5, and \emph{p}(\emph{H}\textsubscript{1}) = .75). More precisely, as regards the smallest effect size (\emph{f} = 0.1; power = .096), with an \emph{H}\textsubscript{1} pre-study probability of .5 the \emph{PPV} is .657. At the larger effect sizes (\emph{f} = 0.25; \emph{f} = 0.4) and statistical powers (.345; .710), the \emph{PPV} are .873 and .934. All \emph{PPV} are smaller at the \emph{H}\textsubscript{1} pre-study probability of .1 (.175; .434; and .612 for the three effect sizes).In the top right-hand graph of Figure 6, the \emph{FDR} curves concerning the \emph{F}-tests decrease continuously with the \emph{H}\textsubscript{1} pre-study probability. Hence, for the smallest effect size (\emph{f} = 0.1; power = .096), with an \emph{H}\textsubscript{1} pre-study probability of .5, the \emph{FDR} is .343. At the larger effect sizes (\emph{f} = 0.25; \emph{f} = 0.4) and statistical powers (.345; .710), the \emph{FDR} are .126 and .066. The \emph{FDR} are much higher at the \emph{H}\textsubscript{1} pre-study probability of .1 (.824; .566; and .388).The bottom left-hand graph of Figure 6 presents the \emph{PPV} curves for statistically significant \emph{t}-tests (Cohen's \emph{d} effect sizes). The patterns of results are similar to those found for the \emph{F}-tests but with lower values: For the smallest effect size (\emph{d} = 0.2; power = .068), the \emph{PPV} is 0.578 at an \emph{H}\textsubscript{1} pre-study probability of .5. At larger effect sizes (\emph{d} = 0.5; \emph{d} = 0.8) and corresponding statistical powers (.170; .358), the \emph{PPV} are .772 and .887. For small (\emph{d} = 0.2), medium (\emph{d }= 0.5), and large (\emph{d} = 0.8) effect sizes, respectively, the \emph{PPV} are .132, .274, and .443 at the \emph{H}\textsubscript{1} pre-study probability of.1.The bottom right-hand graph of Figure 6 depicts the \emph{FDR} curves for the \emph{t}-tests. For the smallest effect size (\emph{d} = 0.2; power = .068), at an \emph{H}\textsubscript{1} pre-study probability of .5, the \emph{FDR} is .422. At larger effect sizes (\emph{d} = 0.5; \emph{d} = 0.8) and related statistical powers (.170; .358), the \emph{FDR} are .228 and .123. The \emph{FDR} are much higher at the low \emph{H}\textsubscript{1} pre-study probability of .1 (.868; .726; and .557).
 
 
 
@@ -252,11 +346,11 @@
 
 
 
-	The main finding of this study is a general lack of statistical power in the conditioned place preference (CPP) literature on nicotine in mice, as none of the median powers for either significant or non-significant tests reaches the conventional .80 threshold. The highest median powers are observed for the largest hypothetical effect size (used to calculate individual powers) in significant \emph{F}-tests (.71) and non-significant \emph{t}-tests (.714), with all others clearly lower. For small and medium hypothetical effect sizes, no individual power reaches .80. Even for the largest effect size, only 41.7\% and 35.3\% of significant or non-significant \emph{F}-tests, and 7.1\% and 16.7\% of \emph{t}-tests, meet or exceed this level. Statistical power has not clearly improved over publication years.
+	The main finding of this study is a general lack of statistical power in the CPP literature on nicotine in mice, as none of the median powers for either significant or non-significant tests reaches the conventional .80 threshold. The highest median powers are observed for the largest hypothetical effect size (used to calculate individual powers) in significant \emph{F}-tests (.71) and non-significant \emph{t}-tests (.714), with all others clearly lower. For small and medium hypothetical effect sizes, no individual power reaches .80. Even for the largest effect size, only 41.7\% and 35.3\% of significant or non-significant \emph{F}-tests, and 7.1\% and 16.7\% of \emph{t}-tests, meet or exceed this level. Statistical power has not clearly improved over publication years.
 
 
 
-	Our results are not surprising as they are compatible with similar findings across several fields, especially in the domains related to neuro-behavioral sciences or involving laboratory or wild animals (Bonapersona et al., 2021; Button et al., 2013; Carneiro et al., 2018; Clayson et al., 2019; Cleasby et al., 2021; Giuffrida, 2014; Jennions \& Moller, 2003; Mitra et al., 2019; Quintana, 2020; Smith et al. 2011; Szucs \& Ioannidis, 2017; Vesterinen et al., 2010; Walum et al., 2016). Focusing on studies involving animals, the median or mean recalculated statistical power to detect a medium external or meta-analytic effect size typically ranges from approximately .15 to .65 across different tests, and is consistently below .70 (Button et al., 2013; Carneiro et al., 2018; Giuffrida, 2014; Jennions \& Møller, 2003; Schmidt-Pogoda et al., 2019; Smith et al., 2011; Vesterinen et al., 2010). Here, the median statistical power to detect a medium effect size is only .345 for \emph{F}-tests and .170 for \emph{t}-tests. To put this into perspective, given the median sample size per group observed in our \emph{t}-tests (\emph{n} = 9) and assuming a conventional alpha level of .05 with a target power of .80, most nicotine CPP studies would be able to detect only a very large effect (\emph{d} = 1.41, two-sided two-sample \emph{t}-test), according to the Sawilowsky classification, which updates Cohen's benchmarks (Sawilowsky, 2009). By contrast, detecting a medium effect (\emph{d} = 0.5) under the same conditions would require at least 64 observations per group, more than seven times the typical sample size. In other words, if the true effect size of nicotine CPP in mice were smaller than this very large value, or smaller than most of the effect sizes observed) in the studies analyzed here ( [ATTENTION: WHY IS THERE AN OPENING BRACKET HERE, THERE IS ALSO A CLOSING ONE JUST BEFORE] both tests, which is likely, the statistical power available in these studies would be insufficient to reliably detect the true effect size. Consequently, many non-significant findings in underpowered nicotine CPP studies, such as those failing to report a convincing nicotine CPP in some mouse strains (while others exhibit it), are likely false negatives, as small sample sizes set a detection threshold well above plausible effect sizes.
+	Our results are not surprising as they are compatible with similar findings across several fields, especially in the domains related to neuro-behavioral sciences or involving laboratory or wild animals (Bonapersona et al., 2021; Button et al., 2013; Carneiro et al., 2018; Clayson et al., 2019; Cleasby et al., 2021; Giuffrida, 2014; Jennions \& Moller, 2003; Mitra et al., 2019; Quintana, 2020; Smith et al. 2011; Szucs \& Ioannidis, 2017; Vesterinen et al., 2010; Walum et al., 2016). Focusing on studies involving animals, the median or mean recalculated statistical power to detect a medium external or meta-analytic effect size typically ranges from approximately .15 to .65 across different tests, and is consistently below .70 (Button et al., 2013; Carneiro et al., 2018; Giuffrida, 2014; Jennions \& Møller, 2003; Schmidt-Pogoda et al., 2019; Smith et al., 2011; Vesterinen et al., 2010). Here, the median statistical power to detect a medium effect size is only .345 for \emph{F}-tests and .170 for \emph{t}-tests. To put this into perspective, given the median sample size per group observed in our \emph{t}-tests (\emph{n} = 9) and assuming a conventional alpha level of .05 with a target power of .80, most nicotine CPP studies would be able to detect only a very large effect (\emph{d} = 1.41, two-sided two-sample \emph{t}-test), according to the Sawilowsky classification, which updates Cohen's benchmarks (Sawilowsky, 2009). By contrast, detecting a medium effect (\emph{d} = 0.5) under the same conditions would require at least 64 observations per group, more than seven times the typical sample size. In other words, if the true effect size of nicotine CPP in mice were smaller than this very large value, or smaller than most of the effect sizes observed in the studies analyzed here both tests, which is likely, the statistical power available in these studies would be insufficient to reliably detect the true effect size. Consequently, many non-significant findings in underpowered nicotine CPP studies, such as those failing to report a convincing nicotine CPP in some mouse strains (while others exhibit it), are likely false negatives, as small sample sizes set a detection threshold well above plausible effect sizes.
 
 
 
@@ -264,19 +358,19 @@
 
 
 
-	It is important to emphasize that the effect sizes analyzed in the present study refer specifically to the magnitude of the direct expression of nicotine CPP, that is, the preference for nicotine observed in the absence of any experimental manipulation. In the literature, this direct expression is used in two main ways. In some experiments, it serves as a positive control to establish a nicotine-induced preference against which the effect of an experimental manipulation (e.g., a pharmacological agent or a targeted genetic intervention) can be tested. In others, it is directly compared across conditions such as mouse strains to evaluate inherent differences in nicotine responsiveness, typically without introducing additional manipulations. These effect sizes therefore do not capture the influence of independent variables themselves, but rather the reliability of the direct expression of nicotine CPP. This distinction is critical: if the detection of this effect is underpowered, the expression of nicotine CPP may not be reliably established. In such cases, statistically significant differences alone are insufficient, and the interpretability of any observed effects involving independent variables is jeopardized.
+	It is important to emphasize that the effect sizes analyzed in the present study refer specifically to the magnitude of the direct expression of nicotine CPP, that is, the preference for nicotine observed in the absence of any experimental manipulation. In the literature, this direct expression is used in two main ways. In some experiments, it serves as a positive control to establish a nicotine-induced preference against which the effect of an experimental manipulation (e.g., a pharmacological agent or a targeted genetic intervention) can be tested. In others, it is directly compared across conditions such as mouse strains to evaluate inherent differences in nicotine responsiveness, typically without introducing additional manipulations. These effect sizes therefore do not capture the influence of independent variables themselves, but rather the reliability of the direct expression of nicotine CPP. This distinction is critical: If the detection of this effect is underpowered, the expression of nicotine CPP may not be reliably established. In such cases, statistically significant differences alone are insufficient, and the interpretability of any observed effects involving independent variables is jeopardized.
 
 
 
-	Low statistical power can only attenuate $PPV$ and, correspondingly, accentuate $FDR$, especially at low or relatively low pre-study probabilities of $H1$ (smaller than .50). In our case, this clearly appears for the two lowest median statistical powers derived from the low and medium effect sizes of both \emph{F}- and \emph{t}-tests. It is less marked for the highest median powers (and effect sizes), in particular for the \emph{F}-tests whose median statistical power (.705) is slightly below the conventional threshold of .80. When the pre-study probability of $H1 $exceeds .50, which can reasonably be considered more than modest, the three median powers for the \emph{F}-tests yield $PPV$s above .95 and $FDR$s below .05. For the \emph{t-}tests, this level was reached only when the pre-study probability approaches .70. Again, our results substantially agree with the meta-scientific literature analyzing large sets of studies with underpowered tests in preclinical animal research (Schmidt-Pogoda et al., 2019), experimental psychology (Lodder et al., 2019; Szucs \& Ioannidis, 2017), and human neurobehavioral fields (Baldwin, 2017; Button et al., 2013; Szucs \& Ioannidis, 2017; Walum et al., 2016). Note that in some of these studies, the calculation of $PPV$ and $FDR$ was weighted by a bias representing methodological and reporting questionable research practices that favor the publication of positive results (Baldwin et al., 2017; Ioannidis, 2005; Szucs \& Ioannidis, 2017). The bias further curbs the $PPV$ and accentuates the $FDR$. For example, in a study analyzing 3,801 cognitive neuroscience and psychology studies, the incorporation of such a bias yielded a low $FDR$ of .135 at a $H1$ pre-study probability of .50 without bias. With the incorporation of a bias of .10, the $FDR$ jumped at .23 (Szucs \& Ioannidis, 2017). This suggests that if we had incorporated biases into our calculations, the posterior probabilities of true or false effects would have been even lower ($PPV$) or higher ($FDR$). However, it seems to us that the values reported here without considering any bias are sufficiently meaningful.
+	Low statistical power can only attenuate \emph{PPV} and, correspondingly, accentuate \emph{FDR}, especially at low or relatively low pre-study probabilities of \emph{H}\textsubscript{1} (smaller than .50). In our case, this clearly appears for the two lowest median statistical powers derived from the low and medium effect sizes of both \emph{F}- and \emph{t}-tests. It is less marked for the highest median powers (and effect sizes), in particular for the \emph{F}-tests whose median statistical power (.705) is slightly below the conventional threshold of .80. When the pre-study probability of \emph{H}\textsubscript{1} exceeds .50, which can reasonably be considered more than modest, the three median powers for the \emph{F}-tests yield \emph{PPV}s above .95 and \emph{FDR}s below .05. For the \emph{t-}tests, this level was reached only when the pre-study probability approached .70. Again, our results substantially agree with the meta-scientific literature analyzing large sets of studies with underpowered tests in preclinical animal research (Schmidt-Pogoda et al., 2019), experimental psychology (Lodder et al., 2019; Szucs \& Ioannidis, 2017), and human neurobehavioral fields (Baldwin, 2017; Button et al., 2013; Szucs \& Ioannidis, 2017; Walum et al., 2016). Note that in some of these studies, the calculation of \emph{PPV} and \emph{FDR} was weighted by a bias representing methodological and reporting questionable research practices that favor the publication of positive results (Baldwin et al., 2017; Ioannidis, 2005; Szucs \& Ioannidis, 2017). The bias further curbs the \emph{PPV} and accentuates the \emph{FDR}. For example, in a study analyzing 3,801 cognitive neuroscience and psychology studies, the incorporation of such a bias yielded a low \emph{FDR} of .135 at a \emph{H}\textsubscript{1} pre-study probability of .50 without bias. With the incorporation of a bias of .10, the \emph{FDR} jumped at .23 (Szucs \& Ioannidis, 2017). This suggests that if we had incorporated biases into our calculations, the posterior probabilities of true or false effects would have been even lower (\emph{PPV}) or higher (\emph{FDR}). However, it seems to us that the values reported here without considering any bias are sufficiently meaningful.
 
 
 
-	Insofar as there is no doubt that nicotine possesses rewarding properties in general, the pre-study probability or plausibility of obtaining an unambiguous nicotine CPP should be quite high, even at a statistical power greatly below 0.8. Therefore, one could question whether it is appropriate to investigate the relationship between the pre-study probability of CCP results and the $PPV$ or $FDR$ in this case. In fact, the CPP procedure is known to have numerous limitations that warrant consideration of modest and diverse pre-study or plausibility values in the $PPV$ and $FDR$ analysis. In particular, CPP is highly influenceable by various confounding variables such as stress, anxiety, and sensitivity to environmental and contextual variations. Some strains or genotypes may be highly vulnerable to these factors rather than to the addictive properties of the drug supposed to be objectified with the CPP procedure. Also, this procedure is cumbersome for providing the graded dose-effect curves needed to answer some psychopharmacological questions. These limitations, among others, likely explain why CPP results can sometimes be challenging to replicate across different laboratories on their own (for an example see Bardo et al., 2015). In addition, a large portion of the studies analyzed here were genetic in nature, seeking to assess whether specific genetic modifications or mouse strains could influence the establishment of nicotine-induced preference. Many of these studies did so for the first time and in the absence of strong, unambiguous, and precise prior knowledge regarding the causal role of the genetic factors under investigation, despite the availability of several theoretical accounts proposing learning-related, motivational, and neurobiological explanations of CPP. This also precludes any assumption of high CPP plausibility in these cases.
+	Insofar as there is no doubt that nicotine possesses rewarding properties in general, the pre-study probability or plausibility of obtaining an unambiguous nicotine CPP should be quite high, even at a statistical power greatly below 0.8. Therefore, one could question whether it is appropriate to investigate the relationship between the pre-study probability of CPP results and the \emph{PPV} or \emph{FDR} in this case. In fact, the CPP procedure is known to have numerous limitations that warrant consideration of modest and diverse pre-study or plausibility values in the \emph{PPV} and \emph{FDR} analysis. In particular, CPP is highly influenceable by various confounding variables such as stress, anxiety, and sensitivity to environmental and contextual variations. Some strains or genotypes may be highly vulnerable to these factors rather than to the addictive properties of the drug supposed to be objectified with the CPP procedure. Also, this procedure is cumbersome for providing the graded dose-effect curves needed to answer some psychopharmacological questions. These limitations, among others, likely explain why CPP results can sometimes be challenging to replicate across different laboratories on their own (for an example see Bardo et al., 2015). In addition, a large portion of the studies analyzed here were genetic in nature, seeking to assess whether specific genetic modifications or mouse strains could influence the establishment of nicotine-induced preference. Many of these studies did so for the first time and in the absence of strong, unambiguous, and precise prior knowledge regarding the causal role of the genetic factors under investigation, despite the availability of several theoretical accounts proposing learning-related, motivational, and neurobiological explanations of CPP. This also precludes any assumption of high CPP plausibility in these cases.
 
 
 
-	\section{\textbf{What Conceptual and Practical Steps can Improve Power in Nicotine CPP Research?}}
+	\section{What Conceptual and Practical Steps can Improve Power in Nicotine CPP Research?}
 
 
 
@@ -312,7 +406,7 @@
 
 
 
-	For the sake of argument, the following meta-analyses could be employed as examples. Carneiro et al. (2018) reported a mean effect size of \emph{g} = 1.4 in fear conditioning studies (memory-enhancing) in rats and mice. Bonapersona et al. (2019) found |\emph{g}| = 0.59 for non-stressful learning tasks and |\emph{g}| = 0.28 for stressful tasks in male rodents. Lymer et al. (2024) reported \emph{d}-values of 0.42 and 0.54 for two measures of spatial memory (Morris water maze) modulated by various estrogenic molecules. Jonasson (2005) reported sex differences in two spatial tasks, with \emph{d} = 0.49 (Morris water maze) and 0.67 (radial maze) in rats, and smaller, more variable effects in mice. Based on these precedents, one may illustratively suggest that a Cohen's \emph{d} of approximately 0.30 could serve as a reasonable lower bound for a provisional SESOI in nicotine CPP. This positioning is conceptually consistent with the notion of a SESOI as a minimum threshold: By definition, a SESOI should represent the smallest effect size worth detecting and interpreting, reflecting a change of unambiguous neurobehavioral or theoretical relevance.
+	For the sake of argument, the following meta-analyses could be employed as examples. Carneiro et al. (2018) reported a mean effect size of 	Hedges' \emph{g} = 1.4 in fear conditioning studies (memory-enhancing) in rats and mice. Bonapersona et al. (2019) found |\emph{g}| = 0.59 for non-stressful learning tasks and |\emph{g}| = 0.28 for stressful tasks in male rodents. Lymer et al. (2024) reported \emph{d}-values of 0.42 and 0.54 for two measures of spatial memory (Morris water maze) modulated by various estrogenic molecules. Jonasson (2005) reported sex differences in two spatial tasks, with \emph{d} = 0.49 (Morris water maze) and 0.67 (radial maze) in rats, and smaller, more variable effects in mice. Based on these precedents, one may illustratively suggest that a Cohen's \emph{d} of approximately 0.30 could serve as a reasonable lower bound for a provisional SESOI in nicotine CPP. This positioning is conceptually consistent with the notion of a SESOI as a minimum threshold: By definition, a SESOI should represent the smallest effect size worth detecting and interpreting, reflecting a change of unambiguous neurobehavioral or theoretical relevance.
 
 
 
@@ -368,11 +462,11 @@
 
 
 
-	\section{This research received no external funding. It was conducted mainly as the Master's thesis of the first author, under the supervision of the second author.}
+	This research received no external funding. It was conducted mainly as the Master's thesis of the first author, under the supervision of the second author.
 
 
 
-	\subsection{Data availability}
+	\subsection{Data Availability}
 
 
 
@@ -400,7 +494,7 @@
 
 
 
-	Balk, E. M., Earley, A., Patel, K., Trikalinos, T. A., \& Dahabreh, I. J. (2012).\emph{\textbf{ }}\emph{Empirical assessment of within-arm correlation imputation in trials of continuous outcomes. }Agency for healthcare research and quality\emph{.} \url{http://www.ncbi.nlm.nih.gov/books/NBK115797/}
+	Balk, E. M., Earley, A., Patel, K., Trikalinos, T. A., \& Dahabreh, I. J. (2012).\emph{\textbf{ }}\emph{Empirical assessment of within-arm correlation imputation in trials of continuous outcomes} (AHRQ Publication No. 12-EHC141-EF). Agency for healthcare research and quality\emph{.} \url{http://www.ncbi.nlm.nih.gov/books/NBK115797/}
 
 
 
@@ -408,7 +502,7 @@
 
 
 
-	Bardo, M. T., Rowlett, J. K., \& Harris, M. J. (1995). Conditioned place preference using opiate and stimulant drugs: A meta-analysis\emph{.} Neuroscience \& Biobehavioral Reviews, 19(1), 39-51. \url{https://doi.org/10.1016/0149-7634(94)00021-R}
+	Bardo, M. T., Rowlett, J. K., \& Harris, M. J. (1995). Conditioned place preference using opiate and stimulant drugs: A meta-analysis\emph{.} \emph{Neuroscience \& Biobehavioral Reviews, 19}(1), 39-51. \url{https://doi.org/10.1016/0149-7634(94)00021-R}
 
 
 
@@ -420,7 +514,7 @@
 
 
 
-	Boedeker, P., Nelson, G., \& Carter, H. (2024). So is it better than something else? Using the results of a random-effects meta-analysis to characterize the magnitude of an effect size as a percentile [Online advance publication]. \emph{Psychological Methods}. \url{https://doi.org/10.1037/met0000704}
+	Boedeker, P., Nelson, G., \& Carter, H. (2024). So is it better than something else? Using the results of a random-effects meta-analysis to characterize the magnitude of an effect size as a percentile. \emph{Psychological Methods}. \url{https://doi.org/10.1037/met0000704}
 
 
 
@@ -428,7 +522,7 @@
 
 
 
-	Bonapersona, V., Kentrop, J., Van Lissa, C. J., Van Der Veen, R., Joëls, M., \& Sarabdjitsingh, R. A. (2019). The behavioral phenotype of early life adversity: A 3-level meta-analysis of rodent studies. \emph{Neuroscience \& Biobehavioral Reviews}, \emph{102}, 299--307. \url{https://doi.org/10.1016/j.neubiorev.2019.04.021}
+	Bonapersona, V., Kentrop, J., van Lissa, C. J., van Der Veen, R., Joëls, M., \& Sarabdjitsingh, R. A. (2019). The behavioral phenotype of early life adversity: A 3-level meta-analysis of rodent studies. \emph{Neuroscience \& Biobehavioral Reviews}, \emph{102}, 299--307. \url{https://doi.org/10.1016/j.neubiorev.2019.04.021}
 
 
 
@@ -460,7 +554,7 @@
 
 
 
-	Cook, J. A., Hislop, J., Adewuyi, T. E., Harrild, K., Altman, D. G., Ramsay, C. R., Fraser, C., Buckley, B., Fayers, P., Harvey, I., Briggs, A. H., Norrie, J. D., Fergusson, D., Ford, I., \& Vale, L. D. (2014). Assessing methods to specify the target difference for a randomised controlled trial—DELTA (Difference ELicitation in TriAls) review. \emph{Health Technology Assessment}, \emph{18}(28), 1--174. \url{https://doi.org/10.3310/hta18280}
+	Cook, J. A., Hislop, J., Adewuyi, T. E., Harrild, K., Altman, D. G., Ramsay, C. R., Fraser, C., Buckley, B., Fayers, P., Harvey, I., Briggs, A. H., Norrie, J. D., Fergusson, D., Ford, I., \& Vale, L. D. (2014). Assessing methods to specify the target difference for a randomised controlled trial—DELTA (Difference ELicitation in TriAls) review. \emph{Health Technology Assessment}, \emph{18}(28), 1--175. \url{https://doi.org/10.3310/hta18280}
 
 
 
@@ -504,11 +598,11 @@
 
 
 
-	Festing, M. F. W., Overend, P., Gaines Das, R., Cortina Borja, M., \& Berdoy, M. (2002). \emph{The design of animal experiments: Reducing the use of animals in research through better experimental design.} London: The Royal Society of Medicine Press for Laboratory Animals.
+	Festing, M. F. W., Overend, P., Gaines Das, R., Cortina Borja, M., \& Berdoy, M. (2002). \emph{The design of animal experiments: Reducing the use of animals in research through better experimental design.} The Royal Society of Medicine Press for Laboratory Animals.
 
 
 
-	Fraley, R. C., Chong, J. Y., Baacke, K. A., Greco, A. J., Guan, H., \& Vazire, S. (2022). Journal N-Pact Factors from 2011 to 2019: Evaluating the quality of social/personality journals with respect to sample size and statistical power. Advances in Methods and Practices in Psychological Science, 5(4), 1--17. \url{https://doi.org/10.1177/25152459221120217}
+	Fraley, R. C., Chong, J. Y., Baacke, K. A., Greco, A. J., Guan, H., \& Vazire, S. (2022). Journal N-Pact Factors from 2011 to 2019: Evaluating the quality of social/personality journals with respect to sample size and statistical power. \emph{Advances in Methods and Practices in Psychological Science, 5}(4), Article 25152459221120217. \url{https://doi.org/10.1177/25152459221120217}
 
 
 
@@ -524,7 +618,7 @@
 
 
 
-	Gigerenzer, G. (2018). Statistical rituals: The replication delusion and how we got there. \emph{Advances in Methods and Practices in Psychological Science}, 1(2), 198--218. \url{https://doi.org/10.1177/2515245918771329}
+	Gigerenzer, G. (2018). Statistical rituals: The replication delusion and how we got there. \emph{Advances in Methods and Practices in Psychological Science}, \emph{1}(2), 198--218. \url{https://doi.org/10.1177/2515245918771329}
 
 
 
@@ -560,7 +654,7 @@
 
 
 
-	Ioannidis, J. P. A. (2005). Why most published research findings are false. \emph{PLoS Medicine}, \emph{19}(8), Article e1004085. \url{https://doi.org/10.1371/journal.pmed.0020124}
+	Ioannidis, J. P. A. (2005). Why most published research findings are false. \emph{PLoS Medicine}, \emph{19}(8), e124. \url{https://doi.org/10.1371/journal.pmed.0020124}
 
 
 
@@ -568,7 +662,7 @@
 
 
 
-	Ioannidis, J. P. A. (2014). How to make more published research true.\emph{PLOS Medicine}, 11(10), Article e1001747. \url{https://doi.org/10.1371/journal.pmed.1001747}
+	Ioannidis, J. P. A. (2014). How to make more published research true. \emph{PLOS Medicine}, \emph{11}(10), Article e1001747. \url{https://doi.org/10.1371/journal.pmed.1001747}
 
 
 
@@ -624,7 +718,7 @@
 
 
 
-	Lytsy, P., Hartman, M., \& Pingel, R. (2022). Misinterpretations of P-values and statistical tests persist among researchers and professionals working with statistics and epidemiology. \emph{Upsala Journal of Medical Sciences}, \emph{127}(1), Article e8760.https://doi.org/10.48101/ujms.v127.8760
+	Lytsy, P., Hartman, M., \& Pingel, R. (2022). Misinterpretations of P-values and statistical tests persist among researchers and professionals working with statistics and epidemiology. \emph{Upsala Journal of Medical Sciences}, \emph{127}(1), Article e8760. \url{https://doi.org/10.48101/ujms.v127.8760}
 
 
 
@@ -636,7 +730,7 @@
 
 
 
-	Moher, D., Dulberg, C. S., \& Wells, G. A. (1994). Statistical power, sample size, and their reporting in randomized controlled trials. \emph{JAMA}, 272(2), 122--124. \url{https://doi.org/10.1001/jama.1994.03520020048013}
+	Moher, D., Dulberg, C. S., \& Wells, G. A. (1994). Statistical power, sample size, and their reporting in randomized controlled trials. \emph{JAMA, 272}(2), 122--124. \url{https://doi.org/10.1001/jama.1994.03520020048013}
 
 
 
@@ -644,11 +738,11 @@
 
 
 
-	Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J. J., \& Ioannidis, J. P. A. (2017). A manifesto for reproducible science. \emph{Nature Human Behaviour}, \emph{1}, Article 0021. \url{https://doi.org/10.1038/s41562-016-0021}
+	Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.J., Ware, J. J., \& Ioannidis, J. P. A. (2017). A manifesto for reproducible science. \emph{Nature Human Behaviour}, \emph{1}, Article 0021. \url{https://doi.org/10.1038/s41562-016-0021}
 
 
 
-	Nieuwenhuis, S., Forstmann, B. U., \& Wagenmakers, E.-J. (2011). Erroneous analyses of interactions in neuroscience: A problem of significance. \emph{Nature Neuroscience}, \emph{14}(9), 1105--1107. \url{https://doi.org/10.1038/nn.2886}
+	Nieuwenhuis, S., Forstmann, B. U., \& Wagenmakers, E.J. (2011). Erroneous analyses of interactions in neuroscience: A problem of significance. \emph{Nature Neuroscience}, \emph{14}(9), 1105--1107. \url{https://doi.org/10.1038/nn.2886}
 
 
 
@@ -668,7 +762,7 @@
 
 
 
-	Pereira, T. V., \& Ioannidis, J. P. A. (2011). Statistically significant meta-analyses of clinical trials have modest credibility and inflated effects. \emph{Journal of Clinical Epidemiology}, 64(10), 1060--1069. \url{https://doi.org/10.1016/j.jclinepi.2010.12.012}
+	Pereira, T. V., \& Ioannidis, J. P. A. (2011). Statistically significant meta-analyses of clinical trials have modest credibility and inflated effects. \emph{Journal of Clinical Epidemiology, 64}(10), 1060--1069. \url{https://doi.org/10.1016/j.jclinepi.2010.12.012}
 
 
 
@@ -700,11 +794,11 @@
 
 
 
-	Sawilowsky, S. (2009). New effect size rules of thumb. \emph{Journal of Modern Applied Statistical Method, 8}(2), 467--474. \url{https://doi.org/10.22237\%2Fjmasm\%2F1257035100}
+	Sawilowsky, S. (2009). New effect size rules of thumb. \emph{Journal of Modern Applied Statistical Methods, 8}(2), 467--474. \url{https://doi.org/10.22237\%2Fjmasm\%2F1257035100}
 
 
 
-	Schäfer, T., \& Schwarz, M. A. (2019). The meaningfulness of effect sizes in psychological research: differences between sub-disciplines and the impact of potential biases. \emph{Frontiers in Psychology}, \emph{10, }Article 813. \url{https://doi.org/10.3389/fpsyg.2019.00813}
+	Schäfer, T., \& Schwarz, M. A. (2019). The meaningfulness of effect sizes in psychological research: Differences between sub-disciplines and the impact of potential biases. \emph{Frontiers in Psychology}, \emph{10, }Article 813. \url{https://doi.org/10.3389/fpsyg.2019.00813}
 
 
 
@@ -728,19 +822,19 @@
 
 
 
-	Stanley, T. D., Carter, E. C., \& Doucouliagos, H. (2018). What meta-analyses reveal about the replicability of psychological research. \emph{Psychological Bulletin}, 144(12), 1325--1346. \url{https://doi.org/10.1037/bul0000169}
+	Stanley, T. D., Carter, E. C., \& Doucouliagos, H. (2018). What meta-analyses reveal about the replicability of psychological research. \emph{Psychological Bulletin}, \emph{144}(12), 1325--1346. \url{https://doi.org/10.1037/bul0000169}
 
 
 
-	Szucs, D., \& Ioannidis, J. P. A. (2017). Empirical assessment of published effect sizes and power in the recent cognitive neuroscience and psychology literature. \emph{PLOS Biology}, 15(3), Article e2000797. \url{https://doi.org/10.1371/journal.pbio.2000797}
+	Szucs, D., \& Ioannidis, J. P. A. (2017). Empirical assessment of published effect sizes and power in the recent cognitive neuroscience and psychology literature. \emph{PLOS Biology}, \emph{15}(3), Article e2000797. \url{https://doi.org/10.1371/journal.pbio.2000797}
 
 
 
-	Turner, R. M., Bird, S. M., \& Higgins, J. P. T. (2013). The impact of study size on meta-analyses: Examination of underpowered studies in Cochrane reviews. \emph{PLOS ONE}, 8(3), Article e59202. \url{https://doi.org/10.1371/journal.pone.0059202}
+	Turner, R. M., Bird, S. M., \& Higgins, J. P. T. (2013). The impact of study size on meta-analyses: Examination of underpowered studies in Cochrane reviews. \emph{PLOS One, 8}(3), Article e59202. \url{https://doi.org/10.1371/journal.pone.0059202}
 
 
 
-	Van Calster, B., Wynants, L., Riley, R. D., van Smeden, M., \& Collins, G. S. (2021). Methodology over metrics: Current scientific standards are a disservice to patients and society. \emph{Journal of Clinical Epidemiology}, \emph{138}, 219--226. \url{https://doi.org/10.1016/j.jclinepi.2021.05.018}
+	van Calster, B., Wynants, L., Riley, R. D., van Smeden, M., \& Collins, G. S. (2021). Methodology over metrics: Current scientific standards are a disservice to patients and society. \emph{Journal of Clinical Epidemiology}, \emph{138}, 219--226. \url{https://doi.org/10.1016/j.jclinepi.2021.05.018}
 
 
 
@@ -748,7 +842,7 @@
 
 
 
-	Voelkl, B., Vogt, L., Sena, E. S., \& Würbel, H. (2018). Reproducibility of preclinical animal research improves with heterogeneity of study samples. \emph{PLOS Biology}, 16(2), Article e2003693.https://doi.org/10.1371/journal.pbio.2003693
+	Voelkl, B., Vogt, L., Sena, E. S., \& Würbel, H. (2018). Reproducibility of preclinical animal research improves with heterogeneity of study samples. \emph{PLOS Biology}, \emph{16}(2), Article e2003693. \url{https://doi.org/10.1371/journal.pbio.2003693}
 
 
 
@@ -764,7 +858,7 @@
 
 
 
-	Yarkoni, T. (2009). Big correlations in little studies: Inflated fMRI correlations reflect low statistical power — Commentary on Vul et al. (2009). \emph{Perspectives on Psychological Science}, 4(3), 294--298. \url{https://doi.org/10.1111/j.1745-6924.2009.01127.x}
+	Yarkoni, T. (2009). Big correlations in little studies: Inflated fMRI correlations reflect low statistical power — Commentary on Vul et al. (2009). \emph{Perspectives on Psychological Science}, \emph{4}(3), 294--298. \url{https://doi.org/10.1111/j.1745-6924.2009.01127.x}
 
 
 
@@ -772,7 +866,7 @@
 
 
 
-	Zhang, Z. (2018). \emph{Practical statistical power analysis using WebPower and R} (K.-H. Yuan, Ed.). ISDSA Press.
+	Zhang, Z., \& Yuang, K. (2018). \emph{Practical statistical power analysis using WebPower and R} (K.-H. Yuan, Ed.). ISDSA Press.
 
 
 
@@ -780,46 +874,13 @@
 
 
 
-    \clearpage
+    
 
 
 
-	\begin{figure*}
-        \centering
-		\includegraphics[width=.7\textwidth]{media/image2.png}
-
-		\caption{Distributions of statistical power to detect external small, medium, or large hypothetical effect sizes, across significant and non-significant combined tests. The three left-hand panels show results for \emph{F}-tests (\emph{n} = 89), and the three right-hand panels for \emph{t}-tests (\emph{n} = 40). Each panel displays the distribution of power estimates for detecting one of the external conventional effect sizes, Cohen’s \emph{f} = 0.1, 0.25, 0.4 for \emph{F}-tests, and Cohen’s \emph{d} = 0.2, 0.5, 0.8 for \emph{t}-tests, using the original sample size reported in the analyzed articles. The median power and interquartile range (IQR) are indicated within each panel. The vertical dashed line marks the conventional threshold of 0.80 for adequate statistical power. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
-
-		\label{fig:rId8}
 
 
-	\end{figure*}
 
-	\clearpage
-
-	\begin{figure*}
-        \centering
-		\includegraphics[width=.7\textwidth]{media/image4.png}
-
-		\caption{Distributions of statistical power to detect external small, medium, or large hypothetical effect sizes for the statistically significant tests. The left-hand panels correspond to \emph{F}-tests (n = 72), and the right-hand panels to \emph{t}-tests (n = 28). Each panel shows the distribution of power estimates for detecting one of the external conventional effect sizes, Cohen's \emph{f} = 0.1, 0.25, 0.4 for \emph{F}-tests, and Cohen's \emph{d} = 0.2, 0.5, 0.8 for \emph{t}-tests, based on the original sample size reported in the analyzed articles. The median power and interquartile range (IQR) are reported within each panel. The vertical dashed line marks the conventional threshold of 0.80 for adequate statistical power. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
-
-		\label{fig:rId10}
-
-
-	\end{figure*}
-
-    \clearpage
-
-	\begin{figure*}
-        \centering
-		\includegraphics[width=.7\textwidth]{media/image6.png}
-
-		\caption{Distributions of statistical power to detect external small, medium, or large hypothetical effect sizes for the statistically non-significant tests. The left-hand panels correspond to \emph{F}-tests (n = 17), and the right-hand panels to \emph{t}-tests (n = 12). Each panel shows the distribution of power estimates for detecting one of the external conventional effect sizes, Cohen's \emph{f} = 0.1, 0.25, 0.4 for \emph{F}-tests, and Cohen's \emph{d} = 0.2, 0.5, 0.8 for \emph{t}-tests, based on the original sample size reported in the analyzed articles. The median power and interquartile range (IQR) are reported within each panel. The vertical dashed line marks the conventional threshold of 0.80 for adequate statistical power. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
-
-		\label{fig:rId12}
-
-
-	\end{figure*}
 
 	
 
@@ -829,33 +890,7 @@
 
 	
 
-	\begin{table*}
-        \caption{Median statistical power [IQR] across publication year quartiles}
-		\begin{tabularx}{\textwidth}{@{} l l l l l l l @{}}
-			\hline \textbf{Test type} & \textbf{Effect size} & \textbf{≤2008} & \textbf{2009-2013}
-			& \textbf{2014-2017} & \textbf{≥2018} \\
 
-			\hline \textbf{\emph{F}-tests} & \textbf{Small} & .108[.089, .119] &
-			.098 [.088, .127] & .084[.075, .092] & 0.085[.070, 0.113] \\
-
-			  & \textbf{Medium} & .434[.303, .477] & .360[.297, .540] & .270[.212, .329]
-			& .277[.197, .480] \\
-
-			  & \textbf{Large} & .818[.637, .861] & .726[.640, .913] & .575[.455, 0.698]
-			& .589[.453, .862] \\
-
-			\hline \textbf{\emph{t}-tests} & \textbf{Small} & .104[.081, .107] & .097[.085, .107]
-			& .066[.065, .068] & .116[.088, .121] \\
-
-			  & \textbf{Medium} & .396[.244, .410] & .353[.278, .410] & .152[.146, .170]
-			& .465[.286, .491] \\
-
-			  & \textbf{Large} & .773[.466, .790] & .714[.591, .790] & .316[.299, .358]
-			& .848[.525, .870] \\
-
-
-		\end{tabularx}
-	\end{table*}
 
 
 
@@ -863,18 +898,6 @@
     \clearpage
 
 
-
-
-	\begin{figure*}
-        \centering
-		\includegraphics[width=.7\textwidth]{media/image8.png}
-
-		\caption{Relationship between statistical power (power-to-detect) and observed effect sizes for the statistically significant \emph{F}-tests and \emph{t}-tests. Powers were calculated under three hypothetical effect sizes corresponding to Cohen's \emph{f} or \emph{d} benchmarks (small, medium, large; top to bottom). Each point is an individual test. The solid line in each panel shows a simple regression fit illustrating the overall trend. The vertical dashed line marks the conventional power threshold of 0.80; the horizontal dotted line marks the hypothetical effect size. Percentages represent the proportion of tests with power-to-detect ≥ 0.8.}
-
-		\label{fig:rId14}
-
-
-	\end{figure*}
 
 	
 
@@ -894,17 +917,6 @@
 
 
 
-	\begin{figure*}
-        \centering
-		\includegraphics[width=.7\textwidth]{media/image10.png}
-
-		\caption{Relationship between sample size per group and observed effect size (Cohen's \emph{f} or Cohen's \emph{d}) for the statistically significant \emph{F}-tests and \emph{t}-tests. In each panel, the vertical dashed line marks the median sample size per group, and the horizontal dashed line marks the median effect size. These lines divide the panel into four quadrants, inserted primarily for clarity and presentation purposes (see text), with the number of tests indicated in each quadrant. The solid line depicts a simple regression fit to illustrate the general trend in the data. For two \emph{t}-tests, the calculation of Cohen's \emph{d} was not possible.}
-
-		\label{fig:rId16}
-
-
-	\end{figure*}
-
 	
 
 
@@ -923,16 +935,6 @@
 
 
 
-	\begin{figure*}
-        \centering
-		\includegraphics[width=.7\textwidth]{media/image12.png}
-
-		\caption{Relationship between the pre-study probability of H\textsubscript{1} being true and either the positive predictive value (PPV, left-hand panels), or the false discovery rate (FDR, right-hand panels). The two upper panels show the \emph{F}-tests (Cohen's \emph{f}) and the lower panels the \emph{t}-tests (Cohen's \emph{d}). The horizontal grey line marks the classical thresholds of acceptability for PPV (0.95) and FDR (0.05). In each panel, the curve representing power = 0.8 serves as a reference, while the three other curves represent the calculated median statistical powers shown in the panel.}
-
-		\label{fig:rId18}
-
-
-	\end{figure*}
 
 	
 
