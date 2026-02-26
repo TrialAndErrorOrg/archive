@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\usepackage{xcolor}
+\usepackage[margin=0pt]{geometry}
+\pagestyle{empty}
+
+\hypersetup{
+    pdftitle={Medical Journal Compilation},
+    pdfauthor={Various Authors},
+    pdfpagemode=UseOutlines,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+
+\begin{document}
+\pdfbookmark[1]{Cover}{cover}
+\includepdf[pages=-]{cover.pdf}
+
+\pdfbookmark[1]{Table of contents}{toc}
+\includepdf[pages=-]{6-1 contents.pdf}
+
+\pdfbookmark[1]{Preprinting Does Not Meet Science’s Duty of Care Responsibility to Society}{article1}
+\includepdf[pages=-]{1 browman preprinting/main.pdf}
+
+\pdfbookmark[1]{Some Data Indicating That Editors and Reviewers Do Not Check Preregistrations During the Review Process}{article2}
+\includepdf[pages=-]{2 syed-data/main.pdf}
+
+\pdfbookmark[1]{Attentional Bias and Tobacco Smoking Frequency: A Reflection on Bartlett et al. (2022)}{article3}
+\includepdf[pages=-]{3 copeland-tobacco/main.pdf}
+
+\pdfbookmark[1]{Adopt a Cultural-Historical Perspective to Adapt Misinformation Interventions: Reflecting on Harjani et al.}{article4}
+\includepdf[pages=-]{4 panizza adopt a perspective/main.pdf}
+
+\pdfbookmark[1]{Attempt to Identify Extracellular Vesicles Derived From the Blood-Brain Barrier in Peripheral Blood}{article5}
+\includepdf[pages=-]{5 tunset attempt/main.pdf}
+
+\pdfbookmark[1]{The Statistical Tests Used in the Literature on Conditioned Place Preference Induced by Nicotine in Mice Are Underpowered}{article6}
+\includepdf[pages=-]{6 leonard statistical/main.pdf}
+
+\pdfbookmark[1]{Why Not to Use Difference Scores in Research on Affective Polarization: A Critique and a Tutorial for Using Polyvariate Regression to Study Congruence as an Outcome}{article7}
+\includepdf[pages=-]{7 sotala scores/main.pdf}
+
+\pdfbookmark[1]{The Open science platforms fighting clandestine abuses of piracy and phishing: Case of Open Science Framework}{article8}
+\includepdf[pages=-]{8 ikeda piracy/main.pdf}
+
+\end{document}
