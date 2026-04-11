@@ -1,0 +1,354 @@
+\documentclass[authordate, editorial]{jote-new-article}
+
+\usepackage{caption}
+
+\usepackage{tabularx}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+
+
+\jotetitle{Technical Note A GBLUP to produce ssGBLUP solutions for genotyped animals}
+\keywordsabstract{equivalent model, GBLUP, reduced model, ssGBLUP}
+\abstracttext{Nowadays, single-step genomic best linear unbiased prediction (ssGBLUP) is the most popular methodology for livestock genetic evaluation. It simultaneously evaluates genotyped and nongenotyped animals using an augmented genotype and pedigree relationship matrix. In most livestock species, a small proportion of the population is genotyped. A small model limited to genotyped animals (genomic best linear unbiased prediction, GBLUP) incorporating information from nongenotyped animals would be of interest, because it reduces the dimension of equations and computational costs and produces solutions equivalent to ssGBLUP. Two methods are considered in this study. First, genotyped animals, whether phenotyped or nonphenotyped, receive phenotype contributions from their nongenotyped relatives. Calculating those pseudo-phenotypes and weights for the introduced residual heterogeneity is challenging. The second method involves absorbing equations of nongenotyped animals into the equations of genotyped animals. The solutions from the resulting GBLUP model were equivalent to those of the full ssGBLUP model. However, two main reasons prevent the introduced GBLUP model from being adopted and widely implemented. First, such implementation enforces (pedigree-based) additive genetic covariances among nongenotyped animals into their residual covariance matrix. That introduces nonzero off-diagonal elements to the diagonal residual covariance matrix for nongenotyped animals, making its inversion cumbersome. Also, the inverted matrix is dense, increasing the multiplication costs to other matrices and the vector of phenotypes. Second, the breeding values of nongenotyped animals ($\textbf{a}_1$) are not conditional to those of genotyped animals ($\textbf{a}_2$), making back-solving of $\textbf{a}_1$ from $\textbf{a}_2$ challenging.}
+\runningauthor{Nilforooshan}
+\jname{Journal of Trial \& Error}
+\jyear{2026}
+\paperdoi{10.36850/429a-ac1d}
+\paperreceived{March 2, 2025}
+\author[1]{\mbox{Mohammad Ali Nilforooshan\orcid{0000-0003-0339-5442}}}
+\affil[1]{Scientist}
+\corremail{\href{mailto:mohammad.nilforooshan@lic.co.nz}{mohammad.nilforooshan@lic.co.nz}}
+\corraddress{Scientist}
+\runningauthor{Nilforooshan}
+\paperaccepted{March 30, 2026}
+\jwebsite{https://journal.trialanderror.org}
+
+
+
+\begin{document}
+\begin{frontmatter}
+  \maketitle
+  \begin{abstract}
+    \printabstracttext
+  \end{abstract}
+\end{frontmatter}
+
+	\section{Introduction}
+
+
+
+	Best Linear Unbiased Prediction (BLUP; Henderson, 1975a) is a statistical method for the estimation of random effects (Robinson, 1991). It has a wide usage and a long history in animal and plant breeding. In the animal breeding context, the most important random effect to predict is the animal's genetic merit or breeding value. Estimated breeding values for economically important traits are used in selection (of parents for the next generation) and mating programs. For many years, in the absence of genotype information, pedigree information has been used to model genetic similarities between individuals in BLUP. With the availability of high-density genotyping panels for livestock species, genomic evaluation and selection have been implemented for most livestock species.
+
+
+
+	Using genomic information to predict breeding values, new methods were developed. Genomic BLUP (GBLUP; VanRaden, 2008) and later single-step GBLUP (ssGBLUP; Aguilar et al., 2010; Christensen \& Lund, 2010) were both developed based on BLUP principles, using different relationship matrices: genomic relationship matrix for GBLUP (\textbf{G}) and augmented genomic-pedigree relationship matrix for ssGBLUP (\textbf{H}). Whereas GBLUP is limited to genotyped animals, ssGBLUP simultaneously evaluates genotyped and nongenotyped animals. The absence of information from nongenotyped animals in GBLUP puts the genetic evaluation of genotyped animals at risk of genomic preselection bias (Patry \& Ducrocq, 2011). Not all animals from recent generations are genotyped, and only a small proportion of previous generations are genotyped. As a result, genotyped animals usually comprise a small proportion of the population. This is also true for the US dairy cattle breeds (Guinan et al., 2023). Simultaneous genetic evaluation of genotyped and nongenotyped animals is crucial as genotyped animals comprise a small proportion of the population, and the breeding value estimates of nongenotyped animals are of interest. Nowadays, ssGBLUP has become the most popular methodology implemented for the genetic evaluation of genotyped and nongenotyped animals in most livestock populations (Bermann et al., 2022; Luan et al., 2023).
+
+
+
+	Aiming to reduce the number of equations to solve, Nilforooshan \& Garrick (2021) and Nilforooshan (2023) came up with reduced-equivalent ssGBLUP models ("reduced" in terms of the reduced number of equations and "equivalent" in terms of producing the same solutions as for the full model). The first study reduced the number of ssGBLUP equations to "genotyped or phenotyped" animals, and the latter reduced the number of equations to animals that are either genotyped or parent. The number of equations for nongenotyped parents can further be reduced to those animals that are parent to phenotyped nongenotyped nonparents (Nilforooshan, 2023). As such, both models reduce the number of ssGBLUP equations for nongenotyped animals. Nilforooshan (2024b) reduced the number of GBLUP equations to core animals in the algorithm for proven and young (APY; Misztal et al., 2014). Attempting to reduce the number of equations for ssGBLUP, he concluded that reducing the number of equations for genotyped animals is not computationally justifiable for ssGBLUP, due to conditionalities on both genomic and pedigree information.
+
+
+
+	The aim of this study is to incorporate ssGBLUP equations for nongenotyped animals into the equations of genotyped animals. That would result in a GBLUP, which can produce solutions equivalent to a much larger ssGBLUP. This approach could reduce the computational demands for a ssGBLUP genetic evaluation.
+
+
+
+	\section{Methods}
+
+
+
+	Denoting nongenotyped and genotyped animals with 1 and 2, a simple equation system including genotyped and nongenotyped animals is presented as:
+
+
+
+	\begin{equation}
+		\begin{cases}
+		\textbf{y}_1-\textbf{X}_1\textbf{B}+\textbf{Z}_1\textbf{a}_1+\textbf{e}_1\\
+		\textbf{y}_2-\textbf{X}_2\textbf{B}+\textbf{Z}_2\textbf{a}_2+\textbf{e}_2
+		\end{cases}
+	\end{equation}
+
+
+
+	where \textbf{y}, \textbf{b}, \textbf{a}, and \textbf{e} are respectively the vectors of phenotypes, fixed effects, animal's additive genetic effect (genetic merit), and residuals. Matrices \textbf{X} and \textbf{Z} relate fixed effects and random animal additive genetic effects to phenotypes. Conventionally, and in this article, matrices are denoted by bold capital letters, and vectors by bold lowercase letters.
+
+
+
+	Genotyped animals are a small proportion of the whole population (including the ancestors in the pedigree). Therefore, developing a reduced-equivalent model limited to genotyped animals is attractive. Solving the reduced equation system is followed by a simple back-solving procedure using the solutions from the first step (here, solutions for genotyped animals) to calculate solutions for animals that are no longer in the equation system (here, solutions for nongenotyped animals). Incorporating information from nongenotyped animals into the equations for genotyped animals can be done in two equivalent ways:
+
+
+
+	\begin{equation}
+    \begin{split}
+        \text{Method 1: }&(\textbf{y}_2+\textbf{δ}_2 )=\textbf{X}_2 \textbf{b}+\textbf{Z}_2 \textbf{a}_2+\textbf{e}_2,\\
+        \text{Method 2: }&\textbf{y}_2=\textbf{X}_2 \textbf{b}+\textbf{Z}_2 \textbf{a}_2+(\textbf{e}_2-\textbf{δ}_2 ),
+    \end{split}
+\end{equation}
+
+
+
+	where $\textbf{δ}_2$ is the vector of contributions from nongenotyped animals to genotyped animals (equal to \textbf{0} (vector of 0s) for GBLUP).
+
+
+
+	\subsection{Method 1}
+
+
+
+	This method involves using pseudo-phenotypes for genotyped animals, incorporating phenotype contributions from nongenotyped animals. That requires corrected phenotypes from nongenotyped animals ($\textbf{\^{y}}_1=\textbf{y}_1-\textbf{X}_1 \textbf{\^{b}}$) properly weighted for each genotyped animal, based on the pedigree relationship that each phenotyped nongenotyped animal has with genotyped animals. Note that genotyped nonphenotyped animals receive phenotype contributions from nongenotyped relatives. As such, every genotyped animal has a pseudo-phenotype (unless unrelated to any nongenotyped phenotyped animal). Receiving phenotype contributions from various sources (own performance and nongenotyped animals) creates residual heterogeneity (i.e., $\textbf{e}\sim N(0,\textbf{K}\sigma_e^2 )$ vs $\textbf{e}\sim N(\textbf{0},\textbf{I}\sigma_e^2 )$, where \textbf{K} is a diagonal matrix). The complexities with this method are deriving \textbf{K}, and phenotype contributions from nongenotyped phenotyped animals to be added to $\begin{bmatrix}
+\textbf{y}_2\\
+\textbf{0}
+\end{bmatrix}$, where \textbf{0} is a vector of 0s corresponding to genotyped nonphenotyped animals. This also involves replacing $\textbf{X}_2$ with $\begin{bmatrix}\textbf{X}_2\\\textbf{0}\end{bmatrix}$, and $\textbf{Z}_2$ with $\begin{bmatrix}\textbf{Z}_2&\textbf{0}\\\textbf{0}&\textbf{I}\end{bmatrix}$, where \textbf{I} is an identity matrix corresponding to genotyped nonphenotyped animals.
+
+
+
+	Luan et al. (2023) introduced a multistep method to absorb all available information on nongenotyped animals into the equations for genotyped animals in ssGBLUP. This method involves:
+
+	\begin{enumerate}
+
+
+		\item performing BLUP on all individuals,
+
+
+
+		\item
+		creating pseudo-phenotypes and weights by absorbing the phenotypic information of nongenotyped animals into the mixed model equations (MME) for genotyped animals,
+
+
+
+		\item performing GBLUP on genotyped animals.
+
+
+	\end{enumerate}
+
+	With correct assumptions, the estimated breeding values should have been the same or nearly equal to those from the full model, but that was not the case. The main concerns about this method are: (1) it does not guarantee $\textbf{a}\sim N(\textbf{0},\textbf{G}\sigma_a^2 )$ and $\textbf{e}\sim N(0,\textbf{K}\sigma_e^2 )$ distributions, and (2) it assumes that the genetic merits of nongenotyped animals are known from BLUP. This is an incorrect assumption as the genetically estimated breeding values (GEBV) of nongenotyped animals are not equal to their estimated breeding values without genomic information (EBV). On the other hand, genotype contributions to the genetic merit of nongenotyped animals are ignored. That results in incorrect GEBV for both genotyped and nongenotyped animals.
+
+
+
+	\subsection{Method 2}
+
+
+
+	This method involves absorbing equations for nongenotyped animals into the equations for genotyped animals. Phenotype contributions from nongenotyped animals reduce the error (residual) term for genotyped animals (Eq. 2). Quaas \& Pollak (1980) absorbed nonparents' BLUP equations into parents' BLUP equations. Nilforooshan (2023, 2024b) followed the same principle for the absorption of different groups of equations. Here, I follow the same procedure for absorbing ssGBLUP equations for nongenotyped animals into the ssGBLUP equations for genotyped animals. The MME of a simple form of ssGBLUP (with animals' additive genetic effect as the only random effect) is (Aguilar et al., 2010; Christensen \& Lund, 2010):
+
+
+
+	\begin{equation}
+		\begin{bmatrix}
+		\textbf{X}^T \textbf{R}^{-1} \textbf{X}&\textbf{X}^T \textbf{R}^{-1} \textbf{Z}\\\textbf{Z}^T \textbf{R}^{-1} \textbf{X}&\textbf{Z}^T \textbf{R}^{-1} \textbf{Z}+\textbf{H}^{-1} \sigma_a^{-2}
+		\end{bmatrix}
+		\begin{bmatrix}
+			\textbf{\^{b}}\\\textbf{\^{a}}
+		\end{bmatrix}=
+		\begin{bmatrix}\textbf{X}^T \textbf{R}^{-1} \textbf{y}\\\textbf{Z}^T \textbf{R}^{-1} \textbf{y}
+		\end{bmatrix}
+	\end{equation}
+
+
+
+	and the MME of GBLUP is:
+
+
+	\begin{equation}
+		\begin{bmatrix}
+		\textbf{X}_2^T \textbf{R}^{22} \textbf{X}_2&\textbf{X}_2^T \textbf{R}^{22} \textbf{Z}_2\\\textbf{Z}_2^T \textbf{R}^{22} \textbf{X}_2&\textbf{Z}_2^T \textbf{R}^{22} \textbf{Z}_2+\textbf{G}^{-1} \sigma_a^{-2}
+		\end{bmatrix}
+		\begin{bmatrix}
+			\textbf{\^{b}}\\\textbf{\^{a}}_2
+		\end{bmatrix}=
+		\begin{bmatrix}\textbf{X}_2^T \textbf{R}^{22} \textbf{y}_2\\\textbf{Z}_2^T \textbf{R}^{22} \textbf{y}_2
+		\end{bmatrix}
+	\end{equation}
+
+
+
+	where $\textbf{y}=\begin{bmatrix}
+			\textbf{y}_1\\\textbf{y}_2
+		\end{bmatrix}$, $\textbf{X}=\begin{bmatrix}
+			\textbf{X}_1\\\textbf{X}_2
+		\end{bmatrix}$, $\textbf{Z}=\begin{bmatrix}
+			\textbf{Z}_1&\textbf{0}\\\textbf{0}&\textbf{Z}_2
+		\end{bmatrix}$, $\textbf{R}^{-1}=\textbf{I}\sigma_e^{-2}=\begin{bmatrix}
+			\textbf{R}^{11}&\textbf{0}\\\textbf{0}&\textbf{R}^{22}
+		\end{bmatrix}$, and $\textbf{\^{a}}=\begin{bmatrix}
+			\textbf{\^{a}}_1\\\textbf{\^{a}}_1
+		\end{bmatrix}$ the vector of \textbf{a} solutions. A GBLUP with incorporated contributions from nongenotyped animals can be written as:
+
+
+
+	\begin{equation}
+		\begin{bmatrix}
+		\textbf{X}^T \mathbb{R}^{-1} \textbf{X}&\textbf{X}^T \mathbb{R}^{-1} \textbf{W}\\\textbf{W}^T \mathbb{R}^{-1} \textbf{X}&\textbf{W}^T \mathbb{R}^{-1} \textbf{W}+\textbf{G}^{-1} \sigma_a^{-2}
+		\end{bmatrix}
+		\begin{bmatrix}
+			\textbf{\^{b}}\\\textbf{\^{a}}_2
+		\end{bmatrix}=
+		\begin{bmatrix}\textbf{X}^T \mathbb{R}^{-1} \textbf{y}\\\textbf{W}^T \mathbb{R}^{-1} \textbf{y}
+		\end{bmatrix}
+	\end{equation}
+
+
+
+where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, $\mathbb{R}^{-1}=\begin{bmatrix}\mathbb{R}^{11}&\textbf{0}\\\textbf{0}&\textbf{R}^{22}\end{bmatrix}=\begin{bmatrix}\mathbb{R}_{11}^{-1}&\textbf{0}\\\textbf{0}&\textbf{R}_{22}^{-1}\end{bmatrix}$, and $\mathbb{R}_{11}=\textbf{R}_{11}+\textbf{D}_{11}\sigma_a^2$. Note that rows of $\textbf{W}$ and $\mathbb{R}^{-1}$ should be reordered to correspond to $\textbf{y}$. In a reduced BLUP, $\textbf{D}_{11}$ is a block (corresponding to nongenotyped phenotyped animals) of the diagonal matrix $\textbf{D}$ in $\textbf{A}=\textbf{TDT}^T$ (Quaas \& Pollak, 1980). Here, in the equivalent GBLUP, $\textbf{D}_{11}^{-1}$ corresponds to a block of $\textbf{H}^{11}=\textbf{A}^{11}$ corresponding to nongenotyped phenotyped animals. Matrix $\textbf{Z}_1^*$ transfers information from nongenotyped phenotyped animals to genotyped animals. As such, it has rows corresponding to nongenotyped phenotyped animals and columns corresponding to genotyped animals. Matrix $\textbf{Z}_1^*$ contains rows of $\textbf{H}_{12} \textbf{G}^{-1}$ corresponding to nongenotyped phenotyped animals, where $\textbf{H}_{12}=\textbf{A}_{12} \textbf{A}_{22}^{-1} \textbf{G}=-(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{G}$ (Legarra et al., 2009), $\textbf{A}=\begin{bmatrix}\textbf{A}_{11}&\textbf{A}_{12}\\\textbf{A}_{21}&\textbf{A}_{22}\end{bmatrix}$ is the pedigree-based genetic relationship matrix, and $A^{-1}=\begin{bmatrix}\textbf{A}^{11}&\textbf{A}^{12}\\\textbf{A}^{21}&\textbf{A}^{22}\end{bmatrix}$.
+
+
+
+	In APY, a different $\textbf{G}^{-1}$ ($\textbf{G}_{\textit{APY}} ^{-1}$) is used in ssGBLUP or GBLUP, in which genotyped animals are divided into core and noncore animals, and the breeding values of noncore animals are conditioned to the breeding values of core animals. As such, the partition of $\textbf{G}_{\textit{APY}} ^{-1}$ corresponding to noncore animals (denoted as $\textbf{M}^{-1}$) is a diagonal matrix (Misztal et al., 2014). Unlike $\textbf{M}$, $\textbf{D}_{11}$ is not diagonal because the breeding values of nongenotyped animals are not conditional to the breeding values of genotyped animals. In other words, genotypes or pedigree information for a group of animals cannot explain all the pedigree relationships between other animals.
+
+
+
+	Followed by solving the GBLUP equation system, solutions for nongenotyped animals ($\textbf{\^{a}}_1$) are back-solved from the solutions of genotyped animals $\textbf{\^{a}}_2$ (equation adopted from Nilforooshan (2024b) and modified to the context of this study):
+
+
+\begin{equation}
+\begin{gathered}
+		\textbf{\^{a}}_1=\textbf{B}(\textbf{y}_1-\textbf{X}_1 \textbf{\^{b}}+(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{\^{a}}_2 )-(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{\^{a}}_2,\\\textbf{B}=(\textbf{R}^{11}+\textbf{D}^{11} \sigma_a^{-2} )^{-1} \textbf{R}^{11}.
+\end{gathered}
+\end{equation}
+
+	\section{Discussions}
+
+
+
+	A previous study (Nilforooshan, 2024b) found a lack of computational justification in the absorption of APY-ssGBLUP equations (including genotyped and nongenotyped animals) into the equations for core genotyped animals. Luan et al. (2023) attempted to absorb information from nongenotyped animals and implement a GBLUP (for genotyped animals) also containing information from nongenotyped animals. Their approach produced approximations as the genetic merit of nongenotyped animals was unconditional to the genotype information of genotyped animals. Furthermore, genotyped animals received nonoptimal contributions from nongenotyped animals. The current study also tried to incorporate information from nongenotyped animals into the information from genotyped animals, but it took a different approach than Luan et al. (2023). Rather than absorbing information from nongenotyped animals into pseudo-records for genotyped animals, ssGBLUP equations for nongenotyped animals were absorbed into the equations for genotyped animals to form a GBLUP equivalent to ssGBLUP.
+
+
+
+	\subsection{Method 1}
+
+
+
+	Deriving pseudo-phenotypes and matrix $\textbf{K}$ are challenging. Also, ideally, $\textbf{\^{b}}$ in $\textbf{\^{y}}_1=\textbf{y}_1-\textbf{X}_1 \textbf{\^{b}}$ should come from ssGBLUP, which is unavailable. However, given enough observations, especially from nongenotyped animals, fixed effect solutions can remain stable between BLUP and ssGBLUP. As such, $\textbf{\^{b}}$ might be obtained from BLUP.
+
+
+
+	\subsection{Method 2}
+
+
+
+	This method reduces the dimension of a ssGBLUP equation system to a GBLUP equation system (i.e., no equations for nongenotyped animals). Calculation of $-(\textbf{A}^{11} )^{-1} \textbf{A}^{12}$ is an additional cost for the GBLUP (equivalent to ssGBLUP) method. However, the major computational challenge for the implementation of such GBLUP is the inversion of $\mathbb{R}_{11}=\textbf{R}_{11}+\textbf{D}_{11} \sigma_a^2$. This matrix is large and not diagonal. Also, $\mathbb{R}_{11}^{-1}$ is dense. The introduced residual dependencies among the phenotypes of nongenotyped animals (via nonzero off-diagonals of $\textbf{D}_{11}$) are due to imposing additive genetic covariances among nongenotyped animals to their diagonal residual covariance matrix ($\textbf{R}_{11}$).
+
+
+
+	\subsubsection{Numerical example}
+
+
+
+	A sample dataset (Nilforooshan, 2024a) was used to show the equivalence between ssGBLUP and its GBLUP equivalent for the solution of fixed effects and genotyped animals. Figure 1 shows the pedigree, in which phenotyped animals are colored grey, genotyped animals are shown with dashed borders, and females with rounded corners. The phenotypes were 5.64, 4.30, 4.32, 5.39, 7.72, and 4.36 for animals 4, 5, and 9--12, respectively. Genomic relationship matrix between animals 5 and 10 was $\textbf{G}=\begin{bmatrix}0.96&0.56\\0.56&1.16\end{bmatrix}$. Genetic and residual variances were 1 and 2, respectively. The equivalence between ssGBLUP and its GBLUP equivalent is presented in a Jupyter notebook written in the R programming language (Nilforooshan, 2024a).
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image1.png}
+
+		\caption{\emph{Pedigree structure}. Phenotyped animals are colored grey, genotyped animals are shown with dashed borders, and females with rounded corners.}
+
+		\label{fig:rId8}
+
+
+	\end{figure}
+
+
+
+
+
+	Attempts to back-solve the solutions for nongenotyped animals ($\textbf{\^{a}}_1$) from the solutions of genotyped animals ($\textbf{\^{a}}_2$) failed, because I could not derive $\textbf{D}^{11}$ (Eq. 6). Note that $\textbf{D}^{11}\neq\textbf{D}_{11}^{-1}$. Back-solving was successful in previous studies (Nilforooshan, 2023, 2024b; Nilforooshan \& Garrick, 2021; Quaas \& Pollak, 1980), since the conditionalities were full and the patterns of information flow from the animals in the reduced model to the animals excluded from the model were clearer.
+
+
+
+	\section{Conclusions}
+
+
+
+	This study is an example of scientific trial and error. Theoretically correct methods were presented to reduce the dimension of an equation system including genotyped and nongendered animals to an equation system including genotyped animals. With genotyped animals being a small proportion of the entire population (including ancestors in the pedigree), it is an achievement to reduce the computational demands for solving the equation system. A previous attempt (Luan et al., 2023) was based on incorrect assumptions, and it did not produce identical solutions to the full model. In this study, the solutions from the reduced model were identical to those from the full model (dataset Nilforooshan, 2024b). However, the shrinkage of the equation system introduced other complexities. For the first method, it was deriving pseudo-phenotypes for genotyped animals including contributions from nongenotyped animals and weighting factors to model the residual heterogeneity due to the information contribution from nongenotype animals. For the second method, the complexities that arose were (1) the need for inverting a non-diagonal (i.e., with nonzero off-diagonal elements) matrix: The inverted matrix is dense, which increases the multiplication cost by other matrices and vector \textbf{y}; and (2) back-solving solutions for nongenotyped animals from those of genotyped animals. This is likely due to the lack of full conditionality between the breeding values of genotyped animals and those of nongenotyped animals.
+
+
+
+	Unless a breakthrough, any advancement may introduce additional complexities. With any limitation lifted, other limitations could kick in. This is especially true for strict systems with limited boundaries, such as algebraic models. Pushing the boundaries of partitioned matrices, sparse matrices often become dense. The trade-off between the gains \& lifted costs/complexities and the newly introduced costs/complexities defines the applicability of the new method. In this study, both the size of the equation system and the costs of additional steps matter. Where possible, it is important to avoid direct matrix inversion and dense matrices. For example, there are direct ways of obtaining $\textbf{A}^{-1}$ (Henderson, 1975b) and $\textbf{H}^{-1}$ (Aguilar et al., 2010; Christensen \& Lund, 2010) without forming \textbf{A} and \textbf{H}. However, addition of any matrix to \textbf{A} and \textbf{H} precludes the direct derivations of $\textbf{A}^{-1}$ and $\textbf{H}^{-1}$. Finally, in method development, it is essential not only to make correct assumptions, but also to optimally use the method's inherent flexibility. Otherwise, the legacy or conventional approach may prove to be the better choice.
+
+
+
+	\section{Acknowledgements}
+
+
+
+	This work received joint financial support from LIC (Hamilton, New Zealand) and the New Zealand Ministry for Primary Industries, a Sustainable Food and Fibre Futures (SFFF) Programme: Resilient Dairy--Innovative Breeding for a Sustainable Dairy Future [grant number: PGP06-17006]. Interesting discussions with Dr. A. Legarra (CDCB, Maryland, USA) are acknowledged.
+
+
+
+	\section{References}
+
+
+
+	Aguilar, I., Misztal, I., Johnson, D. L., Legarra, A., Tsuruta, S., \& Lawlor, T. J. (2010). Hot topic: A unified approach to utilize phenotypic, full pedigree, and genomic information for genetic evaluation of Holstein final score. \emph{Journal of Dairy Science}, \emph{93}(2), 743--752. https://doi.org/10.3168/jds.2009-2730
+
+
+
+	Bermann, M., Lourenco, D., Forneris, N. S., Legarra, A., \& Misztal, I. (2022). On the equivalence between marker effect models and breeding value models and direct genomic values with the Algorithm for Proven and Young. \emph{Genetics Selection Evolution}, \emph{54}(1), Article 52. https://doi.org/10.1186/s12711-022-00741-7
+
+
+
+	Christensen, O. F., \& Lund, M. S. (2010). Genomic prediction when some animals are not genotyped. \emph{Genetics Selection Evolution}, \emph{42}(1), Article 2. https://doi.org/10.1186/1297-9686-42-2
+
+
+
+	Guinan, F. L., Wiggans, G. R., Norman, H. D., Dürr, J. W., Cole, J. B., Van Tassell, C. P., Misztal, I., \& Lourenco, D. (2023). Changes in genetic trends in US dairy cattle since the implementation of genomic selection. \emph{Journal of Dairy Science}, \emph{106}(2), 1110--1129. https://doi.org/10.3168/jds.2022-22205
+
+
+
+	Henderson, C. R. (1975a). Best linear unbiased estimation and prediction under a selection model. \emph{Biometrics}, \emph{31}(2), 423--447. https://doi.org/10.2307/2529430
+
+
+
+	Henderson, C. R. (1975b). Rapid method for computing the inverse of a relationship matrix. \emph{Journal of Dairy Science}, \emph{58}(11), 1727--1730. https://doi.org/10.3168/jds.S0022-0302(75)84776-X
+
+
+
+	Legarra, A., Aguilar, I., \& Misztal, I. (2009). A relationship matrix including full pedigree and genomic information. \emph{Journal of Dairy Science}, \emph{92}(9), 4656--4663. https://doi.org/10.3168/jds.2009-2061
+
+
+
+	Luan, T., Nordbø, Ø., Andersen-Ranberg, I., \& Meuwissen, T. H. E. (2023). Multi-trait genomic prediction in pigs using single and multistep methods based on the absorption of ungenotyped animals. \emph{Journal of Animal Breeding and Genetics}, \emph{140}(5), 473--484. https://doi.org/10.1111/jbg.12772
+
+
+
+	Misztal, I., Legarra, A., \& Aguilar, I. (2014). Using recursion to compute the inverse of the genomic relationship matrix. \emph{Journal of Dairy Science}, \emph{97}(6), 3943--3952. https://doi.org/10.3168/jds.2013-7752
+
+
+
+	Nilforooshan, M. A. (2023). Extension of the reduced animal model to single-step methods. \emph{Journal of Animal Science}, \emph{101}, skac272. https://doi.org/10.1093/jas/skac272
+
+
+
+	Nilforooshan, M. A. (2024a). \emph{Code \& data -- A GBLUP to produce ssGBLUP solutions for genotyped animals} [Data set]. Figshare. https://doi.org/10.6084/m9.figshare.28502144.v2
+
+
+
+	Nilforooshan, M. A. (2024b). Short communication: Reduced GBLUP equations to core animals in the algorithm for proven and young (APY). \emph{Veterinary and Animal Science}, \emph{23}, Article 100334. https://doi.org/10.1016/j.vas.2024.100334
+
+
+
+	Nilforooshan, M. A., \& Garrick, D. (2021). Reduced animal models fitting only equations for phenotyped animals. \emph{Frontiers in Genetics}, \emph{12}, Article 637626. https://doi.org/10.3389/fgene.2021.637626
+
+
+
+	Patry, C., \& Ducrocq, V. (2011). Evidence of biases in genetic evaluations due to genomic preselection in dairy cattle. \emph{Journal of Dairy Science}, \emph{94}(2), 1011--1020. https://doi.org/10.3168/jds.2010-3804
+
+
+
+	Quaas, R. L., \& Pollak, E. J. (1980). Mixed model methodology for farm and ranch beef cattle testing programs. \emph{Journal of Animal Science}, \emph{51}(6), 1277--1287. https://doi.org/10.2527/jas1981.5161277x
+
+
+
+	Robinson, G. K. (1991). That BLUP is a good thing: The estimation of random effects. \emph{Statistical Science}, \emph{6}(1), 15--32. https://doi.org/10.1214/ss/1177011926
+
+
+
+	VanRaden, P. M. (2008). Efficient methods to compute genomic predictions. \emph{Journal of Dairy Science}, \emph{91}(11), 4414--4423. https://doi.org/10.3168/jds.2007-0980
+
+
+\end{document}
