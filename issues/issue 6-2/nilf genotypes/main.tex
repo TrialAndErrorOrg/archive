@@ -1,4 +1,4 @@
-\documentclass[authordate, editorial]{jote-new-article}
+\documentclass[authordate, empirical]{jote-new-article}
 
 \usepackage{caption}
 
@@ -11,7 +11,7 @@
 \usepackage[backend=biber,style=apa]{biblatex}
 
 
-\jotetitle{Technical Note A GBLUP to produce ssGBLUP solutions for genotyped animals}
+\jotetitle{Technical Note: A GBLUP to Produce ssGBLUP Solutions for Genotyped Animals}
 \keywordsabstract{equivalent model, GBLUP, reduced model, ssGBLUP}
 \abstracttext{Nowadays, single-step genomic best linear unbiased prediction (ssGBLUP) is the most popular methodology for livestock genetic evaluation. It simultaneously evaluates genotyped and nongenotyped animals using an augmented genotype and pedigree relationship matrix. In most livestock species, a small proportion of the population is genotyped. A small model limited to genotyped animals (genomic best linear unbiased prediction, GBLUP) incorporating information from nongenotyped animals would be of interest, because it reduces the dimension of equations and computational costs and produces solutions equivalent to ssGBLUP. Two methods are considered in this study. First, genotyped animals, whether phenotyped or nonphenotyped, receive phenotype contributions from their nongenotyped relatives. Calculating those pseudo-phenotypes and weights for the introduced residual heterogeneity is challenging. The second method involves absorbing equations of nongenotyped animals into the equations of genotyped animals. The solutions from the resulting GBLUP model were equivalent to those of the full ssGBLUP model. However, two main reasons prevent the introduced GBLUP model from being adopted and widely implemented. First, such implementation enforces (pedigree-based) additive genetic covariances among nongenotyped animals into their residual covariance matrix. That introduces nonzero off-diagonal elements to the diagonal residual covariance matrix for nongenotyped animals, making its inversion cumbersome. Also, the inverted matrix is dense, increasing the multiplication costs to other matrices and the vector of phenotypes. Second, the breeding values of nongenotyped animals ($\textbf{a}_1$) are not conditional to those of genotyped animals ($\textbf{a}_2$), making back-solving of $\textbf{a}_1$ from $\textbf{a}_2$ challenging.}
 \runningauthor{Nilforooshan}
@@ -20,11 +20,12 @@
 \paperdoi{10.36850/429a-ac1d}
 \paperreceived{March 2, 2025}
 \author[1]{\mbox{Mohammad Ali Nilforooshan\orcid{0000-0003-0339-5442}}}
-\affil[1]{Scientist}
+\affil[1]{Livestock Improvement Corporation, Hamilton, New Zealand}
 \corremail{\href{mailto:mohammad.nilforooshan@lic.co.nz}{mohammad.nilforooshan@lic.co.nz}}
-\corraddress{Scientist}
-\runningauthor{Nilforooshan}
+\corraddress{Livestock Improvement Corporation}
 \paperaccepted{March 30, 2026}
+\paperpublished{May 9, 2026}
+\paperpublisheddate{2025-05-9}
 \jwebsite{https://journal.trialanderror.org}
 
 
@@ -65,14 +66,17 @@
 
 
 
-	\begin{equation}
+	\begin{equation*}
 		\begin{cases}
-		\textbf{y}_1-\textbf{X}_1\textbf{B}+\textbf{Z}_1\textbf{a}_1+\textbf{e}_1\\
-		\textbf{y}_2-\textbf{X}_2\textbf{B}+\textbf{Z}_2\textbf{a}_2+\textbf{e}_2
+		\textbf{y}_1-\textbf{X}_1\textbf{b}+\textbf{Z}_1\textbf{a}_1+\textbf{e}_1\\
+		\textbf{y}_2-\textbf{X}_2\textbf{b}+\textbf{Z}_2\textbf{a}_2+\textbf{e}_2
 		\end{cases}
-	\end{equation}
+	\end{equation*}
 
-
+\vspace{-1.5\baselineskip}
+\begin{center}
+		(1)
+	\end{center}
 
 	where \textbf{y}, \textbf{b}, \textbf{a}, and \textbf{e} are respectively the vectors of phenotypes, fixed effects, animal's additive genetic effect (genetic merit), and residuals. Matrices \textbf{X} and \textbf{Z} relate fixed effects and random animal additive genetic effects to phenotypes. Conventionally, and in this article, matrices are denoted by bold capital letters, and vectors by bold lowercase letters.
 
@@ -82,14 +86,17 @@
 
 
 
-	\begin{equation}
+	\begin{equation*}
     \begin{split}
         \text{Method 1: }&(\textbf{y}_2+\textbf{δ}_2 )=\textbf{X}_2 \textbf{b}+\textbf{Z}_2 \textbf{a}_2+\textbf{e}_2,\\
         \text{Method 2: }&\textbf{y}_2=\textbf{X}_2 \textbf{b}+\textbf{Z}_2 \textbf{a}_2+(\textbf{e}_2-\textbf{δ}_2 ),
     \end{split}
-\end{equation}
+\end{equation*}
 
-
+\vspace{-1.5\baselineskip}
+\begin{center}
+		(2)
+	\end{center}
 
 	where $\textbf{δ}_2$ is the vector of contributions from nongenotyped animals to genotyped animals (equal to \textbf{0} (vector of 0s) for GBLUP).
 
@@ -137,7 +144,7 @@
 
 
 
-	\begin{equation}
+	\begin{equation*}
 		\begin{bmatrix}
 		\textbf{X}^T \textbf{R}^{-1} \textbf{X}&\textbf{X}^T \textbf{R}^{-1} \textbf{Z}\\\textbf{Z}^T \textbf{R}^{-1} \textbf{X}&\textbf{Z}^T \textbf{R}^{-1} \textbf{Z}+\textbf{H}^{-1} \sigma_a^{-2}
 		\end{bmatrix}
@@ -146,14 +153,17 @@
 		\end{bmatrix}=
 		\begin{bmatrix}\textbf{X}^T \textbf{R}^{-1} \textbf{y}\\\textbf{Z}^T \textbf{R}^{-1} \textbf{y}
 		\end{bmatrix}
-	\end{equation}
+	\end{equation*}
+
+\vspace{-1.5\baselineskip}
+\begin{center}
+		(3)
+	\end{center}
+
+	\noindent and the MME of GBLUP is:
 
 
-
-	and the MME of GBLUP is:
-
-
-	\begin{equation}
+	\begin{equation*}
 		\begin{bmatrix}
 		\textbf{X}_2^T \textbf{R}^{22} \textbf{X}_2&\textbf{X}_2^T \textbf{R}^{22} \textbf{Z}_2\\\textbf{Z}_2^T \textbf{R}^{22} \textbf{X}_2&\textbf{Z}_2^T \textbf{R}^{22} \textbf{Z}_2+\textbf{G}^{-1} \sigma_a^{-2}
 		\end{bmatrix}
@@ -162,25 +172,33 @@
 		\end{bmatrix}=
 		\begin{bmatrix}\textbf{X}_2^T \textbf{R}^{22} \textbf{y}_2\\\textbf{Z}_2^T \textbf{R}^{22} \textbf{y}_2
 		\end{bmatrix}
-	\end{equation}
+	\end{equation*}
+	\vspace{-1.5\baselineskip}
+\begin{center}
+		(4)
+	\end{center}
 
 
 
-	where $\textbf{y}=\begin{bmatrix}
+	\noindent where $\textbf{y}=\begin{bmatrix}
 			\textbf{y}_1\\\textbf{y}_2
 		\end{bmatrix}$, $\textbf{X}=\begin{bmatrix}
 			\textbf{X}_1\\\textbf{X}_2
 		\end{bmatrix}$, $\textbf{Z}=\begin{bmatrix}
 			\textbf{Z}_1&\textbf{0}\\\textbf{0}&\textbf{Z}_2
-		\end{bmatrix}$, $\textbf{R}^{-1}=\textbf{I}\sigma_e^{-2}=\begin{bmatrix}
+		\end{bmatrix}$, 
+		
+		\noindent$\textbf{R}^{-1}=\textbf{I}\sigma_e^{-2}=\begin{bmatrix}
 			\textbf{R}^{11}&\textbf{0}\\\textbf{0}&\textbf{R}^{22}
 		\end{bmatrix}$, and $\textbf{\^{a}}=\begin{bmatrix}
-			\textbf{\^{a}}_1\\\textbf{\^{a}}_1
-		\end{bmatrix}$ the vector of \textbf{a} solutions. A GBLUP with incorporated contributions from nongenotyped animals can be written as:
+			\textbf{\^{a}}_1\\\textbf{\^{a}}_2
+		\end{bmatrix}$
+		
+		\noindent the vector of \textbf{a} solutions. A GBLUP with incorporated contributions from nongenotyped animals can be written as:
 
 
 
-	\begin{equation}
+	\begin{equation*}
 		\begin{bmatrix}
 		\textbf{X}^T \mathbb{R}^{-1} \textbf{X}&\textbf{X}^T \mathbb{R}^{-1} \textbf{W}\\\textbf{W}^T \mathbb{R}^{-1} \textbf{X}&\textbf{W}^T \mathbb{R}^{-1} \textbf{W}+\textbf{G}^{-1} \sigma_a^{-2}
 		\end{bmatrix}
@@ -189,11 +207,15 @@
 		\end{bmatrix}=
 		\begin{bmatrix}\textbf{X}^T \mathbb{R}^{-1} \textbf{y}\\\textbf{W}^T \mathbb{R}^{-1} \textbf{y}
 		\end{bmatrix}
-	\end{equation}
+	\end{equation*}
 
+	\vspace{-1.5\baselineskip}
+\begin{center}
+		(5)
+	\end{center}
+where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, 
 
-
-where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, $\mathbb{R}^{-1}=\begin{bmatrix}\mathbb{R}^{11}&\textbf{0}\\\textbf{0}&\textbf{R}^{22}\end{bmatrix}=\begin{bmatrix}\mathbb{R}_{11}^{-1}&\textbf{0}\\\textbf{0}&\textbf{R}_{22}^{-1}\end{bmatrix}$, and $\mathbb{R}_{11}=\textbf{R}_{11}+\textbf{D}_{11}\sigma_a^2$. Note that rows of $\textbf{W}$ and $\mathbb{R}^{-1}$ should be reordered to correspond to $\textbf{y}$. In a reduced BLUP, $\textbf{D}_{11}$ is a block (corresponding to nongenotyped phenotyped animals) of the diagonal matrix $\textbf{D}$ in $\textbf{A}=\textbf{TDT}^T$ (Quaas \& Pollak, 1980). Here, in the equivalent GBLUP, $\textbf{D}_{11}^{-1}$ corresponds to a block of $\textbf{H}^{11}=\textbf{A}^{11}$ corresponding to nongenotyped phenotyped animals. Matrix $\textbf{Z}_1^*$ transfers information from nongenotyped phenotyped animals to genotyped animals. As such, it has rows corresponding to nongenotyped phenotyped animals and columns corresponding to genotyped animals. Matrix $\textbf{Z}_1^*$ contains rows of $\textbf{H}_{12} \textbf{G}^{-1}$ corresponding to nongenotyped phenotyped animals, where $\textbf{H}_{12}=\textbf{A}_{12} \textbf{A}_{22}^{-1} \textbf{G}=-(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{G}$ (Legarra et al., 2009), $\textbf{A}=\begin{bmatrix}\textbf{A}_{11}&\textbf{A}_{12}\\\textbf{A}_{21}&\textbf{A}_{22}\end{bmatrix}$ is the pedigree-based genetic relationship matrix, and $A^{-1}=\begin{bmatrix}\textbf{A}^{11}&\textbf{A}^{12}\\\textbf{A}^{21}&\textbf{A}^{22}\end{bmatrix}$.
+\noindent$\mathbb{R}^{-1}=\begin{bmatrix}\mathbb{R}^{11}&\textbf{0}\\\textbf{0}&\textbf{R}^{22}\end{bmatrix}=\begin{bmatrix}\mathbb{R}_{11}^{-1}&\textbf{0}\\\textbf{0}&\textbf{R}_{22}^{-1}\end{bmatrix}$, and $\mathbb{R}_{11}=\textbf{R}_{11}+\textbf{D}_{11}\sigma_a^2$. Note that rows of $\textbf{W}$ and $\mathbb{R}^{-1}$ should be reordered to correspond to $\textbf{y}$. In a reduced BLUP, $\textbf{D}_{11}$ is a block (corresponding to nongenotyped phenotyped animals) of the diagonal matrix $\textbf{D}$ in $\textbf{A}=\textbf{TDT}^T$ (Quaas \& Pollak, 1980). Here, in the equivalent GBLUP, $\textbf{D}_{11}^{-1}$ corresponds to a block of $\textbf{H}^{11}=\textbf{A}^{11}$ corresponding to nongenotyped phenotyped animals. Matrix $\textbf{Z}_1^*$ transfers information from nongenotyped phenotyped animals to genotyped animals. As such, it has rows corresponding to nongenotyped phenotyped animals and columns corresponding to genotyped animals. Matrix $\textbf{Z}_1^*$ contains rows of $\textbf{H}_{12} \textbf{G}^{-1}$ corresponding to nongenotyped phenotyped animals, where $\textbf{H}_{12}=\textbf{A}_{12} \textbf{A}_{22}^{-1} \textbf{G}=-(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{G}$ (Legarra et al., 2009), $\textbf{A}=\begin{bmatrix}\textbf{A}_{11}&\textbf{A}_{12}\\\textbf{A}_{21}&\textbf{A}_{22}\end{bmatrix}$ is the pedigree-based genetic relationship matrix, and $\textbf{A}^{-1}=\begin{bmatrix}\textbf{A}^{11}&\textbf{A}^{12}\\\textbf{A}^{21}&\textbf{A}^{22}\end{bmatrix}$.
 
 
 
@@ -204,13 +226,18 @@ where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, $\m
 	Followed by solving the GBLUP equation system, solutions for nongenotyped animals ($\textbf{\^{a}}_1$) are back-solved from the solutions of genotyped animals $\textbf{\^{a}}_2$ (equation adopted from Nilforooshan (2024b) and modified to the context of this study):
 
 
-\begin{equation}
+\begin{equation*}
 \begin{gathered}
 		\textbf{\^{a}}_1=\textbf{B}(\textbf{y}_1-\textbf{X}_1 \textbf{\^{b}}+(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{\^{a}}_2 )-(\textbf{A}^{11} )^{-1} \textbf{A}^{12} \textbf{\^{a}}_2,\\\textbf{B}=(\textbf{R}^{11}+\textbf{D}^{11} \sigma_a^{-2} )^{-1} \textbf{R}^{11}.
 \end{gathered}
-\end{equation}
+\end{equation*}
 
-	\section{Discussions}
+\vspace{-2\baselineskip}
+\begin{center}
+		(6)
+	\end{center}
+
+	\section{Discussion}
 
 
 
@@ -222,7 +249,7 @@ where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, $\m
 
 
 
-	Deriving pseudo-phenotypes and matrix $\textbf{K}$ are challenging. Also, ideally, $\textbf{\^{b}}$ in $\textbf{\^{y}}_1=\textbf{y}_1-\textbf{X}_1 \textbf{\^{b}}$ should come from ssGBLUP, which is unavailable. However, given enough observations, especially from nongenotyped animals, fixed effect solutions can remain stable between BLUP and ssGBLUP. As such, $\textbf{\^{b}}$ might be obtained from BLUP.
+	Deriving pseudo-phenotypes and matrix $\textbf{K}$ is challenging. Also, ideally, $\textbf{\^{b}}$ in $\textbf{\^{y}}_1=\textbf{y}_1-\textbf{X}_1 \textbf{\^{b}}$ should come from ssGBLUP, which is unavailable. However, given enough observations, especially from nongenotyped animals, fixed effect solutions can remain stable between BLUP and ssGBLUP. As such, $\textbf{\^{b}}$ might be obtained from BLUP.
 
 
 
@@ -264,11 +291,11 @@ where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, $\m
 
 
 
-	This study is an example of scientific trial and error. Theoretically correct methods were presented to reduce the dimension of an equation system including genotyped and nongendered animals to an equation system including genotyped animals. With genotyped animals being a small proportion of the entire population (including ancestors in the pedigree), it is an achievement to reduce the computational demands for solving the equation system. A previous attempt (Luan et al., 2023) was based on incorrect assumptions, and it did not produce identical solutions to the full model. In this study, the solutions from the reduced model were identical to those from the full model (dataset Nilforooshan, 2024b). However, the shrinkage of the equation system introduced other complexities. For the first method, it was deriving pseudo-phenotypes for genotyped animals including contributions from nongenotyped animals and weighting factors to model the residual heterogeneity due to the information contribution from nongenotype animals. For the second method, the complexities that arose were (1) the need for inverting a non-diagonal (i.e., with nonzero off-diagonal elements) matrix: The inverted matrix is dense, which increases the multiplication cost by other matrices and vector \textbf{y}; and (2) back-solving solutions for nongenotyped animals from those of genotyped animals. This is likely due to the lack of full conditionality between the breeding values of genotyped animals and those of nongenotyped animals.
+	This study is an example of scientific trial and error. Theoretically correct methods were presented to reduce the dimension of an equation system including genotyped and nongendered animals to an equation system including genotyped animals. With genotyped animals being a small proportion of the entire population (including ancestors in the pedigree), it is an achievement to reduce the computational demands for solving the equation system. A previous attempt (Luan et al., 2023) was based on incorrect assumptions, and it did not produce identical solutions to the full model. In this study, the solutions from the reduced model were identical to those from the full model (Nilforooshan, 2024a). However, the shrinkage of the equation system introduced other complexities. For the first method, it was deriving pseudo-phenotypes for genotyped animals including contributions from nongenotyped animals and weighting factors to model the residual heterogeneity due to the information contribution from nongenotype animals. For the second method, the complexities that arose were (1) the need for inverting a non-diagonal (i.e., with nonzero off-diagonal elements) matrix: The inverted matrix is dense, which increases the multiplication cost by other matrices and vector \textbf{y}; and (2) back-solving solutions for nongenotyped animals from those of genotyped animals. This is likely due to the lack of full conditionality between the breeding values of genotyped animals and those of nongenotyped animals.
 
 
 
-	Unless a breakthrough, any advancement may introduce additional complexities. With any limitation lifted, other limitations could kick in. This is especially true for strict systems with limited boundaries, such as algebraic models. Pushing the boundaries of partitioned matrices, sparse matrices often become dense. The trade-off between the gains \& lifted costs/complexities and the newly introduced costs/complexities defines the applicability of the new method. In this study, both the size of the equation system and the costs of additional steps matter. Where possible, it is important to avoid direct matrix inversion and dense matrices. For example, there are direct ways of obtaining $\textbf{A}^{-1}$ (Henderson, 1975b) and $\textbf{H}^{-1}$ (Aguilar et al., 2010; Christensen \& Lund, 2010) without forming \textbf{A} and \textbf{H}. However, addition of any matrix to \textbf{A} and \textbf{H} precludes the direct derivations of $\textbf{A}^{-1}$ and $\textbf{H}^{-1}$. Finally, in method development, it is essential not only to make correct assumptions, but also to optimally use the method's inherent flexibility. Otherwise, the legacy or conventional approach may prove to be the better choice.
+	Without a breakthrough, any advancement may introduce additional complexities. With any limitation lifted, other limitations could kick in. This is especially true for strict systems with limited boundaries, such as algebraic models. Pushing the boundaries of partitioned matrices, sparse matrices often become dense. The trade-off between the gains \& lifted costs/complexities and the newly introduced costs/complexities defines the applicability of the new method. In this study, both the size of the equation system and the costs of additional steps matter. Where possible, it is important to avoid direct matrix inversion and dense matrices. For example, there are direct ways of obtaining $\textbf{A}^{-1}$ (Henderson, 1975b) and $\textbf{H}^{-1}$ (Aguilar et al., 2010; Christensen \& Lund, 2010) without forming \textbf{A} and \textbf{H}. However, addition of any matrix to \textbf{A} and \textbf{H} precludes the direct derivations of $\textbf{A}^{-1}$ and $\textbf{H}^{-1}$. Finally, in method development, it is essential not only to make correct assumptions, but also to optimally use the method's inherent flexibility. Otherwise, the legacy or conventional approach may prove to be the better choice.
 
 
 
@@ -276,7 +303,7 @@ where $\textbf{W}=\begin{bmatrix}\textbf{Z}_1^*\\\textbf{Z}_2\end{bmatrix}$, $\m
 
 
 
-	This work received joint financial support from LIC (Hamilton, New Zealand) and the New Zealand Ministry for Primary Industries, a Sustainable Food and Fibre Futures (SFFF) Programme: Resilient Dairy--Innovative Breeding for a Sustainable Dairy Future [grant number: PGP06-17006]. Interesting discussions with Dr. A. Legarra (CDCB, Maryland, USA) are acknowledged.
+	This work received joint financial support from Livestock Improvement Corporation (Hamilton, New Zealand) and the New Zealand Ministry for Primary Industries, a Sustainable Food and Fibre Futures (SFFF) Programme: Resilient Dairy--Innovative Breeding for a Sustainable Dairy Future [grant number: PGP06-17006]. Interesting discussions with Dr. A. Legarra (CDCB, Maryland, USA) are acknowledged.
 
 
 
