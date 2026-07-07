@@ -1,0 +1,995 @@
+\documentclass[author-date, editorial]{jote-new-article}
+
+\usepackage{caption}
+
+\usepackage{tabularx}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+
+\addbibresource{bibliography.bib}
+
+\jotetitle{Persuasion in Scientific Journal Articles:: Exploring Persuasiveness and Informativeness among Authors and Readers}
+\keywordsabstract{meta-research, Persuasion, Bias, Scholarly Communication, QRPs}
+\abstracttext{Scientific communication is often assumed to prioritize objectivity, yet persuasive strategies may subtly distort research interpretation. While the spread of errors in research is often attributed to methodological or statistical biases (Świątkowski and Dompnier, 2017), rhetorical strategies are less often considered as questionable research practices although they can be (Corneille et al., 2023).
+This study empirically investigates how authors and external readers perceive persuasiveness across different sections of scientific articles (Abstract, Introduction, Methods, Results, Discussion). Using a mixed-methods approach, we surveyed 15 authors of selected articles and 42 external researchers, asking them to rate paragraphs on persuasiveness and informativeness. No significant differences emerged between authors’ and readers’ perceptions (two-tailed t-tests), perhaps suggesting a shared awareness of persuasive strategies. However, significant section-based differences were observed: Abstracts and Introductions were rated as more persuasive than Methods, while Discussions were perceived as more persuasive than Results and Methods (p &lt; 0.05).
+Participants also evaluated whether specific devices (e.g., spin, selective reporting, overgeneralization) constituted attempts to persuade. Six of the nine devices were identified as persuasive by over 80% of respondents ("Yes" or "Sometimes"). These findings, along with the overlap between persuasion devices and questionable research practice, raise critical questions about its ethical implications for research reliability and transparency.}
+\runningauthor{Bajraktari et al.}
+\jname{Journal of Trial \& Error}
+\jyear{2026}
+\paperdoi{10.36850/b364-4157}
+\paperreceived{December 1, 2025}
+\author[1]{\mbox{Rrita Bajraktari\orcid{0009-0001-1725-5902}}}
+\affil[1]{Université libre de Bruxelles}
+\corremail{\href{mailto:rrita.bajraktari@ulb.be}{rrita.bajraktari@ulb.be}}
+\corraddress{Université libre de Bruxelles}
+\runningauthor{Bajraktari& Munafò}
+\author[2]{\mbox{Marcus Munafò}
+\affil[2]{University of Bath}
+\paperaccepted{June 6, 2026}
+\jwebsite{https://journal.trialanderror.org}
+
+
+
+\begin{document}
+\begin{frontmatter}
+  \maketitle
+  \begin{abstract}
+    \printabstracttext
+  \end{abstract}
+\end{frontmatter}
+
+
+	\section{\textbf{Persuasion in Scientific Journal Articles:}}
+
+
+
+	\section{\textbf{Exploring Persuasiveness and Informativeness among Authors and Readers}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Rrita Bajraktari \textsuperscript{1, 2, 3 }\& Marcus Munafò \textsuperscript{3,4}
+
+
+
+
+
+	\begin{enumerate}
+
+
+		\item Center for Social and Cultural Psychology, Université libre de Bruxelles, Belgium
+
+
+
+		\item Fonds de la Recherche Scientifique, Belgium
+
+
+
+		\item University of Bristol, England
+
+
+
+		\item University of Bath, England
+
+
+	\end{enumerate}
+
+
+
+
+
+	\section{\textbf{Correspondence}}
+
+
+
+	Université libre de Bruxelles: \href{mailto:rrita.bajraktari@ulb.be}{rrita.bajraktari@ulb.be}
+
+
+
+	\section{\textbf{Open Science Statement}}
+
+
+
+	For all studies, material, data and analyses are openly available on the Open Science Framework repository of the project: \href{https://osf.io/wtqy3}{https://osf.io/wtqy3}. Data and figures are available under the terms of the CC-BY Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) (\href{https://creativecommons.org/licenses/by-nc/4.0/}{https://creativecommons.org/licenses/by-nc/4.0/}).
+
+
+
+	\section{\textbf{Ethics statement}}
+
+
+
+	The survey was approved by the University of Bristol's School of Psychological Science Review Ethics Committee (Ethic approval: 18487, approved 06/05/2024).
+
+
+
+	\section{\textbf{Acknowledgements}}
+
+
+
+	We sincerely thank Andrea Bertazzoli, Andrea E. van Langerak, and Serge P. J. M. Horbach for their thoughtful and detailed reviews. Their feedback has substantially improved the manuscript's clarity and methodological rigor. Moreover, we thank the journal editor, Stefan Gaillard, as well as Temitope Kolapo and Alex Visser for their valuable assistance with copyediting. Finally, we are also deeply grateful to all the researchers who generously dedicated their time to participate in this study.
+
+
+
+	\section{\textbf{CRediT}}
+
+
+
+	Rrita Bajraktari: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Project administration, Resources, Software, Visualization, Writing -- original draft, Writing -- review \& editing
+
+
+
+	Marcus Munafò: Conceptualization, Methodology, Project administration, Supervision, Writing -- review \& editing
+
+
+
+
+
+
+
+
+
+
+
+	\section{\textbf{Take-Home Message}}
+
+
+
+	This is the first empirical study specifically on persuasion in research articles. Our analysis of authors' own article sections revealed no differences between their perceptions of persuasiveness and those of external researchers, but persuasiveness was unevenly distributed across these sections. Participants' opinions on the use of persuasion showed substantial disagreement about its acceptability, likely reflecting broader debates within the scientific community. Most importantly, the overlap between the persuasive devices we presented and questionable research practices invites reflection on their role in scientific writing.
+
+
+
+
+
+
+
+
+
+
+
+	\section{Abstract}
+
+
+
+	Scientific communication is often assumed to prioritize objectivity, yet persuasive strategies may subtly distort research interpretation. While the spread of errors in research is often attributed to methodological or statistical biases (Świątkowski \& Dompnier, 2017), rhetorical strategies are less often considered questionable research practices, although they can be (Corneille et al., 2023).
+
+
+
+	This study empirically investigates how authors and external readers perceive persuasiveness across different sections of scientific articles (Abstract, Introduction, Methods, Results, Discussion). Using a mixed-methods approach, we surveyed 15 authors of selected articles and 42 external researchers, asking them to rate paragraphs on persuasiveness and informativeness. No significant differences emerged between authors' and readers' perceptions (two-tailed \emph{t}-tests), perhaps suggesting a shared awareness of persuasive strategies. However, significant section-based differences were observed: Abstracts and Introductions were rated as more persuasive than Methods, whereas Discussions were perceived as more persuasive than Results and Methods sections (\emph{p} < .05).
+
+
+
+	Participants also evaluated whether specific devices (e.g., spin, selective reporting, overgeneralization) constituted attempts to persuade. Six of the nine devices were identified as persuasive by over 80\% of respondents (“Yes” or “Sometimes”). These findings, along with the overlap between persuasive devices and questionable research practices, raise questions about their ethical implications for research reliability and transparency.
+
+
+
+	\emph{Keywords}: meta-research, persuasion, research articles, scholarly communication, QRPs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\section{Introduction}
+
+
+
+	Scientific research articles are not merely neutral reports of facts; they are narratives—rhetorical constructs shaped by disciplinary norms (Dontcheva-Navrátilová, 2018), cultural contexts (Latour, 1987), and social expectations (Hyland, 2008). Within these constraints, researchers retain a certain degree of freedom, for instance in how they frame their claims (Scheel, 2022) or how they present their findings (Boutron \& Ravaud, 2018; Grolleau et al., 2019). These degrees of freedom allow for flexibility and strategies such as strategic ambiguity (Frankenhuis et al., 2023). It is within this rhetorical space that the present study is situated, aiming to better understand whether and how persuasion is used as a narrative device in scientific research articles.
+
+
+
+	The degrees of freedom available to researchers in the presentation of their work have been widely discussed as a source of questionable research practices (QRPs). These procedures threaten the credibility of scientific findings by exploiting flexibility in the design, conduct, analysis, or reporting of research (Świątkowski \& Dompnier, 2017). Recent taxonomies list more than 40 QRPs found across nearly every stage of the research process (Nagy et al., 2025), many of which involve how results are framed or communicated (e.g., selective reporting, mischaracterizing the state of the art, or overgeneralization). Interestingly, several of these practices overlap with what has been described as persuasive communication devices, such as hype, ambiguity, and inappropriate extrapolation (Corneille et al., 2023). Yet, while QRPs are typically studied as methodological biases, the persuasive intent underlying these rhetorical choices has received far less attention. The present study therefore shifts the focus from procedural misconduct to persuasion as an intention in scientific writing that may lead to QRPs.
+
+
+
+	While persuading readers of the validity, relevance, or significance of one's findings may be considered an inherent—and even necessary—part of scientific communication, it is essential to distinguish persuasion from merely providing information. Persuasion is not defined uniformly across disciplines; rather, it is a multidimensional concept shaped by context and intention. Halmari and Virtanen (2005) describe persuasion as an intentional and strategic use of language aimed at modifying or reinforcing the beliefs of an audience. In communication studies, more than 20 definitions exist (Gass \& Seiter, 2004), highlighting its conceptual breadth. In argumentation theory, Perelman and Olbrechts-Tyteca (1991) distinguish between persuasion, which targets a specific audience, and conviction, which appeals to a universal audience. Within academic discourse, Hyland (1998) defines successful persuasion as the acceptance of new claims by the scholarly community. Although these definitions differ in emphasis—process, audience, or outcomes—they converge on viewing persuasion as an intentional act aimed at influencing how information is received and understood. We therefore adopted an operational distinction between informing and persuading:
+
+
+
+	To inform is to provide a balanced, clear, and complete account of what is known, what was done, what was found, etc. Persuasion, by contrast, involves selective use of material, or selective interpretation, in order to convince a reader of a particular argument or position. Taken to extremes, whether intentionally or not, this can create the impression of stronger evidence than is justified. 
+
+
+
+	This definition does not assume that persuasion is inherently appropriate or inappropriate in scientific writing; rather, it allows us to empirically investigate how researchers perceive such communicative strategies when they appear in scientific articles.
+
+
+
+	In this study, we empirically examined how persuasiveness and informativeness are perceived across different sections of scientific articles. Because scientific communication involves the production, transmission, and reception of knowledge, we compared the perceptions of authors evaluating their own work with those of external researchers unfamiliar with the material. While academic literature has identified several rhetorical devices that may influence interpretation—such as ambiguity, hype, or spin (Jankowski et al., 2021)—findings in this area remain inconsistent, with some recent non-significant results (e.g., van Hoesel \& Bakker, 2026). Moreover, no empirical studies have specifically investigated persuasion in scientific writing. Whether these devices are recognized by researchers as persuasive strategies, and whether they are viewed as legitimate communicative tools or as problematic threats to epistemic transparency, remains unassessed.
+
+
+
+	We explored four empirical questions, with no prespecified hypotheses. First, do authors and external readers differ in their baseline evaluations of persuasiveness and informativeness when assessing articles they did not write? Second, do authors evaluate their own articles differently than external readers? Third, does perceived persuasiveness vary across sections of a research article, with the discussion section being judged as more persuasive than other sections? Fourth, and finally, which rhetorical devices are identified as persuasive by researchers, and to what extent are these devices judged to be acceptable in scientific writing? By exploring these questions, we aim to achieve a better understanding of the phenomenon of persuasion in research articles.
+
+
+
+	\section{Method}
+
+
+
+	The study was preregistered on the Open Science Framework (OSF) prior to data extraction and analysis (see preregistration at \href{https://doi.org/10.17605/OSF.IO/6BQS9}{https://doi.org/10.17605/OSF.IO/6BQS9}). Data collection took place from November 22, 2024, to January 21, 2025.\footnote{ In the preregistration document (submitted on November 21, 2024), the first author inadvertently misstated the study's end date as January 20, 2024, instead of January 20, 2025. This was a typographical error, as the study could not have concluded before its launch. No deviations from the preregistered protocol occurred.}
+
+
+
+	\subsection{Study Design}
+
+
+
+	To examine perceptions of persuasiveness and informativeness in scientific research articles, we designed a two-part study using the Qualtrics survey platform (\href{https://www.qualtrics.com/}{https://www.qualtrics.com/}). The complete study design is illustrated in Figure 1. Part 1 was structured in two distinct phases. Phase 1 served as a negative control: All participants evaluated article sections without prior exposure to the full text, and none were authors of the assigned articles. The aim of this phase was to verify that participants in each group did not differ intrinsically. Phase 2 then focused on comparative ratings, assessing differences between article authors and external readers who had not previously read the articles. Part 2 of the study aimed to assess all participants' opinions on the use of persuasion in scientific research articles. The following subsections detail the methodology for each part of the study.
+
+
+
+	\section{\textbf{Figure 1}}
+
+
+
+	Study Design
+
+
+
+
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image1.png}
+
+		\caption{}
+
+		\label{fig:rId13}
+
+
+	\end{figure}
+
+
+
+	\subsubsection{Participants and Recruitment}
+
+
+
+	Two distinct groups of participants were recruited for this study.
+
+
+
+	\textbf{Author Group.} The first group consisted of 23 researchers who had previously co-authored a research article with the supervisor of this study (Munafò). Although this recruitment strategy introduced biases (see Limitations), it ensured a higher response rate. The participants came from four articles co-authored with the supervisor: two in psychology (Field et al., 2024; Reed et al., 2023), one in meta-research (TARG Meta-Research Group \& Collaborators, 2023), and one in public health (Khouja et al., 2024). This interdisciplinary approach reflects the nature of Munafò's research network. Authors were invited to participate via personalized email.
+
+
+
+	\textbf{Reader Group.} The second group comprised external readers who met two key criteria: (1) being a researcher in a psychology-related field (self-declared), and (2) not having read all of the articles from either Phase 1 or Phase 2. This criterion ensured readers' familiarity with writing norms in empirical research involving human participants, aligning with the study's material. Participants who had read all the articles were excluded, and those familiar with only some were reassigned to unfamiliar articles. Recruitment for this group was carried out through online platforms, personal networks, and targeted social media advertisements.
+
+
+
+	\subsection{Part 1: Comparative Ratings}
+
+
+
+	\subsubsection{Materials}
+
+
+
+	In Part 1, to investigate differences between authors and readers in their perceptions of persuasiveness and informativeness, we selected a total of six research articles using two key criteria: participant recruitment feasibility and minimization of prior exposure. The material for Phase 1 consisted of these two articles: Gillespie et al. (2022) and Jackson et al. (2024). They were selected for their thematic similarity and their relatively recent publication years (2022 and 2024) to reduce the probability that readers had already encountered them. The intention was to minimize potential biases related to pre-existing familiarity with the content.
+
+
+
+	For Phase 2 material, as mentioned in the participants and recruitment section, we prioritized articles previously co-authored by the supervisor of this study (Munafò). This decision led to the following material: Field et al. (2024), Khouja et al. (2024), Reed et al. (2023), or TARG Meta-Research Group \& Collaborators (2023). For full article titles and DOIs, see Supplementary Material, Table 1.
+
+
+
+	To ensure that participants could evaluate the persuasiveness and informativeness of each article section without requiring full contextual knowledge and to maintain feasibility given time constraints, we provided them with the full Abstract and only one selected paragraph from each of the following sections: Introduction, Methods, Results, and Discussion. The chosen paragraphs were selected based on their self-contained nature, meaning each could be understood independently, without needing the entirety of the section. These were mostly introductory paragraphs. This approach allowed us to balance methodological rigor with practical considerations, ensuring that the evaluation process remained both meaningful and manageable for participants. Each paragraph selected for each section is available on OSF (see “Material\_Part1\_Phase1\_Articles\_1\_and\_2.pdf” and “Material\_Part1\_Phase2\_Articles\_1\_to\_4.pdf”).
+
+
+
+	\subsubsection{Procedure }
+
+
+
+	Eligible participants first answered a series of demographic questions before proceeding with the main survey (each part of the survey is available on OSF). Prior to beginning, participants were provided with the operationalized definitions of informing and persuading, as presented in the Introduction section. After reading these definitions, each participant was randomly assigned to one of the two articles from Phase 1 (see Figure 2).
+
+
+
+	\section{\textbf{Figure 2}}
+
+
+
+	Assignment Design Phases 1 and 2 from Part 1
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image2.png}
+
+		\caption{}
+
+		\label{fig:rId14}
+
+
+	\end{figure}
+
+
+
+	Participants were then asked to read and rate the five paragraphs we selected from their assigned article. Ratings were provided on a 7-point scale for both persuasiveness and informativeness. A single attention check was embedded among the five paragraphs to ensure participants read the content carefully. The attention check had the same format, but the text instructed participants not to respond to this question (see “Material\_Part1\_Phase1\_Articles\_1\_and\_2” on OSF).
+
+
+
+	Phase 2 followed a procedure similar to Phase 1, with one key difference: Authors were not randomly assigned to an article (see Figure 2). Instead, they were asked to read and rate the article on which they were listed as an author or co-author. Before beginning, all participants were again provided with the definitions of persuasiveness and informativeness. Participants then read and rated each paragraph of the assigned article. Authors were instructed to base their ratings on their original intentions when writing the article, whereas readers rated their perception of the author's intended persuasiveness and informativeness. Phase 2 also included an attention check.
+
+
+
+	\subsection{Part 2: Researchers' Perceptions}
+
+
+
+	\subsubsection{Materials}
+
+
+
+	This second Part utilized two sets of items designed to assess researchers' perceptions of persuasive strategies. The first set comprised nine specific persuasive devices selected from existing literature (e.g., Corneille et al., 2023). Selection was based on feasibility within a survey format. Consequently, complex structural practices such as “open research washing” or “honorary authorship” were excluded, as they require contextual knowledge beyond isolated text evaluation. The retained devices were presented with their operational definitions (Table 1).
+
+
+
+	\section{\textbf{Table 1}}
+
+
+
+	Persuasive Devices Used in Scholarly Communication
+
+	\begin{table}
+		\begin{tabularx}{\linewidth}{@{} l l l l l l l l l l @{}}
+			\hline Persuasive Devices and their definition & Reference \\
+
+			\hline \textbf{Utility-centered framing: }Strong emphasis on usefulness and accessibility.
+			& Pelclová & Lu (2018) \\
+
+			 \textbf{Spin:} When the effect in the study is presented as greater than shown by the results.
+			& Lazarus et al. (2015)Chiu et al., 2017 \\
+
+			 \textbf{Selective Reporting: }Deliberately disclosing only certain results from scientific research, often to suppress negative or undesirable findings, thereby presenting a biased view of the study's outcomes.
+			& Qureshi et al. (2024) \\
+
+			 \textbf{Overgeneralization}: Generalizing results beyond the population studied without evidence to support such claims.
+			& Corneille et al. (2023) \\
+
+			 \textbf{Misleading interpretation: }Presenting research findings in a way that distorts their true meaning, leading readers to draw incorrect or unjustified conclusions.
+			& Qureshi et al. (2024) \\
+
+			 \textbf{Inappropriate extrapolation:} Results and conclusions are extrapolated to another population, intervention, outcome, or setting than were assessed in the study.
+			& Yavchitz et al. (2016)Qureshi et al. (2024) \\
+
+			 \textbf{Hype:} Using adjectives such as striking, important, remarkable, and so on without justification.
+			& Corneille et al. (2023) \\
+
+			 \textbf{Cryptic writing:} Writing in a way intended to make an article unnecessarily difficult for readers to understand in order to impress them and prevent a fair assessment of the work being reported.
+			& Corneille et al. (2023) \\
+
+			 \textbf{Ambiguity:} Using words which suggest more than what the study delivered.
+			& Corneille et al. (2023) \\
+
+
+		\end{tabularx}
+	\end{table}
+
+
+
+
+
+	The second set of materials consisted of ten propositions to evaluate the normative status of persuasion. Participants rated the statement “Persuasion is…” against the following descriptors: “Unethical,” “Necessary to be published,” “Required by journal editors,” “Required by peer reviewers,” “Required by my supervisor,” “Done consciously,” “Done unconsciously,” “A common practice in the scientific articles I read,” “Acceptable,” and “Something I use in my scientific articles.”
+
+
+
+	\subsubsection{Procedure }
+
+
+
+	After completion of Part 1, all participants (i.e., authors and readers) proceeded to Part 2, which comprised two sets of items. First, participants evaluated the eight selected persuasive devices. For each device, they responded to the following question: “If you were reading a research article and encountered these elements, would you consider them as an attempt to persuade the reader?” Responses were recorded on a four-point categorical scale: “Yes,” “Sometimes,” “No,” or “I don't know.”
+
+
+
+	Subsequently, participants addressed the second set of items. After reviewing the operational definition of informing and persuading provided in Part 1, they evaluated their perceptions of persuasion in research articles. Participants responded to the statement “Persuasion is…” for each of the 10 propositions on a five-point categorical scale: “Never”, “Sometimes”, “Most of the time”, “Always” and “I don't know”.
+
+
+
+	\subsection{Sample Size and Power Analysis}
+
+
+
+	The following sample size considerations and recruitment strategies were specified in our preregistration. For our primary research question—comparing authors' and readers' ratings of persuasiveness and informativeness—we aimed to recruit the 23 invited authors and 23 readers (matched 1:1). This target was based on an a priori power analysis conducted using the pwr package in R (Champely, 2020). The analysis indicated that a sample of N = 23 per group would provide approximately 76\% power (0.76) to detect a between-groups difference of d = 0.8 at an alpha level of 0.05. To maximize statistical power for secondary analyses, we planned to over-recruit readers.
+
+
+
+	\section{Results}
+
+
+
+	All statistical analyses were conducted using R (version 4.4.2; R Core Team, 2024) within the RStudio environment (version 2025.09.0+387; Posit Software, PBC, 2025). The scripts used for these analyses are available in the Supplementary Material on the Open Science Framework (\href{https://osf.io/wtqy3}{https://osf.io/wtqy3}).
+
+
+
+	A total of 15 of the 23 invited authors completed the survey. In the reader group, 43 participants were recruited. This discrepancy between the preregistered and actual sample sizes is discussed in the Limitations section. One participant from the reader group failed the attention check and was excluded from the analysis, as preregistered. However, we were unable to apply the preregistered exclusion criterion based on response time outliers due to limitations in Qualtrics' timing functionality. The response timer started upon link access rather than active participation. The raw timing data, anonymized, are nevertheless available on OSF for transparency (see “data\_persuasion\_timing.csv” in the descriptive\_info file). Therefore, the final sample included 57 participants (15 authors and 42 readers).
+
+
+
+	\subsection{Part 1: Comparative Ratings}
+
+
+
+	\subsubsection{Preregistered Exploratory Analysis}
+
+
+
+	\textbf{Negative Control. }As preregistered, we first verified that the two groups did not differ in the negative control condition (Phase 1). Shapiro--Wilk tests indicated that persuasiveness (authors: \emph{W} = 0.95, \emph{p} = .58; readers: \emph{W} = 0.97, \emph{p} = .32) and informativeness ratings (authors: \emph{W} = 0.94, \emph{p} = .43; readers: \emph{W} = 0.96, \emph{p} = .16) were approximately normally distributed, meeting assumptions for parametric testing.
+
+
+
+	In the negative control condition, independent samples \emph{t}-tests with Welch's correction revealed no significant differences between authors and readers in their ratings of persuasiveness or informativeness. For persuasiveness, authors (\emph{M} = 2.95, \emph{SD} = 0.83) and readers (\emph{M} = 3.13, \emph{SD} = 0.96) provided comparable ratings, with a mean difference of -0.18, 95\% CI [-0.71, 0.35], \emph{p} = .49. Similarly, informativeness ratings did not differ between authors (\emph{M} = 4.87, \emph{SD} = 1.05) and readers (\emph{M} = 4.91, \emph{SD} = 1.04), with a mean difference of -0.04, 95\% CI [-0.69, 0.61], \emph{p }= .89.
+
+
+
+	\textbf{Groups Rating Comparison.} Shapiro--Wilk tests indicated that persuasiveness ratings were approximately normally distributed in both groups (authors: \emph{W} = 0.95, \emph{p} = .50; readers: \emph{W} = 0.97, \emph{p} = .26), as well as informativeness ratings (authors: \emph{W} = 0.92, \emph{p} = .20; readers: \emph{W} = 0.98, \emph{p} = .65), meeting assumptions for parametric testing in both cases.
+
+
+
+	An independent samples \emph{t}-test with Welch's correction was conducted to compare authors' and readers' ratings of articles written by the first group. No significant difference was found in persuasiveness ratings between authors (\emph{M} = 3.37, \emph{SD} = 1.17) and readers (\emph{M} = 3.02, \emph{SD} = 1.04), with a mean difference of 0.35, 95\% CI [-0.36, 1.06], \emph{p }= .318. Similarly, informativeness ratings did not differ significantly between authors (\emph{M} = 5.08, \emph{SD} = 0.99) and readers (\emph{M} = 4.61, \emph{SD} = 1.61), with a mean difference of 0.47, 95\% CI [-0.17, 1.10], \emph{p} = .146.
+
+
+
+	\textbf{Ratings of Persuasion by Section. }A repeated-measures ANOVA was conducted to examine the effect of article section (Abstract, Introduction, Methods, Results, and Discussion) on persuasiveness ratings (see Figure 3). Respondent was included as a random effect to account for individual variability. The results indicated a statistically significant main effect of section, \emph{F}(4, 224) = 25.25, \emph{p} < .001.
+
+
+
+
+
+
+
+	\section{\textbf{Figure 3}}
+
+
+
+	Persuasiveness Perceived by Research Article Sections
+
+
+
+	\begin{figure}[\includegraphics{}]
+
+
+
+	\end{figure}
+
+	***
+
+
+
+	***
+
+
+
+	***
+
+
+
+	***
+
+
+
+	***
+
+
+
+	*
+
+
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image3.png}
+
+		\caption{}
+
+		\label{fig:rId16}
+
+
+	\end{figure}
+
+
+
+	\emph{Note: }The contrasts were estimated using a linear model with Bonferroni adjustment for multiple comparisons. The \emph{p}-values indicate the significance of the differences between section pairs. The significance codes indicate the level of statistical significance: *** = \emph{p} < .001.
+
+
+
+	\subsubsection{Non-Preregistered Exploratory Analysis}
+
+
+
+	The following analyses were not part of the preregistered plan and should be interpreted as additional exploratory analyses. Pairwise comparisons of estimated marginal means (with Bonferroni correction for multiple testing) were conducted to examine differences in persuasiveness ratings across article sections (see Table 2). The comparison between the Abstract and Methods was significant (estimate = 1.16, \emph{SE} = 0.16, \emph{t}(509) = 7.19, \emph{p} < .001), as were the comparisons between the Abstract and Discussion (estimate = --0.46, \emph{SE} = 0.16, \emph{t}(509) = --2.89, \emph{p} = .041), Introduction and Methods (estimate = 1.23, \emph{SE} = 0.16, \emph{t}(509) = 7.62, \emph{p} < .001), Methods and Results (estimate = --0.82, \emph{SE} = 0.16,\emph{ t}(509) = --5.12, \emph{p} < .001), Methods and Discussion (estimate = --1.62, \emph{SE} = 0.16, \emph{t}(509) = --10.08, \emph{p} < .001), and Results and Discussion (estimate = --0.80, \emph{SE} = 0.16, \emph{t}(509) = --4.96, \emph{p} < .001). Other comparisons were not statistically significant after correction (all \emph{p} ≥ .126). See Figure 3 for an illustration of the sections' ratings.
+
+
+
+	\section{\textbf{Table 2}}
+
+
+
+	Estimated Differences Between Sections with Bonferroni Adjustment
+
+	\begin{table}
+		\begin{tabularx}{\linewidth}{@{} l l l l l l l l l l l @{}}
+			 Contrast & Estimate & \emph{SE} &  \emph{df } & \emph{t}-ratio & \emph{p}
+			\\
+
+			\hline Abstract - Introduction & -0.07 & 0.16 & 509 & -0.44 & 1.000 \\
+
+			 Abstract - Methods & 1.16 & 0.16 & 509 & 7.19 & < .001*** \\
+
+			 Abstract - Results & 0.33 & 0.16 & 509 & 2.07 & 0.390 \\
+
+			 Abstract - Discussion & -0.46 & 0.16 & 509 & -2.89 & 0.041 \\
+
+			 Introduction - Methods & 1.23 & 0.16 & 509 & 7.62 & < .001*** \\
+
+			 Introduction - Results & 0.40 & 0.16 & 509 & 2.51 & 0.126 \\
+
+			 Introduction - Discussion & -0.39 & 0.16 & 509 & -2.45 & 0.146 \\
+
+			 Methods - Results & -0.82 & 0.16 & 509 & -5.12 & < .001*** \\
+
+			 Methods - Discussion & -1.62 & 0.16 & 509 & -10.08 & < .001*** \\
+
+			 Results - Discussion & -0.80 & 0.16 & 509 & -4.96 & < .001*** \\
+
+
+		\end{tabularx}
+	\end{table}
+
+	\emph{Note: }The contrasts were estimated using a linear model with Bonferroni adjustment for multiple comparisons. Results are averaged over the levels of participants persuasiveness ratings by sections. The \emph{p}-values indicate the significance of the differences between section pairs. \emph{SE} = Standard Error, \emph{df} = degrees of freedom.
+
+
+
+	\subsection{Part 2: Researchers' Perceptions}
+
+
+
+	\subsubsection{Preregistered Exploratory Analysis}
+
+
+
+	\textbf{Ratings of Persuasive Devices. }Participants' ratings of whether specific rhetorical devices (Q1) were perceived as persuasive varied across device types. A total of 57 participants answered this question. A chi-square test of independence indicated a significant association between rhetorical device and response category, χ²(16) = 112.68, \emph{p} < .001.
+
+
+
+	Participants' responses to the Q1 items are illustrated in Figure 4. For Question 1, more than 70\% of participants answered “Yes”, when asked whether encountering “spin,” “selective reporting,” “overgeneralization,” “misleading interpretation,” “inappropriate extrapolation,” or “hype” in a research article was an attempt to persuade the reader. However, “utility-centered framing” was considered differently by participants (25\% “Yes,” 44\% “Sometimes,” 26\% “No,” and 5\% “I don't know”), as was “cryptic writing” (42\% “Yes,” 35\% “Sometimes,” 19\% “No,” and 4\% “I don't know”).
+
+
+
+	\section{\textbf{Figure 4}}
+
+
+
+	Perception of Persuasive Intent for Each Proposed Rhetorical Device
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image4.png}
+
+		\caption{}
+
+		\label{fig:rId17}
+
+
+	\end{figure}\emph{Note: }The definitions of the devices were presented to the participants below each item and are listed in Table 1.
+
+
+
+	\subsubsection{Descriptive Results}
+
+
+
+	\textbf{Perception of Persuasion. }Participants' responses to the Q2 items are displayed in Figure 5. The propositions related to incentives (i.e., “Required by peer reviewers,” “Required by my supervisor,” “Required by journal editors,” and “Necessary to be published”) were answered as “Sometimes” by almost half of the respondents (47\%, 46\%, 44\%, and 42\%, respectively). Items related to the intention of persuasion (i.e., “Done consciously” and “Done unconsciously”) were mostly selected as “Sometimes” (65\% and 70\%, respectively).
+
+
+
+	\section{\textbf{Figure 5}}
+
+
+
+	Participants' Perceptions of What Persuasion Is, Based on the Proposed Items
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image5.png}
+
+		\caption{}
+
+		\label{fig:rId18}
+
+
+	\end{figure}\emph{Note: }Responses are shown as percentages of participants selecting each response option. The total number of participants was \emph{N} = 57.
+
+
+
+	The distribution of responses to the “Acceptable” and “Unethical” items revealed nuanced opinions. For the “Acceptable” item, 56\% of participants selected “Sometimes,” 26\% “Never,” 7\% “Most of the time,” and 3\% “I don't know.” Similarly, for the “Unethical” item, 60\% chose “Sometimes,” 33\% “Most of the time,” and 7\% “Always.” Notably, 39\% of participants (\emph{n }= 22) selected “Sometimes” for both items (see Figure 6 for an illustration of all response combinations to these items).
+
+
+
+	\section{\textbf{Figure 6}}
+
+
+
+	Response Combinations to “Unethical” and “Acceptable” Items
+
+
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{media/image6.png}
+
+		\caption{}
+
+		\label{fig:rId19}
+
+
+	\end{figure}
+
+
+
+	\emph{Note: }This figure presents a cross-tabulation of participant responses to the “Unethical” and “Acceptable” items (\emph{N} = 57). Each line connects a response to the “Unethical” item with a response to the “Acceptable” item, illustrating the combination of answers for a given subset of participants. The values labeled above each line (e.g., \emph{n} = 22) indicate the number of participants who selected that specific combination of responses.
+
+
+
+
+
+
+
+
+
+
+
+	\section{Original Purpose}
+
+
+
+	Scientific writing affords authors considerable degrees of freedom in how they present their work. While methodological degrees of freedom have been extensively linked to questionable research practices (QRPs), the potential impact of writing degrees of freedom has received far less attention. We originally aimed to adopt an exploratory approach and investigate whether this freedom could introduce persuasive elements into scientific articles and whether such persuasion should be considered problematic.
+
+
+
+	Rather than testing predefined hypotheses, we adopted an exploratory approach to investigate how these writing choices manifest in scientific articles and how they are perceived by authors and external readers. Specifically, we sought to examine four questions: First, do authors and external readers differ in their baseline evaluations of persuasiveness and informativeness when assessing articles they did not write? Do authors evaluate their own articles differently than external readers? Does perceived persuasiveness vary across sections of a research article, with the Discussion section being judged as more persuasive than other sections? And finally, which rhetorical devices are identified as persuasive by researchers, and to what extent are these devices judged to be acceptable in scientific writing?
+
+
+
+	To investigate these questions, we designed a mixed-methods survey divided into two parts. In the first part, each participant evaluated two research articles, enabling a comparison of authors' and readers' ratings of persuasiveness across five sections of each article. In the second part, all participants assessed nine commonly discussed persuasive devices and rated their agreement with ten specific statements regarding the presence and acceptability of persuasion in scientific writing.
+
+
+
+	\section{Discussion}
+
+
+
+	\subsection{Part 1: Comparative Ratings}
+
+
+
+	\subsubsection{Differences Between Authors and External Readers}
+
+
+
+	The absence of significant differences between authors and external readers in their ratings of persuasiveness and informativeness could reflect a shared perception of persuasive norms within the scientific community. On the 7-point scale, the difference between authors and readers was less than one point, suggesting that any potential difference was modest at best. This pattern was observed in both phases of Part 1. While we cannot rule out the possibility of a small effect, these results could suggest that personal involvement in the article does not seem to substantially influence perceived persuasiveness or informativeness.
+
+
+
+	The alignment in ratings could mean that authors recognize persuasive strategies in their own work—whether consciously employed or simply acknowledged upon reflection. Contrary to the assumption that authors might be less critical of their own persuasive strategies due to personal involvement, this similarity in evaluations may indicate that they are, in fact, as aware of these elements as external readers. However, this interpretation remains speculative without additional evidence (e.g., qualitative data on authors' intentions or self-reported awareness).
+
+
+
+	\subsubsection{Section Differences}
+
+
+
+	The present study revealed a rather small but significant variation in perceived persuasiveness across the selected paragraphs from different article sections. This pattern underscores the idea that persuasion in scientific writing is not random but rather functionally tied to the rhetorical goals of each section.
+
+
+
+	The paragraph from the Methods section was rated as the least persuasive, a finding consistent with its descriptive and procedural function. In contrast, the Abstract, Introduction, and Discussion were rated as more persuasive, likely for different reasons. The Abstract, as a condensed narrative of the study's contribution and impact, inherently lends itself to persuasive framing. Its brevity and role in communicating the study's significance could make it a prime location for rhetorical strategies such as spin, hype, or overgeneralization. This observation aligns with findings by Boutron et al. (2014) in clinical literature.
+
+
+
+	The paragraph from the Introduction, despite its function of reviewing the literature, emerged as another section particularly prone to persuasive devices. Corneille et al. (2023) reported that 11 of the 22 persuasive devices they examined typically occur in the Introduction, including ignoring previous work, one-sided citations, selective quotation, hype, misleading use of references, and omissions of contradictory evidence. These strategies may serve to shape the reader's perception of the research gap or justify the study's necessity, influencing how literature is framed.
+
+
+
+	The paragraph from the Discussion section received the highest persuasiveness ratings, reflecting its role as the space where authors exercise the greatest interpretative latitude. Here, generalizations, speculations, and emphasis on the study's contributions are not only common but expected. The prevalence of persuasive strategies in this section is thus unsurprising, given its rhetorical function.
+
+
+
+	Interestingly, the paragraph from the Results section was perceived as more persuasive than the Methods section. This suggests that participants may perceive the presentation of empirical findings as open to strategic framing, even in sections traditionally viewed as fact-driven. Such perceptions could reflect concerns about selective reporting—where the choice of which results to emphasize (or omit) can subtly shape the narrative. This finding reinforces the idea that persuasion in scientific writing is not confined to overt interpretive commentary but can also emerge from how empirical evidence is framed, ordered, or prioritized.
+
+
+
+	\subsection{Part 2: Researchers' Perceptions}
+
+
+
+	Finally, in the first set of questions of Part 2, we explored how different devices are considered persuasive regarding our definition. In the second set, we explored how persuasion is perceived in terms of its acceptability in scientific discourse.
+
+
+
+	\subsubsection{Persuasive Devices}
+
+
+
+	For the first set of questions, the results revealed broad agreement among participants regarding certain devices we proposed. “Misleading interpretation,” “selective reporting,” “inappropriate extrapolation,” “overgeneralization,” “hype,” and “spin” were overwhelmingly recognized as attempts to persuade based on the definition provided to participants. Strikingly, many of these devices overlap with questionable research practices (QRPs), as classified in the taxonomy proposed by Nagy et al. (2025). It is also important to note that devices such as “overgeneralization” and “spin” have already been identified in research articles (see Sumner et al., 2014, for overgeneralization; Lazarus et al., 2016, for spin). Thus, the boundary between these persuasive devices and ethically problematic practices appears blurred, raising questions about the legitimacy of certain rhetorical strategies in scientific communication.
+
+
+
+	In contrast, devices such as utility-centered framing, ambiguity, and cryptic writing elicited substantially more diverse responses. We believe this divergence likely reflects differences in how researchers interpret the intentionality behind such devices. Given the phrasing of our question (i.e., “If you were reading a research article and encountered these elements, would you consider them an attempt to persuade the reader?”), some participants may have considered that cryptic writing or ambiguity are not persuasive devices but failed attempts to communicate clearly. However, our interpretation should be investigated further to understand this divergence, for example, by asking qualitative follow-up questions to understand participants' reasoning.
+
+
+
+	These findings challenge some views on persuasion by revealing their potential overlap with questionable research practices (QRPs). The fact that devices like misleading interpretation, selective reporting, and spin were overwhelmingly recognized as persuasive attempts blurs the boundary between legitimate rhetorical strategies and ethically problematic behaviors. In our view, the overlap of these devices with QRPs (Nagy et al., 2025) raises critical questions about the ethical legitimacy of persuasion itself in scientific writing: If persuasive devices cannot be clearly distinguished from QRPs, their use may undermine the integrity of scientific communication.
+
+
+
+	\subsubsection{Views on Persuasion}
+
+
+
+	The last part of this study investigates the opinion of researchers on persuasion in research articles, and we consider that it raises concerns about its desirability. Participants were asked to evaluate a series of statements framed by the definition we provided, beginning with “Persuasion is…”.
+
+
+
+	When asked whether they encounter persuasion in the articles they read, almost all participants responded affirmatively (46\% “Most of the time,” 40\% “Sometimes”). Similarly, when questioned about their own use of persuasion in research articles, the vast majority admitted employing it (65\% “Sometimes,” 11\% “Most of the time”). These results strongly suggest that persuasion, as we defined it, is a component of scientific communication. Moreover, although our definition included the phrase “intentionally or not,” these self-reported answers most probably imply that persuasion is often deliberate. Participants' answers to items regarding conscious or unconscious processes were, however, more nuanced.
+
+
+
+	\textbf{External Incentives.} Our findings indicate that 70\% of participants consider persuasion to be “Sometimes” or “Most of the time” necessary for publication. This perception is consistent across two specific items: “Required by journal editors” and “Required by peer reviewers.” These results align with existing research on publication pressures, which are recognized as pervasive across all stages of academic careers (Haven et al., 2019).
+
+
+
+	The pressure to publish is a well-documented feature of research culture (Maggio et al., 2019; Tijdink et al., 2014; van Dalen \& Henkens, 2012). According to participants, journal editors and peer reviewers play a central role in the publication process by acting as external sources of pressure that promote persuasive writing strategies.
+
+
+
+	Moreover, our results are consistent with previous studies highlighting how external pressures can shape scientific writing. For example, research on spin (Lazarus et al., 2016) has shown that journal expectations and peer review processes can encourage authors to emphasize the novelty or significance of their findings. Such strategies may blur the line between informing and persuading.
+
+
+
+	\textbf{Acceptability of Persuasion in Research Articles}. Our findings suggest that persuasiveness, as defined in this study, is an integral part of research articles. It seems to be often employed consciously and influenced by external incentives such as publication pressures and editorial requirements. Turning to the ethical and acceptability dimensions of these practices, we introduced two contrasting items: “Unethical” and “Acceptable.” The results revealed a complex pattern of opinions: 59\% of participants responded “Sometimes” when asked whether persuasion is unethical, while 56\% selected “Sometimes” for acceptability. Notably, 39\% of participants (\emph{n} = 22) chose “Sometimes” for both items (see Figure 6), suggesting that a substantial proportion of researchers may perceive the ethical and acceptable use of persuasion as context dependent. This pattern could also reflect an implicit recognition of persuasion as a continuum—ranging from subtle, acceptable rhetorical strategies to more aggressive or manipulative practices—rather than a binary (ethical/unethical) judgment. Thus, the “Sometimes” responses could indicate that participants distinguish between levels of persuasiveness, deeming mild forms acceptable in certain contexts while rejecting more pronounced or manipulative approaches. Nonetheless, opinions were not uniform. Ethical views were notably polarized: Around 41\% of participants considered persuasion to be “Unethical” (Always or Most of the time), whereas 26\% deemed it “Never” acceptable. This divergence highlights a polarized perspective within the scientific community: Some researchers adopt a relativist stance, potentially evaluating persuasion based on context or degree, while others hold absolutist views, categorically rejecting its use as unethical or unacceptable.
+
+
+
+	\subsection{Limitations}
+
+
+
+	Several limitations should be acknowledged when interpreting the present findings.
+
+
+
+	First, the statistical design presented some issues. The study included a relatively small sample size (\emph{N }= 57), which reduces statistical power and may limit the generalizability of the observed effects. Our preregistered target sample size (\emph{N} = 23 per group) assumed a 100\% response rate from invited co-authors, an assumption that proved unrealistic due to logistical constraints (e.g., co-author availability, competing priorities). The final author sample (\emph{N} = 15) thus limited statistical power, particularly for detecting small effects. Additionally, in Part 1, multiple participants evaluated the same articles, introducing dependencies between ratings. This violates the independence assumption of parametric tests. While our analyses did not account for these dependencies, we acknowledge that this may have influenced standard error estimates. Future studies could use mixed-effects models (e.g., with random intercepts for authors/articles) to address this limitation.
+
+
+
+	Second, the study relied on a restricted definition of persuasion tailored to the research objectives. While this operationalization allowed us to systematically assess specific rhetorical devices, other scholars have conceptualized persuasion differently (e.g., as a spectrum from normative argumentation to manipulative framing). These alternative definitions may capture additional nuances that were not covered in the present study. Moreover, our selection of nine persuasive devices—drawn from a broader literature that includes frameworks such as the 22 devices proposed by Corneille et al. (2023)—reflects deliberate methodological choices. As mentioned in the Method section, some devices were excluded because they could not be meaningfully evaluated by participants within the constraints of our survey format. While this selection enabled an initial analysis, it also limits the generalizability of our findings to the full range of potential persuasive strategies documented in the literature. Future research could explore a wider range of persuasive devices, including those requiring contextual or longitudinal analysis, and use qualitative methods (e.g., interviews) to examine how researchers distinguish legitimate rhetorical strategies from ethically problematic practices, as well as the influence of contextual factors (e.g., disciplinary norms).
+
+
+
+	Third, although our definition of persuasion did not assume its (in)appropriateness, the survey design may have introduced a bias: Participants first evaluated persuasive devices before assessing the ethics of persuasion. This sequence could have skewed responses toward more negative perceptions. Future studies might address this by counterbalancing question order and including a broader range of persuasive strategies, from ethically neutral to problematic, to better distinguish concerns specific to QRPs from general attitudes toward persuasion.
+
+
+
+	Finally, the ecological validity of our study is limited by factors related to both the material and the participants. First, due to pragmatic constraints, the selected articles were drawn from a narrow disciplinary context (i.e., psychology, meta-research, and health sciences). These specific disciplines may not fully represent the diversity of articles across these fields and others. Moreover, participants evaluated only excerpts rather than full articles. While this approach was necessary to reduce survey duration and participant burden, the fragmented presentation of content could influence perceptions of persuasion. The absence of contextual cues might alter how readers interpret and weigh rhetorical strategies. Second, to ensure high participation rates in the author condition, we recruited participants from a pool of former co-authors of Munafò. This recruitment strategy may introduce biases related to shared writing norms, similar disciplinary backgrounds, or the tendency for participants to respond in a manner they perceive as socially acceptable or favorable to the researcher (i.e., social desirability bias). Future research should address these limitations by including larger, multidisciplinary samples and using designs with a higher ecological validity (e.g., full-text evaluations or longitudinal studies) to assess variability in persuasive practices across fields and contexts.
+
+
+
+	\section{Conclusion}
+
+
+
+	This study provides an exploratory analysis of how persuasiveness is perceived, distributed, and evaluated in scientific writing. Aligning with our original purpose, we examined whether authors and external readers differ in their perceptions of persuasiveness across article sections. Our findings reveal largely similar perceptions between authors and readers, perhaps suggesting that authors may be consciously aware of the rhetorical strategies in their own work. This alignment within our study challenges the assumption that authors are biased and systematically under- or overestimate the persuasive component of their writing.
+
+
+
+	We also tested the variations of persuasiveness across articles sections. The Discussion section was perceived as the most persuasive, while the Methods section was the least. This could mean that persuasion is linked to the rhetorical function of each section.
+
+
+
+	In Part 2, participants evaluated nine persuasive devices identified in the literature. Six of these devices (e.g., misleading interpretation, selective reporting, hype) were overwhelmingly recognized as persuasive, many of which overlap with questionable research practices (QRPs). In our view, this reinforces a key concern from our original purpose: While persuasion may serve legitimate communicative aims, its proximity to QRPs introduces ethical and epistemic risks.
+
+
+
+	Finally, participants expressed substantial disagreement regarding the acceptability of persuasion. Some viewed it as unethical, while others considered it context or degree dependent. Our results also suggest that persuasion may be shaped not only by conscious choices but also by external incentives, such as publication pressures.
+
+
+
+	Reflecting on our initial aims, these findings highlight that writing degrees of freedom indeed carry persuasive implications across different sections of research articles—yet their acceptability remains contested. The lack of consensus on persuasion's ethical boundaries underscores the need for further investigation and deeper reflection within the scientific community. Moving forward, the scientific community should critically examine the role of persuasion in research writing, balancing its communicative value against the risks of distortion. We hope this article will launch reflections and discussions about what persuasion is and whether it should be part of scientific research articles.
+
+
+
+	\section{References}
+
+
+
+	Boutron, I., Altman, D. G., Hopewell, S., Vera-Badillo, F., Tannock, I., \& Ravaud, P. (2014). Impact of spin in the abstracts of articles reporting results of randomized controlled trials in the field of cancer: The SPIIN randomized controlled trial. \emph{Journal of Clinical Oncology, 32}(36), 4120--4126. https://doi.org/10.1200/JCO.2014.56.7503
+
+
+
+	Boutron, I., \& Ravaud, P. (2018). Misrepresentation and distortion of research in biomedical literature. \emph{Proceedings of the National Academy of Sciences, 115}(11), 2613--2619. https://doi.org/10.1073/pnas.1710755115
+
+
+
+	Champely, S. (2020). pwr: Basic functions for power analysis (Version 1.3-0) [code package]. https://cran.r-project.org/web/packages/pwr/index.html
+
+
+
+	Chiu, K., Grundy, Q., \& Bero, L. (2017). ‘Spin' in published biomedical literature: A methodological systematic review. \emph{PLOS Biology, 15}(9), Article e2002173. https://doi.org/10.1371/journal.pbio.2002173
+
+
+
+	Corneille, O., Havemann, J., Henderson, E. L., IJzerman, H., Hussey, I., Orban De Xivry, J.-J., Jussim, L., Holmes, N. P., Pilacinski, A., Beffara, B., Carroll, H., Outa, N. O., Lush, P., \& Lotter, L. D. (2023). Beware ‘persuasive communication devices' when writing and reading scientific articles. \emph{eLife}, \emph{12}, Article e88654. https://doi.org/10.7554/eLife.88654
+
+
+
+	Dontcheva-Navrátilová, O. (2018). Persuasion in academic discourse: Cross-cultural variation in Anglophone and Czech academic book reviews. In J. Pelclová \& W. Lu (Eds), \emph{Discourse approaches to politics, society and culture} (Vol. 79, pp. 227--258). John Benjamins Publishing Company. https://doi.org/10.1075/dapsac.79.11don
+
+
+
+	Field, S. M., Thompson, J., De Rijcke, S., Penders, B., \& Munafò, M. R. (2024). Exploring the dimensions of responsible research systems and cultures: A scoping review. \emph{Royal Society Open Science, 11}(1), Article 230624. https://doi.org/10.1098/rsos.230624
+
+
+
+	Frankenhuis, W. E., Panchanathan, K., \& Smaldino, P. E. (2023). Strategic ambiguity in the social sciences. \emph{Social Psychological Bulletin}, \emph{18}, Article e9923. https://doi.org/10.32872/spb.9923
+
+
+
+	Gass, R. H., \& Seiter, J. S. (2004). Theorizing about persuasion: Cornerstones of persuasion research. In J. S. Seiter \& R. H. Gass (Eds.), \emph{Perspectives on persuasion, social influence, and compliance gaining} (pp. 45--64). Pearson.
+
+
+
+	Gillespie, A. L., Wigg, C., Van Assche, I., Murphy, S. E., \& Harmer, C. J. (2022). Associations between statin use and negative affective bias during COVID-19: An observational, longitudinal UK study investigating depression vulnerability. \emph{Biological Psychiatry, 92}(7), 543--551. https://doi.org/10.1016/j.biopsych.2022.03.009
+
+
+
+	Grolleau, F., Collins, G. S., Smarandache, A., Pirracchio, R., Gakuba, C., Boutron, I., Busse, J. W., Devereaux, P. J., \& Le Manach, Y. (2019). The fragility and reliability of conclusions of anesthesia and critical care randomized trials with statistically significant findings: A systematic review*. \emph{Critical Care Medicine, 47}(3), 456--462. https://doi.org/10.1097/CCM.0000000000003527
+
+
+
+	Halmari, H., \& Virtanen, T. (Eds.). (2005). \emph{Persuasion across genres: A linguistic approach}. John Benjamins Publishing Company. https://doi.org/10.1075/pbns.130
+
+
+
+	Haven, T. L., Bouter, L. M., Smulders, Y. M., \& Tijdink, J. K. (2019). Perceived publication pressure in Amsterdam: Survey of all disciplinary fields and academic ranks. \emph{PLOS ONE, 14}(6), Article e0217931. https://doi.org/10.1371/journal.pone.0217931
+
+
+
+	Hyland, K. (1998). \emph{Hedging in scientific research articles }(Vol. 54). John Benjamins Publishing Company. https://doi.org/10.1075/pbns.54
+
+
+
+	Hyland, K. (2008). Genre and academic writing in the disciplines. \emph{Language Teaching, 41}(4), 543--562. https://doi.org/10.1017/S0261444808005235
+
+
+
+	Jackson, S. E., Squires, H., Shahab, L., Tattan-Birch, H., Buckley, C., Purshouse, R. C., \& Brown, J. (2024). Associations of close social connections with smoking and vaping: A population study in England. \emph{Nicotine and Tobacco Research}, 27(3), 447-456. https://doi.org/10.1093/ntr/ntae225
+
+
+
+	Jankowski, S., Boutron, I., \& Clarke, M. (2021). \emph{The influence of the statistical significance of results and spin on readers' interpretation of the results in an abstract for a hypothetical clinical trial: A randomized trial} (Version 7, p. 284882 bytes) [Dataset]. Dryad. https://doi.org/10.5061/DRYAD.0CFXPNW2Z
+
+
+
+	Latour, B. (1987). \emph{Science in action: How to follow scientists and engineers through society}. Harvard University Press.
+
+
+
+	Lazarus, C., Haneef, R., Ravaud, P., Hopewell, S., Altman, D. G., \& Boutron, I. (2016). Peer reviewers identified spin in manuscripts of nonrandomized studies assessing therapeutic interventions, but their impact on spin in abstract conclusions was limited. \emph{Journal of Clinical Epidemiology, 77}, 44--51. https://doi.org/10.1016/j.jclinepi.2016.04.012
+
+
+
+	Khouja, J. N., Sanderson, E., Wootton, R. E., Taylor, A. E., Church, B. A., Richmond, R. C., \& Munafò, M. R. (2024). Estimating the health impact of nicotine exposure by dissecting the effects of nicotine versus non-nicotine constituents of tobacco smoke: A multivariable Mendelian randomisation study. \emph{PLOS Genetics, 20}(2), Article e1011157. https://doi.org/10.1371/journal.pgen.1011157
+
+
+
+	Nagy, T., Hergert, J., Elsherif, M. M., Wallrich, L., Schmidt, K., Waltzer, T., Payne, J. W., Gjoneska, B., Seetahul, Y., Wang, Y. A., Scharfenberg, D., Tyson, G., Yang, Y.-F., Skvortsova, A., Alarie, S., Graves, K., Sotola, L. K., Moreau, D., \& Rubínová, E. (2025). Bestiary of questionable research practices in psychology\emph{. Advances in Methods and Practices in Psychological Science, 8}(3), Article 25152459251348431. https://doi.org/10.1177/25152459251348431
+
+
+
+	Pelclová, J., \& Lu, W. (Eds). (2018). \emph{Persuasion in public discourse: Cognitive and functional perspectives }(Vol. 79). John Benjamins Publishing Company. https://doi.org/10.1075/dapsac.79
+
+
+
+	Perelman, C., \& Olbrechts-Tyteca, L. (1991). \emph{The new rhetoric: A treatise on argumentation} (J. Wilkinson \& P. Weaver, Trans.). University of Notre Dame Press. https://doi.org/10.2307/j.ctvpj74xx
+
+
+
+	Qureshi, R., Naaman, K., Quan, N. G., Mayo-Wilson, E., Page, M. J., Cornelius, V., Chou, R., Boutron, I., Golder, S., Bero, L., Doshi, P., Vassar, M., Meursinge Reynders, R., \& Li, T. (2024). Development and evaluation of a framework for identifying and addressing spin for harms in systematic reviews of interventions. \emph{Annals of Internal Medicine, 177}(8), 1089--1098. https://doi.org/10.7326/M24-0771
+
+
+
+	R Core Team (2024). \emph{R: A language and environment for statistical computing}. R Foundation for Statistical Computing. https://www.R-project.org/
+
+
+
+	Reed, Z. E., Suddell, S., Eastwood, A., Thomas, L., Dwyer, I., Penton-Voak, I. S., Jarrold, C., Munafò, M. R., \& Attwood, A. S. (2023). Assessing the effectiveness of online emotion recognition training in healthy volunteers. \emph{Royal Society Open Science, 10}(9), Article 230372. https://doi.org/10.1098/rsos.230372
+
+
+
+	Scheel, A. M. (2022). Why most psychological research findings are not even wrong. \emph{Infant and Child Development}, \emph{31}(1), Article e2295. https://doi.org/10.1002/icd.2295
+
+
+
+	Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., \& Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. \emph{The }BMJ\emph{, 349}, g7015--g7015. https://doi.org/10.1136/bmj.g7015
+
+
+
+	Świątkowski, W., \& Dompnier, B. (2017). Replicability crisis in social psychology: Looking at the past to find new Ppthways for the future. \emph{International Review of Social Psychology}, \emph{30}(1), 111-124. https://doi.org/10.5334/irsp.66
+
+
+
+	TARG Meta-Research Group \& Collaborators. (2023). Estimating the prevalence of discrepancies between study registrations and publications: A systematic review and meta-analyses. \emph{BMJ Open, 13}(10), Article e076264. https://doi.org/10.1136/bmjopen-2023-076264
+
+
+
+	Tijdink, J. K., Verbeke, R., \& Smulders, Y. M. (2014). Publication pressure and scientific misconduct in medical scientists. J\emph{ournal of Empirical Research on Human Research Ethics, 9}(5), 64--71. https://doi.org/10.1177/1556264614552421
+
+
+
+	van Dalen, H. P., \& Henkens, K. (2012). Intended and unintended consequences of a publish-or-perish culture: A worldwide survey. \emph{Journal of the American Society for Information Science and Technology, 63}(7), 1282--1293. https://doi.org/10.1002/asi.22636
+
+
+
+	van Hoesel, T. G. L., \& Bakker, M. (2026). The impact of spin on the interpretations of abstracts of randomized controlled trials in the field of clinical psychology: An online experiment. \emph{Royal Society Open Science}, \emph{13}(1), Article 251174. https://doi.org/10.1098/rsos.251174
+
+
+
+	Yavchitz, A., Ravaud, P., Altman, D. G., Moher, D., Hrobjartsson, A., Lasserson, T., \& Boutron, I. (2016). A new classification of spin in systematic reviews and meta-analyses was developed and ranked according to the severity. \emph{Journal of Clinical Epidemiology, 75}, 56--65. https://doi.org/10.1016/j.jclinepi.2016.01.020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
