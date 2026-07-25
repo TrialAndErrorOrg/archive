@@ -1,3 +1,4 @@
+
 \documentclass[authordate, meta]{jote-new-article}
 
 \usepackage{pifont}
@@ -10,12 +11,13 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{amssymb}
-
+\usepackage{multirow}
+\interfootnotelinepenalty=10000
 \usepackage[backend=biber,style=apa]{biblatex}
 
 \addbibresource{bibliography.bib}
 
-\jotetitle{A conceptual framework for computational reproductions: Formal definitions and epistemic functions}
+\jotetitle{A Conceptual Framework for Computational Reproductions: Formal Definitions and Epistemic Functions}
 \keywordsabstract{error, reproduction, meta-science, conceptual framework, verification, epistemic function, uncertainty}
 \abstracttext{Reproductions, which we define as “redoing activities” that work with the same collected data (or simulation source code) and aim to keep the computation as similar as possible, enable the verification of a scientific work. We seek to advance the understanding and conduct of reproductions by providing a conceptual framework and guidance to reproducers. In the first part, the epistemic function of reproductions and replications regarding mistakes—and consequently, faults—is discussed. In the second part, the logic underlying reproductions is formulated, accompanied by formal definitions of central terms. The third and final part provides practical guidance on conducting and reporting reproductions. In short, a reproduction involves performing another computation and comparing the results for consistency, exploring the impact of computational choices on results before suspecting faults as a last resort. Computational choices by reproducers are necessitated by obstacles such as underspecification and external constraints. Regarding faults, four cases are emphasized: (1) incoherent descriptions, (2) different collected data (or simulation source code), (3) different data analysis source code, and (4) incorrect reporting of results. Separate from evaluating the consistency of results, reproductions can investigate their support for a claim. Finally, improper reporting practices can reduce the epistemic value of scientific works and their reproductions. Therefore, reproducers should also report the scope of their reproduction by detailing, among other things, which results were targeted, which computational stages were redone, and which descriptions were consulted.}
 \runningauthor{Kohrt et al.}
@@ -34,6 +36,8 @@
 \affil[3]{Department of Human Behavior, Ecology, and Culture, Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany}
 \author[1]{\mbox{Felix Schönbrodt\orcid{0000-0002-8282-3910}}}
 \paperaccepted{March 30, 2026}
+\paperpublished{July 24, 2026}
+\paperpublisheddate{2026-07-24}
 \jwebsite{https://journal.trialanderror.org}
 
 
@@ -74,7 +78,7 @@
 
 
 
-	In existing conceptual work on redoing activities, many have noted that fields differ in how various redoing activities are named (Barba, 2018), contributing to a “confused terminology” (Plesser, 2018), although—or maybe because—many unifying definitions are proposed (Dreber \& Johannesson, 2025; LeBel et al., 2018; National Information Standards Organization, 2021; Nichols et al., 2017; Patil et al., 2016a; Schöch, 2023). When creating typologies, researchers usually make distinctions that are important to their own field and research method, possibly creating jingle-jangle conflicts with other typologies where the same term refers to different concepts (jingle) or different terms refer to the same concept (jangle). For example, many typologies differentiate between redoing a study with the same data vs. using new data, by calling one “reproduction” and the other “replication”—but vary in their nomenclature, which is which (e.g., National Academies of Sciences, Engineering, and Medicine, 2019; Schöch, 2023). Adding to the confusion is the ambiguity of the term “data”, which can refer to the output of a data collection phase (collected data, i.e., basis for scientific inference) but also to the input to a data collection phase (parameter data, i.e., calibration or training data). Consequently, for some typologies using the same data means that no new experiment (nor sample or observation) is involved (e.g., Simkus et al., 2025), while for others both reproduction (same data) and replication (different data) involve conducting a new experiment (e.g., Association for Computing Machinery, 2020). The latter case is already the result of harmonization efforts driven by Heroux et al. (2018) who called for a compatible usage of the terms “reproduction” and “replication” across disciplines, suggesting a focus on internal consistency for the former (“doing things right”) and a focus on external consistency for the latter (“doing the right things”). In the field of computing science, the entire experimentation may happen \emph{in silico} rather than \emph{in natura}, making another data analysis alone less common than running both experiment and data analysis again. In silico means that collected data are solely obtained by means of computer programs, in an automated fashion, and pertain to computer programs. In other words, the data are about properties of the programs and not their environment. In contrast, in natura means that collected data pertain to the physical or social reality. Non-experimental research is not considered in all of these cases. This article focuses on collected data (the basis for scientific inference) and distinguishes “simulation source code” (any source code that generates collected data, even in the absence of a proper simulation) and “data analysis source code” (for scientific inference such as statistical analysis).
+	In existing conceptual work on redoing activities, many have noted that fields differ in how various redoing activities are named (Barba, 2018), contributing to a “confused terminology” (Plesser, 2018), although—or maybe because—many unifying definitions are proposed (Dreber \& Johannesson, 2025; LeBel et al., 2018; National Information Standards Organization, 2021; Nichols et al., 2017; Patil et al., 2016a; Schöch, 2023). When creating typologies, researchers usually make distinctions that are important to their own field and research method, possibly creating jingle-jangle conflicts with other typologies where the same term refers to different concepts (jingle) or different terms refer to the same concept (jangle). For example, many typologies differentiate between redoing a study with the same data vs. using new data, by calling one “reproduction” and the other “replication”—but vary in their nomenclature, which is which (e.g., National Academies of Sciences, Engineering, and Medicine, 2019; Schöch, 2023). Adding to the confusion is the ambiguity of the term “data”, which can refer to the output of a data collection phase (collected data, i.e., basis for scientific inference) but also to the input to a data collection phase (parameter data, i.e., calibration or training data). Consequently, for some typologies using the same data means that no new experiment (nor sample or observation) is involved (e.g., Simkus et al., 2025), while for others both reproduction (same data) and replication (different data) involve conducting a new experiment (e.g., Association for Computing Machinery, 2020). The latter case is already the result of harmonization efforts driven by Heroux et al. (2018) who called for a compatible usage of the terms “reproduction” and “replication” across disciplines, suggesting a focus on internal consistency for the former (“doing things right”) and a focus on external consistency for the latter (“doing the right things”). In the field of computing science, the entire experiment may happen \emph{in silico} rather than \emph{in natura}, making another data analysis alone less common than running both experiment and data analysis again. In silico means that collected data are solely obtained by means of computer programs, in an automated fashion, and pertain to computer programs. In other words, the data are about properties of the programs and not their environment. In contrast, in natura means that collected data pertain to the physical or social reality. Non-experimental research is not considered in all of these cases. This article focuses on collected data (the basis for scientific inference) and distinguishes “simulation source code” (any source code that generates collected data, even in the absence of a proper simulation) and “data analysis source code” (for scientific inference such as statistical analysis).
 
 
 
@@ -94,7 +98,7 @@
 
 
 
-	Existent research also investigated what constitutes materially the same results when new data are collected. For example, Patil et al. (2016b) and Stanley and Spence (2014) describe realistic expectations for replications, and Heyard et al. (2025) compiled 27 replication metrics from the literature. Further, Axtell et al. (1996) differentiate three categories of model equivalence in their work on redoing simulation models: numerical identity (i.e., exactly the same numbers), distributional equivalence (same statistical properties; for which Sego et al. (2024) developed the Empirical Characteristic Function Equality Convergence Test), and relational equivalence (same relationships between variables). Similar categories are described by Ivie and Thain (2019). However, a recent need has been formulated for adding another category in case the original work contains insufficient information (Zhang \& Robinson, 2021).
+	Existing research also investigated what constitutes "materially the same results" when new data are collected. For example, Patil et al. (2016b) and Stanley and Spence (2014) describe realistic expectations for replications, and Heyard et al. (2025) compiled 27 replication metrics from the literature. Further, Axtell et al. (1996) differentiate three categories of model equivalence in their work on redoing simulation models: numerical identity (i.e., exactly the same numbers), distributional equivalence (same statistical properties; for which Sego et al. (2024) developed the Empirical Characteristic Function Equality Convergence Test), and relational equivalence (same relationships between variables). Similar categories are described by Ivie and Thain (2019). However, a recent need has been formulated for adding another category in case the original work contains insufficient information (Zhang \& Robinson, 2021).
 
 
 
@@ -110,7 +114,7 @@
 
 
 
-	Building on the existing research on the epistemic functions of reproductions, Section 2 of this article introduces their verifying function and explains what can be learned from their conduct. Section 3 explains their underlying logic and defines central terms around them. Section 4 provides practical recommendations on their conduct and reporting and discusses their possible outcomes.
+	Building on the existing research on the epistemic functions of reproductions, the second section of this article ("The Verifying Function of Reproductions") introduces their verifying function and explains what can be learned from their conduct. The third section ("Defining Reproductions") explains their underlying logic and defines central terms around them. Finally, the fourth and fifth sections ("Performing a Reproduction" and "Discussion and Recommenedations") provide practical recommendations on their conduct and reporting and discusses their possible outcomes.
 
 
 
@@ -123,19 +127,19 @@
 	\begin{itemize}
 
 
-		\item Target selection refers to which specific results (out of multiple original results) a redoing activity should focus on.
+		\item \emph{Target selection} refers to which specific results (out of multiple original results) a redoing activity should focus on.
 
 
 
-		\item Issues with data and code relate to their lack of availability, provenance, correctness, and executability.
+		\item \emph{Issues with data and code} relate to their lack of availability, provenance, correctness, and executability.
 
 
 
-		\item Evaluation of results concerns how original and reproduction results are compared and what the conclusion is.
+		\item \emph{Evaluation of results} concerns how original and reproduction results are compared and what the conclusion is.
 
 
 
-		\item Synthesis of results involves integrating and reporting multiple results, both on the level of individual studies and across them.
+		\item \emph{Synthesis of results} involves integrating and reporting multiple results, both on the level of individual studies and across them.
 
 
 	\end{itemize}
@@ -156,7 +160,7 @@
 
 
 
-	This article considers another instance of uncertainty among research consumers that concerns the existence of faults\footnote{ Note that we assume honest actors and always attribute to a mistake rather than fraud -- though we don't expect maximal transparency.} within the original work. While we will not address all possible sources of uncertainty, we will additionally address underspecification in Section 3. Internal consistency checks referred to as “verification” assess uncertainty due to faults. They deliberately redo some phases of a previous work while inheriting all remaining phases. An inherited phase is only performed once across original work and reproduction and its product feeds as-is into the following phases of the redoing activity, where it is reused. Verification concerns whether a phase has been conducted as intended and is often contrasted with \emph{validation}, which checks whether the intent itself is appropriate. However, there are many more possible epistemic functions of reproductions—for example, in their review of the literature, Ulpts and Schneider (2024) also found mentions of the functions of learning, training, and understanding. In the following, however, only the verifying function of reproductions will be detailed. For Section 2, we focus on three reproduction prototypes as discerned in the literature that all work with the reported collected data (or the reported simulation source code that generates them) and discuss a replication in comparison:
+	This article considers another instance of uncertainty among research consumers that concerns the existence of faults\footnote{ Note that we assume honest actors and always attribute to a mistake rather than fraud---though we don't expect maximal transparency.} within the original work. While we will not address all possible sources of uncertainty, we will additionally address underspecification in "Defining Reproductions". Internal consistency checks referred to as “verification” assess uncertainty due to faults. They deliberately redo some phases of a previous work while inheriting all remaining phases. An inherited phase is only performed once across original work and reproduction and its product feeds as-is into the following phases of the redoing activity, where it is reused. Verification concerns whether a phase has been conducted as intended and is often contrasted with \emph{validation}, which checks whether the intent itself is appropriate. However, there are many more possible epistemic functions of reproductions—for example, in their review of the literature, Ulpts and Schneider (2024) also found mentions of the functions of learning, training, and understanding. In the following, however, only the verifying function of reproductions will be detailed. In the following paragraphs, however, we focus on three reproduction prototypes as discerned in the literature that all work with the reported collected data (or the reported simulation source code that generates them) and discuss a replication in comparison:
 
 	\begin{itemize}
 
@@ -179,7 +183,7 @@
 
 	\end{itemize}
 
-All four activities represent particular sets of phases that are redone out of all possible phases of a simplified research process, as detailed in Figure 1: data collection, data analysis, and reporting. Here, every phase covered by the colored area of a redoing activity is done again according to the description in the original work. In contrast, all remaining phases are directly inherited (i.e., not redone) from the original work. For example, for a re-implementation reproduction, one inherits the data collection of an original work, attempts to re-analyze the data, and reports the results again. The data collection phase is further differentiated depending on the type of work. For in natura works, this phase can be divided into sampling, experimental manipulation, and measurement. For in silico works, it can alternatively be separated into implementation and execution, where execution involves running an implementation within a computational environment.\footnote{ By computational environment we refer to the hardware and software setup which is utilized while calculating the results.} Finally, the data analysis phase also consists of implementation and execution.\footnote{ Execution and implementation may also be inseparable, as is the case when using a pocket calculator.} Of course, not all phases are part of every research process—for example, no experimental manipulation occurs when collecting historical data. Also, these four redoing activities represent prototypical cases that may blend in reality. For example, a re-implementation reproduction might incorporate portions of the original data analysis source code rather than writing everything anew. However, for this section, we only consider the prototypical case. Note that we do not recommend relying on our prototypes alone for describing a particular reproduction—instead, see Section 4 (Box 5) for recommendations.
+All four activities represent particular sets of phases that are redone out of all possible phases of a simplified research process, as detailed in Figure 1: data collection, data analysis, and reporting. Here, every phase covered by the colored area of a redoing activity is done again according to the description in the original work. In contrast, all remaining phases are directly inherited (i.e., not redone) from the original work. For example, for a re-implementation reproduction, one inherits the data collection of an original work, attempts to re-analyze the data, and reports the results again. The data collection phase is further differentiated depending on the type of work. For in natura works, this phase can be divided into sampling, experimental manipulation, and measurement. For in silico works, it can alternatively be separated into implementation and execution, where execution involves running an implementation within a computational environment.\footnote{ By computational environment we refer to the hardware and software setup which is utilized while calculating the results.} Finally, the data analysis phase also consists of implementation and execution.\footnote{ Execution and implementation may also be inseparable, as is the case when using a pocket calculator.} Of course, not all phases are part of every research process—for example, no experimental manipulation occurs when collecting historical data. Also, these four redoing activities represent prototypical cases that may blend in reality. For example, a re-implementation reproduction might incorporate portions of the original data analysis source code rather than writing everything anew. However, for this section, we only consider the prototypical case. Note that we do not recommend relying on our prototypes alone for describing a particular reproduction—instead, see "Discussion and Recommendations" (specifically Box 5 in this article) for recommendations.
 
 
 
@@ -187,9 +191,17 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 	\begin{figure*}
-		\includegraphics[width=\linewidth]{media/image2.png}
+		\includegraphics[width=\linewidth, alt={Diagram containing three rectangles, consecutively connected by arrows. The rectangles are labeled "data collection", "data analysis", and "reporting" and denote the phases of a simplified research process. The rectangles are covered by four colored areas to varying degrees, denoting different redoing activities. Some rectangles are split into multiple sections. Each rectangle or section contains one or more circled letters, referring to associated reasons for differences, which are named in the accompanying legend.
+		The first rectangle, data collection, is split into two sections. The first section is labeled "in natura" and is, in turn, divided into three subsections labeled "sampling", "experimental manipulation", and "measurement". The subsection "sampling" contains two circled letters, "a" and "b". "a" refers to sampling variability, while "b" refers to sampling bias. The subsection "experimental manipulation" contains the circled letter "c", which refers to a manipulation deviation. The subsection "measurement" contains the circled letter "d", which refers to a measurement deviation. The second section of the data collection rectangle is labeled "in silico" and is, in turn, divided into two subsections labeled "implementation" and "execution". The subsection "implementation" contains two circled letters, "e" and "f". "e" refers to a data collection implementation choice, and "f" refers to a data collection implementation mistake. The subsection "execution" contains the circled letter "g", which refers to a data collection environment choice.
+		The second rectangle, data analysis, is divided into two sections called "implementation" and "execution". The section "implementation" contains two circled letters, "h" and "i". "h" refers to a data analysis implementation choice, and "i" refers to a data analysis implementation mistake. The section "execution" contains the circled letter "j", referring to a data analysis environment choice.
+		The third rectangle, reporting, contains the circled letter "k", referring to a reporting mistake.
+		The orange area is labeled "re-execution reproduction" and covers the execution section of the data analysis phase and the reporting phase.
+		The blue area is labeled "re-implementation reproduction" and covers the data analysis phase and the reporting phase. As such, it covers the (orange) re-execution reproduction plus the data analysis implementation.
+		The purple area is labeled "re-collection reproduction" and covers the execution section of the data collection phase (in silico), the data analysis phase, and the reporting phase. As such, it covers the (blue) re-implementation reproduction, plus the (in silico) data collection execution.
+		The green area is labeled "replication" and covers all three phases.}]{media/image2.pdf}
 
 		\caption{Simplified Research Process With Its Possible Phases, Enclosed by Prototypical Redoing Activities and with Associated Reasons for Differences in Results (a) through (k)}
+		
 
 		\label{fig:rId15}
 
@@ -200,7 +212,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	While inherited phases should be identical between the original work and the redoing activity, redone phases may deviate despite aiming for equality. For every phase, Figure 1 indicates associated reasons for differences in results as circled letters (a) through (k). These should be considered if the respective phase is redone and the obtained result of a redoing activity is not the same, meaning exact numerical agreement at the maximum precision that the representation of a result allows. Both identical and non-identical results influence the reproducers' state of knowledge about associated reasons by providing evidence for or against them. This simplified research process assumes that solely the choices by the reproducers and the mistakes by original authors or reproducers are responsible for different results obtained by reproductions. However, no choices are possible while reporting results, and no mistakes can happen during the execution of a data analysis or an in silico data collection. Further, we differentiate implementation mistakes from reporting mistakes. Reproductions can detect both,\footnote{ More specifically, reproductions can detect faults that cause the computation on collected data to be at odds with the reported descriptions, collected data (or simulation source code), or results.} as will be detailed next. Mistakes happening during the data collection of in natura works and the resulting deviations are not the primary focus of a reproduction. We use “deviation” as a generic term for the difference between an original and a redone phase, which can have various reasons, including statistical variability, biases, mistakes, and varying choices. Mistakes that happen later, when interpreting the results, are also mostly ignored by reproductions, though we touch on them in Section 4 of this article when discussing inappropriate inferences.
+	While inherited phases should be identical between the original work and the redoing activity, redone phases may deviate despite aiming for equality. For every phase, Figure 1 indicates associated reasons for differences in results as circled letters (a) through (k). These should be considered if the respective phase is redone and the obtained result of a redoing activity is not the same, meaning exact numerical agreement at the maximum precision that the representation of a result allows. Both identical and non-identical results influence the reproducers' state of knowledge about associated reasons by providing evidence for or against them. This simplified research process assumes that solely the choices by the reproducers and the mistakes by original authors or reproducers are responsible for different results obtained by reproductions. It also assumes that no choices are possible while reporting results, and no mistakes can happen during the execution of a data analysis or an in silico data collection. Further, we differentiate implementation mistakes from reporting mistakes. Reproductions can detect both,\footnote{ More specifically, reproductions can detect faults that cause the computation on collected data to be at odds with the reported descriptions, collected data (or simulation source code), or results.} as will be detailed next. Mistakes happening during the data collection of in natura works and the resulting deviations are not the primary focus of a reproduction. We use “deviation” as a generic term for the difference between an original and a redone phase, which can have various reasons, including statistical variability, biases, mistakes, and varying choices. Mistakes that happen later, when interpreting the results, are also mostly ignored by reproductions, though we touch on them in the "Discussion and Recommendations" section of this article when discussing inappropriate inferences.
 
 
 
@@ -217,81 +229,75 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	Returning to the scenario where the re-implementation reproduction resulted in non-identical results, one cannot conclude which of the potential reasons with a large disk in Table 1 are responsible for the difference. To narrow it down further, a re-execution reproduction can be performed. If this leads to identical results as originally reported, reporting mistakes (k) and data analysis environment choices (j) common to the re-implementation and the re-execution reproduction can be considered unlikely because they have a small disk in the respective row of Table 1. Hence, implementation choices (h) and implementation mistakes (i) concerning the data analysis (either while conducting the original work or the reproduction) remain as potential reasons. Section 4 of this article discusses how these can be discerned by evaluating the consistency of results.
+	Returning to the scenario where the re-implementation reproduction resulted in non-identical results, one cannot conclude which of the potential reasons with a large disk in Table 1 are responsible for the difference. To narrow it down further, a re-execution reproduction can be performed. If this leads to identical results as originally reported, reporting mistakes (k) and data analysis environment choices (j) common to the re-implementation and the re-execution reproduction can be considered unlikely because they have a small disk in the respective row of Table 1. Hence, implementation choices (h) and implementation mistakes (i) concerning the data analysis (either while conducting the original work or the reproduction) remain as potential reasons. The final section of this article will discuss how these can be discerned by evaluating the consistency of results.
 
 \begin{landscape}
 	\begin{table}
 		
 		\caption{Prototypical Redoing Activities and the State of Knowledge Their Result Implies About Potential Reasons for Differences}
-		% Big Left column (1.5x width) - Forced to footnotesize
-		\newcolumntype{B}{>{\footnotesize\raggedright\arraybackslash\hsize=1.25\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X} 
+\newcolumntype{B}{>{\footnotesize\raggedright\arraybackslash\hsize=1.25\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X} 
+\newcolumntype{M}{>{\footnotesize\raggedright\arraybackslash\hsize=0.8\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X} 
+\newcolumntype{S}{>{\footnotesize\centering\arraybackslash\hsize=0.85\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+\newcolumntype{T}{>{\footnotesize\centering\arraybackslash\hsize=1\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+\centering
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabularx}{\linewidth}{@{} B M B S S T S S S S S @{}}
+    \hline \textbf{Redoing activity} & \textbf{Comparison} & \textbf{Outcome} &
+    \textbf{Reporting mistake (k)} & \textbf{Data analysis environment choice (j)}
+    & \textbf{Data analysis implementation mistake (i)} & \textbf{Data analysis impl. choice (h)}
+    & \textbf{Data collection env. choice (g)} & \textbf{Data collection impl. choice (e)}
+    & \textbf{Sampling variability (a)} & \textbf{Other deviations (b–d), (f)}
+    \\
 
-		% Medium Left column (1.2x width) - Forced to footnotesize
-		\newcolumntype{M}{>{\footnotesize\raggedright\arraybackslash\hsize=0.8\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X} 
+    \hline \multirow{4}{=}{Re-execution reproduction} & \multirow{2}{=}{Identity} & Identical & \bullet & \bullet & = & = &
+    = & = & = & = \\
 
-		% Small Centered column (0.8x width) - Forced to footnotesize
-		\newcolumntype{S}{>{\footnotesize\centering\arraybackslash\hsize=0.85\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X}
-		% Small Centered column (0.8x width) - Forced to footnotesize
-		\newcolumntype{T}{>{\footnotesize\centering\arraybackslash\hsize=1\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X}
-		\centering
-		\begin{adjustbox}{max width=\linewidth}
-		\begin{tabularx}{\linewidth}{@{} B M B S S T S S S S S @{}}
-			\hline \textbf{Redoing activity} & \textbf{Comparison} & \textbf{Outcome} &
-			\textbf{Reporting mistake (k)} & \textbf{Data analysis environment choice (j)}
-			& \textbf{Data analysis implementation mistake (i)} & \textbf{Data analysis impl. choice (h)}
-			& \textbf{Data collection env. choice (g)} & \textbf{Data collection impl. choice (e)}
-			& \textbf{Sampling variability (a)} & \textbf{Other deviations (b–d), (f)}
-			\\
+    \cline{3-11}  &  & Non-identical &  \faCircle &  \faCircle & = & = & = & = & = & = \\
 
-			\hline Re-execution reproduction & Identity & Identical & \bullet & \bullet & = & = &
-			= & = & = & = \\
+    \cline{2-11}  & \multirow{2}{=}{Consistency} & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & = & = & =
+    & = & = & = \\
 
-			\hline  &  & Non-identical &  \faCircle &  \faCircle & = & = & = & = & = & = \\
+    \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} & = & = & = & = & = & = \\
 
-			\hline  & Consistency & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & = & = & =
-			& = & = & = \\
+    \hline \multirow{4}{=}{Re-implementation reproduction} & \multirow{2}{=}{Identity} & Identical & \bullet & \bullet & \bullet &
+    \bullet & = & = & = & = \\
 
-			\hline  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} & = & = & = & = & = & = \\
+    \cline{3-11}  &  & Non-identical &  \faCircle &  \faCircle &  \faCircle &  \faCircle & = & = & = & = \\
 
-			\hline Re-implementation reproduction & Identity & Identical & \bullet & \bullet & \bullet &
-			\bullet & = & = & = & = \\
+    \cline{2-11}  & \multirow{2}{=}{Consistency} & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & =
+    & = & = & = \\
 
-			\hline  &  & Non-identical &  \faCircle &  \faCircle &  \faCircle &  \faCircle & = & = & = & = \\
+    \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & = & = & = & = \\
 
-			\hline  & Consistency & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & =
-			& = & = & = \\
+    \hline \multirow{4}{=}{Re-collection reproduction} & \multirow{2}{=}{Identity} & Identical & \bullet & \bullet & \bullet & \bullet &
+    \bullet & = & = & = \\
 
-			\hline  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & = & = & = & = \\
+    \cline{3-11}  &  & Non-identical &  \faCircle &  \faCircle &  \faCircle &  \faCircle &  \faCircle & = & = & = \\
 
-			\hline Re-collection reproduction & Identity & Identical & \bullet & \bullet & \bullet & \bullet &
-			\bullet & = & = & = \\
+    \cline{2-11}  & \multirow{2}{=}{Consistency} & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle &  \faCircle
+    & = & = & = \\
 
-			\hline  &  & Non-identical &  \faCircle &  \faCircle &  \faCircle &  \faCircle &  \faCircle & = & = & = \\
+    \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & = & = & = \\
 
-			\hline  & Consistency & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle &  \faCircle
-			& = & = & = \\
+    \hline \multirow{2}{=}{Replication} & \multirow{2}{=}{Consistency} & Consistent & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle &  \faCircle &  \faCircle &  \faCircle &
+    \faIcon[regular]{dot-circle} \\
 
-			\hline  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & = & = & = \\
+    \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} &  \faCircle \\
 
-			\hline Replication & Consistency & Consistent & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle &  \faCircle &  \faCircle &  \faCircle &
-			\faIcon[regular]{dot-circle} \\
-
-			\hline  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} &  \faCircle \\
-
-
-		\end{tabularx}
-		\end{adjustbox}
+\end{tabularx}
+\end{adjustbox}
 		\begin{minipage}{\linewidth}
-		\emph{Note}. The original and the reproduction result can be compared for identity or consistency (as described in Section 4 of this article). The size of disks indicates the importance of various reasons for differing results. A small disk -- with circle (\faIcon[regular]{dot-circle}) and without (\bullet) -- indicates that there is no difference or that a reason is less important. A large disk ( \faCircle) indicates a potentially important reason for non-identical or inconsistent results (but we do not know which one, if a row contains more than one). A circle around a small disk (\faIcon[regular]{dot-circle}) indicates that a reason is possible, but the caused difference is probably not larger than for reasons with a large disk. The equal sign (=) indicates that the phase containing this reason is inherited and, therefore, assumed to be identical. Therefore, it cannot be responsible for differences in results by itself, though issues in that phase cannot be detected.
+		\emph{Note}. The original and the reproduction result can be compared for identity or consistency (see section "Discussion and Recommendations"). The size of disks indicates the importance of various reasons for differing results. A small disk---with circle (\faIcon[regular]{dot-circle}) and without (\bullet)---indicates that there is no difference or that a reason is less important. A large disk ( \faCircle) indicates a potentially important reason for non-identical or inconsistent results (but we do not know which one, if a row contains more than one). A circle around a small disk (\faIcon[regular]{dot-circle}) indicates that a reason is possible, but the caused difference is probably not larger than for reasons with a large disk. The equal sign (=) indicates that the phase containing this reason is inherited and, therefore, assumed to be identical. Therefore, it cannot be responsible for differences in results by itself, though issues in that phase cannot be detected.
 		\end{minipage}
 	\end{table}
 \end{landscape}
 
-	Most informative are cases where a large set of reasons can be ruled out (indicated by small disks) or a small set of reasons is identified (indicated by a large disk). If successful, we learn more from a re-implementation than from a re-execution reproduction, while it is the other way around if they produce non-identical results. The previous example also illustrates how different redoing activities can be combined to learn more about reasons for differences in results. Notably, a re-execution reproduction can produce no evidence against data analysis implementation mistakes (i) unless the data analysis source code is additionally checked for coherence with the methods section. Similarly, one cannot rule out data collection implementation mistakes (f) with a re-collection reproduction, where the data collection is merely re-executed but not compared with the corresponding descriptions. Because the term "reproduction" can refer to any of the prototypes, which differ in their verifying function, we recommend always indicating which exactly is conducted. However, when it comes to atypical cases, even this distinction is not sufficient; hence, Section 3 of this article introduces the concept of a reproduction's scope, which we also recommend reporting.
+
+	Most informative are cases where a large set of reasons can be ruled out (indicated by small disks) or a small set of reasons is identified (indicated by a large disk). If successful, we learn more from a re-implementation than from a re-execution reproduction, while it is the other way around if they produce non-identical results. The previous example also illustrates how different redoing activities can be combined to learn more about reasons for differences in results. Notably, a re-execution reproduction can produce no evidence against data analysis implementation mistakes (i) unless the data analysis source code is additionally checked for coherence with the methods section. Similarly, one cannot rule out data collection implementation mistakes (f) with a re-collection reproduction, where the data collection is merely re-executed but not compared with the corresponding descriptions. Because the term "reproduction" can refer to any of the prototypes, which differ in their verifying function, we recommend always indicating which exactly is conducted. However, when it comes to atypical cases, even this distinction is not sufficient; hence, the section "Defining Reproductions" introduces the concept of a reproduction's scope, which we also recommend reporting.
 
 
 
-	Of course, by using Figure 1 and Table 1 to identify possible reasons for differences in results, one makes certain assumptions, which, if violated, invalidate the conclusions. First, one assumes linear progress through the various phases and the points where mistakes and choices by the reproducers can influence results. Second, one assumes that inherited phases are indeed not redone and consequently that their product is identical. For example, if reproducers obtain the data analysis source code from the original authors of a study, they operate on the belief that it is indeed the exact version that produced the study's result. Instead, the authors could have (unintentionally) sent an old version of the code. Only if data, computation, and reporting are kept together via executable research compendia (Gentleman \& Temple Lang, 2007; Nüst et al., 2017) can one be reasonably confident that they stayed constant. As another example, the collected data might have been preprocessed, either for usability reasons or, by necessity, due to resource limits. This leaves some mistakes undetectable during re-implementation reproductions, possibly without the knowledge of reproducers. For this reason, Table 1 should only be treated as a heuristic guide, providing evidence for or against types of mistakes but not making definitive statements. These and other possibilities are considered in Section 3 of this article, which introduces a unifying definition of reproductions instead of relying on the distinction between the prototypes.
+	Of course, by using Figure 1 and Table 1 to identify possible reasons for differences in results, one makes certain assumptions, which, if violated, invalidate the conclusions. First, one assumes linear progress through the various phases and the points where mistakes and choices by the reproducers can influence results. Second, one assumes that inherited phases are indeed not redone and consequently that their product is identical. For example, if reproducers obtain the data analysis source code from the original authors of a study, they operate on the belief that it is indeed the exact version that produced the study's result. Instead, the authors could have (unintentionally) sent an old version of the code. Only if data, computation, and reporting are kept together via executable research compendia (Gentleman \& Temple Lang, 2007; Nüst et al., 2017) can one be reasonably confident that they stayed constant. As another example, the collected data might have been preprocessed, either for usability reasons or, by necessity, due to resource limits. This leaves some mistakes undetectable during re-implementation reproductions, possibly without the knowledge of reproducers. For this reason, Table 1 should only be treated as a heuristic guide, providing evidence for or against types of mistakes but not making definitive statements. These and other possibilities are considered in the next section of this article, which introduces a unifying definition of reproductions instead of relying on the distinction between the prototypes.
 
 	\section{Defining Reproductions}
 
@@ -306,11 +312,11 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	One goal of a reproduction can be to verify that a (past) computation on collected data corresponds to the reported artifacts—this is the kind of reproduction the present article focuses on. The artifacts are the descriptions (detailing specified choices), the collected data (or the simulation source code, in the case of in silico works), and the results. The computation itself is uncertain\footnote{ For example, a data analysis software with a graphical user interface may leave no trace after it has been used. But also source code is often not enough to determine exactly what has been computed, for example, due to changes induced by dependency versions or hardware.} but constrained by these three artifacts. Therefore, a reproduction with a goal of verification involves creating another such computation using the descriptions and the collected data (or the simulation source code), then comparing the original results with those of the reproduction effort. The comparison between original and reproduction results are thus the main outcome of the reproduction effort. It follows that the availability of at least one description, one result, and one set of collected data (or the simulation source code) is a precondition to performing a reproduction. Beyond the comparison of the results, optionally, the support for the claim can be evaluated.
+	One goal of a reproduction can be to verify that a (past) computation on collected data corresponds to the reported artifacts—this is the kind of reproduction the present article focuses on. The artifacts are the descriptions (detailing specified choices), the collected data (or the simulation source code, in the case of in silico works), and the results. The computation itself is uncertain\footnote{ For example, a data analysis software with a graphical user interface may leave no trace after it has been used. But also source code is often not enough to determine exactly what has been computed, for example, due to changes induced by dependency versions or hardware.} but constrained by these three artifacts. Therefore, a reproduction with a goal of verification involves creating another such computation using the descriptions and the collected data (or the simulation source code), then comparing the original results with those of the reproduction effort. The comparison between original and reproduction results is thus the main outcome of the reproduction effort. It follows that the availability of at least one description, one result, and one set of collected data (or the simulation source code) is a precondition to performing a reproduction. Beyond the comparison of the results, optionally, the support for the claim can be evaluated.
 
 
 
-	In Section 2 of this article, the comparison for identity has been discussed. If the results are exactly the same, one can conclude that the original computation on the collected data (and any prior repeated computation) has likely been performed as described\footnote{ Technically, the original computation on the collected data could still deviate from its description but accidentally give the same results as during the reproduction. If the domain of possible results is constrained (either discrete or for some other reason only certain values are possible), then this becomes more likely. In the special case of forensic reproductions where it is not acceptable to err, additional provenance might be required to continue at this stage.}. However, if they are not identical, Table 1 lists both mistakes and computational choices (i.e., environment choices and implementation choices) as possible reasons. Only mistakes cause a verification failure because computational choices are necessitated by insufficient descriptions or a lack of resources (such as special software requirements), neither of which automatically threatens the internal consistency of a work.\footnote{ It is at the reproducers' discretion to set the standards for any methods and thus define how to evaluate the internal consistency. Thus, for example, this includes the evaluation whether the choices made in the source code are consistent with the instructions in a methods section.} Consequently, such obstacles should be taken into account: Rather than demanding identity, we suggest that results are called “consistent” if they differ no more than the largest expected difference given the obstacles encountered and how these obstacles were resolved. This also provides an alternative to the suggestion by LeBel et al. (2018) to always allow for a difference of 10\%.
+	In the second section of this article, "The Verifying Function of Reproductions", the comparison for identity has been discussed. If the results are exactly the same, one can conclude that the original computation on the collected data (and any prior repeated computation) has likely been performed as described.\footnote{ Technically, the original computation on the collected data could still deviate from its description but accidentally give the same results as during the reproduction. If the domain of possible results is constrained (either discrete or for some other reason only certain values are possible), then this becomes more likely. In the special case of forensic reproductions where it is not acceptable to err, additional provenance might be required to continue at this stage.} However, if they are not identical, Table 1 lists both mistakes and computational choices (i.e., environment choices and implementation choices) as possible reasons. Only mistakes cause a verification failure because computational choices are necessitated by insufficient descriptions or a lack of resources (such as special software requirements), neither of which automatically threatens the internal consistency of a work.\footnote{ It is at the reproducers' discretion to set the standards for any methods and thus define how to evaluate the internal consistency. Thus, for example, this includes the evaluation whether the choices made in the source code are consistent with the instructions in a methods section.} Consequently, such obstacles should be taken into account: Rather than demanding identity, we suggest that results are called “consistent” if they differ no more than the largest expected difference given the obstacles encountered and how these obstacles were resolved. This also provides an alternative to the suggestion by LeBel et al. (2018) to always allow for a difference of 10\%.
 
 
 
@@ -330,7 +336,7 @@ All four activities represent particular sets of phases that are redone out of a
 	\textbf{Summary: Logic of Reproductions}
 	
 	\begin{itemize}
-	\item \textbf{Goal:} A reproduction can have the goal of verifying a computation on collected data. To this end, it checks whether a selected set of results from such a computation can be obtained by following the descriptions and involving the collected data (or the simulation source code, in the case of \emph{in silico} works). We suggest comparing the original and reproduction results for consistency rather than identity.
+	\item \textbf{Goal:} A reproduction can have the goal of verifying a computation on collected data. To this end, it checks whether a selected set of results from such a computation can be obtained by following the descriptions and involving the collected data (or the simulation source code, in the case of in silico works). We suggest comparing the original and reproduction results for consistency rather than identity.
 	\item \textbf{Procedure:} Original and reproduction results are compared. If differences are observed, reproducers attempt to systematically explain them by attributing them to computational choices due to resolved obstacles or due to faults.
 	\item \textbf{Obstacles:} Obstacles can prevent reproducers from obtaining a result. These include underspecification and external constraints.
 	\item \textbf{Mistakes:} Actions that cause a computation to be at odds with the reported artifacts in the scope are mistakes, such as writing incoherent descriptions. They are either identified by closely studying the available materials, possibly with the help of the original authors, or they are suspected by ruling out other possible reasons for differing results. If identified, reproducers may provide corrected results.
@@ -352,7 +358,7 @@ All four activities represent particular sets of phases that are redone out of a
 	In the rest of this section, we present formal definitions for central terms around reproductions. Starting with computations and descriptions, we delineate what reproductions are about at their core. We continue by defining scientific works and reproductions before exploring three reasons why a reproduction result can differ: underspecification, external constraints, and faults. Finally, we highlight the central importance of source code for reproductions.
 
 
-	Certain statements are accompanied by figures in the supplementary material representing formalized depictions of our definitions using the visual argument structure tool (VAST; Leising et al., 2023). We refer to them using the figure number and the specific number of that statement within that figure. If a statement defines a particular term, the term appears in bold font. Parentheses are used for optional parts of the term, which can be left out for brevity. The statement itself is typeset in italic font. Any further terms (regardless of whether used for the first time or subsequently) are typeset in small caps and, if used for the first time, defined in their own indented statement directly following. Examples or citations after the statement are in roman (non-italic) font again.
+	Certain statements are accompanied by figures in the supplementary material representing formalized depictions of our definitions using the visual argument structure tool (VAST; Leising et al., 2023). We refer to them using the figure number and the specific number of that statement within that figure. If a statement defines a particular term, the term appears in bold font. Parentheses are used for optional parts of the term, which can be left out for brevity. Any further terms used for the first time are defined in their own indented statement directly following.
 
 
 
@@ -368,7 +374,7 @@ All four activities represent particular sets of phases that are redone out of a
 	\noindent\emph{\textbf{Computation}} (see S8 \rightarrow{ }n\textsubscript{1}): A particular calculation of one or multiple \textsc{results} that can be dependent on (1) specific \textsc{data}, (2) a specific \textsc{computational environment,} and (3) specific \textsc{code}.
 
 	\begin{itemize}[label=\phantom{\textbullet},topsep=0pt]
-		\item \emph{\textbf{Result}} (see S9 \rightarrow{ }n\textsubscript{2}): \textsc{Data} that is the product of a \textsc{computation}. May be used as support for one or multiple \textsc{claims.} For example, a result can be a singular number, a table, a figure, a part of a table or a figure (such as a table cell or a plot reading), or a collection of such elements.
+		\item \emph{\textbf{Result}} (see S9 \rightarrow{ }n\textsubscript{2}): \textsc{Data} that is the product of a \textsc{computation}. May be used as support for one or multiple \textsc{claims.} For example, a result can be a single number, a table, a figure, a part of a table or a figure (such as a table cell or a plot reading), or a collection of such elements.
 		\begin{itemize}[label=\phantom{\textbullet}]
 			\item \emph{\textbf{Claim}} (see S10/S11 \rightarrow{ }n\textsubscript{2}): A conclusion drawn from one or multiple \textsc{results}. For the purpose of a reproduction, the support for a claim can be found to be strengthened, weakened, or undetermined. It is at the reproducers' discretion to decide which parts of a scientific work comprise a claim, as reproductions of single studies typically allow for a higher granularity than mass reproductions of multiple scientific works. For example, one statement by the original authors could be split into multiple claims by the reproducers.
 		\end{itemize}
@@ -406,7 +412,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 	\end{itemize}
 
-	Note that the first three examples are computations on collected data, while the final two examples generate (“collect”) data in the first place. For this article, during a reproduction, the source code for all of them may get re-executed, but the simulation source code of the final two examples may not get re-implemented, as this would be part of a replication.
+	Note that the first three examples are computations on collected data, while the final two examples generate (“collect”) data in the first place. For this article, during a reproduction, the source code for all of them may get re-executed, but the simulation source code of the final two examples does not get re-implemented, as this would be part of a replication.
 
 
 
@@ -427,7 +433,7 @@ All four activities represent particular sets of phases that are redone out of a
 	\end{itemize}
 
 	\vspace{\topsep}
-	An obvious example of a description is the methods section of a journal article detailing the analytical treatment of data. However, descriptions can also have other locations, such as the preregistration, the supplementary materials provided with a journal article, or emails from the original authors. Finally, descriptions may not only be written in prose, but also in a particular programming language as source code which can be executed by a computer. Treating source code as a (human-readable) description highlights its usefulness for understanding and reproducing the original work long after it stopped being immediately re-executable.
+	An obvious example of a description is the methods section of a journal article detailing the analytical treatment of data. However, descriptions can also have other locations, such as the preregistration, the supplementary material provided with a journal article, or emails from the original authors. Finally, descriptions may not only be written in prose, but also in a particular programming language as source code which can be executed by a computer. Treating source code as a (human-readable) description highlights its usefulness for understanding and reproducing the original work long after it stopped being immediately re-executable.
 
 
 
@@ -458,11 +464,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	Given one or multiple \textsc{descriptions}, all \textsc{choices left unspecified}, and, potentially, \textsc{data}, one can infer a particular \textsc{computation} (see S3 \rightarrow{ }n\textsubscript{1}).
-
-
-
-	If this second (redone) computation gives a sufficiently similar result to the one reported in the original work, the verification is successful.
+	It is by using one or multiple \textsc{descriptions}, all \textsc{choices left unspecified}, and, potentially, \textsc{data}, one can infer a particular \textsc{computation} (see S3 \rightarrow{ }n\textsubscript{1}). If this second (redone) computation gives a sufficiently similar result to the one reported in the original work, the verification is successful.
 
 
 
@@ -470,7 +472,7 @@ All four activities represent particular sets of phases that are redone out of a
 	\vspace{\topsep}
 
 
-	\noindent A \emph{reproduction} (see S12/S13/S14 \rightarrow{ }n\textsubscript{9}) is a research activity with the goal of verifying that a \textsc{computation} on \textsc{collected data} corresponds to the reported \textsc{descriptions}, \textsc{collected data} (or simulation \textsc{source code}, in the case of in silico \textsc{works}), and \textsc{results}. At its core, it involves performing a second \textsc{computation} inferred from the \textsc{descriptions} in the \textsc{scope}, from \textsc{unspecified} and \textsc{conflicting choices}, and using \textsc{collected data} in the \textsc{scope} (possibly generated by re-executing simulation \textsc{source code}). Then, the \textsc{results} are compared and (optionally) the support for the \textsc{claims} is evaluated.
+	\noindent A \emph{\textbf{reproduction}} (see S12/S13/S14 \rightarrow{ }n\textsubscript{9}) is a research activity with the goal of verifying that a \textsc{computation} on \textsc{collected data} corresponds to the reported \textsc{descriptions}, \textsc{collected data} (or simulation \textsc{source code}, in the case of in silico \textsc{works}), and \textsc{results}. At its core, it involves performing a second \textsc{computation} inferred from the \textsc{descriptions} in the \textsc{scope}, from \textsc{unspecified} and \textsc{conflicting choices}, and using \textsc{collected data} in the \textsc{scope} (possibly generated by re-executing simulation \textsc{source code}). Then, the \textsc{results} are compared and (optionally) the support for the \textsc{claims} is evaluated.
 
 	\begin{itemize}[label=\phantom{\textbullet},topsep=0pt]
 		\item \emph{\textbf{Collected data}} (see S7 \rightarrow{ }n\textsubscript{1}): The product of the data collection phase, potentially preprocessed (see Figure 1).
@@ -479,12 +481,16 @@ All four activities represent particular sets of phases that are redone out of a
 			\item \emph{\textbf{Coherent descriptions}} (see S6 \rightarrow{ }n\textsubscript{1}): \textsc{Descriptions} in which none of the instructions conflict with each other.
 		\end{itemize}
 		\item \emph{\textbf{Collected data scope}} (see S12/S13/S14 \rightarrow{ }n\textsubscript{4}): Collected data commonly go through multiple computational stages. The collected data scope describes which of these stages are considered (i.e., redone) during the reproduction. If all stages are considered, one works with the \textsc{primary collected data}. Examples for computational stages are preprocessing, statistical testing, and visualization.
+		\begin{itemize}[label=\phantom{\textbullet}]
+			\item \emph{\textbf{Primary collected data}} (see S7 \rightarrow{ }n\textsubscript{5}): First digital representation of the \textsc{raw collected data} (Gollwitzer et al., 2021).
+			\begin{itemize}[label=\phantom{\textbullet}]
+			\item \emph{\textbf{Raw collected data}} (see S7 \rightarrow{ }n\textsubscript{4}): Original records, that is the first non-volatile form of \textsc{collected data}. In the case of electronic data collection, raw collected data and primary collected data coincide (Gollwitzer et al., 2021).
+			\end{itemize}
+		\end{itemize}
 	\end{itemize}
-	\emph{\textbf{Primary collected data}} (see S7 \rightarrow{ }n\textsubscript{5}): First digital representation of the \textsc{raw collected data} (Gollwitzer et al., 2021).
+	
 
 
-
-	\noindent\emph{\textbf{Raw collected data}} (see S7 \rightarrow{ }n\textsubscript{4}): Original records, that is the first non-volatile form of \textsc{collected data}. In the case of electronic data collection, raw collected data and primary collected data coincide (Gollwitzer et al., 2021).
 
 	\begin{itemize}[label=\phantom{\textbullet},topsep=0pt]
 		\item \emph{\textbf{Unspecified choices}} (see S4 \rightarrow{ }n\textsubscript{3}): \textsc{Computational choices} not prescribed by the \textsc{descriptions} in the \textsc{scope}, filling gaps due to underspecification. For example, if the original authors do not describe an algorithm's required parameters, these would be unspecified choices during the implementation concerning the source code. Similarly, if the version of utilized software is not disclosed, that would be an unspecified choice during the execution concerning the computational environment.
@@ -496,11 +502,11 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	Of course, the results may simply differ because the unspecified choices varied between the original work and the reproduction. Also, reproducers may make choices that conflict with the descriptions out of necessity. For this reason, we recommend evaluating the consistency of results—rather than the identity—by exploring alternative unspecified choices and estimating the largest expected difference given any conflicting choices. Section 4 will go into more detail about that.
+	Of course, the results may simply differ because the unspecified choices varied between the original work and the reproduction. Also, reproducers may make choices that conflict with the descriptions out of necessity. For this reason, we recommend evaluating the consistency of results—rather than the identity—by exploring alternative unspecified choices and estimating the largest expected difference given any conflicting choices (see also "Discussion and Recommendations").
 
 
 
-	Verifying whether a computation corresponds to the descriptions in the scope requires the descriptions to be coherent in the first place; they cannot contain contradicting instructions. Thus, broadening the description scope can provide an additional chance to detect faults. Similarly, with a broader collected data scope, fewer computational steps remain unchecked, making the outcome “consistent results” more useful. Section 4 of this article will also consider other senses in which a reproduction is restricted to a certain scope worth reporting.
+	Verifying whether a computation corresponds to the descriptions in the scope requires the descriptions to be coherent in the first place; they cannot contain contradicting instructions. Thus, broadening the description scope can provide an additional chance to detect faults. Similarly, with a broader collected data scope, fewer computational steps remain unchecked, making the outcome “consistent results” more useful. The "Discussion and Recommendations section" of this article will also consider other senses in which a reproduction is restricted to a certain scope worth reporting.
 
 
 
@@ -528,7 +534,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	By obstacle, we mean everything that can prevent reproducers from obtaining a result (and that is not a fault). We discuss two common ones: underspecified descriptions (where the reproducers do not know what to do) and external constraints (where the reproducers know what to do but cannot do it). These require that reproducers make additional choices, which may deviate from those by the original authors, leading to changing computations. Computational choices can manifest while implementing the source code and during execution in a particular environment, see (c) and (e) in Figure 1.
+	By obstacle, we mean everything that can prevent reproducers from obtaining a result (and that is not a fault). We discuss two common ones: underspecified descriptions (where the reproducers do not know what to do) and external constraints (where the reproducers know what to do but cannot do it). These require that reproducers make additional choices, which may deviate from those by the original authors, leading to changing computations. Computational choices can manifest while implementing the source code and during execution in a particular environment, see (h) and (j) in Figure 1.
 
 
 
@@ -564,30 +570,30 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	Another possible reason for a differing result is a fault due to a mistake—either by the original authors or the reproducers themselves. In Section 2, we differentiated mistakes by the phase of the research process they happen in, particularly implementation vs. reporting mistakes, either during the data analysis or during an \emph{in silico} data collection. What the resulting faults have in common is that they both cause the computation to be at odds with the reported artifacts in the scope. This is the type of fault we consider in the following.
+	Another possible reason for a differing result is a fault due to a mistake—either by the original authors or the reproducers themselves. In the second section of this article, "The Verifying Function of Reproductions", we differentiated mistakes by the phase of the research process they happen in, particularly implementation vs. reporting mistakes, either during the data analysis or during an in silico data collection. What the resulting faults have in common is that they both cause the computation to be at odds with the reported artifacts in the scope. This is the type of fault we consider in the following.
 
 
 
-	The \textsc{computation} may not correspond to the reported \textsc{descriptions}, \textsc{collected data }(or simulation \textsc{source code}, in the case of in silico \textsc{works}), or \textsc{results} (see S15 \rightarrow{ }n\textsubscript{24}). For example, during the data analysis, the two experimental conditions might have gotten confused, effectively leading to the opposite claim.
+	In particular, we define faults as instances where the computation does not correspond to the reported \textsc{descriptions}, \textsc{collected data }(or simulation \textsc{source code}, in the case of in silico \textsc{works}), or \textsc{results} (see S15 \rightarrow{ }n\textsubscript{24}). For example, during the data analysis, the two experimental conditions might have gotten confused, effectively leading to the opposite claim.
 
 
 
-	Note that this does explicitly not cover faults that only manifest when applying the same code to newly collected data, as the definition is dependent on the specific results and collected data reported by the original authors. Also, from all the faults covered by this definition, there are four cases that are specifically mentioned in the following, as they are probably not frequently thought of—for example, cases 2 through 4 are not covered by the heuristic guide from Section 2. Reproducers might benefit from considering them as well if they try to identify the precise reason for different results.
+	Note that this explicitly does not cover faults that only manifest when applying the same code to newly collected data, as the definition is dependent on the specific results and collected data reported by the original authors. Also, from all the faults covered by this definition, there are four cases that are specifically mentioned in the following, as they are probably not frequently thought of—for example, cases 2 through 4 are not covered by the heuristic guide introduced earlier in this paper. Reproducers might benefit from considering them as well if they try to identify the precise reason for different results.
 
 
 	\vspace{\topsep}
 
-	\noindent \textbf{Fault Case 1 (see S15 \rightarrow{ }n\textsubscript{23}):} The \textsc{descriptions} may not be \textsc{coherent}, for example, if the source code contradicts the methods section of a journal article or the preregistration gives different instructions for the computation than the methods section does.
+	\noindent \textbf{Fault Case 1} (see S15 \rightarrow{ }n\textsubscript{23}): The \textsc{descriptions} may not be \textsc{coherent}, for example, if the source code contradicts the methods section of a journal article or the preregistration gives different instructions for the computation than the methods section does.
 
 	
 
 
-	\noindent \textbf{Fault Case 2a (in natura works, see S15 \rightarrow{ }n\textsubscript{22}):} The \textsc{collected data reported} by authors may differ from the \textsc{collected data utilized }to obtain the \textsc{result}, for example, because the data in a repository were changed by their provider (see Goes, 2023).
+	\noindent \textbf{Fault Case 2a} (in natura works, see S15 \rightarrow{ }n\textsubscript{22}): The \textsc{collected data reported} by authors may differ from the \textsc{collected data utilized }to obtain the \textsc{result}, for example, because the data in a repository were changed by their provider (see Goes, 2023).
 
 	\begin{itemize}[label=\phantom{\textbullet},topsep=0pt]
-		\item \textbf{\emph{Reported data} (see S7 \rightarrow{ }n\textsubscript{3}):} \textsc{Data} published alongside or referenced from a \textsc{scientific work}.
+		\item \textbf{\emph{Reported data}} (see S7 \rightarrow{ }n\textsubscript{3}): \textsc{Data} published alongside or referenced from a \textsc{scientific work}.
 
-		\item \textbf{\emph{Utilized data} (see S7 \rightarrow{ }n\textsubscript{2}):} \textsc{Data} used during a \textsc{computation}.
+		\item \textbf{\emph{Utilized data}} (see S7 \rightarrow{ }n\textsubscript{2}): \textsc{Data} used during a \textsc{computation}.
 	\end{itemize}
 
 	
@@ -596,11 +602,11 @@ All four activities represent particular sets of phases that are redone out of a
 	
 
 
-	\noindent \textbf{Fault Case 2b (in silico works, see S16 \rightarrow{ }n\textsubscript{18}):} The simulation \textsc{source code reported} by authors may differ from the one \textsc{executed} to obtain the \textsc{primary collected data}.
+	\noindent \textbf{Fault Case 2b} (in silico works, see S16 \rightarrow{ }n\textsubscript{18}): The simulation \textsc{source code reported} by authors may differ from the one \textsc{executed} to obtain the \textsc{primary collected data}.
 
 
 	\begin{itemize}[label=\phantom{\textbullet},topsep=0pt]
-		\item \textbf{\emph{Reported code}} (see S5 \rightarrow{ }n\textsubscript{4}): \textsc{\emph{Code}}\emph{ made available by its authors.}
+		\item \textbf{\emph{Reported code}} (see S5 \rightarrow{ }n\textsubscript{4}): Code made available by its authors.
 
 		\item \textbf{\emph{Executed code}} (see S5 \rightarrow{ }n\textsubscript{2}): \textsc{Code} run during a \textsc{computation}.
 	\end{itemize}
@@ -611,10 +617,10 @@ All four activities represent particular sets of phases that are redone out of a
 	
 
 
-	\noindent \textbf{Fault Case 3 (see S15 \rightarrow{ }n\textsubscript{21}):} The data analysis \textsc{source code reported} by authors may differ from the one \textsc{executed} to obtain the \textsc{result}. Even employing version control does not protect against accidentally using a different version.
+	\noindent \textbf{Fault Case 3} (see S15 \rightarrow{ }n\textsubscript{21}): The data analysis \textsc{source code reported} by authors may differ from the one \textsc{executed} to obtain the \textsc{result}. Even employing version control does not protect against accidentally using a different version.
 
 
-	\noindent \textbf{Fault Case 4 (see S15 \rightarrow{ }n\textsubscript{20}):} The \textsc{result reported} by authors may not correspond to the \textsc{obtained result}. For example, for elaborate computations, the actual result must be identified among many lines of output and subsequently transferred to the publication, two actions during which mistakes can happen.
+	\noindent \textbf{Fault Case 4} (see S15 \rightarrow{ }n\textsubscript{20}): The \textsc{result reported} by authors may not correspond to the \textsc{obtained result}. For example, for elaborate computations, the actual result must be identified among many lines of output and subsequently transferred to the publication, two actions during which mistakes can happen.
 
 
 
@@ -646,7 +652,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	From the discussion so far, it becomes clear that there is a subjective side to reproductions: Underspecification is a property ascribed by the replicators to a description and consequently depends on their knowledge and the methods standards they apply. Similarly, it is conceivable that original authors and reproducers differ in their interpretation of a particular description. The implications of this subjectivity are twofold: First, communication between the original authors and reproducers can be key to resolving uncertainty. Second, scripted computations are in a unique position to facilitate a fruitful reproduction due to their dual nature: They are human-readable and they are used to control computers, thus providing an accurate (though not complete\footnote{ The execution of the source code requires human intervention, such as for providing the necessary hardware and software, compiling the source code, and invoking the program with correct parameters.}) record of a computation at a certain point in time. This deterministic automation sets them apart, for example, from statistical software with only graphical user interfaces, where a description of the performed manual steps is at a higher risk of being insufficient or inaccurate.
+	From the discussion so far, it becomes clear that there is a subjective side to reproductions: Underspecification is a property ascribed by the reproducers to a description and consequently depends on their knowledge and the methods standards they apply. Similarly, it is conceivable that original authors and reproducers differ in their interpretation of a particular description. The implications of this subjectivity are twofold: First, communication between the original authors and reproducers can be key to resolving uncertainty. Second, scripted computations are in a unique position to facilitate a fruitful reproduction due to their dual nature: They are human-readable and they are used to control computers, thus providing an accurate (though not complete\footnote{ The execution of the source code requires human intervention, such as for providing the necessary hardware and software, compiling the source code, and invoking the program with correct parameters.}) record of a computation at a certain point in time. This deterministic automation sets them apart, for example, from statistical software with only graphical user interfaces, where a description of the performed manual steps is at a higher risk of being insufficient or inaccurate.
 
 
 	Checking the coherence of source code with the other descriptions in the scope is, therefore, a key activity that can be performed during a reproduction. One can discern three cases:
@@ -662,7 +668,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-		\item The source code may agree with or disagree with what is stated in the other descriptions. The latter represents a fault that needs to be resolved to obtain any result during the reproduction. Usually, statements from the preregistration take precedence over the implemented code.
+		\item The source code may agree with or disagree with what is stated in the other descriptions. The latter represents a fault that needs to be resolved to obtain any result during the reproduction. Usually, statements from the preregistration take precedence over subsequent implementations.
 
 	\end{itemize}
 
@@ -672,11 +678,11 @@ All four activities represent particular sets of phases that are redone out of a
 	In the preceding definitions, we introduced the results of a computation on collected data as the target of a reproduction. By descriptions, we refer to anything that characterizes the computation, such as parts of a methods section in a journal article or source code. Descriptions, together with results and collected data (or simulation source code, in the case of in silico works) and claims, are part of scientific works. During a reproduction, another computation is performed based on the descriptions in the scope, and the results are compared for consistency. Underspecification, external constraints, and faults are all reasons for a reproduction to produce different results than the original work. Human actions that cause a computation to be at odds with the reported artifacts in the scope, either during implementation or during reporting, are mistakes manifesting as faults. Four cases of faults are emphasized: (1) incoherent descriptions, (2) difference between the utilized and the reported collected data (or simulation source code), (3) difference between the executed and the reported data analysis source code, and (4) mismatch between the results one obtains and the results one reports.
 	\end{rightWide}
 
-	Crucially, this requires the availability of source code as well as other descriptions. It is not preferable for source code to be the only means of describing a computation, because it might not contain the reason for that computation (Benureau \& Rougier, 2018) nor their author's expectations about the result (Peng, 2022). Further, a precise description of a computation does not obviate the need for robustness tests (Rahal, 2024; Varoquaux, 2016). Finally, while source code improves the precision, reproducers still need certain domain-specific knowledge to make use of it.
+	Crucially, this requires the availability of source code as well as prose. It is not preferable for source code to be the only means of describing a computation, because it might not contain the reason for that computation (Benureau \& Rougier, 2018) nor their authors' expectations about the result (Peng, 2022). Further, a precise description of a computation does not obviate the need for robustness tests (Rahal, 2024; Varoquaux, 2016). Finally, while source code improves the precision, reproducers still need certain domain-specific knowledge to make use of it.
 
 
 
-	With the definitions introduced in Section 3, the difference between the three reproduction prototypes can be formulated precisely. Starting with the re-execution and the re-implementation reproduction, first, they differ in their description scope—the former would consider the data analysis source code by inheriting (i.e., re-executing) it but not check this source code for coherence with the methods section. In contrast, the latter would not consider the source code at all. Second, and consequently, the number of unspecified choices is expected to be more pronounced for a re-implementation reproduction. A re-collection reproduction, in contrast, is only possible for in silico works. It usually has no data, but includes the simulation source code. In addition, this source code will be executed as part of the re-collection reproduction. Therefore, it also comes with a whole new opportunity for unspecified choices. However, because there are also atypical cases, merely stating which prototype has been performed is generally not sufficient. For example, a re-implementation reproduction may base its data analysis re-implementation on the original source code, or a re-execution reproduction might also check the original data analysis source code for coherence with the methods section. Therefore, in Section 4 of this article, we give specific recommendations on how to report a reproduction. Also note that Figure 1 and Table 1 do not cover such atypical cases.
+	With the definitions introduced in this section, the difference between the three reproduction prototypes can be formulated precisely. Starting with the re-execution and the re-implementation reproduction, first, they differ in their description scope—the former would consider the data analysis source code by inheriting (i.e., re-executing) it but not check this source code for coherence with the methods section. In contrast, the latter would not consider the source code at all. Second, and consequently, the number of unspecified choices is expected to be more pronounced for a re-implementation reproduction. A re-collection reproduction, in contrast, is only possible for in silico works. It usually has no data, but includes the simulation source code. In addition, this source code will be executed as part of the re-collection reproduction. Therefore, it also comes with a whole new opportunity for unspecified choices. However, because there are also atypical cases, merely stating which prototype has been performed is generally not sufficient. For example, a re-implementation reproduction may base its data analysis re-implementation on the original source code, or a re-execution reproduction might also check the original data analysis source code for coherence with the methods section. Therefore, in the final section of this article, we give specific recommendations on how to report a reproduction. Also note that Figure 1 and Table 1 do not cover such atypical cases.
 	\section{Performing a Reproduction}
 
 	In the following, building on the definitions, we sketch the reproduction procedure to verify that a computation on collected data corresponds to the reported artifacts (i.e., the descriptions, collected data—or simulation source code in the case of in silico works—and results) in the scope. It consists of (a) defining the scope of the reproduction in terms of the involved works, claims, results, collected data, and descriptions, (b) ensuring the availability of descriptions, results, and collected data (or simulation source code), (c) performing the computation to obtain results, potentially by resolving obstacles, (d) evaluating the results' consistency, potentially by assessing the largest expected differences in results, and, optionally, (e) evaluating whether the claims are supported given the information acquired during the reproduction. We conclude with remarks on reporting the outcome of a reproduction.
@@ -717,7 +723,7 @@ All four activities represent particular sets of phases that are redone out of a
 		\end{itemize}
 
 		\item
-		\textbf{Involved descriptions:} Reproducers may only focus on a subset of the available descriptions that informs their computation, whose coherence is checked, and that is re-executed. Is the re-executed code used as is, or is it being modified or extended? The smaller the description scope, the fewer faults can be detected.
+		\textbf{Involved descriptions:} Reproducers may only focus on a subset of the available descriptions to inform their computation, be checked for coherence, and be re-executed. Is the re-executed code used as is, or is it being modified or extended? The smaller the description scope, the fewer faults can be detected.
 
 
 
@@ -734,7 +740,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	If the descriptions, the collected data (or simulation source code) in the scope are not available or the original results cannot be identified, the reproduction cannot be conducted. The original authors or any other relevant stakeholders should be contacted at this point to provide what is missing, or the scope needs to be adjusted to what is available. Otherwise, the reproduction outcome for the affected results and claims is undetermined due to failing a precondition (e.g., lack of collected data).
+	If the descriptions or the collected data (or simulation source code) in the scope are not available or if the original results cannot be identified, the reproduction cannot be conducted. The original authors or any other relevant stakeholders should be contacted at this point to provide what is missing, or the scope needs to be adjusted to what is available. Otherwise, the reproduction outcome for the affected results and claims is undetermined due to failing a precondition (e.g., lack of collected data).
 
 
 	From this step on, readers can compare the procedure with Figure 2. It depicts a flowchart for performing a reproduction in the case of one result and one claim. A more detailed version is available in the Appendix as Figure A1.
@@ -742,7 +748,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 	\begin{figure*}
-		\includegraphics[width=\linewidth, height=0.9\textheight, keepaspectratio]{media/image3.png}
+		\includegraphics[width=\linewidth, height=0.9\textheight, keepaspectratio]{media/image3.pdf}
 
 		\caption{Summary Flowchart for Performing the Reproduction of One Result}
 
@@ -760,7 +766,7 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	If reproducers identify faults, such as incoherent descriptions, they need to correct them. When reproducers encounter obstacles, in many instances a helpful strategy is to contact the original authors and ask for clarification. However, this may be impossible due to limited reachability and time constraints, or it might not help resolve the obstacle. In that case, another strategy is to start by making the most likely choice according to chosen standards in order to obtain any results (Martel García, 2013). For example, if it is not clear whether a psychological study has performed a two-sample \emph{t}-test for equal or unequal variances, psychologists might want to start with the latter (Delacre et al., 2017). However, choosing among multiple options might not be possible if the reproducers are limited by their resources. Hence, as a third strategy, reproducers might need to make a choice conflicting with the descriptions, for example, by simplifying computations or using a different software. Finally, if the obstacles cannot be resolved, the reproduction's outcome concerning the affected results and claims must be regarded as undetermined by stating the respective obstacle.
+	If reproducers identify faults, such as incoherent descriptions, they need to correct them. When reproducers encounter obstacles, in many instances a helpful strategy is to contact the original authors and ask for clarification. However, this may be impossible due to limited reachability and time constraints, or it might not help resolve the obstacle. In that case, another strategy is to start by making the most likely choice according to chosen standards to obtain any results (Martel García, 2013). For example, if it is not clear whether a psychological study has performed a two-sample \emph{t}-test for equal or unequal variances, psychologists might want to start with the latter (Delacre et al., 2017). However, choosing among multiple options might not be possible if the reproducers are limited by their resources. Hence, as a third strategy, reproducers might need to make a choice conflicting with the descriptions, for example, by simplifying computations or using different software. Finally, if the obstacles cannot be resolved, the reproduction's outcome concerning the affected results and claims must be regarded as undetermined by stating the respective obstacle.
 
 
 
@@ -772,13 +778,13 @@ All four activities represent particular sets of phases that are redone out of a
 
 
 
-	In the easiest case, the original and the reproduction result can be deemed consistent because they are identical (i.e., they match at the maximum precision their representation allows). If a study reports a numerical result with four digits, for example, all four digits need to match after the reproduction result has been rounded to the same precision. In some instances, such identical results can be obtained by using information provided by the original authors. For example, if asked about a non-identical result, the original authors might argue that the reproducers misunderstood a description and provide them with a way of obtaining exactly the same result, in which case the results can be regarded as \emph{consistent}. On the other hand, the original authors might confirm the existence of a fault. If the fault is found to be responsible for the non-identical result, the result can be regarded as \emph{inconsistent}. Otherwise, other possible reasons for the difference need to be considered, as detailed below.
+	In the easiest case, the original and the reproduction result can be deemed consistent because they are identical (i.e., they match at the maximum precision their representation allows). If a study reports a numerical result with four digits, for example, all four digits need to match after the reproduction result has been rounded to the same precision. In some instances, such identical results can be obtained by using information provided by the original authors. For example, if asked about a non-identical result, the original authors might argue that the reproducers misunderstood a description and provide them with a way of obtaining exactly the same result, in which case the results can be regarded as consistent. On the other hand, the original authors might confirm the existence of a fault. If the fault is found to be responsible for the non-identical result, the result can be regarded as inconsistent. Otherwise, other possible reasons for the difference need to be considered, as detailed below.
 
 
 	If the results are not identical, it is still reasonable to consider them consistent if their difference can occur due to how obstacles were resolved by the reproducers. For example, if the difference between results can be explained solely by the fact that a different operating system has been used (and it is not too large), most people would still consider them consistent. Then, it is up to the readers to decide whether the change between the two computations (here, a different operating system) is critical to them. Therefore, reproducers should investigate whether the results differ no more than the largest expected difference given how any obstacles were resolved. In the following, we describe two strategies for deciding on the consistency of results. It is recommended to try the first strategy if the number of possible computations is finite and the second strategy if it is infinite.
 
 
-	The first strategy is that any choice to resolve underspecification can be varied to another appropriate option until identical results are obtained. Remaining faults of the type discussed above (see S15 \rightarrow{ }n\textsubscript{24}) can now be considered less likely, and the results are deemed \emph{consistent}. For example, imagine that the description of the original authors only mentioned a “\emph{t}-test”. If the reproducers initially calculated a two-sample \emph{t}-test for unequal variances and obtained a different \emph{p}-value, a test assuming equal variances can be tried next—both analytical pathways are consistent with the underspecified description. If the \emph{p}-value from the reproduction is now identical to the original one, they can be regarded as "consistent", and faults can be considered less likely. If no identical result is obtained despite trying all appropriate choices, the original and the reproduction result can be regarded as "inconsistent". Of course, this evaluation is highly dependent on the chosen methods standards.
+	The first strategy is that any choice to resolve underspecification can be varied to another appropriate option until identical results are obtained. Remaining faults as defined in this article can now be considered less likely, and the results are deemed consistent. For example, imagine that the description of the original authors only mentioned a “\emph{t}-test”. If the reproducers initially calculated a two-sample \emph{t}-test for unequal variances and obtained a different \emph{p}-value, a test assuming equal variances can be tried next—both analytical pathways are consistent with the underspecified description. If the \emph{p}-value from the reproduction is now identical to the original one, they can be regarded as consistent, and faults can be considered less likely. If no identical result is obtained despite trying all appropriate choices, the original and the reproduction result can be regarded as inconsistent. Of course, this evaluation is highly dependent on the chosen methods standards.
 
 	\begin{rightWide}[Box 3]
 	\textbf{Possible Outcomes for the Consistency of Results}
@@ -805,11 +811,11 @@ All four activities represent particular sets of phases that are redone out of a
 		\end{itemize}
 	\end{itemize}
 	\end{rightWide}
-	However, there may be instances where it is impossible to try all possible (appropriate) combinations of choices. Also, sometimes the instructions cannot be followed, leading to conflicting choices. Therefore, a second strategy is to estimate the impact of deviations in terms of differences between results—similar to an estimation of the model variance during a robustness check (Young, 2009)—and determine whether the original and the reproduction result differ more than expected. For example, if no random seeds are reported, they can perform multiple computations with multiple random seeds and check whether the original result stands out from the reproduction results (e.g., Sego et al., 2024). Or, if the operating system is different, reproducers can make an educated guess concerning the tolerable differences due to floating point arithmetic. Empirical norm values for such standard cases are rarely available, for example, concerning the largest expected difference when changing a software package (for exceptions, see Jen et al., 2023; Letter, 2021; see also Hodges et al., 2022; Keeling \& Pavur, 2007; McCoach et al., 2018). Again, the reproduction results can be regarded as inconsistent or consistent with the original result, depending on whether they differ more than the largest expected difference or not. As before, this evaluation crucially depends on the chosen methods standards.
+	However, there may be instances where it is impossible to try all possible (appropriate) combinations of choices. Also, sometimes the instructions cannot be followed, leading to conflicting choices. Therefore, a second strategy is to estimate the impact of deviations in terms of differences between results—similar to an estimation of the model variance during a robustness check (Young, 2009)—and determine whether the original and the reproduction result differ more than expected. For example, if no random seeds are reported, one can perform multiple computations with multiple random seeds and check whether the original result stands out from the reproduction results (e.g., Sego et al., 2024). Or, if the operating system is different, reproducers can make an educated guess concerning the tolerable differences due to floating point arithmetic. Empirical norm values for such standard cases are rarely available, for example, concerning the largest expected difference when changing a software package (for exceptions, see Jen et al., 2023; Letter, 2021; see also Hodges et al., 2022; Keeling \& Pavur, 2007; McCoach et al., 2018). Again, the reproduction results can be regarded as inconsistent or consistent with the original result, depending on whether they differ more than the largest expected difference or not. As before, this evaluation crucially depends on the chosen methods standards.
 
 
 
-	If no strategy is feasible to decide on the consistency of results, it remains unclear whether the observed difference between original and reproduction result can be attributed to a fault or simply to a choice in the step of resolving an obstacle. In this case, despite having obtained a result, the consistency must be declared "undetermined", stating all relevant obstacles.
+	If no strategy is feasible to decide on the consistency of results, it remains unclear whether the observed difference between original and reproduction result can be attributed to a fault or simply to a choice in the step of resolving an obstacle. In this case, despite having obtained a result, the consistency must be declared undetermined, stating all relevant obstacles.
 
 
 
@@ -821,10 +827,10 @@ All four activities represent particular sets of phases that are redone out of a
 	Until this point, the reproducers made a separate consistency evaluation for every original result selected for the reproduction. Per original result, the reproducers either did not obtain a reproduction result (due to failed preconditions or unresolved obstacles), they obtained an identical result, or they obtained no identical result and (if possible) assessed the largest expected difference between the results given how any obstacles were resolved. If the results are inconsistent or the consistency is undetermined, a reproduction can also explore why. This is an iterative process where the computation is modified until the same (faulty) result is obtained. It is most likely to succeed if the original data analysis source code is provided.
 
 
-	One can now revisit Table 1, which also displays the state of knowledge implied by evaluating the consistency of results. The example from Section 2 of this article concluded with implementation choices and implementation mistakes concerning the data analysis as potential reasons for a different result. By evaluating whether the result of the re-implementation reproduction is consistent (rather than identical), one answers the question of whether the difference is possible given how obstacles were resolved by the reproducers and depending on the chosen methods standards. Suppose the results are found to be inconsistent. Then, one can say that the most important reason for differing results is a data analysis implementation mistake (i; indicated by a large disk)\footnote{ to the extent appropriate choices were covered by the methods standards} and any potential deviations due to choices concerning the data analysis implementation (or the environment) are negligible in comparison (indicated by a circle around a small disk). If, in contrast, the results are deemed consistent, one can conclude that data analysis implementation choices (and possibly environment choices) are among the most important reason for differences, and any potential implementation mistakes (and reporting mistakes) regarding the data analysis are probably not larger in comparison—again, contingent upon the applied methods standards.
+	One can now revisit Table 1, which also displays the state of knowledge implied by evaluating the consistency of results. The example discussed in "The Verifying Function of Reproductions", earlier in this paper, concluded with implementation choices and implementation mistakes concerning the data analysis as potential reasons for a different result. By evaluating whether the result of the re-implementation reproduction is consistent (rather than identical), one answers the question of whether the difference is possible given how obstacles were resolved by the reproducers and depending on the chosen methods standards. Suppose the results are found to be inconsistent. Then, one can say that the most important reasons for differing results is a data analysis implementation mistake (i; indicated by a large disk)\footnote{ to the extent appropriate choices were covered by the methods standards} and any potential deviations due to choices concerning the data analysis implementation (or the environment) are negligible in comparison (indicated by a circle around a small disk). If, in contrast, the results are deemed consistent, one can conclude that data analysis implementation choices (and possibly environment choices) are among the most important reason for differences, and any potential implementation mistakes (and reporting mistakes) regarding the data analysis are probably not larger in comparison—again, contingent upon the applied methods standards.
 
 
-	Table 1 also includes an example of evaluating the consistency of a replication's results. In addition to computational choices, the possible effects of sampling variability need to be considered here, and the results are inconsistent only if both cannot plausibly explain their difference. Evidently, replications do have a verifying function of their own, as consistent results change the belief about reporting and implementation faults, which are the two main threats to internal consistency discussed in this article. While their absence is not guaranteed, their consequences are small compared to computational choices and sampling variability. Inconsistent results, however, can have many possible reasons, and a lack of internal consistency is only one of multiple explanations.
+	Table 1 also includes an example of evaluating the consistency of a replication's results. In addition to computational choices, the possible effects of sampling variability need to be considered here, and the results are inconsistent only if both cannot plausibly explain their difference. Evidently, replications do have a verifying function of their own, as consistent results change the belief about reporting and implementation faults (which are the two main threats to internal consistency discussed in this article): While their absence is not guaranteed, their consequences are small compared to computational choices and sampling variability. Inconsistent results, however, can have many possible reasons, and a lack of internal consistency is only one of multiple explanations.
 
 
 	\subsection{(e) Evaluating the Support for the Claim}
@@ -837,10 +843,10 @@ All four activities represent particular sets of phases that are redone out of a
 	First, one considers the collected data, which might be deemed inappropriate to support a claim. This consideration includes the simulation source code, in the case of in silico works. For example, the sampled population might be considered unfit to make a particular claim, the operationalization of a construct could be regarded as unsuccessful, or the reproducers might argue that the study design does not allow for causal claims. Also, the reproducers might not know whether the collected data are appropriate for the result to support the claim. In all these cases, the reproducers can conclude that the support for the claim is undetermined, given the collected data. Otherwise, if the reproducers have no concerns about the collected data, the evaluation of the claim continues.
 
 
-	Second, the reproducers might have issues with the original author's specified choices regarding a claim. For example, the reproducers might find that the utilized statistical methods deviate from best practices in the respective field or that inadequate preprocessing calls the claim into question. Also, the reproducers might not know whether the specified choices are appropriate for the result to support the claim. Consequently, in these cases, the support for the claim might be regarded as undetermined due to an inadequate computation. If the reproducers have followed up with an appropriate computation, they can continue evaluating the claim. Similarly, if the reproducers do not find the computation to invalidate the claim, they can continue with its evaluation.
+	Second, the reproducers might have issues with the original authors' specified choices regarding a claim. For example, the reproducers might find that the utilized statistical methods deviate from best practices in the respective field or that inadequate preprocessing calls the claim into question. Also, the reproducers might not know whether the specified choices are appropriate for the result to support the claim. Consequently, in these cases, the support for the claim might be regarded as undetermined due to an inadequate computation. If the reproducers have followed up with an appropriate computation, they can continue evaluating the claim. Similarly, if the reproducers do not find the computation to invalidate the claim, they can continue with its evaluation.
 
 
-	Finally, it is necessary to check whether a claim is still supported, given the rule of inference used in the original work and the results obtained by the reproducers. If this is undecidable because the rule of inference is unknown or unfit, reproducers can choose an alternative rule of inference or regard the claim's support as undetermined. The reproducers might have performed multiple computations per original (focal) result due to obstacles and hence obtained multiple results. In that case, all reproduction results for that particular original result need to be evaluated. If all of them support a claim or do not support it, its support can directly be regarded as "strengthened" or "weakened", respectively. For example, if multiple results have been calculated (because of underspecification) until one was identical and all of them support the claim, the support for the claim can be considered strengthened. In another example, suppose the reproducers have estimated a largest expected difference. If all (hypothetical) results within this difference support the claim, it can directly be considered strengthened. If only some reproduction results support the claim, no general rule exists, and one must decide on the strength of the support on a case-by-case basis. Of course, one may also conclude that the support for the claim is undetermined.
+	Finally, it is necessary to check whether a claim is still supported, given the rule of inference used in the original work and the results obtained by the reproducers. If this is undecidable because the rule of inference is unknown or unfit, reproducers can choose an alternative rule of inference or regard the claim's support as undetermined. The reproducers might have performed multiple computations per original (focal) result due to obstacles and hence obtained multiple results. In that case, all reproduction results for that particular original result need to be evaluated. If all of them support a claim or do not support it, its support can directly be regarded as strengthened or weakened, respectively. For example, if multiple results have been calculated (because of underspecification) until one was identical and all of them support the claim, the support for the claim can be considered strengthened. In another example, suppose the reproducers have estimated a largest expected difference. If all (hypothetical) results within this difference support the claim, it can directly be considered strengthened. If only some reproduction results support the claim, no general rule exists, and one must decide on the strength of the support on a case-by-case basis. Of course, one may also conclude that the support for the claim is undetermined.
 
 	\begin{rightWide}[Box 4]
 	\textbf{Possible Outcomes for the Support for a Claim by One Result}
@@ -870,14 +876,14 @@ All four activities represent particular sets of phases that are redone out of a
 	As mentioned earlier, a claim supposedly supported by a result that the reproducers could not compute at all (due to failed preconditions or unresolved obstacles) must be regarded as having undetermined support by stating the reason why no result was obtained. Moreover, even identical results do not guarantee support for the claim: The original authors might have employed an inappropriate rule of inference. For example, the reproducers might write the following: “Although we could exactly reproduce the originally reported numerical result, the support for the claim is weakened because the employed rule of inference is inappropriate: The confirmatory nature of the study warrants correction for multiple testing, which is missing. When the α level is correctly reduced, the result is not significant anymore.”
 
 
-	However, if a claim is backed by multiple results in the original work, all of them need to be considered. Because the rule of inference can be an arbitrary function that maps the results onto a claim, it might not be possible to consider the results individually in their support for the claim. Of course, such a “holistic” assessment of the results may be performed implicitly, making its criteria unknown to the reproducers. The case of multiple results is not covered by Figures 2 and A1.
+	However, if a claim is backed by multiple results in the original work, all of them need to be considered. Because the rule of inference can be an arbitrary function that maps the results onto a claim, it might not be possible to consider the results individually in their support for the claim. Of course, the original authors may have performed such a “holistic” assessment of the results implicitly, making its criteria unknown to the reproducers. The case of multiple results is not covered by Figures 2 and A1.
 
 
 	As an example of multiple results, significant improvements in speed and accuracy might support the claim that an experimental condition improves performance. Consequently, the reproducers need to check that both speed and accuracy indeed improve significantly. In this example, if only one of the reproduction results shows a significant improvement, the support for the claim would be considered undetermined, and if neither shows significant improvements, the support for the claim would be considered weakened. In general, this depends on the logical function that maps the results onto claims.
 
 	
 
-
+	\subsection{(f) Reporting the Outcome}
 
 	Reporting a reproduction should be more nuanced than just announcing its success or failure for at least two reasons. First, although reproductions should give very similar results, reproducers may underestimate the largest expected difference in results, leading to premature statements about their failure. Second, there is considerable variability in the activities that all count as reproductions and similarly in the conclusions that can be drawn from them. Therefore, summaries of reproductions should (1) use careful language, (2) also evaluate the substantive claim, and (3) be transparent about their limitations.
 
@@ -903,11 +909,11 @@ All four activities represent particular sets of phases that are redone out of a
 	Note that for the consistency evaluation, the original result is compared with the reproduction result of a computation that only includes corrections due to faults. When evaluating the support for the claim, however, one uses the reproduction result of a computation that also includes other corrections that reproducers deem necessary to decide on the support (such as changing the computation or the rule of inference because the one originally proposed did not follow current best practice).
 
 
-	The outcome of a reproduction (i.e., the evaluations of consistency of results and support for the claims) critically depends on its scope. For example:
+	The outcome of a reproduction (i.e., the evaluations of consistency of results and support for the claims) critically depends on the reproduction's scope. For example:
 	\begin{itemize}
 
 
-		\item Interpreting the outcomes from a mass reproduction of multiple works depends on the inclusion criteria.
+		\item Interpreting the outcomes from a mass reproduction of multiple works depends on the article inclusion criteria.
 
 
 
@@ -940,11 +946,11 @@ All four activities represent particular sets of phases that are redone out of a
 		\end{itemize}
 		\item \emph{Scope}
 		\begin{itemize}[leftmargin=2.5em, label={\hspace{1em}\textbullet}]
-			\item Works: Report any permanent identifiers of the investigated works and whether they are \emph{in silico} works.
+			\item Works: Report any permanent identifiers of the investigated works and whether they are in silico works.
 			\item Results: Report which results are being investigated (mention page or table where the results can be found).
 			\item Claims: Report which claims, if any, are being investigated.
 			\item  Collected data / simulation source code: To what extent have the obtained collected data been preprocessed? To what extent is the simulation source code being re-executed?
-			\item Descriptions: Which descriptions inform the computation, are checked for coherence and/or are re-executed?
+			\item Descriptions: Which descriptions inform the computation, are checked for coherence, and/or are re-executed?
 		\end{itemize}
 	\end{itemize}
 
@@ -975,7 +981,7 @@ All four activities represent particular sets of phases that are redone out of a
 			\begin{itemize}[leftmargin=2.5em, label={\hspace{1em}\textbullet}]
 				\item \ding{114} At least one description was available
 				\item \ding{114} Collected data (or simulation source code) was available
-				\item \ding{114} The original results for comparison were available
+				\item \ding{114} The original results were available for comparison
 			\end{itemize}
 			\item \emph{Obstacles:} Were any obstacles encountered, like underspecification or external constraints, and (how) were they resolved?
 			\item \emph{Faults:} Were any faults identified?
@@ -1013,13 +1019,13 @@ All four activities represent particular sets of phases that are redone out of a
 	This article contributes to the literature on redoing activities—scientific activities that redo some phases of a previous study—in particular on (computational) reproductions. We define reproductions as redoing activities that work with the originally collected data (or the reported simulation source code, in the case of in silico works) and aim to keep the data analysis as similar as possible. This article explicates their logic and provides a conceptual framework for describing their different flavors and understanding their epistemic function, that is, what one learns from their conduct. Further, it establishes a new standard for the consistency of results, which accounts for uncertainty in the model description and provides recommendations on reporting the outcome of a reproduction.
 
 
-	In Section 2, we presented a heuristic guide detailing the epistemic function of reproductions in comparison to replications. By comparing how these redoing activities provide evidence for or against which types of mistakes (see Figure 1 and Table 1), we clarify their respective roles in verification. We discerned three reproduction prototypes, depending on whether the original data analysis source code is re-executed, re-implemented, or—in the case of in silico works—data are re-collected by re-executing the reported simulation source code. Further, reproductions are discerned from replications, which involve collecting new data (or re-implementing the simulation source code). We introduced data analysis implementation and reporting mistakes and explained that a re-execution reproduction alone cannot detect the former. As a remedy, one can combine re-execution with a re-implementation reproduction or manually check the source code for coherence with the other descriptions. The verifying function of redoing activities is their ability to detect mistakes that threaten the internal consistency of the computational aspects of a scientific work. One way of detection is by comparing the results for identity or consistency. As replications cover more types of mistakes, attributing differences in results to any one of them is more difficult.
+	In the section "The Verifying Function of Reproductions", we presented a heuristic guide detailing the epistemic function of reproductions in comparison to replications. By comparing how these redoing activities provide evidence for or against which types of mistakes (see Figure 1 and Table 1), we clarify their respective roles in verification. We discerned three reproduction prototypes, depending on whether the original data analysis source code is re-executed, re-implemented, or—in the case of in silico works—data are re-collected by re-executing the reported simulation source code. Further, reproductions are discerned from replications, which involve collecting new data (or re-implementing the simulation source code). We introduced data analysis implementation and reporting mistakes and explained that a re-execution reproduction alone cannot detect the former. As a remedy, one can combine re-execution with a re-implementation reproduction or additionally check the source code for coherence with the other descriptions. The verifying function of redoing activities is their ability to detect mistakes that threaten the internal consistency of the computational aspects of a scientific work. One way of detection is by comparing the results for identity or consistency. As replications cover more types of mistakes, attributing differences in results to any one of them is more difficult.
 
 
-	Differentiating three prototypes is not sufficient, however, to describe actual variety and nuances of reproductions. Therefore, we introduced formal definitions for reproductions and surrounding concepts in Section 3, from which recommendations are derived in Section 4. In addition, the research process depicted in Figure 1 is simplified, and the derived heuristic guide is dependent on certain assumptions also modeled formally in Section 3: First, one assumes linear progress through the various phases and the points where mistakes and choices by the reproducers can influence results. Second, the conclusions drawn from Figure 1 and Table 1 require that code and collected data (or simulation source code) were indeed used by the original authors as reported (i.e., fault cases 2 and 3 are not present). Finally, one could question the asymmetry with which the heuristic guide treats inherited phases as set. Consequently, choices made by the original authors during these phases are not considered as reasons for different results. For example, if missing values during a data collection in natura were recorded with “-999” and the original data analysis source code correctly removes these values, whereas the re-implemented code does not (expecting “NA”), according to this guide a different result would be attributed to a mistake by the reproducers whereas common sense would rather attribute this to the original authors' unconventional data collection choice.
+	Differentiating three prototypes is not sufficient, however, to describe the actual variety and nuances of reproductions. Therefore, we introduced formal definitions for reproductions and surrounding concepts, from which recommendations were derived. In addition, the research process depicted in Figure 1 is simplified, and the derived heuristic guide is dependent on certain assumptions also modeled formally in the "Defining Reproductions" section: First, one assumes linear progress through the various phases and the points where mistakes and choices by the reproducers can influence results. Second, the conclusions drawn from Figure 1 and Table 1 require that code and collected data (or simulation source code) were indeed used by the original authors as reported (i.e., fault cases 2 and 3 are not present). Finally, one could question the asymmetry with which the heuristic guide treats inherited phases as set. Consequently, choices made by the original authors during these phases are not considered as reasons for different results. For example, if missing values during a data collection in natura were recorded with “$-$999” and the original data analysis source code correctly removes these values, whereas the re-implemented code does not (expecting “NA”), according to this guide a different result would be attributed to a mistake by the reproducers whereas common sense would rather attribute this to the original authors' unconventional data collection choice.
 
 
-	In Section 3, we sketched the logic reproducers can follow to answer whether a computation corresponds to the reported descriptions (e.g., methods section or source code), collected data, and results, or has a fault. A reproduction involves performing another computation and comparing the results. Naturally, it requires the availability of \emph{some} descriptions, results, and collected data (or simulation source code, in the case of in silico works). Further, it involves checking the coherence of the descriptions in the scope. At any point, reproducers may see no, exactly one, or multiple paths forward, depending on their interpretation of the descriptions—guided by the chosen methods standards—and any obstacles they encounter, such as underspecification and external constraints.
+	In "Defining Reproductions", we sketched the logic reproducers can follow to answer whether a computation corresponds to the reported descriptions (e.g., methods section or source code in an online repository), collected data, and results, or has a fault. A reproduction involves performing another computation and comparing the results. Naturally, it requires the availability of \emph{some} descriptions, results, and collected data (or simulation source code, in the case of in silico works). Further, it involves checking the coherence of the descriptions in the scope. At any point, reproducers may see no, exactly one, or multiple paths forward, depending on their interpretation of the descriptions—guided by the chosen methods standards—and any obstacles they encounter, such as underspecification and external constraints.
 
 
 	If the reproducers obtain a result, it may differ from the original result due to varying computational choices or because of faults. However, because a simple comparison for identity cannot discern them, we recommend evaluating the consistency by exploring the impact of computational choices on results before suspecting faults as a last resort. Results are deemed consistent if they differ no more than the largest expected difference given how any obstacles were resolved, and inconsistent otherwise. For example, results can be demanded to only match up to a certain precision, given that a different numerical optimizer has been used. Importantly, both consistent and inconsistent results are contingent on the methods standards the reproducers chose. The consistency can also be undetermined if no result was obtained or if it is infeasible to estimate the largest expected difference.
@@ -1031,19 +1037,19 @@ All four activities represent particular sets of phases that are redone out of a
 	We demonstrated how underspecification can reduce the potential epistemic value of scientific works and their reproductions. For example, if the data analysis in a study is underspecified, and a reproduction obtains results that are inconsistent with the original article, more uncertainty remains about the reason for the inconsistency: Either the reproducers made different implementation choices, or a mistake has happened. For researchers aiming to facilitate verification and allow informative reproductions, this might serve as an additional incentive to be as transparent as possible when communicating the results of one's research.
 
 
-	We discerned four special cases of faults, which can guide reproducers on where to look for the source of differences: (1) incoherent descriptions, (2) different collected data (or simulation source code), (3) different data analysis source code, and (4) incorrect reporting of results. However, even for consistent results, faults may be left if the difference they introduce is less than the difference caused by obstacles such as underspecification.
+	We discerned four special cases of faults, which can guide reproducers on where to look for the source of differences: (1) incoherent descriptions, (2) different collected data (or simulation source code), (3) different data analysis source code, and (4) incorrect reporting of results. However, even for consistent results, faults may be left if the difference they introduce is not larger than the difference caused by obstacles such as underspecification.
 
 
 	The approach described here is subject to some limitations. First, the consistency evaluation heavily depends on the chosen methods standards and how the expected difference is estimated. Second, a consistent result from a re-implementation reproduction does not guarantee that the implementations are free of any type of fault. This is because there can be faults that just do not manifest for the collected data or cancel each other out. Third, even identical results suggest but do not guarantee that the original computation has been performed as described. For example, if the domain of possible results is constrained, the original computation might contain a fault, but the reproducers might have gotten the same result through a different approach. The reproducers might even have made a mistake on their own, possibly the same as the original authors. Fourth, we treat the consistency of results as a binary variable, which only approximates a continuous reality. Fifth, in many instances, we currently lack empirical norm values for standard cases of deviations and the resulting differences. Sixth, we do not discern between mistakes and fraud, that is, instances where the descriptions were written in a way to deliberately deviate from the actual computation conducted.
 
 
-	Taken together, we provide a conceptual framework to describe computational reproductions and their epistemic function of verification in detail. Revisiting the challenges described in Section 1, the procedure we recommend addresses them in several ways: 
+	Taken together, we provide a conceptual framework to describe computational reproductions and their epistemic function of verification in detail. Revisiting the challenges described in the opening section of this article, the procedure we recommend addresses them in several ways: 
 	
 	First, by providing standards, common situations during reproductions can be dealt with consistently. For example, if the data analysis source code or the collected data have not been shared, there is a defined way of dealing with it (i.e., changing the scope or reporting an undetermined outcome due to failed preconditions). If the reproduction results differ from the original results, the determination of the outcome is not arbitrary. Moreover, assistance by the authors is welcome, but the proposed definitions do not depend on their availability. In addition, we sketch how results can be synthesized on the level of individual papers by evaluating the support for corresponding claims. 
 	
 	Second, we believe checking the coherence of descriptions is integral to reproductions. While we acknowledge that source code is often not executable by reproducers, by treating source code as a regular description reproducers can still obtain valuable insight into the original computational choices. 
 	
-	Third, by scoping the outcome of a reproduction, reproducers are transparent about its limitations. The described reproduction prototypes serve different purposes, and the description scope makes that known. Similarly, a reproduction working with preprocessed collected data has its worth if one keeps in mind that only faults after the preprocessing can be identified by them. Lastly, by being explicit about which results are part of the scope, it becomes obvious that a scientific work is typically not reproduced as a whole, but that a reproduction always makes a statement about a particular result, selected with a particular strategy.
+	Third, by scoping the outcome of a reproduction, reproducers are transparent about its limitations. The described reproduction prototypes serve different purposes, and the description scope makes that known. Similarly, a reproduction working with preprocessed collected data has its worth if one keeps in mind that only faults after the preprocessing can be identified by it. Lastly, by being explicit about which results are part of the scope, it becomes obvious that a scientific work is typically not reproduced as a whole, but that a reproduction always makes a statement about a particular result, selected with a particular strategy.
 
 
 	Finally, with the conceptual framework in mind, we would like to provide a few recommended actions. On the one hand, we suggest that original authors include a computation summary in their appendix, detailing (1) the claims they make, (2) which results support these claims, (3) the rules of inference connecting claims and results (i.e., when a claim is considered strengthened or weakened), and (4) which are the most important claims and results. On the other hand, reproducers should consider the precise question they would like to answer through strategic choice of the reproduction's scope and combination with other redoing activities. Further, if possible, reproducers should use the primary collected data, that is, the first digital representation of the original records collected for analysis, so fewer faults can go unnoticed. In addition, ideally all descriptions available to the reproducers should become part of the scope, thus checked for coherence with each other and informing the computation. Every deviation from this default should be specifically indicated when stating the scope. As one possible implementation, we provide a template in the supplementary material  S1 which is ongoing work and will be updated based on practical experiences. We invite all readers to apply the conceptual framework presented here to the reproductions they encounter in their own field and treat it as a starting point, ready to be improved and expanded on.
@@ -1084,10 +1090,10 @@ All four activities represent particular sets of phases that are redone out of a
 	Altman, D. G., Simera, I., Hoey, J., Moher, D., \& Schulz, K. (2008). EQUATOR: Reporting guidelines for health research. \emph{The Lancet}, \emph{371}(9619), 1149--1150. \url{https://doi.org/10.1016/S0140-6736(08)60505-X}
 
 
-	Ankel-Peters, J., Brodeur, A., Dreber, A., Johannesson, M., Neubauer, F., \& Rose, J. (2024). \emph{A protocol for structured robustness reproductions and replicability assessments}. Institute for Replication, Discussion Paper Series No. 143. \url{https://hdl.handle.net/10419/301917}
 
+	Ankel-Peters, J., Brodeur, A., Dreber, A., Johannesson, M., Neubauer, F., \& Rose, J. (2025). A protocol for structured robustness reproductions and replicability assessments. \emph{Q Open}, \emph{5}(3), qoaf004. \url{https://doi.org/10.1093/qopen/qoaf004}
 
-	Arguillas, F., Christian, T.-M., Gooch, M., Honeyman, T., Peer, L., \& CURE-FAIR WG. (2022, July). \emph{10 things for curating reproducible and FAIR research} (Version 1.1). \url{https://doi.org/10.15497/RDA00074}
+	Arguillas, F., Christian, T.-M., Gooch, M., Honeyman, T., Peer, L., \& CURE-FAIR WG. (2022, July). \emph{10 things for curating reproducible and FAIR research} (Version 1.1). Zenodo. \url{https://curating4reproducibility.org/10things/}. \url{https://doi.org/10.15497/RDA00074}
 
 
 	Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., \& Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. \emph{Psychological Methods}, \emph{26}(5), 527--546. \url{https://doi.org/10.1037/met0000365}
@@ -1138,7 +1144,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Clemens, M. A. (2017). The meaning of failed replications: A review and proposal. \emph{Journal of Economic Surveys}, \emph{31}(1), 326--342. \url{https://doi.org/10.1111/joes.12139}
 
 
-	Crook, S. M., Davison, A. P., \& Plesser, H. E. (2013). Learning from the past: Approaches for reproducibility in computational neuroscience. In J. M. Bower (Ed.), \emph{20 Years of Computational Neuroscience} (pp. 73--102). \url{https://doi.org/10.1007/978-1-4614-1424-7\_4}
+	Crook, S. M., Davison, A. P., \& Plesser, H. E. (2013). Learning from the past: Approaches for reproducibility in computational neuroscience. In J. M. Bower (Ed.), \emph{20 Years of Computational Neuroscience} (pp. 73--102). Springer New York. \url{https://doi.org/10.1007/978-1-4614-1424-7\_4}
 
 
 	Crüwell, S., Apthorp, D., Baker, B. J., Colling, L., Elson, M., Geiger, S. J., Lobentanzer, S., Monéger, J., Patterson, A., Schwarzkopf, D. S., Zaneva, M., \& Brown, N. J. L. (2023). What's in a badge? A computational reproducibility investigation of the open data badge policy in one issue of psychological science. \emph{Psychological Science}, \emph{34}(4), 512--522. \url{https://doi.org/10.1177/09567976221140828}
@@ -1174,7 +1180,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Gollwitzer, M., Abele-Brehm, A., Fiebach, C. J., Ramthun, R., Scheel, A., Schönbrodt, F., \& Steinberg, U. (2021). Management und Bereitstellung von Forschungsdaten in der Psychologie: Überarbeitung der DGPs-Empfehlungen. \emph{Psychologische Rundschau}, \emph{72}(2), 132--146. \url{https://doi.org/10.1026/0033-3042/a000514}
 
 
-	Goodman, S. N., Fanelli, D., \& Ioannidis, J. P. A. (2016). What does research reproducibility mean? \emph{Science Translational Medicine}, \emph{8}(341), 341ps12. \url{https://doi.org/10.1126/scitranslmed.aaf5027}
+	Goodman, S. N., Fanelli, D., \& Ioannidis, J. P. A. (2016). What does research reproducibility mean? \emph{Science Translational Medicine}, \emph{8}(341), Article 341ps12. \url{https://doi.org/10.1126/scitranslmed.aaf5027}
 
 
 	Granger, C. W. J., \& Jeon, Y. (2004). Thick modeling. \emph{Economic Modelling}, \emph{21}(2), 323--343. \url{https://doi.org/10.1016/S0264-9993(03)00017-8}
@@ -1198,8 +1204,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Herberich, E., Hothorn, T., Nettle, D., \& Pollet, T. V. (2010). A re-evaluation of the statistical model in Pollet and Nettle 2009. \emph{Evolution and Human Behavior}, \emph{31}(2), 150--151. \url{https://doi.org/10.1016/j.evolhumbehav.2009.12.003}
 
 
-	Herbert, S., Kingi, H., Stanchi, F., \& Vilhuber, L. (2021). \emph{The reproducibility of economics research: A case study} (Working Paper Series No. 853). Banque de France. \url{https://publications.banque-france.fr/en/reproducibility-economics-research-case-study}
-
+	Herbert, S., Kingi, H., Stanchi, F., \& Vilhuber, L. (2024). Reproduce to validate: A comprehensive study on the reproducibility of economics research. \emph{Canadian Journal of Economics/Revue canadienne d'économique}, \emph{57}(3), 961--988. \url{https://doi.org/10.1111/caje.12728}
 
 	Heroux, M. A., Barba, L. A., Parashar, M., Stodden, V., \& Taufer, M. (2018). \emph{Toward a compatible reproducibility taxonomy for computational and computing sciences}. Sandia Report, SAND2018-11186. Sandia National Laboratories. \url{https://doi.org/10.2172/1481626}
 
@@ -1246,7 +1251,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Kelly, D., Hook, D., \& Sanders, R. (2009). Five recommended practices for computational scientists who write software. \emph{Computing in Science \& Engineering}, \emph{11}(5), 48--53. \url{https://doi.org/10.1109/MCSE.2009.139}
 
 
-	Kohrt, F., Zerna, J., \& Scheffel, C. (2024). \emph{Code publishing tutorial}. \url{https://lmu-osc.github.io/code-publishing/.} \url{https://doi.org/10.5281/zenodo.16631977}
+	Kohrt, F., Zerna, J., \& Scheffel, C. (2024). \emph{Code publishing tutorial}. Zenodo. \url{https://lmu-osc.github.io/code-publishing/.} \url{https://doi.org/10.5281/zenodo.16631977}
 
 
 	Krafczyk, M. S., Shi, A., Bhaskar, A., Marinov, D., \& Stodden, V. (2021). Learning from reproducing computational results: Introducing three principles and the Reproduction Package. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{379}(2197), Article 20200069. \url{https://doi.org/10.1098/rsta.2020.0069}
@@ -1267,13 +1272,13 @@ All four activities represent particular sets of phases that are redone out of a
 	Leising, D., Grenke, O., \& Cramer, M. (2023). Visual Argument Structure Tool (VAST) Version 1.0. \emph{Meta-Psychology}, \emph{7}. \url{https://doi.org/10.15626/MP.2021.2911}
 
 
-	Letter, J. (2021, February 3).emph{JASP output verified with other statistical packages.} JASP -- Free and User-Friendly Statistical Software. \url{https://jasp-stats.org/2021/02/03/the-jasp-verification-project/}
+	Letter, J. (2021, February 3). \emph{JASP Output Verified With Other Statistical Packages.} JASP -- Free and User-Friendly Statistical Software. \url{https://jasp-stats.org/2021/02/03/the-jasp-verification-project/}
 
 
 	Livingston, E. H. (2020). Study design and statistics. In AMA Manual of Style Committee (Ed.), \emph{AMA manual of style} (11th ed., pp. 977--1096). Oxford University Press. \url{https://doi.org/10.1093/jama/9780190246556.003.0019}
 
 
-	López-ibáñez, M., Branke, J., \& Paquete, L. (2021). Reproducibility in evolutionary computation. \emph{ACM Transactions on Evolutionary Learning and Optimization}, \emph{1}(4), 1--21. \url{https://doi.org/10.1145/3466624}
+	López-Ibáñez, M., Branke, J., \& Paquete, L. (2021). Reproducibility in evolutionary computation. \emph{ACM Transactions on Evolutionary Learning and Optimization}, \emph{1}(4), 1--21. \url{https://doi.org/10.1145/3466624}
 
 
 	Martel García, F. (2013). Scientific progress in the absence of new data: A procedural replication of Ross (2006). \emph{SSRN Electronic Journal}. \url{https://doi.org/10.2139/ssrn.2256286}
@@ -1294,7 +1299,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Menkveld, A. J., Dreber, A., Holzmeister, F., Huber, J., Johannesson, M., Kirchler, M., Neusüß, S., Razen, M., Weitzel, U., Abad-Díaz, D., Abudy, M. (Meni), Adrian, T., Ait-Sahalia, Y., Akmansoy, O., Alcock, J. T., Alexeev, V., Aloosh, A., Amato, L., Amaya, D., … \& Zwinkels, R. (2024). Nonstandard errors. \emph{The Journal of Finance}, \emph{79}(3), 2339--2390. \url{https://doi.org/10.1111/jofi.13337}
 
 
-	Mineault, P., Nozawa, K., \& The Good Research Code Handbook Community. (2021). \emph{The good research code handbook}. Zenodo. \url{https://doi.org/10.5281/ZENODO.5796873}
+	Mineault, P., Nozawa, K., \& The Good Research Code Handbook Community. (2021). \emph{The good research code handbook}. Zenodo. \url{https://goodresearch.dev/}. \url{https://doi.org/10.5281/ZENODO.5796873}
 
 
 	Monks, T., Currie, C. S. M., Onggo, B. S., Robinson, S., Kunc, M., \& Taylor, S. J. E. (2019). Strengthening the reporting of empirical simulation studies: Introducing the STRESS guidelines. \emph{Journal of Simulation}, \emph{13}(1), 55--67. \url{https://doi.org/10.1080/17477778.2018.1442155}
@@ -1327,7 +1332,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Patel, C. J., Burford, B., \& Ioannidis, J. P. A. (2015). Assessment of vibration of effects due to model specification can demonstrate the instability of observational associations. \emph{Journal of Clinical Epidemiology}, \emph{68}(9), 1046--1058. \url{https://doi.org/10.1016/j.jclinepi.2015.05.029}
 
 
-	Patil, P., Peng, R. D., \& Leek, J. T. (2016a). \emph{A statistical definition for reproducibility and replicability}. BioRxiv. \url{https://doi.org/10.1101/066803}
+	Patil, P., Peng, R. D., \& Leek, J. T. (2016a). \emph{A statistical definition for reproducibility and replicability}. bioRxiv. \url{https://doi.org/10.1101/066803}
 
 
 	Patil, P., Peng, R. D., \& Leek, J. T. (2016b). What should researchers expect when they replicate studies? A statistical view of replicability in psychological science. \emph{Perspectives on Psychological Science}, \emph{11}(4), 539--544. \url{https://doi.org/10.1177/1745691616646366}
@@ -1348,7 +1353,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Plesser, H. E. (2018). Reproducibility vs. replicability: A brief history of a confused terminology. \emph{Frontiers in Neuroinformatics}, \emph{11}, 76. \url{https://doi.org/10.3389/fninf.2017.00076}
 
 
-	PyTorch Contributors. (2023). \emph{Reproducibility}. PyTorch 2.5 Documentation. \url{https://pytorch.org/docs/stable/notes/randomness.html\#reproducibility}
+	PyTorch Contributors. (2023). Reproducibility. In \emph{PyTorch 2.5 Documentation.} \url{https://pytorch.org/docs/stable/notes/randomness.html\#reproducibility}
 
 
 	Rahal, C. (2024). \emph{On the responsible use of pseudo-random number generators in scientific research} [Computer software]. \url{https://github.com/crahal/seeds}
@@ -1420,7 +1425,7 @@ All four activities represent particular sets of phases that are redone out of a
 	Welch, I. (2019). Reproducing, extending, updating, replicating, reexamining, and reconciling. \emph{Critical Finance Review}, \emph{8}(1--2), 301--304. \url{https://doi.org/10.1561/104.00000082}
 
 
-	Whitley, R. (2000). The degree of task uncertainty and the organization of scientific fields. In R. Whitley, \emph{The Intellectual and Social Organization Of the Sciences} (pp. 119--152). Oxford University Press. \url{https://doi.org/10.1093/oso/9780199240531.003.0004}
+	Whitley, R. (2000). The degree of task uncertainty and the organization of scientific fields. In R. Whitley, \emph{The Intellectual and Social Organization of the Sciences} (pp. 119--152). Oxford University Press. \url{https://doi.org/10.1093/oso/9780199240531.003.0004}
 
 
 	Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., \& Teal, T. K. (2017). Good enough practices in scientific computing. \emph{PLOS Computational Biology}, \emph{13}(6), Article e1005510. \url{https://doi.org/10.1371/journal.pcbi.1005510}
@@ -1445,7 +1450,7 @@ All four activities represent particular sets of phases that are redone out of a
 	\renewcommand{\thefigure}{A1:}
 		\captionof{figure}{\emph{Detailed Flowchart for Performing a Reproduction of One Result}}
 		\centering
-		\includegraphics[width=\linewidth]{media/image4.png}
+		\includegraphics[trim=0cm 44cm 0cm 0cm, clip, width=\linewidth]{media/image7.pdf}
 
 
 		\label{fig:rId29}
@@ -1454,25 +1459,25 @@ All four activities represent particular sets of phases that are redone out of a
 	\end{minipage}
 
 
-	\begin{figure*}
+	\begin{minipage}{\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{media/image5.png}
+		\includegraphics[trim=0cm 21.3cm 0cm 24.5cm, clip, width=\linewidth]{media/image7.pdf}
 
 
 		\label{fig:rId30}
 
 
-	\end{figure*}
 
+	\end{minipage}
 
-	\begin{figure*}
+	\begin{minipage}{\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{media/image6.png}
+		\includegraphics[trim=0cm 0cm 0cm 47cm, clip, width=\linewidth]{media/image7.pdf}
 
 
 		\label{fig:rId31}
 
 
-	\end{figure*}
 
+	\end{minipage}
 \end{document}

@@ -1,0 +1,76 @@
+\documentclass[margin=5pt]{standalone}
+
+% Required packages based on your table's syntax
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{fontawesome5}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{caption}
+
+\begin{document}
+
+% Replacing the landscape and table environments with a 24cm minipage 
+% provides a concrete \linewidth for tabularx to inherit.
+\begin{minipage}{24cm}
+    
+    % \captionof replaces \caption so it can function outside a float
+    \captionof{table}{Prototypical Redoing Activities and the State of Knowledge Their Result Implies About Potential Reasons for Differences}
+    
+    \newcolumntype{B}{>{\footnotesize\raggedright\arraybackslash\hsize=1.25\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X} 
+    \newcolumntype{M}{>{\footnotesize\raggedright\arraybackslash\hsize=0.8\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X} 
+    \newcolumntype{S}{>{\footnotesize\centering\arraybackslash\hsize=0.85\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+    \newcolumntype{T}{>{\footnotesize\centering\arraybackslash\hsize=1\hsize\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+    
+    \centering
+    \begin{adjustbox}{max width=\linewidth}
+    \begin{tabularx}{\linewidth}{@{} B M B S S T S S S S S @{}}
+        \hline \textbf{Redoing activity} & \textbf{Comparison} & \textbf{Outcome} &
+        \textbf{Reporting mistake (k)} & \textbf{Data analysis environment choice (j)}
+        & \textbf{Data analysis implementation mistake (i)} & \textbf{Data analysis impl. choice (h)}
+        & \textbf{Data collection env. choice (g)} & \textbf{Data collection impl. choice (e)}
+        & \textbf{Sampling variability (a)} & \textbf{Other deviations (b–d), (f)}
+        \\
+
+        \hline \multirow{4}{=}{Re-execution reproduction} & \multirow{2}{=}{Identity} & Identical & \bullet & \bullet & = & = &
+        = & = & = & = \\
+
+        \cline{3-11}  &  & Non-identical &  \faCircle &  \faCircle & = & = & = & = & = & = \\
+
+        \cline{2-11}  & \multirow{2}{=}{Consistency} & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & = & = & =
+        & = & = & = \\
+
+        \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} & = & = & = & = & = & = \\
+
+        \hline \multirow{4}{=}{Re-implementation reproduction} & \multirow{2}{=}{Identity} & Identical & \bullet & \bullet & \bullet &
+        \bullet & = & = & = & = \\
+
+        \cline{3-11}  &  & Non-identical &  \faCircle &  \faCircle &  \faCircle &  \faCircle & = & = & = & = \\
+
+        \cline{2-11}  & \multirow{2}{=}{Consistency} & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & =
+        & = & = & = \\
+
+        \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & = & = & = & = \\
+
+        \hline \multirow{4}{=}{Re-collection reproduction} & \multirow{2}{=}{Identity} & Identical & \bullet & \bullet & \bullet & \bullet &
+        \bullet & = & = & = \\
+
+        \cline{3-11}  &  & Non-identical &  \faCircle &  \faCircle &  \faCircle &  \faCircle &  \faCircle & = & = & = \\
+
+        \cline{2-11}  & \multirow{2}{=}{Consistency} & Consistent (but non-identical) & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle &  \faCircle
+        & = & = & = \\
+
+        \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & = & = & = \\
+
+        \hline \multirow{2}{=}{Replication} & \multirow{2}{=}{Consistency} & Consistent & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle &  \faCircle &  \faCircle &  \faCircle &
+        \faIcon[regular]{dot-circle} \\
+
+        \cline{3-11}  &  & Inconsistent &  \faCircle & \faIcon[regular]{dot-circle} &  \faCircle & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} & \faIcon[regular]{dot-circle} &  \faCircle \\
+
+    \end{tabularx}
+    \end{adjustbox}
+    \begin{minipage}{\linewidth}
+        \emph{Note}. The original and the reproduction result can be compared for identity or consistency (see section "Discussion and Recommendations"). The size of disks indicates the importance of various reasons for differing results. A small disk---with circle (\faIcon[regular]{dot-circle}) and without (\bullet)---indicates that there is no difference or that a reason is less important. A large disk ( \faCircle) indicates a potentially important reason for non-identical or inconsistent results (but we do not know which one, if a row contains more than one). A circle around a small disk (\faIcon[regular]{dot-circle}) indicates that a reason is possible, but the caused difference is probably not larger than for reasons with a large disk. The equal sign (=) indicates that the phase containing this reason is inherited and, therefore, assumed to be identical. Therefore, it cannot be responsible for differences in results by itself, though issues in that phase cannot be detected.
+    \end{minipage}
+\end{minipage}
+\end{document}

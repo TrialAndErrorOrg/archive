@@ -1,4 +1,4 @@
-\documentclass[authordate, editorial]{jote-new-article}
+\documentclass[authordate, meta]{jote-new-article}
 
 \usepackage{caption}
 
@@ -13,7 +13,7 @@
 \addbibresource{bibliography.bib}
 
 \jotetitle{Persuasion in Scientific Journal Articles: Exploring Persuasiveness and Informativeness among Authors and Readers}
-\keywordsabstract{meta-research, Persuasion, Bias, Scholarly Communication, QRPs}
+\keywordsabstract{meta-research, persuasion, bias, scholarly communication, QRPs}
 \abstracttext{Scientific communication is often assumed to prioritize objectivity, yet persuasive strategies may subtly distort research interpretation. While the spread of errors in research is often attributed to methodological or statistical biases (Świątkowski \& Dompnier, 2017), rhetorical strategies are less often considered questionable research practices, although they can be (Corneille et al., 2023).
 	This study empirically investigates how authors and external readers perceive persuasiveness across different sections of scientific articles (Abstract, Introduction, Methods, Results, Discussion). Using a mixed-methods approach, we surveyed 15 authors of selected articles and 42 external researchers, asking them to rate paragraphs on persuasiveness and informativeness. No significant differences emerged between authors' and readers' perceptions (two-tailed \emph{t}-tests), perhaps suggesting a shared awareness of persuasive strategies. However, significant section-based differences were observed: Abstracts and Introductions were rated as more persuasive than Methods, whereas Discussions were perceived as more persuasive than Results and Methods sections (\emph{p} < .05).
 	Participants also evaluated whether specific devices (e.g., spin, selective reporting, overgeneralization) constituted attempts to persuade. Six of the nine devices were identified as persuasive by over 80\% of respondents (“Yes” or “Sometimes”). These findings, along with the overlap between persuasive devices and questionable research practices, raise questions about their ethical implications for research reliability and transparency.}
@@ -28,10 +28,12 @@
 \affil[3]{University of Bristol, England}
 \corremail{\href{mailto:rrita.bajraktari@ulb.be}{rrita.bajraktari@ulb.be}}
 \corraddress{Université libre de Bruxelles}
-\runningauthor{Bajraktari\& Munafò}
-\author[3,4]{\mbox{Marcus Munafò}}
+\runningauthor{Bajraktari \& Munafò}
+\author[3,4]{\mbox{Marcus Munafò\orcid{0000-0002-4049-993X}}}
 \affil[4]{University of Bath, England}
 \paperaccepted{June 6, 2026}
+\paperpublished{July 25, 2026}
+\paperpublisheddate{2026-07-25}
 \jwebsite{https://journal.trialanderror.org}
 
 
@@ -120,7 +122,7 @@ This is the first empirical study specifically on persuasion in research article
 
 
 	\begin{figure*}
-		\includegraphics[width=\linewidth]{media/image1.png}
+		\includegraphics[width=\linewidth]{media/image1.pdf}
 		\caption{Study Design}
 
 
@@ -183,7 +185,7 @@ This is the first empirical study specifically on persuasion in research article
 
 	\begin{figure*}
 
-		\includegraphics[width=\linewidth]{media/image2.png}
+		\includegraphics[width=\linewidth]{media/image2.pdf}
 
 		\label{fig:rId14}
 
@@ -211,7 +213,6 @@ This is the first empirical study specifically on persuasion in research article
 
 	This second Part utilized two sets of items designed to assess researchers' perceptions of persuasive strategies. The first set comprised nine specific persuasive devices selected from existing literature (e.g., Corneille et al., 2023). Selection was based on feasibility within a survey format. Consequently, complex structural practices such as “open research washing” or “honorary authorship” were excluded, as they require contextual knowledge beyond isolated text evaluation. The retained devices were presented with their operational definitions (Table 1).
 
-]
 
 
 	\begin{table*}
@@ -219,13 +220,13 @@ This is the first empirical study specifically on persuasion in research article
 			
 		\caption{Persuasive Devices Used in Scholarly Communication}
 		\begin{tabularx}{\linewidth}{@{} X l @{}}
-			\hline Persuasive Devices and their definition & Reference \\
+			\hline Persuasive Devices and their Definition & Reference \\
 
 			\hline \textbf{Utility-centered framing: }Strong emphasis on usefulness and accessibility.
 			& Pelclová \& Lu (2018) \\
 
 			 \textbf{Spin:} When the effect in the study is presented as greater than shown by the results.
-			& Lazarus et al. (2015)Chiu et al., 2017 \\
+			& Lazarus et al. (2015), Chiu et al. (2017) \\
 
 			 \textbf{Selective Reporting: }Deliberately disclosing only certain results from scientific research, often to suppress negative or undesirable findings, thereby presenting a biased view of the study's outcomes.
 			& Qureshi et al. (2024) \\
@@ -237,7 +238,7 @@ This is the first empirical study specifically on persuasion in research article
 			& Qureshi et al. (2024) \\
 
 			 \textbf{Inappropriate extrapolation:} Results and conclusions are extrapolated to another population, intervention, outcome, or setting than were assessed in the study.
-			& Yavchitz et al. (2016)Qureshi et al. (2024) \\
+			& Yavchitz et al. (2016), Qureshi et al. (2024) \\
 
 			 \textbf{Hype:} Using adjectives such as striking, important, remarkable, and so on without justification.
 			& Corneille et al. (2023) \\
@@ -286,7 +287,7 @@ This is the first empirical study specifically on persuasion in research article
 
 
 
-	All statistical analyses were conducted using R (version 4.4.2; R Core Team, 2024) within the RStudio environment (version 2025.09.0+387; Posit Software, PBC, 2025). The scripts used for these analyses are available in the Supplementary Material on the Open Science Framework (\url{https://osf.io/wtqy3}).
+	All statistical analyses were conducted using R (version 4.4.2; R Core Team, 2024) within the RStudio environment (version 2025.09.0+387; Posit Software, PBC, 2025). The scripts used for these analyses are available in the Supplementary Material on the OSF (\url{https://osf.io/wtqy3}).
 
 
 
@@ -370,23 +371,23 @@ This is the first empirical study specifically on persuasion in research article
 
 			\hline Abstract - Introduction & -0.07 & 0.16 & 509 & -0.44 & 1.000 \\
 
-			 Abstract - Methods & 1.16 & 0.16 & 509 & 7.19 & < .001*** \\
+			 Abstract - Methods & 1.16 & 0.16 & 509 & 7.19 & < .001 \\
 
 			 Abstract - Results & 0.33 & 0.16 & 509 & 2.07 & 0.390 \\
 
 			 Abstract - Discussion & -0.46 & 0.16 & 509 & -2.89 & 0.041 \\
 
-			 Introduction - Methods & 1.23 & 0.16 & 509 & 7.62 & < .001*** \\
+			 Introduction - Methods & 1.23 & 0.16 & 509 & 7.62 & < .001 \\
 
 			 Introduction - Results & 0.40 & 0.16 & 509 & 2.51 & 0.126 \\
 
 			 Introduction - Discussion & -0.39 & 0.16 & 509 & -2.45 & 0.146 \\
 
-			 Methods - Results & -0.82 & 0.16 & 509 & -5.12 & < .001*** \\
+			 Methods - Results & -0.82 & 0.16 & 509 & -5.12 & < .001 \\
 
-			 Methods - Discussion & -1.62 & 0.16 & 509 & -10.08 & < .001*** \\
+			 Methods - Discussion & -1.62 & 0.16 & 509 & -10.08 & < .001 \\
 
-			 Results - Discussion & -0.80 & 0.16 & 509 & -4.96 & < .001*** \\
+			 Results - Discussion & -0.80 & 0.16 & 509 & -4.96 & < .001 \\
 
 
 		\end{tabular}
@@ -489,7 +490,7 @@ This is the first empirical study specifically on persuasion in research article
 
 
 
-	\section{Original Purpose}
+	\begin{originalPurpose}
 
 
 
@@ -503,7 +504,7 @@ This is the first empirical study specifically on persuasion in research article
 
 	To investigate these questions, we designed a mixed-methods survey divided into two parts. In the first part, each participant evaluated two research articles, enabling a comparison of authors' and readers' ratings of persuasiveness across five sections of each article. In the second part, all participants assessed nine commonly discussed persuasive devices and rated their agreement with ten specific statements regarding the presence and acceptability of persuasion in scientific writing.
 
-
+	\end{originalPurpose}
 
 	\section{Discussion}
 
@@ -658,7 +659,7 @@ This is the first empirical study specifically on persuasion in research article
 
 
 
-	\section{\textbf{Ethics statement}}
+	\section{\textbf{Ethics Statement}}
 
 
 
@@ -734,7 +735,7 @@ This is the first empirical study specifically on persuasion in research article
 
 
 
-	Grolleau, F., Collins, G. S., Smarandache, A., Pirracchio, R., Gakuba, C., Boutron, I., Busse, J. W., Devereaux, P. J., \& Le Manach, Y. (2019). The fragility and reliability of conclusions of anesthesia and critical care randomized trials with statistically significant findings: A systematic review*. \emph{Critical Care Medicine, 47}(3), 456--462. \url{https://doi.org/10.1097/CCM.0000000000003527}
+	Grolleau, F., Collins, G. S., Smarandache, A., Pirracchio, R., Gakuba, C., Boutron, I., Busse, J. W., Devereaux, P. J., \& Le Manach, Y. (2019). The fragility and reliability of conclusions of anesthesia and critical care randomized trials with statistically significant findings: A systematic review. \emph{Critical Care Medicine, 47}(3), 456--462. \url{https://doi.org/10.1097/CCM.0000000000003527}
 
 
 
@@ -802,11 +803,11 @@ This is the first empirical study specifically on persuasion in research article
 
 
 
-	Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., \& Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. \emph{The }BMJ\emph{, 349}, g7015--g7015. \url{https://doi.org/10.1136/bmj.g7015}
+	Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., \& Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. \emph{The BMJ}\emph{, 349}, g7015--g7015. \url{https://doi.org/10.1136/bmj.g7015}
 
 
 
-	Świątkowski, W., \& Dompnier, B. (2017). Replicability crisis in social psychology: Looking at the past to find new Ppthways for the future. \emph{International Review of Social Psychology}, \emph{30}(1), 111-124. \url{https://doi.org/10.5334/irsp.66}
+	Świątkowski, W., \& Dompnier, B. (2017). Replicability crisis in social psychology: Looking at the past to find new Pathways for the future. \emph{International Review of Social Psychology}, \emph{30}(1), 111-124. \url{https://doi.org/10.5334/irsp.66}
 
 
 
@@ -814,7 +815,7 @@ This is the first empirical study specifically on persuasion in research article
 
 
 
-	Tijdink, J. K., Verbeke, R., \& Smulders, Y. M. (2014). Publication pressure and scientific misconduct in medical scientists. J\emph{ournal of Empirical Research on Human Research Ethics, 9}(5), 64--71. \url{https://doi.org/10.1177/1556264614552421}
+	Tijdink, J. K., Verbeke, R., \& Smulders, Y. M. (2014). Publication pressure and scientific misconduct in medical scientists. \emph{Journal of Empirical Research on Human Research Ethics, 9}(5), 64--71. \url{https://doi.org/10.1177/1556264614552421}
 
 
 
